@@ -1,0 +1,49 @@
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+/*------------------------------*\
+
+    #TYPOGRAPHY
+
+\*------------------------------*/
+/*------------------------------*\
+
+    #BUTTONS
+
+\*------------------------------*/

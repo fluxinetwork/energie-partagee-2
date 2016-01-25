@@ -1,0 +1,33 @@
+/*------------------------------*\
+
+    #TYPOGRAPHY
+
+\*------------------------------*/
+
+$ff: 'karla', sans-serif;
+$h1: 3rem;
+$h12: 2.5rem;
+$h2: 1.5rem;
+$h3: 1.2rem;
+$h4: 1rem;
+
+%h1 {
+	font-size: $h1;
+}
+%h12 {
+	font-size: $h12;
+}
+%h2 {
+	font-size: $h2;
+}
+%h3 {
+	font-size: $h3;
+}
+%h4 {
+	font-size: $h4;
+}
+
+%h-reset {
+	font-weight: 400;
+	margin: 0;
+}

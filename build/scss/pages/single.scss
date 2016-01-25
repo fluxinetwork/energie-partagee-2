@@ -1,0 +1,89 @@
+@import "../utils/_all.scss";
+
+/*------------------------------*\
+
+    #SINGLE
+
+\*------------------------------*/
+
+.page-title {
+	@extend %h1;
+	@extend %h-reset;
+	margin: 70px auto 70px auto!important;
+}
+
+/* Gallery figure */
+
+.gallery figure {
+	position: relative;
+	margin: 0;
+
+	&:hover figcaption {
+		opacity: 1;
+	}
+}
+	.gallery figure img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	.gallery figure figcaption {
+		@extend .transition;
+		position: absolute;
+		bottom: 20px;
+		color: $c-txt-light;
+		width: 100%;
+		opacity: 0;
+	}
+
+/* Infos */
+
+.infos {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+	.infos__solo {
+		width: 20%;
+		text-align: center;
+
+		p {
+			margin: 0;
+		}
+
+		a {
+			@extend .transition;
+			color: #000;
+
+			&:hover {
+				color: $c-hover;
+			}
+		}
+	}
+
+/* Share */
+
+.a2a_dd img {
+	margin: 0 auto 80px auto;
+}
+
+
+@media screen and (max-width: 500px) {
+	.infos {
+		display: flex;
+		flex-direction: column;
+	}
+		.infos__solo {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+		.infos__solo {
+			width: 33%;
+		}
+}

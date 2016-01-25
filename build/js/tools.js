@@ -1,0 +1,91 @@
+/*------------------------------*\
+
+    #TOOLS
+
+\*------------------------------*/
+
+/**
+ * Get window sizes
+ * Store results in windowW and windowH vars
+ */
+
+// Get width and height
+function calc_window() {
+	calc_windowW();
+	calc_windowH();
+}
+// Get width
+function calc_windowW() {
+	windowW = $(window).width();
+}
+// Get height
+function calc_windowH() {
+	windowH = $(window).height();
+}
+
+
+/**
+ * Test window width
+ * Use breakpoint vars set in config.js
+ */
+
+function test_layout() {
+	calc_windowW();
+	if ( windowW<=bpSmall ) {
+	    return 'is-small';
+	} else if ( windowW>bpSmall && windowW<=bpLarge ) {
+		return 'is-medium';
+	} else if ( windowW>bpLarge && windowW<=bpXlarge ) {
+		return 'is-marge';
+	} else if ( windowW>bpXlarge ) {
+		return 'is-xlarge';
+	}
+} 
+
+
+/* Disable a.js-disable-links */
+
+function disable_links() {
+	$('.js-disable-link').click(function(e){
+		e.preventDefault();
+	});
+}
+
+
+/* Remove img title on roll-over, store it in data and then fill it back on roll-out */
+
+function disable_titles() {
+	$('.js-disable-title').hover(
+		function(){
+			var cible = $(this);
+			cible.data( 'title', cible.attr('title') ).attr('title','');
+		},
+		function() {
+			var cible = $(this);
+			cible.attr( 'title', cible.data('title') );
+		}		
+	);
+}
+
+
+/**
+ * Monitor img loading progress
+ * Using Images Loaded : http://imagesloaded.desandro.com
+ */
+
+function loading_img(container, loader) {
+	container.addClass('is-loading');
+	var nbImg = container.find('img').length-1;
+	
+	container.imagesLoaded().progress(onProgress).always(onAlways);
+
+	function onProgress(imgLoad, image) {
+		var percent = Math.round(stepLoad*(100/nbImg));
+		//$('.loader__bar').css('width', percent+'%');
+	}
+
+	function onAlways() {
+		container.removeClass('is-loading');
+		//$('.loader').remove();
+	}
+}
