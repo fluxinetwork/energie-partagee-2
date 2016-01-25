@@ -5,44 +5,9 @@
     #WRAPS
 
 \*------------------------------*/
-
-body.spines-view {
-	/*height: 100vh;
-	overflow: hidden;*/
+.wrap-main .header{
+	background:#174789	;	
 }
-
-.wrap-main {
-	/*transition: opacity 0.2s ease-in-out;
-	position: relative;
-
-	&.is-loading {
-		visibility: hidden;
-		opacity: 0;
-	}*/
+.wrap-main .nav{
+		
 }
-
-	.wrap-content {
-		/*transition: top 0.4s $ease-out-circ;
-		top: 95px;
-		text-align: center;
-		position: relative;*/
-	}
-	.single .wrap-content {
-		/*top: 70px;*/
-	}
-	body.spines-view .wrap-content {
-		/*top: 430px;*/
-	}
-
-	.wrap {
-		/*display: block;
-		position: relative;
-		width: 90%;
-		max-width: 1400px;
-		margin: 0 auto!important;*/
-	}
-
-	.wrap-narrow {
-		/*@extend .wrap;
-		max-width: 1100px;*/
-	}

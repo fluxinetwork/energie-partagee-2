@@ -1,4 +1,14 @@
 @import "../utils/_all.scss";
+/*------------------------------*\
+
+    #HEADER
+
+\*------------------------------*/
+
+.holder-logo {
+	background: none #fff;
+	width:140px;	
+}
 
 /*------------------------------*\
 
@@ -8,3 +18,13 @@
 .nav .menu-item-depth-0 > .sub-menu{
 	display:none;	
 }
+.nav ul{
+	display:inline-block;
+	vertical-align:middle;	
+}
+.nav ul li{
+	display:inline-block;
+	vertical-align:middle;	
+}
+
+

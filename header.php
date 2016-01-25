@@ -16,7 +16,10 @@
 <body <?php body_class($bodyclass); ?> >
 
 	<div class="wrap-main">
-
-		<?php include( TEMPLATEPATH.'/app/inc/header/nav.php' ); ?>
-
+    
+		<header class="header">        
+        	<?php include( TEMPLATEPATH.'/app/inc/header/logo.php' ); ?>
+			<?php include( TEMPLATEPATH.'/app/inc/header/nav.php' ); ?>
+		</header>
+        
 		<div class="wrap-content">
