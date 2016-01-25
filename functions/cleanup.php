@@ -2,12 +2,6 @@
 // FLUXI CLEANUP 1.0 | 20/01/2016
 
 /**
- * Disable Theme Editor
- */
-define('DISALLOW_FILE_EDIT',true);
-
-
-/**
  * Disable admin top bar
  */
 show_admin_bar( false );
@@ -52,7 +46,7 @@ add_filter( 'gettext', 'remove_lost_your_password'  );
  * Modify connection page logo and background
  */
 function my_custom_login_logo() {
-	 echo '<style type="text/css">.login h1 a {background-image:url('.get_bloginfo('template_directory').'/app/img/logo-login.png)!important;	 -webkit-background-size:240px auto!important;background-size:240px auto!important;width:inherit!important;}</style>';
+	 echo '<style type="text/css">.login h1 a {background-image:url('.get_bloginfo('template_directory').'/app/img/logo-login.png)!important; -webkit-background-size:122px auto!important;background-size:122px auto!important;width:inherit!important;height:132px;}</style>';
 }
 add_action('login_head', 'my_custom_login_logo');
 

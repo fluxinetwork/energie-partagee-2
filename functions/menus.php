@@ -6,6 +6,7 @@
 */
 function register_main_menu() {
   register_nav_menu('main-menu','Main menu');
+  register_nav_menu('main-menu-patern','Main menu patern');
 }
 add_action( 'init', 'register_main_menu' );
 
