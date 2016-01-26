@@ -47,3 +47,16 @@
     #MICRO-MODULES
 
 \*------------------------------*/
+.top-display {
+  background: none #122c33;
+  text-align: right;
+}
+.top-display p {
+  margin: 0;
+  padding: 0.4rem 3.1rem 0.4rem 0;
+  color: #fff;
+}
+.top-display p a {
+  color: #fff;
+  text-decoration: underline;
+}

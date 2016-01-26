@@ -47,6 +47,32 @@
     #WRAPS
 
 \*------------------------------*/
-.wrap-main .header {
-  background: #174789;
+.wrap-main .first-bloc {
+  background: url("/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg") no-repeat;
+  background-size: cover;
+  min-height: 576px;
+  padding: 12.5rem 0 5.89rem 0;
+  text-align: center;
+}
+.wrap-main .first-bloc .key-number {
+  margin: 1.4rem 0 2.4rem;
+  padding: 0;
+}
+.wrap-main .first-bloc .key-number li {
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+}
+.wrap-main .first-bloc .key-number li .number {
+  font-size: 2.4rem;
+  display: block;
+}
+
+.highlight-box {
+  background: none #eb6c1d;
+  color: #fff;
+}
+.highlight-box p:first-child {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.5);
 }

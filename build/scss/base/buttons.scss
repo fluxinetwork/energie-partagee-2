@@ -5,3 +5,13 @@
     #BUTTONS
 
 \*------------------------------*/
+.button{
+	border-radius:3px;
+	text-transform:uppercase;
+	padding:1.24rem 1.24rem;
+	
+	.white{
+		background:none #fff;
+		color:#65aa04;		
+	}
+}

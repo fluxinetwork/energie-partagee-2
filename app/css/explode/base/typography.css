@@ -55,3 +55,10 @@ body {
 .bold {
   font-weight: 700;
 }
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}

@@ -1,5 +1,5 @@
 <div class="holder-logo">
-	<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 92 98" enable-background="new 0 0 92 98" xml:space="preserve">
 		<g>
 		  <g>
@@ -415,9 +415,9 @@
 	</svg>
 
 	<ul class="social">
-    	<li><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-facebook.png"></li>
-       <li><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-twitter.png"></li>
-       <li><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-youtube.png"></li>
+    	<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-facebook.png"></a></li>
+       <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-twitter.png"></a></li>
+       <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-youtube.png"></a></li>
     </ul>
  
 </div>

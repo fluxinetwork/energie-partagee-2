@@ -16,3 +16,14 @@ body {
 .bold {
 	font-weight: 700;
 }
+
+h1{
+			
+	font:{
+		size:$h1;
+		weight:bold;
+	}
+						
+	padding:0;
+	margin:0;
+}

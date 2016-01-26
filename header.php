@@ -15,6 +15,10 @@
 <?php include( TEMPLATEPATH.'/app/inc/header/bodyclass.php' ); ?>
 <body <?php body_class($bodyclass); ?> >
 
+	<div class="top-display">
+    	<p>Pour aller sur le site de souscription, <a href="#">cliquez ici</a></p>
+    </div>
+
 	<div class="wrap-main">
     
 		<header class="header">        

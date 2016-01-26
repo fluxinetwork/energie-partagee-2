@@ -1,7 +1,7 @@
 <nav class="nav" role="navigation">
-   <ul>
-    		<?php 				
-				// Main menu WP		
+  <ul class="main-nav">
+    <?php 				
+				// Main menu		
 				
 				wp_nav_menu( array(
 					'theme_location'    => 'main-menu',
@@ -13,9 +13,11 @@
 					'walker'        => new themeslug_walker_nav_menu
 				) ); 
 			?>
-	</ul>
-    <ul>		
-			<?php			
+  </ul>
+  <ul class="nav-patern">
+    <?php			
+				// Main menu patern				
+					
 				wp_nav_menu( array(
 					'theme_location'    => 'main-menu-patern',
 					'container'     => '',
@@ -25,20 +27,15 @@
 					'depth'         => 10, 
 					'walker'        => new themeslug_walker_nav_menu
 				) ); 			
-			?>        
-      <li>
-      	<a href="<?php echo wp_logout_url( home_url() ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-contact.png"></a>
-      </li>
-      <li>
-      	<a href="<?php echo wp_logout_url( home_url() ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-search.png"></a>
-      </li>
-      <li>
-			<?php if ( is_user_logged_in() ) {  ?>
-            	<a href="<?php echo wp_logout_url( home_url() ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-deco-adherent.png"></a>
-            <?php } else{ ?>
-            	<a href="<?php echo get_bloginfo('url'); ?>/wp-login.php"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-adherent.png"></a>
-            <?php } ?>
-       </li>
-    </ul>       
-		
+			?>
+    <li class="mini-btn"> <a href="<?php echo wp_logout_url( home_url() ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-contact.png"></a> </li>
+    <li class="mini-btn"> <a href="<?php echo wp_logout_url( home_url() ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-search.png"></a> </li>
+    <li class="mini-btn">
+      <?php if ( is_user_logged_in() ) {  ?>
+      <a href="<?php echo wp_logout_url( home_url() ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-deco-adherent.png"></a>
+      <?php } else{ ?>
+      <a href="<?php echo get_bloginfo('url'); ?>/wp-login.php"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-adherent.png"></a>
+      <?php } ?>
+    </li>
+  </ul>
 </nav>

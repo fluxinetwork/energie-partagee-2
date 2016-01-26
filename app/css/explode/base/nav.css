@@ -47,9 +47,31 @@
     #HEADER
 
 \*------------------------------*/
-.holder-logo {
+.header {
+  position: absolute;
+  width: 100%;
+}
+.header .holder-logo {
   background: none #fff;
-  width: 140px;
+  width: 8.78rem;
+  text-align: center;
+  padding: 1.24rem 1.6rem 0.93rem;
+  margin-left: 3.1rem;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  z-index: 50;
+}
+.header .holder-logo .social {
+  padding: 0;
+  margin: 0.744rem 0 0;
+}
+.header .holder-logo .social li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 3px;
+}
+.header .holder-logo .social li:last-child {
+  margin-right: 0;
 }
 
 /*------------------------------*\
@@ -61,12 +83,50 @@
   display: none;
 }
 
+.nav {
+  position: absolute;
+  top: 4.03rem;
+  width: 100%;
+  text-align: right;
+}
 .nav ul {
   display: inline-block;
   vertical-align: middle;
+  padding: 0;
+  margin: 0;
 }
-
 .nav ul li {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 1.24rem;
+}
+.nav ul li:first-child {
+  margin-left: 1.24rem;
+}
+.nav a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.nav .main-nav {
+  padding: 0.93rem 0 0.93rem 11.78rem;
+  background: #65aa04 none;
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  left: 0;
+}
+.nav .nav-patern {
+  width: 100%;
+  padding: 0.62rem 3.1rem 0 0.62rem;
+}
+.nav .nav-patern li {
+  margin: 0 1.24rem 0 0;
+}
+.nav .nav-patern li:first-child {
+  margin-left: 0;
+}
+.nav .nav-patern .mini-btn {
+  margin-right: 0.558rem;
+}
+.nav .nav-patern .mini-btn:last-child {
+  margin-right: 0;
 }

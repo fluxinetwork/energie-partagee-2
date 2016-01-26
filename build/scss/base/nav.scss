@@ -4,12 +4,33 @@
     #HEADER
 
 \*------------------------------*/
-
-.holder-logo {
-	background: none #fff;
-	width:140px;	
+.header{
+	position:absolute;
+	width:100%;
+	
+	.holder-logo {
+		background: none #fff;
+		width:8.78rem;
+		text-align:center;
+		padding: 1.24rem 1.6rem 0.93rem;
+		margin-left:3.1rem;
+		border-radius: 0 0 3px 3px;
+		position:relative;
+		z-index:50;
+				
+		.social {
+			padding:0;
+			margin:0.744rem 0 0;
+			
+			li {
+				list-style-type:none;	
+				display:inline-block;
+				margin-right:3px;
+				&:last-child { margin-right:0;}	
+			}
+		}
+	}
 }
-
 /*------------------------------*\
 
     #NAV
@@ -18,13 +39,52 @@
 .nav .menu-item-depth-0 > .sub-menu{
 	display:none;	
 }
-.nav ul{
-	display:inline-block;
-	vertical-align:middle;	
-}
-.nav ul li{
-	display:inline-block;
-	vertical-align:middle;	
+.nav{
+	position:absolute;
+	top:4.03rem;
+	width:100%;
+	text-align:right;	
+	
+	ul{
+		display:inline-block;
+		vertical-align:middle;
+		padding:0;
+		margin:0;
+		
+		li{
+			display:inline-block;
+			vertical-align:middle;
+			margin-right:1.24rem;	
+			&:first-child { margin-left:1.24rem;}	
+		}
+	}
+	
+	a{
+		color:#fff;
+		text-transform:uppercase;	
+	}
+	
+	.main-nav{
+		padding:0.93rem 0 0.93rem 11.78rem;
+		background:#65aa04 none;
+		border-radius: 0 3px 3px 0;
+		position:absolute;
+		left:0;		
+	}
+	.nav-patern{
+		width:100%;
+		padding:0.62rem 3.1rem 0 0.62rem;
+		
+		li{
+			margin:0 1.24rem 0 0;	
+			&:first-child { margin-left:0;}	
+		}
+		
+		.mini-btn{
+			margin-right:0.558rem;
+			&:last-child { margin-right:0;}		
+		}
+	}
 }
 
 
