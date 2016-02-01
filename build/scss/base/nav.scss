@@ -16,7 +16,20 @@
 		margin-left:5rem;
 		border-radius: 0 0 3px 3px;
 		position:relative;
-		z-index:50;
+		z-index:50;	
+		
+		.social{
+			font-size:1.4rem;	
+			margin:0.8rem 0 0;
+			
+			[class^="social--"] i, [class*=" social--"] i{			
+				width: 2.5rem;
+				height: 2.5rem;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 2.5rem;
+			}
+		}
 	}
 }
 /*------------------------------*\
@@ -52,7 +65,7 @@
 	
 	.main-nav{
 		padding:1.8rem 0 1.8rem 19rem;
-		background:#65aa04 none;
+		background:$c-green;
 		border-radius: 0 3px 3px 0;
 		position:absolute;
 		left:0;		

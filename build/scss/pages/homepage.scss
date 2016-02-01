@@ -43,12 +43,7 @@
 }
 
 .wrap-highlight{
-	padding:6rem 0 4rem;
-	
-	/*.box-flex{
-		justify-content:space-around;
-		flex-wrap: nowrap;	
-	}*/
+	padding:6rem 0 4rem;	
 	
 	.lighter{
 		font-family: 'avantgarde', sans-serif;
@@ -91,20 +86,27 @@
 	}
 	
 	a{
-		color:#65aa04;
+		color:$c-green;
 		text-transform:uppercase;
 		font-size:1.4rem;	
 	}
 	
 }
 .last-projects{
-	background:none #f2f2f2;
+	background:$c-grey-lighter;
 	padding:10rem 0 9rem;
 	text-align:center;		
 }
 .last-news{
 	padding:10rem 0 0;	
 	
+	.head-flex{
+		
+		h2{
+			text-align:left;
+			margin-bottom:0;	
+		}		
+	}
 }
 
 .img-reponsive{
@@ -116,7 +118,7 @@
 	margin-top:9.5rem;
 	
 	.wrap-n{
-		background:none #f4f4f4;
+		background:$c-grey-light;
 		position:relative;
 		top:-9.5rem;
 		padding:6rem 7.6rem 7rem;

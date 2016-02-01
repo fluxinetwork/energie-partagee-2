@@ -17,15 +17,19 @@ if ( function_exists('is_mobile') ) {
             <div class="box--half">
                 <h2>Nous suivre</h2>
                 <ul class="social">
-                    <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-facebook.png"></a></li>
-                   <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-twitter.png"></a></li>
-                   <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-youtube.png"></a></li>
+                    <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
+                   <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
+                   <li><a href="#" class="social--yout"><i class="icon-youtube"></i></a></li>
                 </ul>    
             </div>
             <form class="box--half" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
-                <h2>Abonnement newsletter</h2> 
-                <input class="in-contact" name="YMP0" id="nom_contact" type="email" value="" placeholder="Votre email ici" required aria-required="true">
+                <h2>Abonnement newsletter</h2>
+                <div class="box-flex"> 
+                <div class="box--solo"><input class="courtcircuit--input" name="YMP0" id="newsletter_footer" type="email" value="" placeholder="Votre email" required aria-required="true"></div>
+                <div class="box--fixe">
                 <button type="submit" class="button-round"><i>&radic;</i></button>
+                </div>
+                </div>
             </form>            
         </div>
         

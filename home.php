@@ -71,9 +71,9 @@
             	<div class="box--half">
                     Suivez-nous sur 
                     <ul class="social">
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-facebook.png"></a></li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-twitter.png"></a></li>
-                    </ul>
+                        <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
+                       <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
+                    </ul>  
            	</div>
              	<div class="box--fixe"></div>
         	</div>
@@ -82,15 +82,13 @@
                 <div class="box--half">
                    <a class="news-item" href="#">
                        <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                       <span class="news-date">12 jan</span>
-                       <p>5 raisons d’offrir des actions Énergie Partagée à Noël</p>
+                       <p><span class="news-date"><i>12</i> jan</span>5 raisons d’offrir des actions Énergie Partagée à Noël</p>
                    </a>
                 </div>
                 <div class="box--half">
                     <a class="news-item" href="#">
                        <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                       <span class="news-date">23 dec</span>
-                       <p>5 raisons d’offrir des actions Énergie Partagée à Noël</p>
+                       <p><span class="news-date"><i>23</i> dec</span>5 raisons d’offrir des actions Énergie Partagée à Noël</p>
                    </a>
                 </div>
                 <div class="box--fixe"> 
@@ -110,7 +108,7 @@
           		<p>Abonnez-vous a Court-Circuit, la newsletter d’Energie Partagée.</p>
           </div>
           <div class="box--half">
-          		<input class="courtcircuit--input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email ici" required aria-required="true">
+          		<input class="courtcircuit--input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email" required aria-required="true">
           </div>
           <div class="box--fixe">
             	<button type="submit" class="button-round"><i>&radic;</i></button>

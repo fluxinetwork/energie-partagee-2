@@ -8,7 +8,7 @@
 .button{
 	background: #fff none;
     border-radius: 3px;
-    color: #65aa04;
+    color: $c-green;
 	cursor:pointer;
     display: inline-block;
     font-family: "avantgarde",sans-serif;
@@ -18,7 +18,7 @@
 	
 }
 .button.green{
-	background:#65aa04 none;
+	background:$c-green;
 	color:#fff;		
 }
 .button-round{
@@ -46,14 +46,42 @@
 	color:#b3b3b3;
 	border-color:#b3b3b3;
 }
+
 .social {
-	padding:0;
-	margin:0.8rem 0 0;
-			
+	padding:0;	
+	margin: 1.2rem 0 0;
+	font-size: 2.2rem;	
+		
 	li {
 		list-style-type:none;	
 		display:inline-block;
 		margin-right:3px;
 		&:last-child { margin-right:0;}	
+	}
+	
+	[class^="social--"], [class*=" social--"]{
+		background: #fff none;
+    	border-radius: 50%;
+    	color: #fff;
+    	display: block;
+    	text-align: center;
+		
+		i{
+			display: inline-block;
+			height: 4rem;
+			line-height: 4rem;
+			vertical-align: middle;
+			width: 4rem;	
+		}
+	}
+	
+	.social--face{
+		background: #3b5998 none;	
+	}
+	.social--twit{
+		background: #55acee none;	
+	}
+	.social--yout{
+		background: #dc2925 none;	
 	}
 }

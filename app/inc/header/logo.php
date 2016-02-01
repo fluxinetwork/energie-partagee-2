@@ -4,9 +4,9 @@
     </span>
 
 	<ul class="social">
-    	<li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-facebook.png"></a></li>
-       <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-twitter.png"></a></li>
-       <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/ico-youtube.png"></a></li>
+    	<li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
+       <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
+       <li><a href="#" class="social--yout"><i class="icon-youtube"></i></a></li>
     </ul>
  
 </div>
