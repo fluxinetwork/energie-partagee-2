@@ -3,6 +3,7 @@
     #CLASS
 
 \*------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 .transition {
   transition: all 0.2s ease-in-out;
 }
@@ -37,11 +38,65 @@
   cursor: pointer;
 }
 
+@font-face {
+  font-family: 'avantgarde';
+  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
+  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.svg#texgyreadventorregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avantgarde';
+  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot");
+  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "socicon";
+  src: url("../../../fonts/socicon.eot");
+  src: url("../../../fonts/socicon.eot?#iefix") format("embedded-opentype"), url("../../../fonts/socicon.woff") format("woff"), url("../../../fonts/socicon.ttf") format("truetype"), url("../../../fonts/socicon.svg#socicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "socicon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+  font-family: "socicon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*------------------------------*\
 
     #TYPOGRAPHY
 
 \*------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
 /*------------------------------*\
 
     #MICRO-MODULES
@@ -53,10 +108,44 @@
 }
 .top-display p {
   margin: 0;
-  padding: 0.4rem 3.1rem 0.4rem 0;
+  font-size: 1.4rem;
+  padding: 0.6rem 5rem 0.6rem 0;
   color: #fff;
 }
 .top-display p a {
   color: #fff;
   text-decoration: underline;
+}
+
+.courtcircuit {
+  padding: 6rem 0 10rem;
+  /*.box--half{
+  	flex:1 1 0;	
+  }*/
+}
+.courtcircuit .wrap-n {
+  background: #eb6c1d none;
+  padding: 5rem 7.6rem;
+}
+.courtcircuit h3 {
+  display: flex;
+  margin: 0;
+  align-items: baseline;
+  justify-content: center;
+  font-size: 3.4rem;
+}
+.courtcircuit .deco-left .img-svg, .courtcircuit .deco-right .img-svg {
+  width: 90px;
+}
+.courtcircuit p {
+  color: #fff;
+  font-size: 2rem;
+}
+.courtcircuit .courtcircuit--input {
+  background: #eb6c1d none;
+  color: #fff;
+  font-family: 'avantgarde',sans-serif;
+  font-size: 3.4rem;
+  height: 100%;
+  width: 100%;
 }

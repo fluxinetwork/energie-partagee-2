@@ -6,3 +6,45 @@
 
 \*------------------------------*/
 
+.footer{
+	background:#122c33 none;
+	color:#fff;
+	
+	.box-flex{
+		margin-bottom:2rem;	
+	}
+	/*.box--half{
+		margin-bottom:2rem;
+		flex:50%;
+		max-width: 50%-$gutter/2;		
+	}*/
+	
+	h2{
+		 margin-bottom:$gutter-bottom;		
+	}
+	
+	.partenaires,.labels{
+		@extend .list-reset;		
+		flex-wrap: nowrap;	
+		
+		li{
+			margin-bottom:$gutter-bottom;
+		}
+	}
+	
+	.labels .labels--img{		
+		 width:70px;
+	}
+	
+}
+
+.nav-footer{
+	display:block;
+	width:100%;
+	text-align:center;
+	
+	a{
+		text-transform:uppercase;
+		color:#fff;	
+	}
+}

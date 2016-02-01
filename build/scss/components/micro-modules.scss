@@ -14,7 +14,8 @@
 	
 	p{
 		margin:0;
-		padding:0.4rem 3.1rem 0.4rem 0;
+		font-size:1.4rem;
+		padding:0.6rem 5rem 0.6rem 0;
 		color:$txt-color;
 		
 		a{
@@ -24,3 +25,38 @@
 	}
 }
 
+.courtcircuit{
+	padding:6rem 0 10rem;	
+	
+	.wrap-n{
+		background:#eb6c1d none;
+		padding:5rem 7.6rem;
+	}
+	h3 {
+		display:flex;
+		margin:0;
+		align-items:baseline;
+		justify-content:center; 
+		font-size:$h1;	 
+	}
+	.deco-left .img-svg,.deco-right .img-svg{
+		width:90px;		
+	}
+	p{
+		color:#fff;
+		font-size:2rem;
+	}
+	
+	/*.box--half{
+		flex:1 1 0;	
+	}*/
+	
+	.courtcircuit--input{
+		background: #eb6c1d none;
+		color: #fff;
+		font-family: 'avantgarde',sans-serif;
+		font-size: 3.4rem;
+		height: 100%;
+		width: 100%;
+	}
+}

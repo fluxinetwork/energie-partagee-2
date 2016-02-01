@@ -1,5 +1,124 @@
+@import "../utils/_all.scss";
 /*------------------------------*\
 
     #HOMEPAGE
 
 \*------------------------------*/
+
+.home .wrap-content h2{
+	text-align:center;	
+}
+
+.header-bloc{
+	background:url('/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg') no-repeat;
+	background-size:cover;
+	min-height:576px;
+	padding:20rem 0 10rem 0;		
+	text-align:center;
+	color:#fff;
+	
+	h1{
+		margin-bottom:4rem;
+	}
+		
+	.key-numbers{
+		margin:0;
+		padding:0;
+						
+		li{
+			list-style-type:none;
+			text-align:center;
+			display:inline-block;
+			font-size:1.8rem;	
+			margin-bottom: 6rem;
+    		padding: 0 2.5rem;
+		
+			.number{
+				font-size:5rem;	
+				display:block;
+				font-family: 'avantgarde', sans-serif;					
+			}	
+		}			
+	}		
+}
+
+.wrap-highlight{
+	padding:6rem 0 4rem;
+	
+	/*.box-flex{
+		justify-content:space-around;
+		flex-wrap: nowrap;	
+	}*/
+	
+	.lighter{
+		font-family: 'avantgarde', sans-serif;
+		margin:0 0 1rem;
+		color:rgba( #fff, .5 );	
+	}
+	
+}
+
+
+.steps-intro{
+	
+	padding-top:10rem;
+	padding-bottom:10rem;
+	
+	.box-flex{
+		@extend .list-reset;
+		justify-content: space-around;
+	}
+	.flex-item{		
+		background: #696 none;    	
+    	text-align: center;
+		padding: 0 3rem $gutter-bottom;		
+	}
+	
+	.holder-img{
+		border-radius: 50%;
+		margin: 0 auto 4rem;
+		overflow: hidden;
+		text-align: center;
+		width: 200px;
+	}
+	.holder-img img{
+		display:block;
+	}
+	
+	p{
+		max-width: 230px;
+		margin: 0 auto 2rem;
+	}
+	
+	a{
+		color:#65aa04;
+		text-transform:uppercase;
+		font-size:1.4rem;	
+	}
+	
+}
+.last-projects{
+	background:none #f2f2f2;
+	padding:10rem 0 9rem;
+	text-align:center;		
+}
+.last-news{
+	padding:10rem 0 0;	
+	
+}
+
+.img-reponsive{
+	width:100%;	
+}
+
+.top-credibility{
+	background:none #c60546;
+	margin-top:9.5rem;
+	
+	.wrap-n{
+		background:none #f4f4f4;
+		position:relative;
+		top:-9.5rem;
+		padding:6rem 7.6rem 7rem;
+	}
+}

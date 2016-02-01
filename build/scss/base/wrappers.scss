@@ -1,5 +1,4 @@
 @import "../utils/_all.scss";
-
 /*------------------------------*\
 
     #WRAPS
@@ -7,39 +6,85 @@
 \*------------------------------*/
 .wrap-main {
 	
-	.first-bloc{
-		background:url('/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg') no-repeat;
-		background-size:cover;
-		min-height:576px;
-		padding:12.5rem 0 5.89rem 0;		
-		text-align:center;
-		
-		.key-number{
-			margin:1.4rem 0 2.4rem;
-			padding:0;
-						
-			li{
-				list-style-type:none;
-				text-align:center;
-				display:inline-block;
-				
-				.number{
-					font-size:$h1;	
-					display:block;
-									
-				}	
-			}			
-		}
-		
-	}
+}
+/*Wrap small*/
+.wrap-s {
+	margin:0 auto;
+	padding: 0 5rem;	
+	max-width:690px;	
+}
+/*Wrap normal*/
+.wrap-n {
+	margin:0 auto;
+	padding: 0 7.6rem;	
+	max-width:830px;	
+}
+/*Wrap large*/
+.wrap-l {
+	margin:0 auto;
+	padding: 0 5rem;
+	max-width:978px;	
+}
+/*Wrap orange*/
+.wrap-highlight{
+	background:none #eb6c1d;	
+	color:#fff;
+	width:100%;
+}
+
+
+/*------- FLEX -----------*/
+.box-flex {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;	
+}
+.box {
+  	display: block;
+  	flex: 100%;
+  	background: blue;
+	margin-bottom: $gutter-bottom;
+  	
+}
+.box:first-child {
+  	background: darkblue;
+}
+.box--solo, .box--half{
+	@extend .box;
 	
 }
 
-.highlight-box{
-	background:none #eb6c1d;	
-	color:#fff;
-	p:first-child{
-		margin-top:0;
-		color:rgba( #fff, .5 );	
-	}
+.box--fixe {
+  	flex: auto;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;  	
+	width:66px;
+	background:#699;
+	margin-bottom: $gutter-bottom;
 }
+
+@media screen and (min-width: $bp--small) {
+  .box--solo{
+	  flex: 1 1 83%;
+      padding-right: 5%;	
+  }
+  .box--half {
+    	flex: 44%;		
+    	max-width: 44%-$gutter/2;		
+  }
+  .box--fixe {    	
+		max-width:66px;    	
+  }
+}
+/*
+@media screen and (min-width: $bp--medium) {
+	
+  .box--half {
+    	flex: 45%;
+    	max-width: 45%-$gutter/2;
+  }  
+  .box--fixe {
+    	flex: none;    	
+  }
+}*/

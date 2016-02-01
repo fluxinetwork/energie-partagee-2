@@ -3,6 +3,7 @@
     #CLASS
 
 \*------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 .transition {
   transition: all 0.2s ease-in-out;
 }
@@ -18,7 +19,7 @@
   clear: both;
 }
 
-.list-reset {
+.list-reset, .nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -37,11 +38,65 @@
   cursor: pointer;
 }
 
+@font-face {
+  font-family: 'avantgarde';
+  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
+  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.svg#texgyreadventorregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avantgarde';
+  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot");
+  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "socicon";
+  src: url("../../../fonts/socicon.eot");
+  src: url("../../../fonts/socicon.eot?#iefix") format("embedded-opentype"), url("../../../fonts/socicon.woff") format("woff"), url("../../../fonts/socicon.ttf") format("truetype"), url("../../../fonts/socicon.svg#socicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "socicon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+  font-family: "socicon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*------------------------------*\
 
     #TYPOGRAPHY
 
 \*------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
 /*------------------------------*\
 
     #HEADER
@@ -53,25 +108,13 @@
 }
 .header .holder-logo {
   background: none #fff;
-  width: 8.78rem;
+  width: 14rem;
   text-align: center;
-  padding: 1.24rem 1.6rem 0.93rem;
-  margin-left: 3.1rem;
+  padding: 2.5rem 2.5rem 1.5rem;
+  margin-left: 5rem;
   border-radius: 0 0 3px 3px;
   position: relative;
   z-index: 50;
-}
-.header .holder-logo .social {
-  padding: 0;
-  margin: 0.744rem 0 0;
-}
-.header .holder-logo .social li {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 3px;
-}
-.header .holder-logo .social li:last-child {
-  margin-right: 0;
 }
 
 /*------------------------------*\
@@ -85,30 +128,27 @@
 
 .nav {
   position: absolute;
-  top: 4.03rem;
+  top: 3rem;
   width: 100%;
   text-align: right;
+  font-size: 1.6rem;
 }
 .nav ul {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 .nav ul li {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 1.24rem;
+  margin-right: 2rem;
 }
 .nav ul li:first-child {
-  margin-left: 1.24rem;
+  margin-left: 2rem;
 }
 .nav a {
   color: #fff;
   text-transform: uppercase;
 }
 .nav .main-nav {
-  padding: 0.93rem 0 0.93rem 11.78rem;
+  padding: 1.8rem 0 1.8rem 19rem;
   background: #65aa04 none;
   border-radius: 0 3px 3px 0;
   position: absolute;
@@ -116,16 +156,20 @@
 }
 .nav .nav-patern {
   width: 100%;
-  padding: 0.62rem 3.1rem 0 0.62rem;
+  padding: 1.3rem 5rem 1.3rem 1rem;
 }
 .nav .nav-patern li {
-  margin: 0 1.24rem 0 0;
+  margin: 0 2rem 0 0;
 }
 .nav .nav-patern li:first-child {
   margin-left: 0;
 }
+.nav .nav-patern li a.menu-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
 .nav .nav-patern .mini-btn {
-  margin-right: 0.558rem;
+  margin-right: 1rem;
 }
 .nav .nav-patern .mini-btn:last-child {
   margin-right: 0;

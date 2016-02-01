@@ -3,6 +3,7 @@
     #CLASS
 
 \*------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 .transition {
   transition: all 0.2s ease-in-out;
 }
@@ -18,7 +19,7 @@
   clear: both;
 }
 
-.list-reset {
+.list-reset, .footer .partenaires, .footer .labels {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -37,13 +38,101 @@
   cursor: pointer;
 }
 
+@font-face {
+  font-family: 'avantgarde';
+  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
+  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.svg#texgyreadventorregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avantgarde';
+  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot");
+  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "socicon";
+  src: url("../../../fonts/socicon.eot");
+  src: url("../../../fonts/socicon.eot?#iefix") format("embedded-opentype"), url("../../../fonts/socicon.woff") format("woff"), url("../../../fonts/socicon.ttf") format("truetype"), url("../../../fonts/socicon.svg#socicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "socicon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+  font-family: "socicon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*------------------------------*\
 
     #TYPOGRAPHY
 
 \*------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
 /*------------------------------*\
 
     #FOOTER
 
 \*------------------------------*/
+.footer {
+  background: #122c33 none;
+  color: #fff;
+  /*.box--half{
+  	margin-bottom:2rem;
+  	flex:50%;
+  	max-width: 50%-$gutter/2;		
+  }*/
+}
+.footer .box-flex {
+  margin-bottom: 2rem;
+}
+.footer h2 {
+  margin-bottom: 3rem;
+}
+.footer .partenaires, .footer .labels {
+  flex-wrap: nowrap;
+}
+.footer .partenaires li, .footer .labels li {
+  margin-bottom: 3rem;
+}
+.footer .labels .labels--img {
+  width: 70px;
+}
+
+.nav-footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.nav-footer a {
+  text-transform: uppercase;
+  color: #fff;
+}
