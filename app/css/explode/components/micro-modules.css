@@ -368,7 +368,7 @@ html {
 }
 .courtcircuit .wrap-n {
   background: #eb6c1d;
-  padding: 5rem 7.6rem 2rem;
+  padding: 5rem 7.6rem;
 }
 .courtcircuit h3 {
   display: flex;
@@ -395,4 +395,5 @@ html {
   font-size: 3.4rem;
   height: 100%;
   width: 100%;
+  padding: 0.4rem 1rem;
 }

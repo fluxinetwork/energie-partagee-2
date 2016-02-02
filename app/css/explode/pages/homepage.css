@@ -349,7 +349,7 @@ html {
 }
 
 .wrap-highlight {
-  padding: 6rem 0 4rem;
+  padding: 6rem 0;
 }
 .wrap-highlight .lighter {
   font-family: 'avantgarde', sans-serif;
@@ -396,6 +396,7 @@ html {
 .trio-projects .project {
   color: #fff;
   position: relative;
+  display: block;
 }
 .trio-projects .project .project--infos p {
   font-family: 'avantgarde', sans-serif;
@@ -415,6 +416,9 @@ html {
   font-size: 9rem;
   left: 0.5rem;
   position: absolute;
+}
+.trio-projects .box {
+  margin-bottom: 3rem;
 }
 .trio-projects .box .project--infos {
   display: inline-block;

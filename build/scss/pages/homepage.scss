@@ -43,7 +43,7 @@
 }
 
 .wrap-highlight{
-	padding:6rem 0 4rem;	
+	padding:6rem 0;	
 	
 	.lighter{
 		font-family: 'avantgarde', sans-serif;
@@ -99,7 +99,8 @@
 
 	.project{
 		color:#fff;
-		position:relative;	
+		position:relative;
+		display:block;
 				
 		.project--infos{
 			p {
@@ -128,6 +129,8 @@
 	}
 	
 	.box{
+		margin-bottom:$gutter-bottom;
+		
 		.project--infos{
 			display:inline-block;
 		}

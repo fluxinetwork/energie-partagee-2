@@ -57,7 +57,7 @@
 	p{	
 		background:$c-grey-light;	
 		position:relative;	
-		padding:1.5rem 2.3rem 2rem;		
+		padding:1.5rem 2.3rem 2rem;
 	}
 }
 
@@ -66,7 +66,7 @@
 	
 	.wrap-n{
 		background:$c-orange;
-		padding:5rem $gutter-wrap-side 2rem;
+		padding:5rem $gutter-wrap-side;
 	}
 	h3 {
 		display:flex;
@@ -95,4 +95,5 @@
 	font-size: 3.4rem;
 	height: 100%;
 	width: 100%;
+	padding:0.4rem 1rem;
 }

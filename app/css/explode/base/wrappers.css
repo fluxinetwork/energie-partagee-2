@@ -368,7 +368,11 @@ html {
   justify-content: center;
   width: 66px;
   background: #699;
-  margin-bottom: 3rem;
+}
+
+.head-flex .box--fixe,
+.trio-projects .box--fixe {
+  display: none;
 }
 
 .box-logos {
@@ -399,6 +403,10 @@ html {
     padding: 0 7.6rem;
   }
 
+  .box, .box--solo, .box--half {
+    margin-bottom: 0;
+  }
+
   .box--solo {
     flex: 1 1 83%;
     padding-right: 5%;
@@ -411,6 +419,11 @@ html {
 
   .box--fixe {
     max-width: 66px;
+  }
+
+  .head-flex .box--fixe,
+  .trio-projects .box--fixe {
+    display: flex;
   }
 }
 /*
