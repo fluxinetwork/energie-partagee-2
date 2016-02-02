@@ -19,7 +19,7 @@
   clear: both;
 }
 
-.list-reset, .footer .partenaires, .footer .labels {
+.list-reset, .footer .labels {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -36,6 +36,10 @@
 
 .has-pointer {
   cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
 }
 
 @font-face {
@@ -324,18 +328,6 @@ html {
 .footer h2 {
   margin-bottom: 3rem;
 }
-.footer .partenaires {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-.footer .partenaires li {
-  margin: 0 2% 3rem 0;
-}
-.footer .partenaires li:last-child {
-  margin-right: 0;
-  align-self: center;
-}
 .footer .labels {
   flex-wrap: nowrap;
 }
@@ -348,6 +340,7 @@ html {
 }
 .footer .labels .labels--img {
   width: 70px;
+  align-self: center;
 }
 
 .nav-footer {
@@ -369,12 +362,5 @@ html {
   .footer .box--half {
     flex: 50%;
     max-width: 47.5%;
-  }
-  .footer .partenaires {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .footer .partenaires li {
-    margin-right: 2%;
   }
 }

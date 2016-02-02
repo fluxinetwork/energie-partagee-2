@@ -46,30 +46,62 @@
         </ul>
     </article>
     
-    <article class="last-projects">
+    <article class="trio-projects">
     	<h2>Sélection de projets</h2>
         <div class="wrap-n">        
             <div class="box-flex">
-              <div class="box"><a href="#"><img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet-big.jpg"></a></div>
-              <div class="box--half"><a href="#"><img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg"></a></div>
-              <div class="box--half"><a href="#"><img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg"></a></div>
+              <div class="box">   
+                  <a class="project" href="#">
+                    <div class="project--img">
+                    		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
+                          <i class="icon-uniE60C"></i>
+                    </div>
+                    <div class="project--infos">
+                    		<p>Isac-Watts <span>Loire-Atlantique</span></p>
+                    </div>
+                  </a>                  
+              </div>
+              <div class="box--half">              		
+                   <a class="project" href="#">
+                    <div class="project--img">
+                    		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
+                          <i class="icon-uniE60F"></i>
+                    </div>
+                    <div class="project--infos">
+                    		<p>Suzamme Solar Colmar <span>Haut-Rin</span></p>
+                    </div>
+                  </a>
+              </div>
+              <div class="box--half">
+              		<a class="project" href="#">
+                    <div class="project--img">
+                    		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
+                          <i class="icon-uniE60A"></i>
+                    </div>
+                    <div class="project--infos">
+                    		<p>Grozne Biogaz <span>Rhône</span></p>
+                    </div>
+                  </a>
+              </div>
               <div class="box--fixe">
                     <a class="button-round grey" href="#"><i>></i></a> 
               </div>          
             </div>
+        </div>
+        <div class="wrap-n al-c">    
             <a href="#" class="button green">Voir la carte des projets</a>
         </div>       
         
     </article>
     
-    <article class="last-news">
+    <article class="duo-news">
     	<div class="wrap-n">
         	<div class="box-flex head-flex">
             	<div class="box--half">
             		<h2>Nos actualités</h2>
             	</div>
             	<div class="box--half">
-                    Suivez-nous sur 
+                    <p class="lighter">Suivez-nous sur</p> 
                     <ul class="social">
                         <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
                        <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
@@ -120,14 +152,13 @@
     <article class="top-credibility">
     	<div class="wrap-n">
             <h2>Ils parlent de nous</h2>
-            <div class="box-flex">
-            	 <div class="box--solo">
-                    <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logos-presse.jpg">
-                </div>
-                <div class="box--fixe">
-                    <a class="button-round grey" href="#"><i>+</i></a>
-                </div>
-            </div>
+            <ul class="box-logos box-flex">
+                <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
+                <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
+                <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
+                <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
+                <li><a class="button-round grey" href="#"><i>+</i></a></li> 
+            </ul>
         </div> 
     </article>
         

@@ -19,7 +19,7 @@
   clear: both;
 }
 
-.list-reset {
+.list-reset, .box-logos {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -36,6 +36,10 @@
 
 .has-pointer {
   cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
 }
 
 @font-face {
@@ -321,7 +325,7 @@ html {
 /*Wrap normal*/
 .wrap-n {
   margin: 0 auto;
-  padding: 0 7.6rem;
+  padding: 0 6rem;
   max-width: 830px;
 }
 
@@ -367,15 +371,42 @@ html {
   margin-bottom: 3rem;
 }
 
+.box-logos {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.box-logos li {
+  margin: 0 auto 3rem;
+}
+.box-logos li:last-child {
+  align-self: center;
+  flex: 1 1 100%;
+  margin-right: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .box-logos li {
+    margin: 0;
+  }
+  .box-logos li:last-child {
+    align-self: center;
+    flex: inherit;
+  }
+}
 @media screen and (min-width: 600px) {
+  .wrap-n {
+    padding: 0 7.6rem;
+  }
+
   .box--solo {
     flex: 1 1 83%;
     padding-right: 5%;
   }
 
   .box--half {
-    flex: 44%;
-    max-width: 41.5%;
+    flex: 41.5%;
+    max-width: 39%;
   }
 
   .box--fixe {

@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.al-c {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'avantgarde';
   src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");

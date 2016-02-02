@@ -34,7 +34,7 @@ if ( function_exists('is_mobile') ) {
         </div>
         
         <h2>Nos partenaires</h2>
-        <ul class="partenaires box-flex">
+        <ul class="box-logos box-flex">
             <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
             <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
             <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>

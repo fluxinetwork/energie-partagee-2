@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.al-c {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'avantgarde';
   src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
@@ -334,12 +338,12 @@ html {
   border-radius: 50%;
   color: #fff;
   display: block;
-  font-family: 'avantgarde', sans-serif;
-  font-size: 1rem;
+  font-family: "avantgarde",sans-serif;
+  font-size: 0.9rem;
   height: 4rem;
   left: -2rem;
   line-height: 1.3rem;
-  padding-top: 0.6rem;
+  padding-top: 0.7rem;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
@@ -350,9 +354,8 @@ html {
 }
 .news-item .news-date i {
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
-  margin-bottom: 0.2rem;
 }
 .news-item p {
   background: #f4f4f4;

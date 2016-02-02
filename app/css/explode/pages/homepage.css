@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.al-c {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'avantgarde';
   src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
@@ -385,18 +389,55 @@ html {
   font-size: 1.4rem;
 }
 
-.last-projects {
+.trio-projects {
   background: #f2f2f2;
   padding: 10rem 0 9rem;
-  text-align: center;
+}
+.trio-projects .project {
+  color: #fff;
+  position: relative;
+}
+.trio-projects .project .project--infos p {
+  font-family: 'avantgarde', sans-serif;
+  font-size: 2rem;
+  padding: 2rem 2rem;
+}
+.trio-projects .project .project--infos p span {
+  display: block;
+  font-family: 'PT sans', sans-serif;
+  font-size: 1.6rem;
+}
+.trio-projects .project .project--img {
+  position: relative;
+}
+.trio-projects .project .project--img i {
+  bottom: 0.5rem;
+  font-size: 9rem;
+  left: 0.5rem;
+  position: absolute;
+}
+.trio-projects .box .project--infos {
+  display: inline-block;
 }
 
-.last-news {
+.duo-news {
   padding: 10rem 0 0;
 }
-.last-news .head-flex h2 {
+.duo-news .head-flex .box--half {
+  text-align: right;
+}
+.duo-news .head-flex h2 {
   text-align: left;
-  margin-bottom: 0;
+  margin: 0.5rem 0 0;
+}
+.duo-news .head-flex .lighter {
+  color: #b3b3b3;
+  text-align: right;
+  display: inline-block;
+}
+.duo-news .head-flex .social {
+  display: inline-block;
+  margin: 0;
 }
 
 .img-reponsive {

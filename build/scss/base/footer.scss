@@ -27,22 +27,7 @@
 		 margin-bottom:$gutter-bottom;		
 	}
 	
-	.partenaires{	
-		@extend .list-reset;
-			
-    	flex-wrap: wrap;
-		justify-content: space-between;
-		margin-bottom:3rem;
-			
-		li{
-			margin:0 2% $gutter-bottom 0;	
-			
-			&:last-child{
-				margin-right:0;
-				align-self:center;				
-			}	
-		}		
-	}
+	
 	
 	.labels{
 		@extend .list-reset;		
@@ -60,6 +45,7 @@
 	
 	.labels .labels--img{		
 		 width:70px;
+		 align-self:center;
 	}
 	
 }
@@ -88,15 +74,6 @@
 			flex:50%;
 			max-width: 50%-$gutter/2;	
 	  }
-	  
-	  .partenaires{		
-			flex-wrap: wrap;
-			justify-content: space-between;
-			
-			li{
-				margin-right:2%;
-			}	
-		}
 	  
 	}
 }
