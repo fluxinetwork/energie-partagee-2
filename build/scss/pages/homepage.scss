@@ -47,8 +47,12 @@
 	
 	.lighter{
 		font-family: 'avantgarde', sans-serif;
-		margin:0 0 1rem;
+		margin:0;
 		color:rgba( #fff, .5 );	
+	}
+	
+	h1{
+		margin-bottom: 2rem;	
 	}
 	
 }
@@ -58,16 +62,6 @@
 	
 	padding-top:10rem;
 	padding-bottom:10rem;
-	
-	.box-flex{
-		@extend .list-reset;
-		justify-content: space-around;
-	}
-	.flex-item{		
-		background: #696 none;    	
-    	text-align: center;
-		padding: 0 3rem $gutter-bottom;		
-	}
 	
 	.holder-img{
 		border-radius: 50%;
@@ -88,7 +82,8 @@
 	a{
 		color:$c-green;
 		text-transform:uppercase;
-		font-size:1.4rem;	
+		font-size:1.4rem;
+		font-family: 'avantgarde', sans-serif;	
 	}
 	
 }
@@ -96,13 +91,29 @@
 .trio-projects{
 	background:$c-grey-lighter;
 	padding:10rem 0 9rem;
-
+	
+	.box--half {
+		display: block;
+		width: 100%;
+		margin-bottom: 3rem;
+	 }
+		
+	.box--fixe{
+		display:none;
+	}
+	
+	.box--full{
+		margin-bottom:$gutter-bottom;		
+	}	
+	
 	.project{
 		color:#fff;
 		position:relative;
 		display:block;
 				
-		.project--infos{
+		.project--infos{			
+			background:$c-blue;
+			
 			p {
 				font-family: 'avantgarde', sans-serif;	
 				font-size:2rem;
@@ -128,13 +139,10 @@
 		}				
 	}
 	
-	.box{
-		margin-bottom:$gutter-bottom;
-		
-		.project--infos{
-			display:inline-block;
-		}
-	}
+	
+	
+	
+	
 }
 
 .duo-news{
@@ -153,7 +161,7 @@
 		.lighter{
 			color:#b3b3b3;
 			text-align:right;
-			display:inline-block;
+			display:none;
 		}
 		
 		.social{
@@ -179,3 +187,50 @@
 		padding:6rem $gutter-wrap-side 7rem;
 	}
 }
+@media screen and (min-width: $bp--small) {	
+	.trio-projects {
+		.box--half {
+			flex: 50%;		
+			max-width: 50%-$gutter/2;		
+		}
+	}
+	.duo-news{
+		
+		.head-flex{
+			h2{
+				text-align:left;
+				margin:0.5rem 0 5rem;	
+			}	
+		}
+	}
+}
+@media screen and (min-width: $bp--medium) {	
+	.trio-projects {
+		.box--half {
+			flex: 41.5%;		
+			max-width: 41.5%-$gutter/2;
+			margin-bottom: 0;		
+		}
+		
+		.box--full{
+			.project--img i{
+				bottom: 12.5rem;
+			}
+			.project--infos{				
+    			bottom: 3rem;
+    			display: inline-block;
+    			position: absolute;
+			}
+		}	
+			
+		.box--fixe{
+			display:flex;
+		}  
+	  	
+	}
+	.duo-news .head-flex .lighter{			
+		display: inline-block;
+	}
+	
+}
+

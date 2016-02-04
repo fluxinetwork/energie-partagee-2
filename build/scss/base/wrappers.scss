@@ -39,33 +39,38 @@
   	flex-wrap: wrap;
   	justify-content: space-between;	
 }
-.box {
-  	display: block;
-  	flex: 100%;
-  	background: blue;
-	margin-bottom: $gutter-bottom;
-  	
+.box-flex.extend-flex{
+	@extend .list-reset;
+	justify-content: space-around;
 }
-.box:first-child {
-  	background: darkblue;
+.box--item{		   	
+    text-align: center;
+	padding: 0 3rem $gutter-bottom;
+	margin-bottom: $gutter-bottom;
+}
+.box--item:last-child{		
+	margin-bottom: 0;
+}
+.box--full {
+  	display: block;
+  	flex: 100%;  	
+	margin-bottom: $gutter-bottom;  	
 }
 .box--solo, .box--half{
-	@extend .box;
+	@extend .box--full;
 	
 }
-
 .box--fixe {
   	flex: auto;
   	display: flex;
   	align-items: center;
   	justify-content: center;  	
 	width:66px;
-	background:#699;	
 }
 .head-flex .box--fixe,
-	.trio-projects .box--fixe{
+.trio-projects .box--fixe{
 		display:none;
-	}
+}
 
 .box-logos{	
 	@extend .list-reset;
@@ -84,7 +89,28 @@
 		}	
 	}		
 }
-
+@media screen and (min-width: $bp--small) {	
+  	.wrap-n{
+		padding: 0 $gutter-wrap-side;	  
+  	}
+  	.box--full{
+	  	margin-bottom:0;	  
+  	}
+  	.box--solo{
+	  	flex: 1 1 84%;
+	  	max-width:84%;
+  	}	
+  	.box--half {
+    	flex: 41.5%;		
+    	max-width: 41.5%-$gutter/2;		
+  	}
+  	.box--fixe {    	
+		max-width:66px;     	
+  	}
+  	.head-flex .box--fixe, .trio-projects .box--fixe{
+		display:flex;
+	}
+}
 @media screen and (min-width: $bp--medium) {
 			
 	.box-logos{			
@@ -98,39 +124,8 @@
 			}
 		}	
 	}	
-}
-@media screen and (min-width: $bp--small) {
 	
-  .wrap-n{
-		padding: 0 $gutter-wrap-side;	  
-  }
-  .box{
-	  margin-bottom:0;	  
-  }
-  .box--solo{
-	  flex: 1 1 83%;
-      padding-right: 5%;	
-  }
-  .box--half {
-    	flex: 41.5%;		
-    	max-width: 41.5%-$gutter/2;		
-  }
-  .box--fixe {    	
-		max-width:66px;     	
-  }
-  .head-flex .box--fixe,
-	.trio-projects .box--fixe{
-		display:flex;
+	.box--item{		
+		margin-bottom: 0;
 	}
 }
-/*
-@media screen and (min-width: $bp--medium) {
-	
-  .box--half {
-    	flex: 45%;
-    	max-width: 45%-$gutter/2;
-  }  
-  .box--fixe {
-    	flex: none;    	
-  }
-}*/

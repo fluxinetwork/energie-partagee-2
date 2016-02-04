@@ -331,7 +331,6 @@ html {
 }
 .header .holder-logo .social {
   font-size: 1.4rem;
-  margin: 0.8rem 0 0;
 }
 .header .holder-logo .social [class^="social--"] i, .header .holder-logo .social [class*=" social--"] i {
   width: 2.5rem;

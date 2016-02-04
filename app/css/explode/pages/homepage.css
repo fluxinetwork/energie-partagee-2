@@ -19,7 +19,7 @@
   clear: both;
 }
 
-.list-reset, .steps-intro .box-flex {
+.list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -353,21 +353,16 @@ html {
 }
 .wrap-highlight .lighter {
   font-family: 'avantgarde', sans-serif;
-  margin: 0 0 1rem;
+  margin: 0;
   color: rgba(255, 255, 255, 0.5);
+}
+.wrap-highlight h1 {
+  margin-bottom: 2rem;
 }
 
 .steps-intro {
   padding-top: 10rem;
   padding-bottom: 10rem;
-}
-.steps-intro .box-flex {
-  justify-content: space-around;
-}
-.steps-intro .flex-item {
-  background: #696 none;
-  text-align: center;
-  padding: 0 3rem 3rem;
 }
 .steps-intro .holder-img {
   border-radius: 50%;
@@ -387,16 +382,31 @@ html {
   color: #65aa04;
   text-transform: uppercase;
   font-size: 1.4rem;
+  font-family: 'avantgarde', sans-serif;
 }
 
 .trio-projects {
   background: #f2f2f2;
   padding: 10rem 0 9rem;
 }
+.trio-projects .box--half {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.trio-projects .box--fixe {
+  display: none;
+}
+.trio-projects .box--full {
+  margin-bottom: 3rem;
+}
 .trio-projects .project {
   color: #fff;
   position: relative;
   display: block;
+}
+.trio-projects .project .project--infos {
+  background: #5ab1bb;
 }
 .trio-projects .project .project--infos p {
   font-family: 'avantgarde', sans-serif;
@@ -417,12 +427,6 @@ html {
   left: 0.5rem;
   position: absolute;
 }
-.trio-projects .box {
-  margin-bottom: 3rem;
-}
-.trio-projects .box .project--infos {
-  display: inline-block;
-}
 
 .duo-news {
   padding: 10rem 0 0;
@@ -437,7 +441,7 @@ html {
 .duo-news .head-flex .lighter {
   color: #b3b3b3;
   text-align: right;
-  display: inline-block;
+  display: none;
 }
 .duo-news .head-flex .social {
   display: inline-block;
@@ -457,4 +461,38 @@ html {
   position: relative;
   top: -9.5rem;
   padding: 6rem 7.6rem 7rem;
+}
+
+@media screen and (min-width: 600px) {
+  .trio-projects .box--half {
+    flex: 50%;
+    max-width: 47.5%;
+  }
+
+  .duo-news .head-flex h2 {
+    text-align: left;
+    margin: 0.5rem 0 5rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .trio-projects .box--half {
+    flex: 41.5%;
+    max-width: 39%;
+    margin-bottom: 0;
+  }
+  .trio-projects .box--full .project--img i {
+    bottom: 12.5rem;
+  }
+  .trio-projects .box--full .project--infos {
+    bottom: 3rem;
+    display: inline-block;
+    position: absolute;
+  }
+  .trio-projects .box--fixe {
+    display: flex;
+  }
+
+  .duo-news .head-flex .lighter {
+    display: inline-block;
+  }
 }

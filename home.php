@@ -27,18 +27,18 @@
     
     <article class="wrap-l steps-intro">
         <h2>Énergie partagée en 3 étapes</h2>
-        <ul class="box-flex">
-            <li class="flex-item">
+        <ul class="box-flex extend-flex">
+            <li class="box--item">
                 <div class="holder-img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>         		
                 <p>Des projets citoyens d'énergie renouvelable émergent partout en France.</p>        
                 <a href="#">Voir les projets</a>
             </li>
-            <li class="flex-item">
+            <li class="box--item">
                 <div class="holder-img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>	
                 <p>Énergie Partagée les accompagne et vous propose d'investir dans ces projets.</p>
                 <a href="#">Devenir actionnaire</a>
             </li>   
-            <li class="flex-item">
+            <li class="box--item">
                 <div class="holder-img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>
                 <p>Energie verte, lutte contre l’effet de serre et revenus pour les actionnaires à la clé.</p>
                 <a href="#">Comment ça marche ?</a>
@@ -50,7 +50,7 @@
     	<h2>Sélection de projets</h2>
         <div class="wrap-n">        
             <div class="box-flex">
-              <div class="box">   
+              <div class="box--full">   
                   <a class="project" href="#">
                     <div class="project--img">
                     		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
@@ -88,7 +88,7 @@
               </div>          
             </div>
         </div>
-        <div class="wrap-n al-c">    
+        <div class="wrap-n holder-button">    
             <a href="#" class="button green">Voir la carte des projets</a>
         </div>       
         
@@ -114,13 +114,13 @@
                 <div class="box--half">
                    <a class="news-item" href="#">
                        <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                       <p><span class="news-date"><i>12</i> jan</span>5 raisons d’offrir des actions Énergie Partagée à Noël</p>
+                       <p><span class="news-date"><i>12</i> jan</span>Un autre texte moins long.</p>
                    </a>
                 </div>
                 <div class="box--half">
                     <a class="news-item" href="#">
                        <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                       <p><span class="news-date"><i>23</i> dec</span>5 raisons d’offrir des actions Énergie Partagée à Noël</p>
+                       <p><span class="news-date"><i>23</i> dec</span>5 raisons d’offrir des actions Énergie Partagée à Noël.</p>
                    </a>
                 </div>
                 <div class="box--fixe"> 
@@ -128,7 +128,7 @@
                 </div>
            </div>
        </div>
-    </article>
+    </article>    
     
     <aside class="courtcircuit">
     	<h3><span class="deco-left"><img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/deco-left.svg"></span>Court&nbsp;Circuit<span class="deco-right"><img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/deco-right.svg"></span>

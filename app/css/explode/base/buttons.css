@@ -394,3 +394,13 @@ html {
 .social .social--yout {
   background: #dc2925 none;
 }
+
+.holder-button {
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .holder-button {
+    margin-top: 3rem;
+  }
+}

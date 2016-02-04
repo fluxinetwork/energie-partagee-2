@@ -331,7 +331,10 @@ html {
 }
 
 .news-item {
+  background: #f4f4f4;
+  display: block;
   position: relative;
+  height: 100%;
 }
 .news-item .news-date {
   background: #eb6c1d;
@@ -358,7 +361,6 @@ html {
   font-style: normal;
 }
 .news-item p {
-  background: #f4f4f4;
   position: relative;
   padding: 1.5rem 2.3rem 2rem;
 }
@@ -368,7 +370,7 @@ html {
 }
 .courtcircuit .wrap-n {
   background: #eb6c1d;
-  padding: 5rem 7.6rem;
+  padding: 5rem 6rem;
 }
 .courtcircuit h3 {
   display: flex;
@@ -396,4 +398,14 @@ html {
   height: 100%;
   width: 100%;
   padding: 0.4rem 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .courtcircuit .wrap-n {
+    padding: 5rem 7.6rem;
+  }
+
+  .top-credibility .wrap-n {
+    padding: 6rem 7.6rem 7rem;
+  }
 }

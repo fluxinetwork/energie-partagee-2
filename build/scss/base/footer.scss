@@ -7,7 +7,7 @@
 \*------------------------------*/
 
 .footer{
-	background:#122c33 none;
+	background:$c-blue-dark;
 	color:#fff;
 	padding-top:7rem;
 	padding-bottom:6rem;
@@ -35,7 +35,7 @@
 		flex-wrap: nowrap;	
 		
 		li{
-			margin:0 2rem $gutter-bottom 0;
+			margin-right:2rem;
 			
 			&:last-child{
 				margin-right:0;
@@ -47,6 +47,16 @@
 	.labels .labels--img{		
 		 width:70px;
 		 align-self:center;
+	}
+	
+	.courtcircuit--input {
+		background: $c-blue-dark;
+		color: #fff;
+		font-family: "avantgarde",sans-serif;
+		font-size: 3.4rem;
+		height: 100%;
+		padding: 0.4rem 1rem;
+		width: 100%;
 	}
 	
 }
@@ -68,12 +78,22 @@
 	}
 }
 
+
 @media screen and (min-width: $bp--small) {
 	.footer{	
 	  
 	  .box--half {
 			flex:50%;
 			max-width: 50%-$gutter/2;	
+	  }
+	  
+	}
+}
+@media screen and (min-width: $bp--medium) {
+	.footer{	
+	  
+	  .box-flex:first-child, .box-logos.box-flex {
+		  margin-bottom:5rem;
 	  }
 	  
 	}

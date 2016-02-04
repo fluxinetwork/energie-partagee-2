@@ -85,3 +85,13 @@
 		background: #dc2925 none;	
 	}
 }
+
+.holder-button{
+	text-align:center;		
+}
+
+@media screen and (min-width: $bp--small) {	
+	.holder-button{
+		margin-top:3rem; 	
+	}
+}

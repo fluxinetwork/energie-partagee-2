@@ -316,7 +316,7 @@ html {
 
 \*------------------------------*/
 .footer {
-  background: #122c33 none;
+  background: #122c33;
   color: #fff;
   padding-top: 7rem;
   padding-bottom: 6rem;
@@ -333,7 +333,7 @@ html {
   flex-wrap: nowrap;
 }
 .footer .labels li {
-  margin: 0 2rem 3rem 0;
+  margin-right: 2rem;
 }
 .footer .labels li:last-child {
   margin-right: 0;
@@ -342,6 +342,15 @@ html {
 .footer .labels .labels--img {
   width: 70px;
   align-self: center;
+}
+.footer .courtcircuit--input {
+  background: #122c33;
+  color: #fff;
+  font-family: "avantgarde",sans-serif;
+  font-size: 3.4rem;
+  height: 100%;
+  padding: 0.4rem 1rem;
+  width: 100%;
 }
 
 .nav-footer {
@@ -363,5 +372,10 @@ html {
   .footer .box--half {
     flex: 50%;
     max-width: 47.5%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .footer .box-flex:first-child, .footer .box-logos.box-flex {
+    margin-bottom: 5rem;
   }
 }

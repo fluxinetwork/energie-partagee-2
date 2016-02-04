@@ -26,7 +26,10 @@
 }
 
 .news-item{
+	background:$c-grey-light;
+	display:block;	
 	position:relative;	
+	height:100%;
 	
 	.news-date{
 		background:$c-orange;
@@ -54,8 +57,7 @@
 		}
 	}
 	
-	p{	
-		background:$c-grey-light;	
+	p{			
 		position:relative;	
 		padding:1.5rem 2.3rem 2rem;
 	}
@@ -66,7 +68,7 @@
 	
 	.wrap-n{
 		background:$c-orange;
-		padding:5rem $gutter-wrap-side;
+		padding:5rem 6rem;
 	}
 	h3 {
 		display:flex;
@@ -96,4 +98,13 @@
 	height: 100%;
 	width: 100%;
 	padding:0.4rem 1rem;
+}
+
+@media screen and (min-width: $bp--small) {	
+	.courtcircuit .wrap-n{
+		padding:5rem $gutter-wrap-side;
+	}	
+	.top-credibility .wrap-n{	
+		padding:6rem $gutter-wrap-side 7rem;	
+	}
 }
