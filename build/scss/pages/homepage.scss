@@ -36,27 +36,11 @@
 			.number{
 				font-size:5rem;	
 				display:block;
-				font-family: 'avantgarde', sans-serif;					
+				font-family: $avantgarde					
 			}	
 		}			
 	}		
 }
-
-.wrap-highlight{
-	padding:6rem 0;	
-	
-	.lighter{
-		font-family: 'avantgarde', sans-serif;
-		margin:0;
-		color:rgba( #fff, .5 );	
-	}
-	
-	h1{
-		margin-bottom: 2rem;	
-	}
-	
-}
-
 
 .steps-intro{
 	
@@ -83,7 +67,7 @@
 		color:$c-green;
 		text-transform:uppercase;
 		font-size:1.4rem;
-		font-family: 'avantgarde', sans-serif;	
+		font-family: $avantgarde;	
 	}
 	
 }
@@ -116,13 +100,13 @@
 		.project--infos{
 			
 			p {
-				font-family: 'avantgarde', sans-serif;	
+				font-family: $avantgarde;	
 				font-size:2rem;
 				padding:2rem 2rem;
 					
 				span{
 					display:block;
-					font-family: 'PT sans', sans-serif;
+					font-family: $pt-sans;
 					font-size:1.6rem;
 				}			
 			}
@@ -163,7 +147,7 @@
 			
 		}
 		.lighter{
-			color:#b3b3b3;
+			color:$c-grey-medium;
 			text-align:right;
 			display:none;
 			padding-right: 1rem;
@@ -181,18 +165,9 @@
 	width:100%;	
 }
 
-.top-credibility{
-	background:none #c60546;
-	margin-top:9.5rem;
-	
-	.wrap-n{
-		background:$c-grey-light;
-		position:relative;
-		top:-9.5rem;
-		padding:6rem $gutter-wrap-side 7rem;
-	}
-}
+
 @media screen and (min-width: $bp--small) {	
+	
 	.trio-projects {
 		.box--half {
 			flex: 50%;		

@@ -326,6 +326,7 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Typos */
 /*------------------------------*\
 
     #BUTTONS
@@ -337,7 +338,7 @@ html {
   color: #65aa04;
   cursor: pointer;
   display: inline-block;
-  font-family: "avantgarde",sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-weight: bold;
   padding: 1.5rem 4rem;
   text-transform: uppercase;

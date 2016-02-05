@@ -7,11 +7,11 @@
 \*------------------------------*/
 .button{
 	background: #fff none;
-    border-radius: 3px;
+    border-radius: $radius;
     color: $c-green;
 	cursor:pointer;
     display: inline-block;
-    font-family: "avantgarde",sans-serif;
+    font-family: $avantgarde;
     font-weight: bold;
     padding: 1.5rem 4rem;
     text-transform: uppercase;
@@ -39,8 +39,8 @@
 	}
 }
 .button-round.grey{
-	color:#b3b3b3;
-	border-color:#b3b3b3;
+	color:$c-grey-medium;
+	border-color:$c-grey-medium;
 }
 
 .social {

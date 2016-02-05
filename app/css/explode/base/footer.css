@@ -326,6 +326,7 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Typos */
 /*------------------------------*\
 
     #FOOTER
@@ -359,10 +360,13 @@ html {
   width: 70px;
   align-self: center;
 }
+.footer .labels .labels--img img {
+  width: 70px;
+}
 .footer .courtcircuit--input {
   background: #122c33;
   color: #fff;
-  font-family: "avantgarde",sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-size: 3.4rem;
   height: 100%;
   padding: 0.4rem 1rem;

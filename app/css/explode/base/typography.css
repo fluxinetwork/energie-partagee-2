@@ -326,6 +326,7 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Typos */
 /*------------------------------*\
 
     #TYPOGRAPHY
@@ -341,7 +342,7 @@ body {
 }
 
 h1 {
-  font-family: 'avantgarde', sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-size: 3.4rem;
   font-weight: bold;
   padding: 0;
@@ -349,7 +350,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'avantgarde', sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   text-align: left;
@@ -359,7 +360,7 @@ h2 {
 }
 
 p {
-  font-family: 'PT sans',sans-serif;
+  font-family: "PT sans", sans-serif;
   font-size: 1.8rem;
   padding: 0;
   margin: 0;

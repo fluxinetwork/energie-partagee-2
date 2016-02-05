@@ -326,6 +326,7 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Typos */
 /*------------------------------*\
 
     #HOMEPAGE
@@ -361,19 +362,7 @@ html {
 .header-bloc .key-numbers li .number {
   font-size: 5rem;
   display: block;
-  font-family: 'avantgarde', sans-serif;
-}
-
-.wrap-highlight {
-  padding: 6rem 0;
-}
-.wrap-highlight .lighter {
-  font-family: 'avantgarde', sans-serif;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.5);
-}
-.wrap-highlight h1 {
-  margin-bottom: 2rem;
+  font-family: "avantgarde", sans-serif;
 }
 
 .steps-intro {
@@ -398,7 +387,7 @@ html {
   color: #65aa04;
   text-transform: uppercase;
   font-size: 1.4rem;
-  font-family: 'avantgarde', sans-serif;
+  font-family: "avantgarde", sans-serif;
 }
 
 .trio-projects {
@@ -424,13 +413,13 @@ html {
   position: relative;
 }
 .trio-projects .project .project--infos p {
-  font-family: 'avantgarde', sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-size: 2rem;
   padding: 2rem 2rem;
 }
 .trio-projects .project .project--infos p span {
   display: block;
-  font-family: 'PT sans', sans-serif;
+  font-family: "PT sans", sans-serif;
   font-size: 1.6rem;
 }
 .trio-projects .project .project--img {
@@ -467,17 +456,6 @@ html {
 
 .img-reponsive {
   width: 100%;
-}
-
-.top-credibility {
-  background: none #c60546;
-  margin-top: 9.5rem;
-}
-.top-credibility .wrap-n {
-  background: #f4f4f4;
-  position: relative;
-  top: -9.5rem;
-  padding: 6rem 7.6rem 7rem;
 }
 
 @media screen and (min-width: 600px) {

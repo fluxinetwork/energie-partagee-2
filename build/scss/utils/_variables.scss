@@ -3,7 +3,8 @@ $bp--small: 600px;
 $bp--medium: 800px;
 
 /* COLORS */
-
+$c-grey: #727272;
+$c-grey-medium: #b3b3b3;
 $c-grey-light: #f4f4f4;
 $c-grey-lighter: #f2f2f2;
 $c-green: #65aa04;
@@ -15,7 +16,10 @@ $c-orange: #eb6c1d;
 
 $gutter: 5%;
 $gutter-bottom: 3rem;
-
 $gutter-wrap-side: 7.6rem;
 
+$radius: 3px;
 
+/* Typos */
+$avantgarde:"avantgarde",sans-serif;
+$pt-sans:"PT sans",sans-serif;

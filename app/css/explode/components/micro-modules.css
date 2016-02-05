@@ -326,6 +326,7 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Typos */
 /*------------------------------*\
 
     #MICRO-MODULES
@@ -351,13 +352,14 @@ html {
   display: block;
   position: relative;
   height: 100%;
+  color: #727272;
 }
 .news-item .news-date {
   background: #eb6c1d;
   border-radius: 50%;
   color: #fff;
   display: block;
-  font-family: "avantgarde",sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-size: 0.9rem;
   height: 4rem;
   left: -2rem;
@@ -382,11 +384,12 @@ html {
 }
 
 .courtcircuit {
-  padding: 6rem 0 10rem;
+  padding: 6rem 0 0;
 }
 .courtcircuit .wrap-n {
   background: #eb6c1d;
   padding: 5rem 6rem;
+  border-radius: 3px;
 }
 .courtcircuit h3 {
   display: flex;
@@ -409,11 +412,17 @@ html {
 .courtcircuit--input {
   background: #eb6c1d;
   color: #fff;
-  font-family: 'avantgarde',sans-serif;
+  font-family: "avantgarde", sans-serif;
   font-size: 3.4rem;
   height: 100%;
   width: 100%;
   padding: 0.4rem 1rem;
+}
+
+.top-credibility .wrap-n {
+  background: #f4f4f4;
+  border-radius: 3px;
+  padding: 6rem 7.6rem 7rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -423,5 +432,19 @@ html {
 
   .top-credibility .wrap-n {
     padding: 6rem 7.6rem 7rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .top-credibility {
+    background: none #c60546;
+    margin-top: 9.5rem;
+  }
+  .top-credibility .wrap-n {
+    position: relative;
+    top: -9.5rem;
+  }
+
+  .courtcircuit {
+    padding-bottom: 10rem;
   }
 }
