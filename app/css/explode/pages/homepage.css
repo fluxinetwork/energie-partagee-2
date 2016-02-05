@@ -59,8 +59,8 @@
 /* Icon font */
 @font-face {
   font-family: 'icomoon';
-  src: url("../../../fonts/icofont/icomoon.eot?c0wrl5");
-  src: url("../../../fonts/icofont/icomoon.eot?c0wrl5#iefix") format("embedded-opentype"), url("../../../fonts/icofont/icomoon.woff2?c0wrl5") format("woff2"), url("../../../fonts/icofont/icomoon.ttf?c0wrl5") format("truetype"), url("../../../fonts/icofont/icomoon.woff?c0wrl5") format("woff"), url("../../../fonts/icofont/icomoon.svg?c0wrl5#icomoon") format("svg");
+  src: url("../../../fonts/icofont/icomoon.eot?di891l");
+  src: url("../../../fonts/icofont/icomoon.eot?di891l#iefix") format("embedded-opentype"), url("../../../fonts/icofont/icomoon.woff2?di891l") format("woff2"), url("../../../fonts/icofont/icomoon.ttf?di891l") format("truetype"), url("../../../fonts/icofont/icomoon.woff?di891l") format("woff"), url("../../../fonts/icofont/icomoon.svg?di891l#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -76,6 +76,22 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-round-check:before {
+  content: "\e900";
+}
+
+.icon-round-next-arrow:before {
+  content: "\e901";
+}
+
+.icon-round-next:before {
+  content: "\e902";
+}
+
+.icon-round-plus:before {
+  content: "\e903";
 }
 
 .icon-twitter:before {
@@ -401,12 +417,11 @@ html {
   margin-bottom: 3rem;
 }
 .trio-projects .project {
-  color: #fff;
-  position: relative;
-  display: block;
-}
-.trio-projects .project .project--infos {
   background: #5ab1bb;
+  color: #fff;
+  display: block;
+  height: 100%;
+  position: relative;
 }
 .trio-projects .project .project--infos p {
   font-family: 'avantgarde', sans-serif;
@@ -432,6 +447,7 @@ html {
   padding: 10rem 0 0;
 }
 .duo-news .head-flex .box--half {
+  flex: 0 1 auto;
   text-align: right;
 }
 .duo-news .head-flex h2 {
@@ -442,6 +458,7 @@ html {
   color: #b3b3b3;
   text-align: right;
   display: none;
+  padding-right: 1rem;
 }
 .duo-news .head-flex .social {
   display: inline-block;
@@ -473,6 +490,10 @@ html {
     text-align: left;
     margin: 0.5rem 0 5rem;
   }
+  .duo-news .head-flex .box--half {
+    flex: 41.5%;
+    max-width: 39%;
+  }
 }
 @media screen and (min-width: 800px) {
   .trio-projects .box--half {
@@ -484,6 +505,7 @@ html {
     bottom: 12.5rem;
   }
   .trio-projects .box--full .project--infos {
+    background: #5ab1bb;
     bottom: 3rem;
     display: inline-block;
     position: absolute;
@@ -494,5 +516,9 @@ html {
 
   .duo-news .head-flex .lighter {
     display: inline-block;
+  }
+  .duo-news .head-flex .box--half {
+    flex: 41.5%;
+    max-width: 39%;
   }
 }

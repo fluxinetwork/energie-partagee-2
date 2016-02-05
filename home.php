@@ -20,7 +20,7 @@
             	<div class="box--solo">
                 <p class="highlight-txt">Au milieu de la forêt de Raon-L’Etape (88) coule la Meurthe, qui jadis était utilisée pour produire de l’électricité. Démantelée il y a quinze ans, la petite centrale hydraulique reprend vie aujourd’hui après plusieurs mois de travaux et la mobilisation des souscripteurs Énergie Partagée. Retour en photo sur cette réhabilitation.</p>
                </div> 
-                <div class="box--fixe"><a class="button-round" href="#"><i>&rarr;</i></a></div>
+                <div class="box--fixe"><a class="button-round" href="#"><i class="icon-round-next-arrow"></i></a></div>
             </div>            
         </div>
     </article>
@@ -84,7 +84,7 @@
                   </a>
               </div>
               <div class="box--fixe">
-                    <a class="button-round grey" href="#"><i>></i></a> 
+                    <a class="button-round grey" href="#"><i class="icon-round-next"></i></a> 
               </div>          
             </div>
         </div>
@@ -124,7 +124,7 @@
                    </a>
                 </div>
                 <div class="box--fixe"> 
-                    <a class="button-round grey" href="#"><i>+</i></a> 
+                    <a class="button-round grey" href="#"><i class="icon-round-plus"></i></a> 
                 </div>
            </div>
        </div>
@@ -143,7 +143,7 @@
           		<input class="courtcircuit--input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email" required aria-required="true">
           </div>
           <div class="box--fixe">
-            	<button type="submit" class="button-round"><i>&radic;</i></button>
+            	<button type="submit" class="button-round"><i class="icon-round-check"></i></button>
           </div>          
         </div>
         </form>
@@ -157,7 +157,7 @@
                 <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
                 <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
                 <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
-                <li><a class="button-round grey" href="#"><i>+</i></a></li> 
+                <li><a class="button-round grey" href="#"><i class="icon-round-plus"></i></a></li> 
             </ul>
         </div> 
     </article>

@@ -27,7 +27,7 @@ if ( function_exists('is_mobile') ) {
                 <div class="box-flex"> 
                 <div class="box--solo"><input class="courtcircuit--input" name="YMP0" id="newsletter_footer" type="email" value="" placeholder="Votre email" required aria-required="true"></div>
                 <div class="box--fixe">
-                <button type="submit" class="button-round"><i>&radic;</i></button>
+                <button type="submit" class="button-round"><i class="icon-round-check"></i></button>
                 </div>
                 </div>
             </form>            
@@ -39,7 +39,7 @@ if ( function_exists('is_mobile') ) {
             <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
             <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
             <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
-            <li><a class="button-round" href="#"><i>+</i></a></li> 
+            <li><a class="button-round" href="#"><i class="icon-round-plus"></i></a></li> 
         </ul>
         
         <h2>Nos labels</h2>
