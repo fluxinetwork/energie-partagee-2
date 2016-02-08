@@ -342,7 +342,7 @@ html {
 /*Wrap normal*/
 .wrap-n {
   margin: 0 auto;
-  padding: 0 6rem;
+  padding: 0 3.5rem;
   max-width: 830px;
 }
 
@@ -414,18 +414,26 @@ html {
   justify-content: space-between;
 }
 .box-logos li {
-  margin: 0 auto 3rem;
+  margin-bottom: 3rem;
+}
+.box-logos li:nth-child(2) {
+  display: none;
 }
 .box-logos li:last-child {
   align-self: center;
   flex: 1 1 100%;
-  margin: 0;
+  margin-bottom: 0;
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .box-logos li {
+    margin: 0 auto 3rem;
+  }
+}
 @media screen and (min-width: 600px) {
   .wrap-n {
-    padding: 0 7.6rem;
+    padding: 0 5rem;
   }
 
   .box--full, .box--solo, .box--half {
@@ -453,14 +461,28 @@ html {
   .wrap-highlight .box--fixe {
     align-items: flex-start;
   }
+
+  .box-logos li:last-child {
+    align-self: center;
+    flex: inherit;
+    margin-bottom: 3rem;
+  }
 }
 @media screen and (min-width: 800px) {
+  .wrap-n {
+    padding: 0 7.6rem;
+  }
+
   .box-logos li {
     margin: 0;
   }
   .box-logos li:last-child {
     align-self: center;
     flex: inherit;
+    margin-bottom: 0;
+  }
+  .box-logos li:nth-child(2) {
+    display: block;
   }
 
   .box--item {

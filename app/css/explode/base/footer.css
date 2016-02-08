@@ -338,33 +338,21 @@ html {
   padding-top: 7rem;
   padding-bottom: 6rem;
 }
+.footer .box-flex .box--half {
+  margin-bottom: 4rem;
+}
 .footer .box-flex .box-flex .box--solo {
   padding: 0;
-  flex: 1 1 70%;
+  flex: 1 1 78%;
+  max-width: 78%;
   margin-bottom: 0;
 }
 .footer h2 {
   margin-bottom: 3rem;
 }
-.footer .labels {
-  flex-wrap: nowrap;
-}
-.footer .labels li {
-  margin-right: 2rem;
-}
-.footer .labels li:last-child {
-  margin-right: 0;
-  align-self: center;
-}
-.footer .labels .labels--img {
-  width: 70px;
-  align-self: center;
-}
-.footer .labels .labels--img img {
-  width: 70px;
-}
 .footer .courtcircuit--input {
   background: #122c33;
+  border: 1px solid #2a4a53;
   color: #fff;
   font-family: "avantgarde", sans-serif;
   font-size: 3.4rem;
@@ -372,30 +360,82 @@ html {
   padding: 0.4rem 1rem;
   width: 100%;
 }
+.footer .social {
+  margin: 0;
+}
+.footer .labels {
+  text-align: center;
+}
+.footer .labels .labels--img {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.footer .labels .labels--img a {
+  display: inline-block;
+  margin: 0 2rem 0 0;
+  vertical-align: middle;
+}
+.footer .labels .labels--img a:last-child {
+  margin-right: 0;
+}
+.footer .labels .labels--img img {
+  width: 70px;
+}
 
 .nav-footer {
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 7rem;
+  margin-top: 9rem;
 }
 .nav-footer a {
-  text-transform: uppercase;
   color: #fff;
-  margin: 0 2rem 3rem 0;
-}
-.nav-footer a:last-child {
-  margin-right: 0;
+  display: block;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 600px) {
-  .footer .box--half {
+  .footer .box-flex:first-child {
+    margin-bottom: 5rem;
+  }
+  .footer .box-flex:first-child .box--half {
+    max-width: 60%;
+  }
+  .footer .box-flex:first-child .box--half:first-child {
+    max-width: 31%;
+  }
+  .footer .box-flex .box--half {
     flex: 50%;
     max-width: 47.5%;
+    margin-bottom: 0;
+  }
+  .footer .social {
+    padding-top: 1rem;
+  }
+  .footer .labels {
+    display: block;
+    text-align: left;
+  }
+  .footer .labels .labels--img {
+    float: left;
+    margin-bottom: 1.5rem;
+    width: 190px;
+  }
+  .footer .labels .labels--img:last-child {
+    margin-right: 2rem;
+  }
+
+  .nav-footer a {
+    display: inline-block;
+    margin: 0 2rem 0 0;
+  }
+  .nav-footer a:last-child {
+    margin-right: 0;
   }
 }
 @media screen and (min-width: 800px) {
-  .footer .box-flex:first-child, .footer .box-logos.box-flex {
+  .box-logos.box-flex {
     margin-bottom: 5rem;
   }
 }

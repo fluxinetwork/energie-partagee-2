@@ -49,7 +49,7 @@
 	
 	.holder-img{
 		border-radius: 50%;
-		margin: 0 auto 4rem;
+		margin: 0 auto 2rem;
 		overflow: hidden;
 		text-align: center;
 		width: 200px;
@@ -137,15 +137,14 @@
 		
 		.box--half{
 			flex: 0 1 auto;
+			margin-bottom: 5rem;
 			text-align:right;
 		}
 		h2{
 			text-align:left;
 			margin:0.5rem 0 0;	
 		}	
-		.head--social{
-			
-		}
+		
 		.lighter{
 			color:$c-grey-medium;
 			text-align:right;
@@ -183,7 +182,8 @@
 			}
 			.box--half{
 				flex: 41.5%;		
-    			max-width: 41.5%-$gutter/2;	
+    			max-width: 41.5%-$gutter/2;
+				margin-bottom:0;	
 			}	
 		}
 	}
@@ -220,7 +220,7 @@
 			}
 			.box--half{
 				flex: 41.5%;		
-    			max-width: 41.5%-$gutter/2;
+    			max-width: 41.5%-$gutter/2;				
 			}
 		}
 	}

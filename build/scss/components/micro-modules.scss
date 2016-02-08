@@ -69,7 +69,7 @@
 	
 	.wrap-n{
 		background:$c-orange;
-		padding:5rem 6rem;
+		padding:5rem 3.5rem;
 		border-radius:$radius;
 	}
 	h3 {
@@ -94,12 +94,31 @@
 }
 .courtcircuit--input{
 	background:$c-orange;
+	border:1px solid #f57f35;
 	color: #fff;
 	font-family: $avantgarde;
 	font-size: 3.4rem;
 	height: 100%;
 	width: 100%;
 	padding:0.4rem 1rem;
+	
+	&::-webkit-input-placeholder{ 
+	  color: #fff;
+	  opacity:1;
+	}	
+	&::-moz-placeholder{ 
+	  color: #fff;
+	  opacity:1;
+	}	
+	&:-ms-input-placeholder{ 
+	  color: #fff;
+	  opacity:1;
+	}	
+	&:-moz-placeholder { 
+	  color: #fff;
+	  opacity:1;
+	}	
+	
 }
 
 .top-credibility{	
@@ -113,10 +132,10 @@
 
 @media screen and (min-width: $bp--small) {	
 	.courtcircuit .wrap-n{
-		padding:5rem $gutter-wrap-side;
+		padding:5rem;
 	}	
 	.top-credibility .wrap-n{	
-		padding:6rem $gutter-wrap-side 7rem;	
+		padding:6rem 5rem 7rem;	
 	}
 }
 @media screen and (min-width: $bp--medium) {
@@ -127,9 +146,14 @@
 		.wrap-n{
 			position:relative;
 			top:-9.5rem;
+			padding:6rem $gutter-wrap-side 7rem;	
 		}
 	}
 	.courtcircuit{
 		padding-bottom:10rem;
+		
+		.wrap-n{
+			padding:5rem $gutter-wrap-side;
+		}	
 	}	
 }

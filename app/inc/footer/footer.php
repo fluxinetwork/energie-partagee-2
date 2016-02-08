@@ -44,8 +44,10 @@ if ( function_exists('is_mobile') ) {
         
         <h2>Nos labels</h2>
         <ul class="labels box-flex">
-            <li class="labels--img"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-1.png"></a></li>
-            <li class="labels--img"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-2.png"></a></li>
+            <li class="labels--img">
+            	<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-1.png"></a>
+              <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-2.png"></a>
+            </li>
             <li class="labels--txt"><p>Energie Partagée a recu les labels Finansol et Agrément “entreprise solidaire” pour son activité engagée bla bla bla et bla bla bla.</p></li>
         </ul>
         

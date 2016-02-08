@@ -371,7 +371,7 @@ html {
 }
 .steps-intro .holder-img {
   border-radius: 50%;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2rem;
   overflow: hidden;
   text-align: center;
   width: 200px;
@@ -437,6 +437,7 @@ html {
 }
 .duo-news .head-flex .box--half {
   flex: 0 1 auto;
+  margin-bottom: 5rem;
   text-align: right;
 }
 .duo-news .head-flex h2 {
@@ -471,6 +472,7 @@ html {
   .duo-news .head-flex .box--half {
     flex: 41.5%;
     max-width: 39%;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 800px) {

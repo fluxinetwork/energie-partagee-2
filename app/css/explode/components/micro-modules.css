@@ -388,7 +388,7 @@ html {
 }
 .courtcircuit .wrap-n {
   background: #eb6c1d;
-  padding: 5rem 6rem;
+  padding: 5rem 3.5rem;
   border-radius: 3px;
 }
 .courtcircuit h3 {
@@ -411,12 +411,29 @@ html {
 
 .courtcircuit--input {
   background: #eb6c1d;
+  border: 1px solid #f57f35;
   color: #fff;
   font-family: "avantgarde", sans-serif;
   font-size: 3.4rem;
   height: 100%;
   width: 100%;
   padding: 0.4rem 1rem;
+}
+.courtcircuit--input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.courtcircuit--input::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.courtcircuit--input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.courtcircuit--input:-moz-placeholder {
+  color: #fff;
+  opacity: 1;
 }
 
 .top-credibility .wrap-n {
@@ -427,11 +444,11 @@ html {
 
 @media screen and (min-width: 600px) {
   .courtcircuit .wrap-n {
-    padding: 5rem 7.6rem;
+    padding: 5rem;
   }
 
   .top-credibility .wrap-n {
-    padding: 6rem 7.6rem 7rem;
+    padding: 6rem 5rem 7rem;
   }
 }
 @media screen and (min-width: 800px) {
@@ -442,9 +459,13 @@ html {
   .top-credibility .wrap-n {
     position: relative;
     top: -9.5rem;
+    padding: 6rem 7.6rem 7rem;
   }
 
   .courtcircuit {
     padding-bottom: 10rem;
+  }
+  .courtcircuit .wrap-n {
+    padding: 5rem 7.6rem;
   }
 }
