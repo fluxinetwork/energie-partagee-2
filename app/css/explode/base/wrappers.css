@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -361,7 +363,7 @@ html {
   padding: 6rem 0;
 }
 .wrap-highlight .lighter {
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   margin: 0;
   color: rgba(255, 255, 255, 0.5);
 }

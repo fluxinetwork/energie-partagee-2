@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -338,7 +340,7 @@ html {
   color: #65aa04;
   cursor: pointer;
   display: inline-block;
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-weight: bold;
   padding: 1.5rem 4rem;
   text-transform: uppercase;

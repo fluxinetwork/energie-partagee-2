@@ -21,8 +21,7 @@
 
 	<div class="wrap-main">
     
-		<header class="header">        
-        	<?php include( TEMPLATEPATH.'/app/inc/header/logo.php' ); ?>
+		<header class="navbar">        
 			<?php include( TEMPLATEPATH.'/app/inc/header/nav.php' ); ?>
 		</header>
         

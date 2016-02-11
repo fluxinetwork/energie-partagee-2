@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -359,7 +361,7 @@ html {
   border-radius: 50%;
   color: #fff;
   display: block;
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-size: 0.9rem;
   height: 4rem;
   left: -2rem;
@@ -413,7 +415,7 @@ html {
   background: #eb6c1d;
   border: 1px solid #f57f35;
   color: #fff;
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-size: 3.4rem;
   height: 100%;
   width: 100%;

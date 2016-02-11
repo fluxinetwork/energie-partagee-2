@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -342,7 +344,7 @@ body {
 }
 
 h1 {
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-size: 3.4rem;
   font-weight: bold;
   padding: 0;
@@ -350,7 +352,7 @@ h1 {
 }
 
 h2 {
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-size: 1.6rem;
   font-weight: bold;
   text-align: left;

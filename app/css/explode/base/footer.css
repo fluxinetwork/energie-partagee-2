@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -354,7 +356,7 @@ html {
   background: #122c33;
   border: 1px solid #2a4a53;
   color: #fff;
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-size: 3.4rem;
   height: 100%;
   padding: 0.4rem 1rem;

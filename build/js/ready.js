@@ -7,6 +7,10 @@
 var FOO = {
     common: {
         init: function() {
+			// Nav
+			for (var i=0; i<nbNavItems; i++) {
+				pp_nav();
+			}
         }
     },
     home: {

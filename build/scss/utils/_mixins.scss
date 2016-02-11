@@ -1,6 +1,4 @@
-
-
-
-
-
-
+@mixin maxH($height) {
+  max-height: $height;
+  overflow: hidden;
+}

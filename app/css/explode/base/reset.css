@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -336,7 +338,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 button, input, select, textarea {

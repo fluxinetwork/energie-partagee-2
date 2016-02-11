@@ -8,7 +8,7 @@ var siteURL = '';
 var isHome = false;
 
 // Activate resize events
-var resizeEvent = false;
+var resizeEvent = true;
 var resizeDebouncer = true;
 
 // Store window sizes
@@ -21,6 +21,3 @@ var bpSmall;
 var bpMedium;
 var bpLarge;
 var bpXlarge;
-
-
-

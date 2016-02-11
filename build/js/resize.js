@@ -12,7 +12,8 @@
  */
 
 function resize_handler() {
-
+	 pp_nav();
+	 calc_windowW();
 }
 if ( resizeEvent ) { $( window ).bind( "resize", resize_handler() ); }
 
@@ -42,7 +43,7 @@ function debouncer( func , timeout ) {
 }
 
 function debouncer_handler() {
-    calc_window();
+    
 }
 if ( resizeDebouncer ) { $( window ).bind( "resize", debouncer(debouncer_handler) ); }
 

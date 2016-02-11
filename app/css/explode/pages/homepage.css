@@ -326,6 +326,8 @@ html {
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
+/* Nav */
+/* Deco */
 /* Typos */
 /*------------------------------*\
 
@@ -362,7 +364,7 @@ html {
 .header-bloc .key-numbers li .number {
   font-size: 5rem;
   display: block;
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
 }
 
 .steps-intro {
@@ -387,7 +389,7 @@ html {
   color: #65aa04;
   text-transform: uppercase;
   font-size: 1.4rem;
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
 }
 
 .trio-projects {
@@ -413,7 +415,7 @@ html {
   position: relative;
 }
 .trio-projects .project .project--infos p {
-  font-family: "avantgarde", sans-serif;
+  font-family: "avantgarde", Arial;
   font-size: 2rem;
   padding: 2rem 2rem;
 }
