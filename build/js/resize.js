@@ -12,7 +12,7 @@
  */
 
 function resize_handler() {
-	 pp_nav();
+	 //pp_nav();
 	 calc_windowW();
 }
 if ( resizeEvent ) { $( window ).bind( "resize", resize_handler() ); }

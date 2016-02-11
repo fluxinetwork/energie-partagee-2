@@ -1,17 +1,44 @@
-// Nav
-var ppItemsW = []; 
+$(document).ready(function(){
 
-var logoW = $('.navbar__id').outerWidth();
-var buttonsW = $('.navbar__buttons').outerWidth();
-var nbNavItems = $('.nav__item').length;
-var activeItems = nbNavItems;
-var nbNavItemsNav1 = $('.nav__primary .nav__item').length;
-var nbNavItemsNav2 = $('.nav__secondary .nav__item').length;
+	// Jquery OuterWidth() always with margin & padding
 
-// PRIORITY PATTERN NAV
+	var oldOuterWidth = $.fn.outerWidth;
+	$.fn.outerWidth = function () { 
+	    return oldOuterWidth.apply(this, [true]);
+	};
+
+	// VARS
+	
+	var ppItemsW = new Array();
+
+	var logoW = $('.navbar__id').outerWidth();
+	var buttonsW = $('.navbar__buttons').outerWidth();
+	var nbNavItems = $('.nav__item').length;
+	
+	var activeItems = nbNavItems;
+	var nbNavItemsNav1 = $('.nav__primary .nav__item').length;
+	var nbNavItemsNav2 = $('.nav__secondary .nav__item').length;
 
 
-function pp_nav() {
+	// RESIZE
+
+	$(window).on('resize', function() {
+	  pp_nav();
+	})
+
+
+	// INIT
+
+	for (var i=0; i<nbNavItems; i++) {
+		pp_nav();
+	}
+
+
+	// PRIORITY PATTERN NAV
+
+
+	function pp_nav() {
+		windowW = $(window).width();
 		var navW;
 		var remainW;
 		var availableW;
@@ -67,7 +94,7 @@ function pp_nav() {
 			remainW = windowW - logoW - buttonsW - navbarPd - hamburgerW;
 			availableW = remainW - navW;
 		}
-}
+	}
 
 
 	// SEARCH
@@ -142,3 +169,4 @@ function pp_nav() {
 	  }
 	  e.preventDefault();
 	})
+});

@@ -61,9 +61,9 @@ var FOO = {
     common: {
         init: function() {
 			// Nav
-			for (var i=0; i<nbNavItems; i++) {
+			/*for (var i=0; i<nbNavItems; i++) {
 				pp_nav();
-			}
+			}*/
         }
     },
     home: {
@@ -109,7 +109,7 @@ $(document).ready(UTIL.loadEvents);
  */
 
 function resize_handler() {
-	 pp_nav();
+	 //pp_nav();
 	 calc_windowW();
 }
 if ( resizeEvent ) { $( window ).bind( "resize", resize_handler() ); }
@@ -330,20 +330,47 @@ function loading_img(container, loader) {
 			$(".main-isogrid a[href$='.doc'] .icon-doc, .docs a[href$='.docx'] .icon-doc").addClass('js-icon-word');  
 			$(".main-isogrid a[href$='.xls'] .icon-doc, .docs a[href$='.xlsx'] .icon-doc, .main-isogrid a[href$='.xlt'] .icon-doc, .main-isogrid a[href$='.xltx'] .icon-doc").addClass('js-icon-exel');  
 	  }
-// Nav
-var ppItemsW = []; 
+$(document).ready(function(){
 
-var logoW = $('.navbar__id').outerWidth();
-var buttonsW = $('.navbar__buttons').outerWidth();
-var nbNavItems = $('.nav__item').length;
-var activeItems = nbNavItems;
-var nbNavItemsNav1 = $('.nav__primary .nav__item').length;
-var nbNavItemsNav2 = $('.nav__secondary .nav__item').length;
+	// Jquery OuterWidth() always with margin & padding
 
-// PRIORITY PATTERN NAV
+	var oldOuterWidth = $.fn.outerWidth;
+	$.fn.outerWidth = function () { 
+	    return oldOuterWidth.apply(this, [true]);
+	};
+
+	// VARS
+	
+	var ppItemsW = new Array();
+
+	var logoW = $('.navbar__id').outerWidth();
+	var buttonsW = $('.navbar__buttons').outerWidth();
+	var nbNavItems = $('.nav__item').length;
+	
+	var activeItems = nbNavItems;
+	var nbNavItemsNav1 = $('.nav__primary .nav__item').length;
+	var nbNavItemsNav2 = $('.nav__secondary .nav__item').length;
 
 
-function pp_nav() {
+	// RESIZE
+
+	$(window).on('resize', function() {
+	  pp_nav();
+	})
+
+
+	// INIT
+
+	for (var i=0; i<nbNavItems; i++) {
+		pp_nav();
+	}
+
+
+	// PRIORITY PATTERN NAV
+
+
+	function pp_nav() {
+		windowW = $(window).width();
 		var navW;
 		var remainW;
 		var availableW;
@@ -399,7 +426,7 @@ function pp_nav() {
 			remainW = windowW - logoW - buttonsW - navbarPd - hamburgerW;
 			availableW = remainW - navW;
 		}
-}
+	}
 
 
 	// SEARCH
@@ -474,3 +501,4 @@ function pp_nav() {
 	  }
 	  e.preventDefault();
 	})
+});
