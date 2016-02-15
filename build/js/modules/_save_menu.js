@@ -1,32 +1,58 @@
+//$(document).ready(function(){
+
+	// Jquery OuterWidth() always with margin & padding
+
+	var oldOuterWidth = $.fn.outerWidth;
+	$.fn.outerWidth = function () { 
+	    return oldOuterWidth.apply(this, [true]);
+	};
 
 	// VARS
-	
-	var ppItemsW = new Array();
-	
+	var ppItemsW = new Array();	
+
 	var logoW = $('.navbar__id').outerWidth();
+	
 	var buttonsW = $('.navbar__buttons').outerWidth();
 	var nbNavItems = $('.nav__item').length;
+	
 	var activeItems = nbNavItems;
 	var nbNavItemsNav1 = $('.nav__primary .nav__item').length;
 	var nbNavItemsNav2 = $('.nav__secondary .nav__item').length;
+	
+	// 
+	var navW;
+	var remainW;
+	var availableW;
+	var navPad;
+	
+	/*$(window).on('resize', function() {
+	  pp_nav();
+	})*/
 
 
 	// RESIZE
 
-	$(window).on('resize', function() {
+	/*$(window).on('resize', function() {
 	  pp_nav();
-	});
+	})*/
+
+
+	// INIT
+
+	/*for (var i=0; i<nbNavItems; i++) {
+		pp_nav();
+	}*/
 
 
 	// PRIORITY PATTERN NAV
 
-	function pp_nav() {
-		calc_windowW();
-		var navW;
-		var remainW;
-		var availableW;
-		var navPad;
-		get_data();		
+getNavData();
+	function pp_nav() {		
+		
+		//calc_windowW();
+		//windowW = $(window).width();
+		
+				
 
 		// Hamburger
 
@@ -40,6 +66,8 @@
 		// Move items
 
 		if (remainW < navW) {
+			console.log('remain');
+			
 			if ($('.nav__secondary .nav__item').length > 0) {
 			  var $item =  $('.nav__secondary').children().last();
 			} else {
@@ -50,7 +78,11 @@
 			clicPPnavItem();
 			activeItems--;
 		} else {
+			
+			
 			if (ppItemsW.length>0) {
+				
+				
 				if (availableW > ppItemsW[ppItemsW.length-1]) {
 					var $item = $('.pp .nav__item').first();
 					if ($('.nav__primary .nav__item').length == nbNavItemsNav1) {
@@ -64,21 +96,32 @@
 				}
 			}
 		}
-
-		// Get data
-
-		function get_data() {
-			var hamburgerW = 0;
-			if ($('.hamburger').hasClass('is-visible')) {
-				hamburgerW = 50;
-			}
-			navW = $('.nav__primary').innerWidth() + $('.nav__secondary').width();
-			navbarPd = $('.navbar').css('padding-left').replace("px", "")*2;
-			remainW = windowW - logoW - buttonsW - navbarPd - hamburgerW;
-			availableW = remainW - navW;
-		}
+		
 	}
+// Get data
 
+	function getNavData() {
+		
+		var hamburgerW = 0;
+		if ($('.hamburger').hasClass('is-visible')) {
+			hamburgerW = 50;
+		}
+		navW = $('.nav__primary').innerWidth() + $('.nav__secondary').width();
+		navPad = $('.navbar').css('padding-left').replace("px", "")*2;
+		remainW = windowW - logoW - buttonsW - navPad - hamburgerW;
+		availableW = remainW - navW;
+		
+		console.log(' remainW -- '+remainW);
+		
+		/*console.log(navW+'/'+navPad+'/'+remainW);
+		*/
+		console.log(' --- '+windowW );
+		console.log(' --- '+logoW );
+		console.log(' --- '+buttonsW);
+		console.log(' --- '+navPad);
+		console.log(' --- '+hamburgerW);
+		
+	}
 
 	// SEARCH
 
@@ -152,3 +195,4 @@
 	  }
 	  e.preventDefault();
 	})
+//});

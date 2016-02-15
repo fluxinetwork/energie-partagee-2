@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
-.social__icon, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
+.navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id, .logo__img,
 .navbar__id.is-compact .logo__img,
@@ -333,7 +333,7 @@ html {
 /* COLORS */
 /* Layout */
 /* Nav */
-/* Deco */
+/* Box - Border */
 /* Typos */
 /*------------------------------*\
 
@@ -351,23 +351,23 @@ html {
 
 .no-pp .nav__item__title, .nav__search__input {
   font-family: "avantgarde", Arial;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
-  line-height: 60.48px;
+  line-height: 55px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
 
-.social__icon, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close {
+.navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close {
   display: block;
   cursor: pointer;
   border: 0;
   outline: 0;
 }
 
-.social__icon, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close {
-  width: 30px;
-  height: 30px;
+.navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close {
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
 }
 
@@ -376,7 +376,7 @@ html {
   border: 2px solid #fff;
 }
 
-.social__icon, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
+.navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id, .logo__img,
 .navbar__id.is-compact .logo__img,
@@ -389,7 +389,7 @@ html {
 .no-pp .nav__dropdown .dropdown__item a, .js-toggle {
   position: relative;
   font-family: "avantgarde", Arial;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #65aa04;
   text-decoration: none;
   text-transform: uppercase;
@@ -414,12 +414,13 @@ html {
 \*------------------------------*/
 .navbar {
   display: flex;
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 56px;
   padding: 0;
   margin-top: 0;
   padding-right: 2rem;
+  z-index: 10;
 }
 .navbar::before {
   content: '';
@@ -445,11 +446,16 @@ html {
   z-index: 10;
   width: 140px;
   height: 56px;
-  padding: 12px 2rem 0 2rem;
+  padding: 1.2rem 2rem 0 2rem;
   background: #fff;
   top: 0;
   box-shadow: none;
   border-radius: 0;
+}
+
+.logo__img {
+  /*background:url("/wp-content/themes/energie-partagee-2/app/img/logo-illu-energie-partagee.png") no-repeat 0 0;
+  background-size:63px*/
 }
 
 .logo__img,
@@ -457,10 +463,9 @@ html {
 .no-touch nav:hover + .navbar__id .logo__img {
   max-height: 0;
   overflow: hidden;
-  width: 60px;
-  height: 52px;
-  margin-left: 20px;
-  background: #cacaca;
+  width: 6rem;
+  height: 5.2rem;
+  margin-left: 2rem;
 }
 
 .logo__title,
@@ -468,15 +473,19 @@ html {
 .no-touch nav:hover + .navbar__id .logo__title {
   margin: 0;
   color: #65aa04;
-  font-family: Sansa Pro;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-transform: uppercase;
-  line-height: 18px;
+  line-height: 1.8rem;
 }
 .logo__title span,
 .navbar__id.is-compact .logo__title span,
 .no-touch nav:hover + .navbar__id .logo__title span {
-  font-size: 22.3px;
+  font-size: 2.23rem;
+}
+
+.logo__title {
+  position: relative;
+  top: -4px;
 }
 
 .navbar__id__social,
@@ -486,12 +495,18 @@ html {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
-.social__icon {
-  width: 25px;
-  height: 25px;
-  background: #cacaca;
+.navbar__id__social a {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #fff;
+}
+.navbar__id__social a i {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 1.4rem;
 }
 
 /*------------------------------*\
@@ -516,7 +531,7 @@ html {
 .nav__secondary .nav__dropdown .container {
   display: flex;
   justify-content: flex-end;
-  padding-right: 140px;
+  padding-right: 14rem;
 }
 .nav__secondary .nav__dropdown .container .dropdown__item a::after {
   right: 0;
@@ -537,7 +552,7 @@ html {
 .no-pp .nav__item__title::after {
   content: '';
   position: absolute;
-  bottom: 4px;
+  bottom: -1px;
   left: 50%;
   width: 0;
   height: 0;
@@ -595,7 +610,7 @@ html {
   display: block;
   position: relative;
   z-index: 1;
-  top: 20px;
+  top: 2rem;
   margin-right: 2rem;
   padding: 1rem 0;
   opacity: 0;
@@ -622,7 +637,7 @@ html {
 .hamburger {
   visibility: hidden;
   position: absolute;
-  margin-top: 13px;
+  margin-top: 1.3rem;
   margin-left: 2rem;
   cursor: pointer;
   transform: scale(0);
@@ -636,7 +651,7 @@ html {
 .hamburger::after {
   content: '';
   position: fixed;
-  bottom: -15px;
+  bottom: -1.5rem;
   left: 50%;
   width: 0;
   height: 0;
@@ -686,17 +701,17 @@ html {
   transform: rotate(135deg);
 }
 .pp .nav__item.is-unfold .nav__dropdown {
-  padding-top: 10px;
+  padding-top: 1rem;
   max-height: 200px;
 }
 
 .pp .nav__item__title {
   position: relative;
-  padding: 12px 2rem 9px 2rem;
+  padding: 1.2rem 2rem 0.9rem 2rem;
   background: #65aa04;
   border-radius: 3px;
   color: #fff;
-  font: 700 13px "avantgarde", Arial;
+  font: 700 1.3rem "avantgarde", Arial;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   -webkit-font-smoothing: antialiased;
@@ -722,7 +737,7 @@ html {
   max-height: 0;
 }
 .pp .nav__dropdown .container {
-  padding: 10px 0 10px 2rem;
+  padding: 1rem 0 1rem 2rem;
   position: relative;
 }
 .pp .nav__dropdown .container::before {
@@ -740,9 +755,9 @@ html {
   content: '';
   position: absolute;
   left: -6px;
-  top: 10px;
-  width: 15px;
-  height: 15px;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background: #65aa04;
   border: 4px solid #fff;
   border-radius: 50%;
@@ -753,9 +768,9 @@ html {
   position: relative;
   padding-left: 2rem;
   text-decoration: none;
-  font: 400 14px Montserrat;
+  font: 400 1.4rem "avantgarde", Arial;
   color: #999999;
-  line-height: 35px;
+  line-height: 3.5rem;
   -webkit-font-smoothing: antialiased;
 }
 .pp .nav__dropdown .dropdown__item:hover a {
@@ -799,6 +814,7 @@ html {
 }
 
 .nav__search__input {
+  line-height: 65px;
   flex: 1 0 auto;
   border: 0;
   background-color: transparent;
@@ -879,6 +895,10 @@ html {
   .navbar.is-search .logo__title {
     color: #eb6c1d;
   }
+
+  .logo__title {
+    top: -5px;
+  }
 }
 /* MIN */
 @media screen and (min-width: 420px) {
@@ -895,7 +915,7 @@ html {
   }
 
   .pp {
-    left: 15px;
+    left: 1.5rem;
     width: 320px;
     transform: translateX(-43.5%) scale(0);
   }
@@ -905,7 +925,7 @@ html {
   }
   .pp .nav__item.is-unfold .nav__dropdown {
     max-height: 200px;
-    padding-top: 10px;
+    padding-top: 1rem;
   }
 
   .no-touch .nav__pp:hover .pp,
@@ -919,15 +939,15 @@ html {
   }
 
   .navbar__id {
-    top: -30px;
-    height: 187px;
+    top: -3rem;
+    height: 172px;
     padding: 2rem 2rem 0 2rem;
     border-radius: 0 0 3px 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .navbar__id.is-compact {
     top: 0;
-    padding-top: 12px;
+    padding-top: 1.2rem;
   }
 
   .logo__img {
@@ -936,31 +956,31 @@ html {
   }
 
   .logo__title {
-    margin: 15px auto;
+    margin: 0.8rem auto;
     color: #000;
   }
 
   .navbar__id__social {
-    max-height: 25px;
+    max-height: 2.5rem;
     overflow: hidden;
   }
 
   .no-pp .nav__dropdown .container {
-    padding-left: 50px;
+    padding-left: 5rem;
   }
 }
 @media screen and (min-width: 850px) {
   .no-pp .nav__dropdown .container {
-    padding-left: 70px;
+    padding-left: 7rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
   .no-pp .nav__dropdown .dropdown__item a {
     padding: 1.5rem 0;
-    font-size: 14px;
+    font-size: 1.4rem;
   }
   .no-pp .nav__dropdown .dropdown__item a::after {
-    bottom: 11px;
+    bottom: 1.1rem;
   }
 }
 @media screen and (min-width: 930px) {
@@ -978,7 +998,7 @@ html {
     padding: 2rem 0;
   }
   .no-pp .nav__dropdown .container .dropdown__item a::after {
-    bottom: 16px;
+    bottom: 1.6rem;
   }
 }
 @media screen and (min-width: 1220px) {
@@ -991,7 +1011,7 @@ html {
   }
 
   .no-pp .nav__dropdown .dropdown__item a {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
   }
   .no-pp .nav__dropdown .dropdown__item a::after {
@@ -1007,6 +1027,6 @@ html {
     margin: 0 0 0 auto;
   }
   .nav__secondary .nav__dropdown .container {
-    padding-right: 160px;
+    padding-right: 16rem;
   }
 }

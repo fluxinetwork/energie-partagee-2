@@ -327,7 +327,7 @@ html {
 /* COLORS */
 /* Layout */
 /* Nav */
-/* Deco */
+/* Box - Border */
 /* Typos */
 /*------------------------------*\
 
@@ -354,7 +354,7 @@ html {
 }
 .footer .courtcircuit--input {
   background: #122c33;
-  border: 1px solid #2a4a53;
+  border-bottom: 1px solid #2a4a53;
   color: #fff;
   font-family: "avantgarde", Arial;
   font-size: 3.4rem;

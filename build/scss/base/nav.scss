@@ -14,9 +14,9 @@
 
 %nav-typo {
   font-family: $avantgarde;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;  
-  line-height: $navH*1.08;
+  line-height: 55px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
@@ -31,8 +31,8 @@
 
 %round-bt {
   @extend %bt;
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
 }
 
@@ -50,7 +50,7 @@
   @extend %transition;
   position: relative;
   font-family: $avantgarde;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: $c-green;
   text-decoration: none;
   text-transform: uppercase;
@@ -82,12 +82,13 @@
 .navbar {
   @extend %transition;
   display: flex;
-  position: relative;
+  position: fixed;
   width: 100%;
   height: $navH;
   padding: 0;
   margin-top: 0;
   padding-right: $gutter-thin;
+  z-index: 10;
   
   &::before {
     @extend %transition;
@@ -117,11 +118,16 @@
   z-index: 10;
   width: 140px;
   height: $navH;
-  padding: 12px $gutter-thin 0 $gutter-thin;
+  padding: 1.2rem $gutter-thin 0 $gutter-thin;
   background: #fff;
   top: 0;
   box-shadow: none;
   border-radius: 0;
+}
+
+.logo__img{
+	/*background:url("/wp-content/themes/energie-partagee-2/app/img/logo-illu-energie-partagee.png") no-repeat 0 0;
+	background-size:63px*/
 }
 
 .logo__img,
@@ -129,26 +135,30 @@
 .no-touch nav:hover + .navbar__id .logo__img {
   @extend %transition;
   @include maxH(0);
-  width: 60px;
-  height: 52px;
-  margin-left: 20px;
-  background: #cacaca;
+  width: 6rem;
+  height: 5.2rem;
+  margin-left: $gutter-thin;  
 }
 
 .logo__title,
 .navbar__id.is-compact .logo__title,
 .no-touch nav:hover + .navbar__id .logo__title {
   margin: 0;
-  color: $c-green;
-  font-family: Sansa Pro;
-  font-size: 18px;
+  color: $c-green;  
+  font-size: 1.8rem;
   text-transform: uppercase;
-  line-height: 18px;
+  line-height: 1.8rem;
   
   span {
-    font-size: 22.3px;
+    font-size: 2.23rem;
   }
 }
+
+.logo__title{
+	position:relative;
+	top:-4px;	
+}
+
 
 
 .navbar__id__social,
@@ -159,13 +169,20 @@
   @include maxH(0);
   display: flex;
   justify-content: space-between;
+  text-align:center;
 }
 
-.social__icon {
+.navbar__id__social a {
   @extend %round-bt;
-  width: 25px;
-  height: 25px;
-  background: #cacaca;
+  width: 2.5rem;
+  height: 2.5rem;
+  color:#fff;
+  
+  i{
+		display: inline-block;
+    	margin-top: 5px;
+		font-size:1.4rem;
+	} 
 }
 
 
@@ -187,12 +204,12 @@
 }
 .nav__primary {
   @extend %transition;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 $radius $radius 0;
 }
 .nav__secondary .nav__dropdown .container {
   display: flex;
   justify-content: flex-end;
-  padding-right: 140px;
+  padding-right: 14rem;
   
   .dropdown__item a::after {
     right: 0;
@@ -216,7 +233,7 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: 4px;
+    bottom: -1px;
     left: 50%;
     width: 0;
     height: 0;
@@ -280,7 +297,7 @@
     display: block;
     position: relative;
     z-index: 1;
-    top: 20px;
+    top: 2rem;
     margin-right: $gutter-thin;
     padding: $gutter-thin*.5 0;
     opacity: 0;
@@ -315,7 +332,7 @@
   @extend %round-bt;
   visibility: hidden;
   position: absolute;
-  margin-top: 13px;
+  margin-top: 1.3rem;
   margin-left: $gutter-thin;
   cursor: pointer;
   transform: scale(0);
@@ -330,7 +347,7 @@
   &::after {
     content: '';
     position: fixed;
-    bottom: -15px;
+    bottom: -1.5rem;
     left: 50%;
     width: 0;
     height: 0;
@@ -384,7 +401,7 @@
       transform: rotate(135deg);
     }
     .nav__dropdown {
-      padding-top: 10px;
+      padding-top: 1rem;
       max-height: 200px;
     }
   }
@@ -392,11 +409,11 @@
 
 .pp .nav__item__title {
   position: relative;
-  padding: 12px $gutter-thin 9px $gutter-thin;
+  padding: 1.2rem $gutter-thin 0.9rem $gutter-thin;
   background: $c-green;
-  border-radius: 3px;
+  border-radius: $radius;
   color: #fff;
-  font: 700 13px $avantgarde;
+  font: 700 1.3rem $avantgarde;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   -webkit-font-smoothing: antialiased;
@@ -427,7 +444,7 @@
   max-height: 0;
   
   .container {
-    padding: 10px 0 10px $gutter-thin;
+    padding: 1rem 0 1rem $gutter-thin;
     position: relative;
     
     &::before {
@@ -448,9 +465,9 @@
       content: '';
       position: absolute;
       left: -6px;
-      top: 10px;
-      width: 15px;
-      height: 15px;
+      top: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
       background: $c-green;
       border: 4px solid #fff;
       border-radius: 50%;
@@ -462,9 +479,9 @@
       position: relative;
       padding-left: $gutter-thin;
       text-decoration: none;
-      font: 400 14px Montserrat;
+      font: 400 1.4rem $avantgarde;
       color: #999999;
-      line-height: 35px;
+      line-height: 3.5rem;
       -webkit-font-smoothing: antialiased;
     }
     
@@ -529,6 +546,7 @@ $c-placeholder : #fff;
 }
 .nav__search__input {
   @extend %nav-typo;
+  line-height: 65px;
   flex: 1 0 auto;
   border: 0;
   background-color: transparent;
@@ -605,6 +623,9 @@ $c-placeholder : #fff;
   .navbar.is-search .logo__title {
     color: $c-orange;
   }
+  .logo__title {
+    top: -5px;
+  }
 }
 
 /* MIN */
@@ -620,7 +641,7 @@ $c-placeholder : #fff;
     position: relative;
   }
   .pp {
-    left: 15px;
+    left: 1.5rem;
     width: 320px;
     transform: translateX(-43.5%) scale(0);
   }
@@ -630,7 +651,7 @@ $c-placeholder : #fff;
     }
     .nav__dropdown {
       max-height: 200px;
-      padding-top: 10px;
+      padding-top: 1rem;
     }
   }
 
@@ -646,47 +667,47 @@ $c-placeholder : #fff;
   }
 
   .navbar__id {
-    top: -30px;
-    height: 187px;
+    top: -3rem;
+    height: 172px;
     padding: $gutter-thin $gutter-thin 0 $gutter-thin;
     border-radius: 0 0 $radius $radius;
     box-shadow: $bshadow;
 
     &.is-compact {
       top: 0;
-      padding-top: 12px;
+      padding-top: 1.2rem;
     }
   }
   .logo__img {
     @include maxH(52px);
   }
   .logo__title {
-    margin: 15px auto;
+    margin: 0.8rem auto;
     color: #000;
   }
   .navbar__id__social {
-    @include maxH(25px);
+    @include maxH(2.5rem);
   }
 
   .no-pp .nav__dropdown .container {
-    padding-left: 50px;
+    padding-left: 5rem;
   }
 }
 
 @media screen and (min-width: 850px) {
   .no-pp  .nav__dropdown {
     .container {
-      padding-left:70px;
+      padding-left:7rem;
       padding-top: $gutter-thin*0.75;
       padding-bottom: $gutter-thin*0.75;
     }
 
     .dropdown__item a {
       padding: $gutter-thin*0.75 0;
-      font-size: 14px;
+      font-size: 1.4rem;
 
       &::after {
-        bottom: 11px;
+        bottom: 1.1rem;
       }
     }
   }
@@ -709,7 +730,7 @@ $c-placeholder : #fff;
       padding: $gutter-thin 0;
 
       &::after {
-        bottom: 16px;
+        bottom: 1.6rem;
       }
     }
   }
@@ -725,7 +746,7 @@ $c-placeholder : #fff;
   }
 
   .no-pp .nav__dropdown .dropdown__item a {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
 
     &::after {
@@ -742,7 +763,7 @@ $c-placeholder : #fff;
     margin: 0 0 0 auto;
 
     .nav__dropdown .container {
-      padding-right: 160px;
+      padding-right: 16rem;
     }
   }
 }

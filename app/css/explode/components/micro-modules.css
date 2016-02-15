@@ -327,7 +327,7 @@ html {
 /* COLORS */
 /* Layout */
 /* Nav */
-/* Deco */
+/* Box - Border */
 /* Typos */
 /*------------------------------*\
 
@@ -373,7 +373,7 @@ html {
   top: -3rem;
   vertical-align: middle;
   width: 4rem;
-  z-index: 10;
+  z-index: 5;
 }
 .news-item .news-date i {
   display: block;
@@ -413,7 +413,7 @@ html {
 
 .courtcircuit--input {
   background: #eb6c1d;
-  border: 1px solid #f57f35;
+  border-bottom: 1px solid #f57f35;
   color: #fff;
   font-family: "avantgarde", Arial;
   font-size: 3.4rem;

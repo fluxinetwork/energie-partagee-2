@@ -327,7 +327,7 @@ html {
 /* COLORS */
 /* Layout */
 /* Nav */
-/* Deco */
+/* Box - Border */
 /* Typos */
 /*------------------------------*\
 
@@ -342,7 +342,7 @@ html {
   background: url("/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg") no-repeat;
   background-size: cover;
   min-height: 576px;
-  padding: 20rem 0 10rem 0;
+  padding: 20rem 0 12rem 0;
   text-align: center;
   color: #fff;
 }

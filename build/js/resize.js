@@ -11,9 +11,8 @@
  *
  */
 
-function resize_handler() {
-	 //pp_nav();
-	 calc_windowW();
+function resize_handler() {	 
+	// calc_windowW();	
 }
 if ( resizeEvent ) { $( window ).bind( "resize", resize_handler() ); }
 

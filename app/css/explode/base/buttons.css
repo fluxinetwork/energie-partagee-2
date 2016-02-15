@@ -327,7 +327,7 @@ html {
 /* COLORS */
 /* Layout */
 /* Nav */
-/* Deco */
+/* Box - Border */
 /* Typos */
 /*------------------------------*\
 
@@ -400,13 +400,14 @@ html {
   vertical-align: middle;
   width: 4rem;
 }
-.social .social--face {
+
+.navbar__id .social--face, .social .social--face {
   background: #3b5998 none;
 }
-.social .social--twit {
+.navbar__id .social--twit, .social .social--twit {
   background: #55acee none;
 }
-.social .social--yout {
+.navbar__id .social--yout, .social .social--yout {
   background: #dc2925 none;
 }
 
