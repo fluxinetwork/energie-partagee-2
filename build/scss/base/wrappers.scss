@@ -24,19 +24,23 @@
 }
 /*Wrap orange*/
 .wrap-highlight{
-	background:$c-orange;
+	background:$c-focus;
 	color:#fff;
 	width:100%;
 	padding:6rem 0;
 	
 	.lighter{
-		font-family: $avantgarde;
+		font-family: $main-font;
 		margin:0;
-		color:rgba( #fff, .5 );	
+		color:rgba( $c-txt-light, .5 );	
 	}
 	
 	h1{
-		margin-bottom: 2rem;	
+		line-height: 4.5rem;
+    	margin: 0.8rem 0 2rem;	
+	}
+	.highlight-txt{
+		font-family:$txt-fontserif;	
 	}
 }
 
@@ -88,9 +92,9 @@
 	li{
 		margin-bottom:$gutter-bottom;				
 		
-		&:nth-child(2){
+		/*&:nth-child(2){
 			display:none;	
-		}
+		}*/
 			
 		&:last-child{
 			align-self: center;

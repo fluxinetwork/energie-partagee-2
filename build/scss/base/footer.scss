@@ -1,150 +1,129 @@
 @import "../utils/_all.scss";
-
 /*------------------------------*\
-
     #FOOTER
-
 \*------------------------------*/
-
 .footer{
-	background:$c-blue-dark;
-	color:#fff;
+	background:$c-dark;
+	color:$c-txt-light;
 	padding-top:7rem;
 	padding-bottom:6rem;
-	
 	.box-flex{
-		
 		.box--half{
 			 margin-bottom: 4rem;	
 		}
-				
 		.box-flex{
-			
 			.box--solo{
 				padding:0;
-				flex:1 1 78%;
-				max-width: 78%;
-				margin-bottom:0;
+				flex:auto;
+				max-width: 100%;
 			}
 		}
 	}
-		
 	h2{
-		 margin-bottom:$gutter-bottom;		
+		color:$c-txt-light;
+		margin-bottom:$gutter-bottom;		
 	}
-	
 	.courtcircuit--input {
-		background: $c-blue-dark;
+		background: $c-dark;
 		border-bottom:1px solid #2a4a53;
-		color: #fff;
-		font-family: $avantgarde;
+		color: $c-txt-light;
+		font-family: $main-font;
 		font-size: 3.4rem;
 		height: 100%;
 		padding: 0.4rem 1rem;
 		width: 100%;
 	}
-	
 	.social{
 		margin:0;		
 	}
-	
-	
-	
 	.labels{
 		@extend .list-reset;
 		text-align:center;
 	}
-	
 	.labels .labels--img{		
 		 margin-bottom: 1.5rem;
-		 
    		 width: 100%;
-		 
 		 a {
 			display: inline-block;
     		margin: 0 2rem 0 0;
     		vertical-align: middle;
-			
 			&:last-child{
 				margin-right:0;	
 			}
 		}
-		 		 
 		 img{
 			 width:70px;
 		 }
 	}
+	.box-logos.box-flex {
+		margin-bottom:4rem;
+	 }
 }
-
 .nav-footer{
 	display:block;
 	width:100%;
 	text-align:center;
 	margin-top:9rem;
-		
 	a{
-		color: #fff;
+		color: $c-txt-light;
     	display: block;
     	margin: 0 0 2rem;
     	text-transform: uppercase;
-		
 	}
 }
-
-
 @media screen and (min-width: $bp--small) {
 	.footer{	
 	  .box-flex:first-child{
 		  margin-bottom:5rem;
-		  
 		  .box--half{
 			  max-width:60%;
 		  }
 		  .box--half:first-child{
 			  max-width:31%;
 		  }
-	  }	    
-	  
+		  h2{
+			  margin-bottom: 2rem;
+		  }
+	  }
+	  .box-flex .box-flex .box--solo{
+			padding:0;
+			flex:1 1 78%;
+			max-width: 78%;
+			margin-bottom:0;		
+		}	    
 	  .box-flex .box--half {
 			flex:50%;
 			max-width: 50%-$gutter/2;	
 			margin-bottom:0;
 	  }
-	  
 	  .social{		
 			padding-top:1rem;		
 		}
-		
 	  .labels {
 			display: block;
 			text-align: left;
-		
 			.labels--img{
 				float: left;
 				margin-bottom: 1.5rem;
 				width: 190px;
-				
 				&:last-child{
 					margin-right:2rem;	
 				}
 			}
 		}
-		
 	}
 	.nav-footer{
-		
 		a{
 			display: inline-block;
 			margin: 0 2rem 0 0;
-			
 			&:last-child{
 				margin-right:0;	
 			}
 		}
 	}
 }
-@media screen and (min-width: $bp--medium) {
-	.box-logos.box-flex {
-		  margin-bottom:5rem;
+@media screen and (min-width: $bp--medium) {	
+	 .footer .box-logos.box-flex {
+		  margin-bottom:6rem;
 	 }
 }

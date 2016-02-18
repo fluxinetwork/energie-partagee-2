@@ -3,11 +3,12 @@
     #CLASS
 
 \*------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+/* TRANSITIONS */
 .transition {
   transition: all 0.2s ease-in-out;
 }
 
+/* CLEARFIX */
 .clearfix {
   *zoom: 1;
 }
@@ -19,12 +20,14 @@
   clear: both;
 }
 
+/* LIST RESET */
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* BASIC STATES */
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -40,287 +43,6 @@
 
 .al-c {
   text-align: center;
-}
-
-@font-face {
-  font-family: 'avantgarde';
-  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
-  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.svg#texgyreadventorregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'avantgarde';
-  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot");
-  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-/* Icon font */
-@font-face {
-  font-family: 'icomoon';
-  src: url("../../../fonts/icofont/icomoon.eot?di891l");
-  src: url("../../../fonts/icofont/icomoon.eot?di891l#iefix") format("embedded-opentype"), url("../../../fonts/icofont/icomoon.woff2?di891l") format("woff2"), url("../../../fonts/icofont/icomoon.ttf?di891l") format("truetype"), url("../../../fonts/icofont/icomoon.woff?di891l") format("woff"), url("../../../fonts/icofont/icomoon.svg?di891l#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-round-check:before {
-  content: "\e900";
-}
-
-.icon-round-next-arrow:before {
-  content: "\e901";
-}
-
-.icon-round-next:before {
-  content: "\e902";
-}
-
-.icon-round-plus:before {
-  content: "\e903";
-}
-
-.icon-twitter:before {
-  content: "\e040";
-}
-
-.icon-facebook:before {
-  content: "\e041";
-}
-
-.icon-youtube:before {
-  content: "\e051";
-}
-
-.icon-uniE600:before {
-  content: "\e600";
-}
-
-.icon-uniE601:before {
-  content: "\e601";
-}
-
-.icon-uniE602:before {
-  content: "\e602";
-}
-
-.icon-uniE603:before {
-  content: "\e603";
-}
-
-.icon-uniE604:before {
-  content: "\e604";
-}
-
-.icon-uniE605:before {
-  content: "\e605";
-}
-
-.icon-uniE606:before {
-  content: "\e606";
-}
-
-.icon-uniE607:before {
-  content: "\e607";
-}
-
-.icon-uniE608:before {
-  content: "\e608";
-}
-
-.icon-uniE609:before {
-  content: "\e609";
-}
-
-.icon-uniE60A:before {
-  content: "\e60a";
-}
-
-.icon-uniE60B:before {
-  content: "\e60b";
-}
-
-.icon-uniE60C:before {
-  content: "\e60c";
-}
-
-.icon-uniE60D:before {
-  content: "\e60d";
-}
-
-.icon-uniE60E:before {
-  content: "\e60e";
-}
-
-.icon-uniE60F:before {
-  content: "\e60f";
-}
-
-.icon-uniE610:before {
-  content: "\e610";
-}
-
-.icon-uniE611:before {
-  content: "\e611";
-}
-
-.icon-uniE612:before {
-  content: "\e612";
-}
-
-.icon-uniE613:before {
-  content: "\e613";
-}
-
-.icon-uniE614:before {
-  content: "\e614";
-}
-
-.icon-uniE615:before {
-  content: "\e615";
-}
-
-.icon-uniE616:before {
-  content: "\e616";
-}
-
-.icon-uniE617:before {
-  content: "\e617";
-}
-
-.icon-uniE618:before {
-  content: "\e618";
-}
-
-.icon-uniE619:before {
-  content: "\e619";
-}
-
-.icon-uniE61A:before {
-  content: "\e61a";
-}
-
-.icon-uniE61B:before {
-  content: "\e61b";
-}
-
-.icon-uniE61C:before {
-  content: "\e61c";
-}
-
-.icon-uniE61D:before {
-  content: "\e61d";
-}
-
-.icon-uniE61E:before {
-  content: "\e61e";
-}
-
-.icon-uniE61F:before {
-  content: "\e61f";
-}
-
-.icon-uniE620:before {
-  content: "\e620";
-}
-
-.icon-uniE621:before {
-  content: "\e621";
-}
-
-.icon-uniE622:before {
-  content: "\e622";
-}
-
-.icon-uniE623:before {
-  content: "\e623";
-}
-
-.icon-uniE624:before {
-  content: "\e624";
-}
-
-.icon-uniE625:before {
-  content: "\e625";
-}
-
-.icon-uniE626:before {
-  content: "\e626";
-}
-
-.icon-uniE627:before {
-  content: "\e627";
-}
-
-.icon-uniE628:before {
-  content: "\e628";
-}
-
-.icon-uniE629:before {
-  content: "\e629";
-}
-
-.icon-uniE62A:before {
-  content: "\e62a";
-}
-
-.icon-uniE62B:before {
-  content: "\e62b";
-}
-
-.icon-uniE62D:before {
-  content: "\e62d";
-}
-
-.icon-uniE926:before {
-  content: "\e926";
-}
-
-.icon-uniE92B:before {
-  content: "\e92b";
-}
-
-.icon-uniEADA:before {
-  content: "\eada";
-}
-
-.icon-uniEADB:before {
-  content: "\eadb";
-}
-
-.icon-uniEADC:before {
-  content: "\eadc";
-}
-
-.icon-uniEADD:before {
-  content: "\eadd";
-}
-
-.icon-uniEADE:before {
-  content: "\eade";
-}
-
-/*------------------------------*\
-
-    #TYPOGRAPHY
-
-\*------------------------------*/
-html {
-  font-size: 62.5%;
 }
 
 /* BREAKPOINTS */
@@ -342,12 +64,12 @@ html {
   background: url("/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg") no-repeat;
   background-size: cover;
   min-height: 576px;
-  padding: 20rem 0 12rem 0;
+  padding: 13rem 0 10rem 0;
   text-align: center;
   color: #fff;
 }
 .header-bloc h1 {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .header-bloc .key-numbers {
   margin: 0;
@@ -358,8 +80,11 @@ html {
   text-align: center;
   display: inline-block;
   font-size: 1.8rem;
-  margin-bottom: 6rem;
   padding: 0 2.5rem;
+  margin-bottom: 2rem;
+}
+.header-bloc .key-numbers li:last-child {
+  margin-bottom: 0;
 }
 .header-bloc .key-numbers li .number {
   font-size: 5rem;
@@ -384,6 +109,7 @@ html {
 .steps-intro p {
   max-width: 230px;
   margin: 0 auto 2rem;
+  color: #7b8484;
 }
 .steps-intro a {
   color: #65aa04;
@@ -406,6 +132,9 @@ html {
 }
 .trio-projects .box--full {
   margin-bottom: 3rem;
+}
+.trio-projects .button {
+  margin-top: 0;
 }
 .trio-projects .project {
   background: #5ab1bb;
@@ -462,6 +191,10 @@ html {
 }
 
 @media screen and (min-width: 600px) {
+  .header-bloc {
+    padding: 20rem 0 10rem 0;
+  }
+
   .trio-projects .box--half {
     flex: 50%;
     max-width: 47.5%;
@@ -478,10 +211,17 @@ html {
   }
 }
 @media screen and (min-width: 800px) {
+  .header-bloc .key-numbers li {
+    margin-bottom: 0;
+  }
+
   .trio-projects .box--half {
     flex: 41.5%;
     max-width: 39%;
     margin-bottom: 0;
+  }
+  .trio-projects .box--full {
+    margin-bottom: 4rem;
   }
   .trio-projects .box--full .project--img i {
     bottom: 12.5rem;
@@ -494,6 +234,9 @@ html {
   }
   .trio-projects .box--fixe {
     display: flex;
+  }
+  .trio-projects .button {
+    margin-top: 4rem;
   }
 
   .duo-news .head-flex .lighter {

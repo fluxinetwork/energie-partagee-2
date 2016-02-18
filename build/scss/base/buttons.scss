@@ -5,27 +5,59 @@
     #BUTTONS
 
 \*------------------------------*/
-.button{
-	background: #fff none;
-    border-radius: $radius;
-    color: $c-green;
+.button{	
+    color: $c-main;
 	cursor:pointer;
     display: inline-block;
-    font-family: $avantgarde;
+    font-family: $main-font;
     font-weight: bold;
     padding: 1.5rem 4rem;
     text-transform: uppercase;
+	margin-top:6rem;
+	position:relative;
+	z-index:5;
 	
+	&:before{
+		background: #000 none;		
+		border-radius: $radius;
+		content: "";
+		height: 100%;
+		left: 0;
+		margin: 0 auto;
+		opacity: 0.1;
+		position: absolute;
+		right: 0;
+		top: 4px;
+		width: 94%;
+		z-index: -1;
+	}
+	
+	&:after{
+		background: $c-txt-light none;	
+		border-radius: $radius;
+		content: "";		
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+		
 }
-.button.green{
-	background:$c-green;
-	color:#fff;		
+
+.button.green{	
+	color:#fff;
+	
+	&:after{
+		background: $c-main none;
+	}		
 }
+
 .button-round{
-	background: transparent none;
-    /*border: 2px solid #fff;*/
+	background: transparent none;    
     border-radius: 50%;
-    color: #fff;
+    color: $c-txt-light;
 	cursor:pointer;
     display:inline-block;   
     height: 6.6rem;
@@ -39,8 +71,8 @@
 	}
 }
 .button-round.grey{
-	color:$c-grey-medium;
-	border-color:$c-grey-medium;
+	color:$c-btn-r;
+	border-color:$c-btn-r;
 }
 
 .social {
@@ -56,7 +88,7 @@
 	}
 	
 	[class^="social--"], [class*=" social--"]{
-		background: #fff none;
+		background: $c-txt-light none;
     	border-radius: 50%;
     	color: #fff;
     	display: block;
@@ -83,9 +115,7 @@
 		background: #dc2925 none;	
 	}
 }
-.holder-button{
-	text-align:center;		
-}
+
 
 @media screen and (min-width: $bp--small) {	
 	.holder-button{

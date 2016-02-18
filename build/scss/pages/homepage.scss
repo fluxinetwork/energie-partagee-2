@@ -13,12 +13,12 @@
 	background:url('/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg') no-repeat;
 	background-size:cover;
 	min-height:576px;
-	padding:20rem 0 12rem 0;		
+	padding:13rem 0 10rem 0;		
 	text-align:center;
-	color:#fff;
+	color:$c-txt-light;
 	
 	h1{
-		margin-bottom:4rem;
+		margin-bottom:3rem;
 	}
 		
 	.key-numbers{
@@ -30,13 +30,17 @@
 			text-align:center;
 			display:inline-block;
 			font-size:1.8rem;	
-			margin-bottom: 6rem;
     		padding: 0 2.5rem;
+			margin-bottom:2rem;
+			
+			&:last-child{
+				margin-bottom:0;
+			}
 		
 			.number{
 				font-size:5rem;	
 				display:block;
-				font-family: $avantgarde					
+				font-family: $main-font					
 			}	
 		}			
 	}		
@@ -61,19 +65,20 @@
 	p{
 		max-width: 230px;
 		margin: 0 auto 2rem;
+		color:$c-greyblue;		
 	}
 	
 	a{
-		color:$c-green;
+		color:$c-main;
 		text-transform:uppercase;
 		font-size:1.4rem;
-		font-family: $avantgarde;	
+		font-family: $main-font;	
 	}
 	
 }
 
 .trio-projects{
-	background:$c-grey-lighter;
+	background:$c-bglight;
 	padding:10rem 0 9rem;
 	
 	.box--half {
@@ -88,11 +93,15 @@
 	
 	.box--full{
 		margin-bottom:$gutter-bottom;		
-	}	
+	}
+	
+	.button{
+		margin-top:0;
+	}
 	
 	.project{
-		background:$c-blue;
-		color:#fff;
+		background:$c-eolien;
+		color:$c-txt-light;
 		display:block;
 		height:100%;
 		position:relative;				
@@ -100,13 +109,13 @@
 		.project--infos{
 			
 			p {
-				font-family: $avantgarde;	
+				font-family: $main-font;	
 				font-size:2rem;
 				padding:2rem 2rem;
 					
 				span{
 					display:block;
-					font-family: $pt-sans;
+					font-family: $txt-font;
 					font-size:1.6rem;
 				}			
 			}
@@ -142,11 +151,11 @@
 		}
 		h2{
 			text-align:left;
-			margin:0.5rem 0 0;	
+			margin:0.5rem 0 0;				
 		}	
 		
 		.lighter{
-			color:$c-grey-medium;
+			color:$c-btn-r;
 			text-align:right;
 			display:none;
 			padding-right: 1rem;
@@ -166,7 +175,9 @@
 
 
 @media screen and (min-width: $bp--small) {	
-	
+	.header-bloc{
+		padding:20rem 0 10rem 0;	
+	}
 	.trio-projects {
 		.box--half {
 			flex: 50%;		
@@ -188,7 +199,12 @@
 		}
 	}
 }
-@media screen and (min-width: $bp--medium) {	
+@media screen and (min-width: $bp--medium) {
+	
+	.header-bloc .key-numbers li{			
+		margin-bottom:0;
+	}		
+		
 	.trio-projects {
 		.box--half {
 			flex: 41.5%;		
@@ -197,11 +213,13 @@
 		}
 		
 		.box--full{
+			margin-bottom: 4rem;
+			
 			.project--img i{
 				bottom: 12.5rem;
 			}
 			.project--infos{
-				background:$c-blue;				
+				background:$c-eolien;				
     			bottom: 3rem;
     			display: inline-block;
     			position: absolute;
@@ -211,7 +229,9 @@
 		.box--fixe{
 			display:flex;
 		}  
-	  	
+	  	.button{
+			margin-top:4rem;
+		}
 	}
 	.duo-news {
 		.head-flex {

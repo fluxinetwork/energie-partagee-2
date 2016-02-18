@@ -3,7 +3,7 @@
     #CLASS
 
 \*------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+/* TRANSITIONS */
 .navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id, .logo__img,
@@ -14,6 +14,7 @@
   transition: all 0.2s ease-in-out;
 }
 
+/* CLEARFIX */
 .clearfix {
   *zoom: 1;
 }
@@ -25,12 +26,14 @@
   clear: both;
 }
 
+/* LIST RESET */
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* BASIC STATES */
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -46,287 +49,6 @@
 
 .al-c {
   text-align: center;
-}
-
-@font-face {
-  font-family: 'avantgarde';
-  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
-  src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-regular-webfont.svg#texgyreadventorregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'avantgarde';
-  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot");
-  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-/* Icon font */
-@font-face {
-  font-family: 'icomoon';
-  src: url("../../../fonts/icofont/icomoon.eot?di891l");
-  src: url("../../../fonts/icofont/icomoon.eot?di891l#iefix") format("embedded-opentype"), url("../../../fonts/icofont/icomoon.woff2?di891l") format("woff2"), url("../../../fonts/icofont/icomoon.ttf?di891l") format("truetype"), url("../../../fonts/icofont/icomoon.woff?di891l") format("woff"), url("../../../fonts/icofont/icomoon.svg?di891l#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-round-check:before {
-  content: "\e900";
-}
-
-.icon-round-next-arrow:before {
-  content: "\e901";
-}
-
-.icon-round-next:before {
-  content: "\e902";
-}
-
-.icon-round-plus:before {
-  content: "\e903";
-}
-
-.icon-twitter:before {
-  content: "\e040";
-}
-
-.icon-facebook:before {
-  content: "\e041";
-}
-
-.icon-youtube:before {
-  content: "\e051";
-}
-
-.icon-uniE600:before {
-  content: "\e600";
-}
-
-.icon-uniE601:before {
-  content: "\e601";
-}
-
-.icon-uniE602:before {
-  content: "\e602";
-}
-
-.icon-uniE603:before {
-  content: "\e603";
-}
-
-.icon-uniE604:before {
-  content: "\e604";
-}
-
-.icon-uniE605:before {
-  content: "\e605";
-}
-
-.icon-uniE606:before {
-  content: "\e606";
-}
-
-.icon-uniE607:before {
-  content: "\e607";
-}
-
-.icon-uniE608:before {
-  content: "\e608";
-}
-
-.icon-uniE609:before {
-  content: "\e609";
-}
-
-.icon-uniE60A:before {
-  content: "\e60a";
-}
-
-.icon-uniE60B:before {
-  content: "\e60b";
-}
-
-.icon-uniE60C:before {
-  content: "\e60c";
-}
-
-.icon-uniE60D:before {
-  content: "\e60d";
-}
-
-.icon-uniE60E:before {
-  content: "\e60e";
-}
-
-.icon-uniE60F:before {
-  content: "\e60f";
-}
-
-.icon-uniE610:before {
-  content: "\e610";
-}
-
-.icon-uniE611:before {
-  content: "\e611";
-}
-
-.icon-uniE612:before {
-  content: "\e612";
-}
-
-.icon-uniE613:before {
-  content: "\e613";
-}
-
-.icon-uniE614:before {
-  content: "\e614";
-}
-
-.icon-uniE615:before {
-  content: "\e615";
-}
-
-.icon-uniE616:before {
-  content: "\e616";
-}
-
-.icon-uniE617:before {
-  content: "\e617";
-}
-
-.icon-uniE618:before {
-  content: "\e618";
-}
-
-.icon-uniE619:before {
-  content: "\e619";
-}
-
-.icon-uniE61A:before {
-  content: "\e61a";
-}
-
-.icon-uniE61B:before {
-  content: "\e61b";
-}
-
-.icon-uniE61C:before {
-  content: "\e61c";
-}
-
-.icon-uniE61D:before {
-  content: "\e61d";
-}
-
-.icon-uniE61E:before {
-  content: "\e61e";
-}
-
-.icon-uniE61F:before {
-  content: "\e61f";
-}
-
-.icon-uniE620:before {
-  content: "\e620";
-}
-
-.icon-uniE621:before {
-  content: "\e621";
-}
-
-.icon-uniE622:before {
-  content: "\e622";
-}
-
-.icon-uniE623:before {
-  content: "\e623";
-}
-
-.icon-uniE624:before {
-  content: "\e624";
-}
-
-.icon-uniE625:before {
-  content: "\e625";
-}
-
-.icon-uniE626:before {
-  content: "\e626";
-}
-
-.icon-uniE627:before {
-  content: "\e627";
-}
-
-.icon-uniE628:before {
-  content: "\e628";
-}
-
-.icon-uniE629:before {
-  content: "\e629";
-}
-
-.icon-uniE62A:before {
-  content: "\e62a";
-}
-
-.icon-uniE62B:before {
-  content: "\e62b";
-}
-
-.icon-uniE62D:before {
-  content: "\e62d";
-}
-
-.icon-uniE926:before {
-  content: "\e926";
-}
-
-.icon-uniE92B:before {
-  content: "\e92b";
-}
-
-.icon-uniEADA:before {
-  content: "\eada";
-}
-
-.icon-uniEADB:before {
-  content: "\eadb";
-}
-
-.icon-uniEADC:before {
-  content: "\eadc";
-}
-
-.icon-uniEADD:before {
-  content: "\eadd";
-}
-
-.icon-uniEADE:before {
-  content: "\eade";
-}
-
-/*------------------------------*\
-
-    #TYPOGRAPHY
-
-\*------------------------------*/
-html {
-  font-size: 62.5%;
 }
 
 /* BREAKPOINTS */
@@ -374,16 +96,6 @@ html {
 .hamburger, .nav__search__submit, .nav__search__close {
   background-color: transparent;
   border: 2px solid #fff;
-}
-
-.navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
-.navbar__id.is-compact,
-.no-touch nav:hover + .navbar__id, .logo__img,
-.navbar__id.is-compact .logo__img,
-.no-touch nav:hover + .navbar__id .logo__img, .navbar__id__social,
-.navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before {
-  transition: all 0.2s ease-in-out;
 }
 
 .no-pp .nav__dropdown .dropdown__item a, .js-toggle {
@@ -451,11 +163,6 @@ html {
   top: 0;
   box-shadow: none;
   border-radius: 0;
-}
-
-.logo__img {
-  /*background:url("/wp-content/themes/energie-partagee-2/app/img/logo-illu-energie-partagee.png") no-repeat 0 0;
-  background-size:63px*/
 }
 
 .logo__img,

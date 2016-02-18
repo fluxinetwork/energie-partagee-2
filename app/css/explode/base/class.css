@@ -3,10 +3,12 @@
     #CLASS
 
 \*------------------------------*/
+/* TRANSITIONS */
 .transition {
   transition: all 0.2s ease-in-out;
 }
 
+/* CLEARFIX */
 .clearfix {
   *zoom: 1;
 }
@@ -18,12 +20,14 @@
   clear: both;
 }
 
+/* LIST RESET */
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* BASIC STATES */
 .is-hidden {
   visibility: hidden;
   opacity: 0;

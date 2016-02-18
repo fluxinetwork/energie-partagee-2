@@ -4,13 +4,13 @@
 
 \*------------------------------*/
 
-// TRANSITIONS
+/* TRANSITIONS */
 
 %transition, .transition {
   transition: all 0.2s ease-in-out;
 }
 
-// CLEARFIX
+/* CLEARFIX */
 
 %clearfix, .clearfix {
    *zoom: 1;
@@ -23,7 +23,7 @@
    }
 }
 
-// LIST RESET
+/* LIST RESET */
 
 %list-reset, .list-reset {
   margin: 0;
@@ -31,12 +31,12 @@
   list-style: none;
 }
 
-// BASIC STATES
+/* BASIC STATES */
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
-} 
+}
 
 .is-muted {
   opacity: 0.3;
@@ -49,3 +49,4 @@
 .al-c{
 	text-align:center;	
 }
+

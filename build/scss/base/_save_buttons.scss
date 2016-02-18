@@ -1,0 +1,123 @@
+@import '../utils/_all.scss';
+
+/*------------------------------*\
+
+    #BUTTONS
+
+\*------------------------------*/
+.button {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    margin-top: 6rem;
+    padding: 1.5rem 4rem;
+    color: $c-main;
+    font-family: $main-font;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:before {
+        position: absolute;
+        z-index: -1;
+        top: 4px;
+        right: 0;
+        left: 0;
+        width: 94%;
+        height: 100%;
+        margin: 0 auto;
+        opacity: .1;
+        border-radius: $radius;
+        background: #000 none;
+        content: '';
+    }
+    &:after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $radius;
+        background: #fff none;
+        content: '';
+    }
+}
+
+
+.button.green {
+    color: #fff;
+    &:after {
+        background: $c-main none;
+    }
+}
+
+.button-round {
+    display: inline-block;
+    width: 6.6rem;
+    height: 6.6rem;
+    padding: 0;
+    color: #fff;
+    border-radius: 50%;
+    background: transparent none;
+    cursor: pointer;
+    text-align: center;
+    i:before {
+        display: inline-block;
+        font-size: 6.6rem;
+    }
+}
+.button-round.grey {
+    color: $c-btn-r;
+    border-color: $c-btn-r;
+}
+
+.social {
+    margin: 1.2rem 0 0;
+    padding: 0;
+    font-size: 2.2rem;
+    li {
+        display: inline-block;
+        margin-right: 3px;
+        list-style-type: none;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    [class^='social--'], [class*=' social--'] {
+        display: block;
+        color: #fff;
+        border-radius: 50%;
+        background: #fff none;
+        text-align: center;
+        i {
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            vertical-align: middle;
+        }
+    }
+}
+.navbar__id, .social {
+    .social--face {
+        background: #3b5998 none;
+    }
+    .social--twit {
+        background: #55acee none;
+    }
+    .social--yout {
+        background: #dc2925 none;
+    }
+}
+
+
+@media screen and (min-width: $bp--small) {
+    .holder-button {
+        margin-top: 3rem;
+    }
+}
+@media screen and (min-width: $bp--medium) {
+    .button-round {
+        display: block;
+    }
+}

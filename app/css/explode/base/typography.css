@@ -1,13 +1,16 @@
+@charset "UTF-8";
 /*------------------------------*\
 
     #CLASS
 
 \*------------------------------*/
+/* TRANSITIONS */
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
 .transition {
   transition: all 0.2s ease-in-out;
 }
 
+/* CLEARFIX */
 .clearfix {
   *zoom: 1;
 }
@@ -19,12 +22,14 @@
   clear: both;
 }
 
+/* LIST RESET */
 .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* BASIC STATES */
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -42,6 +47,12 @@
   text-align: center;
 }
 
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
 @font-face {
   font-family: 'avantgarde';
   src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
@@ -323,17 +334,7 @@ html {
   font-size: 62.5%;
 }
 
-/* BREAKPOINTS */
-/* COLORS */
-/* Layout */
-/* Nav */
-/* Box - Border */
-/* Typos */
-/*------------------------------*\
-
-    #TYPOGRAPHY
-
-\*------------------------------*/
+​
 body {
   font-size: 16px;
   font-family: "PT sans", sans-serif;
@@ -345,18 +346,16 @@ body {
 
 h1 {
   font-family: "avantgarde", Arial;
-  font-size: 3.4rem;
-  font-weight: bold;
   padding: 0;
   margin: 0 0 3rem;
 }
 
 h2 {
   font-family: "avantgarde", Arial;
-  font-size: 1.6rem;
   font-weight: bold;
   text-align: left;
   text-transform: uppercase;
+  color: #122c33;
   padding: 0;
   margin: 0 0 6rem;
 }
