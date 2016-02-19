@@ -53,6 +53,7 @@
 /* Nav */
 /* Box - Border */
 /* Typos */
+/* Typos sizes */
 @font-face {
   font-family: 'avantgarde';
   src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
@@ -335,34 +336,79 @@ html {
 }
 
 ​
-body {
-  font-size: 16px;
-  font-family: "PT sans", sans-serif;
-}
-
 .bold {
   font-weight: 700;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "avantgarde", Arial;
-  padding: 0;
-  margin: 0 0 3rem;
-}
-
-h2 {
-  font-family: "avantgarde", Arial;
-  font-weight: bold;
-  text-align: left;
-  text-transform: uppercase;
-  color: #122c33;
-  padding: 0;
-  margin: 0 0 6rem;
-}
-
-p {
-  font-family: "PT sans", sans-serif;
-  font-size: 1.8rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  h1, .h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h1, .h1 {
+    font-size: 4rem;
+  }
+}
+
+h2, .h2 {
+  color: #122c33;
+}
+@media screen and (min-width: 1000px) {
+  h2, .h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h3, .h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h4, .h4 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h5, .h5 {
+    font-size: 1.6rem;
+  }
+}
+
+h6, .h6 {
+  color: #777777;
+  font-weight: normal;
+}
+@media screen and (min-width: 1000px) {
+  h6, .h6 {
+    font-size: 1.6rem;
+  }
+}
+
+p, .p, .p-ss {
+  font-family: "Georgia", serif;
+}
+@media screen and (min-width: 1000px) {
+  p, .p, .p-ss {
+    font-size: 1.6rem;
+  }
+}
+
+.p-ss {
+  font-family: "PT sans", sans-serif;
 }

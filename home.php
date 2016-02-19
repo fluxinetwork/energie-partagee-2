@@ -1,89 +1,92 @@
 <?php get_header(); ?>
-<section>
-	<article class="header-bloc">
+
+	<section class="header-bloc">
     	<div class="wrap-l">
             <h1>Investissons les énergies renouvelables</h1>
-            <ul class="key-numbers">
-              <li><span class="number">5000</span> actionnaires<br>citoyens</li>
-              <li><span class="number">25</span> projets locaux<br>financés</li>
-              <li><span class="number">+10</span> millions d’euros<br>collectés</li>      
+            <ul class="key-nums">
+              <li class="key-nums__item"><span class="key-nums__item__num">5000</span> actionnaires<br>citoyens</li>
+              <li class="key-nums__item"><span class="key-nums__item__num">25</span> projets locaux<br>financés</li>
+              <li class="key-nums__item"><span class="key-nums__item__num">+10</span> millions d’euros<br>collectés</li>      
             </ul>
             <a href="#" class="button">Comprendre notre action</a>
         </div>
-	</article>
+	</section>
     
-    <article class="wrap-highlight">
+    <section class="wrap-highlight">
     	<div class="wrap-n">
-            <p class="lighter">Actualité importante</p>
+            <h6 class="lighter">Actualité importante</h6>
             <h1>Levée de fonds historique</h1>
-            <div class="box-flex">
-            	<div class="box--solo">
+            <div class="box">
+            	<div class="box__solo">
                 <p class="highlight-txt">Au milieu de la forêt de Raon-L’Etape (88) coule la Meurthe, qui jadis était utilisée pour produire de l’électricité. Démantelée il y a quinze ans, la petite centrale hydraulique reprend vie aujourd’hui après plusieurs mois de travaux et la mobilisation des souscripteurs Énergie Partagée. Retour en photo sur cette réhabilitation.</p>
                </div> 
-                <div class="box--fixe"><a class="button-round" href="#"><i class="icon-round-next-arrow"></i></a></div>
+                <div class="box__fixe"><a class="button-round" href="#"><i class="icon-round-next-arrow"></i></a></div>
             </div>            
         </div>
-    </article>
+    </section>
     
-    <article class="wrap-l steps-intro">
-        <h2>Énergie partagée en 3 étapes</h2>
-        <ul class="box-flex extend-flex">
-            <li class="box--item">
-                <div class="holder-img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>         		
-                <p>Des projets citoyens d'énergie renouvelable émergent partout en France.</p>        
-                <a href="#">Voir les projets</a>
+    <section class="wrap-l steps-intro">
+        <h5>Énergie partagée en 3 étapes</h5>
+        <ul class="box box-flex">
+            <li class="box__item">
+                <div class="round__img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>         		
+                <p class="p-ss">Des projets citoyens d'énergie renouvelable émergent partout en France.</p>        
+                <a class="link" href="#">Voir les projets</a>
             </li>
-            <li class="box--item">
-                <div class="holder-img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>	
-                <p>Énergie Partagée les accompagne et vous propose d'investir dans ces projets.</p>
-                <a href="#">Devenir actionnaire</a>
+            <li class="box__item">
+                <div class="round__img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>	
+                <p class="p-ss">Énergie Partagée les accompagne et vous propose d'investir dans ces projets.</p>
+                <a class="link" href="#">Devenir actionnaire</a>
             </li>   
-            <li class="box--item">
-                <div class="holder-img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>
-                <p>Energie verte, lutte contre l’effet de serre et revenus pour les actionnaires à la clé.</p>
-                <a href="#">Comment ça marche ?</a>
+            <li class="box__item">
+                <div class="round__img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/illu-step.png"></div>
+                <p class="p-ss">Energie verte, lutte contre l’effet de serre et revenus pour les actionnaires à la clé.</p>
+                <a class="link" href="#">Comment ça marche ?</a>
             </li>
         </ul>
-    </article>
+    </section>
     
-    <article class="trio-projects">
-    	<h2>Sélection de projets</h2>
+    <section class="trio-card">
+    	<h5>Sélection de projets</h5>
         <div class="wrap-n">        
-            <div class="box-flex">
-              <div class="box--full">   
-                  <a class="project" href="#">
-                    <div class="project--img">
+            <div class="box">
+              <article class="box__full">   
+                  <a class="card" href="#">
+                    <div class="card__img">
                     		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
-                          <i class="icon-uniE60C"></i>
+                          <i class="card__icon icon-uniE60C"></i>
                     </div>
-                    <div class="project--infos">
-                    		<p>Isac-Watts <span>Loire-Atlantique</span></p>
+                    <div class="card__infos">
+                    		<h1 class="h4">Isac-Watts</h1>
+                        <p class="p-ss">Loire-Atlantique</p>
                     </div>
                   </a>                  
-              </div>
-              <div class="box--half">              		
-                   <a class="project" href="#">
-                    <div class="project--img">
+              </article>
+              <article class="box__half">              		
+                   <a class="card" href="#">
+                    <div class="card__img">
                     		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
-                          <i class="icon-uniE60F"></i>
+                          <i class="card__icon icon-uniE60F"></i>
                     </div>
-                    <div class="project--infos">
-                    		<p>Suzamme Solar Colmar <span>Haut-Rin</span></p>
+                    <div class="card__infos">
+                    		<h1 class="h4">Suzamme Solar Colmar</h1>
+                        <p class="p-ss">Haut-Rin</p>
                     </div>
                   </a>
-              </div>
-              <div class="box--half">
-              		<a class="project" href="#">
-                    <div class="project--img">
+              </article>
+              <article class="box__half">
+              		<a class="card" href="#">
+                    <div class="card__img">
                     		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
-                          <i class="icon-uniE60A"></i>
+                          <i class="card__icon icon-uniE60A"></i>
                     </div>
-                    <div class="project--infos">
-                    		<p>Grozne Biogaz <span>Rhône</span></p>
+                    <div class="card__infos">
+                    		<h1 class="h4">Grozne Biogaz</h1>
+                        <p class="p-ss">Rhône</p>
                     </div>
                   </a>
-              </div>
-              <div class="box--fixe">
+              </article>
+              <div class="box__fixe">
                     <a class="button-round grey" href="#"><i class="icon-round-next"></i></a> 
               </div>          
             </div>
@@ -92,50 +95,60 @@
             <a href="#" class="button green">Voir la carte des projets</a>
         </div>       
         
-    </article>
+    </section>
     
-    <article class="duo-news">
+    <section class="duo-card">
     	<div class="wrap-n">
-        	<div class="box-flex head-flex">
-            	<div class="box--half">
-            		<h2>Nos actualités</h2>
+        	<div class="box head__flex">
+            	<div class="box__half">
+            		<h5>Nos actualités</h5>
             	</div>
-            	<div class="box--half">
-                    <p class="lighter">Suivez-nous sur</p> 
+            	<div class="box__half">
+                    <span class="lighter">Suivez-nous sur</span> 
                     <ul class="social">
                         <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
                        <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
                     </ul>  
-           	</div>
-             	<div class="box--fixe"></div>
+           	  </div>
+             	<div class="box__fixe"></div>
         	</div>
        
-           <div class="box-flex">         
-                <div class="box--half">
-                   <a class="news-item" href="#">
+           <div class="box">         
+                <article class="box__half">
+                   <a class="card" href="#">
+                   	<div class="card__img">
                        <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                       <p><span class="news-date"><i>12</i> jan</span>Un autre texte moins long.</p>
+                      </div>
+                      <div class="card__infos">
+                       <span class="card__infos__date">12 jan</span>
+                       <h1 class="h4">Un autre texte moins long.</h1>
+                      </div>
                    </a>
-                </div>
-                <div class="box--half">
-                    <a class="news-item" href="#">
+                </article>
+                <article class="box__half">
+                    <a class="card" href="#">
+                    	<div class="card__img">
                        <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                       <p><span class="news-date"><i>23</i> dec</span>5 raisons d’offrir des actions Énergie Partagée à Noël.</p>
+                      </div>
+                      <div class="card__infos">                      
+                      	<span class="card__infos__date">23 dec</span>
+                       	<h1 class="h4">5 raisons d’offrir des actions Énergie Partagée à Noël.</h1>
+                      </div> 
                    </a>
-                </div>
-                <div class="box--fixe"> 
+                </article>
+                <div class="box__fixe"> 
                     <a class="button-round grey" href="#"><i class="icon-round-plus"></i></a> 
                 </div>
            </div>
        </div>
-    </article>    
+    </section>    
     
     <?php include( TEMPLATEPATH.'/app/inc/inc_projet/court-circuit.php' ); ?>
     
-    <article class="top-credibility">
+    <section class="top-credibility">
     	<div class="wrap-n">
-            <h2>Ils parlent de nous</h2>
-            <ul class="box-logos box-flex">
+            <h5>Ils parlent de nous</h5>
+            <ul class="box__logos box">
                 <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
                 <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
                 <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
@@ -143,10 +156,7 @@
                 <li><a class="button-round grey" href="#"><i class="icon-round-plus"></i></a></li> 
             </ul>
         </div> 
-    </article>
+    </section>
         
-    
-    
-</section>
 
 <?php get_footer(); ?>

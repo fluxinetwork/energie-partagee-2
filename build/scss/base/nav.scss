@@ -39,7 +39,7 @@
 %transparent-bt {
   @extend %bt;
   background-color: transparent;
-  border: 2px solid $c-txt-light;
+  border: 2px solid $c-textwhite;
 }
 
 %link {
@@ -115,7 +115,7 @@
   width: 140px;
   height: $navH;
   padding: 1.2rem $gutter-thin 0 $gutter-thin;
-  background: $c-txt-light;
+  background: $c-textwhite;
   top: 0;
   box-shadow: none;
   border-radius: 0;
@@ -210,7 +210,7 @@
 
 .no-pp .nav__item {
   margin-left: $gutter-thin;
-  color: $c-txt-light;
+  color: $c-textwhite;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -403,7 +403,7 @@
   padding: 1.2rem $gutter-thin 0.9rem $gutter-thin;
   background: $c-main;
   border-radius: $radius;
-  color: $c-txt-light;
+  color: $c-textwhite;
   font: 700 1.3rem $main-font;
   text-transform: uppercase;
   letter-spacing: 0.4px;
@@ -471,7 +471,7 @@
       padding-left: $gutter-thin;
       text-decoration: none;
       font: 400 1.4rem $main-font;
-      color: $c-light;
+      color: $c-textlight;
       line-height: 3.5rem;
       -webkit-font-smoothing: antialiased;
     }
@@ -541,7 +541,7 @@ $c-placeholder : #fff;
   flex: 1 0 auto;
   border: 0;
   background-color: transparent;
-  color:$c-txt-light;
+  color:$c-textwhite;
 
   &:focus {
     outline: 0;

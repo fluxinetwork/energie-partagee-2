@@ -57,6 +57,7 @@
 /* Nav */
 /* Box - Border */
 /* Typos */
+/* Typos sizes */
 /*------------------------------*\
 
     # HELPERS
@@ -476,7 +477,7 @@
   padding-left: 2rem;
   text-decoration: none;
   font: 400 1.4rem "avantgarde", Arial;
-  color: #999999;
+  color: #777777;
   line-height: 3.5rem;
   -webkit-font-smoothing: antialiased;
 }

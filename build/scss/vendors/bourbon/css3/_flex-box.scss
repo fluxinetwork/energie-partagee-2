@@ -48,13 +48,13 @@
   -ms-flex-order: $int; // IE 10
 }
 
-@mixin box-flex($value: 0) {
-  @include prefixer(box-flex, $value, webkit moz spec);
+@mixin box($value: 0) {
+  @include prefixer(box, $value, webkit moz spec);
   -ms-flex: $value; // IE 10
 }
 
-@mixin box-flex-group($int: 1) {
-  @include prefixer(box-flex-group, $int, webkit moz spec);
+@mixin box-group($int: 1) {
+  @include prefixer(box-group, $int, webkit moz spec);
 }
 
 // CSS3 Flexible Box Model and property defaults
@@ -90,7 +90,7 @@
   }
 }
 
-// 2009 - box-flex (integer)
+// 2009 - box (integer)
 // 2011 - flex (decimal | width decimal)
 // 2012 - flex (integer integer width)
 @mixin flex($value) {
@@ -99,7 +99,7 @@
   $flex-grow: nth($value, 1);
 
   // 2009
-  @include prefixer(box-flex, $flex-grow, webkit moz spec);
+  @include prefixer(box, $flex-grow, webkit moz spec);
 
   // 2011 (IE 10), 2012
   @include prefixer(flex, $value, webkit moz ms spec);

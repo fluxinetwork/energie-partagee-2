@@ -16,7 +16,7 @@
 <body <?php body_class($bodyclass); ?> >
 
 	<div class="top-display">
-    	<p>Pour aller sur le site de souscription, <a href="#">cliquez ici</a></p>
+    	<p class="p-ss">Pour aller sur le site de souscription, <a href="#">cliquez ici</a></p>
     </div>
 
 	<div class="wrap-main">

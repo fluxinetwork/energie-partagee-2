@@ -5,9 +5,6 @@
 
 \*------------------------------*/
 
-.home .wrap-content h2{
-	text-align:center;	
-}
 
 .header-bloc{
 	background:url('/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg') no-repeat;
@@ -15,17 +12,13 @@
 	min-height:576px;
 	padding:13rem 0 10rem 0;		
 	text-align:center;
-	color:$c-txt-light;
-	
-	h1{
-		margin-bottom:3rem;
-	}
+	color:$c-textwhite;	
 		
-	.key-numbers{
+	.key-nums{
 		margin:0;
 		padding:0;
 						
-		li{
+		.key-nums__item{
 			list-style-type:none;
 			text-align:center;
 			display:inline-block;
@@ -37,7 +30,7 @@
 				margin-bottom:0;
 			}
 		
-			.number{
+			.key-nums__item__num{
 				font-size:5rem;	
 				display:block;
 				font-family: $main-font					
@@ -47,115 +40,55 @@
 }
 
 .steps-intro{
-	
-	padding-top:10rem;
-	padding-bottom:10rem;
-	
-	.holder-img{
-		border-radius: 50%;
-		margin: 0 auto 2rem;
-		overflow: hidden;
-		text-align: center;
-		width: 200px;
-	}
-	.holder-img img{
-		display:block;
-	}
-	
-	p{
+		
+	.p{
 		max-width: 230px;
 		margin: 0 auto 2rem;
-		color:$c-greyblue;		
+		color:$c-textlight;		
 	}
-	
-	a{
-		color:$c-main;
-		text-transform:uppercase;
-		font-size:1.4rem;
-		font-family: $main-font;	
+	.round__img{
+		width: 200px;
 	}
 	
 }
 
-.trio-projects{
+.trio-card{
 	background:$c-bglight;
 	padding:10rem 0 9rem;
 	
-	.box--half {
+	.box__half {
 		display: block;
 		width: 100%;
 		margin-bottom: 3rem;
 	 }
 		
-	.box--fixe{
+	.box__fixe{
 		display:none;
 	}
 	
-	.box--full{
-		margin-bottom:$gutter-bottom;		
+	.box__full{
+		
 	}
 	
 	.button{
 		margin-top:0;
-	}
-	
-	.project{
-		background:$c-eolien;
-		color:$c-txt-light;
-		display:block;
-		height:100%;
-		position:relative;				
-				
-		.project--infos{
-			
-			p {
-				font-family: $main-font;	
-				font-size:2rem;
-				padding:2rem 2rem;
-					
-				span{
-					display:block;
-					font-family: $txt-font;
-					font-size:1.6rem;
-				}			
-			}
-		}
-		
-		.project--img{
-			position:relative;
-			
-			i{
-				bottom: 0.5rem;
-				font-size: 9rem;
-				left: 0.5rem;
-				position: absolute;
-			}
-		}				
-	}
-	
-	
-	
-	
-	
+	}	
 }
 
-.duo-news{
+.duo-card{
 	padding:10rem 0 0;	
 	
-	.head-flex{
+	.head__flex{
 		
-		.box--half{
+		.box__half{
 			flex: 0 1 auto;
 			margin-bottom: 5rem;
 			text-align:right;
 		}
-		h2{
-			text-align:left;
-			margin:0.5rem 0 0;				
-		}	
+		
 		
 		.lighter{
-			color:$c-btn-r;
+			color:$c-light;
 			text-align:right;
 			display:none;
 			padding-right: 1rem;
@@ -178,20 +111,17 @@
 	.header-bloc{
 		padding:20rem 0 10rem 0;	
 	}
-	.trio-projects {
-		.box--half {
+	.trio-card {
+		.box__half {
 			flex: 50%;		
 			max-width: 50%-$gutter/2;		
 		}
 	}
-	.duo-news{
+	.duo-card{
 		
-		.head-flex{
-			h2{
-				text-align:left;
-				margin:0.5rem 0 5rem;	
-			}
-			.box--half{
+		.head__flex{
+			
+			.box__half{
 				flex: 41.5%;		
     			max-width: 41.5%-$gutter/2;
 				margin-bottom:0;	
@@ -201,24 +131,24 @@
 }
 @media screen and (min-width: $bp--medium) {
 	
-	.header-bloc .key-numbers li{			
+	.header-bloc .key-nums__item__num{			
 		margin-bottom:0;
 	}		
 		
-	.trio-projects {
-		.box--half {
+	.trio-card {
+		.box__half {
 			flex: 41.5%;		
 			max-width: 41.5%-$gutter/2;
 			margin-bottom: 0;		
 		}
 		
-		.box--full{
+		.box__full{
 			margin-bottom: 4rem;
 			
-			.project--img i{
+			.card__img i{
 				bottom: 12.5rem;
 			}
-			.project--infos{
+			.card__infos{
 				background:$c-eolien;				
     			bottom: 3rem;
     			display: inline-block;
@@ -226,19 +156,19 @@
 			}
 		}	
 			
-		.box--fixe{
+		.box__fixe{
 			display:flex;
 		}  
 	  	.button{
 			margin-top:4rem;
 		}
 	}
-	.duo-news {
-		.head-flex {
+	.duo-card {
+		.head__flex {
 			.lighter{			
 				display: inline-block;
 			}
-			.box--half{
+			.box__half{
 				flex: 41.5%;		
     			max-width: 41.5%-$gutter/2;				
 			}

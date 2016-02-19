@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.transition {
+.link, .link::after, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -51,6 +51,7 @@
 /* Nav */
 /* Box - Border */
 /* Typos */
+/* Typos sizes */
 /*------------------------------*\
 
     #BUTTONS
@@ -158,6 +159,27 @@
 }
 .navbar__id .social--yout, .social .social--yout {
   background: #dc2925 none;
+}
+
+.link {
+  position: relative;
+  font-family: "avantgarde", Arial;
+  font-size: 1.4rem;
+  color: #65aa04;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #65aa04;
+}
+.link:hover::after {
+  width: 100%;
 }
 
 @media screen and (min-width: 600px) {

@@ -5,17 +5,37 @@
     #MICRO-MODULES
 
 \*------------------------------*/
-
+.card{
+	background:$c-eolien;
+	color:$c-textwhite;
+	display:block;
+	height:100%;
+	position:relative;				
+				
+	.card__infos{
+			
+			
+	}
+		
+	.card__img{
+		position:relative;			
+	}
+	.card__icon{
+		bottom: 0.5rem;
+		font-size: 9rem;
+		left: 0.5rem;
+		position: absolute;
+	}				
+}
 .top-display{
-	$txt-color: $c-txt-light;
+	$txt-color: $c-textwhite;
 	
 	background:$c-dark none;
 	text-align:right;
 	
-	p{
+	.p-ss{
 		margin:0;
 		font-size:1.4rem;
-		padding:0.6rem 5rem 0.6rem 0;
 		color:$txt-color;
 		
 		a{
@@ -25,54 +45,14 @@
 	}
 }
 
-.news-item{
-	background:$c-grey-light;
-	display:block;	
-	position:relative;	
-	height:100%;
-	color:$c-grey;
-	
-	.news-date{
-		background:$c-focus;
-		border-radius: 50%;
-		color: $c-txt-light;
-		display: block;
-		font-family: $main-font;
-		font-size: 0.9rem;
-		height: 4rem;
-		left: -2rem;
-		line-height: 1.3rem;
-		padding-top: 0.7rem;
-		position: absolute;
-		text-align: center;
-		text-transform: uppercase;
-		top: -3rem;
-		vertical-align: middle;
-		width: 4rem;
-		z-index: 5;
-		
-		i{
-			display: block;
-			font-size: 1.4rem;
-			font-style: normal;						
-		}
-	}
-	
-	p{			
-		position:relative;	
-		padding:1.5rem 2.3rem 2rem;
-	}
-}
-
 .courtcircuit{
 	padding:6rem 0 0;	
 	
 	.wrap-n{
-		background:$c-focus;
-		padding:5rem 3.5rem;
+		background:$c-focus;		
 		border-radius:$radius;
 	}
-	h3 {
+	.courtcircuit__title {
 		display:flex;
 		margin:0;
 		align-items:baseline;
@@ -91,21 +71,17 @@
 		height: 29px;
     	margin-bottom: 10px;
     	width: 226px;
-	}
-	p{
-		color:$c-txt-light;
-		font-size:2rem;
-	}
+	}	
 	
-	.box--half{
+	.box__half{
 		align-self:center;	
 	}
 	
 }
-.courtcircuit--input{
+.courtcircuit__input{
 	background:$c-focus;
 	border-bottom:1px solid #f57f35;
-	color: $c-txt-light;
+	color: $c-textwhite;
 	font-family: $main-font;
 	font-size: 3.4rem;
 	height: 100%;
@@ -113,19 +89,19 @@
 	padding:0.4rem 1rem;
 	
 	&::-webkit-input-placeholder{ 
-	  color: $c-txt-light;
+	  color: $c-textwhite;
 	  opacity:1;
 	}	
 	&::-moz-placeholder{ 
-	  color: $c-txt-light;
+	  color: $c-textwhite;
 	  opacity:1;
 	}	
 	&:-ms-input-placeholder{ 
-	  color: $c-txt-light;
+	  color: $c-textwhite;
 	  opacity:1;
 	}	
 	&:-moz-placeholder { 
-	  color: $c-txt-light;
+	  color: $c-textwhite;
 	  opacity:1;
 	}	
 	
@@ -133,20 +109,13 @@
 
 .top-credibility{	
 	.wrap-n{
-		background:$c-grey-light;
-		border-radius:$radius;
-		
-		padding:6rem 3.5rem 7rem;
+		background:$c-bglight;
+		border-radius:$radius;		
 	}
 }
 
 @media screen and (min-width: $bp--small) {	
-	.courtcircuit .wrap-n{
-		padding:5rem;
-	}	
-	.top-credibility .wrap-n{	
-		padding:6rem 5rem 7rem;	
-	}
+	
 }
 @media screen and (min-width: $bp--medium) {
 	.top-credibility{		
@@ -156,14 +125,7 @@
 		.wrap-n{
 			position:relative;
 			top:-9.5rem;
-			padding:6rem $gutter-wrap-side 7rem;	
 		}
 	}
-	.courtcircuit{
-		padding-bottom:10rem;
-		
-		.wrap-n{
-			padding:5rem $gutter-wrap-side;
-		}	
-	}	
+	
 }

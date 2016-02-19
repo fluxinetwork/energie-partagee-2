@@ -3,15 +3,19 @@ $bp--small: 600px;
 $bp--medium: 800px;
 $bp--large: 1000px;
 
-/* COLORS */
-$c-light: #999999;
-$c-grey: #727272;
-$c-btn-r: #b3b3b3;
-$c-grey-light: #f4f4f4;
-$c-greyblue: #7b8484;
-$c-bglight: #f2f2f2;
+$breakpoints: (
+  small : $bp--small,
+  medium: $bp--medium,
+  large : $bp--large
+);
 
-$c-txt-light: #fff;
+/* COLORS */
+
+$c-light: #b3b3b3;
+$c-bglight: #f2f2f2;
+$c-text:#555555;
+$c-textlight:#777777;
+$c-textwhite: #fff;
 
 $c-main: #65aa04;
 $c-dark: #122c33;
@@ -26,10 +30,10 @@ $c-geo: #e7511e;
 $c-eco: #b7115b;
 
 /* Layout */
+$space: 10rem;
+
 $gutter: 5%;
 $gutter-thin: 2rem;
-$gutter-bottom: 3rem;
-$gutter-wrap-side: 7.6rem;
 
 /* Nav */
 $navH: 56px;
@@ -43,11 +47,37 @@ $main-font:"avantgarde",Arial;
 $txt-font:"PT sans",sans-serif;
 $txt-fontserif:"Georgia",serif;
 
+/* Typos sizes */
+$h1-font-sizes: (
+	small : 2rem,
+	medium: 3rem,
+	large: 4rem,
+);
 
+$h2-font-sizes: (
+	large: 1.8rem
+);
 
+$h3-font-sizes: (
+	large: 2.2rem
+);
 
+$h4-font-sizes: (
+	large: 1.8rem
+);
 
+$h5-font-sizes: (
+	large: 1.6rem
+);
 
+$h6-font-sizes: (
+	large: 1.6rem
+);
 
+$p-font-sizes: (
+	large: 1.6rem
+);
 
-
+$blockquote-font-sizes: (
+	large: 2.2rem
+);

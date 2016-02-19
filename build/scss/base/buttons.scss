@@ -33,7 +33,7 @@
 	}
 	
 	&:after{
-		background: $c-txt-light none;	
+		background: $c-textwhite none;	
 		border-radius: $radius;
 		content: "";		
 		height: 100%;
@@ -57,7 +57,7 @@
 .button-round{
 	background: transparent none;    
     border-radius: 50%;
-    color: $c-txt-light;
+    color: $c-textwhite;
 	cursor:pointer;
     display:inline-block;   
     height: 6.6rem;
@@ -71,8 +71,8 @@
 	}
 }
 .button-round.grey{
-	color:$c-btn-r;
-	border-color:$c-btn-r;
+	color:$c-light;
+	border-color:$c-light;
 }
 
 .social {
@@ -88,7 +88,7 @@
 	}
 	
 	[class^="social--"], [class*=" social--"]{
-		background: $c-txt-light none;
+		background: $c-textwhite none;
     	border-radius: 50%;
     	color: #fff;
     	display: block;
@@ -116,6 +116,33 @@
 	}
 }
 
+
+.link {
+  @extend %transition;
+  position: relative;
+  font-family: $main-font;
+  font-size: 1.4rem;
+  color: $c-main;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  &::after {
+    @extend %transition;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: $c-main;
+  }
+  
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
 
 @media screen and (min-width: $bp--small) {	
 	.holder-button{

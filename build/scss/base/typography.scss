@@ -1,4 +1,5 @@
 @import "../utils/_all.scss";
+
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
 @font-face {
     font-family: 'avantgarde';
@@ -237,42 +238,50 @@
 html {
     font-size: 62.5%;
 }​
-body {
-	font-size:16px;
-	font-family: $txt-font;
-}
 
 .bold {
 	font-weight: 700;
 }
 
-h1{		
-	font-family: $main-font;	
-						
-	padding:0;
-	margin:0 0 3rem;
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: $main-font;
+    margin: 0;
+    padding: 0;
 }
 
-h2{	
-	font:{
-		family: $main-font;		
-		weight:bold;
-	}
-	text:{
-		align:left;
-		transform:uppercase;
-	}
+h1,.h1{	
+	@include font-size($h1-font-sizes);	
+	
+}
+
+h2,.h2{	
+	@include font-size($h2-font-sizes);    
 	
 	color:$c-dark;
-	padding:0;
-	margin:0 0 6rem;
+	
+}
+h3,.h3{ 
+    @include font-size($h3-font-sizes); 
+}
+h4,.h4{ 
+    @include font-size($h4-font-sizes); 
+}
+h5,.h5{ 
+    @include font-size($h5-font-sizes); 
+}
+h6,.h6{ 
+    @include font-size($h6-font-sizes);
+
+    color:$c-textlight;
+    font-weight: normal; 
 }
 
 
-
-p{
-	font-family:$txt-font;
-	font-size:1.8rem;
-	padding:0;
-	margin:0;
+p,.p,.p-ss{
+	@include font-size($p-font-sizes); 
+	font-family: $txt-fontserif;
+}
+.p-ss{
+    font-family: $txt-font;
 }

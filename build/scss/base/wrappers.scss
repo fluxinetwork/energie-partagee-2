@@ -7,148 +7,119 @@
 /*Wrap small*/
 .wrap-s {
 	margin:0 auto;
-	padding: 0 5rem;	
 	max-width:690px;	
 }
 /*Wrap normal*/
 .wrap-n {
 	margin:0 auto;
-	padding: 0 3.5rem;	
 	max-width:830px;	
 }
 /*Wrap large*/
 .wrap-l {
 	margin:0 auto;
-	padding: 0 5rem;
 	max-width:978px;	
 }
 /*Wrap orange*/
 .wrap-highlight{
 	background:$c-focus;
-	color:#fff;
+	color:$c-textwhite;
 	width:100%;
-	padding:6rem 0;
 	
-	.lighter{
-		font-family: $main-font;
-		margin:0;
-		color:rgba( $c-txt-light, .5 );	
+	.lighter{		
+		color:rgba( $c-textwhite, .5 );	
 	}
 	
-	h1{
-		line-height: 4.5rem;
-    	margin: 0.8rem 0 2rem;	
-	}
-	.highlight-txt{
-		font-family:$txt-fontserif;	
-	}
 }
 
 /*------- FLEX -----------*/
-.box-flex {
+.box {
   	display: flex;
   	flex-wrap: wrap;
   	justify-content: space-between;	
 }
-.box-flex.extend-flex{
+.box.box-flex{
 	@extend .list-reset;
 	justify-content: space-around;
 }
-.box--item{		   	
+.box__item{		   	
     text-align: center;
-	padding: 0 3rem $gutter-bottom;
-	margin-bottom: $gutter-bottom;
+	flex:1;
 }
-.box--item:last-child{		
-	margin-bottom: 0;
-}
-.box--full {
+
+.box__full {
   	display: block;
-  	flex: 100%;  	
-	margin-bottom: $gutter-bottom;  	
+  	flex: 100%;  	 	
 }
-.box--solo, .box--half{
-	@extend .box--full;
+.box__solo, .box__half{
+	@extend .box__full;
 	
 }
-.box--fixe {
+.box__fixe {
   	flex: auto;
   	display: flex;
   	align-items: center;
   	justify-content: center;  	
 	width:66px;
 }
-.head-flex .box--fixe,
-.trio-projects .box--fixe{
-		display:none;
+.head__flex .box__fixe,
+.trio-card .box__fixe{
+	display:none;
 }
 
-.box-logos{	
+.box__logos{	
 	@extend .list-reset;
 			
     flex-wrap: wrap;
 	justify-content: space-between;		
 			
-	li{
-		margin-bottom:$gutter-bottom;				
-		
-		/*&:nth-child(2){
-			display:none;	
-		}*/
+	li{	
 			
 		&:last-child{
 			align-self: center;
-    		flex: 1 1 100%;
-    		margin-bottom:0;
+    		flex: 1 1 100%;    		
     		text-align: center;		
 		}	
 	}		
 }
-
+.round__img{
+	display:block;
+	border-radius: 50%;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;	
+}
 
 @media screen and (max-width: $bp--small) {	
-	.box-logos{	
-			
-		li{
-			margin:0 auto $gutter-bottom;				
-		}	
-	}	
+	
 }
 @media screen and (min-width: $bp--small) {	
-  	.wrap-n{
-		padding: 0 5rem;	  
-  	}
-  	.box--full{
-	  	margin-bottom:0;	  
-  	}
-  	.box--solo{
+  	.box__solo{
 	  	flex: 1 1 84%;
 	  	max-width:84%;
   	}	
-  	.box--half {
+  	.box__half {
     	flex: 41.5%;		
     	max-width: 41.5%-$gutter/2;		
   	}
-  	.box--fixe {    	
+  	.box__fixe {    	
 		max-width:66px;     	
   	}
-  	.head-flex .box--fixe, .trio-projects .box--fixe{
+  	.head__flex .box__fixe, .trio-card .box__fixe{
 		display:flex;
 	}
 	.wrap-highlight{
-		.box--fixe	{
+		.box__fixe	{
 			align-items: flex-start;	
 		}
 	}
 	
-	.box-logos{			
+	.box__logos{			
 			
 		li{
 				
 			&:last-child{
 				align-self: center;
 				flex: inherit;
-				margin-bottom:$gutter-bottom;	
 			}
 			
 			
@@ -157,18 +128,15 @@
 	
 }
 @media screen and (min-width: $bp--medium) {
-	.wrap-n{
-		padding: 0 $gutter-wrap-side;	  
-  	}		
-	.box-logos{			
+		
+	.box__logos{			
 			
 		li{
 			margin:0;
 				
 			&:last-child{
 				align-self: center;
-				flex: inherit;
-				margin-bottom:0;	
+				flex: inherit;				
 			}
 			
 			&:nth-child(2){
@@ -178,7 +146,4 @@
 		}	
 	}	
 	
-	.box--item{		
-		margin-bottom: 0;
-	}
 }
