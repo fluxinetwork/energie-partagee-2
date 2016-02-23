@@ -5,23 +5,30 @@
 .footer{
 	background:$c-dark;
 	color:$c-textwhite;
-	padding-top:7rem;
-	padding-bottom:6rem;
+	
+	.s-title{
+		color:$c-textwhite;
+		margin-bottom: $space*0.3;
+		margin-top:$space/2;		
+	}
+	
 	.box{
 		.box__half{
-			 margin-bottom: 4rem;	
+			 margin-bottom: $gutter;	
 		}
 		.box{
 			.box__solo{
-				padding:0;
-				flex:auto;
-				max-width: 100%;
+				flex: 10 1 0;
+				margin-right: $gutter/2;
+				margin-bottom:0;
+				padding: 0;
+			}
+			.box__fixe{
+				flex: 1 1 0;
 			}
 		}
 	}
-	h2{
-		color:$c-textwhite;			
-	}
+	
 	.courtcircuit__input {
 		background: $c-dark;
 		border-bottom:1px solid #2a4a53;
@@ -32,47 +39,56 @@
 		padding: 0.4rem 1rem;
 		width: 100%;
 	}
-	.social{
-		margin:0;		
+	.social{		
+		text-align:center;		
 	}
 	.labels{
 		@extend .list-reset;
 		@extend %clearfix;
 		text-align:center;
 	}
-	.labels .labels--img{		
-		
+	.labels .labels__img{			
    		 width: 100%;
-		 a {
+		 margin-bottom:$gutter/2;
+		 
+		 .labels__label{
 			display: inline-block;
     		margin: 0 2rem 0 0;
     		vertical-align: middle;
+			
 			&:last-child{
 				margin-right:0;	
 			}
+			
 		}
 		 img{
 			 width:70px;
 		 }
-	}
-	.box__logos.box {
-		margin-bottom:4rem;
-	 }
+	}	
 }
-.nav-footer{
-	display: flex;
+.footer__nav{
+	 display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
-    margin-top: 9rem;
+    margin-top: $space;
     text-align: center;
     width: 100%;
+	
 	.link{
-		color:$c-textwhite;	
+		color:$c-textwhite;		
+		margin:0 auto $gutter/2;		
 	}
 }
 @media screen and (min-width: $bp--small) {
-	.footer{	
+	.footer{
+		.s-title{
+			text-align:left;			
+		}	
+			
 	  .box:first-child{
-		  margin-bottom:5rem;
+		  .s-title{
+			  margin-top:0;
+			}	
 		  .box__half{
 			  max-width:60%;
 		  }
@@ -80,45 +96,47 @@
 			  max-width:31%;
 		  }
 		  h2{
-			  margin-bottom: 2rem;
+			  margin-bottom:$gutter/2;
 		  }
 	  }
 	  .box .box .box__solo{
 			padding:0;
-			flex:1 1 78%;
-			max-width: 78%;
-			margin-bottom:0;		
+			flex:1 1 0;
+			margin-bottom:0;
+			margin-right:$gutter;		
 		}	    
 	  .box .box__half {
 			flex:50%;
-			max-width: 50%-$gutter/2;	
+			padding-right: 0;
 			margin-bottom:0;
+	  }	  
+	  .social{
+		  text-align:left;
+		  margin-top:$gutter;		  
 	  }
-	  .social{		
-			padding-top:1rem;		
-		}
 	  .labels {
 			display: block;
 			text-align: left;
 			
-			.labels--img{
+			.labels__img{
 				float: left;
 				width: 190px;
 				&:last-child{
-					margin-right:2rem;	
+					margin-right:$gutter/2;	
 				}
 			}
 		}
 	}
-	
+	.footer__nav {
+		flex-flow: row nowrap;		
+		.link{
+			margin:0 $gutter/2 0; 
+		}
+	}
 }
 @media screen and (min-width: $bp--medium) {	
-	 .footer {	 
-		 .box__logos.box {
-			  margin-bottom:6rem;
-		 }
-		 .nav-footer .link{
-			margin-right:2rem; 
-		 }
-	 }
+	.footer .s-title {		
+		margin-top:$gutter*1.5;
+	}
+
 }

@@ -11,9 +11,9 @@
     display: inline-block;
     font-family: $main-font;
     font-weight: bold;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem $gutter;
     text-transform: uppercase;
-	margin-top:6rem;
+	margin-top:$gutter*1.5;
 	position:relative;
 	z-index:5;
 	
@@ -57,18 +57,15 @@
 .button-round{
 	background: transparent none;    
     border-radius: 50%;
-    color: $c-textwhite;
-	cursor:pointer;
-    display:inline-block;   
+    color: $c-textwhite;	
+	cursor: pointer;
+    display: inline-block;
+    font-size: 6.6rem;
     height: 6.6rem;
+    line-height: 1;
+    padding: 0;
     text-align: center;
     width: 6.6rem;
-	padding:0;	
-	
-	i:before{
-		display:inline-block;
-		font-size: 6.6rem;		
-	}
 }
 .button-round.grey{
 	color:$c-light;
@@ -76,8 +73,8 @@
 }
 
 .social {
-	padding:0;	
-	margin: 1.2rem 0 0;
+	padding:0;
+	margin:0;	
 	font-size: 2.2rem;	
 		
 	li {
@@ -147,7 +144,7 @@
 @media screen and (min-width: $bp--small) {	
 	.holder-button{
 		margin-top:3rem; 	
-	}
+	}	
 }
 @media screen and (min-width: $bp--medium) {	
 	.button-round{

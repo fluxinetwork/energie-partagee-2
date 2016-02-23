@@ -1,4 +1,5 @@
 /* BREAKPOINTS */
+$bp--mobile: 300px;
 $bp--small: 600px;
 $bp--medium: 800px;
 $bp--large: 1000px;
@@ -32,7 +33,7 @@ $c-eco: #b7115b;
 /* Layout */
 $space: 10rem;
 
-$gutter: 5%;
+$gutter: $space*0.4;
 $gutter-thin: 2rem;
 
 /* Nav */
@@ -49,35 +50,41 @@ $txt-fontserif:"Georgia",serif;
 
 /* Typos sizes */
 $h1-font-sizes: (
-	small : 2rem,
-	medium: 3rem,
-	large: 4rem,
+	null : (3rem,1.2),	
+	medium: 3.5rem,
+	large: 4rem
 );
 
 $h2-font-sizes: (
+	null : (1.6rem,1.65),
 	large: 1.8rem
 );
 
 $h3-font-sizes: (
+	null : (2rem,1.45),
 	large: 2.2rem
 );
 
 $h4-font-sizes: (
+	null : (1.6rem,1.23),
 	large: 1.8rem
 );
 
 $h5-font-sizes: (
+	null : (1.4rem,1),
 	large: 1.6rem
 );
 
 $h6-font-sizes: (
+	null : (1.4rem,1.25),
 	large: 1.6rem
 );
 
 $p-font-sizes: (
-	large: 1.6rem
+	null : (1.6rem,1.56)	
 );
 
 $blockquote-font-sizes: (
+	null : (2rem,1.46),
 	large: 2.2rem
 );

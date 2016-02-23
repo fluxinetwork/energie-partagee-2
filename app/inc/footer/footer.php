@@ -11,47 +11,45 @@ if ( function_exists('is_mobile') ) {
 }
 ?>
 
-<footer class="footer">
+<footer class="footer section">
     <div class="wrap-n">
     	<div class="box">
             <div class="box__half">
-                <h5>Nous suivre</h5>
+                <h5 class="s-title">Nous suivre</h5>
                 <ul class="social">
-                    <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
+                   <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
                    <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
                    <li><a href="#" class="social--yout"><i class="icon-youtube"></i></a></li>
                 </ul>    
             </div>
             <form class="box__half" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
-                <h5>Abonnement newsletter</h5>
+                <h5 class="s-title">Abonnement newsletter</h5>
                 <div class="box"> 
-                <div class="box__solo"><input class="courtcircuit__input" name="YMP0" id="newsletter_footer" type="email" value="" placeholder="Votre email" required aria-required="true"></div>
-                <div class="box__fixe">
-                <button type="submit" class="button-round"><i class="icon-round-check"></i></button>
-                </div>
+                    <div class="box__solo"><input class="courtcircuit__input" name="YMP0" id="newsletter_footer" type="email" value="" placeholder="Votre email" required aria-required="true"></div>
+                    <div class="box__fixe"><button type="submit" class="button-round"><i class="icon-round-check"></i></button></div>
                 </div>
             </form>            
         </div>
         
-        <h5>Nos partenaires</h5>
-        <ul class="box__logos box">
-            <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
-            <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
-            <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
-            <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
-            <li><a class="button-round" href="#"><i class="icon-round-plus"></i></a></li> 
+        <h5 class="s-title">Nos partenaires</h5>
+        <ul class="box-logos box">
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
+            <li class="box-logos__btn"><a class="button-round" href="#"><i class="icon-round-plus"></i></a></li> 
         </ul>
         
-        <h5>Nos labels</h5>
+        <h5 class="s-title">Nos labels</h5>
         <ul class="labels box">
-            <li class="labels--img">
-            	<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-1.png"></a>
-              <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-2.png"></a>
+            <li class="labels__img">
+            	<a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-1.png"></a>
+              <a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-2.png"></a>
             </li>
-            <li class="labels--txt"><p class="p-ss">Energie Partagée a recu les labels Finansol et Agrément “entreprise solidaire” pour son activité engagée bla bla bla et bla bla bla.</p></li>
+            <li class="labels__txt"><p class="p-ss">Energie Partagée a recu les labels Finansol et Agrément “entreprise solidaire” pour son activité engagée bla bla bla et bla bla bla.</p></li>
         </ul>
         
-        <nav class="nav-footer">
+        <nav class="footer__nav">
         	<a class="link" href="#">Contact</a>
            <a class="link" href="#">Mentions légales </a>
            <a class="link" href="#">Crédits</a>

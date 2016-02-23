@@ -4,24 +4,29 @@
     #WRAPS
 
 \*------------------------------*/
-/*Wrap small*/
-.wrap-s {
-	margin:0 auto;
-	max-width:690px;	
+.section{
+	padding-top:$gutter*2;
+	padding-bottom:$gutter*2;		
 }
 /*Wrap normal*/
 .wrap-n {
 	margin:0 auto;
-	max-width:830px;	
+	max-width:$space*8.3;
+	padding-left:$gutter;
+	padding-right:$gutter;	
 }
 /*Wrap large*/
 .wrap-l {
 	margin:0 auto;
-	max-width:978px;	
+	max-width:$space*11;
+	padding-left:$gutter;
+	padding-right:$gutter;	
 }
 /*Wrap orange*/
-.wrap-highlight{
-	background:$c-focus;
+.wrap-bg{
+	background:$c-bglight;
+	padding-top:$space/2;
+	padding-bottom:$space/2;		
 	color:$c-textwhite;
 	width:100%;
 	
@@ -30,7 +35,9 @@
 	}
 	
 }
-
+.wrap-bg.highlight{
+	background:$c-focus;
+}
 /*------- FLEX -----------*/
 .box {
   	display: flex;
@@ -44,11 +51,17 @@
 .box__item{		   	
     text-align: center;
 	flex:1;
+	margin-bottom:$gutter;
+	padding:0 $space*0.3;
+	
+	&:last-child{
+		margin-bottom:0;	
+	}
 }
-
 .box__full {
   	display: block;
-  	flex: 100%;  	 	
+  	flex: 100%;
+	margin-bottom:$gutter;  	 	
 }
 .box__solo, .box__half{
 	@extend .box__full;
@@ -66,40 +79,21 @@
 	display:none;
 }
 
-.box__logos{	
-	@extend .list-reset;
-			
-    flex-wrap: wrap;
-	justify-content: space-between;		
-			
-	li{	
-			
-		&:last-child{
-			align-self: center;
-    		flex: 1 1 100%;    		
-    		text-align: center;		
-		}	
-	}		
-}
-.round__img{
-	display:block;
-	border-radius: 50%;
-	margin: 0 auto;
-	overflow: hidden;
-	text-align: center;	
-}
 
-@media screen and (max-width: $bp--small) {	
-	
-}
+
+
 @media screen and (min-width: $bp--small) {	
+	.section{
+		padding-top:$space;
+		padding-bottom:$space;		
+	}
   	.box__solo{
 	  	flex: 1 1 84%;
 	  	max-width:84%;
   	}	
   	.box__half {
-    	flex: 41.5%;		
-    	max-width: 41.5%-$gutter/2;		
+    	flex: 1 1 0;		
+    	padding-right: $gutter;
   	}
   	.box__fixe {    	
 		max-width:66px;     	
@@ -107,43 +101,27 @@
   	.head__flex .box__fixe, .trio-card .box__fixe{
 		display:flex;
 	}
-	.wrap-highlight{
+	.wrap-bg.highlight{
 		.box__fixe	{
 			align-items: flex-start;	
 		}
-	}
-	
-	.box__logos{			
-			
-		li{
-				
-			&:last-child{
-				align-self: center;
-				flex: inherit;
-			}
-			
-			
-		}	
+		.box__solo{
+			margin-bottom:0;			
+		}
 	}	
-	
 }
 @media screen and (min-width: $bp--medium) {
-		
-	.box__logos{			
-			
-		li{
-			margin:0;
-				
-			&:last-child{
-				align-self: center;
-				flex: inherit;				
-			}
-			
-			&:nth-child(2){
-				display:block;	
-			}
-			
-		}	
-	}	
+	.wrap-n {
+		padding-left:$gutter*2;
+		padding-right:$gutter*2;	
+	}
+	/*Wrap large*/
+	.wrap-l {
+		padding-left:$gutter*2;
+		padding-right:$gutter*2;	
+	}
 	
+	.box__item{		   	
+		margin-bottom:0;
+	}
 }

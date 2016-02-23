@@ -45,6 +45,10 @@
   text-align: center;
 }
 
+.img-reponsive {
+  width: 100%;
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
@@ -58,19 +62,23 @@
 .footer {
   background: #122c33;
   color: #fff;
-  padding-top: 7rem;
-  padding-bottom: 6rem;
+}
+.footer .s-title {
+  color: #fff;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
 }
 .footer .box .box__half {
   margin-bottom: 4rem;
 }
 .footer .box .box .box__solo {
+  flex: 10 1 0;
+  margin-right: 2rem;
+  margin-bottom: 0;
   padding: 0;
-  flex: auto;
-  max-width: 100%;
 }
-.footer h2 {
-  color: #fff;
+.footer .box .box .box__fixe {
+  flex: 1 1 0;
 }
 .footer .courtcircuit__input {
   background: #122c33;
@@ -83,43 +91,46 @@
   width: 100%;
 }
 .footer .social {
-  margin: 0;
+  text-align: center;
 }
 .footer .labels {
   text-align: center;
 }
-.footer .labels .labels--img {
+.footer .labels .labels__img {
   width: 100%;
+  margin-bottom: 2rem;
 }
-.footer .labels .labels--img a {
+.footer .labels .labels__img .labels__label {
   display: inline-block;
   margin: 0 2rem 0 0;
   vertical-align: middle;
 }
-.footer .labels .labels--img a:last-child {
+.footer .labels .labels__img .labels__label:last-child {
   margin-right: 0;
 }
-.footer .labels .labels--img img {
+.footer .labels .labels__img img {
   width: 70px;
 }
-.footer .box__logos.box {
-  margin-bottom: 4rem;
-}
 
-.nav-footer {
+.footer__nav {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
-  margin-top: 9rem;
+  margin-top: 10rem;
   text-align: center;
   width: 100%;
 }
-.nav-footer .link {
+.footer__nav .link {
   color: #fff;
+  margin: 0 auto 2rem;
 }
 
 @media screen and (min-width: 600px) {
-  .footer .box:first-child {
-    margin-bottom: 5rem;
+  .footer .s-title {
+    text-align: left;
+  }
+  .footer .box:first-child .s-title {
+    margin-top: 0;
   }
   .footer .box:first-child .box__half {
     max-width: 60%;
@@ -132,35 +143,40 @@
   }
   .footer .box .box .box__solo {
     padding: 0;
-    flex: 1 1 78%;
-    max-width: 78%;
+    flex: 1 1 0;
     margin-bottom: 0;
+    margin-right: 4rem;
   }
   .footer .box .box__half {
     flex: 50%;
-    max-width: 47.5%;
+    padding-right: 0;
     margin-bottom: 0;
   }
   .footer .social {
-    padding-top: 1rem;
+    text-align: left;
+    margin-top: 4rem;
   }
   .footer .labels {
     display: block;
     text-align: left;
   }
-  .footer .labels .labels--img {
+  .footer .labels .labels__img {
     float: left;
     width: 190px;
   }
-  .footer .labels .labels--img:last-child {
+  .footer .labels .labels__img:last-child {
     margin-right: 2rem;
+  }
+
+  .footer__nav {
+    flex-flow: row nowrap;
+  }
+  .footer__nav .link {
+    margin: 0 2rem 0;
   }
 }
 @media screen and (min-width: 800px) {
-  .footer .box__logos.box {
-    margin-bottom: 6rem;
-  }
-  .footer .nav-footer .link {
-    margin-right: 2rem;
+  .footer .s-title {
+    margin-top: 6rem;
   }
 }

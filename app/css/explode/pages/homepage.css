@@ -45,6 +45,10 @@
   text-align: center;
 }
 
+.img-reponsive {
+  width: 100%;
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
@@ -57,19 +61,27 @@
     #HOMEPAGE
 
 \*------------------------------*/
+.s-title {
+  text-align: center;
+}
+
 .header-bloc {
-  background: url("/wp-content/themes/energie-partagee-2/app/img/proto/bg-header.jpg") no-repeat;
+  background: url("../img/bg-header.jpg") no-repeat;
   background-size: cover;
-  min-height: 576px;
-  padding: 13rem 0 10rem 0;
   text-align: center;
   color: #fff;
+  padding-top: 11rem;
 }
-.header-bloc .key-nums {
+.header-bloc .h1 {
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+
+.key-nums {
   margin: 0;
   padding: 0;
 }
-.header-bloc .key-nums .key-nums__item {
+.key-nums .key-nums__item {
   list-style-type: none;
   text-align: center;
   display: inline-block;
@@ -77,113 +89,41 @@
   padding: 0 2.5rem;
   margin-bottom: 2rem;
 }
-.header-bloc .key-nums .key-nums__item:last-child {
+.key-nums .key-nums__item:last-child {
   margin-bottom: 0;
 }
-.header-bloc .key-nums .key-nums__item .key-nums__item__num {
+.key-nums .key-nums__item .key-nums__item__num {
   font-size: 5rem;
   display: block;
-  font-family: "avantgarde", Arial;
+  font-weight: bold;
+  line-height: 1;
 }
 
-.steps-intro .p {
+.steps-intro .box__item__img {
+  width: 200px;
+  margin: 0 auto 2.22222rem;
+}
+.steps-intro .box__item__img img {
+  margin: 0 auto;
+}
+.steps-intro .p-ss {
   max-width: 230px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
   color: #777777;
 }
-.steps-intro .round__img {
-  width: 200px;
-}
 
-.trio-card {
-  background: #f2f2f2;
-  padding: 10rem 0 9rem;
+@media screen and (max-width: 800px) {
+  .home .courtcircuit {
+    padding-bottom: 0;
+  }
 }
-.trio-card .box__half {
-  display: block;
-  width: 100%;
-  margin-bottom: 3rem;
-}
-.trio-card .box__fixe {
-  display: none;
-}
-.trio-card .button {
-  margin-top: 0;
-}
-
-.duo-card {
-  padding: 10rem 0 0;
-}
-.duo-card .head__flex .box__half {
-  flex: 0 1 auto;
-  margin-bottom: 5rem;
-  text-align: right;
-}
-.duo-card .head__flex .lighter {
-  color: #b3b3b3;
-  text-align: right;
-  display: none;
-  padding-right: 1rem;
-}
-.duo-card .head__flex .social {
-  display: inline-block;
-  margin: 0;
-}
-
-.img-reponsive {
-  width: 100%;
-}
-
 @media screen and (min-width: 600px) {
-  .header-bloc {
-    padding: 20rem 0 10rem 0;
-  }
-
-  .trio-card .box__half {
-    flex: 50%;
-    max-width: 47.5%;
-  }
-
-  .duo-card .head__flex .box__half {
-    flex: 41.5%;
-    max-width: 39%;
+  .key-nums .key-nums__item {
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 800px) {
-  .header-bloc .key-nums__item__num {
-    margin-bottom: 0;
-  }
-
-  .trio-card .box__half {
-    flex: 41.5%;
-    max-width: 39%;
-    margin-bottom: 0;
-  }
-  .trio-card .box__full {
-    margin-bottom: 4rem;
-  }
-  .trio-card .box__full .card__img i {
-    bottom: 12.5rem;
-  }
-  .trio-card .box__full .card__infos {
-    background: #5ab1bb;
-    bottom: 3rem;
-    display: inline-block;
-    position: absolute;
-  }
-  .trio-card .box__fixe {
-    display: flex;
-  }
-  .trio-card .button {
-    margin-top: 4rem;
-  }
-
-  .duo-card .head__flex .lighter {
-    display: inline-block;
-  }
-  .duo-card .head__flex .box__half {
-    flex: 41.5%;
-    max-width: 39%;
+  .header-bloc {
+    padding-top: 15rem;
   }
 }

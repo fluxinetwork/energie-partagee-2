@@ -1,0 +1,148 @@
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* TRANSITIONS */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/*------------------------------*\
+
+    # LAYOUTS
+	# Modules de mise en page
+	
+\*------------------------------*/
+.round__img {
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.duo-card .head__flex .s-title {
+  margin-bottom: 0;
+  margin-top: 0.6rem;
+}
+.duo-card .head__flex .box__half {
+  flex: 0 1 auto;
+  text-align: right;
+}
+.duo-card .head__flex .lighter {
+  color: #b3b3b3;
+  text-align: right;
+  display: none;
+  padding-right: 1rem;
+}
+.duo-card .head__flex .social {
+  display: inline-block;
+  margin: 0;
+}
+
+.trio-card {
+  background: #f2f2f2;
+}
+.trio-card .box__half {
+  display: block;
+  width: 100%;
+}
+.trio-card .box__fixe {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .duo-card .box__half {
+    margin-bottom: 0;
+  }
+
+  .duo-card .head__flex .s-title {
+    text-align: left;
+    margin-bottom: 6rem;
+  }
+  .duo-card .head__flex .box__half {
+    flex: 1;
+  }
+
+  .trio-card .box__half:nth-child(3) {
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  .trio-card .box__half {
+    flex: 41.5%;
+    padding-right: 4rem;
+    margin-bottom: 0;
+  }
+  .trio-card .box__half:nth-child(3) {
+    padding-right: 4rem;
+  }
+  .trio-card .box__full {
+    margin-bottom: 4rem;
+  }
+  .trio-card .box__full .card__img i {
+    bottom: 12.5rem;
+  }
+  .trio-card .box__full .card__infos {
+    background: #5ab1bb;
+    bottom: 3rem;
+    display: inline-block;
+    position: absolute;
+  }
+  .trio-card .box__fixe {
+    display: flex;
+  }
+
+  .duo-card .head__flex .lighter {
+    display: inline-block;
+  }
+}

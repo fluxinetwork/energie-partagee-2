@@ -3,9 +3,9 @@
   <form class="wrap-n" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
     <div class="box">
       <div class="box__half">
-        <h4>Abonnez-vous a Court-Circuit, la newsletter d’Energie Partagée.</h4>
+        <h6 class="courtcircuit__text">Abonnez-vous a Court-Circuit, la newsletter d’Energie Partagée.</h6>
       </div>
-      <div class="box__half">
+      <div class="box__half input__fixe">
         <input class="courtcircuit__input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email" required aria-required="true">
       </div>
       <div class="box__fixe">
