@@ -1,4 +1,5 @@
 @import "../utils/_all.scss";
+@import "../components/lib/c-buttons.scss";
 
 /*------------------------------*\
 
@@ -6,44 +7,7 @@
 
 \*------------------------------*/
 .button{	
-    color: $c-main;
-	cursor:pointer;
-    display: inline-block;
-    font-family: $main-font;
-    font-weight: bold;
-    padding: 1.5rem $gutter;
-    text-transform: uppercase;
-	margin-top:$gutter*1.5;
-	position:relative;
-	z-index:5;
-	
-	&:before{
-		background: #000 none;		
-		border-radius: $radius;
-		content: "";
-		height: 100%;
-		left: 0;
-		margin: 0 auto;
-		opacity: 0.1;
-		position: absolute;
-		right: 0;
-		top: 4px;
-		width: 94%;
-		z-index: -1;
-	}
-	
-	&:after{
-		background: $c-textwhite none;	
-		border-radius: $radius;
-		content: "";		
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: -1;
-	}
-		
+	@extend %button;	
 }
 
 .button.green{	
@@ -69,7 +33,6 @@
 }
 .button-round.grey{
 	color:$c-light;
-	border-color:$c-light;
 }
 
 .social {
@@ -115,31 +78,36 @@
 
 
 .link {
-  @extend %transition;
-  position: relative;
-  font-family: $main-font;
-  font-size: 1.4rem;
-  color: $c-main;
-  text-decoration: none;
-  text-transform: uppercase;
-  
-  &::after {
-    @extend %transition;
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0%;
-    height: 1px;
-    background: $c-main;
-  }
-  
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
+  @extend %link;
 }
+
+.breadcrumb{
+	@extend %list-reset;
+	display: flex;
+    justify-content: center;
+	
+	li{
+		margin:0 $space*0.1 $space*0.3 0;
+		
+		&:last-child{
+			margin-right:0;	
+		}
+	}
+		
+}
+.minicard{
+	@extend %button;	
+}
+/* EDIT LINK FOR ADMINS */
+.edit{	
+	background: #fff none;
+    padding: $space*0.1 $gutter/2;
+    position: absolute;
+    right: 0;
+    top: 20%;
+	border-radius:$radius 0 0 $radius;
+}
+
 
 @media screen and (min-width: $bp--small) {	
 	.holder-button{

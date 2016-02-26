@@ -7,9 +7,9 @@
 	
 			
 	if($align_image == 'img_gauche'):					
-		echo '<div class="float-left">';
+		echo '<div class="img__left">';
 	else:
-		echo '<div class="float-right">';
+		echo '<div class="img__right">';
 	endif;		
 	
 		echo '<img class="'.$taille_img.'" src="'.$image_txt['sizes']['large'].'" alt="'.$image_txt['alt'].'" />'.$txt_txt;

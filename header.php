@@ -14,7 +14,9 @@
 
 <?php include( TEMPLATEPATH.'/app/inc/header/bodyclass.php' ); ?>
 <body <?php body_class($bodyclass); ?> >
-
+	
+    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/edit-link.php' ); ?>
+    
 	<div class="top-display">
     	<p class="p-ss">Pour aller sur le site de souscription, <a href="#">cliquez ici</a></p>
     </div>
@@ -25,4 +27,4 @@
 			<?php include( TEMPLATEPATH.'/app/inc/header/nav.php' ); ?>
 		</header>
         
-		<div class="wrap-content">
+		

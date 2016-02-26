@@ -14,7 +14,7 @@
 	
 	.box{
 		.box__half{
-			 margin-bottom: $gutter;	
+			 margin-bottom: $space*0.4;	
 		}
 		.box{
 			.box__solo{
@@ -46,24 +46,32 @@
 		@extend .list-reset;
 		@extend %clearfix;
 		text-align:center;
-	}
-	.labels .labels__img{			
-   		 width: 100%;
-		 margin-bottom:$gutter/2;
-		 
-		 .labels__label{
-			display: inline-block;
-    		margin: 0 2rem 0 0;
-    		vertical-align: middle;
-			
-			&:last-child{
-				margin-right:0;	
+	
+		.labels__img{			
+			 width: 100%;
+			 margin-bottom:$space*0.2;
+			 
+			 .labels__label{
+				display: inline-block;
+				margin: 0 $gutter/2 0 0;
+				vertical-align: middle;
+				
+				&:last-child{
+					margin-right:0;	
+				}
+				
 			}
-			
+			 img{
+				 width:70px;
+			 }
 		}
-		 img{
-			 width:70px;
-		 }
+		.labels__txt {			
+			.p-ss{
+				max-width:600px;
+				margin-bottom:0;
+				color:$c-textwhite;
+			}
+		}
 	}	
 }
 .footer__nav{
@@ -76,7 +84,7 @@
 	
 	.link{
 		color:$c-textwhite;		
-		margin:0 auto $gutter/2;		
+		margin:0 auto $space*0.2;		
 	}
 }
 @media screen and (min-width: $bp--small) {
@@ -96,7 +104,7 @@
 			  max-width:31%;
 		  }
 		  h2{
-			  margin-bottom:$gutter/2;
+			  margin-bottom:$space*0.2;
 		  }
 	  }
 	  .box .box .box__solo{
@@ -112,7 +120,7 @@
 	  }	  
 	  .social{
 		  text-align:left;
-		  margin-top:$gutter;		  
+		  margin-top:$space*0.4;		  
 	  }
 	  .labels {
 			display: block;
@@ -136,7 +144,7 @@
 }
 @media screen and (min-width: $bp--medium) {	
 	.footer .s-title {		
-		margin-top:$gutter*1.5;
+		margin-top:$space*0.6;
 	}
 
 }

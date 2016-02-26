@@ -23,6 +23,18 @@
     font-weight: bold;
     font-style: normal;
 }
+/*Lightgallery*/
+@font-face {
+  font-family: 'lg';
+  src: url("../../../fonts/lightgalerie/lg.eot?n1z373");
+  src: url("../../../fonts/lightgalerie/lg.eot?#iefixn1z373") format("embedded-opentype"),
+  	url("../../../fonts/lightgalerie/lg.woff?n1z373") format("woff"),
+  	url("../../../fonts/lightgalerie/lg.ttf?n1z373") format("truetype"),
+  	url("../../../fonts/lightgalerie/lg.svg?n1z373#lg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Icon font */
 
 @font-face {
@@ -251,7 +263,9 @@ h1,h2,h3,h4,h5,h6,
 }
 
 h1,.h1{	
-	@include font-size($h1-font-sizes);
+	@include font-size($h1-font-sizes);	
+}
+.h1{	
 	margin-bottom:$gutter/2;	
 }
 
@@ -259,20 +273,48 @@ h2,.h2{
 	@include font-size($h2-font-sizes);   
 	color:$c-dark;	
 }
-
-h3,.h3{ 
-    @include font-size($h3-font-sizes); 
+.h2{	
+	@extend .description;
+	margin-bottom:$space*0.3;	
+	margin-top:$space/2;
 }
-
+.description{
+	color:$c-textlight;
+	font-weight:normal;
+	margin-bottom:$space*0.2;	
+}
+h3,.h3{ 
+    @include font-size($h3-font-sizes);
+	text-transform:uppercase;
+	color:$c-dark;	 
+}
+.h3{ 
+   margin-bottom:	$space*0.3;	
+   margin-top:	$space*0.6;
+}
 h4,.h4,.card__title{ 
-    @include font-size($h4-font-sizes); 
+    @include font-size($h4-font-sizes);	
+}
+.h4{
+	color:$c-dark;	 
+	font-weight:normal;
+	margin-bottom:	$space*0.3;
+	margin-top:$space/2;
 }
 
 h5,.h5,.s-title{ 
     @include font-size($h5-font-sizes);
 	color:$c-dark;
 	text-transform:uppercase;
-	margin-bottom:$gutter*1.5; 
+	margin-bottom:$space*0.6;
+	color:$c-dark;	 
+}
+.h5{
+	margin-bottom:$space*0.2;
+	margin-top: $space*0.4;
+}
+.s-title{ 
+	margin-bottom:$space*0.6; 
 }
 
 h6,.h6{ 
@@ -284,8 +326,8 @@ h6,.h6{
 p,.p,.p-ss{
 	@include font-size($p-font-sizes); 
 	font-family: $txt-fontserif;
+	color:$c-text;
 }
-
 .p-ss{
-    font-family: $txt-font;
+    font-family: $txt-font;	
 }

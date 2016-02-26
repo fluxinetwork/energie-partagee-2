@@ -111,6 +111,11 @@
 .footer .labels .labels__img img {
   width: 70px;
 }
+.footer .labels .labels__txt .p-ss {
+  max-width: 600px;
+  margin-bottom: 0;
+  color: #fff;
+}
 
 .footer__nav {
   display: flex;
@@ -175,7 +180,7 @@
     margin: 0 2rem 0;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 830px) {
   .footer .s-title {
     margin-top: 6rem;
   }

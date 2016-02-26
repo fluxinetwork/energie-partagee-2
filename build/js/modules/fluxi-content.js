@@ -41,9 +41,9 @@
 		}); 
 	}
 	// -- Accordéons
-	if($('.accord').length){
-		$('.accord .head-accord').click( function(e) {  			
-			$(this).parent().find('.content-accord').slideToggle();		
+	if($('.accordion').length){
+		$('.accordion .accordion__head').click( function(e) { 		 	
+			$(this).parent().toggleClass('open').find('.accordion__content').slideToggle();		
 		});
 	}
 	if($('.lightbox').length){

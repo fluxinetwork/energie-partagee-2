@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar, .navbar::before, .navbar__id,
+.no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .navbar, .navbar::before, .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id, .logo__img,
 .navbar__id.is-compact .logo__img,
@@ -62,11 +62,28 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/*------------------------------*\
+.no-pp .nav__dropdown .dropdown__item a, .js-toggle {
+  position: relative;
+  font-family: "avantgarde", Arial;
+  font-size: 1.4rem;
+  color: #65aa04;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #65aa04;
+}
+.no-pp .nav__dropdown .dropdown__item a:hover::after, .js-toggle:hover::after {
+  width: 100%;
+}
 
-    # HELPERS
-
-\*------------------------------*/
+/* Nav helpers */
 .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
 .no-touch nav:hover + .navbar__id .navbar__id__social, .nav__primary, .nav__secondary, .no-pp .nav__dropdown, .pp, .pp .nav__dropdown, .navbar__buttons {
@@ -101,27 +118,6 @@
 .hamburger, .nav__search__submit, .nav__search__close {
   background-color: transparent;
   border: 2px solid #fff;
-}
-
-.no-pp .nav__dropdown .dropdown__item a, .js-toggle {
-  position: relative;
-  font-family: "avantgarde", Arial;
-  font-size: 1.2rem;
-  color: #65aa04;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background: #65aa04;
-}
-.no-pp .nav__dropdown .dropdown__item a:hover::after, .js-toggle:hover::after {
-  width: 100%;
 }
 
 /*------------------------------*\

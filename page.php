@@ -1,25 +1,38 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-		<div class="breadcrumb">
-			<?php //include (TEMPLATEPATH."/assets/inc/breadcrumb.php"); ?>
-		</div>	
-        
-        <?php
+<section class="wrap-main">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <header class="header-bloc">
+    <div class="breadcrumb">
+      <?php custom_breadcrumbs(); ?>
+    </div>
+    <h1 class="h1">
+      <?php the_title(); ?>
+    </h1>
+  </header>
+  
+    <?php
            /////////////////////////////////////
 		   /////       FLUXI CONTENT       /////
 		   /////////////////////////////////////
 		   
 		   if( have_rows('elements_page') ):
-				echo '<div class="fluxi-content fitvids">';
+				echo '<article class="fluxi-content fitvids wrap-n">';
+				
+					if(is_page() || is_single()){
+						if( get_field('google_description') ):
+							
+							echo '<h2 class="description">'.get_field('google_description').'</h2>';
+							get_socials();
+						endif;
+					}
+				
 					require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
-		   		echo '</div>';
+		   		echo '</article>';
 			endif; 
 		   
 		?>
-		
-<?php endwhile; endif; ?>
-
+  
+  <?php endwhile; endif; ?>
+</section>
 <?php get_footer(); ?>
-

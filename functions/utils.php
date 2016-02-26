@@ -96,3 +96,58 @@ function get_sanitize_string($string)
 
   return $string;
 }
+
+/**
+ * Breadcrumb
+ */
+function custom_breadcrumbs() {
+	
+	if (is_page() && !is_front_page() || is_single() || is_category()) {
+		echo '<ul class="breadcrumb">';
+		echo '<li class="breadcrumb__first"><a class="tag" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
+	
+		if (is_page()) {
+			$ancestors = get_post_ancestors($post);
+		
+			if ($ancestors) {
+				$ancestors = array_reverse($ancestors);
+			
+				foreach ($ancestors as $crumb) {
+					echo '<li><a class="tag" href="'.get_permalink($crumb).'">'.get_the_title($crumb).'</a></li>';
+				}
+			}
+		}
+	
+		if (is_single()) {
+			$category = get_the_category();
+			echo '<li><a class="tag" href="'.get_category_link($category[0]->cat_ID).'">'.$category[0]->cat_name.'</a></li>';
+		}
+	
+		if (is_category()) {
+			$category = get_the_category();
+			echo '<li class="tag">'.$category[0]->cat_name.'</li>';
+		}
+	
+		// Page courante
+		if (is_page() || is_single()) {
+			echo '<li class="tag">'.get_the_title().'</li>';
+		}
+			echo '</ul>';
+		} elseif (is_front_page()) {
+		// Page d'accueil
+		echo '<ul>';
+		echo '<li><a class="tag" title="Accueil" rel="nofollow" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
+		echo '</ul>';
+	}
+       
+}
+/*Socials*/
+function get_socials(){
+	if (is_page()):
+		echo'<ul class="social">
+				  <li><i class="icon-round-next-arrow"></i></li>
+                <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
+                <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
+            </ul>';
+	endif;
+} 

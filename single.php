@@ -1,12 +1,17 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-		<div class="breadcrumb">
-			<?php //include (TEMPLATEPATH."/assets/inc/breadcrumb.php"); ?>
-		</div>	
-        
-        <?php
+<section>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <header class="header-bloc">
+    <div class="breadcrumb">
+      <?php custom_breadcrumbs(); ?>
+    </div>
+    <h1 class="h1">
+      <?php the_title(); ?>
+    </h1>
+  </header>
+  <article>
+    <?php
            /////////////////////////////////////
 		   /////       FLUXI CONTENT       /////
 		   /////////////////////////////////////
@@ -18,8 +23,7 @@
 			endif; 
 		   
 		?>
-		
-<?php endwhile; endif; ?>
-
+  </article>
+  <?php endwhile; endif; ?>
+</section>
 <?php get_footer(); ?>
-

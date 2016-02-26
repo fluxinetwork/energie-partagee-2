@@ -70,11 +70,10 @@
   background-size: cover;
   text-align: center;
   color: #fff;
-  padding-top: 11rem;
+  padding-top: 10rem;
 }
 .header-bloc .h1 {
   margin-bottom: 5rem;
-  margin-top: 1rem;
 }
 
 .key-nums {
@@ -101,7 +100,7 @@
 
 .steps-intro .box__item__img {
   width: 200px;
-  margin: 0 auto 2.22222rem;
+  margin: 0 auto 3rem;
 }
 .steps-intro .box__item__img img {
   margin: 0 auto;
@@ -112,7 +111,7 @@
   color: #777777;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   .home .courtcircuit {
     padding-bottom: 0;
   }
@@ -121,9 +120,8 @@
   .key-nums .key-nums__item {
     margin-bottom: 0;
   }
-}
-@media screen and (min-width: 800px) {
+
   .header-bloc {
-    padding-top: 15rem;
+    padding-top: 16rem;
   }
 }

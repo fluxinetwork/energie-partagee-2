@@ -5,3 +5,4 @@ require_once locate_template('/functions/cleanup.php');
 require_once locate_template('/functions/menus.php');
 require_once locate_template('/functions/images.php');
 require_once locate_template('/functions/share.php');
+require_once locate_template('/functions/utils.php');

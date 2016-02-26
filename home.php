@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<section class="section header-bloc">
-    	<div class="wrap-l">
+    	<article class="wrap-l">
             <h1 class="h1">Investissons les énergies renouvelables</h1>
             <ul class="key-nums">
               <li class="key-nums__item"><span class="key-nums__item__num">5000</span> actionnaires<br>citoyens</li>
@@ -9,13 +9,13 @@
               <li class="key-nums__item"><span class="key-nums__item__num">+10</span> millions d’euros<br>collectés</li>      
             </ul>
             <a href="#" class="button">Comprendre notre action</a>
-        </div>
+        </article>
 	</section>
     
     <section class="wrap-bg highlight">
     	<article class="wrap-n">
             <h6 class="lighter">Actualité importante</h6>
-            <h1>Levée de fonds historique</h1>
+            <h1 class="h1">Levée de fonds historique</h1>
             <div class="box">
             	<div class="box__solo">
                 <p class="highlight-txt">Au milieu de la forêt de Raon-L’Etape (88) coule la Meurthe, qui jadis était utilisée pour produire de l’électricité. Démantelée il y a quinze ans, la petite centrale hydraulique reprend vie aujourd’hui après plusieurs mois de travaux et la mobilisation des souscripteurs Énergie Partagée. Retour en photo sur cette réhabilitation.</p>

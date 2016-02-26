@@ -5,33 +5,43 @@
 
 \*------------------------------*/
 .section{
-	padding-top:$gutter*2;
-	padding-bottom:$gutter*2;		
+	padding-top:$space*0.8;
+	padding-bottom:$space*0.8;		
+}
+.wrap-main{
+	overflow:hidden;
+}
+%wrap-space,.wrap-space{
+	padding-top:$space/2;
+	padding-bottom:$space/2;
 }
 /*Wrap normal*/
 .wrap-n {
 	margin:0 auto;
 	max-width:$space*8.3;
-	padding-left:$gutter;
-	padding-right:$gutter;	
+	padding-left:$gutter/2;
+	padding-right:$gutter/2;	
 }
 /*Wrap large*/
 .wrap-l {
 	margin:0 auto;
 	max-width:$space*11;
-	padding-left:$gutter;
-	padding-right:$gutter;	
+	padding-left:$gutter/2;
+	padding-right:$gutter/2;	
 }
 /*Wrap orange*/
 .wrap-bg{
-	background:$c-bglight;
-	padding-top:$space/2;
-	padding-bottom:$space/2;		
+	@extend %wrap-space;
+	
+	background:$c-bglight;	
 	color:$c-textwhite;
 	width:100%;
 	
 	.lighter{		
 		color:rgba( $c-textwhite, .5 );	
+	}
+	.highlight-txt{
+		color:$c-textwhite;	
 	}
 	
 }
@@ -51,7 +61,7 @@
 .box__item{		   	
     text-align: center;
 	flex:1;
-	margin-bottom:$gutter;
+	margin-bottom:$space*0.4;
 	padding:0 $space*0.3;
 	
 	&:last-child{
@@ -61,7 +71,7 @@
 .box__full {
   	display: block;
   	flex: 100%;
-	margin-bottom:$gutter;  	 	
+	margin-bottom:$space*0.4;  	 	
 }
 .box__solo, .box__half{
 	@extend .box__full;
@@ -83,6 +93,17 @@
 
 
 @media screen and (min-width: $bp--small) {	
+
+	.wrap-n {
+		padding-left:$gutter;
+		padding-right:$gutter;	
+	}
+	/*Wrap large*/
+	.wrap-l {
+		padding-left:$gutter;
+		padding-right:$gutter;	
+	}
+
 	.section{
 		padding-top:$space;
 		padding-bottom:$space;		

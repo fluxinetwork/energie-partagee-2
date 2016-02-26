@@ -17,6 +17,11 @@ var FOO = {
         init: function() {
             isHome = true; 
         }
+    },
+	page: {
+        init: function() {
+			$(".fitvids").fitVids();
+        }
     }
 };
 

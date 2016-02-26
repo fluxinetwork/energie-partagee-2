@@ -66,32 +66,42 @@
   padding-bottom: 8rem;
 }
 
+.wrap-main {
+  overflow: hidden;
+}
+
+.wrap-bg, .wrap-space {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 /*Wrap normal*/
 .wrap-n {
   margin: 0 auto;
   max-width: 83rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /*Wrap large*/
 .wrap-l {
   margin: 0 auto;
   max-width: 110rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /*Wrap orange*/
 .wrap-bg {
   background: #f2f2f2;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
   color: #fff;
   width: 100%;
 }
 .wrap-bg .lighter {
   color: rgba(255, 255, 255, 0.5);
+}
+.wrap-bg .highlight-txt {
+  color: #fff;
 }
 
 .wrap-bg.highlight {
@@ -139,6 +149,17 @@
 }
 
 @media screen and (min-width: 600px) {
+  .wrap-n {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  /*Wrap large*/
+  .wrap-l {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .section {
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -169,7 +190,7 @@
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 830px) {
   .wrap-n {
     padding-left: 8rem;
     padding-right: 8rem;

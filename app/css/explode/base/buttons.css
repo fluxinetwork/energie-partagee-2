@@ -21,7 +21,7 @@
 }
 
 /* LIST RESET */
-.list-reset {
+.breadcrumb, .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -56,12 +56,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/*------------------------------*\
-
-    #BUTTONS
-
-\*------------------------------*/
-.button {
+.button, .minicard {
   color: #65aa04;
   cursor: pointer;
   display: inline-block;
@@ -72,8 +67,9 @@
   margin-top: 6rem;
   position: relative;
   z-index: 5;
+  letter-spacing: 0.5px;
 }
-.button:before {
+.button:before, .minicard:before {
   background: #000 none;
   border-radius: 3px;
   content: "";
@@ -87,7 +83,7 @@
   width: 94%;
   z-index: -1;
 }
-.button:after {
+.button:after, .minicard:after {
   background: #fff none;
   border-radius: 3px;
   content: "";
@@ -99,6 +95,33 @@
   z-index: -1;
 }
 
+.link {
+  position: relative;
+  font-family: "avantgarde", Arial;
+  font-size: 1.4rem;
+  color: #65aa04;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #65aa04;
+}
+.link:hover::after {
+  width: 100%;
+}
+
+/* Nav helpers */
+/*------------------------------*\
+
+    #BUTTONS
+
+\*------------------------------*/
 .button.green {
   color: #fff;
 }
@@ -122,7 +145,6 @@
 
 .button-round.grey {
   color: #b3b3b3;
-  border-color: #b3b3b3;
 }
 
 .social {
@@ -163,25 +185,25 @@
   background: #dc2925 none;
 }
 
-.link {
-  position: relative;
-  font-family: "avantgarde", Arial;
-  font-size: 1.4rem;
-  color: #65aa04;
-  text-decoration: none;
-  text-transform: uppercase;
+.breadcrumb {
+  display: flex;
+  justify-content: center;
 }
-.link::after {
-  content: '';
+.breadcrumb li {
+  margin: 0 1rem 3rem 0;
+}
+.breadcrumb li:last-child {
+  margin-right: 0;
+}
+
+/* EDIT LINK FOR ADMINS */
+.edit {
+  background: #fff none;
+  padding: 1rem 2rem;
   position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background: #65aa04;
-}
-.link:hover::after {
-  width: 100%;
+  right: 0;
+  top: 20%;
+  border-radius: 3px 0 0 3px;
 }
 
 @media screen and (min-width: 600px) {
@@ -189,7 +211,7 @@
     margin-top: 3rem;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 830px) {
   .button-round {
     display: block;
   }
