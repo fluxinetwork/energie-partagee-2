@@ -14,7 +14,7 @@
 				endif;
 				if( $image_accordeon ):				
 					$image_accordeon = get_sub_field('image_accordeon'); 					
-					echo '<img src="'.$image_accordeon['sizes'][$image_size].'" alt="'.$image_accordeon['alt'].'" />';				
+					echo '<img class="img_mini" src="'.$image_accordeon['sizes'][$image_size].'" alt="'.$image_accordeon['alt'].'" />';				
 				endif;
 				if( $contenu_accordeon ):	 
 					echo $contenu_accordeon; 			

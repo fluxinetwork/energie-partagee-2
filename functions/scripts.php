@@ -110,12 +110,13 @@ function enqueue_scripts() {
 	/* FLUXI CONTENT */	
 	
 	wp_register_script( 'fitvids', get_template_directory_uri() . '/app/js/vendors/jquery.fitvids.min.js', array(), null, true );
-	wp_register_script( 'lightgallery', get_template_directory_uri() . '/app/js/vendors/galerie/lightgallery.min.js', array(), null, true );
+	wp_register_script( 'lightslider', get_template_directory_uri() . '/app/js/vendors/lightslider.min.js', array(), null, true );
+	wp_register_script( 'lightgallery', get_template_directory_uri() . '/app/js/vendors/galerie/lightgallery.min.js', array(), null, true );	
 	wp_register_script( 'lg-fullscreen', get_template_directory_uri() . '/app/js/vendors/galerie/lg-fullscreen.min.js', array(), null, true );
 	wp_register_script( 'lg-thumbnail', get_template_directory_uri() . '/app/js/vendors/galerie/lg-thumbnail.min.js', array(), null, true );
 	wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
 	
-    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('jQuery','imagesLoaded','waypoint','mousewheel','fitvids','lightgallery','lg-fullscreen','lg-thumbnail','isotope'), null, true );
+    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('jQuery','imagesLoaded','waypoint','mousewheel','fitvids','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','isotope'), null, true );
     wp_register_script( 'js-full', get_template_directory_uri() . '/app/js/full.min.js', array('jQuery'), null, true );
 
     /* ENQUEUE */

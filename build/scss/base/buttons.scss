@@ -19,17 +19,7 @@
 }
 
 .button-round{
-	background: transparent none;    
-    border-radius: 50%;
-    color: $c-textwhite;	
-	cursor: pointer;
-    display: inline-block;
-    font-size: 6.6rem;
-    height: 6.6rem;
-    line-height: 1;
-    padding: 0;
-    text-align: center;
-    width: 6.6rem;
+	@extend %button-round;
 }
 .button-round.grey{
 	color:$c-light;
@@ -80,21 +70,11 @@
 .link {
   @extend %link;
 }
-
-.breadcrumb{
-	@extend %list-reset;
-	display: flex;
-    justify-content: center;
+.link.link-picto{
 	
-	li{
-		margin:0 $space*0.1 $space*0.3 0;
-		
-		&:last-child{
-			margin-right:0;	
-		}
-	}
-		
 }
+
+
 .minicard{
 	@extend %button;	
 }
@@ -102,7 +82,7 @@
 .edit{	
 	background: #fff none;
     padding: $space*0.1 $gutter/2;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 20%;
 	border-radius:$radius 0 0 $radius;

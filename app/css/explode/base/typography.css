@@ -455,6 +455,7 @@ h5, .h5, .s-title {
 
 .s-title {
   margin-bottom: 6rem;
+  text-align: center;
 }
 
 h6, .h6 {
@@ -469,13 +470,17 @@ h6, .h6 {
   }
 }
 
-p, .p, .p-ss {
+p, .p, .p-ss, .legend {
   font-size: 1.6rem;
   line-height: 1.56;
   font-family: "Georgia", serif;
   color: #555555;
 }
 
-.p-ss {
+.p-ss, .legend {
   font-family: "PT sans", sans-serif;
+}
+
+.legend {
+  color: #777777;
 }

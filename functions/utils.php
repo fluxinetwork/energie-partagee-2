@@ -103,8 +103,8 @@ function get_sanitize_string($string)
 function custom_breadcrumbs() {
 	
 	if (is_page() && !is_front_page() || is_single() || is_category()) {
-		echo '<ul class="breadcrumb">';
-		echo '<li class="breadcrumb__first"><a class="tag" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
+		echo '<ul class="tags">';
+		echo '<li><a class="tag" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
 	
 		if (is_page()) {
 			$ancestors = get_post_ancestors($post);
@@ -143,11 +143,10 @@ function custom_breadcrumbs() {
 }
 /*Socials*/
 function get_socials(){
-	if (is_page()):
-		echo'<ul class="social">
+	echo'<ul class="social">
 				  <li><i class="icon-round-next-arrow"></i></li>
                 <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
                 <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
-            </ul>';
-	endif;
+         </ul>';
+	
 } 

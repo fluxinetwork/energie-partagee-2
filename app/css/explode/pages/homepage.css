@@ -61,21 +61,6 @@
     #HOMEPAGE
 
 \*------------------------------*/
-.s-title {
-  text-align: center;
-}
-
-.header-bloc {
-  background: url("../img/bg-header.jpg") no-repeat;
-  background-size: cover;
-  text-align: center;
-  color: #fff;
-  padding-top: 10rem;
-}
-.header-bloc .h1 {
-  margin-bottom: 5rem;
-}
-
 .key-nums {
   margin: 0;
   padding: 0;
@@ -119,9 +104,5 @@
 @media screen and (min-width: 600px) {
   .key-nums .key-nums__item {
     margin-bottom: 0;
-  }
-
-  .header-bloc {
-    padding-top: 16rem;
   }
 }

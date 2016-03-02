@@ -12,18 +12,7 @@
         </article>
 	</section>
     
-    <section class="wrap-bg highlight">
-    	<article class="wrap-n">
-            <h6 class="lighter">Actualité importante</h6>
-            <h1 class="h1">Levée de fonds historique</h1>
-            <div class="box">
-            	<div class="box__solo">
-                <p class="highlight-txt">Au milieu de la forêt de Raon-L’Etape (88) coule la Meurthe, qui jadis était utilisée pour produire de l’électricité. Démantelée il y a quinze ans, la petite centrale hydraulique reprend vie aujourd’hui après plusieurs mois de travaux et la mobilisation des souscripteurs Énergie Partagée. Retour en photo sur cette réhabilitation.</p>
-               </div> 
-                <div class="box__fixe"><a class="button-round" href="#"><i class="icon-round-next-arrow"></i></a></div>
-            </div>            
-        </article>
-    </section>
+    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/sticky-post.php' ); ?>
     
     <section class="section wrap-l steps-intro">
         <h5 class="s-title">Énergie partagée en 3 étapes</h5>
@@ -46,117 +35,12 @@
         </ul>
     </section>
     
-    <section class="section trio-card">
-    	<h5 class="s-title">Sélection de projets</h5>
-        <div class="wrap-n">        
-            <div class="box">
-              <article class="box__full">   
-                  <a class="card card-project" href="#">
-                    <div class="card__img">
-                    		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
-                          <i class="card__icon icon-uniE60C"></i>
-                    </div>
-                    <div class="card__infos">
-                    		<h1 class="card__title">Isac-Watts</h1>
-                        <p class="p-ss">Loire-Atlantique</p>
-                    </div>
-                  </a>                  
-              </article>
-              <article class="box__half">              		
-                   <a class="card card-project" href="#">
-                    <div class="card__img">
-                    		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
-                          <i class="card__icon icon-uniE60F"></i>
-                    </div>
-                    <div class="card__infos">
-                    		<h1 class="card__title">Suzamme Solar Colmar</h1>
-                        <p class="p-ss">Haut-Rin</p>
-                    </div>
-                  </a>
-              </article>
-              <article class="box__half">
-              		<a class="card card-project" href="#">
-                    <div class="card__img">
-                    		<img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-projet.jpg">
-                          <i class="card__icon icon-uniE60A"></i>
-                    </div>
-                    <div class="card__infos">
-                    		<h1 class="card__title">Grozne Biogaz</h1>
-                        <p class="p-ss">Rhône</p>
-                    </div>
-                  </a>
-              </article>
-              <div class="box__fixe">
-                    <a class="button-round grey" href="#"><i class="icon-round-next"></i></a> 
-              </div>          
-            </div>
-        </div>
-        <div class="wrap-n al-c">    
-            <a href="#" class="button green">Voir la carte des projets</a>
-        </div>       
-        
-    </section>
+    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/trio-projects.php' ); ?>
     
-    <section class="section duo-card">
-    	<div class="wrap-n">
-        	<div class="box head__flex">
-            	<div class="box__half">
-            		<h5 class="s-title">Nos actualités</h5>
-            	</div>
-            	<div class="box__half">
-                    <span class="lighter">Suivez-nous sur</span> 
-                    <ul class="social">
-                        <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
-                       <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
-                    </ul>  
-           	  </div>
-             	<div class="box__fixe"></div>
-        	</div>
-       
-           <div class="box">         
-                <article class="box__half">
-                   <a class="card card-news" href="#">
-                   	<div class="card__img">
-                       <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                      </div>
-                      <div class="card__infos">
-                       <span class="tag">12 jan</span>
-                       <h1 class="card__title">Un autre texte moins long</h1>
-                      </div>
-                   </a>
-                </article>
-                <article class="box__half">
-                    <a class="card card-news" href="#">
-                    	<div class="card__img">
-                       <img class="img-reponsive" src="<?php echo get_template_directory_uri(); ?>/app/img/proto/img-news.jpg">
-                      </div>
-                      <div class="card__infos">                      
-                      	<span class="tag">23 dec</span>
-                       	<h1 class="card__title">Équivalence CO2 de la production des projets d’énergie renouvelable</h1>
-                      </div> 
-                   </a>
-                </article>
-                <div class="box__fixe"> 
-                    <a class="button-round grey" href="#"><i class="icon-round-plus"></i></a> 
-                </div>
-           </div>
-       </div>
-    </section>    
+    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/duo-news.php' ); ?>
     
     <?php include( TEMPLATEPATH.'/app/inc/inc_projet/court-circuit.php' ); ?>
     
-    <section class="top-credibility">
-    	<div class="wrap-n">
-            <h5 class="s-title">Ils parlent de nous</h5>
-            <ul class="box-logos box">
-                <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
-                <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
-                <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
-                <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
-                <li class="box-logos__btn"><a class="button-round grey" href="#"><i class="icon-round-plus"></i></a></li> 
-            </ul>
-        </div> 
-    </section>
-        
+    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/top-credibility.php' ); ?>        
 
 <?php get_footer(); ?>

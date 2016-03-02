@@ -314,7 +314,8 @@ h5,.h5,.s-title{
 	margin-top: $space*0.4;
 }
 .s-title{ 
-	margin-bottom:$space*0.6; 
+	margin-bottom:$space*0.6;
+	text-align:center;
 }
 
 h6,.h6{ 
@@ -323,11 +324,14 @@ h6,.h6{
     font-weight: normal; 
 }
 
-p,.p,.p-ss{
+p,.p,.p-ss,.legend{
 	@include font-size($p-font-sizes); 
 	font-family: $txt-fontserif;
 	color:$c-text;
 }
-.p-ss{
+.p-ss,.legend{
     font-family: $txt-font;	
+}
+.legend{
+	color:$c-textlight;
 }

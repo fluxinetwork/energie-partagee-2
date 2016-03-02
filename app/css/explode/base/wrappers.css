@@ -108,6 +108,11 @@
   background: #eb6c1d;
 }
 
+/*--- Display 830px in 670px ---*/
+.wrap-extend {
+  display: block;
+}
+
 /*------- FLEX -----------*/
 .box {
   display: flex;
@@ -204,5 +209,10 @@
 
   .box__item {
     margin-bottom: 0;
+  }
+
+  .wrap-extend {
+    width: 830px;
+    transform: translateX(-8rem);
   }
 }

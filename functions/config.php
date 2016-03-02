@@ -15,7 +15,7 @@ define('POST_EXCERPT_LENGTH', 40); // Excerpt length in words
 
 // ACTIVATE
 define('PAGE_EXCERPT', true); // Add excerpt to pages
-define('ADD_THUMBNAILS', 'post'); // Post types which get thumbnails
+define('ADD_THUMBNAILS', array('post','projets','page')); // Post types which get thumbnails
 define('ACF_OPTION_PAGE', true); // Activate ACF option page
 
 
@@ -32,7 +32,7 @@ if ( PAGE_EXCERPT ) {
 }
 
 // Add post thumbnail
-if ( sizeof(ADD_THUMBNAILS) > 0 ) {	
+if ( sizeof(ADD_THUMBNAILS) > 0 ) {		
 	function add_post_thumb() {
 	  	add_theme_support( 'post-thumbnails', ADD_THUMBNAILS );
 	}

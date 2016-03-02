@@ -1,3 +1,29 @@
+%link {
+  @extend %transition;
+  position: relative;
+  font-family: $main-font;
+  font-size: 1.4rem;
+  color: $c-main;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  &::after {
+    @extend %transition;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: $c-main;
+  }
+  
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
 %button{	
     color: $c-main;
 	cursor:pointer;
@@ -39,32 +65,20 @@
 	}
 		
 }
-%link {
-  @extend %transition;
-  position: relative;
-  font-family: $main-font;
-  font-size: 1.4rem;
-  color: $c-main;
-  text-decoration: none;
-  text-transform: uppercase;
-  
-  &::after {
-    @extend %transition;
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0%;
-    height: 1px;
-    background: $c-main;
-  }
-  
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
+%button-round{
+	background: transparent none;    
+    border-radius: 50%;
+    color: $c-textwhite;	
+	cursor: pointer;
+    display: inline-block;
+    font-size: 6.6rem;
+    height: 6.6rem;
+    line-height: 1;
+    padding: 0;
+    text-align: center;
+    width: 6.6rem;
 }
+
 /* Nav helpers */
 %nav-ul {
   display: flex;

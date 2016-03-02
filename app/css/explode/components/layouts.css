@@ -21,7 +21,7 @@
 }
 
 /* LIST RESET */
-.list-reset, .box-logos {
+.tags, .list-reset, .box-logos {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -124,11 +124,62 @@
   margin: 0;
   font-size: 1.4rem;
   color: #fff;
-  padding: 0.5rem 0;
+  padding-top: 0.3rem;
 }
 .top-display .p-ss a {
   color: #fff;
   border-bottom: 1px solid #fff;
+}
+
+.header-bloc {
+  background: url("../img/bg-header.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding-top: 10rem;
+}
+.header-bloc .h1 {
+  margin-bottom: 5rem;
+}
+.header-bloc .h4 {
+  margin-bottom: 0;
+  margin-top: 3rem;
+  color: #fff;
+}
+
+.page .header-bloc,
+.single .header-bloc {
+  padding-bottom: 26rem;
+}
+.page .header-bloc .h1,
+.single .header-bloc .h1 {
+  margin: 1rem auto 0;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+}
+.tags li {
+  margin: 0 1rem 1rem 0;
+}
+.tags li:last-child {
+  margin-right: 0;
+}
+.tags li .tag {
+  color: #fff;
+}
+.tags li.tag {
+  background-color: #fff;
+  color: #122c33;
+}
+
+.tag {
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  display: inline-block;
 }
 
 .card.card-project {
@@ -144,6 +195,9 @@
 }
 .card.card-news .card__title {
   margin-top: 2rem;
+}
+.card.card-news .tag {
+  text-transform: uppercase;
 }
 
 .round__img {
@@ -293,15 +347,6 @@
   margin-bottom: 4rem;
 }
 
-.tag {
-  font-size: 1.2rem;
-  border: 2px solid #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  text-transform: uppercase;
-  display: inline-block;
-}
-
 @media screen and (min-width: 300px) {
   .box-logos__item {
     margin: 0 1rem 4rem;
@@ -319,6 +364,10 @@
   .top-display {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .header-bloc {
+    padding-top: 16rem;
   }
 
   .duo-card .box__half {
