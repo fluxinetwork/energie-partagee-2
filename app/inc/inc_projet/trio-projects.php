@@ -39,6 +39,7 @@ $query_projects = new WP_Query( $args_projects );
                                 <p class="p-ss"><?php echo get_field('departement'); ?></p>
                             </div>
                           </a>
+                          
                       </article>     
                             
                   	<?php
@@ -51,12 +52,12 @@ $query_projects = new WP_Query( $args_projects );
 				?>
               
               <div class="box__fixe">
-                    <a class="button-round grey" href="#"><i class="icon-round-next"></i></a> 
+                    <button type="button" class="button-round grey js-more-project"><i class="icon-round-next"></i></button> 
               </div>               
                        
             </div>
         </div>
         <div class="wrap-n al-c">    
-            <a href="#" class="button green">Voir la carte des projets</a>
+            <a href="#" class="button green"><i class="icon-uniE61C"></i> Voir la carte des projets</a>
         </div>       
 </section>

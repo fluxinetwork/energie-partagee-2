@@ -46,7 +46,19 @@
 	
 }
 .wrap-bg.highlight{
-	background:$c-focus;
+	/*@include background(url("../img/border-croco.png"), radial-gradient(lighten( $c-focus, 8% ),$c-focus), center no-repeat $c-focus scroll);*/
+	@include background(radial-gradient(lighten( $c-focus, 8% ),$c-focus), center no-repeat $c-focus scroll);
+	position:relative;
+	
+	&:before{
+		background:url("../img/border-croco.png") repeat-x 0 0 transparent;
+		content: "";
+		width:100%;
+		height:19px;
+		display: block;
+		position: absolute;
+		top:-19px;
+	}
 }
 /*--- Display 830px in 670px ---*/
 .wrap-extend{	

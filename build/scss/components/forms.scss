@@ -1,0 +1,45 @@
+@import "../utils/_all.scss";
+
+/*------------------------------*\
+
+    #FORMS
+
+\*------------------------------*/
+
+/*form{
+	input[type=text],input[type=email],textarea{
+		border:1px solid $c-textlight;
+		display:block;
+		width:100%;	
+	}
+	label.block{
+		display:block;
+	}
+	
+}*/
+
+/* Submit project */
+#soumettre_projet {
+
+	fieldset { margin-bottom: 2em }
+	
+	legend.big-section {
+		color: #333;
+		font-family: "Sansa Bold", Arial, sans-serif;
+		font-size: 2.2em;
+		line-height: 1.3em;
+		margin-bottom: .5em
+	}
+	
+	select { display: block }
+	
+	.require-form { color: #F30 }
+	
+	/*.lab-block, label.error { display: block }*/
+	
+	.hide-item,.sub-hide-item,input[type=text].sub-hide-item { display: none }
+}
+form.cmxform label.error {
+	color: #F30;
+	display: none
+}

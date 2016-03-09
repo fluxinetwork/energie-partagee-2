@@ -33,6 +33,10 @@
   opacity: 0;
 }
 
+.is-none {
+  display: none !important;
+}
+
 .is-muted {
   opacity: 0.3;
 }
@@ -147,13 +151,15 @@
   color: #fff;
 }
 
-.page .header-bloc,
-.single .header-bloc {
+.page .header-bloc, .single .header-bloc, .search-results .header-bloc {
   padding-bottom: 26rem;
 }
-.page .header-bloc .h1,
-.single .header-bloc .h1 {
+.page .header-bloc .h1, .single .header-bloc .h1, .search-results .header-bloc .h1 {
   margin: 1rem auto 0;
+}
+
+.archive .header-bloc, .category .header-bloc, .search-results .header-bloc {
+  padding-bottom: 18rem;
 }
 
 .tags {
@@ -208,6 +214,24 @@
   text-align: center;
 }
 
+/******* TEST ************/
+.category .card {
+  color: #fff;
+  display: block;
+  height: 100%;
+  margin: 1.5rem auto;
+  max-height: 190px;
+  max-width: 30%;
+  min-height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+
+.category .wrap-l {
+  padding: 0;
+}
+
+/******* END TEST ************/
 .duo-card .head__flex .s-title {
   margin-bottom: 0;
   margin-top: 1.2rem;
@@ -228,7 +252,7 @@
 }
 
 .trio-card {
-  background: #f2f2f2;
+  background: url("../img/shape-grid-1.png") repeat 0 0 #f2f2f2;
 }
 .trio-card .box__half {
   display: block;
@@ -246,7 +270,8 @@
   padding-bottom: 10rem;
 }
 .courtcircuit .wrap-n {
-  background: #eb6c1d;
+  background: -webkit-radial-gradient(#ed7b34, #eb6c1d), center no-repeat #eb6c1d scroll;
+  background: radial-gradient(#ed7b34, #eb6c1d), center no-repeat #eb6c1d scroll;
   border-radius: 3px;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -283,7 +308,7 @@
 }
 
 .courtcircuit__input {
-  background: #eb6c1d;
+  background: none transparent;
   border-bottom: 1px solid #f57f35;
   color: #fff;
   font-family: "avantgarde", Arial;
@@ -444,7 +469,8 @@
   }
 
   .top-credibility {
-    background: none #c60546;
+    background: -webkit-radial-gradient(#f70656, #c50545), center no-repeat #c50545 scroll;
+    background: radial-gradient(#f70656, #c50545), center no-repeat #c50545 scroll;
   }
   .top-credibility .wrap-n {
     margin-top: 80px;

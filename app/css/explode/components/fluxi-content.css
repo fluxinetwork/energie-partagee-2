@@ -33,6 +33,10 @@
   opacity: 0;
 }
 
+.is-none {
+  display: none !important;
+}
+
 .is-muted {
   opacity: 0.3;
 }
@@ -82,9 +86,11 @@
   background-color: #fff;
   margin: -18rem auto 10rem;
   border-radius: 3px 3px 0 0;
+  min-height: 200px;
 }
 .fluxi-content .wrap-extend .img-responsive {
   border-radius: 3px;
+  margin: 0 auto;
 }
 .fluxi-content h2.description {
   padding-top: 5rem;
@@ -262,6 +268,10 @@
   }
 }
 @media screen and (min-width: 830px) {
+  .fluxi-content .lightbox .legend {
+    padding: 0 8rem;
+  }
+
   .clikarde {
     flex-flow: row nowrap;
     width: 830px;

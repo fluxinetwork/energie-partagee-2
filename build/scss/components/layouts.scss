@@ -43,13 +43,18 @@
 	}
 		
 }
-.page .header-bloc,
-.single .header-bloc{
-	padding-bottom:$space*2.6;
+.page, .single, .search-results{ 
+	.header-bloc{
+		padding-bottom:$space*2.6;
 	
-	.h1{
-		margin:$space*0.1 auto 0;
-		
+		.h1{
+			margin:$space*0.1 auto 0;		
+		}
+	}
+}
+.archive,.category,.search-results {
+	.header-bloc{
+		padding-bottom:$space*1.8;	
 	}
 }
 
@@ -119,7 +124,22 @@
 	overflow: hidden;
 	text-align: center;	
 }
-
+/******* TEST ************/
+.category .card {
+    color: #fff;
+    display: block;
+    height: 100%;
+    margin: 1.5rem auto;
+    max-height: 190px;
+    max-width: 30%;
+    min-height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+.category .wrap-l{
+	padding:0;
+}
+/******* END TEST ************/
 .duo-card{
 	
 	.head__flex{
@@ -149,7 +169,7 @@
 }
 
 .trio-card{
-	background:$c-bglight;
+	background:url("../img/shape-grid-1.png") repeat 0 0 $c-bglight;
 	
 	.box__half {
 		display: block;
@@ -169,7 +189,7 @@
 	padding-bottom:$space;
 	
 	.wrap-n{
-		background:$c-focus;		
+		@include background(radial-gradient(lighten( $c-focus, 5% ),$c-focus), center no-repeat $c-focus scroll);		
 		border-radius:$radius;
 		padding-top:$gutter*0.75;
 		padding-bottom:$gutter*0.75;
@@ -209,7 +229,7 @@
 	
 }
 .courtcircuit__input{
-	background:$c-focus;
+	background: none transparent;
 	border-bottom:1px solid #f57f35;
 	color: $c-textwhite;
 	font-family: $main-font;
@@ -239,7 +259,7 @@
 /* Top credibility */
 .top-credibility{	
 	.wrap-n{
-		background:$c-bglight;
+		background:$c-bglight;		
 		border-radius:$radius;
 		padding-top:$space*0.6;
 		padding-bottom:$space*0.6;		
@@ -401,7 +421,7 @@
 	}
 	
 	.top-credibility{		
-		background:none #c60546;		
+		@include background(radial-gradient(lighten( $c-special, 10% ),$c-special), center no-repeat $c-special scroll);		
 		
 		.wrap-n{
 			margin-top: 80px;

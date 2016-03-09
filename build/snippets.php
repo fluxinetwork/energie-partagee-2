@@ -54,6 +54,18 @@
 
 
 	/**
+	 * Get ACF option repeater
+	 * #optionACF
+	 */
+
+	if( have_rows('repeater', 'option') ):
+    	while( have_rows('repeater', 'option') ): the_row();
+        	the_sub_field('title');
+    	endwhile;
+	endif;
+
+
+	/**
 	 * Filter search results
 	 * #searchfilter
 	 */

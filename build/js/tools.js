@@ -89,3 +89,29 @@ function loading_img(container, loader) {
 		//$('.loader').remove();
 	}
 }
+
+/**
+ * Add a notification display
+ * Using : notify('message');	
+ */	
+var notify = function(message) {
+	
+	var $message;	
+	
+	if ( $('body').hasClass('single-projets') ) {
+			$message = $('<div class="bullet-points bullet-points--white"><span></span></div><p class="notif-form" style="display:none;">' + message + '</p>');
+	} else {
+			$message = $('<p class="notif-form" style="display:none;">' + message + '</p>');
+	}      
+
+    $('.notification').append($message);
+       $message.slideDown(300, function() {
+      	if ( !$('body').hasClass('single-projets') && !$('body').hasClass('page-id-3224')) {
+      		window.setTimeout(function() {
+      		  $message.slideUp(300, function() {
+      		    $message.remove();
+      		  });
+      		}, 10000);
+      	}
+    });
+};	

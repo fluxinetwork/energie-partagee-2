@@ -5,9 +5,11 @@
 	background-color:#fff;
 	margin:-$space*1.8 auto $space;
 	border-radius:$radius $radius 0 0;
+	min-height:200px;
 	
 	.wrap-extend .img-responsive{
-		border-radius:$radius;	
+		border-radius:$radius;
+		margin:0 auto;	
 	}
 	
 	h2.description{
@@ -83,8 +85,6 @@
 }
 
 .fluxi-link{	
-	
-	
 	.legend{		
 		font-weight: normal;
 		text-transform: none;
@@ -222,6 +222,9 @@
 	}
 }
 @media screen and (min-width: $bp--medium) {	
+	.fluxi-content .lightbox .legend{
+		padding:0 $gutter*2;
+	}
 	.clikarde{
 		flex-flow: row nowrap;
 		width:830px;

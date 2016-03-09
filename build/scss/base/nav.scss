@@ -134,7 +134,7 @@
   justify-content: flex-end;
   padding-right: 14rem;
   
-  .dropdown__item a::after {
+  .dropdown__item a::after, .page_item a::after{
     right: 0;
     left: auto;
   }
@@ -211,11 +211,11 @@
     padding-bottom: $gutter-thin*0.5;
   }
   
-  .dropdown__item {
+  .dropdown__item, .page_item {
     flex: none;
   }
   
-  .dropdown__item a {
+  .dropdown__item a, .page_item a {
     @extend %link;
     display: block;
     position: relative;
@@ -237,7 +237,7 @@
     max-height: 200px; 
   }
   
-  .dropdown__item a {
+  .dropdown__item a, .page_item a {
     opacity: 1;
     top: 0;
   }
@@ -380,7 +380,7 @@
     }
   }
   
-  .dropdown__item {
+  .dropdown__item, .page_item {
     position: relative;
     
     &::before {
@@ -625,7 +625,7 @@ $c-placeholder : #fff;
       padding-bottom: $gutter-thin*0.75;
     }
 
-    .dropdown__item a {
+    .dropdown__item a, .page_item a {
       padding: $gutter-thin*0.75 0;
       font-size: 1.4rem;
 
@@ -649,8 +649,7 @@ $c-placeholder : #fff;
     padding-top: $gutter-thin;
     padding-bottom: $gutter-thin;
 
-    .dropdown__item a {
-      padding: $gutter-thin 0;
+    .dropdown__item a, .page_item a {      
 
       &::after {
         bottom: 1.6rem;
@@ -668,7 +667,8 @@ $c-placeholder : #fff;
     width: 100%;
   }
 
-  .no-pp .nav__dropdown .dropdown__item a {
+  .no-pp .nav__dropdown .dropdown__item a,
+  .no-pp .nav__dropdown .page_item a {
     font-size: 1.8rem;
     font-weight: 700;
 

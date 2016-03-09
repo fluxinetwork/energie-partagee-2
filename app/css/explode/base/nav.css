@@ -4,13 +4,13 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.no-pp .nav__dropdown .dropdown__item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after, .navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .navbar, .navbar::before, .navbar__id,
+.no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a, .js-toggle, .no-pp .nav__dropdown .dropdown__item a::after, .no-pp .nav__dropdown .page_item a::after, .js-toggle::after, .navbar__id__social a, .hamburger, .navbar__buttons .nav-bt, .nav__search__submit, .nav__search__close, .navbar, .navbar::before, .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id, .logo__img,
 .navbar__id.is-compact .logo__img,
 .no-touch nav:hover + .navbar__id .logo__img, .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .transition {
+.no-touch nav:hover + .navbar__id .navbar__id__social, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -39,6 +39,10 @@
   opacity: 0;
 }
 
+.is-none {
+  display: none !important;
+}
+
 .is-muted {
   opacity: 0.3;
 }
@@ -62,7 +66,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-.no-pp .nav__dropdown .dropdown__item a, .js-toggle {
+.no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a, .js-toggle {
   position: relative;
   font-family: "avantgarde", Arial;
   font-size: 1.4rem;
@@ -70,7 +74,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.no-pp .nav__dropdown .dropdown__item a::after, .js-toggle::after {
+.no-pp .nav__dropdown .dropdown__item a::after, .no-pp .nav__dropdown .page_item a::after, .js-toggle::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -79,7 +83,7 @@
   height: 1px;
   background: #65aa04;
 }
-.no-pp .nav__dropdown .dropdown__item a:hover::after, .js-toggle:hover::after {
+.no-pp .nav__dropdown .dropdown__item a:hover::after, .no-pp .nav__dropdown .page_item a:hover::after, .js-toggle:hover::after {
   width: 100%;
 }
 
@@ -241,7 +245,7 @@
   justify-content: flex-end;
   padding-right: 14rem;
 }
-.nav__secondary .nav__dropdown .container .dropdown__item a::after {
+.nav__secondary .nav__dropdown .container .dropdown__item a::after, .nav__secondary .nav__dropdown .container .page_item a::after {
   right: 0;
   left: auto;
 }
@@ -311,10 +315,10 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.no-pp .nav__dropdown .dropdown__item {
+.no-pp .nav__dropdown .dropdown__item, .no-pp .nav__dropdown .page_item {
   flex: none;
 }
-.no-pp .nav__dropdown .dropdown__item a {
+.no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a {
   display: block;
   position: relative;
   z-index: 1;
@@ -323,7 +327,7 @@
   padding: 1rem 0;
   opacity: 0;
 }
-.no-pp .nav__dropdown .dropdown__item a::after {
+.no-pp .nav__dropdown .dropdown__item a::after, .no-pp .nav__dropdown .page_item a::after {
   bottom: 8px;
 }
 
@@ -331,8 +335,9 @@
 .no-touch .no-pp .nav__item:hover .nav__dropdown {
   max-height: 200px;
 }
-.touch .no-pp .nav__item.is-active .dropdown__item a,
-.no-touch .no-pp .nav__item:hover .dropdown__item a {
+.touch .no-pp .nav__item.is-active .dropdown__item a, .touch .no-pp .nav__item.is-active .page_item a,
+.no-touch .no-pp .nav__item:hover .dropdown__item a,
+.no-touch .no-pp .nav__item:hover .page_item a {
   opacity: 1;
   top: 0;
 }
@@ -456,10 +461,10 @@
   height: 100%;
   background: #eeeeee;
 }
-.pp .nav__dropdown .dropdown__item {
+.pp .nav__dropdown .dropdown__item, .pp .nav__dropdown .page_item {
   position: relative;
 }
-.pp .nav__dropdown .dropdown__item::before {
+.pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before {
   content: '';
   position: absolute;
   left: -6px;
@@ -471,7 +476,7 @@
   border-radius: 50%;
   transform: scale(0);
 }
-.pp .nav__dropdown .dropdown__item a {
+.pp .nav__dropdown .dropdown__item a, .pp .nav__dropdown .page_item a {
   display: block;
   position: relative;
   padding-left: 2rem;
@@ -481,10 +486,10 @@
   line-height: 3.5rem;
   -webkit-font-smoothing: antialiased;
 }
-.pp .nav__dropdown .dropdown__item:hover a {
+.pp .nav__dropdown .dropdown__item:hover a, .pp .nav__dropdown .page_item:hover a {
   color: #555 !important;
 }
-.pp .nav__dropdown .dropdown__item:hover::before {
+.pp .nav__dropdown .dropdown__item:hover::before, .pp .nav__dropdown .page_item:hover::before {
   transform: scale(1);
 }
 
@@ -683,11 +688,11 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  .no-pp .nav__dropdown .dropdown__item a {
+  .no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a {
     padding: 1.5rem 0;
     font-size: 1.4rem;
   }
-  .no-pp .nav__dropdown .dropdown__item a::after {
+  .no-pp .nav__dropdown .dropdown__item a::after, .no-pp .nav__dropdown .page_item a::after {
     bottom: 1.1rem;
   }
 }
@@ -702,10 +707,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  .no-pp .nav__dropdown .container .dropdown__item a {
-    padding: 2rem 0;
-  }
-  .no-pp .nav__dropdown .container .dropdown__item a::after {
+  .no-pp .nav__dropdown .container .dropdown__item a::after, .no-pp .nav__dropdown .container .page_item a::after {
     bottom: 1.6rem;
   }
 }
@@ -718,11 +720,13 @@
     width: 100%;
   }
 
-  .no-pp .nav__dropdown .dropdown__item a {
+  .no-pp .nav__dropdown .dropdown__item a,
+  .no-pp .nav__dropdown .page_item a {
     font-size: 1.8rem;
     font-weight: 700;
   }
-  .no-pp .nav__dropdown .dropdown__item a::after {
+  .no-pp .nav__dropdown .dropdown__item a::after,
+  .no-pp .nav__dropdown .page_item a::after {
     height: 2px;
   }
 

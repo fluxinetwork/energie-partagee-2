@@ -15,7 +15,7 @@ define('POST_EXCERPT_LENGTH', 40); // Excerpt length in words
 
 // ACTIVATE
 define('PAGE_EXCERPT', true); // Add excerpt to pages
-define('ADD_THUMBNAILS', array('post','projets','page')); // Post types which get thumbnails
+//define('ADD_THUMBNAILS', array('post','projets','page')); // Post types which get thumbnails
 define('ACF_OPTION_PAGE', true); // Activate ACF option page
 
 
@@ -32,12 +32,12 @@ if ( PAGE_EXCERPT ) {
 }
 
 // Add post thumbnail
-if ( sizeof(ADD_THUMBNAILS) > 0 ) {		
-	function add_post_thumb() {
-	  	add_theme_support( 'post-thumbnails', ADD_THUMBNAILS );
-	}
-	add_action('after_setup_theme', 'add_post_thumb');
+//if ( sizeof(ADD_THUMBNAILS) > 0 ) {		
+function add_post_thumb() {
+	add_theme_support( 'post-thumbnails', array('post','projets','page') );
 }
+add_action('after_setup_theme', 'add_post_thumb');
+//}
 
 // Activate ACF option page
 if ( ACF_OPTION_PAGE && function_exists('acf_add_options_page') ) {

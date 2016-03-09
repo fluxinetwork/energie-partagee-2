@@ -11,6 +11,8 @@ var FOO = {
 			for (var i=0; i<nbNavItems; i++) {				
 				pp_nav();
 			}
+			// Mini slider project
+			initLoadMoreProjectsBtn();
         }
     },
     home: {
@@ -22,7 +24,22 @@ var FOO = {
         init: function() {
 			$(".fitvids").fitVids();
         }
-    }
+    },
+	category: {
+        init: function() {			
+			initLoadMorePostsBtn();
+        }
+    },
+	projets: {
+        init: function() {			
+			initGoogleMap();
+        }
+    },	
+	contact:{
+		init: function() {
+			initContactForm();
+        }
+	}
 };
 
 var UTIL = {

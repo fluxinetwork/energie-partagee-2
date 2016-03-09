@@ -33,6 +33,10 @@
   opacity: 0;
 }
 
+.is-none {
+  display: none !important;
+}
+
 .is-muted {
   opacity: 0.3;
 }

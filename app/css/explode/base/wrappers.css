@@ -33,6 +33,10 @@
   opacity: 0;
 }
 
+.is-none {
+  display: none !important;
+}
+
 .is-muted {
   opacity: 0.3;
 }
@@ -105,7 +109,19 @@
 }
 
 .wrap-bg.highlight {
-  background: #eb6c1d;
+  /*@include background(url("../img/border-croco.png"), radial-gradient(lighten( $c-focus, 8% ),$c-focus), center no-repeat $c-focus scroll);*/
+  background: -webkit-radial-gradient(#ee8442, #eb6c1d), center no-repeat #eb6c1d scroll;
+  background: radial-gradient(#ee8442, #eb6c1d), center no-repeat #eb6c1d scroll;
+  position: relative;
+}
+.wrap-bg.highlight:before {
+  background: url("../img/border-croco.png") repeat-x 0 0 transparent;
+  content: "";
+  width: 100%;
+  height: 19px;
+  display: block;
+  position: absolute;
+  top: -19px;
 }
 
 /*--- Display 830px in 670px ---*/

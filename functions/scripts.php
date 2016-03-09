@@ -100,12 +100,21 @@ add_action( 'admin_init', 'theme_add_editor_styles' ); */
 
 function enqueue_scripts() { 
 
-    /* REGISTER */
+    /* GLOBAL */
     
     wp_register_script( 'jQuery', get_template_directory_uri() . '/app/js/vendors/jquery-1.11.3.min.js', array(), null, false );
     wp_register_script( 'imagesLoaded', get_template_directory_uri() . '/app/js/vendors/imagesloaded.min.js', array(), null, true );
     wp_register_script( 'waypoint', get_template_directory_uri() . '/app/js/vendors/waypoints.min.js', array(), null, true );    
     wp_register_script( 'mousewheel', get_template_directory_uri() . '/app/js/vendors/jquery.mousewheel.min.js', array(), null, true );
+	
+	/* FORMS */
+	
+	wp_register_script( 'form-stuff', get_template_directory_uri() . '/app/js/vendors/form.min.js', array(), null, true );
+	
+	/* MAP */
+	
+	wp_register_script( 'googlemap-api', get_template_directory_uri() . '/app/js/vendors/google.map.api.js', array(), null, true );
+	
 	
 	/* FLUXI CONTENT */	
 	
@@ -116,9 +125,12 @@ function enqueue_scripts() {
 	wp_register_script( 'lg-thumbnail', get_template_directory_uri() . '/app/js/vendors/galerie/lg-thumbnail.min.js', array(), null, true );
 	wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
 	
-    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('jQuery','imagesLoaded','waypoint','mousewheel','fitvids','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','isotope'), null, true );
+    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('jQuery','imagesLoaded','waypoint','mousewheel','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','isotope'), null, true );
     wp_register_script( 'js-full', get_template_directory_uri() . '/app/js/full.min.js', array('jQuery'), null, true );
-
+	
+	// Ajax
+	wp_localize_script( 'js-main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+	
     /* ENQUEUE */
 
     if ( DEV ) {

@@ -1,60 +1,63 @@
 <nav class="nav">
+
   <ul class="nav__primary no-pp">
-    <li class="nav__item"> <span class="nav__item__title">Nous découvrir</span>
-      <ul class="nav__dropdown">
-        <span class="container">
-        <li class="dropdown__item"><a href="#" >Qui sommes-nous ?</a></li>
-        <li class="dropdown__item"><a href="#" >En chiffres</a></li>
-        <li class="dropdown__item"><a href="#" >Les réseaux régionaux</a></li>
-        <li class="dropdown__item"><a href="#" >Dans les médias</a></li>
-        </span>
-      </ul>
-    </li>
-    <li class="nav__item"> <span class="nav__item__title">Les projets</span>
-      <ul class="nav__dropdown">
-        <span class="container">
-        <li class="dropdown__item"><a href="#"  >Découvrir les projets</a></li>
-        <li class="dropdown__item"><a href="#"  >Qu'est-ce qu'un projet citoyen ? </a></li>
-        <li class="dropdown__item"><a href="#"  >Monter un projet</a></li>
-        <li class="dropdown__item"><a href="#"  >Les formations</a></li>
-        </span>
-      </ul>
-    </li>
-    <li class="nav__item"> <span class="nav__item__title">Devenir actionnaire</span>
-      <ul class="nav__dropdown">
-        <span class="container">
-        <li class="dropdown__item"><a href="#"  >Comment ça marche ?</a></li>
-        <li class="dropdown__item"><a href="#"  >Les actions Energie Partagée</a>
-        <li>
-        <li class="dropdown__item"><a href="#"  >Offrir des actions</a></li>
-        <li class="dropdown__item"><a href="#"  >FAQ</a></li>
-        </span>
-      </ul>
-    </li>
+    <?php
+    $main_menus = get_field('main_menu', 'option');
+    if( $main_menus ): 
+      foreach( $main_menus as $post_object):    
+        $main_page_id = $post_object['main_page'];
+        ?>
+        <li class="nav__item"><span class="nav__item__title"><?php echo get_the_title($main_page_id); ?></span>
+          <ul class="nav__dropdown">
+            <span class="container">
+              
+              <?php 
+                 wp_list_pages( array(
+                    'title_li'    => '',
+                    'depth'    => 1,
+                    'child_of'    => $main_page_id
+                ) );
+              ?>
+
+            </span>
+          </ul>
+        </li>      
+      <?php 
+      endforeach;    
+    endif;
+    ?>
   </ul>
-  <ul class="nav__secondary no-pp">
-    <li class="nav__item"> <span class="nav__item__title">Nous suivre</span>
-      <ul class="nav__dropdown">
-        <span class="container">
-        <li class="dropdown__item"><a href="#"  >Actualités</a></li>
-        <li class="dropdown__item"><a href="#"  >Newsletter</a></li>
-        <li class="dropdown__item"><a href="#"  >Evènements</a></li>
-        <li class="dropdown__item"><a href="#"  >Ma Propre Energie</a></li>
-        </span>
-      </ul>
-    </li>
-    <li class="nav__item"> <span class="nav__item__title">Nous rejoindre</span>
-      <ul class="nav__dropdown">
-        <span class="container">
-        <li class="dropdown__item"><a href="#"  >Devenir relais</a></li>
-        <li class="dropdown__item"><a href="#"  >Devenir adhérent</a></li>
-        <li class="dropdown__item"><a href="#"  >Recrutement</a></li>
-        </span>
-      </ul>
-    </li>
-  </ul>
+
+  
+    <?php    
+    $secondary_menus = get_field('secondary_menu', 'option');
+    if( $secondary_menus ):
+      echo '<ul class="nav__secondary no-pp"> ';
+        foreach( $secondary_menus as $post_object):    
+          $main_page_id = $post_object['main_page'];
+          ?>
+          <li class="nav__item"><span class="nav__item__title"><?php echo get_the_title($main_page_id); ?></span>
+            <ul class="nav__dropdown">
+              <span class="container">
+                <?php 
+                   wp_list_pages( array(
+                      'title_li'    => '',
+                      'depth'    => 1,
+                      'child_of'    => $main_page_id
+                  ) );
+                ?>
+              </span>
+            </ul>
+          </li>      
+        <?php 
+        endforeach; 
+      echo '</ul>';  
+    endif;
+    ?>
+ 
+
   <div class="nav__pp">
-    <button class="hamburger js-toggle-pp"></button>
+    <button type="button" class="hamburger js-toggle-pp"></button>
     <ul class="pp">
     </ul>
   </div>
@@ -74,12 +77,13 @@
     <li><a href="#" class="social--yout"><i class="icon-youtube"></i></a></li>
   </ul>  
 </div>
-<div class="nav__search">
-  <input type="text" class="nav__search__input js-search-input" placeholder="Recherche">
-  <input type="submit" class="nav__search__submit" value="">
-  <button class="nav__search__close js-toggle-search"></button>
-</div>
+<form method="get" id="nav__search" class="nav__search" action="<?php bloginfo('url'); ?>/">
+	<label class="is-hidden" for="s"><?php _e('Recherche :'); ?></label>
+  	<input type="text" class="nav__search__input js-search-input" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Recherche">
+  	<input type="submit" class="nav__search__submit" value="" id="nav__search__submit">
+  	<button type="button" class="nav__search__close js-toggle-search"></button>
+</form>
 <div class="navbar__buttons"> <a href="#" class="round-bt nav-bt"></a>
-  <button class="round-bt nav-bt js-toggle-search"></button>
+  <button type="button" class="round-bt nav-bt js-toggle-search"></button>
   <a href="#" class="round-bt nav-bt"></a>
 </div>

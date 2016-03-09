@@ -1,0 +1,106 @@
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* TRANSITIONS */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-none {
+  display: none !important;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/*------------------------------*\
+
+    #FORMS
+
+\*------------------------------*/
+/*form{
+	input[type=text],input[type=email],textarea{
+		border:1px solid $c-textlight;
+		display:block;
+		width:100%;	
+	}
+	label.block{
+		display:block;
+	}
+	
+}*/
+/* Submit project */
+#soumettre_projet {
+  /*.lab-block, label.error { display: block }*/
+}
+#soumettre_projet fieldset {
+  margin-bottom: 2em;
+}
+#soumettre_projet legend.big-section {
+  color: #333;
+  font-family: "Sansa Bold", Arial, sans-serif;
+  font-size: 2.2em;
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
+}
+#soumettre_projet select {
+  display: block;
+}
+#soumettre_projet .require-form {
+  color: #F30;
+}
+#soumettre_projet .hide-item, #soumettre_projet .sub-hide-item, #soumettre_projet input[type=text].sub-hide-item {
+  display: none;
+}
+
+form.cmxform label.error {
+  color: #F30;
+  display: none;
+}

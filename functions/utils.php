@@ -101,12 +101,13 @@ function get_sanitize_string($string)
  * Breadcrumb
  */
 function custom_breadcrumbs() {
+	global $post;
 	
 	if (is_page() && !is_front_page() || is_single() || is_category()) {
 		echo '<ul class="tags">';
 		echo '<li><a class="tag" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
 	
-		if (is_page()) {
+		if (is_page() || is_single()) {
 			$ancestors = get_post_ancestors($post);
 		
 			if ($ancestors) {
@@ -118,35 +119,174 @@ function custom_breadcrumbs() {
 			}
 		}
 	
-		if (is_single()) {
-			$category = get_the_category();
-			echo '<li><a class="tag" href="'.get_category_link($category[0]->cat_ID).'">'.$category[0]->cat_name.'</a></li>';
-		}
-	
-		if (is_category()) {
-			$category = get_the_category();
-			echo '<li class="tag">'.$category[0]->cat_name.'</li>';
-		}
-	
 		// Page courante
 		if (is_page() || is_single()) {
 			echo '<li class="tag">'.get_the_title().'</li>';
 		}
 			echo '</ul>';
 		} elseif (is_front_page()) {
-		// Page d'accueil
-		echo '<ul>';
-		echo '<li><a class="tag" title="Accueil" rel="nofollow" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
-		echo '</ul>';
-	}
+			// Page d'accueil
+			echo '<ul>';
+			echo '<li><a class="tag" title="Accueil" rel="nofollow" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
+			echo '</ul>';
+		}
        
 }
-/*Socials*/
+/**
+ * Social
+ */
 function get_socials(){
 	echo'<ul class="social">
-				  <li><i class="icon-round-next-arrow"></i></li>
-                <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
-                <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
-         </ul>';
-	
+			<li><i class="icon-round-next-arrow"></i></li>
+           <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
+           <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
+         </ul>';	
 } 
+/**
+ * Load more posts
+ * Must active admin-ajax.php in scripts.php
+ */
+function more_post_ajax(){
+
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 12;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+	$cat = (isset($_POST["cat"])) ? $_POST["cat"] : 15;
+
+    header("Content-Type: text/html");
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'post',
+        'posts_per_page' => $ppp,
+        'cat' => $cat,
+        'paged'    => $page,
+    );
+
+    $loop = new WP_Query($args);
+
+    $out = '';
+
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+	
+		// Thumb
+		if ( has_post_thumbnail() ):
+			$news_img_id = get_post_thumbnail_id();
+			$news_img_array = wp_get_attachment_image_src($news_img_id, 'medium', true);
+			$news_img_url = $news_img_array[0];									
+           $news_img = '<img class="img-reponsive" src="'.$news_img_url.'">';
+		endif;
+							
+		$date_news = get_the_time('d').' '.substr(get_the_time('F'),0, 3); 					                            
+                          
+       $out .= '<a class="card card-news" href="'.get_the_permalink().'">
+                  	<div class="card__img">'.$news_img.'</div>
+                      <div class="card__infos">
+                      	<span class="tag">'.$date_news.'</span>
+                      	<h1 class="card__title">'.get_the_title().'</h1>
+                      </div>
+                  </a>';
+
+    endwhile; endif;
+    wp_reset_postdata();
+    die($out);
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+/**
+ * Load more projects
+ * Must active admin-ajax.php in scripts.php
+ */
+function more_project_ajax(){	
+	
+	$offset = (isset($_POST["offset"])) ? $_POST["offset"] : 3;
+	
+    $results = array();
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'projets',
+        'posts_per_page' => 2,
+		 'post_status' => 'publish',
+		 'offset'  => $offset      
+    );
+
+    $loop = new WP_Query($args);
+
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+		
+		// Thumb		
+		$project_img_id = get_post_thumbnail_id();
+		$project_img_array = wp_get_attachment_image_src($project_img_id, 'medium', true);		
+		$project_img_url = $project_img_array[0];		   
+		
+		$data = array(            
+       		'title' => get_the_title(),
+           'image'  => $project_img_url,
+           'region' => get_field('departement'),
+           'permalink'   => get_the_permalink()
+        );
+		$results[] = $data; 
+	
+    endwhile; endif;
+
+	wp_send_json($results);
+
+    wp_reset_postdata();   
+}
+
+add_action('wp_ajax_nopriv_more_project_ajax', 'more_project_ajax');
+add_action('wp_ajax_more_project_ajax', 'more_project_ajax');
+
+/**
+ * Load JSON for Google map
+ * Must active admin-ajax.php in scripts.php
+ */
+function get_json_map(){	
+		
+    $results = array();
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'projets',
+        'posts_per_page' => -1,
+		 'post_status' => 'publish'
+    );
+
+		
+    $loop = new WP_Query($args);
+
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+		
+		// Thumb		
+		$project_img_id = get_post_thumbnail_id();
+		$project_img_array = wp_get_attachment_image_src($project_img_id, 'medium', true);		
+		$project_img_url = $project_img_array[0];
+				   
+		$location = get_field('coordonees_gps');
+		if( !empty($location) ){
+			$latitude = $location['lat'];
+			$longitude = $location['lng'];
+		}
+		
+		$data = array(            
+       		'title' => get_the_title(),
+           'image'  => $project_img_url,
+           'region' => get_field('departement'),
+           'permalink' => get_the_permalink(),
+		   'latitude' => $latitude, 
+		   'longitude' => $longitude
+        );
+		$results[] = $data; 
+	
+    endwhile; endif;
+
+	wp_send_json($results);
+
+    wp_reset_postdata();   
+}
+
+add_action('wp_ajax_nopriv_get_json_map', 'get_json_map');
+add_action('wp_ajax_get_json_map', 'get_json_map');
+

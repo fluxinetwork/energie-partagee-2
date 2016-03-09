@@ -1,7 +1,9 @@
 <?php
 $args_news = array(
 	'post_type' => 'post',
-	'posts_per_page' => 2
+	'posts_per_page' => 2,
+	'cat' => 15,
+	'ignore_sticky_posts' => 1
 );
 $query_news = new WP_Query( $args_news );
 ?>
@@ -59,7 +61,7 @@ $query_news = new WP_Query( $args_news );
 				?>
                 
                 <div class="box__fixe"> 
-                    <a class="button-round grey" href="#"><i class="icon-round-plus"></i></a> 
+                    <a class="button-round grey" href="<?php echo esc_url(get_category_link( 15 )); ?>"><i class="icon-round-plus"></i></a> 
                 </div>
            </div>
        </div>
