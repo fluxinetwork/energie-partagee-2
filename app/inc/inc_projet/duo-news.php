@@ -36,7 +36,7 @@ $query_news = new WP_Query( $args_news );
                              $news_img = '<img class="img-reponsive" src="'.$news_img_url.'">';
 							endif;
 							
-							$date_news = get_the_time('d').' '.substr(get_the_time('F'),0, 3);                         
+							$date_news = get_the_time('d M');                         
 							
 							?>
                             
@@ -61,7 +61,7 @@ $query_news = new WP_Query( $args_news );
 				?>
                 
                 <div class="box__fixe"> 
-                    <a class="button-round grey" href="<?php echo esc_url(get_category_link( 15 )); ?>"><i class="icon-round-plus"></i></a> 
+                    <a class="button-round grey" href="<?php echo get_bloginfo ('url').'/nous-suivre/actualites/'; ?>"><i class="icon-round-plus"></i></a> 
                 </div>
            </div>
        </div>

@@ -26,7 +26,7 @@ var bpXlarge;
 
 // Ajax
 var ppp = 12; // Post per page
-var pageNumber = 2;
+var pageNumber = 1;
 var offsetProject = 1;
 var limiteProjectLoading = 0;
 // Map

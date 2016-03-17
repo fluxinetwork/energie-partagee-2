@@ -5,8 +5,8 @@ Template Name: Tous les articles
 ?>
 <?php get_header(); ?>
 <?php
-	$cat = get_the_category();
-	$cat_id = $cat[0]->cat_ID;
+	
+	$cat_id = 15;
 	$cat_ppp = 12;	
 		
 	$args_category = array(

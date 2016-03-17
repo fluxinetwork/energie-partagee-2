@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Tous les événements
+Template Name: Tous les ateliers
 */
 ?>
 <?php get_header(); ?>
 <?php	
-	$cat_id = 16;
+	$cat_id = 19;
 	$cat_ppp = 12;
 	$meta_label = 'date_event';	
 	

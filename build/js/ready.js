@@ -23,11 +23,12 @@ var FOO = {
 	page: {
         init: function() {
 			$(".fitvids").fitVids();
+			initLoadMorePostsBtn();
         }
     },
 	category: {
         init: function() {			
-			initLoadMorePostsBtn();
+			
         }
     },
 	projets: {

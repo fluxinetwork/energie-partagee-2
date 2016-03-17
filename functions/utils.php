@@ -153,15 +153,37 @@ function more_post_ajax(){
 	$cat = (isset($_POST["cat"])) ? $_POST["cat"] : 15;
 
     header("Content-Type: text/html");
-
-    $args = array(
-        'suppress_filters' => true,
-        'post_type' => 'post',
-        'posts_per_page' => $ppp,
-        'cat' => $cat,
-        'paged'    => $page,
-    );
-
+	
+	if($cat == 16 || $cat == 19):
+		$args = array(
+			'post_status' => 'publish',
+			'post_type' => 'post',
+			'cat' => $cat,
+			'posts_per_page' => $ppp,
+			'paged' => $page,
+			'orderby' => 'meta_value',
+			'meta_key' => 'date_event',
+			'order' => 'ASC',
+			'meta_query' => array( 
+				array(
+					'key' => 'date_event', 
+					'value' => date('y-m-d'), 
+					'compare' => '>=',
+					'type' => 'DATE'
+				)
+		));
+	else :
+		$args = array(
+			'suppress_filters' => true,
+			'post_status' => 'publish',
+			'post_type' => 'post',
+			'posts_per_page' => $ppp,
+			'cat' => $cat,
+			'paged' => $page,
+		);
+		  
+	endif;
+	
     $loop = new WP_Query($args);
 
     $out = '';
@@ -176,7 +198,11 @@ function more_post_ajax(){
            $news_img = '<img class="img-reponsive" src="'.$news_img_url.'">';
 		endif;
 							
-		$date_news = get_the_time('d').' '.substr(get_the_time('F'),0, 3); 					                            
+		if($cat == 16 || $cat == 19):		
+			$date_news = date_i18n('d M', strtotime(get_field('date_event'))); 
+		else: 
+			 $date_news = get_the_time('d M');                      
+		endif;		 					                            
                           
        $out .= '<a class="card card-news" href="'.get_the_permalink().'">
                   	<div class="card__img">'.$news_img.'</div>

@@ -9,9 +9,12 @@
 						$news_img_url = $news_img_array[0];									
                       $news_img = '<img class="img-reponsive" src="'.$news_img_url.'">';
 					endif;
-							
-					$date_news = get_the_time('d').' '.substr(get_the_time('F'),0, 3);                         
-							
+					
+					if($cat_id == 16):		
+						$date_news = date_i18n('d M', strtotime(get_field('date_event'))); 
+					else: 
+						$date_news = get_the_time('d M');                       
+					endif;		
 					?>                            
                           
                   <a class="card card-news" href="<?php echo the_permalink(); ?>">

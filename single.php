@@ -31,7 +31,7 @@
       <?php the_title(); ?>
     </h1>
     <?php if($cat_post_slug=='evenements'): ?>
-    	<h4 class="h4"><span class="icon-uniE605"></span><?php echo get_the_date();?><span class="icon-uniE61C"></span><?php echo get_field('ville_event');?></h4>    
+    			<h4 class="h4"><span class="icon-uniE605"></span><?php echo date_i18n('d F Y', strtotime(get_field('date_event')));?><span class="icon-uniE61C"></span><?php echo get_field('ville_event');?></h4>    
     <?php endif; ?>
   </header>
   

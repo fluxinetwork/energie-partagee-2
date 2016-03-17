@@ -1,31 +1,20 @@
 <?php
 /*
-Template Name: Tous les événements
+Template Name: Dans la presse
 */
 ?>
 <?php get_header(); ?>
-<?php	
-	$cat_id = 16;
-	$cat_ppp = 12;
-	$meta_label = 'date_event';	
+<?php
 	
+	$cat_id = 17;
+	$cat_ppp = 12;	
+		
 	$args_category = array(
 		'post_status' => 'publish',
 		'post_type' => 'post',
 		'cat' => $cat_id ,
-		'posts_per_page' => $cat_ppp,
-		'orderby' => 'meta_value',
-		'meta_key' => $meta_label,
-		'order' => 'ASC',
-		'meta_query' => array( 
-			array(
-				'key' => $meta_label, 
-				'value' => date('y-m-d'), 
-				'compare' => '>=',
-				'type' => 'DATE'
-			)
-		)  
-	);			
+		'posts_per_page' => $cat_ppp
+	);	
 	
 	$query_category = new WP_Query( $args_category );
 ?>
@@ -34,7 +23,7 @@ Template Name: Tous les événements
  
   <header class="header-bloc">    
     <h1 class="h1">
-		<?php the_title(); ?>    	
+			<?php the_title(); ?>    	
     </h1>
   </header>
   
