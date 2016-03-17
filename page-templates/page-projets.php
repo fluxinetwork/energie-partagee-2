@@ -15,11 +15,30 @@ Template Name: Tous les projets
     </h1>
    
   </header>
-  <article class="fluxi-content">
+  <div class="fluxi-content">
+  	<ul class="map-filters first">
+    	<li><button data-filter="biomasse" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="economies-energie" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="eolien" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="geothermie" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="micro-hydroelectricite" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="solaire-photovoltaique" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+    </ul>
+    <ul class="map-filters second">
+    	<li><button data-filter="onsuit" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="collecte" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+        <li><button data-filter="succes" type="button" class="button-round grey"><i class="icon-round-plus"></i></button></li>
+    </ul>
+    
+  	<div class="map-holder">
   		<div id="map">
         
-        </div>  	
-  </article>    
+        </div>
+        <div class="cards-map">
+        
+        </div> 
+   	</div>      	
+  </div>    
   
   <?php endwhile; endif; ?>
 </section>

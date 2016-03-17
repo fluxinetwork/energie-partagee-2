@@ -113,7 +113,7 @@ function enqueue_scripts() {
 	
 	/* MAP */
 	
-	wp_register_script( 'googlemap-api', get_template_directory_uri() . '/app/js/vendors/google.map.api.js', array(), null, true );
+	wp_register_script( 'googlemap-api', 'https://maps.googleapis.com/maps/api/js?key='.GOOGLE_MAP_API_KEY , array(), null, true );
 	
 	
 	/* FLUXI CONTENT */	

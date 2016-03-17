@@ -11,6 +11,7 @@ define('CSS_COMPONENTS', true); // Work with CSS coponents ( DEV must be true )
 
 // VALUES
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+define('GOOGLE_MAP_API_KEY', 'AIzaSyCNFjuQSUHbq9YSd8sSDBCRheFfLwuG5So'); // Javascript GOogle API key
 define('POST_EXCERPT_LENGTH', 40); // Excerpt length in words
 
 // ACTIVATE

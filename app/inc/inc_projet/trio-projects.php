@@ -58,6 +58,6 @@ $query_projects = new WP_Query( $args_projects );
             </div>
         </div>
         <div class="wrap-n al-c">    
-            <a href="#" class="button green"><i class="icon-uniE61C"></i> Voir la carte des projets</a>
+            <a href="<?php bloginfo('url'); ?>/projets/" class="button green"><i class="icon-uniE61C"></i> Voir la carte des projets</a>
         </div>       
 </section>

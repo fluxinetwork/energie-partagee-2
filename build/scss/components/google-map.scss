@@ -1,4 +1,33 @@
-#map {
-	width: 100%;
-	height: 400px;
+@import "../utils/_all.scss";
+/*------------------------------*\
+    #MAP
+\*------------------------------*/
+.map-filters{
+	@extend %list-reset;
+	display:flex;
+	justify-content:center;	
+}
+.map-holder{
+	position:relative;
+	
+	#map {
+		width: 100%;
+		height: 400px;
+	}
+	
+	#map.loader {
+		background: url('../img/loading.gif') center center no-repeat $c-bglight;
+	}
+	
+	.cards-map{
+		
+		.card-map{
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 30%;
+			background: #fff none;
+			height: 100%;
+		}
+	}
 }

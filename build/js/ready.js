@@ -32,7 +32,14 @@ var FOO = {
     },
 	projets: {
         init: function() {			
-			initGoogleMap();
+			initProjectsMap();
+        }
+    },
+	single: {
+        init: function() {
+			if($('body.single-projets').length){			
+				initSingleMap();
+			}
         }
     },	
 	contact:{

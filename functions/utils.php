@@ -239,49 +239,106 @@ function more_project_ajax(){
 add_action('wp_ajax_nopriv_more_project_ajax', 'more_project_ajax');
 add_action('wp_ajax_more_project_ajax', 'more_project_ajax');
 
+
 /**
  * Load JSON for Google map
  * Must active admin-ajax.php in scripts.php
- */
+ */ 
 function get_json_map(){	
-		
+
+	// Global array	
     $results = array();
-
-    $args = array(
-        'suppress_filters' => true,
-        'post_type' => 'projets',
-        'posts_per_page' => -1,
-		 'post_status' => 'publish'
-    );
-
+	
+	// Query parameters 
+	$suppress_filters = (isset($_POST["suppress_filters"])) ? $_POST["suppress_filters"] : true;
+    $post_type = (isset($_POST['post_type'])) ? $_POST['post_type'] : 'projets';
+	$posts_per_page = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : -1;
+	$post_status = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : 'publish';	
+	
+	$category = (isset($_POST["category"])) ? $_POST["category"] : 'all_cat';	
+	
+	// Query params for projects
+	if($post_type == 'projets'):
+	
+		if($category=='all_cat'):
+			$category = get_terms( 'type_energie', array(
+				'hide_empty' => 0,
+				'fields' => 'id=>slug'
+			) );
+		endif;
+	
+		$args = array(
+			'suppress_filters' => $suppress_filters,
+			'post_type' => $post_type,
+			'posts_per_page' => $posts_per_page,
+			 'post_status' => $post_status,
+			 'tax_query' => array(
+					array(
+						'taxonomy' => 'type_energie',
+						'field'    => 'slug',
+						'terms'    => $category,
+					)
+				)
+		);
+	endif; // End query params for projects
 		
     $loop = new WP_Query($args);
 
     if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+	
+		// Excerpt
+		if( get_field('google_description') ):							
+			$excerpt = get_field('google_description');
+		else:
+			$excerpt = '';
+		endif;
 		
 		// Thumb		
-		$project_img_id = get_post_thumbnail_id();
-		$project_img_array = wp_get_attachment_image_src($project_img_id, 'medium', true);		
-		$project_img_url = $project_img_array[0];
-				   
-		$location = get_field('coordonees_gps');
-		if( !empty($location) ){
-			$latitude = $location['lat'];
-			$longitude = $location['lng'];
-		}
+		$post_img_id = get_post_thumbnail_id();
+		$post_img_array = wp_get_attachment_image_src($post_img_id, 'medium', true);		
+		$post_img_url = $post_img_array[0];
+				
+		// Query respons for projects
+		if($post_type == 'projets'):		
+			
+			// Taxo Slug		
+			$terms = get_the_terms( $loop->ID, 'type_energie' );
+			if ( !empty( $terms ) ) {
+				$term = array_shift( $terms );
+				$taxoslug = $term->slug;
+				$taxoname = $term->name;
+			}
+			// Stade		
+			$field_stade = get_field_object('status_projet');			
+			
+			// Location		   
+			$location = get_field('coordonees_gps');
+			if( !empty($location) ){
+				$latitude = $location['lat'];
+				$longitude = $location['lng'];
+			}
+			
+			$data = array(
+				'postType' => $post_type,            
+				'title' => get_the_title(),
+			   'image'  => $post_img_url,
+			   'region' => get_field('departement'),
+			   'permalink' => get_the_permalink(),
+			   'latitude' => $latitude, 
+			   'longitude' => $longitude,
+			   'catSlug' => $taxoslug,
+			   'catName' => $taxoname,
+			   'stadeSlug' => $field_stade['value'],
+			   'excerpt' => $excerpt
+			);
+		endif; // End query respons for projects
 		
-		$data = array(            
-       		'title' => get_the_title(),
-           'image'  => $project_img_url,
-           'region' => get_field('departement'),
-           'permalink' => get_the_permalink(),
-		   'latitude' => $latitude, 
-		   'longitude' => $longitude
-        );
+		// Push data to global array
 		$results[] = $data; 
 	
     endwhile; endif;
-
+	
+	// Output JSON
 	wp_send_json($results);
 
     wp_reset_postdata();   
