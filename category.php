@@ -3,11 +3,45 @@
 	$cat = get_the_category();
 	$cat_id = $cat[0]->cat_ID;
 	
+	if ( $cat_id == 15 ) :
+    	$title = 'Les actualités';
+    elseif ( $cat_id == 17 ) :
+    	$title = 'Dans les médias';
+    elseif ( $cat_id == 16 ) :
+    	$title = 'Les événements';
+    elseif ( $cat_id == 19 ) :				
+    	$title = 'Les ateliers';
+    elseif ( $cat_id == 20 ) :
+    	$title = 'Les formations';
+	else : 
+		$title = 'Les actualités';
+    endif;
+	
+	if ( $cat_id == 16 ) :
+	$args_category = array(
+			'post_type' => 'post',
+			'cat' => 19,
+			'orderby' => 'meta_value',
+			'meta_key' => 'date_atelier',
+			'order' => 'ASC',
+			'posts_per_page' => 3,
+			'meta_query' => array( 
+				array(
+					'key' => 'date_atelier', 
+					'value' => date("y-m-d"), 
+				    'compare' => '>=',
+				    'type' => 'DATE'
+				)
+			)  
+		);
+	else :	
 	$args_category = array(
 		'post_type' => 'post',
 		'cat' => $cat_id ,
 		'posts_per_page' => 12
 	);
+	endif;
+	
 	$query_category = new WP_Query( $args_category );
 ?>
 
@@ -15,19 +49,7 @@
  
   <header class="header-bloc">    
     <h1 class="h1">
-			<?php     			
-    			if ( $cat_id == 15 ) :
-    				echo 'Les actualités';
-    			elseif ( $cat_id == 17 ) :
-    				echo 'Dans les médias';
-    			elseif ( $cat_id == 16 ) :
-    				echo 'Les événements';
-    			elseif ( $cat_id == 19 ) :				
-    				echo 'Les ateliers';
-    			elseif ( $cat_id == 20 ) :
-    				echo 'Les formations';
-    			endif;
-    		?>    	
+			<?php the_title(); ?>    	
     </h1>
   </header>
   

@@ -214,8 +214,8 @@
   text-align: center;
 }
 
-/******* TEST ************/
-.category .card {
+/******* TEST ALL CATEGORIES ************/
+[class*=" page-template-page-categories"] .card {
   color: #fff;
   display: block;
   height: 100%;
@@ -227,11 +227,11 @@
   position: relative;
 }
 
-.category .wrap-l {
+[class*=" page-template-page-categories"] .wrap-l {
   padding: 0;
 }
 
-/******* END TEST ************/
+/******* END TEST ALL CATEGORIES ************/
 .duo-card .head__flex .s-title {
   margin-bottom: 0;
   margin-top: 1.2rem;
