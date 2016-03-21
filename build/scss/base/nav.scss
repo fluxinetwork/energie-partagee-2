@@ -97,14 +97,12 @@
 
 .navbar__id__social a {
   @extend %round-bt;
-  width: 2.5rem;
-  height: 2.5rem;
-  color:#fff;
+  width: 2.7rem;
+  height: 2.7rem;
   
   i{
 		display: inline-block;
-    	margin-top: 5px;
-		font-size:1.4rem;
+		font-size:2.6rem;
 	} 
 }
 
@@ -609,7 +607,7 @@ $c-placeholder : #fff;
     color: #000;
   }
   .navbar__id__social {
-    @include maxH(2.5rem);
+    @include maxH(2.8rem);
   }
 
   .no-pp .nav__dropdown .container {

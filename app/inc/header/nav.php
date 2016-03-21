@@ -72,9 +72,9 @@
     </div>
   </a>
   <ul class="navbar__id__social">
-    <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
-    <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
-    <li><a href="#" class="social--yout"><i class="icon-youtube"></i></a></li>
+    <li><a href="#" class="social--face"><i class="icon-facebook_26"></i></a></li>
+    <li><a href="#" class="social--twit"><i class="icon-twitter_26"></i></a></li>
+    <li><a href="#" class="social--yout"><i class="icon-youtube_26"></i></a></li>
   </ul>  
 </div>
 <form method="get" id="nav__search" class="nav__search" action="<?php bloginfo('url'); ?>/">

@@ -93,6 +93,7 @@
   position: relative;
   z-index: 5;
   letter-spacing: 0.5px;
+  background: none;
 }
 .button:before, .minicard:before {
   background: #000 none;
@@ -165,28 +166,29 @@
   margin-right: 0;
 }
 .social [class^="social--"], .social [class*=" social--"] {
-  background: #fff none;
   border-radius: 50%;
-  color: #fff;
   display: block;
   text-align: center;
 }
+.social [class^="social--"]:before, .social [class*=" social--"]:before {
+  background: #fff none;
+}
 .social [class^="social--"] i, .social [class*=" social--"] i {
   display: inline-block;
-  height: 4rem;
-  line-height: 4rem;
+  font-size: 4rem;
   vertical-align: middle;
-  width: 4rem;
 }
 
-.navbar__id .social--face, .social .social--face {
-  background: #3b5998 none;
+.icon-facebook_40, .icon-facebook_26 {
+  color: #3b5998;
 }
-.navbar__id .social--twit, .social .social--twit {
-  background: #55acee none;
+
+.icon-twitter_40, .icon-twitter_26 {
+  color: #55acee;
 }
-.navbar__id .social--yout, .social .social--yout {
-  background: #dc2925 none;
+
+.icon-youtube_40, .icon-youtube_26 {
+  color: #dc2925;
 }
 
 /* EDIT LINK FOR ADMINS */

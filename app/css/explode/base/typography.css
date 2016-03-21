@@ -5,7 +5,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700);
 .transition {
   transition: all 0.2s ease-in-out;
 }
@@ -62,6 +62,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/*@import url(https://fonts.googleapis.com/css?family=PT+Sans);*/
 @font-face {
   font-family: 'avantgarde';
   src: url("../../../fonts/avantgarde/avantgarde-regular-webfont.eot");
@@ -87,8 +88,8 @@
 /* Icon font */
 @font-face {
   font-family: 'icomoon';
-  src: url("../../../fonts/icofont/icomoon.eot?di891l");
-  src: url("../../../fonts/icofont/icomoon.eot?di891l#iefix") format("embedded-opentype"), url("../../../fonts/icofont/icomoon.woff2?di891l") format("woff2"), url("../../../fonts/icofont/icomoon.ttf?di891l") format("truetype"), url("../../../fonts/icofont/icomoon.woff?di891l") format("woff"), url("../../../fonts/icofont/icomoon.svg?di891l#icomoon") format("svg");
+  src: url("../../../fonts/icofont/icomoon.eot?wy6knz");
+  src: url("../../../fonts/icofont/icomoon.eot?wy6knz#iefix") format("embedded-opentype"), url("../../../fonts/icofont/icomoon.woff2?wy6knz") format("woff2"), url("../../../fonts/icofont/icomoon.ttf?wy6knz") format("truetype"), url("../../../fonts/icofont/icomoon.woff?wy6knz") format("woff"), url("../../../fonts/icofont/icomoon.svg?wy6knz#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -106,240 +107,140 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-round-check:before {
+.icon-biomasse_64:before {
   content: "\e900";
 }
 
-.icon-round-next-arrow:before {
+.icon-biomasse_100:before {
   content: "\e901";
 }
 
-.icon-round-next:before {
+.icon-calendar_20:before {
   content: "\e902";
 }
 
-.icon-round-plus:before {
+.icon-check_64:before {
   content: "\e903";
 }
 
-.icon-twitter:before {
-  content: "\e040";
+.icon-chevronright_32:before {
+  content: "\e904";
 }
 
-.icon-facebook:before {
-  content: "\e041";
+.icon-chevronright_64:before {
+  content: "\e905";
 }
 
-.icon-youtube:before {
-  content: "\e051";
+.icon-close_64:before {
+  content: "\e906";
 }
 
-.icon-uniE600:before {
-  content: "\e600";
+.icon-download_64:before {
+  content: "\e907";
 }
 
-.icon-uniE601:before {
-  content: "\e601";
+.icon-eco_64:before {
+  content: "\e908";
 }
 
-.icon-uniE602:before {
-  content: "\e602";
+.icon-eco_100:before {
+  content: "\e909";
 }
 
-.icon-uniE603:before {
-  content: "\e603";
+.icon-eolien_64:before {
+  content: "\e90a";
 }
 
-.icon-uniE604:before {
-  content: "\e604";
+.icon-eolien_100:before {
+  content: "\e90b";
 }
 
-.icon-uniE605:before {
-  content: "\e605";
+.icon-euro_20:before {
+  content: "\e90c";
 }
 
-.icon-uniE606:before {
-  content: "\e606";
+.icon-facebook_26:before {
+  content: "\e90d";
 }
 
-.icon-uniE607:before {
-  content: "\e607";
+.icon-facebook_40:before {
+  content: "\e90e";
 }
 
-.icon-uniE608:before {
-  content: "\e608";
+.icon-fleche_64:before {
+  content: "\e90f";
 }
 
-.icon-uniE609:before {
-  content: "\e609";
+.icon-geo_64:before {
+  content: "\e910";
 }
 
-.icon-uniE60A:before {
-  content: "\e60a";
+.icon-geo_100:before {
+  content: "\e911";
 }
 
-.icon-uniE60B:before {
-  content: "\e60b";
+.icon-heart_20:before {
+  content: "\e912";
 }
 
-.icon-uniE60C:before {
-  content: "\e60c";
+.icon-hydro_64:before {
+  content: "\e913";
 }
 
-.icon-uniE60D:before {
-  content: "\e60d";
+.icon-hydro_100:before {
+  content: "\e914";
 }
 
-.icon-uniE60E:before {
-  content: "\e60e";
+.icon-lightbolt_20:before {
+  content: "\e915";
 }
 
-.icon-uniE60F:before {
-  content: "\e60f";
+.icon-pencil_20:before {
+  content: "\e916";
 }
 
-.icon-uniE610:before {
-  content: "\e610";
+.icon-pin_20:before {
+  content: "\e917";
 }
 
-.icon-uniE611:before {
-  content: "\e611";
+.icon-plus_64:before {
+  content: "\e918";
 }
 
-.icon-uniE612:before {
-  content: "\e612";
+.icon-search_32:before {
+  content: "\e919";
 }
 
-.icon-uniE613:before {
-  content: "\e613";
+.icon-solaire_64:before {
+  content: "\e91a";
 }
 
-.icon-uniE614:before {
-  content: "\e614";
+.icon-solaire_100:before {
+  content: "\e91b";
 }
 
-.icon-uniE615:before {
-  content: "\e615";
+.icon-top_64:before {
+  content: "\e91c";
 }
 
-.icon-uniE616:before {
-  content: "\e616";
+.icon-twitter_26:before {
+  content: "\e91d";
 }
 
-.icon-uniE617:before {
-  content: "\e617";
+.icon-twitter_40:before {
+  content: "\e91e";
 }
 
-.icon-uniE618:before {
-  content: "\e618";
+.icon-video_20:before {
+  content: "\e91f";
 }
 
-.icon-uniE619:before {
-  content: "\e619";
+.icon-youtube_26:before {
+  content: "\e920";
 }
 
-.icon-uniE61A:before {
-  content: "\e61a";
-}
-
-.icon-uniE61B:before {
-  content: "\e61b";
-}
-
-.icon-uniE61C:before {
-  content: "\e61c";
-}
-
-.icon-uniE61D:before {
-  content: "\e61d";
-}
-
-.icon-uniE61E:before {
-  content: "\e61e";
-}
-
-.icon-uniE61F:before {
-  content: "\e61f";
-}
-
-.icon-uniE620:before {
-  content: "\e620";
-}
-
-.icon-uniE621:before {
-  content: "\e621";
-}
-
-.icon-uniE622:before {
-  content: "\e622";
-}
-
-.icon-uniE623:before {
-  content: "\e623";
-}
-
-.icon-uniE624:before {
-  content: "\e624";
-}
-
-.icon-uniE625:before {
-  content: "\e625";
-}
-
-.icon-uniE626:before {
-  content: "\e626";
-}
-
-.icon-uniE627:before {
-  content: "\e627";
-}
-
-.icon-uniE628:before {
-  content: "\e628";
-}
-
-.icon-uniE629:before {
-  content: "\e629";
-}
-
-.icon-uniE62A:before {
-  content: "\e62a";
-}
-
-.icon-uniE62B:before {
-  content: "\e62b";
-}
-
-.icon-uniE62D:before {
-  content: "\e62d";
-}
-
-.icon-uniE926:before {
-  content: "\e926";
-}
-
-.icon-uniE92B:before {
-  content: "\e92b";
-}
-
-.icon-uniEADA:before {
-  content: "\eada";
-}
-
-.icon-uniEADB:before {
-  content: "\eadb";
-}
-
-.icon-uniEADC:before {
-  content: "\eadc";
-}
-
-.icon-uniEADD:before {
-  content: "\eadd";
-}
-
-.icon-uniEADE:before {
-  content: "\eade";
+.icon-youtube_40:before {
+  content: "\e921";
 }
 
 /*------------------------------*\
@@ -482,7 +383,7 @@ p, .p, .p-ss, .legend {
 }
 
 .p-ss, .legend {
-  font-family: "PT sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .legend {

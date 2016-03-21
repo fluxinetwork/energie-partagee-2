@@ -38,33 +38,32 @@
 	}
 	
 	[class^="social--"], [class*=" social--"]{
-		background: $c-textwhite none;
-    	border-radius: 50%;
-    	color: #fff;
+		
+    	border-radius: 50%;    	
     	display: block;
     	text-align: center;
-		
-		i{
+		&:before{
+			background: #fff none;
+		}
+		i{			
 			display: inline-block;
-			height: 4rem;
-			line-height: 4rem;
-			vertical-align: middle;
-			width: 4rem;	
+			font-size: 4rem;
+			vertical-align: middle;	
 		}
 	}
 	
 }
-.navbar__id, .social{
-	.social--face{
-		background: #3b5998 none;	
-	}
-	.social--twit{
-		background: #55acee none;	
-	}
-	.social--yout{
-		background: #dc2925 none;	
-	}
+
+.icon-facebook_40,.icon-facebook_26{
+	color: #3b5998;	
 }
+.icon-twitter_40,.icon-twitter_26{
+	color: #55acee;	
+}
+.icon-youtube_40,.icon-youtube_26{
+	color: #dc2925;	
+}
+
 
 
 .link {

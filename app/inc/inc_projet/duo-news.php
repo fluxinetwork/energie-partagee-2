@@ -16,10 +16,7 @@ $query_news = new WP_Query( $args_news );
             	</div>
             	<div class="box__half">
                     <span class="lighter">Suivez-nous sur</span> 
-                    <ul class="social">
-                        <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
-                       <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
-                    </ul>  
+                    <?php get_socials(); ?>
            	  </div>
              	<div class="box__fixe"></div>
         	</div>
@@ -61,7 +58,7 @@ $query_news = new WP_Query( $args_news );
 				?>
                 
                 <div class="box__fixe"> 
-                    <a class="button-round grey" href="<?php echo get_bloginfo ('url').'/nous-suivre/actualites/'; ?>"><i class="icon-round-plus"></i></a> 
+                    <a class="button-round grey" href="<?php echo get_bloginfo ('url').'/nous-suivre/actualites/'; ?>"><i class="icon-plus_64"></i></a> 
                 </div>
            </div>
        </div>

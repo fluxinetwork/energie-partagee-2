@@ -112,6 +112,41 @@
   margin-top: auto;
 }
 
+.p-details {
+  background: #fff none;
+}
+.p-details .p-details__nrg {
+  font-size: 10rem;
+  line-height: 0;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.p-details .p-details__nrg i {
+  border-radius: 50%;
+}
+.p-details .p-details__infos {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 3rem;
+}
+.p-details .p-details__infos i {
+  display: inline-block;
+  vertical-align: top;
+}
+.p-details .p-details__infos span {
+  display: inline-block;
+}
+.p-details .p-details__infos span strong {
+  display: block;
+}
+.p-details .p-details__nrg i, .p-details .p-details__equi {
+  background-color: #eb6c1d;
+  color: #fff;
+}
+.p-details .p-details__equi {
+  padding: 1rem 2rem;
+}
+
 /*------------------------------*\
 
     # LAYOUTS
@@ -150,9 +185,20 @@
   margin-top: 3rem;
   color: #fff;
 }
+.header-bloc .h4 span {
+  display: inline-block;
+  margin: 0 0.66667rem 0 0;
+}
+.header-bloc .h4 span:last-child {
+  margin-left: 2rem;
+}
+.header-bloc .button {
+  margin-top: 3rem;
+}
 
 .page .header-bloc, .single .header-bloc, .search-results .header-bloc {
-  padding-bottom: 26rem;
+  padding-bottom: 24rem;
+  margin-bottom: 24rem;
 }
 .page .header-bloc .h1, .single .header-bloc .h1, .search-results .header-bloc .h1 {
   margin: 1rem auto 0;
@@ -212,6 +258,17 @@
   margin: 0 auto;
   overflow: hidden;
   text-align: center;
+}
+
+.holder-card {
+  max-width: 260px;
+}
+
+.a-project .holder-card {
+  max-width: 260px;
+  position: absolute;
+  bottom: 0;
+  left: 8rem;
 }
 
 /******* TEST ALL CATEGORIES ************/
@@ -372,6 +429,21 @@
   margin-bottom: 4rem;
 }
 
+.testimony {
+  background: -webkit-radial-gradient(#ee8442, #eb6c1d), center no-repeat #eb6c1d scroll;
+  background: radial-gradient(#ee8442, #eb6c1d), center no-repeat #eb6c1d scroll;
+  color: #fff;
+  padding: 4rem 4rem 0;
+}
+.testimony .box__half {
+  padding-right: 0;
+  /*flex:100%;
+  width:100%;*/
+}
+.testimony p {
+  color: #fff;
+}
+
 @media screen and (min-width: 300px) {
   .box-logos__item {
     margin: 0 1rem 4rem;
@@ -435,6 +507,11 @@
     flex: inherit;
     margin-bottom: 0;
   }
+
+  .testimony .box__half:first-child {
+    padding-right: 4rem;
+    max-width: 300px;
+  }
 }
 @media screen and (min-width: 830px) {
   .trio-card .box__half {
@@ -481,5 +558,12 @@
   .box-logos .box-logos__btn {
     align-self: center;
     flex: inherit;
+  }
+
+  .testimony {
+    padding: 4rem 8rem 0;
+  }
+  .testimony .holder-round {
+    margin: 0;
   }
 }

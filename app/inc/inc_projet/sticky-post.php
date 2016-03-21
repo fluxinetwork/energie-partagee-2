@@ -19,7 +19,7 @@ if ( isset($sticky[0]) ):
                         <?php echo get_field('google_description'); ?>
                     </p>
                    </div> 
-                    <div class="box__fixe"><a class="button-round" href="#"><i class="icon-round-next-arrow"></i></a></div>
+                    <div class="box__fixe"><a class="button-round" href="#"><i class="icon-fleche_64"></i></a></div>
                 </div>            
             </article>
         </section>

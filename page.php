@@ -35,7 +35,7 @@
 		/////////////////////////////////////
 		   
 		if( have_rows('elements_page') ):
-			echo '<article class="fluxi-content fitvids wrap-n">';
+			echo '<article class="fluxi-wrap fluxi-content fitvids">';
 						
 				echo $main_image;						
 						

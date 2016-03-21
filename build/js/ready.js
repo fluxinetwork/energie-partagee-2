@@ -24,6 +24,9 @@ var FOO = {
         init: function() {
 			$(".fitvids").fitVids();
 			initLoadMorePostsBtn();
+			if($('body.page-template-page-projets').length){	
+				initProjectsMap();
+			}
         }
     },
 	category: {

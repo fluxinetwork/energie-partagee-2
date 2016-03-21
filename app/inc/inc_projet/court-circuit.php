@@ -9,7 +9,7 @@
         <input class="courtcircuit__input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email" required aria-required="true">
       </div>
       <div class="box__fixe">
-        <button type="submit" class="button-round"><i class="icon-round-check"></i></button>
+        <button type="submit" class="button-round"><i class="icon-check_64"></i></button>
       </div>
     </div>
   </form>

@@ -52,3 +52,45 @@
 		margin-top:auto;
 	}
 }
+
+%p-details{
+	
+	background:#fff none;
+	
+	.p-details__nrg{		
+		font-size: 10rem;
+		line-height: 0;
+		text-align: center;
+		margin-bottom:$space*0.4;
+		
+		i{		
+			border-radius:50%;
+		}
+	}
+	.p-details__infos{
+		list-style-type:none;
+		margin:0;
+		padding:0 $space*0.3;
+		
+		i{
+			display:inline-block;
+			vertical-align:top;
+		}
+		span {
+			display:inline-block;
+			
+			strong{
+				display:block;	
+			}
+		}
+	}
+	
+	.p-details__nrg i, .p-details__equi{
+		background-color:$c-focus;
+		color:#fff;		
+	}
+	
+	.p-details__equi{
+		padding:$space*0.1 $gutter/2;
+	}
+}

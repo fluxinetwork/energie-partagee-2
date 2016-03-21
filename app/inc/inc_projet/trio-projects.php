@@ -52,12 +52,12 @@ $query_projects = new WP_Query( $args_projects );
 				?>
               
               <div class="box__fixe">
-                    <button type="button" class="button-round grey js-more-project"><i class="icon-round-next"></i></button> 
+                    <button type="button" class="button-round grey js-more-project"><i class="icon-chevronright_64"></i></button> 
               </div>               
                        
             </div>
         </div>
         <div class="wrap-n al-c">    
-            <a href="<?php bloginfo('url'); ?>/projets/" class="button green"><i class="icon-uniE61C"></i> Voir la carte des projets</a>
+            <a href="<?php bloginfo('url'); ?>/projets/" class="button green"><i class="icon-pin_20"></i> Voir la carte des projets</a>
         </div>       
 </section>

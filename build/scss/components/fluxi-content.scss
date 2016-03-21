@@ -1,9 +1,9 @@
 @import "../utils/_all.scss";
 @import "../components/lib/c-buttons.scss";
 
-.fluxi-content{
+.fluxi-wrap{
 	background-color:#fff;
-	margin:-$space*1.8 auto $space;
+	margin:-$space*4 auto $space;
 	border-radius:$radius $radius 0 0;
 	min-height:200px;
 	
@@ -16,9 +16,16 @@
 		padding-top:$space/2;	
 	}
 	
+}
+
+.fluxi-content{	
+	
+	.h3 {
+		margin-top: $space/2;
+	}	
 		
 	.social{
-		margin:0 0	$space/2;
+		margin:0 0	$space*0.4;
 		
 		&:after{
 			border-top:2px solid $c-bglight;			
@@ -64,7 +71,7 @@
 		font-family: $txt-fontserif;
 		color:$c-text;
 		li{
-			margin-bottom:	$space*0.1			
+			margin-bottom:	$space*0.2			
 		}
 	}
 	.lightbox {
@@ -118,17 +125,8 @@
 	.box__half:last-child{
 		padding-right:0;
 		margin-bottom:0;
-	}
+	}	
 	
-	.holder-round{
-		border-radius:50%;
-		overflow:hidden;	
-		width:260px;
-		height:260px;
-		background-size:cover;
-		background-repeat:no-repeat;
-		margin:0 auto;
-	}
 	.clikable__title{
 		margin-bottom:$space*0.1;
 	}
@@ -139,7 +137,15 @@
 		margin-bottom:$space*0.6;
 	}
 }
-	
+.holder-round{
+	border-radius:50%;
+	overflow:hidden;	
+	width:260px;
+	height:260px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	margin:0 auto;
+}	
 .clikarde{
 	display: flex;
     flex-flow: column nowrap;
@@ -169,12 +175,17 @@
 		font-weight: normal;
 		padding-bottom: $space*0.1;
 		margin-bottom: $space*0.1;
-		display:flex;
+		cursor:pointer;
+		
 		margin-top:0;
 		
-		.accordion__head__icon {
+		i {
+			color:$c-light;
 			align-self:center;
 			margin-right:$gutter/4;
+			font-size:3.2rem;
+			display:inline-block;
+			vertical-align: middle;
 		}
 	}	
 	.accordion__content{
@@ -188,7 +199,10 @@
 }
 .accordion.open{
 	.accordion__head{
-				
+		i {
+			color:$c-dark;
+			transform:rotate(90deg);
+		}
 	}	
 }
 @media screen and (min-width: $bp--small) {	

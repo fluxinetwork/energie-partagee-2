@@ -211,14 +211,12 @@
 }
 
 .navbar__id__social a {
-  width: 2.5rem;
-  height: 2.5rem;
-  color: #fff;
+  width: 2.7rem;
+  height: 2.7rem;
 }
 .navbar__id__social a i {
   display: inline-block;
-  margin-top: 5px;
-  font-size: 1.4rem;
+  font-size: 2.6rem;
 }
 
 /*------------------------------*\
@@ -674,7 +672,7 @@
   }
 
   .navbar__id__social {
-    max-height: 2.5rem;
+    max-height: 2.8rem;
     overflow: hidden;
   }
 

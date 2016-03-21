@@ -40,12 +40,25 @@
 		margin-bottom: 0;
 		margin-top: $space*0.3;
 		color:$c-textwhite;
+		
+		span{
+			display:inline-block;
+			margin:0 $gutter/6 0 0;
+			
+			&:last-child{
+				margin-left:$gutter/2;	
+			}
+		}
+	}
+	.button{
+		margin-top: $space*0.3;
 	}
 		
 }
 .page, .single, .search-results{ 
 	.header-bloc{
-		padding-bottom:$space*2.6;
+		padding-bottom:$space*2.4;
+		margin-bottom:$space*2.4;
 	
 		.h1{
 			margin:$space*0.1 auto 0;		
@@ -124,6 +137,25 @@
 	overflow: hidden;
 	text-align: center;	
 }
+
+
+.holder-card{
+	max-width:260px;	
+}
+
+.a-project .holder-card{
+	max-width:260px;
+	position:absolute;
+	bottom:0;
+	left:$gutter*2;	
+}
+
+.p-details{
+	@extend %p-details;
+		
+}
+
+
 /******* TEST ALL CATEGORIES ************/
 
 [class*=" page-template-page-categories"] .card{
@@ -184,6 +216,7 @@
 		margin-top:$space*0.3;
 	 }
 }
+
 
 /* Courtcircuit */
 .courtcircuit{
@@ -302,6 +335,24 @@
 	margin-bottom:$gutter;		
 }	
 
+.testimony{
+	@include background(radial-gradient(lighten( $c-focus, 8% ),$c-focus), center no-repeat $c-focus scroll);
+	color:#fff;
+	padding:$space*0.4 $gutter 0;
+	
+	.box__half{
+		
+		padding-right:0;
+		
+		/*flex:100%;
+		width:100%;*/
+			
+	}
+	p{
+		color:#fff;
+	}	
+}
+
 
 
 
@@ -378,7 +429,14 @@
 			margin-bottom:0;
 		}
 			
-	}	
+	}
+	.testimony {	
+		.box__half:first-child{
+			padding-right:$gutter;			
+			max-width:300px;						
+		}
+	}
+	
 }
 @media screen and (min-width: $bp--medium) {
 	
@@ -437,4 +495,14 @@
 			flex: inherit;				
 		}
 	}
+	
+	.testimony {
+		padding:$space*0.4 $gutter*2 0;
+		
+		
+		.holder-round{
+			margin:0;	
+		}
+	}
+		
 }

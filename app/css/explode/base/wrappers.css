@@ -80,7 +80,7 @@
 }
 
 /*Wrap normal*/
-.wrap-n {
+.wrap-n, .fluxi-wrap {
   margin: 0 auto;
   max-width: 83rem;
   padding-left: 2rem;
@@ -95,7 +95,7 @@
   padding-right: 2rem;
 }
 
-/*Wrap orange*/
+/*Wrap with Bg*/
 .wrap-bg {
   background: #f2f2f2;
   color: #fff;
@@ -106,6 +106,23 @@
 }
 .wrap-bg .highlight-txt {
   color: #fff;
+}
+
+.wrap-bg.c-main {
+  background: none;
+  margin: 5rem 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+.wrap-bg.c-main:before {
+  background: #65aa04;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: scaleX(5);
 }
 
 .wrap-bg.highlight {
@@ -170,7 +187,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .wrap-n {
+  .wrap-n, .fluxi-wrap {
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -212,7 +229,7 @@
   }
 }
 @media screen and (min-width: 830px) {
-  .wrap-n {
+  .wrap-n, .fluxi-wrap {
     padding-left: 8rem;
     padding-right: 8rem;
   }

@@ -136,12 +136,31 @@ function custom_breadcrumbs() {
  * Social
  */
 function get_socials(){
-	echo'<ul class="social">
-			<li><i class="icon-round-next-arrow"></i></li>
-           <li><a href="#" class="social--face"><i class="icon-facebook"></i></a></li>
-           <li><a href="#" class="social--twit"><i class="icon-twitter"></i></a></li>
+	echo'<ul class="social">			
+           <li><a href="#" class="social--face"><i class="icon-facebook_40"></i></a></li>
+           <li><a href="#" class="social--twit"><i class="icon-twitter_40"></i></a></li>
          </ul>';	
 } 
+function get_description(){
+	if( get_field('google_description') ):							
+		echo '<h2 class="description">'.get_field('google_description').'</h2>';
+	else:
+		echo '<h2 class="description">Attention !! Vous devez remplir le champ description et/où mettre à jour votre page. </h2>';	
+	endif;
+}
+/**
+ * get_top_parent_page_id
+ */
+function get_top_parent_page_id() { 
+	global $post; 
+
+	if ($post->ancestors) { 
+		return end($post->ancestors); 
+	} else { 
+		return $post->ID; 
+	} 
+}
+
 /**
  * Load more posts
  * Must active admin-ajax.php in scripts.php
