@@ -60,6 +60,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 .fluxi-content p a, .fluxi-content .list li a {
   position: relative;
   font-family: "avantgarde", Arial;
@@ -93,7 +94,7 @@
   margin: 0 auto;
 }
 .fluxi-wrap h2.description {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .fluxi-content .h3 {
@@ -188,14 +189,15 @@
   padding-right: 0;
   margin-bottom: 0;
 }
-.clikable.wide .clikable__title {
-  margin-bottom: 1rem;
-}
 .clikable.wide .button {
   margin-top: 0;
 }
 .clikable.wide .lightbox {
   margin-bottom: 6rem;
+}
+
+.clikable__title {
+  margin-bottom: 1rem;
 }
 
 .holder-round {
@@ -235,7 +237,6 @@
   color: #b3b3b3;
   align-self: center;
   margin-right: 1rem;
-  font-size: 3.2rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -282,6 +283,10 @@
   }
 }
 @media screen and (min-width: 830px) {
+  .fluxi-wrap h2.description {
+    padding-top: 5rem;
+  }
+
   .fluxi-content .lightbox .legend {
     padding: 0 8rem;
   }

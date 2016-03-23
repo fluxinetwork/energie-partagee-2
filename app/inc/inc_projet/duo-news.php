@@ -25,14 +25,23 @@ $query_news = new WP_Query( $args_news );
            <?php					
 					if ( $query_news->have_posts() ) :
 						while ( $query_news->have_posts() ) : $query_news->the_post();						
-							// Thumb
-							if ( has_post_thumbnail() ):
-								$news_img_id = get_post_thumbnail_id();
-								$news_img_array = wp_get_attachment_image_src($news_img_id, 'medium', true);
-								$news_img_url = $news_img_array[0];									
-                             $news_img = '<img class="img-reponsive" src="'.$news_img_url.'">';
-							endif;
 							
+							// Thumb	
+							$main_image_obj = get_field( 'main_image' );
+							$news_img ='';
+						
+							if ( has_post_thumbnail() && empty($main_image_obj)) :
+								$post_img_id = get_post_thumbnail_id();
+								$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
+								$post_img_url = $post_img_array[0];
+						
+								$news_img = '<img class="img-reponsive" src="'.$post_img_url.'">';
+							elseif(!empty($main_image_obj)):
+						
+								$news_img = '<img class="img-reponsive" src="'.$main_image_obj['url'].'">';
+							endif;		
+							
+							// date
 							$date_news = get_the_time('d M');                         
 							
 							?>

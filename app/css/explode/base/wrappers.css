@@ -60,6 +60,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 /*------------------------------*\
 
     #WRAPS
@@ -110,7 +111,7 @@
 
 .wrap-bg.c-main {
   background: none;
-  margin: 5rem 0;
+  margin: 6rem 0 0;
   padding: 0;
   position: relative;
   z-index: 1;

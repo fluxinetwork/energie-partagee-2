@@ -60,6 +60,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 .card {
   color: #fff;
   display: block;
@@ -111,15 +112,22 @@
   font-weight: normal;
   margin-top: auto;
 }
+.minicard .link i {
+  align-self: center;
+  margin-right: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 .p-details {
   background: #fff none;
+  padding-top: 3rem;
 }
 .p-details .p-details__nrg {
   font-size: 10rem;
   line-height: 0;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .p-details .p-details__nrg i {
   border-radius: 50%;
@@ -127,24 +135,58 @@
 .p-details .p-details__infos {
   list-style-type: none;
   margin: 0;
-  padding: 0 3rem;
+  padding: 0 3rem 2rem;
 }
-.p-details .p-details__infos i {
-  display: inline-block;
-  vertical-align: top;
+.p-details .p-details__infos li {
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+  position: relative;
 }
-.p-details .p-details__infos span {
-  display: inline-block;
+.p-details .p-details__infos li:last-child {
+  margin-bottom: 0;
 }
-.p-details .p-details__infos span strong {
+.p-details .p-details__infos li:before {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2rem;
+}
+.p-details .p-details__infos .p-details__infos__loca:before {
+  content: "\e917";
+}
+.p-details .p-details__infos .p-details__infos__prod:before {
+  content: "\e915";
+}
+.p-details .p-details__infos strong {
   display: block;
-}
-.p-details .p-details__nrg i, .p-details .p-details__equi {
-  background-color: #eb6c1d;
-  color: #fff;
 }
 .p-details .p-details__equi {
   padding: 1rem 2rem;
+  position: relative;
+}
+.p-details .p-details__nrg i, .p-details .p-details__equi {
+  color: #fff;
+}
+
+.p-details .p-details__equi:before {
+  border-style: solid;
+  border-width: 0 0.8rem 1.2rem;
+  content: "";
+  height: 0;
+  left: 3.2rem;
+  position: absolute;
+  top: -1rem;
+  width: 0;
 }
 
 /*------------------------------*\
@@ -264,11 +306,43 @@
   max-width: 260px;
 }
 
+/* Modules projet */
 .a-project .holder-card {
-  max-width: 260px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #65aa04;
+}
+
+.micro-legende {
+  font: 400 12px "Roboto", sans-serif;
+  color: #b3b3b3;
+}
+
+.infosbloc {
+  position: relative;
+  background: #f2f2f2;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 3px;
+}
+.infosbloc h4 {
+  padding-bottom: 1rem;
+}
+.infosbloc .pointe--up {
   position: absolute;
-  bottom: 0;
-  left: 8rem;
+  top: -12px;
+}
+
+.pointe--up {
+  border-style: solid;
+  border-width: 0 8px 12px 8px;
+  border-color: transparent transparent #f2f2f2 transparent;
 }
 
 /******* TEST ALL CATEGORIES ************/
@@ -364,7 +438,7 @@
   color: #fff;
 }
 
-.courtcircuit__input {
+.courtcircuit__input, .input__mailing {
   background: none transparent;
   border-bottom: 1px solid #f57f35;
   color: #fff;
@@ -374,19 +448,19 @@
   width: 100%;
   padding: 0.4rem 1rem;
 }
-.courtcircuit__input::-webkit-input-placeholder {
+.courtcircuit__input::-webkit-input-placeholder, .input__mailing::-webkit-input-placeholder {
   color: #fff;
   opacity: 1;
 }
-.courtcircuit__input::-moz-placeholder {
+.courtcircuit__input::-moz-placeholder, .input__mailing::-moz-placeholder {
   color: #fff;
   opacity: 1;
 }
-.courtcircuit__input:-ms-input-placeholder {
+.courtcircuit__input:-ms-input-placeholder, .input__mailing:-ms-input-placeholder {
   color: #fff;
   opacity: 1;
 }
-.courtcircuit__input:-moz-placeholder {
+.courtcircuit__input:-moz-placeholder, .input__mailing:-moz-placeholder {
   color: #fff;
   opacity: 1;
 }
@@ -430,15 +504,11 @@
 }
 
 .testimony {
-  background: -webkit-radial-gradient(#ee8442, #eb6c1d), center no-repeat #eb6c1d scroll;
-  background: radial-gradient(#ee8442, #eb6c1d), center no-repeat #eb6c1d scroll;
   color: #fff;
   padding: 4rem 4rem 0;
 }
 .testimony .box__half {
   padding-right: 0;
-  /*flex:100%;
-  width:100%;*/
 }
 .testimony p {
   color: #fff;
@@ -465,6 +535,24 @@
 
   .header-bloc {
     padding-top: 16rem;
+  }
+
+  .holder-card {
+    max-width: 260px;
+  }
+
+  .p-details {
+    padding-top: 4.5rem;
+  }
+  .p-details .p-details__nrg {
+    margin-bottom: 3rem;
+  }
+
+  .a-project .holder-card {
+    max-width: 260px;
+    position: absolute;
+    bottom: 0;
+    left: 8rem;
   }
 
   .duo-card .box__half {

@@ -33,7 +33,7 @@
 	li {
 		list-style-type:none;	
 		display:inline-block;
-		margin-right:3px;
+		margin-right:$space*0.1;
 		&:last-child { margin-right:0;}	
 	}
 	

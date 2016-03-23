@@ -142,19 +142,50 @@
 .holder-card{
 	max-width:260px;	
 }
-
+/* Modules projet */
 .a-project .holder-card{
-	max-width:260px;
-	position:absolute;
-	bottom:0;
-	left:$gutter*2;	
+	width:100%;
+	max-width:100%;	
 }
 
 .p-details{
 	@extend %p-details;
-		
 }
 
+.dot {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: $c-main;
+}
+
+.micro-legende {
+	font: 400 12px $txt-font;
+	color: $c-light;
+}
+
+.infosbloc {
+ 	position: relative;
+ 	background: $c-bglight;
+ 	padding: $gutter/2;
+ 	margin-top: $gutter/2;
+ 	border-radius: $radius;
+
+ 	h4 {
+ 		padding-bottom: $gutter/4
+ 	}
+
+ 	.pointe--up {
+ 		position: absolute;
+ 		top: -12px;
+ 	}
+}
+
+.pointe--up {
+	border-style: solid;
+	border-width: 0 8px 12px 8px;
+	border-color: transparent transparent $c-bglight transparent;
+}
 
 /******* TEST ALL CATEGORIES ************/
 
@@ -262,7 +293,7 @@
 	}
 	
 }
-.courtcircuit__input{
+.courtcircuit__input, .input__mailing{
 	background: none transparent;
 	border-bottom:1px solid #f57f35;
 	color: $c-textwhite;
@@ -335,18 +366,12 @@
 	margin-bottom:$gutter;		
 }	
 
-.testimony{
-	@include background(radial-gradient(lighten( $c-focus, 8% ),$c-focus), center no-repeat $c-focus scroll);
+.testimony{	
 	color:#fff;
 	padding:$space*0.4 $gutter 0;
 	
-	.box__half{
-		
-		padding-right:0;
-		
-		/*flex:100%;
-		width:100%;*/
-			
+	.box__half{		
+		padding-right:0;				
 	}
 	p{
 		color:#fff;
@@ -379,6 +404,24 @@
 	
 	.header-bloc{
 		padding-top:$space*1.6;	
+	}
+	
+	.holder-card{
+		max-width:260px;	
+	}
+	
+	.p-details{
+		padding-top:$space*0.45;
+		
+		.p-details__nrg{		
+			margin-bottom:$space*0.3;		
+		}
+	}
+	.a-project .holder-card{
+		max-width:260px;
+		position:absolute;
+		bottom:0;
+		left:$gutter*2;	
 	}
 	
 	.duo-card{

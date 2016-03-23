@@ -1,0 +1,793 @@
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* TRANSITIONS */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-none {
+  display: none !important;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/* COLORS PROJECT */
+/*------------------------------*\
+
+    #SINGLE PROJECT
+
+\*------------------------------*/
+.a-project .description {
+  margin-bottom: 0;
+}
+
+.following.box {
+  justify-content: center;
+}
+.following.box .box__social, .following.box .box__btn {
+  margin-top: 3rem;
+}
+.following.box .box__social {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+.following.box .button {
+  margin-top: 0;
+}
+
+.wrap-bg.c-main .box:first-child {
+  padding-top: 4rem;
+}
+.wrap-bg.c-main .card__title {
+  margin-bottom: 1rem;
+}
+.wrap-bg.c-main .input__mailing {
+  border-bottom: 1px solid #fff;
+}
+.wrap-bg.c-main .highlight-txt {
+  margin-bottom: 3rem;
+}
+
+/* ETAPES */
+.dotline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+
+.dotline__line {
+  position: absolute;
+  width: 100%;
+  top: 7px;
+}
+.dotline__line::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #65aa04;
+}
+
+.dotline__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 42px;
+}
+.dotline__step .micro-legende {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.dotline__step.is-active {
+  background: #fff;
+}
+.dotline__step.is-active .micro-legende {
+  color: #65aa04;
+}
+.dotline__step.is-active .dot {
+  position: relative;
+  top: -7px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #65aa04;
+  background: #fff !important;
+}
+.dotline__step.is-active .dot::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 6px;
+  left: 6px;
+  position: absolute;
+}
+.dotline__step.is-inactive .dot {
+  border: 2px solid #65aa04;
+  background: #fff;
+}
+
+/* REPARTITION */
+.graphbar {
+  display: flex;
+  height: 25px;
+  margin-top: 4rem;
+}
+
+.graphbar__segment {
+  background: #65aa04;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.graphbar__segment:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.graphbar__segment:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.repartition .infosbloc {
+  margin-top: 4rem;
+}
+.repartition .infosbloc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0 0;
+  border-bottom: 2px solid #fff;
+}
+.repartition .infosbloc .pointe {
+  transform: translateX(50%);
+}
+
+.financer {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #fff;
+  padding: 15px 10px;
+}
+.financer .legende {
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+/* Color system */
+.c-solai .etapes .dotline__step > .dot,
+.c-solai .etapes .dotline::before,
+.c-solai .etapes .dotline__step.is-active .dot::before,
+.c-solai .etapes .dotline__line::before,
+.c-solai .etapes .dotline__line .start {
+  background: #e9af00;
+}
+.c-solai .etapes .dotline__step.is-active .dot,
+.c-solai .etapes .dotline__step.is-inactive .dot,
+.c-solai .etapes .dotline__line .end {
+  border-color: #e9af00;
+}
+.c-solai .etapes .dotline__step.is-inactive .dot {
+  background: #fff;
+}
+.c-solai .etapes .dotline__step.is-active .micro-legende {
+  color: #e9af00;
+}
+.c-solai .repartition .graphbar__segment.citoyen:nth-child(1) {
+  background: #e9af00;
+}
+.c-solai .repartition .financer.citoyen:nth-child(1) .dot {
+  background: #e9af00;
+}
+.c-solai .repartition .graphbar__segment.citoyen:nth-child(2) {
+  background: #b68900;
+}
+.c-solai .repartition .financer.citoyen:nth-child(2) .dot {
+  background: #b68900;
+}
+.c-solai .repartition .graphbar__segment.citoyen:nth-child(3) {
+  background: #926e00;
+}
+.c-solai .repartition .financer.citoyen:nth-child(3) .dot {
+  background: #926e00;
+}
+.c-solai .repartition .graphbar__segment.citoyen:nth-child(4) {
+  background: #745700;
+}
+.c-solai .repartition .financer.citoyen:nth-child(4) .dot {
+  background: #745700;
+}
+.c-solai .repartition .graphbar__segment.citoyen:nth-child(5) {
+  background: #5a4400;
+}
+.c-solai .repartition .financer.citoyen:nth-child(5) .dot {
+  background: #5a4400;
+}
+.c-solai .repartition #segment-prive-1 {
+  background: #d9d9d9;
+}
+.c-solai .repartition #financer-prive-1 .dot {
+  background: #d9d9d9;
+}
+.c-solai .repartition #segment-prive-2 {
+  background: #bfbfbf;
+}
+.c-solai .repartition #financer-prive-2 .dot {
+  background: #bfbfbf;
+}
+.c-solai .repartition #segment-prive-3 {
+  background: #a6a6a6;
+}
+.c-solai .repartition #financer-prive-3 .dot {
+  background: #a6a6a6;
+}
+.c-solai .repartition #segment-prive-4 {
+  background: #8c8c8c;
+}
+.c-solai .repartition #financer-prive-4 .dot {
+  background: #8c8c8c;
+}
+.c-solai .p-details .p-details__equi:before {
+  border-color: transparent transparent #e9af00;
+}
+.c-solai .p-details .p-details__nrg i, .c-solai .p-details .p-details__equi {
+  background-color: #e9af00;
+}
+.c-solai .p-details .p-details__infos {
+  color: #e9af00;
+}
+.c-solai .testimony {
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#ffc413, #e9af00), center no-repeat #e9af00 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#ffc413, #e9af00), center no-repeat #e9af00 scroll;
+}
+
+.c-eolie .etapes .dotline__step > .dot,
+.c-eolie .etapes .dotline::before,
+.c-eolie .etapes .dotline__step.is-active .dot::before,
+.c-eolie .etapes .dotline__line::before,
+.c-eolie .etapes .dotline__line .start {
+  background: #5ab1bb;
+}
+.c-eolie .etapes .dotline__step.is-active .dot,
+.c-eolie .etapes .dotline__step.is-inactive .dot,
+.c-eolie .etapes .dotline__line .end {
+  border-color: #5ab1bb;
+}
+.c-eolie .etapes .dotline__step.is-inactive .dot {
+  background: #fff;
+}
+.c-eolie .etapes .dotline__step.is-active .micro-legende {
+  color: #5ab1bb;
+}
+.c-eolie .repartition .graphbar__segment.citoyen:nth-child(1) {
+  background: #5ab1bb;
+}
+.c-eolie .repartition .financer.citoyen:nth-child(1) .dot {
+  background: #5ab1bb;
+}
+.c-eolie .repartition .graphbar__segment.citoyen:nth-child(2) {
+  background: #4296a0;
+}
+.c-eolie .repartition .financer.citoyen:nth-child(2) .dot {
+  background: #4296a0;
+}
+.c-eolie .repartition .graphbar__segment.citoyen:nth-child(3) {
+  background: #387f87;
+}
+.c-eolie .repartition .financer.citoyen:nth-child(3) .dot {
+  background: #387f87;
+}
+.c-eolie .repartition .graphbar__segment.citoyen:nth-child(4) {
+  background: #2f6a71;
+}
+.c-eolie .repartition .financer.citoyen:nth-child(4) .dot {
+  background: #2f6a71;
+}
+.c-eolie .repartition .graphbar__segment.citoyen:nth-child(5) {
+  background: #27595f;
+}
+.c-eolie .repartition .financer.citoyen:nth-child(5) .dot {
+  background: #27595f;
+}
+.c-eolie .repartition #segment-prive-1 {
+  background: #d9d9d9;
+}
+.c-eolie .repartition #financer-prive-1 .dot {
+  background: #d9d9d9;
+}
+.c-eolie .repartition #segment-prive-2 {
+  background: #bfbfbf;
+}
+.c-eolie .repartition #financer-prive-2 .dot {
+  background: #bfbfbf;
+}
+.c-eolie .repartition #segment-prive-3 {
+  background: #a6a6a6;
+}
+.c-eolie .repartition #financer-prive-3 .dot {
+  background: #a6a6a6;
+}
+.c-eolie .repartition #segment-prive-4 {
+  background: #8c8c8c;
+}
+.c-eolie .repartition #financer-prive-4 .dot {
+  background: #8c8c8c;
+}
+.c-eolie .p-details .p-details__equi:before {
+  border-color: transparent transparent #5ab1bb;
+}
+.c-eolie .p-details .p-details__nrg i, .c-eolie .p-details .p-details__equi {
+  background-color: #5ab1bb;
+}
+.c-eolie .p-details .p-details__infos {
+  color: #5ab1bb;
+}
+.c-eolie .testimony {
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#77bfc7, #5ab1bb), center no-repeat #5ab1bb scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#77bfc7, #5ab1bb), center no-repeat #5ab1bb scroll;
+}
+
+.c-micro .etapes .dotline__step > .dot,
+.c-micro .etapes .dotline::before,
+.c-micro .etapes .dotline__step.is-active .dot::before,
+.c-micro .etapes .dotline__line::before,
+.c-micro .etapes .dotline__line .start {
+  background: #5268b9;
+}
+.c-micro .etapes .dotline__step.is-active .dot,
+.c-micro .etapes .dotline__step.is-inactive .dot,
+.c-micro .etapes .dotline__line .end {
+  border-color: #5268b9;
+}
+.c-micro .etapes .dotline__step.is-inactive .dot {
+  background: #fff;
+}
+.c-micro .etapes .dotline__step.is-active .micro-legende {
+  color: #5268b9;
+}
+.c-micro .repartition .graphbar__segment.citoyen:nth-child(1) {
+  background: #5268b9;
+}
+.c-micro .repartition .financer.citoyen:nth-child(1) .dot {
+  background: #5268b9;
+}
+.c-micro .repartition .graphbar__segment.citoyen:nth-child(2) {
+  background: #3e529a;
+}
+.c-micro .repartition .financer.citoyen:nth-child(2) .dot {
+  background: #3e529a;
+}
+.c-micro .repartition .graphbar__segment.citoyen:nth-child(3) {
+  background: #344480;
+}
+.c-micro .repartition .financer.citoyen:nth-child(3) .dot {
+  background: #344480;
+}
+.c-micro .repartition .graphbar__segment.citoyen:nth-child(4) {
+  background: #2b396b;
+}
+.c-micro .repartition .financer.citoyen:nth-child(4) .dot {
+  background: #2b396b;
+}
+.c-micro .repartition .graphbar__segment.citoyen:nth-child(5) {
+  background: #242f58;
+}
+.c-micro .repartition .financer.citoyen:nth-child(5) .dot {
+  background: #242f58;
+}
+.c-micro .repartition #segment-prive-1 {
+  background: #d9d9d9;
+}
+.c-micro .repartition #financer-prive-1 .dot {
+  background: #d9d9d9;
+}
+.c-micro .repartition #segment-prive-2 {
+  background: #bfbfbf;
+}
+.c-micro .repartition #financer-prive-2 .dot {
+  background: #bfbfbf;
+}
+.c-micro .repartition #segment-prive-3 {
+  background: #a6a6a6;
+}
+.c-micro .repartition #financer-prive-3 .dot {
+  background: #a6a6a6;
+}
+.c-micro .repartition #segment-prive-4 {
+  background: #8c8c8c;
+}
+.c-micro .repartition #financer-prive-4 .dot {
+  background: #8c8c8c;
+}
+.c-micro .p-details .p-details__equi:before {
+  border-color: transparent transparent #5268b9;
+}
+.c-micro .p-details .p-details__nrg i, .c-micro .p-details .p-details__equi {
+  background-color: #5268b9;
+}
+.c-micro .p-details .p-details__infos {
+  color: #5268b9;
+}
+.c-micro .testimony {
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#6f81c5, #5268b9), center no-repeat #5268b9 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#6f81c5, #5268b9), center no-repeat #5268b9 scroll;
+}
+
+.c-bioma .etapes .dotline__step > .dot,
+.c-bioma .etapes .dotline::before,
+.c-bioma .etapes .dotline__step.is-active .dot::before,
+.c-bioma .etapes .dotline__line::before,
+.c-bioma .etapes .dotline__line .start {
+  background: #83ab00;
+}
+.c-bioma .etapes .dotline__step.is-active .dot,
+.c-bioma .etapes .dotline__step.is-inactive .dot,
+.c-bioma .etapes .dotline__line .end {
+  border-color: #83ab00;
+}
+.c-bioma .etapes .dotline__step.is-inactive .dot {
+  background: #fff;
+}
+.c-bioma .etapes .dotline__step.is-active .micro-legende {
+  color: #83ab00;
+}
+.c-bioma .repartition .graphbar__segment.citoyen:nth-child(1) {
+  background: #83ab00;
+}
+.c-bioma .repartition .financer.citoyen:nth-child(1) .dot {
+  background: #83ab00;
+}
+.c-bioma .repartition .graphbar__segment.citoyen:nth-child(2) {
+  background: #5c7800;
+}
+.c-bioma .repartition .financer.citoyen:nth-child(2) .dot {
+  background: #5c7800;
+}
+.c-bioma .repartition .graphbar__segment.citoyen:nth-child(3) {
+  background: #415400;
+}
+.c-bioma .repartition .financer.citoyen:nth-child(3) .dot {
+  background: #415400;
+}
+.c-bioma .repartition .graphbar__segment.citoyen:nth-child(4) {
+  background: #293600;
+}
+.c-bioma .repartition .financer.citoyen:nth-child(4) .dot {
+  background: #293600;
+}
+.c-bioma .repartition .graphbar__segment.citoyen:nth-child(5) {
+  background: #161c00;
+}
+.c-bioma .repartition .financer.citoyen:nth-child(5) .dot {
+  background: #161c00;
+}
+.c-bioma .repartition #segment-prive-1 {
+  background: #d9d9d9;
+}
+.c-bioma .repartition #financer-prive-1 .dot {
+  background: #d9d9d9;
+}
+.c-bioma .repartition #segment-prive-2 {
+  background: #bfbfbf;
+}
+.c-bioma .repartition #financer-prive-2 .dot {
+  background: #bfbfbf;
+}
+.c-bioma .repartition #segment-prive-3 {
+  background: #a6a6a6;
+}
+.c-bioma .repartition #financer-prive-3 .dot {
+  background: #a6a6a6;
+}
+.c-bioma .repartition #segment-prive-4 {
+  background: #8c8c8c;
+}
+.c-bioma .repartition #financer-prive-4 .dot {
+  background: #8c8c8c;
+}
+.c-bioma .p-details .p-details__equi:before {
+  border-color: transparent transparent #83ab00;
+}
+.c-bioma .p-details .p-details__nrg i, .c-bioma .p-details .p-details__equi {
+  background-color: #83ab00;
+}
+.c-bioma .p-details .p-details__infos {
+  color: #83ab00;
+}
+.c-bioma .testimony {
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#a2d400, #83ab00), center no-repeat #83ab00 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#a2d400, #83ab00), center no-repeat #83ab00 scroll;
+}
+
+.c-geoth .etapes .dotline__step > .dot,
+.c-geoth .etapes .dotline::before,
+.c-geoth .etapes .dotline__step.is-active .dot::before,
+.c-geoth .etapes .dotline__line::before,
+.c-geoth .etapes .dotline__line .start {
+  background: #e7511e;
+}
+.c-geoth .etapes .dotline__step.is-active .dot,
+.c-geoth .etapes .dotline__step.is-inactive .dot,
+.c-geoth .etapes .dotline__line .end {
+  border-color: #e7511e;
+}
+.c-geoth .etapes .dotline__step.is-inactive .dot {
+  background: #fff;
+}
+.c-geoth .etapes .dotline__step.is-active .micro-legende {
+  color: #e7511e;
+}
+.c-geoth .repartition .graphbar__segment.citoyen:nth-child(1) {
+  background: #e7511e;
+}
+.c-geoth .repartition .financer.citoyen:nth-child(1) .dot {
+  background: #e7511e;
+}
+.c-geoth .repartition .graphbar__segment.citoyen:nth-child(2) {
+  background: #be3f14;
+}
+.c-geoth .repartition .financer.citoyen:nth-child(2) .dot {
+  background: #be3f14;
+}
+.c-geoth .repartition .graphbar__segment.citoyen:nth-child(3) {
+  background: #9e3511;
+}
+.c-geoth .repartition .financer.citoyen:nth-child(3) .dot {
+  background: #9e3511;
+}
+.c-geoth .repartition .graphbar__segment.citoyen:nth-child(4) {
+  background: #822b0e;
+}
+.c-geoth .repartition .financer.citoyen:nth-child(4) .dot {
+  background: #822b0e;
+}
+.c-geoth .repartition .graphbar__segment.citoyen:nth-child(5) {
+  background: #6b240b;
+}
+.c-geoth .repartition .financer.citoyen:nth-child(5) .dot {
+  background: #6b240b;
+}
+.c-geoth .repartition #segment-prive-1 {
+  background: #d9d9d9;
+}
+.c-geoth .repartition #financer-prive-1 .dot {
+  background: #d9d9d9;
+}
+.c-geoth .repartition #segment-prive-2 {
+  background: #bfbfbf;
+}
+.c-geoth .repartition #financer-prive-2 .dot {
+  background: #bfbfbf;
+}
+.c-geoth .repartition #segment-prive-3 {
+  background: #a6a6a6;
+}
+.c-geoth .repartition #financer-prive-3 .dot {
+  background: #a6a6a6;
+}
+.c-geoth .repartition #segment-prive-4 {
+  background: #8c8c8c;
+}
+.c-geoth .repartition #financer-prive-4 .dot {
+  background: #8c8c8c;
+}
+.c-geoth .p-details .p-details__equi:before {
+  border-color: transparent transparent #e7511e;
+}
+.c-geoth .p-details .p-details__nrg i, .c-geoth .p-details .p-details__equi {
+  background-color: #e7511e;
+}
+.c-geoth .p-details .p-details__infos {
+  color: #e7511e;
+}
+.c-geoth .testimony {
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#eb6e43, #e7511e), center no-repeat #e7511e scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#eb6e43, #e7511e), center no-repeat #e7511e scroll;
+}
+
+.c-econo .etapes .dotline__step > .dot,
+.c-econo .etapes .dotline::before,
+.c-econo .etapes .dotline__step.is-active .dot::before,
+.c-econo .etapes .dotline__line::before,
+.c-econo .etapes .dotline__line .start {
+  background: #b7115b;
+}
+.c-econo .etapes .dotline__step.is-active .dot,
+.c-econo .etapes .dotline__step.is-inactive .dot,
+.c-econo .etapes .dotline__line .end {
+  border-color: #b7115b;
+}
+.c-econo .etapes .dotline__step.is-inactive .dot {
+  background: #fff;
+}
+.c-econo .etapes .dotline__step.is-active .micro-legende {
+  color: #b7115b;
+}
+.c-econo .repartition .graphbar__segment.citoyen:nth-child(1) {
+  background: #b7115b;
+}
+.c-econo .repartition .financer.citoyen:nth-child(1) .dot {
+  background: #b7115b;
+}
+.c-econo .repartition .graphbar__segment.citoyen:nth-child(2) {
+  background: #880d44;
+}
+.c-econo .repartition .financer.citoyen:nth-child(2) .dot {
+  background: #880d44;
+}
+.c-econo .repartition .graphbar__segment.citoyen:nth-child(3) {
+  background: #680a34;
+}
+.c-econo .repartition .financer.citoyen:nth-child(3) .dot {
+  background: #680a34;
+}
+.c-econo .repartition .graphbar__segment.citoyen:nth-child(4) {
+  background: #4c0726;
+}
+.c-econo .repartition .financer.citoyen:nth-child(4) .dot {
+  background: #4c0726;
+}
+.c-econo .repartition .graphbar__segment.citoyen:nth-child(5) {
+  background: #34051a;
+}
+.c-econo .repartition .financer.citoyen:nth-child(5) .dot {
+  background: #34051a;
+}
+.c-econo .repartition #segment-prive-1 {
+  background: #d9d9d9;
+}
+.c-econo .repartition #financer-prive-1 .dot {
+  background: #d9d9d9;
+}
+.c-econo .repartition #segment-prive-2 {
+  background: #bfbfbf;
+}
+.c-econo .repartition #financer-prive-2 .dot {
+  background: #bfbfbf;
+}
+.c-econo .repartition #segment-prive-3 {
+  background: #a6a6a6;
+}
+.c-econo .repartition #financer-prive-3 .dot {
+  background: #a6a6a6;
+}
+.c-econo .repartition #segment-prive-4 {
+  background: #8c8c8c;
+}
+.c-econo .repartition #financer-prive-4 .dot {
+  background: #8c8c8c;
+}
+.c-econo .p-details .p-details__equi:before {
+  border-color: transparent transparent #b7115b;
+}
+.c-econo .p-details .p-details__nrg i, .c-econo .p-details .p-details__equi {
+  background-color: #b7115b;
+}
+.c-econo .p-details .p-details__infos {
+  color: #b7115b;
+}
+.c-econo .testimony {
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#dc146e, #b7115b), center no-repeat #b7115b scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#dc146e, #b7115b), center no-repeat #b7115b scroll;
+}
+
+@media screen and (min-width: 300px) {
+  .button {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .following.box {
+    justify-content: inherit;
+  }
+  .following.box .box__social {
+    width: inherit;
+  }
+  .following.box .box__btn {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 830px) {
+  .wrap-bg.c-main .box__half:first-child {
+    max-width: 300px;
+  }
+  .wrap-bg.c-main .box__half:last-child {
+    padding-right: 0;
+  }
+  .wrap-bg.c-main .box__half .box__solo {
+    flex: 1 1 74%;
+    max-width: 74%;
+    margin-bottom: 0;
+  }
+
+  .start {
+    position: absolute;
+    left: 0;
+    top: -9px;
+    width: 2px;
+    height: 20px;
+    background: #65aa04;
+  }
+
+  .end {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #65aa04;
+    border-right: 2px solid #65aa04;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+
+  .dotline__line {
+    top: 37px;
+  }
+  .dotline__line + .dotline__step {
+    margin-left: 8rem;
+  }
+
+  .dotline__step:last-child {
+    margin-right: 8rem;
+  }
+
+  .dotline__step {
+    height: 62px;
+    margin: 0 auto;
+  }
+  .dotline__step .dot {
+    margin-top: 30px;
+  }
+  .dotline__step .micro-legende {
+    display: block;
+  }
+}

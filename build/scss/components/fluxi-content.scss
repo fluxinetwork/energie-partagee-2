@@ -13,7 +13,7 @@
 	}
 	
 	h2.description{
-		padding-top:$space/2;	
+		padding-top:$space*0.3;	
 	}
 	
 }
@@ -125,11 +125,7 @@
 	.box__half:last-child{
 		padding-right:0;
 		margin-bottom:0;
-	}	
-	
-	.clikable__title{
-		margin-bottom:$space*0.1;
-	}
+	}		
 	.button{
 		margin-top:0;	
 	}
@@ -137,6 +133,11 @@
 		margin-bottom:$space*0.6;
 	}
 }
+
+.clikable__title{
+	margin-bottom:$space*0.1;
+}
+
 .holder-round{
 	border-radius:50%;
 	overflow:hidden;	
@@ -182,8 +183,7 @@
 		i {
 			color:$c-light;
 			align-self:center;
-			margin-right:$gutter/4;
-			font-size:3.2rem;
+			margin-right:$gutter/4;			
 			display:inline-block;
 			vertical-align: middle;
 		}
@@ -206,6 +206,7 @@
 	}	
 }
 @media screen and (min-width: $bp--small) {	
+
 	.clikable.wide{
 		text-align:left;
 		.box__half,.box__half:first-child{
@@ -236,6 +237,15 @@
 	}
 }
 @media screen and (min-width: $bp--medium) {	
+
+	.fluxi-wrap{		
+		
+		h2.description{
+			padding-top:$space/2;	
+		}
+		
+	}
+
 	.fluxi-content .lightbox .legend{
 		padding:0 $gutter*2;
 	}

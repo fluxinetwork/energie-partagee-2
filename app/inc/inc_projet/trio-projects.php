@@ -14,13 +14,21 @@ $query_projects = new WP_Query( $args_projects );
             	<?php					
 					if ( $query_projects->have_posts() ) :
 						while ( $query_projects->have_posts() ) : $query_projects->the_post();						
-							// Thumb
-							if ( has_post_thumbnail() ):
-								$project_img_id = get_post_thumbnail_id();
-								$project_img_array = wp_get_attachment_image_src($project_img_id, 'medium', true);
-								$project_img_url = $project_img_array[0];									
-                             $project_img = '<img class="img-reponsive" src="'.$project_img_url.'">';
-							endif;                               
+							// Thumb	
+							$main_image_obj = get_field( 'main_image' );
+							$project_img ='';
+						
+							if ( has_post_thumbnail() && empty($main_image_obj)) :
+								$post_img_id = get_post_thumbnail_id();
+								$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
+								$post_img_url = $post_img_array[0];
+						
+								$project_img = '<img class="img-reponsive" src="'.$post_img_url.'">';
+							elseif(!empty($main_image_obj)):
+						
+								$project_img = '<img class="img-reponsive" src="'.$main_image_obj['url'].'">';
+							endif;					
+							                               
 							// Design box class
 							if($nb_projects == 0):
 								echo '<article class="box__full">';

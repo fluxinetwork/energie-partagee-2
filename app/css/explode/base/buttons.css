@@ -60,6 +60,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 .link {
   position: relative;
   font-family: "avantgarde", Arial;
@@ -160,7 +161,7 @@
 .social li {
   list-style-type: none;
   display: inline-block;
-  margin-right: 3px;
+  margin-right: 1rem;
 }
 .social li:last-child {
   margin-right: 0;

@@ -60,6 +60,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 /*------------------------------*\
     #MAP
 \*------------------------------*/
@@ -73,7 +74,7 @@
 }
 .map-holder #map {
   width: 100%;
-  height: 400px;
+  height: 444px;
 }
 .map-holder #map.loader {
   background: url("../img/loading.gif") center center no-repeat #f2f2f2;
@@ -85,4 +86,8 @@
   width: 30%;
   background: #fff none;
   height: 100%;
+}
+
+.a-project .map-holder {
+  margin-top: 6rem;
 }

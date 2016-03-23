@@ -50,18 +50,25 @@
 		color:$c-textwhite;
 		font-weight:normal;
 		margin-top:auto;
+		i{			
+			align-self:center;
+			margin-right:$gutter/4;			
+			display:inline-block;
+			vertical-align: middle;	
+		}
 	}
 }
 
 %p-details{
 	
 	background:#fff none;
+	padding-top:$space*0.3;
 	
 	.p-details__nrg{		
 		font-size: 10rem;
 		line-height: 0;
 		text-align: center;
-		margin-bottom:$space*0.4;
+		margin-bottom:$space*0.2;
 		
 		i{		
 			border-radius:50%;
@@ -70,27 +77,70 @@
 	.p-details__infos{
 		list-style-type:none;
 		margin:0;
-		padding:0 $space*0.3;
+		padding:0 $space*0.3 $space*0.2;		
 		
-		i{
-			display:inline-block;
-			vertical-align:top;
-		}
-		span {
-			display:inline-block;
+		li{
+			margin-bottom: $space*0.2;
+    		padding-left: $space*0.3;			
+    		position: relative;	
 			
-			strong{
-				display:block;	
+			&:last-child{
+				margin-bottom:0;
+			}
+			
+			&:before{
+				font-family: 'icomoon' !important; 
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				left: 0;   
+				position: absolute;
+				top: 4px;
+			
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-size:2rem;
 			}
 		}
-	}
-	
-	.p-details__nrg i, .p-details__equi{
-		background-color:$c-focus;
-		color:#fff;		
+		
+		.p-details__infos__loca:before{
+			content: "\e917";
+		}
+		.p-details__infos__prod:before{
+			content: "\e915";
+		}
+		
+		strong{
+			display:block;	
+		}
+		
 	}
 	
 	.p-details__equi{
 		padding:$space*0.1 $gutter/2;
+		position:relative;
+				
+		&:before{	
+			@extend %triangle;
+		}
 	}
+	
+	.p-details__nrg i, .p-details__equi{			
+		color:#fff;		
+	}
+}
+
+%triangle{				
+	border-style: solid;
+	border-width: 0 0.8rem 1.2rem;
+	content: "";
+	height: 0;
+	left: 3.2rem;
+	position: absolute;
+	top: -1rem;
+	width: 0;
 }

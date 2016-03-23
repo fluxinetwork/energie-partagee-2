@@ -60,6 +60,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 /*------------------------------*\
     #FOOTER
 \*------------------------------*/
@@ -145,7 +146,7 @@
     max-width: 60%;
   }
   .footer .box:first-child .box__half:first-child {
-    max-width: 31%;
+    max-width: 300px;
   }
   .footer .box:first-child h2 {
     margin-bottom: 2rem;

@@ -169,22 +169,22 @@ Template Name: Formulaire projets
             </p>
             <p> <label for="stade_projet">A quel stade du projet en êtes vous ?<abbr class="require-form" title="obligatoire">*</abbr></label>
               <label for="stade_projet_1" class="block">
-                <input name="stade_projet" type="radio" value="Idée" id="stade_projet_1" >
+                <input name="stade_projet" type="radio" value="idee" id="stade_projet_1" >
                 Idée</label>
               <label for="stade_projet_2" class="block">
-                <input name="stade_projet" type="radio" value="Structuration" id="stade_projet_2" >
+                <input name="stade_projet" type="radio" value="structuration" id="stade_projet_2" >
                 Structuration</label>
               <label for="stade_projet_3" class="block">
-                <input name="stade_projet" type="radio" value="Développement technique" id="stade_projet_3" >
-                Développement technique</label>
+                <input name="stade_projet" type="radio" value="etudes" id="stade_projet_3" >
+               Études</label>
               <label for="stade_projet_4" class="block">
-                <input name="stade_projet" type="radio" value="Démarches administratives" id="stade_projet_4" >
-                Démarches administratives</label>
+                <input name="stade_projet" type="radio" value="autorisations" id="stade_projet_4" >
+                Autorisations</label>
               <label for="stade_projet_5" class="block">
-                <input name="stade_projet" type="radio" value="Réalisation" id="stade_projet_5" >
+                <input name="stade_projet" type="radio" value="realisation" id="stade_projet_5" >
                 Réalisation</label>
               <label for="stade_projet_6" class="block">
-                <input name="stade_projet" type="radio" value="Fonctionnement" id="stade_projet_6" >
+                <input name="stade_projet" type="radio" value="fonctionnement" id="stade_projet_6" >
                 Fonctionnement</label>
               <label for="stade_projet" class="error">Veuillez sélectionner une réponse.</label>
             </p>

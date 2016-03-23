@@ -62,6 +62,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* COLORS PROJECT */
 /*@import url(https://fonts.googleapis.com/css?family=PT+Sans);*/
 @font-face {
   font-family: 'avantgarde';
@@ -125,6 +126,7 @@
 
 .icon-chevronright_32:before {
   content: "\e904";
+  font-size: 3.2rem;
 }
 
 .icon-chevronright_64:before {
@@ -139,11 +141,11 @@
   content: "\e907";
 }
 
-.icon-eco_64:before {
+.icon-economies-energie_64:before {
   content: "\e908";
 }
 
-.icon-eco_100:before {
+.icon-economies-energie_100:before {
   content: "\e909";
 }
 
@@ -171,11 +173,11 @@
   content: "\e90f";
 }
 
-.icon-geo_64:before {
+.icon-geothermie_64:before {
   content: "\e910";
 }
 
-.icon-geo_100:before {
+.icon-geothermie_100:before {
   content: "\e911";
 }
 
@@ -183,11 +185,11 @@
   content: "\e912";
 }
 
-.icon-hydro_64:before {
+.icon-micro-hydroelectricite_64:before {
   content: "\e913";
 }
 
-.icon-hydro_100:before {
+.icon-micro-hydroelectricite_100:before {
   content: "\e914";
 }
 
@@ -211,11 +213,11 @@
   content: "\e919";
 }
 
-.icon-solaire_64:before {
+.icon-solaire-photovoltaique_64:before {
   content: "\e91a";
 }
 
-.icon-solaire_100:before {
+.icon-solaire-photovoltaique_100:before {
   content: "\e91b";
 }
 
