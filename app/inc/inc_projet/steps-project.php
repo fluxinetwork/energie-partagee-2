@@ -1,7 +1,7 @@
 <aside class="etapes">
   <h3 class="h3">Avancée du projet</h3>
 
-  <span class="dotline wrap-extend">
+  <div class="dotline wrap-extend">
     <div class="dotline__line">
       <div class="start"></div>
       <div class="end"></div>
@@ -21,7 +21,7 @@
 	$steps_field = get_field_object($steps_field_key);
 	
 	if( $steps_field ){
-							
+		echo '<div class="steps">';					
 		foreach( $steps_field['choices'] as $k => $v ){
 			
 			$class_act='';			
@@ -42,7 +42,8 @@
 					  <span class="micro-legende">' . $v . '</span>
 					  <div class="dot"></div>
 					</div>';
-		}					
+		}
+		echo '</div>';					
 	}
 	
 	
@@ -63,7 +64,7 @@
 	endif;
 	?>
     
-  </span>
+  </div>
   
   <?php if(!empty(get_field('text_step_project'))):?> 
       <div class="infosbloc">

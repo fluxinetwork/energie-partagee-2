@@ -25,13 +25,13 @@
   }
 }
 %button{	
-    color: $c-main;
+  color: $c-main;
 	cursor:pointer;
-    display: inline-block;
-    font-family: $main-font;
-    font-weight: bold;
-    padding: $space*0.15 $gutter;
-    text-transform: uppercase;
+  display: inline-block;
+  font-family: $main-font;
+  font-weight: bold;
+  padding: $space*0.15 $gutter;
+  text-transform: uppercase;
 	margin-top:$space*0.6;
 	position:relative;
 	z-index:5;
@@ -92,9 +92,9 @@
   font-family: $main-font;
   font-size: 1.4rem;
   font-weight: 700;  
-  line-height: 55px;
+  line-height: 61px;
   text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
+
 }
 
 %bt {

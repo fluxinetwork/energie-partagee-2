@@ -104,6 +104,7 @@ function enqueue_scripts() {
 
     /* GLOBAL */
     
+	wp_register_script( 'modernizr', get_template_directory_uri() . '/app/js/vendors/modernizr-custom.min.js', array(), null, false );
     wp_register_script( 'jQuery', get_template_directory_uri() . '/app/js/vendors/jquery-1.11.3.min.js', array(), null, false );
     wp_register_script( 'imagesLoaded', get_template_directory_uri() . '/app/js/vendors/imagesloaded.min.js', array(), null, true );
     wp_register_script( 'waypoint', get_template_directory_uri() . '/app/js/vendors/waypoints.min.js', array(), null, true );    
@@ -127,7 +128,7 @@ function enqueue_scripts() {
 	wp_register_script( 'lg-thumbnail', get_template_directory_uri() . '/app/js/vendors/galerie/lg-thumbnail.min.js', array(), null, true );
 	wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
 	
-    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('jQuery','imagesLoaded','waypoint','mousewheel','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','isotope'), null, true );
+    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('modernizr','jQuery','imagesLoaded','waypoint','mousewheel','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-fullscreen','lg-thumbnail','isotope'), null, true );
     wp_register_script( 'js-full', get_template_directory_uri() . '/app/js/full.min.js', array('jQuery'), null, true );
 	
 	// Ajax

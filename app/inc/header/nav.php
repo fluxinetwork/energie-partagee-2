@@ -29,35 +29,35 @@
   </ul>
 
   
-    <?php    
-    $secondary_menus = get_field('secondary_menu', 'option');
-    if( $secondary_menus ):
-      echo '<ul class="nav__secondary no-pp"> ';
-        foreach( $secondary_menus as $post_object):    
-          $main_page_id = $post_object['main_page'];
-          ?>
-          <li class="nav__item"><span class="nav__item__title"><?php echo get_the_title($main_page_id); ?></span>
-            <ul class="nav__dropdown">
-              <span class="container">
-                <?php 
-                   wp_list_pages( array(
-                      'title_li'    => '',
-                      'depth'    => 1,
-                      'child_of'    => $main_page_id
-                  ) );
-                ?>
-              </span>
-            </ul>
-          </li>      
-        <?php 
-        endforeach; 
-      echo '</ul>';  
-    endif;
-    ?>
+  <?php    
+  $secondary_menus = get_field('secondary_menu', 'option');
+  if( $secondary_menus ):
+    echo '<ul class="nav__secondary no-pp"> ';
+      foreach( $secondary_menus as $post_object):    
+        $main_page_id = $post_object['main_page'];
+        ?>
+        <li class="nav__item"><span class="nav__item__title"><?php echo get_the_title($main_page_id); ?></span>
+          <ul class="nav__dropdown">
+            <span class="container">
+              <?php 
+                 wp_list_pages( array(
+                    'title_li'    => '',
+                    'depth'    => 1,
+                    'child_of'    => $main_page_id
+                ) );
+              ?>
+            </span>
+          </ul>
+        </li>      
+      <?php 
+      endforeach; 
+    echo '</ul>';  
+  endif;
+  ?>
  
 
   <div class="nav__pp">
-    <button type="button" class="hamburger js-toggle-pp"></button>
+    <button type="button" class="hamburger js-toggle-pp icon-hamburger_32"></button>
     <ul class="pp">
     </ul>
   </div>
@@ -80,10 +80,10 @@
 <form method="get" id="nav__search" class="nav__search" action="<?php bloginfo('url'); ?>/">
 	<label class="is-hidden" for="s"><?php _e('Recherche :'); ?></label>
   	<input type="text" class="nav__search__input js-search-input" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Recherche">
-  	<input type="submit" class="nav__search__submit" value="" id="nav__search__submit">
-  	<button type="button" class="nav__search__close js-toggle-search"></button>
+  	<button type="submit" class="nav__search__submit icon-check_32 nav-bt" value="" id="nav__search__submit"></button>
+  	<button type="button" class="nav-bt nav__search__close js-toggle-search icon-close_32"></button>
 </form>
-<div class="navbar__buttons"> <a href="#" class="round-bt nav-bt"></a>
-  <button type="button" class="round-bt nav-bt js-toggle-search"></button>
-  <a href="#" class="round-bt nav-bt"></a>
+<div class="navbar__buttons">
+  <button type="button" class="nav-bt js-toggle-search icon-search_32"></button>
+  <a href="#" class="nav-bt--txt icon-adherents_32"><span>adhérents</span></a>
 </div>

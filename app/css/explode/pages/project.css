@@ -101,9 +101,9 @@
 /* ETAPES */
 .dotline {
   position: relative;
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start;*/
   margin-top: 4rem;
 }
 
@@ -118,6 +118,12 @@
   width: 100%;
   height: 2px;
   background: #65aa04;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .dotline__step {
@@ -736,6 +742,10 @@
   }
 }
 @media screen and (min-width: 830px) {
+  .steps {
+    padding-left: 8rem;
+  }
+
   .wrap-bg.c-main .box__half:first-child {
     max-width: 300px;
   }
@@ -782,7 +792,6 @@
 
   .dotline__step {
     height: 62px;
-    margin: 0 auto;
   }
   .dotline__step .dot {
     margin-top: 30px;

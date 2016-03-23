@@ -52,9 +52,9 @@
 
 .dotline {
 	position: relative;
-	display: flex;
+	/*display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: flex-start;*/
 	margin-top: $gutter;
 }
 
@@ -71,7 +71,11 @@
 		background: $c-main;
 	}
 }
-
+.steps {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
 .dotline__step {
 	position: relative;
 	display: flex;
@@ -275,6 +279,10 @@
 
 @media screen and (min-width: $bp--medium) {
 	
+	.steps {
+		padding-left:$gutter*2;
+	}
+	
 	.wrap-bg.c-main{
 		.box__half{
 			&:first-child{
@@ -321,7 +329,7 @@
 	}
 	.dotline__step {
 		height: 62px;
-		margin:0 auto;		
+			
 		.dot {
 			margin-top: 30px;
 		}

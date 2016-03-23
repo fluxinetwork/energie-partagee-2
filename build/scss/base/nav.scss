@@ -1,6 +1,8 @@
 @import "../utils/_all.scss";
 @import "../components/lib/c-buttons.scss";
 
+$nav-shadow: 0 0 20px rgba(#000, 0.2);
+
 /*------------------------------*\
 
     # NAV BAR
@@ -11,6 +13,7 @@
   @extend %transition;
   display: flex;
   position: fixed;
+  top: 30px;
   width: 100%;
   height: $navH;
   padding: 0;
@@ -28,6 +31,11 @@
     height: 100%;
     background: $c-main;
   }
+}
+
+.navbar.is-compact {
+  top: 0;
+  box-shadow: $nav-shadow;
 }
 
 /*------------------------------*\
@@ -77,7 +85,12 @@
   }
 }
 
+.navbar__id.is-compact .logo__title {
+  top: -6px;
+}
+
 .logo__title{
+  @extend %transition;
 	position:relative;
 	top:-4px;	
 }
@@ -139,9 +152,17 @@
 }
 
 .no-pp .nav__item {
-  margin-left: $gutter-thin;
+ padding: 0 $gutter-thin/2;
   color: $c-textwhite;
-  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: $gutter-thin/2;
+  }
+
+  > span {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .no-pp .nav__item__title {
@@ -188,6 +209,7 @@
   top: $navH;
   left: 0;
   width: 100%;
+  box-shadow: $nav-shadow;
   
   &::before {
     @extend %transition;
@@ -249,12 +271,11 @@
 
 .hamburger {
   @extend %transition;
-  @extend %transparent-bt;
-  @extend %round-bt;
+  @extend .nav-bt;
   visibility: hidden;
   position: absolute;
   margin-top: 1.3rem;
-  margin-left: $gutter-thin;
+  margin-left: $gutter-thin/2;
   cursor: pointer;
   transform: scale(0);
   outline: none;
@@ -299,6 +320,7 @@
   opacity: 0;
   transform-origin: center top;
   transform: scale(0);
+  box-shadow: $nav-shadow;
 }
 
 .no-touch .nav__pp:hover .pp,
@@ -403,7 +425,6 @@
       font: 400 1.4rem $main-font;
       color: $c-textlight;
       line-height: 3.5rem;
-      -webkit-font-smoothing: antialiased;
     }
     
     &:hover{
@@ -432,15 +453,40 @@
   height: 100%;
   align-items: center;
   margin-left: $gutter-thin;
+}
+
+.nav-bt {
+  @extend %round-bt;
+  padding: 0;
+  color: #fff;
+  background-color: transparent;
+
+  &::before {
+    font-size: 32px;
+  }
   
-  .nav-bt {
-    @extend %round-bt;
-    background: #fff;
-    opacity: 0.5;
-    
-    &:nth-child(2) {
-      margin: 0 $gutter-thin/2;
-    }
+  &:nth-child(2) {
+    margin: 0 $gutter-thin/2;
+  }
+}
+
+.nav-bt--txt {
+  @extend .nav-bt;
+  display: flex;
+  align-items: center;
+  width: auto;
+  border-radius: 16px;
+  height: 32px;
+
+  span {
+    @extend %nav-typo;
+    margin-right: 10px;
+    margin-left: 5px;
+    display: none;
+  }
+
+  &::before {
+    transform: translateX(-1px);
   }
 }
 
@@ -456,6 +502,10 @@
   flex: auto;
   order: 2;
   margin-left: $gutter-thin;
+
+  label {
+    display: none;
+  }
 }
 
 $c-placeholder : #fff;
@@ -482,11 +532,12 @@ $c-placeholder : #fff;
   &::-moz-placeholder { @include placeholder(); }
   &::-webkit-input-placeholder { @include placeholder(); }
 }
-
-.nav__search__submit, .nav__search__close {
-  @extend %round-bt;
-  @extend %transparent-bt;
+.nav__search__submit {
+  background-color: transparent;
+  padding: 0;
 }
+
+
 .nav__search__close {
   margin-left: $gutter-thin/2;
 }
@@ -579,6 +630,13 @@ $c-placeholder : #fff;
   .no-touch .nav__pp:hover .pp,
   .pp.is-visible {
     transform: translateX(-43.5%) scale(1);
+  }
+
+  .nav-bt--txt {
+    border: 2px solid #fff;
+    span {
+      display: block;
+    }
   }
 }
 
@@ -676,7 +734,7 @@ $c-placeholder : #fff;
   }
   
   .nav__primary {
-    padding-right: $gutter-thin;
+    padding-right: $gutter-thin/2;
     background: $c-main;
   }
   

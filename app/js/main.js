@@ -86,6 +86,15 @@ var FOO = {
 			for (var i=0; i<nbNavItems; i++) {				
 				pp_nav();
 			}
+			// Menu
+			$(document).bind('mousewheel', function(event) {
+                var documentOffset = $(window).scrollTop();
+                if ( event.deltaY < 0 && !$('.navbar__id').hasClass('is-compact')  ) {
+                    $('.navbar, .navbar__id').addClass('is-compact');
+                } else if (event.deltaY > 0 && $('.navbar__id').hasClass('is-compact'))  {
+                    $('.navbar, .navbar__id').removeClass('is-compact');
+                }
+            });
 			// Mini slider project
 			initLoadMoreProjectsBtn();
         }

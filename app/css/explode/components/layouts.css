@@ -162,10 +162,10 @@
   font-size: 2rem;
 }
 .p-details .p-details__infos .p-details__infos__loca:before {
-  content: "\e917";
+  content: "\e91b";
 }
 .p-details .p-details__infos .p-details__infos__prod:before {
-  content: "\e915";
+  content: "\e919";
 }
 .p-details .p-details__infos strong {
   display: block;

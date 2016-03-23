@@ -73,8 +73,8 @@
 }
 @font-face {
   font-family: 'avantgarde';
-  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot");
-  src: url("../../../fonts/avantgarde/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
+  src: url("../../../fonts/avantgarde/bold/avantgarde-bold-webfont.eot");
+  src: url("../../../fonts/avantgarde/bold/avantgarde-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../../fonts/avantgarde/bold/avantgarde-bold-webfont.woff2") format("woff2"), url("../../../fonts/avantgarde/bold/avantgarde-bold-webfont.woff") format("woff"), url("../../../fonts/avantgarde/bold/avantgarde-bold-webfont.ttf") format("truetype"), url("../../../fonts/avantgarde/bold/avantgarde-bold-webfont.svg#texgyreadventorbold") format("svg");
   font-weight: bold;
   font-style: normal;
 }
@@ -108,141 +108,158 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-biomasse_64:before {
+/* New */
+.icon-adherents_32:before {
   content: "\e900";
 }
 
-.icon-biomasse_100:before {
+.icon-biomasse_64:before {
   content: "\e901";
 }
 
-.icon-calendar_20:before {
+.icon-biomasse_100:before {
   content: "\e902";
 }
 
-.icon-check_64:before {
+.icon-calendar_20:before {
   content: "\e903";
 }
 
-.icon-chevronright_32:before {
+.icon-check_32:before {
   content: "\e904";
+}
+
+.icon-check_64:before {
+  content: "\e905";
+}
+
+.icon-chevronright_32:before {
+  content: "\e906";
   font-size: 3.2rem;
 }
 
 .icon-chevronright_64:before {
-  content: "\e905";
-}
-
-.icon-close_64:before {
-  content: "\e906";
-}
-
-.icon-download_64:before {
   content: "\e907";
 }
 
-.icon-economies-energie_64:before {
+.icon-close_32:before {
   content: "\e908";
 }
 
-.icon-economies-energie_100:before {
+.icon-close_64:before {
   content: "\e909";
 }
 
-.icon-eolien_64:before {
+.icon-download_64:before {
   content: "\e90a";
 }
 
-.icon-eolien_100:before {
+.icon-economies-energie_64:before {
   content: "\e90b";
 }
 
-.icon-euro_20:before {
+.icon-economies-energie_100:before {
   content: "\e90c";
 }
 
-.icon-facebook_26:before {
+.icon-eolien_64:before {
   content: "\e90d";
 }
 
-.icon-facebook_40:before {
+.icon-eolien_100:before {
   content: "\e90e";
 }
 
-.icon-fleche_64:before {
+.icon-euro_20:before {
   content: "\e90f";
 }
 
-.icon-geothermie_64:before {
+.icon-facebook_26:before {
   content: "\e910";
 }
 
-.icon-geothermie_100:before {
+.icon-facebook_40:before {
   content: "\e911";
 }
 
-.icon-heart_20:before {
+.icon-fleche_64:before {
   content: "\e912";
 }
 
-.icon-micro-hydroelectricite_64:before {
+.icon-geothermie_64:before {
   content: "\e913";
 }
 
-.icon-micro-hydroelectricite_100:before {
+.icon-geothermie_100:before {
   content: "\e914";
 }
 
-.icon-lightbolt_20:before {
+.icon-hamburger_32:before {
   content: "\e915";
 }
 
-.icon-pencil_20:before {
+.icon-heart_20:before {
   content: "\e916";
 }
 
-.icon-pin_20:before {
+.icon-micro-hydroelectricite_64:before {
   content: "\e917";
 }
 
-.icon-plus_64:before {
+.icon-micro-hydroelectricite_100:before {
   content: "\e918";
 }
 
-.icon-search_32:before {
+.icon-lightbolt_20:before {
   content: "\e919";
 }
 
-.icon-solaire-photovoltaique_64:before {
+.icon-pencil_20:before {
   content: "\e91a";
 }
 
-.icon-solaire-photovoltaique_100:before {
+.icon-pin_20:before {
   content: "\e91b";
 }
 
-.icon-top_64:before {
+.icon-plus_64:before {
   content: "\e91c";
 }
 
-.icon-twitter_26:before {
+.icon-search_32:before {
   content: "\e91d";
 }
 
-.icon-twitter_40:before {
+.icon-solaire-photovoltaique_64:before {
   content: "\e91e";
 }
 
-.icon-video_20:before {
+.icon-solaire-photovoltaique_100:before {
   content: "\e91f";
 }
 
-.icon-youtube_26:before {
+.icon-top_64:before {
   content: "\e920";
 }
 
-.icon-youtube_40:before {
+.icon-twitter_26:before {
   content: "\e921";
+}
+
+.icon-twitter_40:before {
+  content: "\e922";
+}
+
+.icon-video_20:before {
+  content: "\e923";
+}
+
+.icon-youtube_26:before {
+  content: "\e924";
+}
+
+.icon-youtube_40:before {
+  content: "\e925";
 }
 
 /*------------------------------*\
