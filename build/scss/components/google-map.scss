@@ -2,11 +2,43 @@
 /*------------------------------*\
     #MAP
 \*------------------------------*/
+.map-projects{
+	background-color:$c-bglight;	
+}
 .map-filters{
 	@extend %list-reset;
-	display:flex;
-	justify-content:center;	
+	li{
+		display:inline-block;
+	}
+	.tag{
+		cursor:pointer;
+		border-color:$c-main;
+		color:$c-main;			
+		
+	}
 }
+
+.map-filters{	
+	.tag:hover,.tag.js-f-active{
+		background-color:$c-dark;
+		border-color:$c-dark;	
+		color:#fff;		
+	}
+	.tag.js-f-active:before{
+		content:"X";
+		padding-right:0.2rem;
+	}
+	.filter-nrj:hover{
+		background-color:$c-dark;
+	}
+	.filter-nrj.js-f-active{
+		background-color:$c-dark;
+		.icon-filter:before{
+			content: "\e909";
+		}
+	}
+}
+
 .map-holder{
 	position:relative;
 	

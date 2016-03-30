@@ -64,9 +64,36 @@
 /*------------------------------*\
     #MAP
 \*------------------------------*/
-.map-filters {
-  display: flex;
-  justify-content: center;
+.map-projects {
+  background-color: #f2f2f2;
+}
+
+.map-filters li {
+  display: inline-block;
+}
+.map-filters .tag {
+  cursor: pointer;
+  border-color: #65aa04;
+  color: #65aa04;
+}
+
+.map-filters .tag:hover, .map-filters .tag.js-f-active {
+  background-color: #122c33;
+  border-color: #122c33;
+  color: #fff;
+}
+.map-filters .tag.js-f-active:before {
+  content: "X";
+  padding-right: 0.2rem;
+}
+.map-filters .filter-nrj:hover {
+  background-color: #122c33;
+}
+.map-filters .filter-nrj.js-f-active {
+  background-color: #122c33;
+}
+.map-filters .filter-nrj.js-f-active .icon-filter:before {
+  content: "\e909";
 }
 
 .map-holder {

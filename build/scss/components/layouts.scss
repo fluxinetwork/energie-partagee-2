@@ -50,7 +50,7 @@
 			}
 		}
 	}
-	.button{
+	.lightvideo.button{
 		margin-top: $space*0.3;
 	}
 		
@@ -102,11 +102,7 @@
 }
 
 .card{	
-	@extend %card;					
-}
-
-.card.card-project{		
-	background:$c-eolien;	
+	@extend %card;
 }
 
 .card.card-news{
@@ -185,7 +181,10 @@
 	border-style: solid;
 	border-width: 0 8px 12px 8px;
 	border-color: transparent transparent $c-bglight transparent;
+	width:0;
+	position: absolute; 		
 }
+
 
 /******* TEST ALL CATEGORIES ************/
 
@@ -247,7 +246,12 @@
 		margin-top:$space*0.3;
 	 }
 }
-
+.single .trio-card{
+	.box__fixe{
+		display:flex;
+		flex:100%;
+	}
+}
 
 /* Courtcircuit */
 .courtcircuit{
@@ -375,7 +379,9 @@
 	}
 	p{
 		color:#fff;
-	}	
+		margin-bottom:$space*0.3;
+	}
+	
 }
 
 
@@ -497,7 +503,7 @@
 			margin-bottom: 4rem;
 			
 			.card__img i{
-				bottom: 12.5rem;
+				bottom: 11.5rem;
 			}
 			.card__infos{
 				background:$c-eolien;				

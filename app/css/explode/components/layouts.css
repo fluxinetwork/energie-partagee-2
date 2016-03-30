@@ -53,6 +53,17 @@
   width: 100%;
 }
 
+.p-details .p-details__equi:before {
+  border-style: solid;
+  border-width: 0 0.8rem 1.2rem;
+  content: "";
+  height: 0;
+  left: 3.2rem;
+  position: absolute;
+  top: -1rem;
+  width: 0;
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
@@ -81,9 +92,21 @@
 }
 .card .card__icon {
   bottom: 0.5rem;
-  font-size: 9rem;
   left: 0.5rem;
   position: absolute;
+}
+.card .card__icon:before {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 10rem;
 }
 
 .minicard {
@@ -234,7 +257,7 @@
 .header-bloc .h4 span:last-child {
   margin-left: 2rem;
 }
-.header-bloc .button {
+.header-bloc .lightvideo.button {
   margin-top: 3rem;
 }
 
@@ -274,10 +297,6 @@
   padding: 0.5rem 1rem;
   border-radius: 3px;
   display: inline-block;
-}
-
-.card.card-project {
-  background: #5ab1bb;
 }
 
 .card.card-news .card__infos {
@@ -343,6 +362,8 @@
   border-style: solid;
   border-width: 0 8px 12px 8px;
   border-color: transparent transparent #f2f2f2 transparent;
+  width: 0;
+  position: absolute;
 }
 
 /******* TEST ALL CATEGORIES ************/
@@ -394,6 +415,11 @@
 }
 .trio-card .button {
   margin-top: 3rem;
+}
+
+.single .trio-card .box__fixe {
+  display: flex;
+  flex: 100%;
 }
 
 /* Courtcircuit */
@@ -512,6 +538,7 @@
 }
 .testimony p {
   color: #fff;
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 300px) {
@@ -614,7 +641,7 @@
     margin-bottom: 4rem;
   }
   .trio-card .box__full .card__img i {
-    bottom: 12.5rem;
+    bottom: 11.5rem;
   }
   .trio-card .box__full .card__infos {
     background: #5ab1bb;

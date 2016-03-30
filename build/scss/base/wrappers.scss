@@ -38,7 +38,8 @@
 	width:100%;
 	
 	.lighter{		
-		color:rgba( $c-textwhite, .5 );	
+		color:rgba( $c-textwhite, .5 );
+		margin-bottom:0.5rem;	
 	}
 	.highlight-txt{
 		color:$c-textwhite;	
@@ -48,7 +49,6 @@
 
 .wrap-bg.c-main{
 	background:none;	
-    margin: 6rem 0 0;
     padding: 0;
     position: relative;
     z-index: 1;	
@@ -80,7 +80,8 @@
 }
 /*--- Display 830px in 670px ---*/
 .wrap-extend{	
-	display:block;			
+	display:block;
+	position:relative;			
 }
 
 /*------- FLEX -----------*/

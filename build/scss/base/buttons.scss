@@ -7,7 +7,19 @@
 
 \*------------------------------*/
 .button{	
-	@extend %button;	
+	@extend %button;
+	
+	line-height:1;
+	
+	[class^="icon-"], [class*=" icon-"]{
+		font-size:2rem;
+		vertical-align: text-bottom;
+		margin-right:0.4rem;	
+	}
+	
+}
+.button.cta{
+	padding: $space*0.16 $space*0.3;
 }
 
 .button.green{	

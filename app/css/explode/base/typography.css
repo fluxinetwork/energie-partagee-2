@@ -289,12 +289,12 @@ h1, .h1 {
 }
 @media screen and (min-width: 830px) {
   h1, .h1 {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
   }
 }
 @media screen and (min-width: 1000px) {
   h1, .h1 {
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 }
 
@@ -342,12 +342,12 @@ h3, .h3 {
 }
 
 h4, .h4, .card__title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 1.23;
 }
 @media screen and (min-width: 1000px) {
   h4, .h4, .card__title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -360,7 +360,7 @@ h4, .h4, .card__title {
 
 h5, .h5, .s-title {
   font-size: 1.4rem;
-  line-height: 1;
+  line-height: 1.2;
   color: #122c33;
   text-transform: uppercase;
   margin-bottom: 6rem;

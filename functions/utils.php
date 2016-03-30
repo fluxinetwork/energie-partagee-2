@@ -2,11 +2,50 @@
 
 /* | Utils - V1.0 - 20/01/16 | 
 --------------------------------
+	| notify_by_mail()
    | fluxi_register_post_type()
    | get_sanitize_string()
 */
 
-/**
+/* SIMPLE MAIL */
+
+// ********************************
+// Envoie du mail de notification 
+// notify_by_mail ();
+//  - destinataires : array('mail@destinataire.com', 'mail@destinataire.com')
+//  - from : (string) : Ex : Energie Partagée <contact@energie-partagee.org>
+//	- sujet : (string)
+//	- contenu html externe : false ou true
+//	- True : url vers le template mail / False : contenu (string)
+//  - variables
+
+function notify_by_mail ( $mail_to, $mail_from, $subject, $mode_content, $content_html, $vars ) {
+
+	$multiple_to_recipients = $mail_to;				
+	$headers = 'From: '. $mail_from . "\r\n";
+	$sujet_mail = $subject;  
+	
+	$contenu_mail;
+	
+	if($mode_content==true):
+	
+		// contenu du mail dans page externe
+		// le contenu du mail doit être définit par la var $contenu_mail dans la page externe.
+		include ($content_html);
+		
+	else : $contenu_mail = $content_html;
+	endif;		
+																	
+	add_filter( 'wp_mail_content_type', 'set_html_content_type_mail' );							
+	wp_mail( $multiple_to_recipients, $sujet_mail, $contenu_mail, $headers);
+	remove_filter( 'wp_mail_content_type', 'set_html_content_type_mail' );		
+}
+
+function set_html_content_type_mail() {							
+	return 'text/html';
+}
+
+/**********************************
  * Create a custom post type
  */
 function fluxi_register_post_type($post_type, $label_plural, $args, $feminin=false, $labels=array())
@@ -391,4 +430,91 @@ function get_json_map(){
 
 add_action('wp_ajax_nopriv_get_json_map', 'get_json_map');
 add_action('wp_ajax_get_json_map', 'get_json_map');
+
+/**
+ * Load JSON for Google map
+ * Must active admin-ajax.php in scripts.php
+ */ 
+function send_mail_prospect(){	
+	
+	$mail_prospect = $_POST['mail_prospect'];
+	$toky_toky = $_POST['toky_toky'];
+	// Global array	
+    $results = array();	
+	// Verify nonce
+	if ( isset( $_POST['mailing_prospect_nonce_field'] ) && wp_verify_nonce( $_POST['mailing_prospect_nonce_field'], 'mailing_prospect' )) :
+		// Verify email & token
+		if (filter_var($mail_prospect, FILTER_VALIDATE_EMAIL) && !filter_var($toky_toky, FILTER_VALIDATE_INT) === false && $toky_toky == 3948517542):	
+					
+			// Projects infos 
+			$id_project = filter_var($_POST['id_project'], FILTER_SANITIZE_NUMBER_INT);
+			$name_project = filter_var($_POST['name_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+			$city_project = filter_var($_POST['city_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+			$region_project = filter_var($_POST['region_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+			$thumb_url = filter_var($_POST['thumb_url'], FILTER_SANITIZE_URL);
+			$url_page_projet = get_the_permalink($id_project);			
+			
+			$datas_mail = array(
+				'validation' => 'success',
+				'message' => 'Un email vient de vous être envoyé.'					  
+			);
+			
+			$meta_data = array(
+				'email_contact' => $mail_prospect,
+				'projet' => $id_project				
+			);
+				
+			$insert_prospect = array(
+				'post_title' => $mail_prospect,
+				'post_content' => 'Nouveau prospect',
+				'post_status' => 'publish',
+				'post_type' => 'prospects'
+			);				
+				
+			$the_post_id = wp_insert_post( $insert_prospect );	
+				
+			foreach( $meta_data as $key => $value ){  		
+				add_post_meta($the_post_id, $key, $value, true);
+			}
+			
+			// ********************************	
+			// Envoie du mail au prospect			
+			$mail_vars_prospect = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
+			notify_by_mail (array($mail_prospect), 'Energie Partagée <contact@energie-partagee.org>', 'Guide pour investir dans le projet '.$name_project, true, TEMPLATEPATH . '/app/inc/inc_projet/content-mail-prospect.php', $mail_vars_prospect );	
+			
+			// ********************************
+			// Envoie du mail de notification 
+			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
+			notify_by_mail (array('marc.mossalgue@energie-partagee.org'), 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau prospect publié !', false, 'Le contact ' . $mail_prospect . ' vient de faire une demande d\'informations pour le projet <strong>' . $name_project . '<strong>.', $mail_vars_notif );	
+			
+			// Output response json	
+			$results[] = $datas_mail; 			
+		
+		else: 
+			// If invalid mail
+			$data = array(
+				'validation' => 'error',
+				'mail' => $mail_prospect,
+				'message' => 'Vous devez renseigner une adresse email valide.'			
+			);
+			$results[] = $data; 		
+		
+		endif;	
+
+	else :
+		// If invalid nonce
+	  	$data = array(
+			'validation' => 'error',
+			'mail' => $mail_prospect,
+			'message' => 'Erreur dans l\'envoie du formulaire.'			
+		);
+		$results[] = $data; 
+	endif;
+	
+	// Output JSON
+	wp_send_json($results);
+}
+
+add_action('wp_ajax_nopriv_send_mail_prospect', 'send_mail_prospect');
+add_action('wp_ajax_send_mail_prospect', 'send_mail_prospect');
 

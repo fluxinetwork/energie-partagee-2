@@ -22,6 +22,8 @@ var FOO = {
             });
 			// Mini slider project
 			initLoadMoreProjectsBtn();
+			// Video lightbox
+			$('.lightvideo').lightGallery();
         }
     },
     home: {
@@ -34,8 +36,8 @@ var FOO = {
 			$(".fitvids").fitVids();
 			initLoadMorePostsBtn();
 			if($('body.page-template-page-projets').length){	
-				initProjectsMap();
-			}
+				initProjectsMap();				
+			}			
         }
     },
 	category: {
@@ -50,8 +52,10 @@ var FOO = {
     },
 	single: {
         init: function() {
+			$(".fitvids").fitVids();
 			if($('body.single-projets').length){			
-				initSingleMap();
+				initSingleMap();				
+				initSendMailPorspect();			
 			}
         }
     },	

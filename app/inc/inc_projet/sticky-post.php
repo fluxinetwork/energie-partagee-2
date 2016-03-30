@@ -2,6 +2,7 @@
 $sticky = get_option( 'sticky_posts' );
 $args_sticky = array(
 	'posts_per_page' => 1,
+	'post_status' => 'publish',
 	'post__in'  => $sticky,
 	'ignore_sticky_posts' => 1
 );
@@ -19,7 +20,7 @@ if ( isset($sticky[0]) ):
                         <?php echo get_field('google_description'); ?>
                     </p>
                    </div> 
-                    <div class="box__fixe"><a class="button-round" href="#"><i class="icon-fleche_64"></i></a></div>
+                    <div class="box__fixe"><a class="button-round" href="<?php the_permalink(); ?>"><i class="icon-fleche_64"></i></a></div>
                 </div>            
             </article>
         </section>

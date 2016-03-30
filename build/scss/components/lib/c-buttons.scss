@@ -30,13 +30,13 @@
   display: inline-block;
   font-family: $main-font;
   font-weight: bold;
-  padding: $space*0.15 $gutter;
+  padding: $space*0.165 $space*0.3 $space*0.14;
   text-transform: uppercase;
 	margin-top:$space*0.6;
 	position:relative;
 	z-index:5;
-	letter-spacing:0.5px;
 	background:none;
+	
 	
 	&:before{
 		background: #000 none;		
@@ -64,7 +64,7 @@
 		width: 100%;
 		z-index: -1;
 	}
-		
+	
 }
 %button-round{
 	background: transparent none;    
@@ -107,8 +107,8 @@
 
 %round-bt {
   @extend %bt;
-  width: 3rem;
-  height: 3rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
 }
 

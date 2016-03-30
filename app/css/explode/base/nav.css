@@ -114,8 +114,8 @@
 }
 
 .navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt {
-  width: 3rem;
-  height: 3rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
 }
 
@@ -216,12 +216,13 @@
 }
 
 .navbar__id__social a {
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 .navbar__id__social a i {
   display: inline-block;
   font-size: 2.6rem;
+  margin-top: 1px;
 }
 
 /*------------------------------*\
@@ -273,7 +274,8 @@
 .no-pp .nav__item__title::after {
   content: '';
   position: absolute;
-  bottom: -1px;
+  bottom: 5px;
+  z-index: 2;
   left: 50%;
   width: 0;
   height: 0;
@@ -360,7 +362,7 @@
 .hamburger {
   visibility: hidden;
   position: absolute;
-  margin-top: 1.3rem;
+  margin-top: 1.2rem;
   margin-left: 1rem;
   cursor: pointer;
   transform: scale(0);
@@ -374,7 +376,7 @@
 .hamburger::after {
   content: '';
   position: fixed;
-  bottom: -1.5rem;
+  bottom: -12px;
   left: 50%;
   width: 0;
   height: 0;
@@ -525,7 +527,7 @@
   font-size: 32px;
 }
 .nav-bt:nth-child(2), .hamburger:nth-child(2), .nav-bt--txt:nth-child(2) {
-  margin: 0 1rem;
+  margin: 0 0 0 1rem;
 }
 
 .nav-bt--txt {
@@ -538,6 +540,7 @@
 .nav-bt--txt span {
   margin-right: 10px;
   margin-left: 5px;
+  padding-top: 0.4rem;
   display: none;
 }
 .nav-bt--txt::before {

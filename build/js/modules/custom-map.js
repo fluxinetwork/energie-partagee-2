@@ -190,40 +190,87 @@ function initFilters(map){
 	//console.log('Init filters');
 	
 	$('.first.map-filters button').click(function(e){
-					
-		filterCat = $(this).data('filter');
 		
-		for (i = 0; i < gmarkers.length; i++) {						
-			// If is same category or category not picked
-			if (gmarkers[i].category == filterCat || filterCat.length === 0){ 
-				if(gmarkers[i].stade == filterStade || filterStade == 'all_cat'){
-					gmarkers[i].setVisible(true);					
+		var $this = $(this);
+		filterCat = $this.data('filter');
+		
+		if(!$this.hasClass('js-f-active')){
+			
+			$('.first.map-filters .js-f-active').toggleClass('js-f-active');
+			$this.addClass('js-f-active');	
+			
+			for (i = 0; i < gmarkers.length; i++) {						
+				// If is same category or category not picked
+				if (gmarkers[i].category == filterCat || filterCat.length === 0){ 
+					if(gmarkers[i].stade == filterStade || filterStade == 'all_cat'){
+						gmarkers[i].setVisible(true);					
+					}
 				}
-			}
-			// Categories don't match 
-			else{ 
-				gmarkers[i].setVisible(false);
-			}
-		}		
+				// Categories don't match 
+				else{ 
+					gmarkers[i].setVisible(false);
+				}
+			}		
+		
+		}else{
+			$this.toggleClass('js-f-active');
+			resetNrjFilter();	
+		}
+		
 		centerMapOnMarkers(map);		
 	});	
 	
-	$('.second.map-filters button').click(function(e){
-							
-		filterStade = $(this).data('filter');
+	$('.second.map-filters button').click(function(e){		
+	
+		var $this = $(this);					
+		filterStade = $this.data('filter');
 		
-		for (i = 0; i < gmarkers.length; i++) {			
-			if (gmarkers[i].stade == filterStade || filterStade.length === 0) {
-				if(gmarkers[i].category == filterCat || filterCat == 'all_cat'){
-					gmarkers[i].setVisible(true);									
-				}
-			}else {
-				gmarkers[i].setVisible(false);
-			}				
+		if(!$this.hasClass('js-f-active')){
+			
+			$('.second.map-filters .js-f-active').toggleClass('js-f-active');
+			$this.addClass('js-f-active');
+			
+			for (i = 0; i < gmarkers.length; i++) {			
+				if (gmarkers[i].stade == filterStade || filterStade.length === 0) {
+					if(gmarkers[i].category == filterCat || filterCat == 'all_cat'){
+						gmarkers[i].setVisible(true);									
+					}
+				}else {
+					gmarkers[i].setVisible(false);
+				}				
+			}
+		}else{
+			$this.toggleClass('js-f-active');
+			resetStadeFilter();	
 		}		
 		centerMapOnMarkers(map);
 	});
 	
+}
+
+function resetNrjFilter(){
+	for (i = 0; i < gmarkers.length; i++) {
+		if (gmarkers[i].category != filterCat ) {			
+			if(gmarkers[i].stade == filterStade || filterStade == 'all_cat'){
+				gmarkers[i].setVisible(true);
+			}			
+		}			
+		if(i == gmarkers.length-1){
+			filterCat = 'all_cat';
+		}	
+	}		
+}
+function resetStadeFilter(){
+	for (i = 0; i < gmarkers.length; i++) {
+		if (gmarkers[i].stade != filterStade) {		
+			if(gmarkers[i].category == filterCat || filterCat == 'all_cat'){
+				gmarkers[i].setVisible(true);
+			}
+		}	
+		if(i == gmarkers.length-1){
+			filterStade = 'all_cat';
+		}	
+	}	
 }
 
 function centerMapOnMarkers(map){

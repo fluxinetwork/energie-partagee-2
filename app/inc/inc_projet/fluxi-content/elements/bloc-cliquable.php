@@ -50,6 +50,8 @@
 			
 			else:
 			
+			$texte_bouton = ($texte_bouton) ? '<a class="button green"><i></i>'.$texte_bouton.'</a>' : '';
+			
 				echo '<aside class="clikable wide">
 							<article class="wrap-space box">
 								<div class="box__half">															
@@ -58,7 +60,7 @@
 								<div class="box__half">
 									<h4 class="clikable__title">'.$titre_du_cliquable.'</h4>
 									<p class="p-ss">'.$texte_du_cliquable.'</p>
-									<a class="button green"><i></i>'.$texte_bouton.'</a>
+									'.($texte_bouton).'
 								</div>									
 							</article>
 						</aside>';

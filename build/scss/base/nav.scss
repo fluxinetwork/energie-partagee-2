@@ -110,12 +110,13 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
 
 .navbar__id__social a {
   @extend %round-bt;
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2.8rem;
+  height: 2.8rem;
   
   i{
 		display: inline-block;
 		font-size:2.6rem;
+		margin-top:1px;
 	} 
 }
 
@@ -175,7 +176,8 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
   &::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: 5px;
+	z-index:2;
     left: 50%;
     width: 0;
     height: 0;
@@ -274,7 +276,7 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
   @extend .nav-bt;
   visibility: hidden;
   position: absolute;
-  margin-top: 1.3rem;
+  margin-top: 1.2rem;
   margin-left: $gutter-thin/2;
   cursor: pointer;
   transform: scale(0);
@@ -289,7 +291,8 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
   &::after {
     content: '';
     position: fixed;
-    bottom: -1.5rem;
+    bottom: -12px;
+	
     left: 50%;
     width: 0;
     height: 0;
@@ -466,7 +469,7 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
   }
   
   &:nth-child(2) {
-    margin: 0 $gutter-thin/2;
+    margin: 0 0 0 $gutter-thin/2;
   }
 }
 
@@ -482,6 +485,7 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
     @extend %nav-typo;
     margin-right: 10px;
     margin-left: 5px;
+	padding-top: 0.4rem;
     display: none;
   }
 

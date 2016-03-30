@@ -73,6 +73,11 @@
 	.p-details__infos{
 		color:$color;
 	}
+	
+}
+
+@mixin card_project_colors($color) {
+	background:none $color;	
 }
 
 @mixin nrj_gradient_bg($color) {	
@@ -80,8 +85,8 @@
 }
 
 @mixin graphbar_color($color) {
-	$darkenStep: 0, 10, 17, 23, 28, 32;
-	@for $i from 1 through 5 {
+	$darkenStep: 0, 5, 10, 15, 20, 25, 30;
+	@for $i from 1 through 7 {
 		.graphbar__segment.citoyen:nth-child(#{$i}) {
 			background: darken($color, (nth($darkenStep, $i))*1%);
 		}
@@ -89,7 +94,7 @@
 			background: darken($color, (nth($darkenStep, $i))*1%);
 		}
 	}
-	@for $i from 1 through 4 {
+	@for $i from 1 through 6 {
 		#segment-prive-#{$i} {
 			background: darken($c-bglight, $i*10%);
 		}

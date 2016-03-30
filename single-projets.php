@@ -23,58 +23,74 @@
 	
 	// Status
 	$field_stade = get_field_object('status_projet');
+	$value_stade = get_field('status_projet');
+	$label_stade = $field_stade['choices'][ $value_stade ];
+	
+	$url_call_to_action = get_field('url_call_to_action');
 	
 	// Imgs
 	$main_image_obj = get_field( 'main_image' );
 	$main_image ='';	
-
+	$main_url ='';
+	
 	if ( has_post_thumbnail() && empty($main_image_obj)) :
 		$post_img_id = get_post_thumbnail_id();
 		$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
 		$post_img_url = $post_img_array[0];
+		$main_url = $post_img_url;
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
 	elseif(!empty($main_image_obj)):
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
+		$main_url = $main_image_obj['url'];
 	endif;
 	// Img porteur de projet
-	$portrait_pdp = get_field('portrait');
-	
+	$portrait_pdp = get_field('portrait');	
 
   ?>
-<section class="wrap-main<?php echo ' ' . $type_power; ?>">
-  <header class="header-bloc"> 
-    <ul class="tags">   	
-    	<li class="tag"><?php echo $taxoname;?></li>
-        <li class="tag"><?php echo $field_stade['label'] . '/' . get_field( 'status_projet' );?></li>     
-    </ul>     
-    <h1 class="h1 wrap-n">
-      <?php the_title(); ?>  
-    </h1>
-   	
-    <?php if( !empty($video) ){ ?>
-    	<a href="#" class="lightvideo button"><i class="icon-video_20"></i> Voir la vidéo</a>		
-	<?php } ?>
-    
-  </header>
-  	<article class="fluxi-wrap a-project">
-    
-    	<?php echo $main_image; ?>
+    <section class="wrap-main<?php echo ' ' . $type_power; ?>">
+      <header class="header-bloc"> 
+        <ul class="tags">   	
+            <li class="tag"><?php echo $taxoname;?></li>
+            <li class="tag"><?php echo $label_stade; ?></li>     
+        </ul>     
+        <h1 class="h1 wrap-n">
+          <?php the_title(); ?>  
+        </h1>
         
-       <?php get_description(); ?>
-       
-        <?php include( TEMPLATEPATH.'/app/inc/inc_projet/following-project.php' ); ?>
+        <?php if( !empty($video) ){ ?>
+            <div class="lightvideo"><a class="button cta" data-src="<?php echo $video; ?>" href=""><i class="icon-video_20"></i> Voir la vidéo</a></div>	
+        <?php } ?>
         
-        <?php include( TEMPLATEPATH.'/app/inc/inc_projet/map-project.php' ); ?>  
+      </header>
+        <article class="fluxi-wrap a-project">
         
-        <?php include( TEMPLATEPATH.'/app/inc/inc_projet/steps-project.php' ); ?>
-        
-        <?php include( TEMPLATEPATH.'/app/inc/inc_projet/testimony-project.php' ); ?>      
-        
-        <?php include( TEMPLATEPATH.'/app/inc/inc_projet/capital-project.php' ); ?> 
-        
-        
-    </article>    
-</section>  
+            <?php echo $main_image; ?>
+            
+           <?php get_description(); ?>
+           
+            <?php include( TEMPLATEPATH.'/app/inc/inc_projet/following-project.php' ); ?>
+            
+            <?php include( TEMPLATEPATH.'/app/inc/inc_projet/map-project.php' ); ?>  
+            
+            <?php include( TEMPLATEPATH.'/app/inc/inc_projet/steps-project.php' ); ?>        
+            
+            <?php include( TEMPLATEPATH.'/app/inc/inc_projet/testimony-project.php' ); ?>      
+            
+            <?php include( TEMPLATEPATH.'/app/inc/inc_projet/capital-project.php' ); ?> 
+            
+            <?php	// FLUXI CONTENT	 		   
+                if( have_rows('elements_page') ):
+                    echo '<div class="fluxi-content fitvids" id="en-savoir-plus">';		
+                        require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');					
+                    echo '</div>';
+                endif; 		   
+             ?> 
+           
+        </article>
+    </section>    
+
+	<?php include( TEMPLATEPATH.'/app/inc/inc_projet/trio-projects.php' ); ?>       
+  
   <?php endwhile; ?>
   
   <?php else: ?>
