@@ -79,10 +79,26 @@
 
 
 .link {
-  @extend %link;
+ 	@extend %link;
 }
-.link.link-picto{
-	
+
+.link-cta{
+	color: $c-main;
+	cursor:pointer;
+  	display: inline-block;
+  	font-family: $main-font;
+  	font-weight: normal;
+  	line-height: 1;  	
+  	text-transform: uppercase;
+  	width: 100%;
+  	
+	i,span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	i{
+		margin-right: $gutter/4;
+	}
 }
 
 

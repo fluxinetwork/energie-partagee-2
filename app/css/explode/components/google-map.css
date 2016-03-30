@@ -66,10 +66,37 @@
 \*------------------------------*/
 .map-projects {
   background-color: #f2f2f2;
+  padding-top: 5rem;
+}
+.map-projects .filters {
+  flex: 1 1 100%;
+  justify-content: center;
+  text-align: center;
+}
+.map-projects .filters .h5 {
+  margin-top: 0;
+}
+.map-projects .filters .h5:last-child {
+  margin-top: 5rem;
+}
+.map-projects .filters:last-child .h5 {
+  margin-top: 4rem;
+}
+.map-projects .map-holder #map {
+  margin-top: 4rem;
+  height: 850px;
+}
+.map-projects .map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.map-projects .map-filters li {
+  margin: 0 0.5rem 1rem;
 }
 
 .map-filters li {
-  display: inline-block;
+  display: block;
 }
 .map-filters .tag {
   cursor: pointer;
@@ -104,17 +131,64 @@
   height: 444px;
 }
 .map-holder #map.loader {
-  background: url("../img/loading.gif") center center no-repeat #f2f2f2;
+  background: url("../img/loading.gif") center center no-repeat none;
 }
 .map-holder .cards-map .card-map {
+  max-width: 260px;
   position: absolute;
+  margin-right: 4rem;
+  padding: 8rem 0;
   right: 0;
   top: 0;
-  width: 30%;
-  background: #fff none;
   height: 100%;
+}
+.map-holder .cards-map .card-map .card {
+  height: auto;
+}
+.map-holder .cards-map .card-map .card .tag {
+  position: absolute;
+  margin: 2rem;
+}
+.map-holder .cards-map .card-map .card .card__title {
+  display: inline-block;
+  vertical-align: baseline;
+}
+.map-holder .cards-map .card-map .link-cta {
+  background-color: #fff;
+  padding: 2rem;
 }
 
 .a-project .map-holder {
   margin-top: 6rem;
+}
+
+@media screen and (min-width: 830px) {
+  .map-projects .filters {
+    flex: 1 1 50%;
+  }
+  .map-projects .filters:first-child {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .map-projects .filters:last-child {
+    text-align: right;
+    justify-content: flex-end;
+  }
+  .map-projects .filters:last-child .h5, .map-projects .filters .h5 {
+    margin-top: 0;
+  }
+  .map-projects .map-filters.first {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .map-projects .map-filters.first li {
+    margin: 0 1rem 1rem 0;
+  }
+  .map-projects .map-filters.second {
+    text-align: right;
+    justify-content: flex-end;
+  }
+  .map-projects .map-filters.second li {
+    margin: 0 0 1rem 1rem;
+  }
 }

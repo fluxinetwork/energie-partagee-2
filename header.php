@@ -3,7 +3,18 @@
 <head>
 	
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="description" content="<?php bloginfo('description'); ?>">
+    
+    <meta name="description" content="<?php
+    if ( is_front_page() ) :
+		bloginfo('description');
+	else:
+		if( !empty(get_field('google_description')) ):
+			echo get_field('google_description');
+		else:
+			bloginfo('description');
+		endif;
+	endif;?>">
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 	<title><?php include( TEMPLATEPATH.'/app/inc/header/title.php' ); ?></title>

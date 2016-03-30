@@ -204,6 +204,24 @@
   color: #dc2925;
 }
 
+.link-cta {
+  color: #65aa04;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "avantgarde", Arial;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 100%;
+}
+.link-cta i, .link-cta span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.link-cta i {
+  margin-right: 1rem;
+}
+
 /* EDIT LINK FOR ADMINS */
 .edit {
   background: #fff none;

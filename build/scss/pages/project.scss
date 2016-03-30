@@ -2,7 +2,7 @@
 
 /*------------------------------*\
 
-    #SINGLE PROJECT
+    #SINGLE PROJECT / ALL PROJECTS
 
 \*------------------------------*/
 .a-project{
@@ -63,6 +63,17 @@
 			background-color:#fff;
 			color:$c-main;
 		}
+	}
+}
+.all-projects{
+	.fluxi-wrap {
+	    margin-bottom:0;
+	}
+	.social{
+		margin-bottom: $space/2;
+	}
+	.fluxi-content{
+		margin-top: $space/2;
 	}
 }
 .following.box{
@@ -257,6 +268,9 @@
 			content: "\e91e";
 		}
 	}
+	&.card-map .link-cta{
+		color:$c-solaire;
+	}
 	
 } 
 .c-eolie {
@@ -281,6 +295,9 @@
 			content: "\e90d";
 		}
 	}
+	&.card-map .link-cta{
+		color:$c-eolien;
+	}
 } 
 .c-micro {
 	.etapes {
@@ -303,6 +320,9 @@
 		.icon-filter:before{
 			content: "\e917";
 		}
+	}
+	&.card-map .link-cta{
+		color:$c-hydro;
 	}
 } 
 .c-bioma {
@@ -327,6 +347,9 @@
 			content: "\e901";
 		}
 	}
+	&.card-map .link-cta{
+		color:$c-bio;
+	}
 } 
 .c-geoth {
 	.etapes {
@@ -350,6 +373,9 @@
 			content: "\e913";
 		}
 	}
+	&.card-map .link-cta{
+		color:$c-geo;
+	}
 } 
 .c-econo {
 	.etapes {
@@ -372,6 +398,9 @@
 		.icon-filter:before{
 			 content: "\e90b";
 		}
+	}
+	&.card-map .link-cta{
+		color:$c-eco;
 	}
 } 
 

@@ -74,7 +74,7 @@
 /* COLORS PROJECT */
 /*------------------------------*\
 
-    #SINGLE PROJECT
+    #SINGLE PROJECT / ALL PROJECTS
 
 \*------------------------------*/
 .a-project .description {
@@ -123,6 +123,16 @@
 .a-project .notify .success {
   background-color: #fff;
   color: #65aa04;
+}
+
+.all-projects .fluxi-wrap {
+  margin-bottom: 0;
+}
+.all-projects .social {
+  margin-bottom: 5rem;
+}
+.all-projects .fluxi-content {
+  margin-top: 5rem;
 }
 
 .following.box {
@@ -387,6 +397,9 @@
 .c-solai .card-project .icon-filter:before, .c-solai .filter-nrj .icon-filter:before {
   content: "\e91e";
 }
+.c-solai.card-map .link-cta {
+  color: #e9af00;
+}
 
 .c-eolie .etapes .dotline__step > .dot,
 .c-eolie .etapes .dotline::before,
@@ -505,6 +518,9 @@
 }
 .c-eolie .card-project .icon-filter:before, .c-eolie .filter-nrj .icon-filter:before {
   content: "\e90d";
+}
+.c-eolie.card-map .link-cta {
+  color: #5ab1bb;
 }
 
 .c-micro .etapes .dotline__step > .dot,
@@ -625,6 +641,9 @@
 .c-micro .card-project .icon-filter:before, .c-micro .filter-nrj .icon-filter:before {
   content: "\e917";
 }
+.c-micro.card-map .link-cta {
+  color: #5268b9;
+}
 
 .c-bioma .etapes .dotline__step > .dot,
 .c-bioma .etapes .dotline::before,
@@ -743,6 +762,9 @@
 }
 .c-bioma .card-project .icon-filter:before, .c-bioma .filter-nrj .icon-filter:before {
   content: "\e901";
+}
+.c-bioma.card-map .link-cta {
+  color: #83ab00;
 }
 
 .c-geoth .etapes .dotline__step > .dot,
@@ -863,6 +885,9 @@
 .c-geoth .card-project .icon-filter:before, .c-geoth .filter-nrj .icon-filter:before {
   content: "\e913";
 }
+.c-geoth.card-map .link-cta {
+  color: #e7511e;
+}
 
 .c-econo .etapes .dotline__step > .dot,
 .c-econo .etapes .dotline::before,
@@ -981,6 +1006,9 @@
 }
 .c-econo .card-project .icon-filter:before, .c-econo .filter-nrj .icon-filter:before {
   content: "\e90b";
+}
+.c-econo.card-map .link-cta {
+  color: #b7115b;
 }
 
 @media screen and (min-width: 600px) {

@@ -137,7 +137,7 @@ function customMakers(map, data){
 				
 			var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
 			
-			var categoryNRJ = 	data[i].catSlug;
+			var categoryNRJ = data[i].catSlug;
 			// Cut string to escape "-"
 			categoryNRJ =  categoryNRJ.substring(0, 5);		
 									
@@ -150,12 +150,27 @@ function customMakers(map, data){
 				stade : data[i].stadeSlug
 			});		
 				
-			var markerContent = '<article class="card-map">'
-			markerContent += '<h1>'+data[i].title+'</h1>';
-			markerContent += '<img src="'+data[i].image+'" alt="'+data[i].title+'">';
-			markerContent += '<p class="p-ss">'+data[i].description+'</p>';
-			markerContent += '<a class="button green" href="'+data[i].permalink+'">Consulter le projet</a>';
+			var markerContent = '<article class="card-map c-'+categoryNRJ+'">'; 
+				markerContent += '<header class="card card-project">';
+	            	markerContent += '<div class="card__img"><span class="tag">'+data[i].stadeName+'</span><img src="'+data[i].image+'" alt="'+data[i].title+'"></div>';
+	            	markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1></div>';
+	            markerContent += '</header>';
+
+	            markerContent += '<div class="p-details">';
+		            markerContent += '<div class="p-details__nrg"><i class="icon-'+data[i].catSlug+'_100"></i></div>';
+
+		        	markerContent += '<ul class="p-details__infos">';
+		        		markerContent += '<li class="p-details__infos__loca"><strong>'+data[i].city+'</strong><span>'+data[i].region+'</span></li>';
+		          		markerContent += '<li class="p-details__infos__prod"><strong>'+data[i].equiPui+' '+data[i].typeUnit+'</strong><span>'+data[i].prod+' '+data[i].prodUnit+'</span></li>';
+		        	markerContent += '</ul>';
+
+		        	markerContent += '<p class="p-details__equi p-ss">Produit la consommation annuelle de '+data[i].equiPro+' foyers.</p>';
+	    		markerContent += '</div>';
+
+				markerContent += '<a class="link-cta" href="'+data[i].permalink+'"><i class="icon-chevronright_32"></i><span>Voir ce projet</span></a>';
+
 			markerContent += '</article>';
+
 				
 			marker.addListener('click', function() {
 				onClickMarker(markerContent);					

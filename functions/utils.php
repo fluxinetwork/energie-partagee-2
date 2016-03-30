@@ -393,7 +393,9 @@ function get_json_map(){
 				$taxoname = $term->name;
 			}
 			// Stade		
-			$field_stade = get_field_object('status_projet');			
+			$field_stade = get_field_object('status_projet');
+			$value_stade = get_field('status_projet');
+			$label_stade = $field_stade['choices'][ $value_stade ];			
 			
 			// Location		   
 			$location = get_field('coordonees_gps');
@@ -407,11 +409,18 @@ function get_json_map(){
 				'title' => get_the_title(),
 			   'image'  => $post_img_url,
 			   'region' => get_field('departement'),
+			   'city' => get_field('ville'),
 			   'permalink' => get_the_permalink(),
+			   'equiPui' => get_field('equivalent_unites_puissance'),
+			   'typeUnit' => get_field('type_unite_de_puissance'),
+			   'prod' => get_field('production'),
+			   'prodUnit' => get_field('unite_production'),
+			   'equiPro' => get_field('equivalent_production'),
 			   'latitude' => $latitude, 
 			   'longitude' => $longitude,
 			   'catSlug' => $taxoslug,
 			   'catName' => $taxoname,
+			   'stadeName' => $label_stade,
 			   'stadeSlug' => $field_stade['value'],
 			   'excerpt' => $excerpt
 			);
