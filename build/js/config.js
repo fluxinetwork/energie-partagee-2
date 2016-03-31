@@ -55,7 +55,7 @@ var iconShadow = {
 	anchor: new google.maps.Point(34, 34)
 };
 
-var iconsProjectMap = {
+var iconsSelectProjectsMap = {
 	eolie: {  
 		path: google.maps.SymbolPath.CIRCLE, 
 		scale: 22,

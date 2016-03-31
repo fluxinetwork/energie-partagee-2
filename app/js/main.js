@@ -55,7 +55,7 @@ var iconShadow = {
 	anchor: new google.maps.Point(34, 34)
 };
 
-var iconsProjectMap = {
+var iconsSelectProjectsMap = {
 	eolie: {  
 		path: google.maps.SymbolPath.CIRCLE, 
 		scale: 22,
@@ -493,7 +493,7 @@ function initSingleMap(){
 		clickable: true,
 		map: map,
 		title: title,
-		icon: iconsProjectMap[categoryNRJ]
+		icon: iconsSelectProjectsMap[categoryNRJ]
 	});	
 
 	markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);	

@@ -42,7 +42,7 @@ function initSingleMap(){
 		clickable: true,
 		map: map,
 		title: title,
-		icon: iconsProjectMap[categoryNRJ]
+		icon: iconsSelectProjectsMap[categoryNRJ]
 	});	
 
 	markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);	
