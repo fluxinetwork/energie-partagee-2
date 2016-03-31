@@ -87,10 +87,6 @@
   justify-content: center;
 }
 
-.actualites .footer {
-  display: none;
-}
-
 @media screen and (min-width: 600px) {
   .actualites .fluxi-wrap {
     padding-top: 0;
