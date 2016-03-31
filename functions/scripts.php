@@ -22,6 +22,7 @@ function enqueue_styles() {
     wp_register_style( 'page', get_template_directory_uri() . '/app/css/explode/pages/page.css', array(), null );
 	wp_register_style( 'project', get_template_directory_uri() . '/app/css/explode/pages/project.css', array(), null );
     wp_register_style( 'single', get_template_directory_uri() . '/app/css/explode/pages/single.css', array(), null );
+    wp_register_style( 'category', get_template_directory_uri() . '/app/css/explode/pages/category.css', array(), null );
     
     // project specific components
 	if(is_dir('wp-content/themes/'.THEME_DIRECTORY_NAME)){
@@ -60,7 +61,8 @@ function enqueue_styles() {
             wp_enqueue_style('homepage');
             wp_enqueue_style('page');
             wp_enqueue_style('single');
-			 wp_enqueue_style('project');
+			wp_enqueue_style('project');
+            wp_enqueue_style('category');
             /* project specific*/
 			 if(is_dir('wp-content/themes/'.THEME_DIRECTORY_NAME)){	
 				foreach ($slugs as &$value) {            

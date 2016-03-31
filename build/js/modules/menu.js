@@ -143,12 +143,8 @@
 		}
 	}
 
-	// SIMULATION WAYPOINT
+	// WAYPOINT
 
-	$('.js-toggle').click(function(e){
-	  $('.navbar').toggleClass('stick-top');
-	  if (!$('.pp').hasClass('is-visible') && $('.no-pp .nav__item.is-active').length == 0) {
-	  	$('.navbar__id').toggleClass('is-compact');
-	  }
-	  e.preventDefault();
+	$('.header-bloc').waypoint(function(){
+	  $('.navbar, .navbar__id').toggleClass('is-compact');
 	})

@@ -121,6 +121,9 @@
   margin-bottom: 0;
   color: #fff;
 }
+.footer .link::after {
+  background: #fff;
+}
 
 .footer__nav {
   display: flex;

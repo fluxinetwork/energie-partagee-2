@@ -212,15 +212,6 @@ var FOO = {
 			for (var i=0; i<nbNavItems; i++) {				
 				pp_nav();
 			}
-			// Menu
-			$(document).bind('mousewheel', function(event) {
-                var documentOffset = $(window).scrollTop();
-                if ( event.deltaY < 0 && !$('.navbar__id').hasClass('is-compact')  ) {
-                    $('.navbar, .navbar__id').addClass('is-compact');
-                } else if (event.deltaY > 0 && $('.navbar__id').hasClass('is-compact'))  {
-                    $('.navbar, .navbar__id').removeClass('is-compact');
-                }
-            });
 			// Mini slider project
 			initLoadMoreProjectsBtn();
 			// Video lightbox
@@ -1677,12 +1668,8 @@ function getPosts(category) {
 		}
 	}
 
-	// SIMULATION WAYPOINT
+	// WAYPOINT
 
-	$('.js-toggle').click(function(e){
-	  $('.navbar').toggleClass('stick-top');
-	  if (!$('.pp').hasClass('is-visible') && $('.no-pp .nav__item.is-active').length == 0) {
-	  	$('.navbar__id').toggleClass('is-compact');
-	  }
-	  e.preventDefault();
+	$('.header-bloc').waypoint(function(){
+	  $('.navbar, .navbar__id').toggleClass('is-compact');
 	})
