@@ -82,9 +82,6 @@
 
 .wrap-pad {
   padding: 0 4rem;
-}
-
-.margin-news {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -126,7 +123,11 @@
     max-width: 50%;
   }
 
-  .margin-news .card-news:nth-child(odd) {
+  .wrap-pad .card-news:nth-child(odd) {
+    margin-left: 4rem;
+  }
+  .wrap-pad .card-news.inverse-m:nth-child(odd) {
+    margin-left: 0;
     margin-right: 4rem;
   }
 }

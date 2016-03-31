@@ -24,14 +24,10 @@
 
 .wrap-pad {
 	padding: 0 $gutter;
-}
-
-.margin-news {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
 .actualites .footer {
 	display: none;
 }
@@ -76,8 +72,12 @@
 			}
 		} 
 	}
-	.margin-news {
+	.wrap-pad {
 		.card-news:nth-child(odd) {
+			margin-left: $gutter;
+		}
+		.card-news.inverse-m:nth-child(odd) {
+			margin-left: 0;
 			margin-right: $gutter;
 		}
 	}

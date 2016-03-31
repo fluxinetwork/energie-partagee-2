@@ -79,7 +79,7 @@ function loadPosts(category){
         success: function(data){
             var $data = $(data);
             if($data.length > 1){
-                $('.fluxi-content .box').append($data);
+                $('.js-inject-news').append($data);
                 $('.js-more').attr('disabled',false);
             } else{
                 $('.js-more').remove('disabled',true);

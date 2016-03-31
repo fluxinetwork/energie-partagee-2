@@ -49,19 +49,17 @@ Template Name: Tous les articles
 						$date_news = get_the_time('d M');                       
 					endif;	
 
-					$newsClass = 'card-news';
+					$newsClass = 'card-news inverse-m';
 
 					if ($loop==0) {
 						$newsClass = 'card-news--expand';
 					} else if ($loop ==1) {
-						echo '<div class="wrap-pad">';
-						echo '<div class="margin-news">';
+						echo '<div class="wrap-pad js-inject-news">';
 					} else if ($loop==5) {
-						echo '</div>';
 						$newsClass = 'card-news--big';
 						//include( TEMPLATEPATH.'/app/inc/category-more.php' );
-					} else if ($loop ==6) {
-						echo '<div class="margin-news">';
+					} else if ($loop > 5) {
+						$newsClass = 'card-news';
 					} 
 					?>                            
                           
@@ -78,7 +76,7 @@ Template Name: Tous les articles
 				<?php	
 				$loop++;	
 				endwhile;
-				echo '</div></div>';
+				echo '</div>';
 			endif;
 			wp_reset_postdata();
 			?>
