@@ -1,10 +1,15 @@
 %card{	
 	color:$c-textwhite;
 	display:block;
-	height:100%;
-	position:relative;			
+	position:relative;	
+	overflow: hidden;
+	border-radius: 3px;		
 				
 	.card__infos{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
 		padding	:$gutter/2;
 		.p-ss{
 			color:$c-textwhite;	

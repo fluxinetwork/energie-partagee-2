@@ -1,0 +1,140 @@
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* TRANSITIONS */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-none {
+  display: none !important;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/* COLORS PROJECT */
+/*------------------------------*\
+
+    # CATEGORY
+	
+\*------------------------------*/
+.actualites .fluxi-wrap {
+  padding: 0;
+  padding-top: 1px;
+}
+.actualites .card-news,
+.actualites .card-news--expand,
+.actualites .card-news--big {
+  margin-top: 4rem;
+}
+.actualites .card-news--expand {
+  margin-right: 4rem;
+  margin-left: 4rem;
+}
+
+.wrap-pad {
+  padding: 0 4rem;
+}
+
+.margin-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.actualites .footer {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .actualites .fluxi-wrap {
+    padding-top: 0;
+  }
+  .actualites .card-news {
+    max-width: 46%;
+  }
+  .actualites .card-news--expand {
+    max-width: 830px;
+    max-height: 430px;
+    width: 150%;
+    padding: 0;
+    margin: 0;
+  }
+  .actualites .card-news--big {
+    max-height: 310px;
+    flex: 1 0 100%;
+  }
+  .actualites .card-news--expand:hover .tag, .actualites .card-news--big:hover .tag {
+    transform: translateY(20%);
+  }
+  .actualites .card-news--expand .card__infos, .actualites .card-news--big .card__infos {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 40%);
+  }
+  .actualites .card-news--expand .tag, .actualites .card-news--big .tag {
+    margin-top: auto;
+  }
+  .actualites .card-news--expand .card__title, .actualites .card-news--big .card__title {
+    margin-top: 2rem;
+    max-width: 50%;
+  }
+
+  .margin-news .card-news:nth-child(odd) {
+    margin-right: 4rem;
+  }
+}
+@media screen and (min-width: 830px) {
+  .actualites .wrap-pad {
+    padding: 0 8rem;
+  }
+  .actualites .card-news {
+    max-width: 31.5rem;
+  }
+}

@@ -73,6 +73,10 @@
 			}
 		}
 	}	
+
+	.link::after {
+		background: #fff;
+	}
 }
 .footer__nav{
 	 display: flex;
