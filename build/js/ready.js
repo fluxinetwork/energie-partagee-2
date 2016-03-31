@@ -45,11 +45,6 @@ var FOO = {
 			
         }
     },
-	projets: {
-        init: function() {			
-			initProjectsMap();
-        }
-    },
 	single: {
         init: function() {
 			$(".fitvids").fitVids();

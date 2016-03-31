@@ -77,7 +77,7 @@
 	}
 	
 	#map.loader {
-		background: url('../img/loading.gif') center center no-repeat none;
+		@extend %loader;
 	}
 	
 	.cards-map{

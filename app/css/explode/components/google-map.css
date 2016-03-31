@@ -53,6 +53,10 @@
   width: 100%;
 }
 
+.map-holder #map.loader {
+  background: url("../img/loading.gif") center center no-repeat #f2f2f2;
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
@@ -129,9 +133,6 @@
 .map-holder #map {
   width: 100%;
   height: 444px;
-}
-.map-holder #map.loader {
-  background: url("../img/loading.gif") center center no-repeat none;
 }
 .map-holder .cards-map .card-map {
   max-width: 260px;

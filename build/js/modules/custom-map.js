@@ -1,12 +1,13 @@
 /*
  * Init single project Map
  * - Add a dom container "map"
- * - mapOptions = { zoom: 6, scrollwheel: false, panControl: true}
+ * - mapOptions = { zoom: 7, scrollwheel: false, panControl: true}
  */
 function initSingleMap(){
 	//console.log('Init Google Map Obj for "Single project"');
 	
 	var mapContainer = document.getElementById("map");
+	mapContainer.className += 'loader';
 	
 	var latitude = parseInt($('#map').data('lat'));
 	var longitude = parseInt($('#map').data('lon'));
@@ -14,9 +15,9 @@ function initSingleMap(){
 	var latlng = new google.maps.LatLng(latitude,longitude);
 	var newLatLng = {lat: latitude, lng: longitude};
 	
-	var categoryNRJ = 	$('#map').data('cat');
+	var categoryNRJ = $('#map').data('cat');
 	// Cut string to escape "-"
-	categoryNRJ =  categoryNRJ.substring(0, 5);	
+	categoryNRJ = categoryNRJ.substring(0, 5);	
 	
 	var title = $('#map').data('title');
 	
@@ -31,19 +32,23 @@ function initSingleMap(){
         mapTypeControl: false,
         streetViewControl: false,
         center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP 
     };
 	
 	var map = new google.maps.Map(mapContainer,mapOptions);	
 	
 	var marker = new google.maps.Marker({
 		position: newLatLng,
+		clickable: true,
 		map: map,
 		title: title,
-		icon: iconsProjetMap[categoryNRJ].icon
+		icon: iconsProjectMap[categoryNRJ]
 	});	
-	
+
+	markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);	
 }
+
+
 /*
  * Init Projects Map
  * - Add a dom container
@@ -55,8 +60,8 @@ function initProjectsMap(){
 	
 	//console.log('Init Google Map Obj for "Projects Map"');
 	
-	var mapContainer = document.getElementById("map");
-	
+	var mapContainer = document.getElementById("map");	
+
 	var latlng = new google.maps.LatLng(47.50,2.20);
 	
 	activateFilters = true;	
@@ -110,10 +115,10 @@ function loadMarkers(map){
         success: function(data){	
 			//console.log('Markers loaded for : '+filterCat);
 			// Remove previous markers
-			removeMarkers();
+			//removeMarkers();
 			customMakers(map, data);
 			
-			$('#map').removeClass('loader');			
+			//$('#map').removeClass('loader');			
         },
         error : function(jqXHR, textStatus, errorThrown) {
             console.log(jqXHR + ' :: ' + textStatus + ' :: ' + errorThrown);
@@ -145,7 +150,7 @@ function customMakers(map, data){
 				position: newLatLng,
 				map: map,
 				title: data[i].title,
-				icon: iconsProjetMap[categoryNRJ].icon,
+				icon: iconsProjectsMap[categoryNRJ],
 				category : data[i].catSlug,
 				stade : data[i].stadeSlug
 			});		
@@ -173,7 +178,7 @@ function customMakers(map, data){
 
 				
 			marker.addListener('click', function() {
-				onClickMarker(markerContent);					
+				onClickMarker(map,marker,markerContent);					
 			});
 			
 			gmarkers.push(marker);			
@@ -196,7 +201,14 @@ function customMakers(map, data){
 }
 
 // Event on click  on a marker
-function onClickMarker(markerContent){	
+function onClickMarker(map,marker,markerContent){
+
+	if (markerShadow && markerShadow.setPosition) {
+          markerShadow.setPosition(marker.getPosition());
+        } else {
+          markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);
+        }
+
 	$('.cards-map').html(markerContent);
 }
 
@@ -321,4 +333,95 @@ function removeMarkers() {
         gmarkers[i].setMap(null);
     }   
 }
+
+
+
+/*
+ * Marker shadow prototype
+ * 
+ */
+MarkerShadow.prototype = new google.maps.OverlayView();
+MarkerShadow.prototype.setPosition = function(latlng) {
+    this.posn_ = latlng;
+    this.draw();
+  }
+  /** @constructor */
+
+function MarkerShadow(position, options, map) {
+
+    // Initialize all properties.
+    this.posn_ = position;
+    this.map_ = map;
+    if (typeof(options) == "string") {
+      this.image = options;
+    } else {
+      this.options_ = options;
+      if (!!options.size) this.size_ = options.size;
+      if (!!options.url) this.image_ = options.url;
+    }
+
+    // Define a property to hold the image's div. We'll
+    // actually create this div upon receipt of the onAdd()
+    // method so we'll leave it null for now.
+    this.div_ = null;
+
+    // Explicitly call setMap on this overlay.
+    this.setMap(map);
+  }
+  /**
+   * onAdd is called when the map's panes are ready and the overlay has been
+   * added to the map.
+   */
+MarkerShadow.prototype.onAdd = function() {
+  // if no url, return, nothing to do.
+  if (!this.image_) return;
+  var div = document.createElement('div');
+  div.style.borderStyle = 'none';
+  div.style.borderWidth = '0px';
+  div.style.position = 'absolute';
+
+  // Create the img element and attach it to the div.
+  var img = document.createElement('img');
+  img.src = this.image_;
+  img.style.width = this.options_.size.x + 'px';
+  img.style.height = this.options_.size.y + 'px';
+  img.style.position = 'absolute';
+  div.appendChild(img);
+
+  this.div_ = div;
+
+  // Add the element to the "overlayLayer" pane.
+  var panes = this.getPanes();
+  panes.overlayShadow.appendChild(div);
+};
+
+MarkerShadow.prototype.draw = function() {
+  // if no url, return, nothing to do.
+  if (!this.image_) return;
+  // We use the coordinates of the overlay to peg it to the correct position 
+  // To do this, we need to retrieve the projection from the overlay.
+  var overlayProjection = this.getProjection();
+
+  var posn = overlayProjection.fromLatLngToDivPixel(this.posn_);
+
+  // Resize the image's div to fit the indicated dimensions.
+  if (!this.div_) return;
+  var div = this.div_;
+  if (!!this.options_.anchor) {
+    div.style.left = Math.floor(posn.x - this.options_.anchor.x) + 'px';
+    div.style.top = Math.floor(posn.y - this.options_.anchor.y) + 'px';
+  }
+  if (!!this.options_.size) {
+    div.style.width = this.size_.x + 'px';
+    div.style.height = this.size_.y + 'px';
+  }
+};
+
+// The onRemove() method will be called automatically from the API if
+// we ever set the overlay's map property to 'null'.
+MarkerShadow.prototype.onRemove = function() {
+  if (!this.div_) return;
+  this.div_.parentNode.removeChild(this.div_);
+  this.div_ = null;
+};
 
