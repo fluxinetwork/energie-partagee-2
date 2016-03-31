@@ -47,6 +47,9 @@ var iconsProjetMap = {
 	econo: { icon: themeURL + '/app/img/icon-marker-econo.png' }
 };	
 */
+var previousMarker;
+var previousNrj;
+var isOpenMarker = false;
 var markerShadow;
 var iconShadow = {
 	url: themeURL+'/app/img/marker-shadow.png',
@@ -595,7 +598,7 @@ function customMakers(map, data){
 			
 			var categoryNRJ = data[i].catSlug;
 			// Cut string to escape "-"
-			categoryNRJ =  categoryNRJ.substring(0, 5);		
+			categoryNRJ =  categoryNRJ.substring(0, 5);
 									
 			var marker = new google.maps.Marker({
 				position: newLatLng,
@@ -629,7 +632,7 @@ function customMakers(map, data){
 
 				
 			marker.addListener('click', function() {
-				onClickMarker(map,marker,markerContent);					
+				onClickMarker(map,marker,markerContent,categoryNRJ);					
 			});
 			
 			gmarkers.push(marker);			
@@ -651,16 +654,31 @@ function customMakers(map, data){
 		
 }
 
+
 // Event on click  on a marker
-function onClickMarker(map,marker,markerContent){
-
+function onClickMarker(map,marker,markerContent,categoryNRJ){
+	
+	// Add a shadow
 	if (markerShadow && markerShadow.setPosition) {
-          markerShadow.setPosition(marker.getPosition());
-        } else {
-          markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);
-        }
+        markerShadow.setPosition(marker.getPosition());
+        markerShadow.show();
+    } else {
+    	markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);
+    	markerShadow.show();
+    }
+    // Modify previous marker
+    if(isOpenMarker){
+    	previousMarker.setIcon(iconsProjectsMap[previousNrj]);
+	}
+    // Change the icon
+    marker.setIcon(iconsSelectProjectsMap[categoryNRJ]);
+	previousMarker = marker;
+	previousNrj = categoryNRJ;
 
+    // Add the content
 	$('.cards-map').html(markerContent);
+	isOpenMarker = true;
+	
 }
 
 function initFilters(map){	
@@ -668,7 +686,7 @@ function initFilters(map){
 	//console.log('Init filters');
 	
 	$('.first.map-filters button').click(function(e){
-		
+		resetMarkers();
 		var $this = $(this);
 		filterCat = $this.data('filter');
 		
@@ -699,7 +717,7 @@ function initFilters(map){
 	});	
 	
 	$('.second.map-filters button').click(function(e){		
-	
+		resetMarkers();
 		var $this = $(this);					
 		filterStade = $this.data('filter');
 		
@@ -751,6 +769,13 @@ function resetStadeFilter(){
 	}	
 }
 
+function resetMarkers() {	
+	if(isOpenMarker){
+    	previousMarker.setIcon(iconsProjectsMap[previousNrj]);
+    	markerShadow.hide();
+	}  
+}
+
 function centerMapOnMarkers(map){
 	nbShowMakers = nbMakers;		
 	var LatLngList = new Array ();
@@ -784,6 +809,7 @@ function removeMarkers() {
         gmarkers[i].setMap(null);
     }   
 }
+
 
 
 
@@ -875,6 +901,31 @@ MarkerShadow.prototype.onRemove = function() {
   this.div_.parentNode.removeChild(this.div_);
   this.div_ = null;
 };
+
+// Set the visibility to 'hidden' or 'visible'.
+MarkerShadow.prototype.hide = function() {
+  if (this.div_) {
+    // The visibility property must be a string enclosed in quotes.
+    this.div_.style.visibility = 'hidden';
+  }
+};
+
+MarkerShadow.prototype.show = function() {
+  if (this.div_) {
+    this.div_.style.visibility = 'visible';
+  }
+};
+/*
+MarkerShadow.prototype.toggle = function() {
+  if (this.div_) {
+    if (this.div_.style.visibility === 'hidden') {
+      this.show();
+    } else {
+      this.hide();
+    }
+  }
+};*/
+
 
 
 /*										 

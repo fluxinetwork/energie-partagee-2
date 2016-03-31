@@ -47,6 +47,9 @@ var iconsProjetMap = {
 	econo: { icon: themeURL + '/app/img/icon-marker-econo.png' }
 };	
 */
+var previousMarker;
+var previousNrj;
+var isOpenMarker = false;
 var markerShadow;
 var iconShadow = {
 	url: themeURL+'/app/img/marker-shadow.png',
