@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.fluxi-content p a, .fluxi-content .list li a, .fluxi-content p a::after, .fluxi-content .list li a::after, .accordion .accordion__head, .transition {
+.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after, .accordion .accordion__head, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -61,7 +61,7 @@
 /* Typos */
 /* Typos sizes */
 /* COLORS PROJECT */
-.fluxi-content p a, .fluxi-content .list li a {
+.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
   position: relative;
   font-family: "avantgarde", Arial;
   font-size: 1.4rem;
@@ -69,7 +69,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.fluxi-content p a::after, .fluxi-content .list li a::after {
+.fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -78,7 +78,7 @@
   height: 1px;
   background: #65aa04;
 }
-.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after {
+.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .f-btn .txt:hover::after {
   width: 100%;
 }
 
@@ -157,9 +157,60 @@
   margin: 4rem auto;
 }
 
-.fluxi-link .legend {
+blockquote:before, blockquote:after {
+  border-top: 2px solid #eb6c1d;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 10rem;
+}
+blockquote:before {
+  margin: 4rem 0 2rem 0;
+}
+blockquote:after {
+  margin: 2rem 0 5rem 0;
+}
+blockquote .blockquote {
+  padding-right: 4rem;
+  margin-bottom: 0;
+}
+
+.f-btn {
+  margin-bottom: 2.5rem;
+  display: block;
+  width: 100%;
+}
+.f-btn i {
+  display: inline-block;
+  font-size: 3.2rem;
+  vertical-align: middle;
+  color: #65aa04;
+}
+.f-btn div {
+  display: inline-block;
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+.f-btn .legend {
   font-weight: normal;
   text-transform: none;
+  display: block;
+}
+
+.f-btn.__txt div {
+  padding-left: 0;
+}
+
+.f-btn.__big i {
+  font-size: 6.4rem;
+  color: #b3b3b3;
+}
+.f-btn.__big div {
+  padding-left: 2rem;
+}
+
+.fluxi-content .button.__btn {
+  margin: 0 0 2.5rem;
 }
 
 .clikable.wide {
@@ -503,6 +554,16 @@
 
   .fluxi-content .lightbox .legend {
     padding: 0 8rem;
+  }
+
+  blockquote .blockquote {
+    padding-right: 8rem;
+  }
+  blockquote:before {
+    margin: 4rem 0 2rem 8rem;
+  }
+  blockquote:after {
+    margin: 2rem 0 5rem 8rem;
   }
 
   .clikarde {

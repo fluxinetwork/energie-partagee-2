@@ -428,8 +428,7 @@ Template Name: Formulaire projets
           <input name="nom_token" type="hidden" value="98648515">
           <div class="btns-form">
           	<div class="notification"></div>
-            <!--<input type="reset" value="Reset" id="reset-btn" name="reset" class="m-bt-in-soumettre-form">-->
-            <input type="submit" value="Envoyer" id="submit" name="submit" class="m-bt-in-soumettre-form">            
+            <button type="submit" id="submit" class="button green">Envoyer</button>          
           </div>
         </form>
      

@@ -71,7 +71,7 @@ Template Name: Contact
         </fieldset>
         <div class="btns-form">
         	<div class="notification"></div>
-          <input type="submit" value="Envoyer" id="submit" name="submit" class="button green">
+          <button type="submit" id="submit" class="button green">Envoyer</button>
         </div>
       </form>
 

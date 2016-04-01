@@ -88,14 +88,74 @@
 	}	
 	.galerie{
 		margin:	$space*0.4 auto;	
+	}	
+	
+}
+
+blockquote{    
+    	
+	&:before,&:after{
+		border-top: 2px solid $c-focus;
+		content: "";
+	    display: block;
+	    height: 1px;
+	    width: 10rem;
+	}
+
+	&:before{
+	    margin: $gutter 0 $gutter/2 0;		    
+	}
+	&:after{
+	    margin: $gutter/2 0 $space/2 0;		    
+	}
+
+    .blockquote{
+    	padding-right:$gutter; 
+    	margin-bottom: 0;   		
 	}
 }
 
-.fluxi-link{	
+.f-btn{
+	margin-bottom:$space*0.25;
+	display:block;
+	width:100%;
+
+	i{
+		display: inline-block;
+	    font-size: 3.2rem;
+	    vertical-align: middle;
+	    color:$c-main;
+	}
+	div{
+		display: inline-block;
+	    padding-left: $gutter/4;
+	    vertical-align: middle;
+	}
+	.txt{
+		@extend %link;		
+	}
 	.legend{		
 		font-weight: normal;
 		text-transform: none;
+		display: block;
 	}
+}
+.f-btn.__txt{		
+	div{
+	    padding-left:0;
+	}
+}
+.f-btn.__big{	
+	i{
+	    font-size: 6.4rem;
+	    color:$c-light;
+	}
+	div{
+	    padding-left: $gutter/2;
+	}
+}
+.fluxi-content .button.__btn{
+	margin:0 0 $space*0.25;
 }
 
 .clikable.wide{
@@ -426,6 +486,19 @@
 	.fluxi-content .lightbox .legend{
 		padding:0 $gutter*2;
 	}
+
+	blockquote{    
+    	.blockquote{
+    		padding-right:$gutter*2;    		
+	    }
+	    &:before{
+		    margin: $gutter 0 $gutter/2 $gutter*2;		    
+		}
+		&:after{
+		    margin: $gutter/2 0 $space/2 $gutter*2;		    
+		}
+	}
+
 	.clikarde{
 		flex-flow: row nowrap;
 		width:830px;
