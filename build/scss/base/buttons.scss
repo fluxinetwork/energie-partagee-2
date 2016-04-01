@@ -24,11 +24,14 @@ $transition: all 0.3s $ease-out-quart;
 	}
 
 	&:hover {
-	  transform: scale(1.05);
+	  -webkit-transform: scale(1.05);
+	          transform: scale(1.05);
 
 	  &::before {
+	    -webkit-transform: scale(0.95) translateY(5%);
 	    transform: scale(0.95) translateY(5%);
-	    filter: blur(3px);
+	    -webkit-filter: blur(1px);
+	    filter: blur(1px);
 	  }
 	}
 	
@@ -50,7 +53,8 @@ $transition: all 0.3s $ease-out-quart;
 	@extend %button-round;
 
 	&::hover {
-		 transform: scale(1.05);
+		 -webkit-transform: scale(1.05);
+		         transform: scale(1.05);
 	}
 }
 .button-round.grey{

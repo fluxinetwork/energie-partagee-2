@@ -66,42 +66,119 @@
     #FORMS
 
 \*------------------------------*/
-/*form{
-	input[type=text],input[type=email],textarea{
-		border:1px solid $c-textlight;
-		display:block;
-		width:100%;	
-	}
-	label.block{
-		display:block;
-	}
-	
-}*/
-/* Submit project */
-#soumettre_projet {
-  /*.lab-block, label.error { display: block }*/
+form#soumettre_projet fieldset,
+form#contact_ep fieldset {
+  border: 0;
+  margin-bottom: 0 !important;
+  padding: 0;
 }
-#soumettre_projet fieldset {
-  margin-bottom: 2em;
+form#soumettre_projet fieldset:not(:first-child),
+form#contact_ep fieldset:not(:first-child) {
+  margin-top: 4rem;
 }
-#soumettre_projet legend.big-section {
-  color: #333;
-  font-family: "Sansa Bold", Arial, sans-serif;
-  font-size: 2.2em;
-  line-height: 1.3em;
-  margin-bottom: 0.5em;
+form#soumettre_projet label,
+form#contact_ep label {
+  display: block;
+  margin-bottom: 1rem;
 }
-#soumettre_projet select {
+form#soumettre_projet label .block,
+form#contact_ep label .block {
   display: block;
 }
-#soumettre_projet .require-form {
-  color: #F30;
+form#soumettre_projet label .require-form,
+form#contact_ep label .require-form {
+  color: red;
+  margin-left: 3px;
+  font-family: "avantgarde", Arial;
+  font-weight: 700;
 }
-#soumettre_projet .hide-item, #soumettre_projet .sub-hide-item, #soumettre_projet input[type=text].sub-hide-item {
+form#soumettre_projet textarea,
+form#contact_ep textarea {
+  min-height: 100px;
+}
+form#soumettre_projet input[type=text],
+form#soumettre_projet input[type=email], form#soumettre_projet textarea,
+form#contact_ep input[type=text],
+form#contact_ep input[type=email],
+form#contact_ep textarea {
+  border-radius: 3px;
+  border: 1px solid #777777;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+}
+form#soumettre_projet input[type=radio],
+form#soumettre_projet input[type=text],
+form#soumettre_projet input[type=email], form#soumettre_projet textarea,
+form#soumettre_projet .radio__label,
+form#contact_ep input[type=radio],
+form#contact_ep input[type=text],
+form#contact_ep input[type=email],
+form#contact_ep textarea,
+form#contact_ep .radio__label {
+  font: 400 14px "Roboto", sans-serif;
+}
+form#soumettre_projet input[type=text].ghost,
+form#contact_ep input[type=text].ghost {
+  width: 0;
+  opacity: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+form#soumettre_projet select,
+form#contact_ep select {
+  background: #b3b3b3;
+  color: #fff;
+  padding: 1rem 2rem;
+  font: 400 14px "Roboto", sans-serif;
+  cursor: pointer;
+}
+form#soumettre_projet button#submit,
+form#contact_ep button#submit {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+form#soumettre_projet .radio__label,
+form#contact_ep .radio__label {
+  color: #777777;
+}
+form#soumettre_projet .section-title,
+form#contact_ep .section-title {
+  font-weight: 700;
+}
+form#soumettre_projet .h4,
+form#contact_ep .h4 {
+  margin-top: 0;
+}
+form#soumettre_projet .hide-item, form#soumettre_projet .sub-hide-item, form#soumettre_projet input[type=text].sub-hide-item,
+form#contact_ep .hide-item,
+form#contact_ep .sub-hide-item,
+form#contact_ep input[type=text].sub-hide-item {
+  display: none;
+}
+form#soumettre_projet .cmxform label.error,
+form#contact_ep .cmxform label.error {
+  color: #F30;
   display: none;
 }
 
-form.cmxform label.error {
-  color: #F30;
-  display: none;
+.wrap-input-select, .wrap-input-select--left {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap-input-select input, .wrap-input-select--left input {
+  margin-right: 2rem;
+}
+
+.wrap-input-select--left {
+  justify-content: flex-start;
+}
+
+#source_energie_detail {
+  margin-top: 1rem;
+}
+
+#source_energie_detail, #autre_collectif {
+  margin-bottom: 1rem;
 }

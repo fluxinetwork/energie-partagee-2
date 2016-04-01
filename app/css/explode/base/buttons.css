@@ -155,11 +155,14 @@
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .button:hover {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 .button:hover::before {
+  -webkit-transform: scale(0.95) translateY(5%);
   transform: scale(0.95) translateY(5%);
-  filter: blur(3px);
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
 }
 
 .button.cta {
@@ -177,6 +180,7 @@
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .button-round::hover {
+  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 

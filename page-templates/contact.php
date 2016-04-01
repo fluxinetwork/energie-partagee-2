@@ -34,8 +34,9 @@ Template Name: Contact
   </header>
   <article class="fluxi-content fitvids wrap-n">
 		<form class="cmxform" action="" method="post" id="contact_ep" name="contact_ep">
-        <fieldset>        
-          <h3>Ou envoyer un message par ce formulaire</h3>
+        <fieldset>      
+          <legend class="section-title h3">Ou envoyer un message par ce formulaire</legend>  
+
           <p>
             <label for="prenom">Prénom:<abbr class="require-form" title="obligatoire">*</abbr></label>
             <input name="prenom" id="prenom" type="text" value="<?php if(!empty($_SESSION['prenom'])) echo $_SESSION['prenom']; ?>">
@@ -50,13 +51,16 @@ Template Name: Contact
           </p>
           <p>
             <label for="sujet">Sujet:<abbr class="require-form" title="obligatoire">*</abbr></label>
-            <select name="sujet" id="sujet">
-              <option value="">- Sélectionner -</option>
-              <option value="Signaler un projet citoyen">Signaler un projet citoyen</option>
-              <option value="Informations sur la souscription">Informations sur la souscription</option>
-              <option value="Devenir relais">Devenir relais</option>
-              <option value="Autres">Autres</option>
-            </select>           
+            <span class="wrap-input-select--left">
+                <input type="text" class="ghost"></input>
+              <select name="sujet" id="sujet">
+                <option value="">Sélectionnez</option>
+                <option value="Signaler un projet citoyen">Signaler un projet citoyen</option>
+                <option value="Informations sur la souscription">Informations sur la souscription</option>
+                <option value="Devenir relais">Devenir relais</option>
+                <option value="Autres">Autre</option>
+              </select>     
+            </span>      
             <label for="sujet" class="error"></label>
           </p>
           <p>
@@ -71,7 +75,7 @@ Template Name: Contact
         </fieldset>
         <div class="btns-form">
         	<div class="notification"></div>
-          <input type="submit" value="Envoyer" id="submit" name="submit" class="button green">
+          <button type="submit" id="submit" class="button green">Envoyer</button>
         </div>
       </form>
 

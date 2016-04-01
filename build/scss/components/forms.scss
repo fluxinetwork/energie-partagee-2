@@ -6,40 +6,106 @@
 
 \*------------------------------*/
 
-/*form{
-	input[type=text],input[type=email],textarea{
+form#soumettre_projet,
+form#contact_ep {
+	fieldset {
+		border: 0;
+		margin-bottom: 0!important;
+		padding: 0;
+
+		&:not(:first-child) {
+			margin-top: $gutter;
+		}
+	}
+
+	label {
+		display: block;
+		margin-bottom: $gutter/4;
+
+		.block {
+			display:block;
+		}
+
+		.require-form { 
+			color: red;
+			margin-left: 3px;
+			font-family: $main-font;
+			font-weight: 700;
+		}
+	}
+
+	textarea {
+		min-height: 100px;
+	}
+
+	input[type=text],
+	input[type=email],textarea {
+		border-radius: $radius;
 		border:1px solid $c-textlight;
 		display:block;
 		width:100%;	
+		padding: $gutter/4;
 	}
-	label.block{
-		display:block;
-	}
-	
-}*/
 
-/* Submit project */
-#soumettre_projet {
-
-	fieldset { margin-bottom: 2em }
-	
-	legend.big-section {
-		color: #333;
-		font-family: "Sansa Bold", Arial, sans-serif;
-		font-size: 2.2em;
-		line-height: 1.3em;
-		margin-bottom: .5em
+	input[type=radio],
+	input[type=text],
+	input[type=email],textarea,
+	.radio__label {
+		font: 400 14px $txt-font;
 	}
-	
-	select { display: block }
-	
-	.require-form { color: #F30 }
-	
-	/*.lab-block, label.error { display: block }*/
-	
+
+	input[type=text].ghost {
+		width: 0;
+		opacity: 0;
+		margin-right: 0;
+		@include padding(null 0);
+	}
+
+	select {
+		background: $c-light;
+		color: #fff;
+		padding: $gutter/4 $gutter/2;
+		font: 400 14px $txt-font;
+		cursor: pointer;
+	}
+	button#submit {
+		margin-top: 0;
+		margin-bottom: $gutter;
+	}
+
+	.radio__label {
+		color: $c-textlight;
+	}
+	.section-title {
+		font-weight: 700;
+	}
+	.h4 {
+		margin-top: 0;
+	}
 	.hide-item,.sub-hide-item,input[type=text].sub-hide-item { display: none }
+	.cmxform label.error {
+		color: #F30;
+		display: none
+	}
 }
-form.cmxform label.error {
-	color: #F30;
-	display: none
+
+.wrap-input-select {
+	display: flex;
+	justify-content: space-between;
+
+	input {
+		margin-right: $gutter/2;
+	}
 }
+.wrap-input-select--left {
+	@extend .wrap-input-select;
+	justify-content: flex-start;
+}
+
+#source_energie_detail {
+	margin-top: $gutter/4,
+}
+#source_energie_detail,#autre_collectif {
+	margin-bottom: $gutter/4,
+}
+
