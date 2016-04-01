@@ -177,24 +177,22 @@ blockquote .blockquote {
 
 .f-btn {
   margin-bottom: 2.5rem;
-  display: block;
+  display: flex;
   width: 100%;
 }
 .f-btn i {
-  display: inline-block;
+  align-self: center;
   font-size: 3.2rem;
-  vertical-align: middle;
   color: #65aa04;
 }
 .f-btn div {
-  display: inline-block;
+  align-self: center;
   padding-left: 1rem;
-  vertical-align: middle;
 }
 .f-btn .legend {
   font-weight: normal;
   text-transform: none;
-  display: block;
+  display: none;
 }
 
 .f-btn.__txt div {
@@ -202,15 +200,18 @@ blockquote .blockquote {
 }
 
 .f-btn.__big i {
-  font-size: 6.4rem;
+  font-size: 3.2rem;
   color: #b3b3b3;
 }
 .f-btn.__big div {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .fluxi-content .button.__btn {
   margin: 0 0 2.5rem;
+}
+.fluxi-content .button.__btn .txt {
+  line-height: 1.5;
 }
 
 .clikable.wide {
@@ -519,7 +520,27 @@ blockquote .blockquote {
   background-color: #5268b9;
 }
 
+@media screen and (min-width: 300px) {
+  .f-btn.__big i {
+    font-size: 6.4rem;
+    color: #b3b3b3;
+  }
+  .f-btn.__big div {
+    padding-left: 2rem;
+  }
+  .f-btn.__big .legend {
+    display: none;
+  }
+}
 @media screen and (min-width: 600px) {
+  .f-btn .legend {
+    display: block;
+  }
+
+  .fluxi-content .button.__btn .txt {
+    line-height: 1;
+  }
+
   .clikable.wide {
     text-align: left;
   }

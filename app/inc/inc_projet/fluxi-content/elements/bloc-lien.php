@@ -25,20 +25,19 @@
 			$target_link = '_blank';
 			$icon = '<i class="icon-download_64"></i>';
 			
-		elseif($type_link == 'lien-page' || $type_link == 'bouton-page'):			
+		elseif($type_link == 'lien-page'):			
 			$url_link = get_sub_field('lien_page');
-			$icon = '<i class="icon-fleche_64"></i>';	
+			$icon = '<i class="icon-chevronright_32"></i>';	
 			
 		elseif($type_link == 'lien-mailto' || $type_link == 'bouton-mailto'):	
 			$url_link = get_sub_field('add_mailto');
 			$url_link = 'mailto:'.$url_link;
 			$target_link = '_blank';
-			$icon = '<i class="icon-chevronright_32"></i>';	
+			$icon = '<i class="icon-chevronright_64"></i>';	
 					
 		else:
-
 			$url_link = get_sub_field('url_lien');
-			
+			$icon = '<i class="icon-chevronright_32"></i>';				
 		endif;
 		
 		if( $type_link == 'bouton' || $type_link == 'bouton-mailto' || $type_link == 'bouton-page' ):
@@ -47,7 +46,7 @@
 					echo '<span class="txt">'.$texte_link.'</span>';
 			echo '</a>';
 
-		elseif( $type_link == 'fichier-externe' || $type_link == 'fichier-interne' || $type_link == 'lien-page'):
+		elseif( $type_link == 'fichier-externe' || $type_link == 'fichier-interne' || $type_link == 'lien-mailto'):
 			$class_link = 'f-btn __big';
 			echo '<a class="'.$class_link.'" href="'.$url_link.'" title="'.$texte_link.'" target="'.$target_link.'">';
 				echo $icon;
@@ -56,12 +55,8 @@
 					echo $legende;				
 				echo '</div>';
 			echo '</a>';
-		else:
-			if( $type_link == 'lien-text'):
-				$class_link = 'f-btn __txt';
-			else:
-				$class_link = 'f-btn';
-			endif;	
+		else:			
+			$class_link = 'f-btn';				
 			echo '<a class="'.$class_link.'" href="'.$url_link.'" title="'.$texte_link.'" target="'.$target_link.'">';
 				echo $icon;
 				echo '<div>';

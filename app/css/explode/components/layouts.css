@@ -377,24 +377,6 @@
   position: absolute;
 }
 
-/******* TEST ALL CATEGORIES ************/
-[class*=" page-template-page-categories"] .card {
-  color: #fff;
-  display: block;
-  height: 100%;
-  margin: 1.5rem auto;
-  max-height: 190px;
-  max-width: 30%;
-  min-height: 190px;
-  overflow: hidden;
-  position: relative;
-}
-
-[class*=" page-template-page-categories"] .wrap-l {
-  padding: 0;
-}
-
-/******* END TEST ALL CATEGORIES ************/
 .duo-card .head__flex .s-title {
   margin-bottom: 0;
   margin-top: 1.2rem;
@@ -550,6 +532,19 @@
 .testimony p {
   color: #fff;
   margin-bottom: 3rem;
+  position: relative;
+}
+.testimony .quote {
+  font-family: arial;
+  font-size: 5rem;
+  left: -24px;
+  line-height: 1;
+  position: absolute;
+}
+.testimony .quote:last-child {
+  left: inherit;
+  bottom: -5px;
+  right: -24px;
 }
 
 @media screen and (min-width: 300px) {

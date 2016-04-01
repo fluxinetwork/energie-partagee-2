@@ -56,7 +56,7 @@ Template Name: Formulaire projets
                 <option value="9">Réseau de chaleur</option>            
                 <option value="2">Solaire photovoltaïque</option>
                 <option value="3">Solaire thermique</option>
-                <option value="14">Autres</option>
+                <option value="14">Autre</option>
               </select>
               <input class="sub-hide-item" name="source_energie_detail" id="source_energie_detail" type="text" placeholder="Si autres, précisez" value="<?php if(!empty($_SESSION['source_energie_detail'])) echo $_SESSION['source_energie_detail']; ?>" disabled>
               <label for="source_energie" class="error"></label>
