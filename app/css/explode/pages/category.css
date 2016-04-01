@@ -69,6 +69,10 @@
 .actualites .fluxi-wrap {
   padding: 0;
   padding-top: 1px;
+  margin-bottom: 0;
+}
+.actualites .wrap-l button {
+  margin-bottom: 4rem;
 }
 .actualites .card-news,
 .actualites .card-news--expand,
@@ -85,10 +89,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.actualites .footer {
-  display: none;
 }
 
 @media screen and (min-width: 600px) {

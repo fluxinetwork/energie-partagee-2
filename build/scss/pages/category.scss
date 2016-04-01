@@ -9,6 +9,10 @@
 	.fluxi-wrap {
 		padding: 0;
 		padding-top: 1px;
+		margin-bottom: 0;
+	}
+	.wrap-l button {
+		margin-bottom: $gutter;
 	}
 
 	.card-news,
@@ -27,9 +31,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-}
-.actualites .footer {
-	display: none;
 }
 
 @media screen and (min-width: $bp--small) {

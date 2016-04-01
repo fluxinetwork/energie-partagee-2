@@ -88,12 +88,13 @@
   display: inline-block;
   font-family: "avantgarde", Arial;
   font-weight: bold;
-  padding: 1.65rem 3rem 1.4rem;
+  padding: 1.65rem 2rem 1.4rem;
   text-transform: uppercase;
   margin-top: 6rem;
   position: relative;
   z-index: 5;
   background: none;
+  -webkit-font-smoothing: antialiased;
 }
 .button:before, .minicard:before {
   background: #000 none;
@@ -142,12 +143,23 @@
 
 \*------------------------------*/
 .button {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   line-height: 1;
 }
 .button [class^="icon-"], .button [class*=" icon-"] {
   font-size: 2rem;
   vertical-align: text-bottom;
   margin-right: 0.4rem;
+}
+.button::before {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.button:hover {
+  transform: scale(1.05);
+}
+.button:hover::before {
+  transform: scale(0.95) translateY(5%);
+  filter: blur(3px);
 }
 
 .button.cta {
@@ -159,6 +171,13 @@
 }
 .button.green:after {
   background: #65aa04 none;
+}
+
+.button-round {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.button-round::hover {
+  transform: scale(1.05);
 }
 
 .button-round.grey {

@@ -66,6 +66,12 @@
 }
 /* New */
 
+.icon-close-no-border_64:before {
+    content: "\e926";
+}
+.icon-close:before {
+    content: "\e927";
+}
 .icon-adherents_32:before {
     content: "\e900";
 }
@@ -86,7 +92,6 @@
 }
 .icon-chevronright_32:before {
     content: "\e906";
-	font-size:3.2rem;
 }
 .icon-chevronright_64:before {
     content: "\e907";
