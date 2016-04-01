@@ -54,8 +54,10 @@
 		color:#fff;		
 	}
 	.tag.js-f-active:before{
-		content:"X";
-		padding-right:0.2rem;
+		content:"\e927";
+		font-family: 'icomoon';		
+		font-size: 1rem;
+		padding-right:0.8rem;
 	}
 	.filter-nrj:hover{
 		background-color:$c-dark;
@@ -63,7 +65,7 @@
 	.filter-nrj.js-f-active{
 		background-color:$c-dark;
 		.icon-filter:before{
-			content: "\e909";
+			content: "\e926";
 		}
 	}
 }

@@ -35,7 +35,12 @@ Template Name: Formulaire projets
   </header>
 	<?php endwhile; endif; ?>
 
-	<article class="fluxi-content wrap-n">
+	<article class="fluxi-wrap fluxi-content">
+
+      <?php 
+        get_description();
+        get_socials();
+      ?>
 
         <form class="cmxform" action="" method="post" name="soumettre_projet" id="soumettre_projet" enctype="multipart/form-data">
           <fieldset id="form-part-1">
@@ -428,12 +433,8 @@ Template Name: Formulaire projets
           <input name="nom_token" type="hidden" value="98648515">
           <div class="btns-form">
           	<div class="notification"></div>
-<<<<<<< HEAD
-            <!--<input type="reset" value="Reset" id="reset-btn" name="reset" class="m-bt-in-soumettre-form">-->
             <button type="submit" id="submit" class="button green">Envoyer</button>         
-=======
-            <button type="submit" id="submit" class="button green">Envoyer</button>          
->>>>>>> origin/master
+
           </div>
         </form>
      

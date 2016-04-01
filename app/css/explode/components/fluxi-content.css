@@ -286,6 +286,7 @@ blockquote .blockquote {
   margin-top: 0;
 }
 .accordion .accordion__head i {
+  font-size: 3.2rem;
   color: #b3b3b3;
   align-self: center;
   margin-right: 1rem;

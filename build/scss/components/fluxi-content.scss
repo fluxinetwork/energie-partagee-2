@@ -242,6 +242,7 @@ blockquote{
 		margin-top:0;
 		
 		i {
+			font-size: 3.2rem;
 			color:$c-light;
 			align-self:center;
 			margin-right:$gutter/4;			
@@ -260,7 +261,7 @@ blockquote{
 }
 .accordion.open{
 	.accordion__head{
-		i {
+		i {			
 			color:$c-dark;
 			transform:rotate(90deg);
 		}

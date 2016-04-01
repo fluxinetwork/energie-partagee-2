@@ -23,14 +23,10 @@ $transition: all 0.3s $ease-out-quart;
 		transition: $transition;
 	}
 
-	&:hover {
-	  -webkit-transform: scale(1.05);
-	          transform: scale(1.05);
-
-	  &::before {
-	    -webkit-transform: scale(0.95) translateY(5%);
-	    transform: scale(0.95) translateY(5%);
-	    -webkit-filter: blur(1px);
+	&:hover {	  
+	    transform: scale(1.05);
+	  &::before {	    
+	    transform: scale(0.95) translateY(5%);	    
 	    filter: blur(1px);
 	  }
 	}
@@ -52,9 +48,8 @@ $transition: all 0.3s $ease-out-quart;
 	transition: $transition;
 	@extend %button-round;
 
-	&::hover {
-		 -webkit-transform: scale(1.05);
-		         transform: scale(1.05);
+	&:hover {		 
+		transform: scale(1.05);
 	}
 }
 .button-round.grey{
@@ -121,6 +116,7 @@ $transition: all 0.3s $ease-out-quart;
 		vertical-align: middle;
 	}
 	i{
+		font-size: 3.2rem;
 		margin-right: $gutter/4;
 	}
 }

@@ -155,13 +155,10 @@
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .button:hover {
-  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 .button:hover::before {
-  -webkit-transform: scale(0.95) translateY(5%);
   transform: scale(0.95) translateY(5%);
-  -webkit-filter: blur(1px);
   filter: blur(1px);
 }
 
@@ -179,8 +176,7 @@
 .button-round {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.button-round::hover {
-  -webkit-transform: scale(1.05);
+.button-round:hover {
   transform: scale(1.05);
 }
 
@@ -242,6 +238,7 @@
   vertical-align: middle;
 }
 .link-cta i {
+  font-size: 3.2rem;
   margin-right: 1rem;
 }
 
