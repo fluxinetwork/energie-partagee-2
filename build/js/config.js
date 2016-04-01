@@ -47,15 +47,18 @@ var iconsProjetMap = {
 	econo: { icon: themeURL + '/app/img/icon-marker-econo.png' }
 };	
 */
+var previousMarker;
+var previousNrj;
+var isOpenMarker = false;
 var markerShadow;
 var iconShadow = {
 	url: themeURL+'/app/img/marker-shadow.png',
 	size: new google.maps.Size(38, 38),
 	origin: new google.maps.Point(0, 0),
-	anchor: new google.maps.Point(30, 29.5)
+	anchor: new google.maps.Point(34, 34)
 };
 
-var iconsProjectMap = {
+var iconsSelectProjectsMap = {
 	eolie: {  
 		path: google.maps.SymbolPath.CIRCLE, 
 		scale: 22,
