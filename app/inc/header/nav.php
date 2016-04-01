@@ -1,6 +1,23 @@
 <nav class="nav">
 
   <ul class="nav__primary no-pp">
+  
+    <?php if ( is_user_logged_in() ) :  ?>
+      <li class="nav__item"><span class="nav__item__title">Espace adhérent</span>
+        <ul class="nav__dropdown">
+          <span class="container">              
+            <?php 
+              wp_list_pages( array(
+                'title_li' => '',
+                'depth'    => 1,
+                'child_of' => get_id_by_slug('espace-adherent')
+              ));
+            ?>
+          </span>
+        </ul>
+      </li>
+    <?php endif; ?>
+
     <?php
     $main_menus = get_field('main_menu', 'option');
     if( $main_menus ): 
@@ -85,5 +102,9 @@
 </form>
 <div class="navbar__buttons">
   <button type="button" class="nav-bt js-toggle-search icon-search_32"></button>
-  <a href="#" class="nav-bt--txt icon-adherents_32"><span>adhérents</span></a>
+  <?php if ( is_user_logged_in() ) {  ?>
+    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="nav-bt--txt icon-adherents_32"><span>déconnexion</span></a>
+  <?php } else{ ?>
+    <a href="<?php echo get_bloginfo('url'); ?>/wp-login.php" class="nav-bt--txt icon-adherents_32"><span>adhérents</span></a>
+  <?php } ?>
 </div>

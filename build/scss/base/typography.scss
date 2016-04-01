@@ -281,3 +281,12 @@ p,.p,.p-ss,.legend{
 .legend{
 	color:$c-textlight;
 }
+blockquote{
+    margin:0;    
+    .blockquote{
+        @include font-size($blockquote-font-sizes);
+        font-family: $main-font;
+        color: $c-focus;
+        font-weight: bold;
+    }
+}

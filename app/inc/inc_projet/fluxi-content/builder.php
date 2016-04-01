@@ -7,6 +7,9 @@
 		
 		elseif(get_row_layout() == 'texte'):	
 			require locate_template('/app/inc/inc_projet/fluxi-content/elements/bloc-texte.php');
+
+		elseif(get_row_layout() == 'citation'):	
+			require locate_template('/app/inc/inc_projet/fluxi-content/elements/bloc-citation.php');
 		
 		elseif(get_row_layout() == 'image'):	
 			require locate_template('/app/inc/inc_projet/fluxi-content/elements/bloc-image.php');

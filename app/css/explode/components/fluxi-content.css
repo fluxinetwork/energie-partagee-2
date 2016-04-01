@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.fluxi-content p a, .fluxi-content .list li a, .fluxi-content p a::after, .fluxi-content .list li a::after, .accordion .accordion__head, .transition {
+.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after, .accordion .accordion__head, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -21,7 +21,7 @@
 }
 
 /* LIST RESET */
-.list-reset {
+.isogrid .main-isogrid, .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -61,7 +61,7 @@
 /* Typos */
 /* Typos sizes */
 /* COLORS PROJECT */
-.fluxi-content p a, .fluxi-content .list li a {
+.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
   position: relative;
   font-family: "avantgarde", Arial;
   font-size: 1.4rem;
@@ -69,7 +69,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.fluxi-content p a::after, .fluxi-content .list li a::after {
+.fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -78,7 +78,7 @@
   height: 1px;
   background: #65aa04;
 }
-.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after {
+.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .f-btn .txt:hover::after {
   width: 100%;
 }
 
@@ -157,9 +157,61 @@
   margin: 4rem auto;
 }
 
-.fluxi-link .legend {
+blockquote:before, blockquote:after {
+  border-top: 2px solid #eb6c1d;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 10rem;
+}
+blockquote:before {
+  margin: 4rem 0 2rem 0;
+}
+blockquote:after {
+  margin: 2rem 0 5rem 0;
+}
+blockquote .blockquote {
+  padding-right: 4rem;
+  margin-bottom: 0;
+}
+
+.f-btn {
+  margin-bottom: 2.5rem;
+  display: flex;
+  width: 100%;
+}
+.f-btn i {
+  align-self: center;
+  font-size: 3.2rem;
+  color: #65aa04;
+}
+.f-btn div {
+  align-self: center;
+  padding-left: 1rem;
+}
+.f-btn .legend {
   font-weight: normal;
   text-transform: none;
+  display: none;
+}
+
+.f-btn.__txt div {
+  padding-left: 0;
+}
+
+.f-btn.__big i {
+  font-size: 3.2rem;
+  color: #b3b3b3;
+}
+.f-btn.__big div {
+  padding-left: 1rem;
+}
+
+.fluxi-content .button.__btn {
+  margin: 0 0 2.5rem;
+}
+.fluxi-content .button.__btn .txt {
+  line-height: 1.5;
 }
 
 .clikable.wide {
@@ -254,7 +306,241 @@
   transform: rotate(90deg);
 }
 
+.isogrid {
+  margin-top: 6rem;
+}
+.isogrid .button-group-sort {
+  margin-bottom: 2rem;
+}
+.isogrid .button-group-sort .button {
+  font-size: 1.2rem;
+  margin: 0 0.5rem 1rem;
+  padding: 1.5rem;
+}
+.isogrid .button-group-sort .button.is-checked {
+  color: #fff;
+}
+.isogrid .button-group-sort .button.is-checked:after {
+  background: #122c33 none;
+}
+.isogrid .main-isogrid {
+  display: flex;
+  justify-content: space-around;
+}
+.isogrid .main-isogrid .item {
+  margin: 0.5rem 0;
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+.isogrid .main-isogrid .item .icon-doc {
+  border-radius: 0.6em 0.6em 0 0;
+  color: #fff;
+  display: block;
+  padding: 0.15em 0.08em;
+  position: relative;
+  text-align: right;
+  top: 0;
+}
+.isogrid .main-isogrid .item .titre {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0 0 0.6em 0.6em;
+  color: #7a7a7a;
+  display: block;
+  font-family: "Roboto", sans-serif, Arial, sans-serif;
+  min-height: 72px;
+  padding: 0.6em;
+  position: relative;
+  top: 0;
+}
+
+.button.f_cat_0 {
+  color: #fff;
+}
+.button.f_cat_0:after {
+  background: #5ab1bb none;
+}
+
+.button.f_cat_1 {
+  color: #fff;
+}
+.button.f_cat_1:after {
+  background: #5268b9 none;
+}
+
+.button.f_cat_2 {
+  color: #fff;
+}
+.button.f_cat_2:after {
+  background: #83ab00 none;
+}
+
+.button.f_cat_3 {
+  color: #fff;
+}
+.button.f_cat_3:after {
+  background: #e9af00 none;
+}
+
+.button.f_cat_4 {
+  color: #fff;
+}
+.button.f_cat_4:after {
+  background: #e7511e none;
+}
+
+.button.f_cat_5 {
+  color: #fff;
+}
+.button.f_cat_5:after {
+  background: #b7115b none;
+}
+
+.button.f_cat_6 {
+  color: #fff;
+}
+.button.f_cat_6:after {
+  background: #65aa04 none;
+}
+
+.button.f_cat_7 {
+  color: #fff;
+}
+.button.f_cat_7:after {
+  background: #c50545 none;
+}
+
+.button.f_cat_8 {
+  color: #fff;
+}
+.button.f_cat_8:after {
+  background: #eb6c1d none;
+}
+
+.button.f_cat_9 {
+  color: #fff;
+}
+.button.f_cat_9:after {
+  background: #5ab1bb none;
+}
+
+.button.f_cat_10 {
+  color: #fff;
+}
+.button.f_cat_10:after {
+  background: #5268b9 none;
+}
+
+.item.f_cat_0 .titre {
+  border: 1px solid #5ab1bb;
+}
+.item.f_cat_0 .icon-doc {
+  border: 1px solid #5ab1bb;
+  background-color: #5ab1bb;
+}
+
+.item.f_cat_1 .titre {
+  border: 1px solid #5268b9;
+}
+.item.f_cat_1 .icon-doc {
+  border: 1px solid #5268b9;
+  background-color: #5268b9;
+}
+
+.item.f_cat_2 .titre {
+  border: 1px solid #83ab00;
+}
+.item.f_cat_2 .icon-doc {
+  border: 1px solid #83ab00;
+  background-color: #83ab00;
+}
+
+.item.f_cat_3 .titre {
+  border: 1px solid #e9af00;
+}
+.item.f_cat_3 .icon-doc {
+  border: 1px solid #e9af00;
+  background-color: #e9af00;
+}
+
+.item.f_cat_4 .titre {
+  border: 1px solid #e7511e;
+}
+.item.f_cat_4 .icon-doc {
+  border: 1px solid #e7511e;
+  background-color: #e7511e;
+}
+
+.item.f_cat_5 .titre {
+  border: 1px solid #b7115b;
+}
+.item.f_cat_5 .icon-doc {
+  border: 1px solid #b7115b;
+  background-color: #b7115b;
+}
+
+.item.f_cat_6 .titre {
+  border: 1px solid #65aa04;
+}
+.item.f_cat_6 .icon-doc {
+  border: 1px solid #65aa04;
+  background-color: #65aa04;
+}
+
+.item.f_cat_7 .titre {
+  border: 1px solid #c50545;
+}
+.item.f_cat_7 .icon-doc {
+  border: 1px solid #c50545;
+  background-color: #c50545;
+}
+
+.item.f_cat_8 .titre {
+  border: 1px solid #eb6c1d;
+}
+.item.f_cat_8 .icon-doc {
+  border: 1px solid #eb6c1d;
+  background-color: #eb6c1d;
+}
+
+.item.f_cat_9 .titre {
+  border: 1px solid #5ab1bb;
+}
+.item.f_cat_9 .icon-doc {
+  border: 1px solid #5ab1bb;
+  background-color: #5ab1bb;
+}
+
+.item.f_cat_10 .titre {
+  border: 1px solid #5268b9;
+}
+.item.f_cat_10 .icon-doc {
+  border: 1px solid #5268b9;
+  background-color: #5268b9;
+}
+
+@media screen and (min-width: 300px) {
+  .f-btn.__big i {
+    font-size: 6.4rem;
+    color: #b3b3b3;
+  }
+  .f-btn.__big div {
+    padding-left: 2rem;
+  }
+  .f-btn.__big .legend {
+    display: none;
+  }
+}
 @media screen and (min-width: 600px) {
+  .f-btn .legend {
+    display: block;
+  }
+
+  .fluxi-content .button.__btn .txt {
+    line-height: 1;
+  }
+
   .clikable.wide {
     text-align: left;
   }
@@ -291,6 +577,16 @@
     padding: 0 8rem;
   }
 
+  blockquote .blockquote {
+    padding-right: 8rem;
+  }
+  blockquote:before {
+    margin: 4rem 0 2rem 8rem;
+  }
+  blockquote:after {
+    margin: 2rem 0 5rem 8rem;
+  }
+
   .clikarde {
     flex-flow: row nowrap;
     width: 830px;
@@ -305,5 +601,10 @@
   }
   .clikarde .clikarde__item + .clikarde__item {
     padding-right: 2rem;
+  }
+
+  .isogrid .main-isogrid .item {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: 23%;
   }
 }

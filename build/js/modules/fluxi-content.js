@@ -73,7 +73,7 @@
 				}
 			  });
 			  
-			  $('.sorts').on( 'click', 'button', function() {	
+			  $('.button-group-sort').on( 'click', 'button', function() {	
 			  	var filterValue = $( this ).attr('data-filter');    
 				$the_iso_grid.isotope({ filter: filterValue });
 				

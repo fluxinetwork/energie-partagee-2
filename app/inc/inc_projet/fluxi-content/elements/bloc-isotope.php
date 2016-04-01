@@ -41,8 +41,8 @@
             					
         endif; 		
 		// Output
-		echo '<div class="isogrid '.$type_de_mozaic.'">';
-			echo '<div id="filters-isogrid" class="button-group sorts">'; 		
+		echo '<div class="isogrid '.$type_de_mozaic.' wrap-extend">';
+			echo '<div id="filters-isogrid" class="button-group-sort">'; 		
 				echo '<button class="button is-checked" data-filter="*">Tout</button>'; 			
 				foreach ($array_filters as $filter){ 
 					echo $filter;				
