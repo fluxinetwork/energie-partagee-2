@@ -661,6 +661,8 @@
 
   .duo-card .head__flex .lighter {
     display: inline-block;
+    vertical-align: top;
+    padding-top: 1rem;
   }
 
   .top-credibility {

@@ -32,7 +32,7 @@ Template Name: Contact
       <?php the_title(); ?>
     </h1>
   </header>
-  <article class="fluxi-content fitvids wrap-n">
+  <article class="fluxi-content fitvids fluxi-wrap">
 		<form class="cmxform" action="" method="post" id="contact_ep" name="contact_ep">
         <fieldset>      
           <legend class="section-title h3">Ou envoyer un message par ce formulaire</legend>  
