@@ -231,6 +231,10 @@
   }
 }
 @media screen and (min-width: 830px) {
+  .fluxi-wrap {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), #fff 10%);
+  }
+
   .wrap-n, .fluxi-wrap {
     padding-left: 8rem;
     padding-right: 8rem;

@@ -73,6 +73,10 @@ $transition: all 0.3s $ease-out-quart;
     	border-radius: 50%;    	
     	display: block;
     	text-align: center;
+		background: #fff;
+		padding: 0;
+		cursor: pointer;
+
 		&:before{
 			background: #fff none;
 		}

@@ -188,14 +188,8 @@ function custom_breadcrumbs() {
        
 }
 /**
- * Social
+ * Description
  */
-function get_socials(){
-	echo'<ul class="social">			
-           <li><a href="#" class="social--face"><i class="icon-facebook_40"></i></a></li>
-           <li><a href="#" class="social--twit"><i class="icon-twitter_40"></i></a></li>
-         </ul>';	
-} 
 function get_description(){
 	if( get_field('google_description') ):							
 		echo '<h2 class="description">'.get_field('google_description').'</h2>';

@@ -137,13 +137,13 @@
 		padding-right:$gutter;	
 	}
 
-	.section{
+	.section {
 		padding-top:$space;
 		padding-bottom:$space;		
 	}
-  	.box__solo{
+  	.box__solo {
 	  	flex: 1 1 84%;
-	  	max-width:84%;
+	  	max-width: 84%;
   	}	
   	.box__half {
     	flex: 1 1 0;		
@@ -153,18 +153,21 @@
 		max-width:66px;     	
   	}
   	.head__flex .box__fixe, .trio-card .box__fixe{
-		display:flex;
+		display: flex;
 	}
 	.wrap-bg.highlight{
 		.box__fixe	{
 			align-items: flex-start;	
 		}
 		.box__solo{
-			margin-bottom:0;			
+			margin-bottom: 0;			
 		}
 	}	
 }
 @media screen and (min-width: $bp--medium) {
+	.fluxi-wrap {
+		background: linear-gradient(45deg, rgba(#fff, 0.9), #fff 10%);
+	}
 	.wrap-n, .fluxi-wrap {
 		padding-left:$gutter*2;
 		padding-right:$gutter*2;	
