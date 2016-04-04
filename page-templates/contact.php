@@ -33,10 +33,21 @@ Template Name: Contact
     </h1>
   </header>
   <article class="fluxi-content fitvids fluxi-wrap">
-		<form class="cmxform" action="" method="post" id="contact_ep" name="contact_ep">
-        <fieldset>      
-          <legend class="section-title h3">Ou envoyer un message par ce formulaire</legend>  
+    <?php
 
+      get_description();
+
+      get_socials();  
+
+      if( have_rows('elements_page') ):  
+        
+        require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');          
+        
+      endif; 
+    ?>
+  
+		  <form class="cmxform" action="" method="post" id="contact_ep" name="contact_ep">
+        <fieldset>   
           <p>
             <label for="prenom">Prénom:<abbr class="require-form" title="obligatoire">*</abbr></label>
             <input name="prenom" id="prenom" type="text" value="<?php if(!empty($_SESSION['prenom'])) echo $_SESSION['prenom']; ?>">
@@ -79,7 +90,7 @@ Template Name: Contact
         </div>
       </form>
 
-	</article>
+	 </article>
   <?php endwhile; endif; ?>
 </section>
 <?php get_footer(); ?>
