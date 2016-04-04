@@ -4,17 +4,17 @@
 	$cat_id = $cat[0]->cat_ID;
 	
 	if ( $cat_id == 15 ) :
-    	$title = 'Les actualités';
+    	$title = 'Actualités';
     elseif ( $cat_id == 17 ) :
     	$title = 'Dans la presse';
     elseif ( $cat_id == 16 ) :
-    	$title = 'Les événements';
+    	$title = 'Événements';
     elseif ( $cat_id == 19 ) :				
-    	$title = 'Les ateliers';
+    	$title = 'Ateliers';
     elseif ( $cat_id == 20 ) :
-    	$title = 'Les formations';
+    	$title = 'Formations';
 	else : 
-		$title = 'Les actualités';
+		$title = 'Actualités';
     endif;
 	
 	if ( $cat_id == 16 || $cat_id == 20 || $cat_id == 19 ) :

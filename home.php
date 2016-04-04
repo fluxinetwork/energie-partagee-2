@@ -8,7 +8,9 @@
               <li class="key-nums__item"><span class="key-nums__item__num">25</span> projets locaux<br>financés</li>
               <li class="key-nums__item"><span class="key-nums__item__num">+10</span> millions d’euros<br>collectés</li>      
             </ul>
-            <a href="#" class="button">Comprendre notre action</a>
+
+            <div class="lightvideo">
+            <a href="" data-src="https://www.youtube.com/watch?v=KGZhsemH57Y" class="button cta"><i class="icon-video_20"></i> Comprendre notre action</a></div>
         </article>
 	</section>
     

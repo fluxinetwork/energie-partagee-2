@@ -17,9 +17,9 @@ if ( function_exists('is_mobile') ) {
             <div class="box__half">
                 <h5 class="s-title">Nous suivre</h5>
                 <ul class="social">
-                   <li><a href="#" class="social--face"><i class="icon-facebook_40"></i></a></li>
-                    <li><a href="#" class="social--twit"><i class="icon-twitter_40"></i></a></li>
-                    <li><a href="#" class="social--yout"><i class="icon-youtube_40"></i></a></li>
+                   <li><a href="https://www.facebook.com/pages/Energie-Partag%C3%A9e/376460652377147" class="social--face" target="_blank"><i class="icon-facebook_40"></i></a></li>
+                    <li><a href="https://twitter.com/EnergiePartagee" class="social--twit" target="_blank"><i class="icon-twitter_40"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC0MX3OTOOwM5V20L3FZ5wwg" class="social--yout" target="_blank"><i class="icon-youtube_40"></i></a></li>
                 </ul>    
             </div>
             <form class="box__half" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
@@ -50,9 +50,9 @@ if ( function_exists('is_mobile') ) {
         </ul>
         
         <nav class="footer__nav">
-        	<a class="link" href="/contact/">Contact</a>
-           <a class="link" href="/mentions-legales/">Mentions légales </a>
-           <a class="link" href="/credits/">Crédits</a>
+        	<a class="link" href="<?php echo get_site_url(); ?>/contact/">Contact</a>
+           <a class="link" href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions légales </a>
+           <a class="link" href="<?php echo get_site_url(); ?>/credits/">Crédits</a>
         </nav>
         
     </div>    
