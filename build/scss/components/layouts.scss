@@ -55,7 +55,7 @@
 	}
 		
 }
-.page, .single, .search-results{ 
+.page, .single, .search-results, .archive{ 
 	.header-bloc{
 		padding-bottom:$space*2.4;
 		margin-bottom:$space*2.4;
@@ -65,11 +65,7 @@
 		}
 	}
 }
-.archive,.category,.search-results {
-	.header-bloc{
-		padding-bottom:$space*1.8;	
-	}
-}
+
 
 .tags{
 	@extend %list-reset;

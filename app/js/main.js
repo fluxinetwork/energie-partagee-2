@@ -240,7 +240,7 @@ var FOO = {
     },
 	category: {
         init: function() {			
-			
+			initLoadMorePostsBtn();
         }
     },
 	single: {
@@ -1580,42 +1580,6 @@ function loadPosts(category){
     });
     return false;
 }
-
-
-
-
-/* WP-JSON TEST
-/*
-
-function initLoadMoreBtn (){
-	$('.load-more').on( 'click', function ( e ) {
-		e.preventDefault();
-		
-		var category = $(this).data('cat');
-		
-		getPosts(category);
-	});
-}
-
-function getPosts(category) {
-    $.ajax({
-        url: siteURL+'/wp-json/posts?filter[cat]=' + category + '&include[]=title&include[]=date&filter[posts_per_page]=12&filter[offset]=12',
-        dataType: 'json',
-        type: 'GET',
-        success: function(data) {
-			$('.fluxi-content').append('<h4 class="h4">— ' + data[0].title + '</h4>');
-           // drawCountries(data);
-			
-        },
-        error: function() {
-			
-            console.log('erreur JSON');
-			
-        }
-    });
-}
-
-*/
 
 	// VARS
 	

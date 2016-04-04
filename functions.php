@@ -6,4 +6,5 @@ require_once locate_template('/functions/menus.php');
 require_once locate_template('/functions/images.php');
 require_once locate_template('/functions/share.php');
 require_once locate_template('/functions/utils.php');
+require_once locate_template('/functions/search.php');
 //require_once locate_template('/functions/json-rest-api.php');

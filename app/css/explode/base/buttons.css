@@ -245,6 +245,20 @@
   margin-right: 1rem;
 }
 
+.minicard {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.minicard::before {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.minicard:hover {
+  transform: scale(1.05);
+}
+.minicard:hover::before {
+  transform: scale(0.95) translateY(5%);
+  filter: blur(1px);
+}
+
 /* EDIT LINK FOR ADMINS */
 .edit {
   background: #fff none;

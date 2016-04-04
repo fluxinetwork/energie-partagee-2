@@ -33,7 +33,7 @@ var FOO = {
     },
 	category: {
         init: function() {			
-			
+			initLoadMorePostsBtn();
         }
     },
 	single: {

@@ -164,6 +164,10 @@ blockquote{
 	margin-top:$space*0.6;
 	margin-bottom:$space*0.6;
 	text-align:center;
+
+	.p-ss{
+		margin-bottom: 0;
+	}
 	
 	.wrap-space.box{
 		z-index:2;
@@ -181,14 +185,14 @@ blockquote{
 	}
 	.box__half:first-child{
 		max-width:300px;
-		margin: 0 auto $space*0.2;
+		margin: 0 auto $space*0.3;
 	}
 	.box__half:last-child{
 		padding-right:0;
 		margin-bottom:0;
 	}		
 	.button{
-		margin-top:0;	
+		margin-top:$space*0.3;	
 	}
 	.lightbox{
 		margin-bottom:$space*0.6;
@@ -202,11 +206,12 @@ blockquote{
 .holder-round{
 	border-radius:50%;
 	overflow:hidden;	
-	width:260px;
-	height:260px;
-	background-size:cover;
-	background-repeat:no-repeat;
+	width:100%;
+	max-width:260px;
 	margin:0 auto;
+	img{
+		width: 100%;
+	}
 }	
 .clikarde{
 	display: flex;

@@ -220,6 +220,9 @@ blockquote .blockquote {
   margin-bottom: 6rem;
   text-align: center;
 }
+.clikable.wide .p-ss {
+  margin-bottom: 0;
+}
 .clikable.wide .wrap-space.box {
   z-index: 2;
   position: relative;
@@ -235,14 +238,14 @@ blockquote .blockquote {
 }
 .clikable.wide .box__half:first-child {
   max-width: 300px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3rem;
 }
 .clikable.wide .box__half:last-child {
   padding-right: 0;
   margin-bottom: 0;
 }
 .clikable.wide .button {
-  margin-top: 0;
+  margin-top: 3rem;
 }
 .clikable.wide .lightbox {
   margin-bottom: 6rem;
@@ -255,11 +258,12 @@ blockquote .blockquote {
 .holder-round {
   border-radius: 50%;
   overflow: hidden;
-  width: 260px;
-  height: 260px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 260px;
   margin: 0 auto;
+}
+.holder-round img {
+  width: 100%;
 }
 
 .clikarde {

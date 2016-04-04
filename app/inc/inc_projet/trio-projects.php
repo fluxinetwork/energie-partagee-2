@@ -4,8 +4,16 @@ if(is_home()):
 	$args_projects = array(
 		'post_type' => 'projets',
 		'post_status' => 'publish',
-		'posts_per_page' => 3		
+		'posts_per_page' => 3,
+		'meta_query' => array( 
+			array(
+				'key' => 'projet_star', 
+				'value' => 1, 
+				'compare' => '='
+			)
+		)  
 	);
+
 else:
 	
 	if(get_field('active_related_projects') == 1):

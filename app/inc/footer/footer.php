@@ -50,9 +50,9 @@ if ( function_exists('is_mobile') ) {
         </ul>
         
         <nav class="footer__nav">
-        	<a class="link" href="#">Contact</a>
-           <a class="link" href="#">Mentions légales </a>
-           <a class="link" href="#">Crédits</a>
+        	<a class="link" href="/contact/">Contact</a>
+           <a class="link" href="/mentions-legales/">Mentions légales </a>
+           <a class="link" href="/credits/">Crédits</a>
         </nav>
         
     </div>    

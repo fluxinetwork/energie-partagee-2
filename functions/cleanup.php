@@ -289,18 +289,3 @@ function remove_default_description($bloginfo) {
 add_filter('get_bloginfo_rss', 'remove_default_description');
 
 
-/**
- * Fix for empty search queries redirecting to home page
- *
- * @link http://wordpress.org/support/topic/blank-search-sends-you-to-the-homepage#post-1772565
- * @link http://core.trac.wordpress.org/ticket/11330
- */
-function search_request_filter($query_vars) {
-  if (isset($_GET['s']) && empty($_GET['s'])) {
-    $query_vars['s'] = ' ';
-  }
-
-  return $query_vars;
-}
-add_filter('request', 'search_request_filter');
-

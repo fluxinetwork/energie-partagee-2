@@ -113,7 +113,7 @@ function ex_cpt_search( $query ) {
 
 	if ( $query->is_search ) {
 		//$query->set( 'cat', '-1, -19, -20' );
-		//$query->set( 'post_type', array( 'post', 'page', 'projets' ) );
+		$query->set( 'post_type', array( 'post', 'page', 'projets' ) );
 		
 		if (isset($_GET['cat']) && empty($_GET['cat'])) {
 			$query->set( 'cat', $_GET['cat'] );

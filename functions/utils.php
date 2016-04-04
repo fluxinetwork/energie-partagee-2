@@ -302,8 +302,8 @@ function more_project_ajax(){
         'suppress_filters' => true,
         'post_type' => 'projets',
         'posts_per_page' => 2,
-		 'post_status' => 'publish',
-		 'offset'  => $offset      
+		'post_status' => 'publish',
+		'offset'  => $offset      
     );
 
     $loop = new WP_Query($args);
@@ -317,9 +317,9 @@ function more_project_ajax(){
 		
 		$data = array(            
        		'title' => get_the_title(),
-           'image'  => $project_img_url,
-           'region' => get_field('departement'),
-           'permalink'   => get_the_permalink()
+           	'image'  => $project_img_url,
+           	'region' => get_field('departement'),
+           	'permalink'   => get_the_permalink()
         );
 		$results[] = $data; 
 	
@@ -499,12 +499,12 @@ function send_mail_prospect(){
 			// ********************************	
 			// Envoie du mail au prospect			
 			$mail_vars_prospect = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
-			notify_by_mail (array($mail_prospect), 'Energie Partagée <contact@energie-partagee.org>', 'Guide pour investir dans le projet '.$name_project, true, TEMPLATEPATH . '/app/inc/inc_projet/content-mail-prospect.php', $mail_vars_prospect );	
+			notify_by_mail (array($mail_prospect), 'Energie Partagée <contact@energie-partagee.org>', 'La transition citoyenne n’attend plus que vous !', true, TEMPLATEPATH . '/app/inc/inc_projet/content-mail-prospect.php', $mail_vars_prospect );	
 			
 			// ********************************
 			// Envoie du mail de notification 
 			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
-			notify_by_mail (array('marc.mossalgue@energie-partagee.org'), 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau prospect publié !', false, 'Le contact ' . $mail_prospect . ' vient de faire une demande d\'informations pour le projet <strong>' . $name_project . '<strong>.', $mail_vars_notif );	
+			//notify_by_mail (array('marc.mossalgue@energie-partagee.org'), 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau prospect publié !', false, 'Le contact ' . $mail_prospect . ' vient de faire une demande d\'informations pour le projet <strong>' . $name_project . '<strong>.', $mail_vars_notif );	
 			
 			// Output response json	
 			$results[] = $datas_mail; 			
@@ -514,7 +514,7 @@ function send_mail_prospect(){
 			$data = array(
 				'validation' => 'error',
 				'mail' => $mail_prospect,
-				'message' => 'Vous devez renseigner une adresse email valide.'			
+				'message' => 'Veuillez renseigner une adresse email valide.'			
 			);
 			$results[] = $data; 		
 		

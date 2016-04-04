@@ -55,7 +55,9 @@
 				echo '<aside class="clikable wide">
 							<article class="wrap-space box">
 								<div class="box__half">															
-									<div class="holder-round" style="background-image:url('.$image_du_cliquable['sizes']['medium'].')"></div>
+									<div class="holder-round">
+										<img src="'.$image_du_cliquable['sizes']['thumbnail'].'">
+									</div>
 								</div>
 								<div class="box__half">
 									<h4 class="clikable__title">'.$titre_du_cliquable.'</h4>

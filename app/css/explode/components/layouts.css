@@ -267,16 +267,12 @@
   margin-top: 3rem;
 }
 
-.page .header-bloc, .single .header-bloc, .search-results .header-bloc {
+.page .header-bloc, .single .header-bloc, .search-results .header-bloc, .archive .header-bloc {
   padding-bottom: 24rem;
   margin-bottom: 24rem;
 }
-.page .header-bloc .h1, .single .header-bloc .h1, .search-results .header-bloc .h1 {
+.page .header-bloc .h1, .single .header-bloc .h1, .search-results .header-bloc .h1, .archive .header-bloc .h1 {
   margin: 1rem auto 0;
-}
-
-.archive .header-bloc, .category .header-bloc, .search-results .header-bloc {
-  padding-bottom: 18rem;
 }
 
 .tags {

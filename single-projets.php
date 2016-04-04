@@ -39,9 +39,12 @@
 		$post_img_url = $post_img_array[0];
 		$main_url = $post_img_url;
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
+    $thumb_url_a = wp_get_attachment_image_src($post_img_id, 'thumbnail', true);
+    $thumb_url = $thumb_url_a[0];
 	elseif(!empty($main_image_obj)):
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
 		$main_url = $main_image_obj['url'];
+    $thumb_url = $main_image_obj['sizes']['thumbnail'];
 	endif;
 	// Img porteur de projet
 	$portrait_pdp = get_field('portrait');	

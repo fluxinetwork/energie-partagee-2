@@ -24,7 +24,7 @@ $transition: all 0.3s $ease-out-quart;
 	}
 
 	&:hover {	  
-	    transform: scale(1.05);
+	    transform: scale(1.05);	   
 	  &::before {	    
 	    transform: scale(0.95) translateY(5%);	    
 	    filter: blur(1px);
@@ -127,7 +127,21 @@ $transition: all 0.3s $ease-out-quart;
 
 
 .minicard{
-	@extend %button;	
+	@extend %button;
+	transition: $transition;
+
+	&::before{
+		transition: $transition;
+	}
+
+	&:hover {	  
+	    transform: scale(1.05);	   
+	  &::before {	    
+	    transform: scale(0.95) translateY(5%);	    
+	    filter: blur(1px);
+	  }
+	}
+
 }
 /* EDIT LINK FOR ADMINS */
 .edit{	

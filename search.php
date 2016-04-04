@@ -32,34 +32,40 @@
 	<?php if ( have_posts() ) : ?>      
       
         <h2 class="h3">Votre recherche :</h2>
-        <?php get_search_form(); ?>
+        
+        <form method="get" id="searchform" class="searchform" action="<?php bloginfo('url'); ?>/">
+          <p>    
+            <label for="s"><?php _e('Recherche :'); ?></label>       
+            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
+            <input type="submit" id="searchsubmit" class="searchsubmit" value="Rechercher" />
+          </p>
+          <p>  
+            <label class="filter-lm" for="cat"><?php _e('Filtrer par : '); ?></label> 
+          <?php wp_dropdown_categories('show_option_none=Ne pas filtrer&hide_empty=1&exclude=1&orderby=name'); ?>
+          </p>
+        </form>
+
       	<ul class="searchresults">
         	<?php while ( have_posts() ) : the_post(); 
-				$the_post_type = get_post_type( $post_id );	
-				$category_detail=get_the_category($post_id);
-				$cat_count=0;		
-			?>
+    				$the_post_type = get_post_type( $post_id );	
+    				$category_detail=get_the_category($post_id);
+    				$cat_count=0;		
+    			?>
             	<li class="searchresults__item">
                     <a class="searchresults__link" href="<?php the_permalink(); ?>">            
                         <h3 class="searchresults__title"><?php the_title(); ?></h3>
                     </a>                                           
                     <?php 
-						// Img               
+						          // Img               
                         if ( has_post_thumbnail() ) {
                             echo '<a class="searchresults__img" href="'.get_the_permalink().'">';
                                 the_post_thumbnail('medium');
                             echo '</a>';
-                        }                    
-                       /* // si on utilise le résumé alors on l'affiche
-                        if( get_the_excerpt() != '' ) : 					
-                            the_excerpt();        
-                        // sinon on le crée à partir du contenu de l'article
-                        else : 					
-                            echo mb_substr( strip_tags( get_the_content() ), 0, 300, "UTF-8" ).'[&hellip;]';        
-                        endif;*/
-						if( get_field('google_description') ) : 
-							echo '<p class="p-ss">'.get_field('google_description').'</p>';
-						endif;
+                        }
+                      // Description       
+            						if( get_field('google_description') ) : 
+            							echo '<p class="p-ss">'.get_field('google_description').'</p>';
+            						endif;
 						
                     ?>
                     <span class="s-footer">
@@ -73,7 +79,7 @@
 							
                             // Show category and link it                            
                             foreach($category_detail as $cd){
-								$cat_count++;								
+								                $cat_count++;								
                                 $cat_name = $cd->cat_name;
                                 $cat_link = get_category_link( $cd->term_id );
 								
@@ -93,14 +99,14 @@
         <?php
             $big = 999999999;
             echo '<div class="s-pagination">';
-				echo paginate_links( array(
-					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-					'format' => '?paged=%#%',
-					'prev_text' => __('«'),
-					'next_text' => __('»'),
-					'current' => max( 1, get_query_var('paged') ),
-					'total' => $wp_query->max_num_pages
-				) );
+    				echo paginate_links( array(
+    					'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+    					'format' => '?paged=%#%',
+    					'prev_text' => __('«'),
+    					'next_text' => __('»'),
+    					'current' => max( 1, get_query_var('paged') ),
+    					'total' => $wp_query->max_num_pages
+    				) );
             echo '</div>';
 			?>
         	

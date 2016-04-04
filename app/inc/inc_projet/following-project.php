@@ -36,7 +36,7 @@
           <input name="name_project" type="hidden" value="<?php echo get_the_title(); ?>">
           <input name="city_project" type="hidden" value="<?php echo get_field('ville'); ?>">
           <input name="region_project" type="hidden" value="<?php echo get_field('departement'); ?>">
-          <input name="thumb_url" type="hidden" value="<?php echo $main_url; ?>">
+          <input name="thumb_url" type="hidden" value="<?php echo $thumb_url; ?>">
           <input name="toky_toky" type="hidden" value="3948517542">
           <?php wp_nonce_field( 'mailing_prospect', 'mailing_prospect_nonce_field' ); ?>
           <div class="box__fixe">
