@@ -4,7 +4,7 @@
 	var typeEnergie, stadeProjet;
 	
 	if($('#soumettre_projet').length > 0){	
-		
+
 		// Datepicker
 		var TODAY = new Date(2013,3,20,10,30);
 		$('#mise_en_service').pickadate({
@@ -197,7 +197,6 @@
 			}
 			
 			else if(stadeProjet == 1){
-								
 				$('.item-1-6, .item-1-5, .item-1-4, .item-1-3').removeClass('hide-item');
 				$('.item-2-6').addClass('hide-item');
 				
@@ -333,7 +332,8 @@
 			//$(this).val('');			
 		});
 		
-		$('input:text, textarea, input:radio, select').not('.hide-item').each(function( index ) {			
+		$('input:text, textarea, input:radio, select').not('.hide-item').each(function( index ) {		
 			$(this).attr('disabled', false);
 		});
+		
 	}

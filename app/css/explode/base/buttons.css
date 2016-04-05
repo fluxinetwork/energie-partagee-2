@@ -198,20 +198,33 @@
   margin-right: 0;
 }
 .social [class^="social--"], .social [class*=" social--"] {
+  position: relative;
   border-radius: 50%;
   display: block;
   text-align: center;
-  background: #fff;
   padding: 0;
   cursor: pointer;
-}
-.social [class^="social--"]:before, .social [class*=" social--"]:before {
-  background: #fff none;
 }
 .social [class^="social--"] i, .social [class*=" social--"] i {
   display: inline-block;
   font-size: 4rem;
   vertical-align: middle;
+}
+.social [class^="social--"] i::before, .social [class*=" social--"] i::before {
+  position: relative;
+  z-index: 2;
+}
+.social [class^="social--"] i::after, .social [class*=" social--"] i::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  background: #fff none;
+  z-index: 0;
+  border-radius: 50%;
 }
 
 .icon-facebook_40, .icon-facebook_26 {

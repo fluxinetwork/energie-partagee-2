@@ -1061,7 +1061,7 @@ MarkerShadow.prototype.toggle = function() {
 			$(".main-isogrid a[href$='.xls'] .icon-doc, .docs a[href$='.xlsx'] .icon-doc, .main-isogrid a[href$='.xlt'] .icon-doc, .main-isogrid a[href$='.xltx'] .icon-doc").addClass('js-icon-exel');  
 	  }
 function initContactForm(){
-
+	$('select#sujet').simpleselect();
 	$("#contact_ep").validate({
 			rules: {
 				email:{	email: true	},				
@@ -1115,7 +1115,7 @@ function initContactForm(){
 	var typeEnergie, stadeProjet;
 	
 	if($('#soumettre_projet').length > 0){	
-		
+
 		// Datepicker
 		var TODAY = new Date(2013,3,20,10,30);
 		$('#mise_en_service').pickadate({
@@ -1308,7 +1308,6 @@ function initContactForm(){
 			}
 			
 			else if(stadeProjet == 1){
-								
 				$('.item-1-6, .item-1-5, .item-1-4, .item-1-3').removeClass('hide-item');
 				$('.item-2-6').addClass('hide-item');
 				
@@ -1444,9 +1443,10 @@ function initContactForm(){
 			//$(this).val('');			
 		});
 		
-		$('input:text, textarea, input:radio, select').not('.hide-item').each(function( index ) {			
+		$('input:text, textarea, input:radio, select').not('.hide-item').each(function( index ) {		
 			$(this).attr('disabled', false);
 		});
+		
 	}
 /* 
  * Add prospect and send information mail 

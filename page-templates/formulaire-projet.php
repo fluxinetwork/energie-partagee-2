@@ -8,21 +8,21 @@ Template Name: Formulaire projets
 <section class="wrap-main">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-	$main_image_obj = get_field( 'main_image' );
-	$main_image ='';
+  $main_image_obj = get_field( 'main_image' );
+  $main_image ='';
 
-	if ( has_post_thumbnail() && empty($main_image_obj)) :
-		$post_img_id = get_post_thumbnail_id();
-		$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
-		$post_img_url = $post_img_array[0];
+  if ( has_post_thumbnail() && empty($main_image_obj)) :
+    $post_img_id = get_post_thumbnail_id();
+    $post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
+    $post_img_url = $post_img_array[0];
 
-		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
-	elseif(!empty($main_image_obj)):
+    $main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
+  elseif(!empty($main_image_obj)):
 
-		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
-	endif;
-	
-	
+    $main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
+  endif;
+  
+  
 
   ?>
   <header class="header-bloc">
@@ -33,9 +33,9 @@ Template Name: Formulaire projets
       <?php the_title(); ?>
     </h1>
   </header>
-	<?php endwhile; endif; ?>
+  <?php endwhile; endif; ?>
 
-	<article class="fluxi-wrap fluxi-content">
+  <article class="fluxi-wrap fluxi-content">
 
       <?php 
         get_description();
@@ -52,7 +52,7 @@ Template Name: Formulaire projets
             <p>
               <label for="source_energie">Source d’énergie<abbr class="require-form" title="obligatoire">*</abbr></label>
               <span class="wrap-input-select--left">
-                <input type="text" class="ghost"></input>
+                <span class="fakeInput"></span>
                 <select name="source_energie" id="source_energie" required>
                   <option value="">Sélectionnez</option>
                   <option value="8">Biomasse</option>
@@ -140,6 +140,7 @@ Template Name: Formulaire projets
                 <input name="connu_comment" type="radio" value="Autres" id="connu_rad_6" >
                 <span class="radio__label">Autre</span></label>
               <input class="sub-hide-item" name="connu_autre" type="text" placeholder="Si  autre, précisez" value="<?php if(!empty($_SESSION['connu_autres'])) echo $_SESSION['connu_autres']; ?>" id="connu_autre" >
+              <label for="connu_comment" class="error"></label>
             </p>
             <p><label for="collectif">Représentez-vous un collectif, une association, une société de projet pour ce projet ?<abbr class="require-form" title="obligatoire">*</abbr></label>
               <label for="collectif_1" class="block">
@@ -154,6 +155,7 @@ Template Name: Formulaire projets
               <label for="collectif_4" class="block">
                 <input name="collectif" type="radio" value="Autres" id="collectif_4" />
                   <span class="radio__label">Autre</span></label>
+              <label for="collectif" class="error"></label>
               <input class="sub-hide-item" id="autre_collectif" name="autre_collectif" type="text" placeholder="Si autre, précisez" value="<?php if(!empty($_SESSION['autre_collectif'])) echo $_SESSION['autre_collectif']; ?>" >
               <input name="nom_collectif" type="text" placeholder="Quel est son nom ?" value="<?php if(!empty($_SESSION['nom_collectif'])) echo $_SESSION['nom_collectif']; ?>" >
             </p>
@@ -176,22 +178,23 @@ Template Name: Formulaire projets
             <p> <label for="stade_projet">A quel stade du projet en êtes vous ?<abbr class="require-form" title="obligatoire">*</abbr></label>
               <label for="stade_projet_1" class="block">
                 <input name="stade_projet" type="radio" value="idee" id="stade_projet_1" >
-                 <span class="radio__label">Idée</span></label>
+                <span class="radio__label">Idée</span></label>
               <label for="stade_projet_2" class="block">
                 <input name="stade_projet" type="radio" value="structuration" id="stade_projet_2" >
-                 <span class="radio__label">Structuration</span></label>
+                <span class="radio__label">Structuration</span></label>
               <label for="stade_projet_3" class="block">
                 <input name="stade_projet" type="radio" value="etudes" id="stade_projet_3" >
                 <span class="radio__label">Études</span></label>
               <label for="stade_projet_4" class="block">
                 <input name="stade_projet" type="radio" value="autorisations" id="stade_projet_4" >
-                 <span class="radio__label">Autorisations</span></label>
+                <span class="radio__label">Autorisations</span></label>
               <label for="stade_projet_5" class="block">
                 <input name="stade_projet" type="radio" value="realisation" id="stade_projet_5" >
-                 <span class="radio__label">Réalisation</span></label>
+                <span class="radio__label">Réalisation</span></label>
               <label for="stade_projet_6" class="block">
                 <input name="stade_projet" type="radio" value="fonctionnement" id="stade_projet_6" >
-                 <span class="radio__label">Fonctionnement</span></label>
+                <span class="radio__label">Fonctionnement</span></label>
+              <label for="stade_projet" class="error"></label>
             </p>
             
             <!-- *************************** Conditions --> 
@@ -206,6 +209,7 @@ Template Name: Formulaire projets
                 <input class="item-1-6" name="entite_porteuse" type="radio" value="oui" id="entite_porteuse_2" disabled>
                  <span class="radio__label">Oui</span></label>
               <input class="item-1-6 sub-hide-item" name="nom_entite_porteuse" type="text" placeholder="Quel est son nom ?" value="<?php if(!empty($_SESSION['nom_entite_porteuse'])) echo $_SESSION['nom_entite_porteuse']; ?>" id="nom_entite_porteuse" disabled>
+              <label class="error" for="entite_porteuse"></label>
             </p>
             <p class="hide-item item-1-4">
               <label for="principales_contrainte">Avez-vous déjà identifié les principales contraintes et atouts du projet ?</label>
@@ -217,20 +221,20 @@ Template Name: Formulaire projets
               <span class="wrap-input-select">
                 <input class="item-1-6" name="puissance_prevue" id="puissance_prevue" type="text" value="<?php if(!empty($_SESSION['puissance_prevue'])) echo $_SESSION['puissance_prevue']; ?>" required disabled>
                 <select class="item-1-6" name="unite_energie" id="unite_energie" disabled>
-              </sapn>
               <?php
-				$field_key = "field_53a9b0af72e19";
-				$field = get_field_object($field_key);
-				
-				if( $field )
-				{					
-					foreach( $field['choices'] as $k => $v )
-					{
-						echo '<option value="' . $k . '">' . $v . '</option>';
-					}					
-				}
-				?>   
-              </select>
+        $field_key = "field_53a9b0af72e19";
+        $field = get_field_object($field_key);
+        
+        if( $field )
+        {         
+          foreach( $field['choices'] as $k => $v )
+          {
+            echo '<option value="' . $k . '">' . $v . '</option>';
+          }         
+        }
+        ?>   
+                </select>
+              </span>
               <label for="puissance_prevue" class="error"></label>
             </p>
             <p class="hide-item item-1-6 type-non-eco-energ">
@@ -238,20 +242,20 @@ Template Name: Formulaire projets
               <span class="wrap-input-select">
                 <input class="item-1-6" name="unites_production" id="unites_production" type="text" placeholder="Ex : 25" value="<?php if(!empty($_SESSION['unites_production'])) echo $_SESSION['unites_production']; ?>" required disabled>
                 <select class="item-1-6" name="unite_production" id="unite_production" disabled>
-              </sapn>
                 <?php
-				$field_key = "field_53a9af1e525f3";
-				$field = get_field_object($field_key);
-				
-				if( $field )
-				{					
-					foreach( $field['choices'] as $k => $v )
-					{
-						echo '<option value="' . $k . '">' . $v . '</option>';
-					}					
-				}
-				?>
-              </select>
+        $field_key = "field_53a9af1e525f3";
+        $field = get_field_object($field_key);
+        
+        if( $field )
+        {         
+          foreach( $field['choices'] as $k => $v )
+          {
+            echo '<option value="' . $k . '">' . $v . '</option>';
+          }         
+        }
+        ?>
+                </select>
+              </span>
               <label for="unites_production" class="error"></label>
             </p>
             <p class="hide-item item-1-6 type-non-eco-energ">
@@ -259,20 +263,21 @@ Template Name: Formulaire projets
               <span class="wrap-input-select">
                 <input class="item-1-6" name="objectif_production" id="objectif_production" type="text" value="<?php if(!empty($_SESSION['objectif_production'])) echo $_SESSION['objectif_production']; ?>" disabled>
                 <select class="item-1-6" name="unite_objectif_production" id="unite_objectif_production" disabled>
-              </span>
+              
                 <?php
-				$field_key = "field_53aace8c3ce1e";
-				$field = get_field_object($field_key);
-				
-				if( $field )
-				{					
-					foreach( $field['choices'] as $k => $v )
-					{
-						echo '<option value="' . $k . '">' . $v . '</option>';
-					}					
-				}
-				?>
-              </select>
+        $field_key = "field_53aace8c3ce1e";
+        $field = get_field_object($field_key);
+        
+        if( $field )
+        {         
+          foreach( $field['choices'] as $k => $v )
+          {
+            echo '<option value="' . $k . '">' . $v . '</option>';
+          }         
+        }
+        ?>
+                </select>
+              </span>
               <label for="objectif_production" class="error"></label>
             </p>
             <p class="hide-item item-1-6 type-eco-energ">
@@ -303,6 +308,7 @@ Template Name: Formulaire projets
               <label for="projet_formalise_2" class="block">
                 <input class="item-1-5" name="projet_formalise" type="radio" value="oui" id="projet_formalise_2" disabled>
                  <span class="radio__label">Oui</span></label>
+                 <label class="error" for="projet_formalise"></label>
               
               <!--<input class="sub-hide-item" name="fichier_projet_formalise" type="file" placeholder="Votre document" id="fichier_projet_formalise" disabled>-->
             </p>
@@ -352,6 +358,7 @@ Template Name: Formulaire projets
                   <input class="item-1-6" name="actions_sensibilisation" type="radio" value="oui" id="actions_sensibilisation_2" disabled>
                    <span class="radio__label">Oui</span></label>
                 <textarea class="sub-hide-item" name="actions_sensibilisation_detail" id="actions_sensibilisation_detail" placeholder="Décrivez ces actions" disabled><?php if(!empty($_SESSION['actions_sensibilisation'])) echo $_SESSION['actions_sensibilisation']; ?></textarea>
+                <label class="error" for="actions_sensibilisation"></label>
               </p>
               <h4 class="hide-item item-2-6 h4">Démocratie et transparence</h4>
               <p class="hide-item item-2-6"><label for="dispositions_securisant">Existe-t-il des dispositions sécurisant une gouvernance locale et citoyenne dans les statuts de la société d'exploitation ?<abbr class="require-form" title="obligatoire">*</abbr></label>
@@ -362,6 +369,7 @@ Template Name: Formulaire projets
                   <input class="item-2-6" name="dispositions_securisant" type="radio" value="oui" id="dispositions_securisant_2" disabled>
                    <span class="radio__label">Oui</span></label>
                 <textarea class="sub-hide-item" name="dispositions_securisant_detail" id="dispositions_securisant_detail" placeholder="Décrivez ces dispositions" disabled><?php if(!empty($_SESSION['dispositions_securisant'])) echo $_SESSION['dispositions_securisant']; ?></textarea>
+                  <label class="error" for="dispositions_securisant"></label>
               </p>
             </div>
           </fieldset>
@@ -411,16 +419,6 @@ Template Name: Formulaire projets
               <label for="site_web_projet">Site web du projet</label>
               <input name="site_web_projet" type="text" placeholder="ex : http://monprojet.fr" value="<?php if(!empty($_SESSION['site_web_projet'])) echo $_SESSION['site_web_projet']; ?>">
             </p>
-            <!--<p>
-            <label for="photo_projet">Photo d'illustration de votre projet :</label>
-            
-            <input name="fichier_conc[]" type="file" id="photo_projet">
-          </p>
-          <p>
-            <label for="fichier_joindre_projet">Documents à joindre sur le projet (upload) :</label>
-            
-            <input name="fichier_joindre_projet" type="file" id="fichier_joindre_projet">
-          </p>-->
             <p><label for="projet_visible">Autorisez-vous à rendre publique votre fiche projet ?<abbr class="require-form" title="obligatoire">*</abbr></label>
               <label for="projet_visible_1" class="block">
                 <input name="projet_visible" type="radio" value="non" id="projet_visible_1" >
@@ -428,17 +426,18 @@ Template Name: Formulaire projets
               <label for="projet_visible_2" class="block">
                 <input name="projet_visible" type="radio" value="oui" id="projet_visible_2" >
                  <span class="radio__label">Oui</span></label>
+                 <label for="projet_visible" class="error"></label>
             </p>
           </fieldset>
           <input name="nom_token" type="hidden" value="98648515">
           <div class="btns-form">
-          	<div class="notification"></div>
+            <div class="notification"></div>
             <button type="submit" id="submit" class="button green">Envoyer</button>         
 
           </div>
         </form>
      
-	</article>  
+  </article>  
 </section>    
 
-<?php get_footer(); ?>	
+<?php get_footer(); ?>  

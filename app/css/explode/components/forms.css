@@ -92,6 +92,12 @@ form#contact_ep label .require-form {
   font-family: "avantgarde", Arial;
   font-weight: 700;
 }
+form#soumettre_projet label.error,
+form#contact_ep label.error {
+  color: red;
+  font: 700 14px "Roboto", sans-serif;
+  margin-top: 1rem;
+}
 form#soumettre_projet textarea,
 form#contact_ep textarea {
   min-height: 100px;
@@ -118,17 +124,9 @@ form#contact_ep textarea,
 form#contact_ep .radio__label {
   font: 400 14px "Roboto", sans-serif;
 }
-form#soumettre_projet input[type=text].ghost,
-form#contact_ep input[type=text].ghost {
-  width: 0;
-  opacity: 0;
-  margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
-}
 form#soumettre_projet select,
 form#contact_ep select {
-  background: #b3b3b3;
+  background: #65aa04;
   color: #fff;
   padding: 1rem 2rem;
   font: 400 14px "Roboto", sans-serif;
@@ -169,6 +167,11 @@ form#contact_ep .cmxform label.error {
 }
 .wrap-input-select input, .wrap-input-select--left input {
   margin-right: 2rem;
+}
+.wrap-input-select .fakeInput, .wrap-input-select--left .fakeInput {
+  width: 0;
+  height: 38px;
+  display: block;
 }
 
 .wrap-input-select--left {

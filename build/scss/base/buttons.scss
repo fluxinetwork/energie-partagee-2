@@ -69,21 +69,36 @@ $transition: all 0.3s $ease-out-quart;
 	}
 	
 	[class^="social--"], [class*=" social--"]{
-		
+		position: relative;
     	border-radius: 50%;    	
     	display: block;
     	text-align: center;
-		background: #fff;
 		padding: 0;
 		cursor: pointer;
 
-		&:before{
-			background: #fff none;
-		}
-		i{			
+		i {			
+			
 			display: inline-block;
 			font-size: 4rem;
 			vertical-align: middle;	
+			
+			&::before {
+				position: relative;
+				z-index: 2;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 90%;
+				height: 90%;
+				margin: 5%;
+				background: #fff none;
+				z-index: 0;
+				border-radius: 50%; 
+			}
 		}
 	}
 	

@@ -20,28 +20,28 @@ function enqueue_styles() {
     wp_register_style( 'all_buttons', get_template_directory_uri() . '/app/css/explode/base/buttons.css', array(), null );
     wp_register_style( 'homepage', get_template_directory_uri() . '/app/css/explode/pages/homepage.css', array(), null );
     wp_register_style( 'page', get_template_directory_uri() . '/app/css/explode/pages/page.css', array(), null );
-	wp_register_style( 'project', get_template_directory_uri() . '/app/css/explode/pages/project.css', array(), null );
+    wp_register_style( 'project', get_template_directory_uri() . '/app/css/explode/pages/project.css', array(), null );
     wp_register_style( 'single', get_template_directory_uri() . '/app/css/explode/pages/single.css', array(), null );
     wp_register_style( 'category', get_template_directory_uri() . '/app/css/explode/pages/category.css', array(), null );
     
     // project specific components
-	if(is_dir('wp-content/themes/'.THEME_DIRECTORY_NAME)){
-		$files = array_slice(scandir('wp-content/themes/'.THEME_DIRECTORY_NAME.'/app/css/explode/components'), 2); 
-		$slugs = array();
-		foreach ($files as &$value) {        
-			if(substr($value, -4,4) == '.css'){
-				$file = $value;
-				$slug = substr($value, 0,-4);     
-				$slugs[] = $slug;      
-				
-				wp_register_style( $slug, get_template_directory_uri() . '/app/css/explode/components/'.$slug.'.css', array(), null );    
-			}
-		}
-	}else{
-		// Error display if THEME_DIRECTORY_NAME doesn't exist
-		echo '<p style="position:fixed;top:0;left:0;width:100%;color:white;background:red none;padding:30px;z-index:15000">Your theme directory doesn\'t exist. Modify THEME_DIRECTORY_NAME in config.php</p>';
-		
-	}
+    if(is_dir('wp-content/themes/'.THEME_DIRECTORY_NAME)){
+        $files = array_slice(scandir('wp-content/themes/'.THEME_DIRECTORY_NAME.'/app/css/explode/components'), 2); 
+        $slugs = array();
+        foreach ($files as &$value) {        
+            if(substr($value, -4,4) == '.css'){
+                $file = $value;
+                $slug = substr($value, 0,-4);     
+                $slugs[] = $slug;      
+                
+                wp_register_style( $slug, get_template_directory_uri() . '/app/css/explode/components/'.$slug.'.css', array(), null );    
+            }
+        }
+    }else{
+        // Error display if THEME_DIRECTORY_NAME doesn't exist
+        echo '<p style="position:fixed;top:0;left:0;width:100%;color:white;background:red none;padding:30px;z-index:15000">Your theme directory doesn\'t exist. Modify THEME_DIRECTORY_NAME in config.php</p>';
+        
+    }
 
     // main
     wp_register_style( 'css', get_template_directory_uri() . '/app/css/main.css', array(), null );
@@ -61,14 +61,14 @@ function enqueue_styles() {
             wp_enqueue_style('homepage');
             wp_enqueue_style('page');
             wp_enqueue_style('single');
-			wp_enqueue_style('project');
+            wp_enqueue_style('project');
             wp_enqueue_style('category');
             /* project specific*/
-			 if(is_dir('wp-content/themes/'.THEME_DIRECTORY_NAME)){	
-				foreach ($slugs as &$value) {            
-					wp_enqueue_style($value);
-				}
-			 }
+             if(is_dir('wp-content/themes/'.THEME_DIRECTORY_NAME)){ 
+                foreach ($slugs as &$value) {            
+                    wp_enqueue_style($value);
+                }
+             }
         } else {
             wp_enqueue_style('css');
         }
@@ -83,8 +83,8 @@ add_action('wp_enqueue_scripts', 'enqueue_styles', 100);
 /**
  * Ajoute une feuille de style à l'admin
  
-function load_admin_style() {	
-	wp_enqueue_style( 'admin_css', THEME.'/app/css/admin-style.css', false, '1.0.0' );
+function load_admin_style() {   
+    wp_enqueue_style( 'admin_css', THEME.'/app/css/admin-style.css', false, '1.0.0' );
 }
 add_action( 'admin_enqueue_scripts', 'load_admin_style' );*/
 
@@ -106,37 +106,38 @@ function enqueue_scripts() {
 
     /* GLOBAL */
     
-	wp_register_script( 'modernizr', get_template_directory_uri() . '/app/js/vendors/modernizr-custom.min.js', array(), null, false );
+    wp_register_script( 'modernizr', get_template_directory_uri() . '/app/js/vendors/modernizr-custom.min.js', array(), null, false );
     wp_register_script( 'jQuery', get_template_directory_uri() . '/app/js/vendors/jquery-1.11.3.min.js', array(), null, false );
     wp_register_script( 'imagesLoaded', get_template_directory_uri() . '/app/js/vendors/imagesloaded.min.js', array(), null, true );
     wp_register_script( 'waypoint', get_template_directory_uri() . '/app/js/vendors/waypoints.min.js', array(), null, true );    
     wp_register_script( 'mousewheel', get_template_directory_uri() . '/app/js/vendors/jquery.mousewheel.min.js', array(), null, true );
-	
-	/* FORMS */
-	
-	wp_register_script( 'form-stuff', get_template_directory_uri() . '/app/js/vendors/form.min.js', array(), null, true );
-	
-	/* MAP */
-	
-	wp_register_script( 'googlemap-api', 'https://maps.googleapis.com/maps/api/js?key='.GOOGLE_MAP_API_KEY , array(), null, true );
-	
-	
-	/* FLUXI CONTENT */	
-	
-	wp_register_script( 'fitvids', get_template_directory_uri() . '/app/js/vendors/jquery.fitvids.min.js', array(), null, true );
-	wp_register_script( 'lightslider', get_template_directory_uri() . '/app/js/vendors/lightslider.min.js', array(), null, true );
-	wp_register_script( 'lightgallery', get_template_directory_uri() . '/app/js/vendors/galerie/lightgallery.min.js', array(), null, true );	
-	wp_register_script( 'lg-fullscreen', get_template_directory_uri() . '/app/js/vendors/galerie/lg-fullscreen.min.js', array(), null, true );
-	wp_register_script( 'lg-thumbnail', get_template_directory_uri() . '/app/js/vendors/galerie/lg-thumbnail.min.js', array(), null, true );
-	wp_register_script( 'lg-video', get_template_directory_uri() . '/app/js/vendors/galerie/lg-video.min.js', array(), null, true );
-	wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
-	
+    
+    /* FORMS */
+    
+    wp_register_script( 'form-stuff', get_template_directory_uri() . '/app/js/vendors/form.min.js', array(), null, true );
+    wp_register_script( 'simpleselect', get_template_directory_uri() . '/app/js/vendors/simpleselect.js', array(), null, true );
+    
+    /* MAP */
+    
+    wp_register_script( 'googlemap-api', 'https://maps.googleapis.com/maps/api/js?key='.GOOGLE_MAP_API_KEY , array(), null, true );
+    
+    
+    /* FLUXI CONTENT */ 
+    
+    wp_register_script( 'fitvids', get_template_directory_uri() . '/app/js/vendors/jquery.fitvids.min.js', array(), null, true );
+    wp_register_script( 'lightslider', get_template_directory_uri() . '/app/js/vendors/lightslider.min.js', array(), null, true );
+    wp_register_script( 'lightgallery', get_template_directory_uri() . '/app/js/vendors/galerie/lightgallery.min.js', array(), null, true );    
+    wp_register_script( 'lg-fullscreen', get_template_directory_uri() . '/app/js/vendors/galerie/lg-fullscreen.min.js', array(), null, true );
+    wp_register_script( 'lg-thumbnail', get_template_directory_uri() . '/app/js/vendors/galerie/lg-thumbnail.min.js', array(), null, true );
+    wp_register_script( 'lg-video', get_template_directory_uri() . '/app/js/vendors/galerie/lg-video.min.js', array(), null, true );
+    wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
+    
     wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('modernizr','jQuery','imagesLoaded','waypoint','mousewheel','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-video','lg-fullscreen','lg-thumbnail','isotope'), null, true );
     wp_register_script( 'js-full', get_template_directory_uri() . '/app/js/full.min.js', array('jQuery'), null, true );
-	
-	// Ajax
-	wp_localize_script( 'js-main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
-	
+    
+    // Ajax
+    wp_localize_script( 'js-main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+    
     /* ENQUEUE */
 
     if ( DEV ) {

@@ -61,17 +61,13 @@ Template Name: Contact
             <input name="email" id="email" type="email" value="<?php if(!empty($_SESSION['email'])) echo $_SESSION['email']; ?>">
           </p>
           <p>
-            <label for="sujet">Sujet:<abbr class="require-form" title="obligatoire">*</abbr></label>
-            <span class="wrap-input-select--left">
-                <input type="text" class="ghost"></input>
-              <select name="sujet" id="sujet">
-                <option value="">Sélectionnez</option>
-                <option value="Signaler un projet citoyen">Signaler un projet citoyen</option>
-                <option value="Informations sur la souscription">Informations sur la souscription</option>
-                <option value="Devenir relais">Devenir relais</option>
-                <option value="Autres">Autre</option>
-              </select>     
-            </span>      
+          <select name="sujet" id="sujet">
+            <option value="">Sélectionnez</option>
+            <option value="Signaler un projet citoyen">Signaler un projet citoyen</option>
+            <option value="Informations sur la souscription">Informations sur la souscription</option>
+            <option value="Devenir relais">Devenir relais</option>
+            <option value="Autres">Autre</option>
+          </select>          
             <label for="sujet" class="error"></label>
           </p>
           <p>

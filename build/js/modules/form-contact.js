@@ -1,5 +1,5 @@
 function initContactForm(){
-
+	$('select#sujet').simpleselect();
 	$("#contact_ep").validate({
 			rules: {
 				email:{	email: true	},				
