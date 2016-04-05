@@ -43,7 +43,11 @@
 		cursor:pointer;
 		border-color:$c-main;
 		color:$c-main;			
-		
+		background-color: transparent;
+
+		&::after {
+			display: none;
+		}
 	}
 }
 

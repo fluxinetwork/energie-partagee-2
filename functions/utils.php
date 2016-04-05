@@ -176,13 +176,13 @@ function custom_breadcrumbs() {
 	
 		// Page courante
 		if (is_page() || is_single()) {
-			echo '<li class="tag">'.get_the_title().'</li>';
+			echo '<li class="tag is-inactive">'.get_the_title().'</li>';
 		}
 			echo '</ul>';
 		} elseif (is_front_page()) {
 			// Page d'accueil
 			echo '<ul>';
-			echo '<li><a class="tag" title="Accueil" rel="nofollow" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
+			echo '<li><a class="tag is-inactive" title="Accueil" rel="nofollow" href="'.esc_url( home_url( '/' ) ).'">Accueil</a></li>';
 			echo '</ul>';
 		}
        

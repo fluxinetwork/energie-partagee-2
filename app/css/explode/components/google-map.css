@@ -111,6 +111,10 @@
   cursor: pointer;
   border-color: #65aa04;
   color: #65aa04;
+  background-color: transparent;
+}
+.map-filters .tag::after {
+  display: none;
 }
 
 .map-filters .tag:hover, .map-filters .tag.js-f-active {

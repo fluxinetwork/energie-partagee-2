@@ -119,12 +119,13 @@
   margin-right: 0;
 }
 .footer .labels .labels__img img {
-  width: 70px;
+  width: 64px;
 }
 .footer .labels .labels__txt .p-ss {
   max-width: 620px;
   margin-bottom: 0;
   color: #fff;
+  line-height: 1.4;
 }
 .footer .link::after {
   background: #fff;

@@ -1,0 +1,87 @@
+@import "../utils/_all.scss";
+@import "../components/lib/c-buttons";
+
+/*------------------------------*\
+
+    #SEARCH
+
+\*------------------------------*/
+
+.search {
+	h2,
+	#searchform {
+		display: none;
+	}
+}
+
+.searchresults {
+	@extend %list-reset;
+	padding-top: $gutter*1.5;
+}
+.searchresults__item {
+	margin-bottom: $gutter;
+
+	.tags {
+		justify-content: flex-start;
+	
+		border-radius: 3px;
+		margin-bottom: $gutter/2;
+	}
+
+	.tag {
+		margin-bottom: 0;
+		border-color: $c-dark;
+
+		&.is-inactive {
+			background: rgba($c-dark, 0.5)!important;
+		}
+
+		&::after {
+			border-color: transparent transparent transparent $c-dark;
+		}
+		
+		a {
+			color: $c-dark!important;
+		}
+	}
+}
+
+.s-pagination {
+	display: flex;
+
+	.page-numbers {
+		@extend %round-bt;
+		border: 2px solid $c-light;
+		@include flex(center);
+		color: $c-light;
+		margin-right: $gutter/4;
+
+		&:hover {	   
+		    border-color: $c-dark;
+		    color: $c-dark;  
+		}
+
+		&.current,
+		&.dots {
+			color: #fff;
+			cursor: default;
+
+			&:hover {	  
+			    transform: none;
+			}
+		}
+
+		&.current {
+			background: $c-dark;
+			border-color: $c-dark;
+		}
+
+		&.dots {
+			background: $c-light;
+
+			&:hover {	  
+			    border-color: $c-light;
+			}
+		}
+	}
+}

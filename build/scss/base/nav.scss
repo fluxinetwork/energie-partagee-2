@@ -2,6 +2,7 @@
 @import "../components/lib/c-buttons.scss";
 
 $nav-shadow: 0 0 20px rgba(#000, 0.2);
+$dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 
 /*------------------------------*\
 
@@ -211,7 +212,6 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
   top: $navH;
   left: 0;
   width: 100%;
-  box-shadow: $nav-shadow;
   
   &::before {
     @extend %transition;
@@ -257,6 +257,8 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
 .no-touch .no-pp .nav__item:hover {
   .nav__dropdown {
     max-height: 200px; 
+    z-index: 100;
+    box-shadow: $dropdown-shadow;
   }
   
   .dropdown__item a, .page_item a {
@@ -323,7 +325,7 @@ $nav-shadow: 0 0 20px rgba(#000, 0.2);
   opacity: 0;
   transform-origin: center top;
   transform: scale(0);
-  box-shadow: $nav-shadow;
+  box-shadow: $dropdown-shadow;
 }
 
 .no-touch .nav__pp:hover .pp,
@@ -563,22 +565,6 @@ $c-placeholder : #fff;
   .nav__search {
     display: flex;
   }
-}
-
-/*------------------------------*\
-
-    # TOGGLE
-
-\*------------------------------*/
-
-.js-toggle {
-  @extend %link;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: $gutter-thin;
-  background: #fff;
-  border: $gutter-thin solid #fff;
 }
 
 

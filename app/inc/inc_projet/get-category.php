@@ -47,7 +47,7 @@
                       	<?php echo $news_img; ?>
                   	</div>
                       <div class="card__infos">
-                      	<span class="tag"><?php echo $date_news; ?></span>
+                      	<span class="tag is-inactive"><?php echo $date_news; ?></span>
                       	<h1 class="card__title"><?php echo the_title(); ?></h1>
                       </div>
                   </a>

@@ -53,8 +53,8 @@
     <section class="wrap-main<?php echo ' ' . $type_power; ?>">
       <header class="header-bloc"> 
         <ul class="tags">   	
-            <li class="tag"><?php echo $taxoname;?></li>
-            <li class="tag"><?php echo $label_stade; ?></li>     
+            <li class="tag is-inactive"><?php echo $taxoname;?></li>
+            <li class="tag is-inactive"><?php echo $label_stade; ?></li>     
         </ul>     
         <h1 class="h1 wrap-n">
           <?php the_title(); ?>  

@@ -1,0 +1,145 @@
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* TRANSITIONS */
+.s-pagination .page-numbers, .transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.searchresults, .list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-none {
+  display: none !important;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/* COLORS PROJECT */
+/* Nav helpers */
+.s-pagination .page-numbers {
+  display: block;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.s-pagination .page-numbers {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+/*------------------------------*\
+
+    #SEARCH
+
+\*------------------------------*/
+.search h2,
+.search #searchform {
+  display: none;
+}
+
+.searchresults {
+  padding-top: 6rem;
+}
+
+.searchresults__item {
+  margin-bottom: 4rem;
+}
+.searchresults__item .tags {
+  justify-content: flex-start;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+}
+.searchresults__item .tag {
+  margin-bottom: 0;
+  border-color: #122c33;
+}
+.searchresults__item .tag.is-inactive {
+  background: rgba(18, 44, 51, 0.5) !important;
+}
+.searchresults__item .tag::after {
+  border-color: transparent transparent transparent #122c33;
+}
+.searchresults__item .tag a {
+  color: #122c33 !important;
+}
+
+.s-pagination {
+  display: flex;
+}
+.s-pagination .page-numbers {
+  border: 2px solid #b3b3b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b3b3b3;
+  margin-right: 1rem;
+}
+.s-pagination .page-numbers:hover {
+  border-color: #122c33;
+  color: #122c33;
+}
+.s-pagination .page-numbers.current, .s-pagination .page-numbers.dots {
+  color: #fff;
+  cursor: default;
+}
+.s-pagination .page-numbers.current:hover, .s-pagination .page-numbers.dots:hover {
+  transform: none;
+}
+.s-pagination .page-numbers.current {
+  background: #122c33;
+  border-color: #122c33;
+}
+.s-pagination .page-numbers.dots {
+  background: #b3b3b3;
+}
+.s-pagination .page-numbers.dots:hover {
+  border-color: #b3b3b3;
+}
