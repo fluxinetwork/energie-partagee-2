@@ -3,14 +3,22 @@
 	<section class="section header-bloc">
     	<article class="wrap-l">
             <h1 class="h1">Investissons les énergies renouvelables</h1>
-            <ul class="key-nums">
-              <li class="key-nums__item"><span class="key-nums__item__num">5000</span> actionnaires<br>citoyens</li>
-              <li class="key-nums__item"><span class="key-nums__item__num">25</span> projets locaux<br>financés</li>
-              <li class="key-nums__item"><span class="key-nums__item__num">+10</span> millions d’euros<br>collectés</li>      
-            </ul>
 
-            <div class="lightvideo">
-            <a href="" data-src="https://www.youtube.com/watch?v=KGZhsemH57Y" class="button cta"><i class="icon-video_20"></i> Comprendre notre action</a></div>
+            <?php if( have_rows('chiffres_cles', 'option') ): ?>
+
+                <ul class="key-nums">
+
+                <?php while( have_rows('chiffres_cles', 'option') ): the_row(); ?>
+                    
+                    <li class="key-nums__item"><span class="key-nums__item__num"><?php the_sub_field('chiffre_cle'); ?></span> <?php the_sub_field('texte_cle'); ?></li>
+
+                <?php endwhile; ?>
+
+                </ul>
+
+            <?php endif; ?>           
+
+            <div class="lightvideo"><a href="" data-src="https://www.youtube.com/watch?v=KGZhsemH57Y" class="button cta"><i class="icon-video_20"></i> Comprendre notre action</a></div>
         </article>
 	</section>
     
@@ -18,23 +26,25 @@
     
     <section class="section wrap-l steps-intro">
         <h5 class="s-title">Énergie partagée en 3 étapes</h5>
-        <ul class="box box-flex">
-            <li class="box__item">
-                <div class="box__item__img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/voir-les-projets.png"></div>         		
-                <p class="p-ss">Des projets citoyens d'énergie renouvelable émergent partout en France.</p>        
-                <a class="link" href="#">Voir les projets</a>
-            </li>
-            <li class="box__item">
-                <div class="box__item__img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/devenir-actionnaire.png"></div>	
-                <p class="p-ss">Énergie Partagée les accompagne et vous propose d'investir dans ces projets.</p>
-                <a class="link" href="#">Devenir actionnaire</a>
-            </li>   
-            <li class="box__item">
-                <div class="box__item__img"><img src="<?php echo get_template_directory_uri(); ?>/app/img/comment-ca-marche.png"></div>
-                <p class="p-ss">Energie verte, lutte contre l’effet de serre et revenus pour les actionnaires à la clé.</p>
-                <a class="link" href="#">Comment ça marche ?</a>
-            </li>
-        </ul>
+        
+        <?php if( have_rows('ep_3_steps', 'option') ): ?>
+
+            <ul class="box box-flex">  
+
+                <?php while( have_rows('ep_3_steps', 'option') ): the_row(); ?>                    
+                    
+                    <li class="box__item">
+                        <div class="box__item__img"><img src="<?php the_sub_field('illustration_etape'); ?>"></div>              
+                        <p class="p-ss"><?php the_sub_field('texte_etape'); ?></p>        
+                        <a class="link" href="<?php the_sub_field('page_reliee'); ?>"><?php the_sub_field('texte_lien'); ?></a>
+                    </li>
+
+                <?php endwhile; ?>
+
+            </ul> 
+
+        <?php endif; ?>    
+
     </section>
     
     <?php include( TEMPLATEPATH.'/app/inc/inc_projet/trio-projects.php' ); ?>

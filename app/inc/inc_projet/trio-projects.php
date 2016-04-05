@@ -43,7 +43,7 @@ $query_projects = new WP_Query( $args_projects );
 ?>
 
 <section class="section trio-card">
-    	<h5 class="s-title"><?php echo (is_home()) ? 'Sélection de projets' : 'Découvrir d\'autres projets';?></h5>
+    	<h5 class="s-title"><?php echo (is_home()) ? 'Les projets citoyens' : 'Découvrir d\'autres projets';?></h5>
         <div class="wrap-n">       
             <div class="box">
             	<?php					

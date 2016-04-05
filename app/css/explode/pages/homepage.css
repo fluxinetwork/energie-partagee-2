@@ -82,6 +82,7 @@
   margin-bottom: 0;
 }
 .key-nums .key-nums__item .key-nums__item__num {
+  font-family: "avantgarde", Arial;
   font-size: 5rem;
   display: block;
   font-weight: bold;

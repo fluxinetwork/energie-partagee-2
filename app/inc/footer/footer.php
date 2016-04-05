@@ -46,7 +46,7 @@ if ( function_exists('is_mobile') ) {
             	<a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-1.png"></a>
               <a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-2.png"></a>
             </li>
-            <li class="labels__txt"><p class="p-ss">Energie Partagée a recu les labels Finansol et Agrément “entreprise solidaire” pour son activité engagée bla bla bla et bla bla bla.</p></li>
+            <li class="labels__txt"><p class="p-ss">Énergie Partagée Investissement est agréée “Entreprise Solidaire” et ses actions bénéficient du label Finansol qui garantit la solidarité et la transparence de l'investissement.</p></li>
         </ul>
         
         <nav class="footer__nav">
