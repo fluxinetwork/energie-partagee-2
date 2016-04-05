@@ -2,7 +2,7 @@
 
 /* | Utils - V1.0 - 20/01/16 | 
 --------------------------------
-	| notify_by_mail()
+   | notify_by_mail()
    | fluxi_register_post_type()
    | get_sanitize_string()
 */

@@ -38,8 +38,15 @@ function loadMoreProjects(){
         	});	
 			
         	if(limiteProjectLoading < 2){
-				$('.js-more-project').attr('disabled',false);
-			}
+				$('.js-more-project').attr('disabled',false);                
+			}else{$('.js-more-project').remove();
+                $('.trio-card .box__fixe').append('<a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>');
+
+
+                    
+                  
+            }
+
         },
         error : function(jqXHR, textStatus, errorThrown) {
             console.log(jqXHR + ' :: ' + textStatus + ' :: ' + errorThrown);
