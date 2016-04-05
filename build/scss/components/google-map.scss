@@ -17,7 +17,7 @@
 			}
 		}
 		&:last-child .h5{						
-			margin-top: $space*0.4;	
+			margin-top: $space*0.4;				
 		}
 	}
 
@@ -90,11 +90,6 @@
 		.card-map{
 			@extend %transition;
 
-			&.anim-out-left{  
-			  right:-500px;
-			  opacity:0;
-			}
-
 			max-width: 260px;
 			position: absolute;
 			margin-right: $gutter;
@@ -113,6 +108,26 @@
 				    display: inline-block;				   
 				    vertical-align: baseline;
 				}
+				.card__img{
+					background-position: center center;
+				    background-size: cover;
+				    min-height: 170px;
+				    width: 100%;
+
+				    .spinner{
+				    	@extend %transition;
+				    	content: "";  
+					    display: block;
+					    height: 100%;
+					    position: absolute;
+					    width: 100%;
+					    &:before{
+					    	content: "";  
+					    	display: block;							
+						}					    
+
+				    }
+				}
 			}
 
 			.link-cta{
@@ -129,8 +144,27 @@
 	}
 }
 
-@media screen and (min-width: $bp--medium) {
-	.map-projects{		
+
+@media screen and (min-width: $bp--small) {
+	.map-projects{
+		.cards-map{
+			.card-map{
+				&.anim-out-left{  
+				  	right:-500px;
+				  	opacity:0;
+				  	&.unactive .card__img{
+				  		background-image:none !important;				  		 
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: $bp--medium) {	
+
+	.map-projects{	
 
 		.filters{
 			flex: 1 1 50%;
@@ -158,6 +192,7 @@
 			&.second{
 				text-align: right;
 				justify-content: flex-end;
+				padding-top: 1.5rem;
 				li{
 					margin:0 0 $space*0.1 $space*0.1;
 				}

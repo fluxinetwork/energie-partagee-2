@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.map-holder .cards-map .card-map, .transition {
+.map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -154,10 +154,6 @@
   top: 0;
   height: 100%;
 }
-.map-holder .cards-map .card-map.anim-out-left {
-  right: -500px;
-  opacity: 0;
-}
 .map-holder .cards-map .card-map .card {
   height: auto;
 }
@@ -169,6 +165,23 @@
   display: inline-block;
   vertical-align: baseline;
 }
+.map-holder .cards-map .card-map .card .card__img {
+  background-position: center center;
+  background-size: cover;
+  min-height: 170px;
+  width: 100%;
+}
+.map-holder .cards-map .card-map .card .card__img .spinner {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.map-holder .cards-map .card-map .card .card__img .spinner:before {
+  content: "";
+  display: block;
+}
 .map-holder .cards-map .card-map .link-cta {
   background-color: #fff;
   padding: 2rem;
@@ -178,6 +191,15 @@
   margin-top: 6rem;
 }
 
+@media screen and (min-width: 600px) {
+  .map-projects .cards-map .card-map.anim-out-left {
+    right: -500px;
+    opacity: 0;
+  }
+  .map-projects .cards-map .card-map.anim-out-left.unactive .card__img {
+    background-image: none !important;
+  }
+}
 @media screen and (min-width: 830px) {
   .map-projects .filters {
     flex: 1 1 50%;
@@ -203,6 +225,7 @@
   .map-projects .map-filters.second {
     text-align: right;
     justify-content: flex-end;
+    padding-top: 1.5rem;
   }
   .map-projects .map-filters.second li {
     margin: 0 0 1rem 1rem;

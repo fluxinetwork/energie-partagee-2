@@ -80,7 +80,11 @@ function initProjectsMap(){
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
 	
-	loadGoogleMap(mapContainer, mapOptions);	
+	if(windowW >= 600){
+		loadGoogleMap(mapContainer, mapOptions);
+	}else{
+		loadMarkers(map)
+	}	
 }
 /* Init the google map
  *  mapContainer = DOM element | mapOptions = option array
@@ -89,7 +93,7 @@ function loadGoogleMap(mapContainer, mapOptions){
 	
 	//console.log('Load Google Map Obj');
 		
-	var map = new google.maps.Map(mapContainer,mapOptions);	
+	map = new google.maps.Map(mapContainer,mapOptions);	
 	
 	mapContainer.className += 'loader';
 	
@@ -113,7 +117,7 @@ function loadMarkers(map){
         url: ajax_object.ajax_url,
         data: str,
         success: function(data){				
-			customMakers(map, data);			
+			addMakers(map, data);			
 			//$('#map').removeClass('loader');			
         },
         error : function(jqXHR, textStatus, errorThrown) {
@@ -125,35 +129,53 @@ function loadMarkers(map){
 	
 }
 
-function customMakers(map, data){
+function addMakers(map, data){
 	
-	//console.log('Custom Makers ');
+	//console.log('Add Makers ');
 	
 	nbMakers = Object.keys(data).length;	
 	
 	$.each(data, function(i){		
 		
 		// If it's a project
-		if(data[i].postType == 'projets'){		
-				
-			var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
-			
+		if(data[i].postType == 'projets'){	
+			// Slug NRJ
 			var categoryNRJ = data[i].catSlug;
 			// Cut string to escape "-"
 			categoryNRJ =  categoryNRJ.substring(0, 5);
-									
-			var marker = new google.maps.Marker({
-				position: newLatLng,
-				map: map,
-				title: data[i].title,
-				icon: iconsProjectsMap[categoryNRJ],
-				category : data[i].catSlug,
-				stade : data[i].stadeSlug
-			});		
+
+			if(windowW >= 600){	
+				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
+										
+				var marker = new google.maps.Marker({
+					position: newLatLng,
+					map: map,
+					title: data[i].title,
+					icon: iconsProjectsMap[categoryNRJ],
+					category : data[i].catSlug,
+					stade : data[i].stadeSlug
+				});				
+					
+				marker.addListener('click', function() {
+					onClickMarker(i,map,marker,categoryNRJ);					
+				});
 				
+				gmarkers.push(marker);			
+				
+				//console.log(marker);
+				
+				// Active filters
+				if(i==nbMakers-1 && activateFilters){
+					// Init all filters once if activateFilters = true
+					initFilters(map);
+					activateFilters=false;
+					centerMapOnMarkers(map);
+				}
+			}
+			// Add info card
 			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
-	            	markerContent += '<div class="card__img"><span class="tag">'+data[i].stadeName+'</span><img src="'+data[i].image+'" alt="'+data[i].title+'"></div>';
+	            	markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
 	            	markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1></div>';
 	            markerContent += '</header>';
 
@@ -172,24 +194,7 @@ function customMakers(map, data){
 
 			markerContent += '</article>';
 
-			$('.cards-map').append(markerContent);
-
-				
-			marker.addListener('click', function() {
-				onClickMarker(i,map,marker,categoryNRJ);					
-			});
-			
-			gmarkers.push(marker);			
-			
-			//console.log(marker);
-			
-			// Active filters
-			if(i==nbMakers-1 && activateFilters){
-				// Init all filters once if activateFilters = true
-				initFilters(map);
-				activateFilters=false;
-				centerMapOnMarkers(map);
-			}			
+			$('.cards-map').append(markerContent);			
 			
 		}
 		
@@ -220,15 +225,25 @@ function onClickMarker(index,map,marker,categoryNRJ){
 	previousNrj = categoryNRJ;
 
     // Get the card
+    if(index != prevCardMapId){
     if(isOpenMarker){
     	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
     	setTimeout(function() {
         	$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+        	setTimeout(function() {
+        		$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
+
+        	}, 100);
         }, 220);
     	
 	}else{
 		$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+		setTimeout(function() {
+        	$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
+        	$('.cards-map .card-map:eq('+index+')').removeClass('unactive');
+        }, 100);
 	}
+}
     prevCardMapId = index;
 	isOpenMarker = true;
 	
@@ -324,12 +339,13 @@ function resetStadeFilter(){
 
 function resetMarkers() {	
 	if(isOpenMarker){
+		// reset icon
     	previousMarker.setIcon(iconsProjectsMap[previousNrj]);
     	markerShadow.hide();
-    	console.log('reset'); 
-    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
-    	prevCardMapId = null;
     	isOpenMarker = false;
+    	// reset card
+    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
+    	prevCardMapId = null;    	
 	}  
 }
 
