@@ -33,18 +33,18 @@ if ( function_exists('is_mobile') ) {
         
         <h5 class="s-title">Nos partenaires</h5>
         <ul class="box-logos box">
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-1.jpg"></a></li>
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-2.jpg"></a></li>
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-3.jpg"></a></li>
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-partenaire-4.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-partenaire-1.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-partenaire-2.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-partenaire-3.jpg"></a></li>
+            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-partenaire-4.jpg"></a></li>
             <li class="box-logos__btn"><a class="button-round" href="#"><i class="icon-plus_64"></i></a></li> 
         </ul>
         
         <h5 class="s-title">Nos labels</h5>
         <ul class="labels box">
             <li class="labels__img">
-            	<a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-1.png"></a>
-              <a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/proto/logo-label-2.png"></a>
+            	<a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-label-1.png"></a>
+              <a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-label-2.png"></a>
             </li>
             <li class="labels__txt"><p class="p-ss">Énergie Partagée Investissement est agréée “Entreprise Solidaire” et ses actions bénéficient du label Finansol qui garantit la solidarité et la transparence de l'investissement.</p></li>
         </ul>
