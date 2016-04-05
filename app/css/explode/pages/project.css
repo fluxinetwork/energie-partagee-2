@@ -64,6 +64,11 @@
   width: 0;
 }
 
+.anim-out {
+  transform: scale(0);
+  opacity: 0;
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
