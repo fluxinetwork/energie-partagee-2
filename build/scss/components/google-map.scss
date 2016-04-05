@@ -84,6 +84,13 @@
 	
 	.cards-map{
 		.card-map{
+			@extend %transition;
+
+			&.anim-out-left{  
+			  right:-500px;
+			  opacity:0;
+			}
+
 			max-width: 260px;
 			position: absolute;
 			margin-right: $gutter;

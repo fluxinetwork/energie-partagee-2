@@ -47,6 +47,7 @@ var iconsProjetMap = {
 	econo: { icon: themeURL + '/app/img/icon-marker-econo.png' }
 };	
 */
+var prevCardMapId;
 var previousMarker;
 var previousNrj;
 var isOpenMarker = false;

@@ -47,6 +47,7 @@ var iconsProjetMap = {
 	econo: { icon: themeURL + '/app/img/icon-marker-econo.png' }
 };	
 */
+var prevCardMapId;
 var previousMarker;
 var previousNrj;
 var isOpenMarker = false;
@@ -608,12 +609,8 @@ function loadMarkers(map){
         dataType: 'JSON',
         url: ajax_object.ajax_url,
         data: str,
-        success: function(data){	
-			//console.log('Markers loaded for : '+filterCat);
-			// Remove previous markers
-			//removeMarkers();
-			customMakers(map, data);
-			
+        success: function(data){				
+			customMakers(map, data);			
 			//$('#map').removeClass('loader');			
         },
         error : function(jqXHR, textStatus, errorThrown) {
@@ -651,7 +648,7 @@ function customMakers(map, data){
 				stade : data[i].stadeSlug
 			});		
 				
-			var markerContent = '<article class="card-map c-'+categoryNRJ+'">'; 
+			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
 	            	markerContent += '<div class="card__img"><span class="tag">'+data[i].stadeName+'</span><img src="'+data[i].image+'" alt="'+data[i].title+'"></div>';
 	            	markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1></div>';
@@ -672,9 +669,11 @@ function customMakers(map, data){
 
 			markerContent += '</article>';
 
+			$('.cards-map').append(markerContent);
+
 				
 			marker.addListener('click', function() {
-				onClickMarker(map,marker,markerContent,categoryNRJ);					
+				onClickMarker(i,map,marker,categoryNRJ);					
 			});
 			
 			gmarkers.push(marker);			
@@ -698,7 +697,7 @@ function customMakers(map, data){
 
 
 // Event on click  on a marker
-function onClickMarker(map,marker,markerContent,categoryNRJ){
+function onClickMarker(index,map,marker,categoryNRJ){
 	
 	// Add a shadow
 	if (markerShadow && markerShadow.setPosition) {
@@ -717,8 +716,17 @@ function onClickMarker(map,marker,markerContent,categoryNRJ){
 	previousMarker = marker;
 	previousNrj = categoryNRJ;
 
-    // Add the content
-	$('.cards-map').html(markerContent);
+    // Get the card
+    if(isOpenMarker){
+    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
+    	setTimeout(function() {
+        	$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+        }, 220);
+    	
+	}else{
+		$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+	}
+    prevCardMapId = index;
 	isOpenMarker = true;
 	
 }
@@ -815,8 +823,13 @@ function resetMarkers() {
 	if(isOpenMarker){
     	previousMarker.setIcon(iconsProjectsMap[previousNrj]);
     	markerShadow.hide();
+    	console.log('reset'); 
+    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
+    	prevCardMapId = null;
+    	isOpenMarker = false;
 	}  
 }
+
 
 function centerMapOnMarkers(map){
 	nbShowMakers = nbMakers;		
@@ -1511,25 +1524,7 @@ function loadMoreProjects(){
         dataType: 'JSON',
         url: ajax_object.ajax_url,
         data: str,
-        success: function(data){
-						
-			/*$.each(data, function(i){
-				
-				var content ='<a class="card card-project is-flip-out" href="'+data[i].permalink+'"><div class="card__img"><img class="img-reponsive" src="'+data[i].image+'"><i class="card__icon icon-uniE60F"></i></div><div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div></a>';
-				
-				if(i > 0){
-					$('.trio-card .box .box__half:eq(1)').html('').append(content);
-				}else{
-					$('.trio-card .box .box__half:eq(0)').html('').append(content);
-				}
-				
-        	});	
-			
-        	if(limiteProjectLoading < 2){
-				$('.js-more-project').attr('disabled',false);                
-			}else{$('.js-more-project').remove();
-                $('.trio-card .box__fixe').append('<a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>');                  
-            }*/
+        success: function(data){			
 
             $.each(data, function(i){
                 var $firstItem = $('.trio-card .box .box__half:eq(0)');
@@ -1564,8 +1559,6 @@ function loadMoreProjects(){
             }else{$('.js-more-project').remove();
                 $('.trio-card .box__fixe').append('<a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>');                  
             }
-
-
 
         },
         error : function(jqXHR, textStatus, errorThrown) {

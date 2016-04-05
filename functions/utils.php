@@ -342,6 +342,8 @@ function get_json_map(){
 
 	// Global array	
     $results = array();
+    // Count
+    $nb_items = 0;
 	
 	// Query parameters 
 	$suppress_filters = (isset($_POST["suppress_filters"])) ? $_POST["suppress_filters"] : true;
@@ -379,18 +381,28 @@ function get_json_map(){
     $loop = new WP_Query($args);
 
     if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
-	
+		// Count
+		$nb_items++;
+
 		// Excerpt
 		if( get_field('google_description') ):							
 			$excerpt = get_field('google_description');
 		else:
 			$excerpt = '';
-		endif;
+		endif;		
 		
-		// Thumb		
-		$post_img_id = get_post_thumbnail_id();
-		$post_img_array = wp_get_attachment_image_src($post_img_id, 'medium', true);		
-		$post_img_url = $post_img_array[0];
+		// Imgs
+		$main_image_obj = get_field( 'main_image' );			
+		$post_img_url;		
+
+		if ( has_post_thumbnail() && empty($main_image_obj)) :
+			$post_img_id = get_post_thumbnail_id();
+			$post_img_array = wp_get_attachment_image_src($post_img_id, 'medium', true);
+			$post_img_url = $post_img_array[0];		
+			
+		elseif(!empty($main_image_obj)):
+			$post_img_url = $main_image_obj['sizes']['medium'];				
+		endif;
 				
 		// Query respons for projects
 		if($post_type == 'projets'):		
@@ -417,22 +429,22 @@ function get_json_map(){
 			$data = array(
 				'postType' => $post_type,            
 				'title' => get_the_title(),
-			   'image'  => $post_img_url,
-			   'region' => get_field('departement'),
-			   'city' => get_field('ville'),
-			   'permalink' => get_the_permalink(),
-			   'equiPui' => get_field('equivalent_unites_puissance'),
-			   'typeUnit' => get_field('type_unite_de_puissance'),
-			   'prod' => get_field('production'),
-			   'prodUnit' => get_field('unite_production'),
-			   'equiPro' => get_field('equivalent_production'),
-			   'latitude' => $latitude, 
-			   'longitude' => $longitude,
-			   'catSlug' => $taxoslug,
-			   'catName' => $taxoname,
-			   'stadeName' => $label_stade,
-			   'stadeSlug' => $field_stade['value'],
-			   'excerpt' => $excerpt
+				'image'  => $post_img_url,
+				'region' => get_field('departement'),
+				'city' => get_field('ville'),
+				'permalink' => get_the_permalink(),
+				'equiPui' => get_field('equivalent_unites_puissance'),
+				'typeUnit' => get_field('type_unite_de_puissance'),
+				'prod' => get_field('production'),
+				'prodUnit' => get_field('unite_production'),
+				'equiPro' => get_field('equivalent_production'),
+				'latitude' => $latitude, 
+				'longitude' => $longitude,
+				'catSlug' => $taxoslug,
+				'catName' => $taxoname,
+				'stadeName' => $label_stade,
+				'stadeSlug' => $field_stade['value'],
+				'excerpt' => $excerpt
 			);
 		endif; // End query respons for projects
 		

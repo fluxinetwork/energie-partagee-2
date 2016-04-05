@@ -4,7 +4,7 @@
 
 \*------------------------------*/
 /* TRANSITIONS */
-.transition {
+.map-holder .cards-map .card-map, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -149,6 +149,10 @@
   right: 0;
   top: 0;
   height: 100%;
+}
+.map-holder .cards-map .card-map.anim-out-left {
+  right: -500px;
+  opacity: 0;
 }
 .map-holder .cards-map .card-map .card {
   height: auto;

@@ -112,12 +112,8 @@ function loadMarkers(map){
         dataType: 'JSON',
         url: ajax_object.ajax_url,
         data: str,
-        success: function(data){	
-			//console.log('Markers loaded for : '+filterCat);
-			// Remove previous markers
-			//removeMarkers();
-			customMakers(map, data);
-			
+        success: function(data){				
+			customMakers(map, data);			
 			//$('#map').removeClass('loader');			
         },
         error : function(jqXHR, textStatus, errorThrown) {
@@ -155,7 +151,7 @@ function customMakers(map, data){
 				stade : data[i].stadeSlug
 			});		
 				
-			var markerContent = '<article class="card-map c-'+categoryNRJ+'">'; 
+			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
 	            	markerContent += '<div class="card__img"><span class="tag">'+data[i].stadeName+'</span><img src="'+data[i].image+'" alt="'+data[i].title+'"></div>';
 	            	markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1></div>';
@@ -176,9 +172,11 @@ function customMakers(map, data){
 
 			markerContent += '</article>';
 
+			$('.cards-map').append(markerContent);
+
 				
 			marker.addListener('click', function() {
-				onClickMarker(map,marker,markerContent,categoryNRJ);					
+				onClickMarker(i,map,marker,categoryNRJ);					
 			});
 			
 			gmarkers.push(marker);			
@@ -202,7 +200,7 @@ function customMakers(map, data){
 
 
 // Event on click  on a marker
-function onClickMarker(map,marker,markerContent,categoryNRJ){
+function onClickMarker(index,map,marker,categoryNRJ){
 	
 	// Add a shadow
 	if (markerShadow && markerShadow.setPosition) {
@@ -221,8 +219,17 @@ function onClickMarker(map,marker,markerContent,categoryNRJ){
 	previousMarker = marker;
 	previousNrj = categoryNRJ;
 
-    // Add the content
-	$('.cards-map').html(markerContent);
+    // Get the card
+    if(isOpenMarker){
+    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
+    	setTimeout(function() {
+        	$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+        }, 220);
+    	
+	}else{
+		$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+	}
+    prevCardMapId = index;
 	isOpenMarker = true;
 	
 }
@@ -319,8 +326,13 @@ function resetMarkers() {
 	if(isOpenMarker){
     	previousMarker.setIcon(iconsProjectsMap[previousNrj]);
     	markerShadow.hide();
+    	console.log('reset'); 
+    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
+    	prevCardMapId = null;
+    	isOpenMarker = false;
 	}  
 }
+
 
 function centerMapOnMarkers(map){
 	nbShowMakers = nbMakers;		
