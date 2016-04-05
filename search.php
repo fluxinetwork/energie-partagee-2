@@ -28,7 +28,7 @@
   
 
      
-	<article class="fluxi-content wrap-search wrap-n">  
+	<article class="fluxi-content wrap-search fluxi-wrap">  
 	<?php if ( have_posts() ) : ?>      
       
         <h2 class="h3">Votre recherche :</h2>
