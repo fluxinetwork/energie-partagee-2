@@ -152,7 +152,7 @@
 .card-news {
 	@extend %card;
 
-	&:hover {
+	&:hover { 
 		.card__infos {
 			opacity: 0;
 		}
@@ -170,7 +170,7 @@
 		top: 0;
 		height: 100%;
 		width: 100%;
-		background: rgba(0,0,0,0.4);
+		background: rgba(0,0,0,0.3);
 	}
 
 	.tag {
@@ -482,7 +482,7 @@
 		padding-top:$space*1.6;	
 
 		.tags {
-			display: block;
+			display: flex;
 		}
 	}
 	

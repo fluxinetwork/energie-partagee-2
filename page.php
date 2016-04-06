@@ -26,6 +26,8 @@
 				require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
 		   		
 		   	echo '</article>';
+		else :
+			echo 'RIEN';
 		endif; 
 		   
 	?>

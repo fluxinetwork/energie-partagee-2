@@ -108,6 +108,7 @@
 
 /* Nav helpers */
 .fluxi-wrap {
+  position: relative;
   background-color: #fff;
   margin: -40rem auto 10rem;
   border-radius: 3px 3px 0 0;

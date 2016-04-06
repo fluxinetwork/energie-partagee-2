@@ -388,7 +388,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
 }
 .card-news .tag, .card-news--expand .tag, .card-news--big .tag {
   text-transform: uppercase;
@@ -646,7 +646,7 @@
     padding-top: 16rem;
   }
   .header-bloc .tags {
-    display: block;
+    display: flex;
   }
 
   .holder-card {
