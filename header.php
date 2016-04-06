@@ -34,7 +34,7 @@
 
 	<div class="wrap-main">
     
-		<header class="navbar">        
+		<header class="navbar <?php if (is_search()) : echo 'is-search'; endif; ?>">        
 			<?php include( TEMPLATEPATH.'/app/inc/header/nav.php' ); ?>
 		</header>
         

@@ -20,7 +20,7 @@
 			font-size:1.8rem;	
     		padding: 0 $space*0.25;
 			margin-bottom:$space*0.2;
-			-webkit-font-smoothing: antialiased;
+			@include font-smoothing();
 			
 			&:last-child{
 				margin-bottom:0;

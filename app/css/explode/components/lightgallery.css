@@ -1,6 +1,94 @@
 /*! lightgallery - v1.2.6 - 2015-10-07
 * http://sachinchoolur.github.io/lightGallery/
 * Copyright (c) 2015 Sachin N; Licensed Apache 2.0 */
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* TRANSITIONS */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-none {
+  display: none !important;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+.anim-out {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/* FONT-SMOOTHING */
+/* COLORS PROJECT */
 .lg-icon {
   font-family: 'lg';
   speak: none;
@@ -11,6 +99,7 @@
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -815,7 +904,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   right: 0;
   bottom: 0;
   z-index: 1040;
-  background-color: rgba(0,0,0,0.9);
+  background-color: #000;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease 0s;
   -o-transition: opacity 0.15s ease 0s;

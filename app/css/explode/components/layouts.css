@@ -95,6 +95,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* FONT-SMOOTHING */
 /* COLORS PROJECT */
 .card, .card-news, .card-news--expand, .card-news--big {
   color: #fff;
@@ -137,6 +138,7 @@
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -moz-osx-font-smoothing: grayscale;
   font-size: 10rem;
 }
@@ -215,6 +217,7 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 2rem;
 }
 .p-details .p-details__infos .p-details__infos__loca:before {
@@ -256,7 +259,7 @@
   background: #122c33 none;
   text-align: right;
   padding: 0 2.5rem;
-  z-index: 200;
+  z-index: 50;
   position: relative;
 }
 .top-display .p-ss {
@@ -606,6 +609,7 @@
 .testimony {
   color: #fff;
   padding: 4rem 4rem 0;
+  border-radius: 3px;
 }
 .testimony .box__half {
   padding-right: 0;

@@ -2,6 +2,8 @@
 * http://sachinchoolur.github.io/lightGallery/
 * Copyright (c) 2015 Sachin N; Licensed Apache 2.0 */
 
+@import "../utils/_all.scss";
+
 .lg-icon {
   font-family: 'lg';
   speak: none;
@@ -11,7 +13,7 @@
   text-transform: none;
   line-height: 1;
   /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
+  @include font-smoothing();
   -moz-osx-font-smoothing: grayscale;
 }
 

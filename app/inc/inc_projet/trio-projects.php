@@ -33,7 +33,7 @@ else:
 			'post_status' => 'publish',
 			'posts_per_page' => 2,
 			'post__not_in' => array(get_the_ID()),
-			'orderby' => rand
+			'orderby' => 'rand'
 		);	
 	
 	endif;

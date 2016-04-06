@@ -61,7 +61,7 @@
     line-height: 1;
 
     /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
+    @include font-smoothing();
     -moz-osx-font-smoothing: grayscale;
 }
 /* New */

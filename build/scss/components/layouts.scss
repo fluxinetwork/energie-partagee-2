@@ -12,7 +12,7 @@
 	background:$c-dark none;
 	text-align:right;
 	padding:0 $space/4;
-	z-index: 200;
+	z-index: 50;
 	position: relative;
 	
 	.p-ss{
@@ -436,6 +436,7 @@
 .testimony{	
 	color:#fff;
 	padding:$space*0.4 $gutter 0;
+	border-radius: $radius;
 	
 	.box__half{		
 		padding-right:0;				

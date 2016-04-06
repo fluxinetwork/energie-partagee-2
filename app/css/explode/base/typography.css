@@ -86,6 +86,7 @@ h5, .h5, .s-title, .transition {
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* FONT-SMOOTHING */
 /* COLORS PROJECT */
 /*@import url(https://fonts.googleapis.com/css?family=PT+Sans);*/
 @font-face {
@@ -129,6 +130,7 @@ h5, .h5, .s-title, .transition {
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -moz-osx-font-smoothing: grayscale;
 }
 

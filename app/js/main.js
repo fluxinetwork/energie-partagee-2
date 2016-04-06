@@ -279,7 +279,23 @@ var FOO = {
 		init: function() {
 			initContactForm();
         }
-	}
+	},
+    search:{
+        init: function() {
+            $('.nav__search__input').focus();
+            $('#search-filters').change(function() {
+                var cat = $("#search-filters option:selected").val();
+                var urlSeach = (window.location.href).split("&")[0] ;
+                location.href = urlSeach+'&cat='+cat;
+            });
+            $('#search-filters').waypoint(function(){
+                $(this.element).toggleClass('is-fixed');
+            });
+            $('.footer').waypoint(function(){
+                $('#search-filters').toggleClass('is-fixed');
+            }, {offset: '100%'});
+        }
+    }
 };
 
 var UTIL = {

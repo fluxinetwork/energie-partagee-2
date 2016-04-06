@@ -9,13 +9,12 @@
 <section class="wrap-main">
 	<header class="header-bloc">
         <ul class="tags">     
-            <li class="tag has-pointer js-toggle-search">Recherche</li>
+            <li class="tag">Recherche</li>
             <li class="tag is-inactive"><?php echo get_search_query(); ?></li>     
         </ul>    
         <h1 class="h1">
            <?php 
                $count = $wp_query->found_posts;
-               $post_id = $wp_query->ID;
                $several = ($count<=1) ? '' : 's'; //pluriel
             
                if ($count>0) : $output =  $count.' résultat'.$several;
@@ -31,24 +30,25 @@
      
 	<article class="fluxi-content wrap-search fluxi-wrap">  
 	<?php if ( have_posts() ) : ?>      
-      
-        <h2 class="h3">Votre recherche :</h2>
-        
-        <form method="get" id="searchform" class="searchform" action="<?php bloginfo('url'); ?>/">
-          <p>    
-            <label for="s"><?php _e('Recherche :'); ?></label>       
-            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-            <input type="submit" id="searchsubmit" class="searchsubmit" value="Rechercher" />
-          </p>
-          <p>  
-            <label class="filter-lm" for="cat"><?php _e('Filtrer par : '); ?></label> 
-          <?php wp_dropdown_categories('show_option_none=Ne pas filtrer&hide_empty=1&exclude=1&orderby=name'); ?>
-          </p>
-        </form>
+
+        <div id="search-filters" class="filtres wrap-extend">
+          <h5 class="h5">Filtrer les résultats</h5>
+          <?php 
+          $args = array (
+            'show_option_none' => 'Aucun filtre',
+            'hide_empty' => 1,
+            'exclude' => 1,
+            'orderby' => 'name',
+            'value_field' => 'slug'
+          );
+          wp_dropdown_categories($args);
+          ?>
+        </div> 
 
       	<ul class="searchresults">
         	<?php while ( have_posts() ) : the_post(); 
-    				$the_post_type = get_post_type( $post_id );	
+            $post_id = $post->ID;
+    				$the_post_type = get_post_type($post_id);	
     				$category_detail=get_the_category($post_id);
     				$cat_count=0;		
     			?>
@@ -83,9 +83,9 @@
                     <?php 
 						          // Img               
                         if ( has_post_thumbnail() ) {
-                            echo '<a class="searchresults__img" href="'.get_the_permalink().'">';
+                            /*echo '<a class="searchresults__img" href="'.get_the_permalink().'">';
                                 the_post_thumbnail('medium');
-                            echo '</a>';
+                            echo '</a>';*/
                         }
                       // Description       
             						if( get_field('google_description') ) : 

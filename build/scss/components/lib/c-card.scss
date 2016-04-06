@@ -41,7 +41,7 @@
 			line-height: 1;				
 			
 			/* Better Font Rendering =========== */
-			-webkit-font-smoothing: antialiased;
+			@include font-smoothing();
 			-moz-osx-font-smoothing: grayscale;
 			font-size:10rem;
 		}
@@ -125,7 +125,7 @@
 				top: 4px;
 			
 				/* Better Font Rendering =========== */
-				-webkit-font-smoothing: antialiased;
+				@include font-smoothing();
 				-moz-osx-font-smoothing: grayscale;
 				font-size:2rem;
 			}

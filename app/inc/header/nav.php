@@ -96,7 +96,7 @@
 </div>
 <form method="get" id="nav__search" class="nav__search" action="<?php bloginfo('url'); ?>/">
 	<label class="is-hidden" for="s"><?php _e('Recherche :'); ?></label>
-  	<input type="text" class="nav__search__input js-search-input" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="Recherche">
+  	<input type="text" class="nav__search__input js-search-input" value="" name="s" id="s" placeholder="<?php if (is_search()) : the_search_query(); else : echo 'Rechercher'; endif; ?>">
   	<button type="submit" class="nav__search__submit icon-check_32 nav-bt" value="" id="nav__search__submit"></button>
   	<button type="button" class="nav-bt nav__search__close js-toggle-search icon-close_32"></button>
 </form>

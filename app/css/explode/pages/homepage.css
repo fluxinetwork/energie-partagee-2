@@ -84,6 +84,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/* FONT-SMOOTHING */
 /* COLORS PROJECT */
 /*------------------------------*\
 
@@ -106,6 +107,7 @@
   padding: 0 2.5rem;
   margin-bottom: 2rem;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .key-nums .key-nums__item:last-child {
   margin-bottom: 0;
