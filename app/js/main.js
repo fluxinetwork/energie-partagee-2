@@ -220,15 +220,43 @@ var FOO = {
 			for (var i=0; i<nbNavItems; i++) {				
 				pp_nav();
 			}
+            setTimeout(function(){
+                $('.nav').removeClass('is-hidden');
+            },1);
+
 			// Mini slider project
 			initLoadMoreProjectsBtn();
+
 			// Video lightbox
 			$('.lightvideo').lightGallery();
+
+            // Anim section title 
+            /*$('section:not(.footer):not(.top-credibility) .s-title').addClass('is-hidden').waypoint(function(){
+                $(this.element).toggleClass('is-hidden');
+            }, {offset: '90%'});*/
+
+            $('#courtcircuit_contact, #newsletter_footer').waypoint(function(){
+                $(this.element).focus();
+            }, {offset: '50%'});
         }
     },
     home: {
         init: function() {
             isHome = true; 
+            $('.key-nums__item__num').each(function(){
+                var txt = $(this).next();
+                var val = $(this).attr('data-number');
+                var speed = (val>1000) ? 3000 : val*100;
+                $(this).jQuerySimpleCounter({
+                  start:  0,
+                  end:  val,
+                  duration: speed
+                });
+            });
+
+            $('.top-credibility').waypoint(function(){
+                $(this.element).find('.wrap-n').toggleClass('ready-anim');
+            }, {offset: '90%'});
         }
     },
 	page: {
@@ -493,6 +521,27 @@ $('.js-share').on('click', function(e){
 });
 
 
+$.fn.jQuerySimpleCounter = function( options ) {
+    var settings = $.extend({
+        start:  0,
+        end:    100,
+        easing: 'swing',
+        duration: 400,
+        complete: ''
+    }, options );
+
+    var thisElement = $(this);
+
+    $({count: settings.start}).animate({count: settings.end}, {
+		duration: settings.duration,
+		easing: settings.easing,
+		step: function() {
+			var mathCount = Math.ceil(this.count);
+			thisElement.text(mathCount);
+		},
+		complete: settings.complete
+	});
+};
 $('.following .cta').click(function(e){
 	$('.wrap-bg.c-main').toggleClass('is-active');	
 });
@@ -1797,6 +1846,6 @@ function loadPosts(category){
 
 	// WAYPOINT
 
-	$('.header-bloc').waypoint(function(){
+	$('.top-display').waypoint(function(){
 	  $('.navbar, .navbar__id').toggleClass('is-compact');
-	})
+	}, {offset: '-1px'});

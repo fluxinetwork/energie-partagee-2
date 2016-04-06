@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .fluxi-content p a, .fluxi-content .list li a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after, .accordion .accordion__head, .transition {
   transition: all 0.2s ease-in-out;

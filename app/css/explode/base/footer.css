@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .transition {
   transition: all 0.2s ease-in-out;
@@ -97,7 +116,7 @@
   font-family: "avantgarde", Arial;
   font-size: 3.4rem;
   height: 100%;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0;
   width: 100%;
 }
 .footer .social {
@@ -112,7 +131,7 @@
 }
 .footer .labels .labels__img .labels__label {
   display: inline-block;
-  margin: 0 2rem 0 0;
+  margin: 0 1rem 0 0;
   vertical-align: middle;
 }
 .footer .labels .labels__img .labels__label:last-child {
@@ -181,7 +200,7 @@
   }
   .footer .labels .labels__img {
     float: left;
-    width: 190px;
+    width: 160px;
   }
   .footer .labels .labels__img:last-child {
     margin-right: 2rem;

@@ -249,6 +249,7 @@ h4,.h4,.card__title{
 }
 
 h5,.h5,.s-title{ 
+    @extend %transition;
     @include font-size($h5-font-sizes);
 	color:$c-dark;
 	text-transform:uppercase;

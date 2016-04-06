@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav is-hidden">
 
   <ul class="nav__primary no-pp">
   

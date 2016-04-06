@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a, .no-pp .nav__dropdown .dropdown__item a::after, .no-pp .nav__dropdown .page_item a::after, .navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt, .navbar, .navbar::before, .navbar__id,
 .navbar__id.is-compact,
@@ -10,7 +29,7 @@
 .navbar__id.is-compact .logo__img,
 .no-touch nav:hover + .navbar__id .logo__img, .logo__title, .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .transition {
+.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -160,6 +179,10 @@
     # LOGO
 
 \*------------------------------*/
+.navbar__id {
+  animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards slideDown;
+}
+
 .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id {
@@ -288,7 +311,7 @@
   border-width: 0 5px 5px 5px;
   border-color: transparent transparent #fff transparent;
   transform: scale(0);
-  transform-origin: center bottom;
+  transform-origin: center;
   transition: transform 0.2s ease-out;
 }
 
@@ -521,7 +544,7 @@
   order: 3;
   height: 100%;
   align-items: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .nav-bt, .hamburger, .nav-bt--txt {
@@ -668,7 +691,7 @@
   }
 
   .pp .nav__item.is-unfold .nav__item__title::after {
-    transform: translateX(-50%) rotate(135deg);
+    transform: translateY(-80%) rotate(135deg);
   }
   .pp .nav__item.is-unfold .nav__dropdown {
     max-height: 200px;
@@ -690,6 +713,7 @@
 @media screen and (min-width: 640px) {
   .navbar {
     padding: 0 5rem;
+    top: 60px;
   }
 
   .navbar__id {

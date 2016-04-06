@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .transition {
   transition: all 0.2s ease-in-out;
@@ -99,16 +118,6 @@
 }
 .card .card__img, .card-news .card__img, .card-news--expand .card__img, .card-news--big .card__img {
   position: relative;
-}
-.card .card__img::after, .card-news .card__img::after, .card-news--expand .card__img::after, .card-news--big .card__img::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: radial-gradient(from left, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
-  z-index: 0;
 }
 .card .card__img i, .card-news .card__img i, .card-news--expand .card__img i, .card-news--big .card__img i {
   z-index: 1;
@@ -246,11 +255,13 @@
   height: 3rem;
   background: #122c33 none;
   text-align: right;
-  padding: 0 5rem;
+  padding: 0 2.5rem;
+  z-index: 200;
+  position: relative;
 }
 .top-display .p-ss {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #fff;
   padding-top: 0.3rem;
 }
@@ -260,11 +271,25 @@
 }
 
 .header-bloc {
-  background: url("../img/bg-header.jpg") no-repeat;
+  position: relative;
+  background: url("../img/energie-partagee-header-ciel-bleu.jpg") no-repeat;
   background-size: cover;
   text-align: center;
   color: #fff;
   padding-top: 10rem;
+}
+.header-bloc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.header-bloc > * {
+  position: relative;
 }
 .header-bloc .h1 {
   margin-bottom: 5rem;
@@ -283,6 +308,15 @@
 }
 .header-bloc .lightvideo.button {
   margin-top: 3rem;
+}
+.header-bloc .tags {
+  display: none;
+}
+
+.home .header-bloc {
+  background: url("../img/energie-partagee-homepage-header.jpg") no-repeat;
+  background-size: cover;
+  padding: 20rem 4rem 15rem 4rem;
 }
 
 .page .header-bloc, .single .header-bloc, .search-results .header-bloc, .archive .header-bloc {
@@ -358,6 +392,17 @@
 }
 .card-news .tag, .card-news--expand .tag, .card-news--big .tag {
   text-transform: uppercase;
+}
+
+.card-project .card__img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(40deg, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
+  z-index: 0;
 }
 
 .round__img {
@@ -501,7 +546,7 @@
   font-size: 3.4rem;
   height: 100%;
   width: 100%;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0;
 }
 .courtcircuit__input::-webkit-input-placeholder, .input__mailing::-webkit-input-placeholder {
   color: #fff;
@@ -597,13 +642,11 @@
   }
 }
 @media screen and (min-width: 600px) {
-  .top-display {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
   .header-bloc {
     padding-top: 16rem;
+  }
+  .header-bloc .tags {
+    display: block;
   }
 
   .holder-card {
@@ -668,6 +711,15 @@
   .testimony .box__half:first-child {
     padding-right: 4rem;
     max-width: 300px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .top-display {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .top-display .p-ss {
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 830px) {

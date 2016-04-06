@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .transition {
   transition: all 0.2s ease-in-out;

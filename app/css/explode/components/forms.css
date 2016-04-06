@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .transition {
   transition: all 0.2s ease-in-out;
@@ -189,4 +208,8 @@ form#contact_ep .cmxform label.error {
 
 #source_energie_detail, #autre_collectif {
   margin-bottom: 1rem;
+}
+
+input {
+  outline: 0;
 }

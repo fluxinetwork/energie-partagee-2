@@ -45,6 +45,10 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 
 \*------------------------------*/
 
+.navbar__id {
+  animation: 1s $ease-out-quart 1 forwards slideDown;
+}
+
 .navbar__id,
 .navbar__id.is-compact,
 .no-touch nav:hover + .navbar__id {
@@ -129,6 +133,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 \*------------------------------*/
 
 .nav {
+  @extend %transition;
   flex: auto;
   display: flex;
   order: 2;
@@ -154,7 +159,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 }
 
 .no-pp .nav__item {
- padding: 0 $gutter-thin/2;
+  padding: 0 $gutter-thin/2;
   color: $c-textwhite;
   cursor: pointer;
 
@@ -178,7 +183,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
     content: '';
     position: absolute;
     bottom: 5px;
-	z-index:2;
+	   z-index:2;
     left: 50%;
     width: 0;
     height: 0;
@@ -186,7 +191,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
     border-width: 0 5px 5px 5px;
     border-color: transparent transparent #fff transparent;
     transform: scale(0);
-    transform-origin: center bottom;
+    transform-origin: center;
     transition: transform 0.2s ease-out;
   }
 }
@@ -457,7 +462,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
   order: 3;
   height: 100%;
   align-items: center;
-  margin-left: $gutter-thin;
+  margin-left: $gutter-thin/2;
 }
 
 .nav-bt {
@@ -609,7 +614,7 @@ $c-placeholder : #fff;
   }
   .pp .nav__item.is-unfold {
     .nav__item__title::after {
-      transform: translateX(-50%) rotate(135deg);
+      transform: translateY(-80%) rotate(135deg);
     }
     .nav__dropdown {
       max-height: 200px;
@@ -632,7 +637,8 @@ $c-placeholder : #fff;
 
 @media screen and (min-width: 640px) {
   .navbar {
-    padding: 0 $gutter-thin*2.5;    
+    padding: 0 $gutter-thin*2.5;   
+    top: 60px; 
   }
 
   .navbar__id {

@@ -3,6 +3,25 @@
     #CLASS
 
 \*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* TRANSITIONS */
 .link, .link::after, .transition {
   transition: all 0.2s ease-in-out;
@@ -168,7 +187,11 @@
 }
 
 .button.cta {
-  padding: 1.6rem 3rem;
+  padding: 1.6rem 2rem 1.4rem 2rem;
+}
+
+.home .button.cta i {
+  display: none;
 }
 
 .button.green {
@@ -182,7 +205,7 @@
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .button-round:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .button-round.grey {
@@ -197,7 +220,7 @@
 .social li {
   list-style-type: none;
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .social li:last-child {
   margin-right: 0;

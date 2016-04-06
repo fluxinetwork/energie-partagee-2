@@ -5,6 +5,10 @@
 
 \*------------------------------*/
 
+.home .header-bloc h1 {
+	animation: 1s $ease-out-quart 1 forwards slideUpOpacity;
+}
+
 .key-nums{
 	margin:0;
 	padding:0;
@@ -16,17 +20,19 @@
 			font-size:1.8rem;	
     		padding: 0 $space*0.25;
 			margin-bottom:$space*0.2;
+			-webkit-font-smoothing: antialiased;
 			
 			&:last-child{
 				margin-bottom:0;
 			}
 		
-			.key-nums__item__num{
+			.key-nums__item__num {
 				font-family: $main-font;
 				font-size:5rem;	
 				display:block;
 				font-weight:bold;
-				line-height:1;					
+				line-height:1;	
+				min-width: 124px;				
 			}	
 		}			
 }		
@@ -42,13 +48,21 @@
 	}	
 	.p-ss{
 		max-width: 230px;
-		margin: 0 auto $space*0.1;
+		margin: 0 auto $space*0.2;
 		color:$c-textlight;		
 	}
 	
 	
 }
 
+.top-credibility .wrap-n {
+	transition: transform 0.4s $ease-out-quart;
+
+	&.ready-anim {
+		transform: translateY(30%);
+	}
+
+}
 
 @media screen and (max-width: $bp--medium) {		
 	.home .courtcircuit{

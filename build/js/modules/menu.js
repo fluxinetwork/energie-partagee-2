@@ -145,6 +145,6 @@
 
 	// WAYPOINT
 
-	$('.header-bloc').waypoint(function(){
+	$('.top-display').waypoint(function(){
 	  $('.navbar, .navbar__id').toggleClass('is-compact');
-	})
+	}, {offset: '-1px'});

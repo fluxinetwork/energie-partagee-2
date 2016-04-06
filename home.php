@@ -10,7 +10,7 @@
 
                 <?php while( have_rows('chiffres_cles', 'option') ): the_row(); ?>
                     
-                    <li class="key-nums__item"><span class="key-nums__item__num"><?php the_sub_field('chiffre_cle'); ?></span> <?php the_sub_field('texte_cle'); ?></li>
+                    <li class="key-nums__item"><span class="key-nums__item__num" data-number="<?php the_sub_field('chiffre_cle'); ?>">-</span><span class="key-nums__item__txt"><?php the_sub_field('texte_cle'); ?></span></li>
 
                 <?php endwhile; ?>
 
@@ -22,7 +22,7 @@
         </article>
 	</section>
     
-    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/sticky-post.php' ); ?>
+    <?php //include( TEMPLATEPATH.'/app/inc/inc_projet/sticky-post.php' ); ?>
     
     <section class="section wrap-l steps-intro">
         <h5 class="s-title">Énergie partagée en 3 étapes</h5>
