@@ -55,7 +55,8 @@ var FOO = {
 			$(".fitvids").fitVids();
 			initLoadMorePostsBtn();
 			if($('body.page-template-page-projets').length){	
-				initProjectsMap();				
+				initProjectsMap();
+                initLoadMoreProjectsCardsBtn();				
 			}			
         }
     },

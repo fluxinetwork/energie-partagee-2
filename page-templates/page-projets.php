@@ -27,7 +27,7 @@ Template Name: Tous les projets
 	?>  
   
   </div>
-  <article class="map-projects">
+  <div class="map-projects">
   	<div class="box wrap-n">
       <div class="filters">
       	<h5 class="h5">Filtres énergies</h5>
@@ -54,9 +54,10 @@ Template Name: Tous les projets
     <div class="map-holder">
         <div class="spinner bg-spin"></div>
     	  <div id="map"></div>
-        <div class="cards-map"></div> 
+        <div class="cards-map"></div>
+        <div class="wrap-n al-c anim-out"><button type="button" class="button green js-more-procards">Charger plus</button> </div>
      </div>      	
-  </article>
+  </div>
   <?php // FLUXI CONTENT         
     if( have_rows('elements_page') ):
       echo '<article class="fluxi-content fitvids wrap-n">';   
@@ -65,7 +66,8 @@ Template Name: Tous les projets
     endif;       
   ?>
 
-  <?php include( TEMPLATEPATH.'/app/inc/inc_projet/trio-projects.php' ); ?>     
+  <?php //include( TEMPLATEPATH.'/app/inc/inc_projet/trio-projects.php' ); ?>
+  <?php //include( TEMPLATEPATH.'/app/inc/inc_projet/court-circuit.php' ); ?>     
   
   <?php endwhile; endif; ?>
 </section>

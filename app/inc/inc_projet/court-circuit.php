@@ -1,4 +1,5 @@
-<article class="courtcircuit">
+
+<?php if(is_home()){ echo '<article class="courtcircuit">'; }else{ echo '<aside class="courtcircuit wrap-extend">';}?>
   <div class="courtcircuit__title"> <span class="courtcircuit__decoleft"><img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/deco-left.svg"></span> <span class="courtcircuit__logo"><img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/court-circuit.svg"></span> <span class="courtcircuit__decoright"><img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/deco-right.svg"></span> </div>
   <form class="wrap-n" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
     <div class="box">
@@ -13,4 +14,4 @@
       </div>
     </div>
   </form>
-</article>
+</<?php if(is_home()){ echo 'article'; }else{ echo 'aside';}?>>

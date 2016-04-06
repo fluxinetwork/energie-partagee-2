@@ -42,7 +42,7 @@ $query_projects = new WP_Query( $args_projects );
 
 ?>
 
-<section class="section trio-card">
+<<?php if(is_home()){ echo 'section'; }else{ echo 'aside';}?> class="section trio-card">
     	<h5 class="s-title"><?php echo (is_home()) ? 'Les projets citoyens' : 'Découvrir d\'autres projets';?></h5>
         <div class="wrap-n">       
             <div class="box">
@@ -117,4 +117,4 @@ $query_projects = new WP_Query( $args_projects );
                 <a href="<?php bloginfo('url'); ?>/projets/" class="button green cta"><i class="icon-pin_20"></i> Voir la carte des projets</a>
             </div>
         <?php endif; ?>       
-</section>
+</<?php if(is_home()){ echo 'section'; }else{ echo 'aside';}?>>

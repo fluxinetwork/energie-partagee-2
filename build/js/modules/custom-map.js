@@ -122,7 +122,7 @@ function loadMarkers(map){
 		var str = 'action=get_json_map&category='+filterCat;
 	}else{
 		// Mobil version
-		var str = 'action=get_json_map&category='+filterCat+'&posts_per_page=12';
+		var str = 'action=get_json_map&category='+filterCat+'&posts_per_page=6';
 	}
 	
 	$.ajax({
@@ -190,8 +190,10 @@ function addMakers(map, data){
 			// Add info card
 			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
-	            	markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
-	            	markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1></div>';
+					markerContent += '<a href="'+data[i].permalink+'">';
+	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
+	            		markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
+	            	markerContent += '</a>';
 	            markerContent += '</header>';
 
 	            markerContent += '<div class="p-details">';
@@ -212,10 +214,14 @@ function addMakers(map, data){
 			$('.cards-map').append(markerContent);
 
 			// remove the loader
-			if(i==nbMakers-1){
+			if(i==nbMakers-1 && windowW >= 600){
+				$('.js-more-procards').parent().remove();
 				setTimeout(function() {        
 		        	$('.spinner.bg-spin').remove();		        	
 		        }, 300);				
+			}else if(i==1 && windowW <= 600){
+				$('.spinner.bg-spin').remove();
+				$('.js-more-procards').parent().removeClass('anim-out');	
 			}			
 			
 		}

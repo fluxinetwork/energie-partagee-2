@@ -167,6 +167,9 @@
 .map-holder .cards-map .card-map .card {
   height: auto;
 }
+.map-holder .cards-map .card-map .card a {
+  color: #fff;
+}
 .map-holder .cards-map .card-map .card .tag {
   position: absolute;
   margin: 2rem;
@@ -203,9 +206,43 @@
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  .map-projects {
+    padding-top: 2rem;
+    background: #f2f2f2 url("../img/shape-grid-1.png") repeat 0 0;
+  }
+  .map-projects .box.wrap-n:first-child {
+    display: none;
+  }
+  .map-projects .map-holder {
+    padding-bottom: 4rem;
+  }
+  .map-projects .spinner.bg-spin:before {
+    margin: 10% auto;
+  }
+  .map-projects .wrap-n.al-c .button {
+    margin: 0 auto;
+  }
+
+  .cards-map {
+    padding: 4rem 2rem 0;
+  }
+  .cards-map .card-map {
+    margin-bottom: 4rem;
+  }
+  .cards-map .card-map .spinner, .cards-map .card-map .p-details, .cards-map .card-map .link-cta {
+    display: none !important;
+  }
+}
 @media screen and (min-width: 600px) {
   .map-projects #map {
     display: block;
+  }
+  .map-projects .js-more-procards {
+    display: none;
+  }
+  .map-projects .map-holder .card__icon, .map-projects .map-holder .card__infos .p-ss {
+    display: none;
   }
   .map-projects .map-holder .cards-map .card-map {
     max-width: 260px;
@@ -215,6 +252,9 @@
     right: 0;
     top: 0;
     height: 100%;
+  }
+  .map-projects .map-holder .cards-map .card-map .card-project {
+    border-radius: 3px 3px 0 0;
   }
   .map-projects .map-holder .cards-map .card-map.anim-out-left {
     right: -500px;

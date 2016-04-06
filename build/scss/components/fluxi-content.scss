@@ -71,7 +71,7 @@
 		font-family: $txt-fontserif;
 		color:$c-text;
 		li{
-			margin-bottom:	$space*0.2			
+			margin-bottom:$space*0.2			
 		}
 	}
 	.lightbox {
@@ -88,6 +88,10 @@
 	}	
 	.galerie{
 		margin:	$space*0.4 auto;	
+	}
+	.courtcircuit{
+		padding-top:$space*0.6;
+		padding-bottom:$space;			
 	}		
 }
 
@@ -105,7 +109,7 @@ blockquote{
 	    margin: $gutter 0 $gutter/2 0;		    
 	}
 	&:after{
-	    margin: $gutter/2 0 $space/2 0;		    
+	    margin: $gutter/2 0 $space*0.42 0;		    
 	}
 
     .blockquote{
@@ -525,7 +529,7 @@ blockquote{
 		    margin: $gutter 0 $gutter/2 $gutter*2;		    
 		}
 		&:after{
-		    margin: $gutter/2 0 $space/2 $gutter*2;		    
+		    margin: $gutter/2 0 $space*0.42 $gutter*2;		    
 		}
 	}
 

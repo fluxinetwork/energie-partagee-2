@@ -295,13 +295,14 @@ add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 function more_project_ajax(){	
 	
 	$offset = (isset($_POST["offset"])) ? $_POST["offset"] : 3;
+	$posts_per_page = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : 2;
 	
     $results = array();
 
     $args = array(
         'suppress_filters' => true,
         'post_type' => 'projets',
-        'posts_per_page' => 2,
+        'posts_per_page' => $posts_per_page,
 		'post_status' => 'publish',
 		'offset'  => $offset      
     );
@@ -313,13 +314,28 @@ function more_project_ajax(){
 		// Thumb		
 		$project_img_id = get_post_thumbnail_id();
 		$project_img_array = wp_get_attachment_image_src($project_img_id, 'medium', true);		
-		$project_img_url = $project_img_array[0];		   
-		
+		$project_img_url = $project_img_array[0];
+
+		// Taxo Slug		
+		$terms = get_the_terms( $loop->ID, 'type_energie' );
+		if ( !empty( $terms ) ) {
+			$term = array_shift( $terms );
+			$taxoslug = $term->slug;
+			$taxoname = $term->name;
+		}
+		// Stade		
+		$field_stade = get_field_object('status_projet');
+		$value_stade = get_field('status_projet');
+		$label_stade = $field_stade['choices'][ $value_stade ];	
+				   
+		// Array => JSON
 		$data = array(            
        		'title' => get_the_title(),
            	'image'  => $project_img_url,
            	'region' => get_field('departement'),
-           	'permalink'   => get_the_permalink()
+           	'permalink' => get_the_permalink(),
+           	'catSlug' => $taxoslug,
+           	'stadeName' => $label_stade
         );
 		$results[] = $data; 
 	
@@ -346,7 +362,7 @@ function get_json_map(){
     $nb_items = 0;
 	
 	// Query parameters 
-	$suppress_filters = (isset($_POST["suppress_filters"])) ? $_POST["suppress_filters"] : true;
+	$suppress_filters = true;
     $post_type = (isset($_POST['post_type'])) ? $_POST['post_type'] : 'projets';
 	$posts_per_page = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : -1;
 	$post_status = (isset($_POST["post_status"])) ? $_POST["post_status"] : 'publish';	
@@ -367,14 +383,14 @@ function get_json_map(){
 			'suppress_filters' => $suppress_filters,
 			'post_type' => $post_type,
 			'posts_per_page' => $posts_per_page,
-			 'post_status' => $post_status,
-			 'tax_query' => array(
-					array(
-						'taxonomy' => 'type_energie',
-						'field'    => 'slug',
-						'terms'    => $category,
-					)
+			'post_status' => $post_status,
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'type_energie',
+					'field'    => 'slug',
+					'terms'    => $category,
 				)
+			)
 		);
 	endif; // End query params for projects
 		

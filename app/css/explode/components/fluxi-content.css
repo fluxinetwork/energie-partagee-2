@@ -180,6 +180,10 @@
 .fluxi-content .galerie {
   margin: 4rem auto;
 }
+.fluxi-content .courtcircuit {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+}
 
 blockquote:before, blockquote:after {
   border-top: 2px solid #eb6c1d;
@@ -192,7 +196,7 @@ blockquote:before {
   margin: 4rem 0 2rem 0;
 }
 blockquote:after {
-  margin: 2rem 0 5rem 0;
+  margin: 2rem 0 4.2rem 0;
 }
 blockquote .blockquote {
   padding-right: 4rem;
@@ -613,7 +617,7 @@ blockquote .blockquote {
     margin: 4rem 0 2rem 8rem;
   }
   blockquote:after {
-    margin: 2rem 0 5rem 8rem;
+    margin: 2rem 0 4.2rem 8rem;
   }
 
   .clikarde {

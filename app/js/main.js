@@ -264,7 +264,8 @@ var FOO = {
 			$(".fitvids").fitVids();
 			initLoadMorePostsBtn();
 			if($('body.page-template-page-projets').length){	
-				initProjectsMap();				
+				initProjectsMap();
+                initLoadMoreProjectsCardsBtn();				
 			}			
         }
     },
@@ -669,7 +670,7 @@ function loadMarkers(map){
 		var str = 'action=get_json_map&category='+filterCat;
 	}else{
 		// Mobil version
-		var str = 'action=get_json_map&category='+filterCat+'&posts_per_page=12';
+		var str = 'action=get_json_map&category='+filterCat+'&posts_per_page=6';
 	}
 	
 	$.ajax({
@@ -737,8 +738,10 @@ function addMakers(map, data){
 			// Add info card
 			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
-	            	markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
-	            	markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1></div>';
+					markerContent += '<a href="'+data[i].permalink+'">';
+	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
+	            		markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
+	            	markerContent += '</a>';
 	            markerContent += '</header>';
 
 	            markerContent += '<div class="p-details">';
@@ -759,10 +762,14 @@ function addMakers(map, data){
 			$('.cards-map').append(markerContent);
 
 			// remove the loader
-			if(i==nbMakers-1){
+			if(i==nbMakers-1 && windowW >= 600){
+				$('.js-more-procards').parent().remove();
 				setTimeout(function() {        
 		        	$('.spinner.bg-spin').remove();		        	
 		        }, 300);				
+			}else if(i==1 && windowW <= 600){
+				$('.spinner.bg-spin').remove();
+				$('.js-more-procards').parent().removeClass('anim-out');	
 			}			
 			
 		}
@@ -1587,7 +1594,7 @@ function initSendMailPorspect (){
 }
 
 /* 
- * Load more projects
+ * Load more projects on trio-projects
  * Return JSON
  */
 function initLoadMoreProjectsBtn (){
@@ -1657,7 +1664,58 @@ function loadMoreProjects(){
 	
 	
 }
+/* 
+ * Load more projects on mobil page projects
+ * Return JSON
+ */
+function initLoadMoreProjectsCardsBtn (){
+    $('.js-more-procards').attr('disabled',false);   
+    $('.js-more-procards').on( 'click', function ( e ) {     
+        e.preventDefault();
+        $('.js-more-procards').attr('disabled',true);            
+        loadMoreProjectsCards();
+    });
+}
+function loadMoreProjectsCards(){    
+    
+    offsetProject = offsetProject + 6;
+    
+    var str = 'offset='+offsetProject+'&posts_per_page=6&action=more_project_ajax';
+    
+    $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: ajax_object.ajax_url,
+        data: str,
+        success: function(data){            
 
+            $.each(data, function(i){
+
+                var categoryNRJ = (data[i].catSlug).substring(0, 5);                
+
+                var cardContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
+                        cardContent += '<header class="card card-project">';
+                            cardContent += '<a href="'+data[i].permalink+'">';
+                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag">'+data[i].stadeName+'</span></div>';
+                                cardContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
+                            cardContent += '</a>';
+                        cardContent += '</header>';
+                    cardContent += '</article>';
+                
+                $('.cards-map').append(cardContent);
+                
+                $('.js-more-procards').attr('disabled',false);    
+            }); 
+
+        },
+        error : function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR + ' :: ' + textStatus + ' :: ' + errorThrown);
+        }
+
+    });
+    return false;     
+    
+}
 
 
 /* 

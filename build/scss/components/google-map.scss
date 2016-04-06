@@ -90,14 +90,15 @@
 		.card-map{
 			@extend %transition;
 
-			
-
 			.card{
 				height: auto;
+				a{
+					color:#fff;
+				}
 				.tag{
 					position:absolute;
 					margin:$gutter/2;
-				}
+				}				
 				.card__title {
 				    display: inline-block;
 				    vertical-align: baseline;
@@ -143,12 +144,50 @@
 	}
 }
 
-@media screen and (min-width: $bp--small) {
+@media screen and (max-width: $bp--small) {	
 	.map-projects{
+		padding-top:$gutter/2;
+		background: $c-bglight url("../img/shape-grid-1.png") repeat 0 0;
+		.box.wrap-n:first-child{
+			display: none;
+		}
+		.map-holder{
+			padding-bottom:$gutter;
+		}
+		.spinner.bg-spin:before{
+			margin:10% auto;
+		}
+		.wrap-n.al-c{
+			.button{
+				margin:0 auto;
+			}
+		}
+	}
+	.cards-map{
+		padding:$gutter $gutter/2 0;
+		.card-map{
+			margin-bottom: $gutter;
+			.spinner,.p-details,.link-cta{
+				display:none !important;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $bp--small) {
+	.map-projects{		
 		#map{
 			display: block;
 		}
+		.js-more-procards{
+			display: none;
+		}
 		.map-holder{
+
+			.card__icon,.card__infos .p-ss{
+				display:none;	
+			}
+
 			.cards-map{
 				.card-map{
 					max-width: 260px;
@@ -158,6 +197,9 @@
 					right: 0;
 					top: 0;
 					height: 100%;
+					.card-project{
+						border-radius:$radius $radius 0 0;
+					}
 
 					&.anim-out-left{
 					  	right:-500px;
@@ -174,7 +216,7 @@
 	.map-holder .cards-map .card-map .card .card__img .spinner:before{
 		margin: 30% auto; 
 	}
-
+	
 }
 
 
