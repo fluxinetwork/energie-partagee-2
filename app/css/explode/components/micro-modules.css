@@ -73,7 +73,7 @@
 \*------------------------------*/
 .spinner:before {
   content: "";
-  margin: 30% auto;
+  display: block;
   position: relative;
   text-indent: -9999em;
   border-top: 0.5rem solid rgba(255, 255, 255, 0.2);
@@ -90,6 +90,26 @@
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
+}
+
+.spinner.bg-spin {
+  position: absolute;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.spinner.bg-spin:before {
+  margin: 25% auto;
+  border-top: 0.5rem solid rgba(101, 170, 4, 0.2);
+  border-right: 0.5rem solid rgba(101, 170, 4, 0.2);
+  border-bottom: 0.5rem solid rgba(101, 170, 4, 0.2);
+  border-left: 0.5rem solid #65aa04;
+}
+.spinner.bg-spin:before, .spinner.bg-spin:after {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
 }
 
 @-webkit-keyframes spinit {

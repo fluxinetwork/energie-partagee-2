@@ -1,4 +1,5 @@
 <div class="map-holder wrap-extend">
+  <div class="spinner bg-spin"></div>
   <div id="map" data-lat="<?php echo $latitude; ?>" data-lon="<?php echo $longitude; ?>" data-cat="<?php echo $taxoslug; ?>" data-title="<?php the_title(); ?>"></div>
   <div class="holder-card">
     <div class="p-details">

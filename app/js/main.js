@@ -505,7 +505,7 @@ function initSingleMap(){
 	//console.log('Init Google Map Obj for "Single project"');
 	
 	var mapContainer = document.getElementById("map");
-	mapContainer.className += 'loader';
+	//mapContainer.className += 'loader';
 	
 	var latitude = parseInt($('#map').data('lat'));
 	var longitude = parseInt($('#map').data('lon'));
@@ -543,8 +543,16 @@ function initSingleMap(){
 		icon: iconsSelectProjectsMap[categoryNRJ]
 	});	
 
-	markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);	
+	markerShadow = new MarkerShadow(marker.getPosition(), iconShadow, map);
+
+	// do something only the first time the map is loaded
+	google.maps.event.addListenerOnce(map, 'idle', function(){
+		setTimeout(function() {        
+			$('.spinner.bg-spin').remove();		        	
+		}, 300);				
+	});				
 }
+
 
 
 /*
@@ -593,7 +601,7 @@ function loadGoogleMap(mapContainer, mapOptions){
 		
 	map = new google.maps.Map(mapContainer,mapOptions);	
 	
-	mapContainer.className += 'loader';
+	//mapContainer.className += 'loader';
 	
 	loadMarkers(map);
 }
@@ -607,7 +615,13 @@ function loadMarkers(map){
 	//console.log('loadMarkers '+filterCat);	
 		
 	// Params : suppress_filters | post_type | posts_per_page | post_status
-	var str = 'action=get_json_map&category='+filterCat;
+	if(windowW >= 600){
+		// Load all markers
+		var str = 'action=get_json_map&category='+filterCat;
+	}else{
+		// Mobil version
+		var str = 'action=get_json_map&category='+filterCat+'&posts_per_page=12';
+	}
 	
 	$.ajax({
         type: 'POST',
@@ -641,7 +655,7 @@ function addMakers(map, data){
 			var categoryNRJ = data[i].catSlug;
 			// Cut string to escape "-"
 			categoryNRJ =  categoryNRJ.substring(0, 5);
-			
+
 			//  Add markers on the map only on desktop
 			if(windowW >= 600){	
 				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
@@ -693,7 +707,14 @@ function addMakers(map, data){
 
 			markerContent += '</article>';
 
-			$('.cards-map').append(markerContent);			
+			$('.cards-map').append(markerContent);
+
+			// remove the loader
+			if(i==nbMakers-1){
+				setTimeout(function() {        
+		        	$('.spinner.bg-spin').remove();		        	
+		        }, 300);				
+			}			
 			
 		}
 		
@@ -731,7 +752,6 @@ function onClickMarker(index,map,marker,categoryNRJ){
         	$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
         	setTimeout(function() {
         		$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
-
         	}, 100);
         }, 220);
     	

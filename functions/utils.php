@@ -349,7 +349,7 @@ function get_json_map(){
 	$suppress_filters = (isset($_POST["suppress_filters"])) ? $_POST["suppress_filters"] : true;
     $post_type = (isset($_POST['post_type'])) ? $_POST['post_type'] : 'projets';
 	$posts_per_page = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : -1;
-	$post_status = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : 'publish';	
+	$post_status = (isset($_POST["post_status"])) ? $_POST["post_status"] : 'publish';	
 	
 	$category = (isset($_POST["category"])) ? $_POST["category"] : 'all_cat';	
 	

@@ -16,14 +16,14 @@
 				margin-top: $space/2;
 			}
 		}
-		&:last-child .h5{						
-			margin-top: $space*0.4;				
+		&:last-child .h5{
+			margin-top: $space*0.4;
 		}
 	}
 
 	.map-holder #map{
 		margin-top: $space*0.4;
-		height:850px;			
+		height:850px;
 	}
 	.map-filters{
 		display: flex;
@@ -42,24 +42,24 @@
 	.tag{
 		cursor:pointer;
 		border-color:$c-main;
-		color:$c-main;			
+		color:$c-main;
 		background-color: transparent;
 
-		&::after { 
+		&::after {
 			display: none;
 		}
 	}
 }
 
-.map-filters{	
+.map-filters{
 	.tag:hover,.tag.js-f-active{
 		background-color:$c-dark;
-		border-color:$c-dark;	
-		color:#fff;		
+		border-color:$c-dark;
+		color:#fff;
 	}
 	.tag.js-f-active:before{
 		content:"\e927";
-		font-family: 'icomoon';		
+		font-family: 'icomoon';
 		font-size: 1rem;
 		padding-right:0.8rem;
 	}
@@ -76,27 +76,21 @@
 
 .map-holder{
 	position:relative;
-	
+
 	#map {
 		width: 100%;
 		height: 444px;
 	}
-	
+
 	#map.loader {
 		@extend %loader;
 	}
-	
+
 	.cards-map{
 		.card-map{
 			@extend %transition;
 
-			max-width: 260px;
-			position: absolute;
-			margin-right: $gutter;
-			padding:$gutter*2 0;
-			right: 0;
-			top: 0;
-			height: 100%;
+			
 
 			.card{
 				height: auto;
@@ -105,7 +99,7 @@
 					margin:$gutter/2;
 				}
 				.card__title {
-				    display: inline-block;				   
+				    display: inline-block;
 				    vertical-align: baseline;
 				}
 				.card__img{
@@ -116,15 +110,14 @@
 
 				    .spinner{
 				    	@extend %transition;
-				    	content: "";  
+				    	
 					    display: block;
 					    height: 100%;
 					    position: absolute;
 					    width: 100%;
 					    &:before{
-					    	content: "";  
-					    	display: block;							
-						}					    
+					    	margin: 15% auto; 	
+						}
 
 				    }
 				}
@@ -134,37 +127,60 @@
 				background-color:#fff;
 				padding:$gutter/2;
 			}
-		}		
+		}
 	}
 }
 
 .a-project {
 	.map-holder{
-		margin-top:$space*0.6;		
+		margin-top:$space*0.6;
 	}
 }
 
+.map-projects{
+	#map{
+		display: none;
+	}
+}
 
 @media screen and (min-width: $bp--small) {
 	.map-projects{
-		.cards-map{
-			.card-map{
-				&.anim-out-left{  
-				  	right:-500px;
-				  	opacity:0;
-				  	&.unactive .card__img{
-				  		background-image:none !important;				  		 
-					}
+		#map{
+			display: block;
+		}
+		.map-holder{
+			.cards-map{
+				.card-map{
+					max-width: 260px;
+					position: absolute;
+					margin-right: $gutter;
+					padding:$gutter*2 0;
+					right: 0;
+					top: 0;
+					height: 100%;
+
+					&.anim-out-left{
+					  	right:-500px;
+					  	opacity:0;
+					  	&.unactive .card__img{
+					  		background-image:none !important;
+						}
+					}					
 				}
 			}
 		}
 	}
+
+	.map-holder .cards-map .card-map .card .card__img .spinner:before{
+		margin: 30% auto; 
+	}
+
 }
 
 
-@media screen and (min-width: $bp--medium) {	
+@media screen and (min-width: $bp--medium) {
 
-	.map-projects{	
+	.map-projects{
 
 		.filters{
 			flex: 1 1 50%;

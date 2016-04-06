@@ -52,8 +52,9 @@ Template Name: Tous les projets
       </div> 
     </div>
     <div class="map-holder">
-    	 <div id="map"></div>
-       <div class="cards-map"></div> 
+        <div class="spinner bg-spin"></div>
+    	  <div id="map"></div>
+        <div class="cards-map"></div> 
      </div>      	
   </article>
   <?php // FLUXI CONTENT         
