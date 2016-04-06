@@ -132,7 +132,7 @@
 // $positions are justify-content and align-items properties
 // If only one is passed, will be used for the two properties
 
-@mixin flex($positions: null null) {
+@mixin flex($positions: null null, $column: false) {
 	display: flex;
 	
 	$positions: unpack-duo($positions);
@@ -146,6 +146,10 @@
 		@if ($position != null) {
 			#{$flex-position}: $position;
 		}
+	}
+
+	@if ($column) {
+		flex-direction: column;
 	}
 }
 

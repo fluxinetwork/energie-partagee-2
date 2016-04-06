@@ -86,8 +86,16 @@
     #HOMEPAGE
 
 \*------------------------------*/
+.home .header-bloc {
+  background: url("../img/energie-partagee-homepage-header.jpg") no-repeat;
+  background-size: cover;
+  padding: 10rem 2rem 7.5rem 2rem;
+}
 .home .header-bloc h1 {
   animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards slideUpOpacity;
+}
+.home .header-bloc .wrap-l {
+  padding: 0;
 }
 
 .key-nums {
@@ -95,9 +103,11 @@
   padding: 0;
 }
 .key-nums .key-nums__item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   list-style-type: none;
-  text-align: center;
-  display: inline-block;
+  text-align: left;
   font-size: 1.8rem;
   padding: 0 2.5rem;
   margin-bottom: 2rem;
@@ -107,25 +117,40 @@
 .key-nums .key-nums__item:last-child {
   margin-bottom: 0;
 }
-.key-nums .key-nums__item .key-nums__item__num {
+.key-nums .key-nums__item__num {
+  flex: none;
+  text-align: left;
   font-family: "avantgarde", Arial;
   font-size: 5rem;
   display: block;
   font-weight: bold;
   line-height: 1;
-  min-width: 124px;
+  margin-right: 2rem;
+}
+.key-nums .key-nums__item__txt {
+  flex: 1 0 auto;
+  font-size: 1.6rem;
 }
 
-.steps-intro .box__item__img {
-  width: 200px;
-  margin: 0 auto 3rem;
+.steps-intro ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.steps-intro .box__item__img img {
-  margin: 0 auto;
+.steps-intro .box__item {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  text-align: left;
+}
+.steps-intro .box__item__img {
+  width: 100px;
+  margin-right: 2rem;
 }
 .steps-intro .p-ss {
   max-width: 230px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
   color: #777777;
 }
 
@@ -136,13 +161,79 @@
   transform: translateY(30%);
 }
 
+@media screen and (max-width: 600px) {
+  .wrap-n,
+  .wrap-l {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
 @media screen and (max-width: 830px) {
   .home .courtcircuit {
     padding-bottom: 0;
   }
 }
 @media screen and (min-width: 600px) {
+  .home .header-bloc {
+    padding: 20rem 4rem 15rem 4rem;
+  }
+
+  .wrap-n {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .key-nums {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
   .key-nums .key-nums__item {
-    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .key-nums .key-nums__item__num {
+    min-width: 124px;
+    text-align: center;
+    margin-right: 0;
+  }
+  .key-nums .key-nums__item__txt {
+    flex: 1 0 auto;
+    font-size: 1.8rem;
+  }
+
+  .steps-intro ul {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .steps-intro .box__item {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .steps-intro .box__item__img {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+  .steps-intro .box__item__img img {
+    margin: 0 auto;
+  }
+  .steps-intro .p-ss {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 830px) {
+  .steps-intro .box__item__img {
+    width: 140px;
+  }
+  .steps-intro .box__item {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .steps-intro .box__item__img {
+    width: 200px;
   }
 }

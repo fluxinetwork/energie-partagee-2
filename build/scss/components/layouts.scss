@@ -71,11 +71,6 @@
 	}
 		
 }
-.home .header-bloc {
-	background:url('../img/energie-partagee-homepage-header.jpg') no-repeat;
-	background-size:cover;
-	padding: unpack($space*2 $gutter $space*1.5);
-}
 
 .page, .single, .search-results, .archive{ 
 	.header-bloc{

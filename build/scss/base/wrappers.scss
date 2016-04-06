@@ -147,7 +147,7 @@
   	}	
   	.box__half {
     	flex: 1 1 0;		
-    	padding-right: $gutter;
+    	padding-right: $gutter/2;
   	}
   	.box__fixe {    	
 		max-width:66px;     	
@@ -178,6 +178,11 @@
 	
 	.box__item{		   	
 		margin-bottom:0;
+	}
+
+	.box__half {
+	  	flex: 1 1 0;		
+	  	padding-right: $gutter;
 	}
 	
 	.wrap-extend{

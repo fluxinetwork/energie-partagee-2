@@ -2,7 +2,7 @@
 
 	<section class="section header-bloc">
     	<article class="wrap-l">
-            <h1 class="h1">Investissons les énergies renouvelables</h1>
+            <h1 class="h1">Investissons<br> les énergies renouvelables</h1>
 
             <?php if( have_rows('chiffres_cles', 'option') ): ?>
 
@@ -10,7 +10,10 @@
 
                 <?php while( have_rows('chiffres_cles', 'option') ): the_row(); ?>
                     
-                    <li class="key-nums__item"><span class="key-nums__item__num" data-number="<?php the_sub_field('chiffre_cle'); ?>">-</span><span class="key-nums__item__txt"><?php the_sub_field('texte_cle'); ?></span></li>
+                    <li class="key-nums__item">
+                        <span class="key-nums__item__num" data-number="<?php the_sub_field('chiffre_cle'); ?>">-</span>
+                        <span class="key-nums__item__txt"><?php the_sub_field('texte_cle'); ?></span>
+                    </li>
 
                 <?php endwhile; ?>
 
@@ -34,9 +37,11 @@
                 <?php while( have_rows('ep_3_steps', 'option') ): the_row(); ?>                    
                     
                     <li class="box__item">
-                        <div class="box__item__img"><img src="<?php the_sub_field('illustration_etape'); ?>"></div>              
-                        <p class="p-ss"><?php the_sub_field('texte_etape'); ?></p>        
-                        <a class="link" href="<?php the_sub_field('page_reliee'); ?>"><?php the_sub_field('texte_lien'); ?></a>
+                        <div class="box__item__img"><img src="<?php the_sub_field('illustration_etape'); ?>"></div>
+                        <span class="box__item__infos">
+                            <p class="p-ss"><?php the_sub_field('texte_etape'); ?></p>       
+                            <a class="link" href="<?php the_sub_field('page_reliee'); ?>"><?php the_sub_field('texte_lien'); ?></a>
+                        </span> 
                     </li>
 
                 <?php endwhile; ?>
