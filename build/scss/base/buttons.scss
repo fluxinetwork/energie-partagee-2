@@ -173,6 +173,7 @@ $transition: all 0.3s $ease-out-quart;
 	border-radius:$radius 0 0 $radius;
 	border:1px solid lighten($c-main, 10%);
 	border-right:none;
+	z-index:20;
 }
 
 

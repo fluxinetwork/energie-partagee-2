@@ -22,7 +22,7 @@
         </article>
 	</section>
     
-    <?php //include( TEMPLATEPATH.'/app/inc/inc_projet/sticky-post.php' ); ?>
+    <?php include( TEMPLATEPATH.'/app/inc/inc_projet/sticky-post.php' ); ?>
     
     <section class="section wrap-l steps-intro">
         <h5 class="s-title">Énergie partagée en 3 étapes</h5>

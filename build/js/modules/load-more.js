@@ -96,6 +96,8 @@ function loadMoreProjectsCards(){
 
             $.each(data, function(i){
 
+                nbloadedCards++;
+
                 var categoryNRJ = (data[i].catSlug).substring(0, 5);                
 
                 var cardContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
@@ -108,6 +110,8 @@ function loadMoreProjectsCards(){
                     cardContent += '</article>';
                 
                 $('.cards-map').append(cardContent);
+
+                console.log(nbloadedCards+' / '+offsetProject);
                 
                 $('.js-more-procards').attr('disabled',false);    
             }); 
