@@ -209,6 +209,8 @@
   text-align: center;
   padding: 0;
   cursor: pointer;
+  width: 4rem;
+  height: 4rem;
 }
 .social [class^="social--"] i, .social [class*=" social--"] i {
   display: inline-block;

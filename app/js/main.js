@@ -577,7 +577,7 @@ function initProjectsMap(){
         center: latlng,
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
-	
+	// Load the map only on desktop
 	if(windowW >= 600){
 		loadGoogleMap(mapContainer, mapOptions);
 	}else{
@@ -641,7 +641,8 @@ function addMakers(map, data){
 			var categoryNRJ = data[i].catSlug;
 			// Cut string to escape "-"
 			categoryNRJ =  categoryNRJ.substring(0, 5);
-
+			
+			//  Add markers on the map only on desktop
 			if(windowW >= 600){	
 				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
 										

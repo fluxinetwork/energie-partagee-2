@@ -2,33 +2,34 @@
 
 /*------------------------------*\
 
-    #MICRO-MODULES
+#MICRO-MODULES
 
 \*------------------------------*/
 .spinner {
- 
-}
-.spinner:before{
-	content:"";
-	margin: 30% auto;  
-	position: relative;
-	text-indent: -9999em;
-	border-top: 0.5rem solid rgba(255, 255, 255, 0.2);
-	border-right: 0.5rem solid rgba(255, 255, 255, 0.2);
-	border-bottom: 0.5rem solid rgba(255, 255, 255, 0.2);
-	border-left: 0.5rem solid #ffffff;
-	-webkit-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-animation: spinit 0.8s infinite linear;
-	animation: spinit 0.8s infinite linear;
+  &:before{
+    content:"";
+    margin: 30% auto;  
+    position: relative;
+    text-indent: -9999em;
+    border-top: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border-right: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border-left: 0.5rem solid #ffffff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: spinit 0.8s infinite linear;
+    animation: spinit 0.8s infinite linear;
+  }
+
+  &:before,&:after {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+  }
+
 }
 
-.spinner:before,.spinner:after {
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-}
 
 @-webkit-keyframes spinit {
   0% {

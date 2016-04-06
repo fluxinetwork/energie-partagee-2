@@ -8,11 +8,13 @@ $array_citoyen_datas = array();
 $array_prive_datas = array();
 
 $total_capital = 0;
-$nb_financer = count( get_field('repartition_du_capital') );
-$unite_perc = 100 / $nb_financer;
 $citoyen_perc = 0;
 
-if($rows_capital){
+if(!empty($rows_capital)){
+
+	$nb_financer = count( get_field('repartition_du_capital') );
+	$unite_perc = 100 / $nb_financer;
+
 	// Count Loop
 	foreach($rows_capital as $row){
 		$id_financer='';
