@@ -1,16 +1,26 @@
+<?php
+	$loop = 0;
+	// Total posts
+	$args_count = array(
+		'post_status' => 'publish',
+		'post_type' => 'post',
+		'cat' => $cat_id 
+	);
+	$posts_count = new WP_Query( $args_count );
+	$total_post_count = $posts_count->found_posts;
+?>
+
 <section class="wrap-main actualites">
  
   <header class="header-bloc">    
     <h1 class="h1">
 		<?php the_title(); ?>    	
     </h1>
-  </header>
-  
+  </header>  
    
-	<article class="fluxi-content">
+	<article class="fluxi-content" <?php echo ' data-totalposts="'.$total_post_count.'"'; ?>>
 		<div class="fluxi-wrap">	
 			<?php
-			$loop = 0;
 			if ( $query_category->have_posts() ) :
 				while ( $query_category->have_posts() ) : $query_category->the_post();
 					

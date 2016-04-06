@@ -26,9 +26,9 @@ var FOO = {
                 $(this.element).toggleClass('is-hidden');
             }, {offset: '90%'});*/
 
-            $('#courtcircuit_contact, #newsletter_footer').waypoint(function(){
+            /*$('#courtcircuit_contact, #newsletter_footer').waypoint(function(){
                 $(this.element).focus();
-            }, {offset: '50%'});
+            }, {offset: '50%'});*/
         }
     },
     home: {

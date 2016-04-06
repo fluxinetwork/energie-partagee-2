@@ -254,23 +254,23 @@ function onClickMarker(index,map,marker,categoryNRJ){
 
     // Get the card
     if(index != prevCardMapId){
-    if(isOpenMarker){
-    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
-    	setTimeout(function() {
-        	$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
-        	setTimeout(function() {
-        		$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
-        	}, 100);
-        }, 220);
-    	
-	}else{
-		$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
-		setTimeout(function() {
-        	$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
-        	$('.cards-map .card-map:eq('+index+')').removeClass('unactive');
-        }, 100);
+	    if(isOpenMarker){
+	    	$('.cards-map .card-map:eq('+prevCardMapId+')').toggleClass('anim-out-left');
+	    	setTimeout(function() {
+	        	$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+	        	setTimeout(function() {
+	        		$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
+	        	}, 100);
+	        }, 220);
+	    	
+		}else{
+			$('.cards-map .card-map:eq('+index+')').toggleClass('anim-out-left');
+			setTimeout(function() {
+	        	$('.cards-map .card-map:eq('+index+') .spinner').css('opacity',0);
+	        	$('.cards-map .card-map:eq('+index+')').removeClass('unactive');
+	        }, 100);
+		}
 	}
-}
     prevCardMapId = index;
 	isOpenMarker = true;
 	

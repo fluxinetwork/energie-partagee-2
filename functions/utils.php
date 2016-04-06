@@ -272,7 +272,7 @@ function more_post_ajax(){
 			 $date_news = get_the_time('d M');                      
 		endif;		 					                            
                           
-       $out .= '<a class="card-news" href="'.get_the_permalink().'">
+       $out .= '<a class="card-news anim-out" href="'.get_the_permalink().'">
                   	<div class="card__img">'.$news_img.'</div>
                       <div class="card__infos">
                       	<span class="tag">'.$date_news.'</span>

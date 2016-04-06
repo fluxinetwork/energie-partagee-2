@@ -6,10 +6,7 @@ Template Name: Tous les projets
 <?php get_header(); ?>
 
 <section class="wrap-main all-projects">
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-  
-  		  
-  ?>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   
   <header class="header-bloc"> 
   
@@ -27,7 +24,7 @@ Template Name: Tous les projets
 	?>  
   
   </div>
-  <div class="map-projects">
+  <div class="map-projects" <?php echo ' data-nbcards="'.wp_count_posts( 'projets' )->publish.'"'; ?>>
   	<div class="box wrap-n">
       <div class="filters">
       	<h5 class="h5">Filtres énergies</h5>
@@ -64,10 +61,7 @@ Template Name: Tous les projets
       require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');          
       echo '</article>';
     endif;       
-  ?>
-
-  <?php //include( TEMPLATEPATH.'/app/inc/inc_projet/trio-projects.php' ); ?>
-  <?php //include( TEMPLATEPATH.'/app/inc/inc_projet/court-circuit.php' ); ?>     
+  ?>    
   
   <?php endwhile; endif; ?>
 </section>
