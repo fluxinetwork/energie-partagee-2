@@ -26,10 +26,9 @@ var bpXlarge;
 
 // Ajax
 var ppp = 12; // Post per page
-var pageNumber = 1;
+var offsetPost = 12;
 var offsetProject = 1;
 var limiteProjectLoading = 0;
-var nbTotalPostLoaded = 0;
 
 // Projects Map
 var nbMakers = 0;
@@ -1715,12 +1714,12 @@ function loadMoreProjectsCards(){
                         cardContent += '</header>';
                     cardContent += '</article>';
 
-                addCardContent(cardContent, nbloadedCards-1, i);
+                addCardContent('cardmap', cardContent, nbloadedCards-1, i);
 
                 if(nbloadedCards < nbTotalCards-1){
-                    $('.js-more-procards').attr('disabled',false);
+                    $('.js-more-procards').attr('disabled',false);                    
                 } else{
-                    $('.js-more-procards').parent().hide(300);
+                    $('.js-more-procards').parent().hide(300);                   
                 }
             });
 
@@ -1739,6 +1738,8 @@ function loadMoreProjectsCards(){
  * Return HTML
  */
 function initLoadMorePostsBtn (){
+    $('.js-more').attr('disabled',false);
+
 	$('.js-more').on( 'click', function ( e ) {
 		e.preventDefault();
 		$('.js-more').attr('disabled',true);
@@ -1752,34 +1753,44 @@ function initLoadMorePostsBtn (){
  * Load 
  * @param : category (number)
  */
-function loadPosts(category){
-    pageNumber++;
+function loadPosts(category){    
 
-    var totalposts = $('.fluxi-content').data('totalposts');
+    var totalposts = $('.fluxi-content').data('totalposts');   
 
-    var str = '&cat=' + category + '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
+    var str = '&cat=' + category + '&offset=' + offsetPost + '&ppp=' + ppp + '&action=more_post_ajax';
 
     $.ajax({
         type: 'POST',
-        dataType: 'html',
+        dataType: 'JSON',
         url: ajax_object.ajax_url,
         data: str,
         success: function(data){
+
             var $data = $(data);
-            nbTotalPostLoaded = nbTotalPostLoaded + $data.length;
-            if($data.length > 1){
+            
+            if($data.length != 0){
+                $.each(data, function(i){                     
+                    
+                    var $output = '<a class="card-news anim-out" href="'+data[i].permalink+'">';
+                        $output += '<div class="card__img"><img class="img-responsive" src="'+data[i].img+'" alt="'+data[i].title+'"></div>';
+                        $output += '<div class="card__infos">';
+                            $output += '<span class="tag is-inactive">'+data[i].date+'</span>';
+                            $output += '<h1 class="card__title">'+data[i].title+'</h1>';
+                        $output += '</div>';
+                    $output += '</a>';                    
 
-                $('.js-inject-news').append($data);
+                    $('.js-more').attr('disabled',false);
 
-                for(var i = 0; i <= $data.length; i++){
-                    setTimeout(function() {
-                        $('.card-news').removeClass('anim-out');
-                    }, 200*i);
-                }
+                    addCardContent ('posts', $output, offsetPost, i);
+                    offsetPost ++;
 
-                $('.js-more').attr('disabled',false);
+                    if(offsetPost >= totalposts){
+                        $('.js-more').attr('disabled',true).remove();                       
+                    }
+                    
+                });
             } else{
-                $('.js-more').remove('disabled',true);
+                $('.js-more').attr('disabled',true).remove();                                         
             }
         },
         error : function(jqXHR, textStatus, errorThrown) {
@@ -1794,17 +1805,24 @@ function loadPosts(category){
 
 /*
  * Add and animate content of ajax loaded object
+ * @param : type (string) => string for modifier process
  * @param : content (jquery | html) => html or jquery element
  * @param : domId (number) => element index in the page
  * @param : factor (number) => index to factor the animation delay
  */
-function addCardContent (content, domId, factor){
+function addCardContent (type, content, domId, factor){
+    if(type == 'cardmap'){
+        $('.cards-map').append(content);
+        setTimeout(function() {
+            $('.cards-map').find('.card-map:eq('+domId+')').removeClass('anim-out');
+        }, 200*factor);
+    }else{
+        $('.js-inject-news').append(content);
+        setTimeout(function() {
+            $('.card-news:eq('+(domId-2)+')').removeClass('anim-out');
+        }, 200*factor);
+    }
 
-    $('.cards-map').append(content);
-
-    setTimeout(function() {
-        $('.cards-map').find('.card-map:eq('+domId+')').removeClass('anim-out');
-    }, 200*factor);
 }
 
 
