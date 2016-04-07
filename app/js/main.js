@@ -334,7 +334,7 @@ $(document).ready(UTIL.loadEvents);
  */
 
 function resize_handler() {	 
-	// calc_windowW();	
+	// calc_windowW();    
 }
 if ( resizeEvent ) { $( window ).bind( "resize", resize_handler() ); }
 
@@ -364,7 +364,10 @@ function debouncer( func , timeout ) {
 }
 
 function debouncer_handler() {
-    
+    // reload map on resize
+    if(windowW >= 600 && $('.map-projects')){        
+       location.reload(true);
+    }
 }
 if ( resizeDebouncer ) { $( window ).bind( "resize", debouncer(debouncer_handler) ); }
 
@@ -528,6 +531,7 @@ $('.js-share').on('click', function(e){
 		popupCenter(shareUrl, "Partager sur Twitter");
 	}
 });
+
 
 
 $.fn.jQuerySimpleCounter = function( options ) {
