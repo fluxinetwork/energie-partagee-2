@@ -725,6 +725,7 @@
   .box-logos .box-logos__item {
     flex: 1;
     margin: 0 2rem 0 0;
+    align-self: center;
   }
 }
 @media screen and (min-width: 830px) {
