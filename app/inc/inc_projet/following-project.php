@@ -2,21 +2,21 @@
   <div class="box__social">
     <?php get_socials(); ?>
   </div>
-  <?php if($value_stade == 'onsuit' && !empty($url_call_to_action)): ?>
+  <?php if($value_stade == 'onsuit'): ?>
       <div class="box__btn">
-        <a href="<?php echo $url_call_to_action;?>" class="button green cta"><i class="icon-close_32"></i> En savoir plus</a>
-      </div>  
+        <button type="button" class="button green cta"><i class="icon-heart_20"></i> Soutenir ce projet</button>
+      </div>
   <?php elseif($value_stade=='collecte'): ?>
-     <div class="box__btn">
+      <div class="box__btn">
         <button type="button" class="button green cta"><i class="icon-heart_20"></i> Soutenir ce projet</button>
       </div>
   <?php elseif($value_stade=='succes' && !empty($url_call_to_action)): ?>
       <div class="box__btn">
-        <a href="<?php echo $url_call_to_action;?>" class="button green cta"><i class="icon-close_32"></i> En savoir plus</a>
+        <a href="<?php echo $url_call_to_action;?>" class="button green cta"><i class="icon-heart_20"></i> En savoir plus</a>
       </div>    
   <?php endif; ?>
 </div>
-<?php if($value_stade=='collecte'): ?>
+<?php if($value_stade == 'onsuit' || $value_stade=='collecte'): ?>
 <aside class="wrap-bg c-main">
   <div class="box">
     <div class="box__half">

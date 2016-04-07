@@ -47,7 +47,9 @@
     $thumb_url = $main_image_obj['sizes']['thumbnail'];
 	endif;
 	// Img porteur de projet
-	$portrait_pdp = get_field('portrait');	
+	$portrait_pdp = get_field('portrait');
+  // Mail porteur	de projet
+  $contact_project = get_field('email');
 
   ?>
     <section class="wrap-main<?php echo ' ' . $type_power; ?>">

@@ -668,6 +668,7 @@ function initSingleMap(){
     };
 	
 	var map = new google.maps.Map(mapContainer,mapOptions);	
+	map.setOptions({styles: stylesMapProjects});
 	
 	var marker = new google.maps.Marker({
 		position: newLatLng,

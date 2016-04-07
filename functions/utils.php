@@ -578,6 +578,15 @@ function send_mail_prospect(){
 			$thumb_url = filter_var($_POST['thumb_url'], FILTER_SANITIZE_URL);
 			$url_page_projet = get_the_permalink($id_project);
 
+			// Notification mail recevers
+			/*$mails_notif = array('marc.mossalgue@energie-partagee.org');
+			$mail_contact = get_field( 'email', $id_project );			
+			if($mail_contact):
+				$mails_notif [] = $mail_contact;
+			endif;*/
+			$mails_notif = array('rollandyann@gmail.com');
+
+			// Response JSON
 			$datas_mail = array(
 				'validation' => 'success',
 				'message' => 'Un email vient de vous être envoyé.'
@@ -608,8 +617,8 @@ function send_mail_prospect(){
 
 			// ********************************
 			// Envoie du mail de notification
-			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
-			//notify_by_mail (array('marc.mossalgue@energie-partagee.org'), 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau prospect publié !', false, 'Le contact ' . $mail_prospect . ' vient de faire une demande d\'informations pour le projet <strong>' . $name_project . '<strong>.', $mail_vars_notif );
+			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);			
+			notify_by_mail ($mails_notif, 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau prospect publié !', false, 'Le contact ' . $mail_prospect . ' vient de faire une demande d\'informations pour le projet <strong>' . $name_project . '<strong>.', $mail_vars_notif );
 
 			// Output response json
 			$results[] = $datas_mail;
