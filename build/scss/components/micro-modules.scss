@@ -60,6 +60,15 @@
     }
 }
 
+.spinner.green{  
+    &:before{
+      border-top: 0.5rem solid rgba($c-main,0.2);
+      border-right: 0.5rem solid rgba($c-main,0.2);
+      border-bottom: 0.5rem solid rgba($c-main,0.2);
+      border-left: 0.5rem solid $c-main;
+    }    
+}
+
 @-webkit-keyframes spinit {
   0% {
     -webkit-transform: rotate(0deg);

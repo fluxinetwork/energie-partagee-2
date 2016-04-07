@@ -1699,7 +1699,7 @@ function initLoadMoreProjectsBtn (){
 	$('.js-more-project').attr('disabled',false);
 	$('.js-more-project').on( 'click', function ( e ) {
 		e.preventDefault();
-		$('.js-more-project').attr('disabled',true);
+		$('.js-more-project').attr('disabled',true).html('<i class="spinner green"></i>');;
 		loadMoreProjects();
 	});
 }
@@ -1747,7 +1747,7 @@ function loadMoreProjects(){
             });
 
             if(limiteProjectLoading < 2){
-                $('.js-more-project').attr('disabled',false);
+                $('.js-more-project').attr('disabled',false).html('<i class="icon-chevronright_64"></i>');
             }else{
                 $('.js-more-project').remove();
                 $('.trio-card .box__fixe').append('<a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>');
@@ -1771,7 +1771,7 @@ function initLoadMoreProjectsCardsBtn (){
     $('.js-more-procards').attr('disabled',false);
     $('.js-more-procards').on( 'click', function ( e ) {
         e.preventDefault();
-        $('.js-more-procards').attr('disabled',true);
+        $('.js-more-procards').attr('disabled',true).html('<i class="spinner"></i>');
         loadMoreProjectsCards();
     });
 }
@@ -1787,7 +1787,7 @@ function loadMoreProjectsCards(){
         type: 'POST',
         dataType: 'JSON',
         url: ajax_object.ajax_url,
-        data: str,
+        data: str,        
         success: function(data){
 
             $.each(data, function(i){
@@ -1808,7 +1808,7 @@ function loadMoreProjectsCards(){
                 addCardContent('cardmap', cardContent, nbloadedCards-1, i);
 
                 if(nbloadedCards < nbTotalCards-1){
-                    $('.js-more-procards').attr('disabled',false);                    
+                    $('.js-more-procards').attr('disabled',false).html('Charger plus');                    
                 } else{
                     $('.js-more-procards').parent().hide(300);                   
                 }
@@ -1865,7 +1865,7 @@ function loadPosts(category){
             if($data.length != 0){
                 $('.js-more').attr('disabled',false);
                 $('.js-more').html('Charger plus');
-                
+
                 $.each(data, function(i){                     
                     
                     var $output = '<a class="card-news anim-out" href="'+data[i].permalink+'">';
