@@ -364,10 +364,7 @@ function debouncer( func , timeout ) {
 }
 
 function debouncer_handler() {
-    // reload map on resize
-    if(windowW >= 600 && $('.map-projects')){        
-       location.reload(true);
-    }
+    reloadCurrentPage();
 }
 if ( resizeDebouncer ) { $( window ).bind( "resize", debouncer(debouncer_handler) ); }
 
@@ -971,7 +968,15 @@ function removeMarkers() {
     }   
 }
 
-
+/*
+ * Reload map page on resize
+ *
+ */
+function reloadCurrentPage(){
+	if(windowW >= 600 && $('.map-projects').length == 1){                
+	    location.reload(true);
+	}
+}
 
 
 /*

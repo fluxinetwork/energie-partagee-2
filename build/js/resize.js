@@ -42,10 +42,7 @@ function debouncer( func , timeout ) {
 }
 
 function debouncer_handler() {
-    // reload map on resize
-    if(windowW >= 600 && $('.map-projects')){        
-       location.reload(true);
-    }
+    reloadCurrentPage();
 }
 if ( resizeDebouncer ) { $( window ).bind( "resize", debouncer(debouncer_handler) ); }
 

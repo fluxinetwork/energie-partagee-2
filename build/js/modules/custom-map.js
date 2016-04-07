@@ -411,7 +411,15 @@ function removeMarkers() {
     }   
 }
 
-
+/*
+ * Reload map page on resize
+ *
+ */
+function reloadCurrentPage(){
+	if(windowW >= 600 && $('.map-projects').length == 1){                
+	    location.reload(true);
+	}
+}
 
 
 /*
