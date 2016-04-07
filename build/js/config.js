@@ -15,14 +15,15 @@ var resizeDebouncer = true;
 
 // Store window sizes
 var windowH; 
-var windowW; 
+var windowW;
 calc_window();
+var lastWindowW = windowW;
 
 // Breakpoint
-var bpSmall;
-var bpMedium;
-var bpLarge;
-var bpXlarge; 
+var bpSmall = 600;
+var bpMedium = 830;
+var bpLarge = 1000;
+var bpXlarge = 1200; 
 
 // Ajax
 var ppp = 12; // Post per page

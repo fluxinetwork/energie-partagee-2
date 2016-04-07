@@ -88,7 +88,7 @@ function initProjectsMap(){
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
 	// Load the map only on desktop
-	if(windowW >= 600){
+	if(windowW >= bpSmall){
 		loadGoogleMap(mapContainer, mapOptions);
 	}else{
 		loadMarkers(map)
@@ -117,7 +117,7 @@ function loadMarkers(map){
 	//console.log('loadMarkers '+filterCat);	
 		
 	// Params : suppress_filters | post_type | posts_per_page | post_status
-	if(windowW >= 600){
+	if(windowW >= bpSmall){
 		// Load all markers
 		var str = 'action=get_json_map&category='+filterCat;
 	}else{
@@ -159,7 +159,7 @@ function addMakers(map, data){
 			categoryNRJ =  categoryNRJ.substring(0, 5);
 
 			//  Add markers on the map only on desktop
-			if(windowW >= 600){	
+			if(windowW >= bpSmall){	
 				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
 										
 				var marker = new google.maps.Marker({
@@ -214,12 +214,12 @@ function addMakers(map, data){
 			$('.cards-map').append(markerContent);
 
 			// remove the loader
-			if(i==nbMakers-1 && windowW >= 600){
+			if(i==nbMakers-1 && windowW >= bpSmall){
 				$('.js-more-procards').parent().remove();
 				setTimeout(function() {        
 		        	$('.spinner.bg-spin').remove();		        	
 		        }, 300);				
-			}else if(i==1 && windowW <= 600){
+			}else if(i==1 && windowW <= bpSmall){
 				$('.spinner.bg-spin').remove();
 				$('.js-more-procards').parent().removeClass('anim-out');	
 			}			
@@ -416,8 +416,9 @@ function removeMarkers() {
  *
  */
 function reloadCurrentPage(){
-	if(windowW >= 600 && $('.map-projects').length == 1){                
+	if(lastWindowW <= bpSmall && windowW >= bpSmall && $('.map-projects').length == 1){	
 	    location.reload(true);
+	    lastWindowW = windowW; 
 	}
 }
 
