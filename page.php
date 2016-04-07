@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="wrap-main template-page">
+<section class="wrap-main page-contenu">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <header class="header-bloc">
     

@@ -112,6 +112,7 @@
   background-color: #fff;
   margin: -40rem auto 10rem;
   min-height: 200px;
+  position: relative;
 }
 .fluxi-wrap .wrap-extend .img-responsive {
   border-radius: 3px;
@@ -121,8 +122,9 @@
   padding-top: 3rem;
 }
 
-.template-page .fluxi-wrap {
-  position: relative !important;
+.single .fluxi-wrap,
+.single-projets .fluxi-wrap {
+  position: initial;
 }
 
 .fluxi-content .h3 {

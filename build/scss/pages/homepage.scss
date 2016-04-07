@@ -22,19 +22,17 @@
 
 
 .key-nums{
+	display: flex;
+	justify-content: flex-start;
 	margin:0;
 	padding:0;
+	list-style-type:none;
 						
 	.key-nums__item{
-		list-style-type:none;
 		font-size:1.8rem;	
 		padding: 0 $space*0.25;
 		margin-bottom:$space*0.2;
 		@include font-smoothing();
-		
-		&:last-child{
-			margin-bottom:0;
-		}
 	}		
 
 	.key-nums__item__num {
@@ -88,17 +86,6 @@
 		padding-left:$gutter;
 		padding-right:$gutter;
 	}
-	.key-nums {
-		animation: slideNumbers 6s steps(3, end) infinite;
-	}
-	@keyframes slideNumbers {
-	  to {
-	    transform: translateX(-300%);
-	  }
-	}
-	.key-nums__item__num {
-		margin-right: 0!important;
-	}
 }
 
 @media screen and (max-width: $bp--medium) {	
@@ -107,13 +94,22 @@
 			margin-top: $gutter;
 		}
 	}
-	.key-nums {
-		display: flex;
 
-		.key-nums__item {
-			flex: 1 0 100%;
-		}
+	.key-nums {
+		animation: slideNumbers 6s steps(3, end) infinite;
+	}
+	@keyframes slideNumbers {
+	  to {
+	    transform: translateX(-300%);
+	  }
+	}
+	.key-nums__item {
+		flex: 1 0 100%;
 	}	
+	.key-nums__item__num {
+		margin-right: 0!important;
+	}
+
 	.home .courtcircuit{
 		padding-bottom:0;	
 	}
@@ -128,26 +124,9 @@
 		padding-right:$gutter*2;
 	}
 
-	.key-nums {
-		@include flex(center flex-start);
-
-		.key-nums__item {
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-		}
-
-		.key-nums__item__num {
-			min-width: 124px;
-			text-align: center;
-			margin-right: 0;				
-		}	
-
-		.key-nums__item__txt {
-			flex: 1 0 auto;
-			font-size: 1.8rem;
-		}		
-	}	
+	.key-nums__item__txt {
+		font-size: 1.8rem;
+	}		
 
 	.steps-intro {
 		ul {
@@ -182,6 +161,10 @@
 		.box__item {
 			padding: 0 $gutter/2;
 		}
+	}
+
+	.key-nums {
+		justify-content: center;
 	}
 }
 

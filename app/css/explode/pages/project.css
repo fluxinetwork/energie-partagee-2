@@ -97,6 +97,14 @@
     #SINGLE PROJECT / ALL PROJECTS
 
 \*------------------------------*/
+.single #map {
+  height: 250px;
+}
+
+.all-projects #map {
+  height: 850px !important;
+}
+
 .a-project .description {
   margin-bottom: 0;
 }
@@ -1061,6 +1069,10 @@
   }
 }
 @media screen and (min-width: 830px) {
+  .single #map {
+    height: 450px;
+  }
+
   .steps {
     padding-left: 8rem;
   }

@@ -24,9 +24,9 @@ if ( function_exists('is_mobile') ) {
 
 	if ($iphone == true || $ipad == true || $android == true) { 
 		$bodyclass .= ' touch';
+		$isMobile = true;
 	} else {
 		$bodyclass .= ' no-touch';
-		$isMobile = true;
 	}
 
 	if ($iphone == true || $ipad == true) { 

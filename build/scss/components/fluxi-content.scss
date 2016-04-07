@@ -5,6 +5,7 @@
 	background-color:#fff;
 	margin:-$space*4 auto $space;
 	min-height:200px;
+	position: relative;
 	
 	.wrap-extend .img-responsive{
 		border-radius:$radius;
@@ -14,10 +15,12 @@
 	h2.description{
 		padding-top:$space*0.3;	
 	}
-	
 }
-.template-page .fluxi-wrap {
-	position: relative!important;
+.single,
+.single-projets  {
+	.fluxi-wrap {
+		position: initial;
+	}
 }
 
 .fluxi-content{	

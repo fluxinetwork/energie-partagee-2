@@ -24,7 +24,7 @@
 </head>
 
 <?php include( TEMPLATEPATH.'/app/inc/header/bodyclass.php' ); ?>
-<body <?php body_class($bodyclass); ?> >
+<body <?php body_class($bodyclass); ?>>
 	
     <?php include( TEMPLATEPATH.'/app/inc/inc_projet/edit-link.php' ); ?>
     

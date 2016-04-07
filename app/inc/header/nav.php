@@ -101,10 +101,19 @@
   	<button type="button" class="nav-bt nav__search__close js-toggle-search icon-close_32"></button>
 </form>
 <div class="navbar__buttons">
+  <?php
+  $icon;
+  $url;
+  if (is_user_logged_in()) {
+    $icon = 'icon-logout3_32';
+    $url = wp_logout_url(home_url());
+    $txt = 'Déconnexion';
+  } else {
+    $icon = 'icon-search_32';
+    $url = get_bloginfo('url');
+    $txt = 'Adhérents';
+  }
+  ?>
   <button type="button" class="nav-bt js-toggle-search icon-search_32"></button>
-  <?php if ( is_user_logged_in() ) {  ?>
-    <a href="<?php echo wp_logout_url( home_url() ); ?>" class="nav-bt--txt icon-adherents_32"><span>déconnexion</span></a>
-  <?php } else{ ?>
-    <a href="<?php echo get_bloginfo('url'); ?>/wp-login.php" class="nav-bt--txt icon-adherents_32"><span>adhérents</span></a>
-  <?php } ?>
+  <a href="<?php echo $url; ?>/wp-login.php" class="nav-bt--txt <?php echo $icon; ?>"><span><?php echo $txt; ?></span></a>
 </div>
