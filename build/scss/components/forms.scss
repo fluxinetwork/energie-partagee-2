@@ -123,7 +123,7 @@ input {
 		border-radius: $radius;
 	    color: #fff;
 	    display: inline-block;
-	    font-family: roboto;
+	    font-family: $txt-font;
 	    padding: $gutter/4 $gutter/2;
 	}
 	.error-submit-form{
