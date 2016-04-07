@@ -63,10 +63,11 @@
 			?>
        </div>
        
-       <div class="wrap-l al-c">
-       		<button type="button" class="button green js-more" data-cat="<?php echo $cat_id;?>">Charger plus</button>
-       </div>
-        			
+       <?php if($total_post_count > $cat_ppp): ?>
+	       <div class="wrap-l al-c">
+	       		<button type="button" class="button green js-more" data-cat="<?php echo $cat_id;?>">Charger plus</button>
+	       </div>
+       <?php endif; ?> 			
 	</article>
 	
   
