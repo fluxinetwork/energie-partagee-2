@@ -105,7 +105,7 @@ function loadMoreProjectsCards(){
                 var cardContent = '<article class="card-map c-'+categoryNRJ+' anim-out">';
                         cardContent += '<header class="card card-project">';
                             cardContent += '<a href="'+data[i].permalink+'">';
-                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag">'+data[i].stadeName+'</span></div>';
+                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
                                 cardContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
                             cardContent += '</a>';
                         cardContent += '</header>';

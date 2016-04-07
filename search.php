@@ -38,8 +38,7 @@
             'show_option_none' => 'Aucun filtre',
             'hide_empty' => 1,
             'exclude' => 1,
-            'orderby' => 'name',
-            'value_field' => 'slug'
+            'orderby' => 'name'
           );
           wp_dropdown_categories($args);
           ?>

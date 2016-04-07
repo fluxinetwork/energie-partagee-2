@@ -748,7 +748,7 @@ function addMakers(map, data){
 			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
 					markerContent += '<a href="'+data[i].permalink+'">';
-	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
+	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
 	            		markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
 	            	markerContent += '</a>';
 	            markerContent += '</header>';
@@ -1709,7 +1709,7 @@ function loadMoreProjectsCards(){
                 var cardContent = '<article class="card-map c-'+categoryNRJ+' anim-out">';
                         cardContent += '<header class="card card-project">';
                             cardContent += '<a href="'+data[i].permalink+'">';
-                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag">'+data[i].stadeName+'</span></div>';
+                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
                                 cardContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
                             cardContent += '</a>';
                         cardContent += '</header>';
@@ -1754,10 +1754,10 @@ function initLoadMorePostsBtn (){
  */
 function loadPosts(category){
     pageNumber++;
-    var str = '&cat=' + category + '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
+
     var totalposts = $('.fluxi-content').data('totalposts');
 
-    if(totalposts > nbTotalPostLoaded){
+    var str = '&cat=' + category + '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
 
     $.ajax({
         type: 'POST',
@@ -1787,8 +1787,7 @@ function loadPosts(category){
         }
 
     });
-
-    }
+    
 
     return false;
 }
