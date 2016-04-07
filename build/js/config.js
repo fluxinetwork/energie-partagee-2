@@ -45,6 +45,71 @@ var prevCardMapId;
 var previousMarker;
 var previousNrj;
 var isOpenMarker = false;
+
+var stylesMapProjects = [
+   {
+        "featureType": "landscape.natural.terrain",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "hue": "#0500ff"
+            },
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "45"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#007bff"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": "-9"
+            }
+        ]
+    }
+];
+
+
 var markerShadow;
 var iconShadow = {
 	url: themeURL+'/app/img/marker-shadow.png',

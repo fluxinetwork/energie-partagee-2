@@ -85,7 +85,7 @@ function initProjectsMap(){
         mapTypeControl: false,
         streetViewControl: false,
         center: latlng,
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.ROAD        
     };
 	// Load the map only on desktop
 	if(windowW >= bpSmall){
@@ -102,7 +102,8 @@ function loadGoogleMap(mapContainer, mapOptions){
 	//console.log('Load Google Map Obj');
 		
 	map = new google.maps.Map(mapContainer,mapOptions);	
-	
+	map.setOptions({styles: stylesMapProjects});
+
 	//mapContainer.className += 'loader';
 	
 	loadMarkers(map);
