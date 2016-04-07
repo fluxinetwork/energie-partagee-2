@@ -15,21 +15,21 @@ var resizeDebouncer = true;
 
 // Store window sizes
 var windowH; 
-var windowW; 
+var windowW;
 calc_window();
+var lastWindowW = windowW;
 
 // Breakpoint
-var bpSmall;
-var bpMedium;
-var bpLarge;
-var bpXlarge; 
+var bpSmall = 600;
+var bpMedium = 830;
+var bpLarge = 1000;
+var bpXlarge = 1200; 
 
 // Ajax
 var ppp = 12; // Post per page
-var pageNumber = 1;
+var offsetPost = 12;
 var offsetProject = 1;
 var limiteProjectLoading = 0;
-var nbTotalPostLoaded = 0;
 
 // Projects Map
 var nbMakers = 0;
@@ -45,6 +45,71 @@ var prevCardMapId;
 var previousMarker;
 var previousNrj;
 var isOpenMarker = false;
+
+var stylesMapProjects = [
+   {
+        "featureType": "landscape.natural.terrain",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "hue": "#0500ff"
+            },
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "45"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#007bff"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": "-9"
+            }
+        ]
+    }
+];
+
+
 var markerShadow;
 var iconShadow = {
 	url: themeURL+'/app/img/marker-shadow.png',
@@ -344,7 +409,7 @@ $(document).ready(UTIL.loadEvents);
  */
 
 function resize_handler() {	 
-	// calc_windowW();	
+	// calc_windowW();    
 }
 if ( resizeEvent ) { $( window ).bind( "resize", resize_handler() ); }
 
@@ -374,7 +439,7 @@ function debouncer( func , timeout ) {
 }
 
 function debouncer_handler() {
-    
+    reloadCurrentPage();
 }
 if ( resizeDebouncer ) { $( window ).bind( "resize", debouncer(debouncer_handler) ); }
 
@@ -540,6 +605,7 @@ $('.js-share').on('click', function(e){
 });
 
 
+
 $.fn.jQuerySimpleCounter = function( options ) {
     var settings = $.extend({
         start:  0,
@@ -651,10 +717,10 @@ function initProjectsMap(){
         mapTypeControl: false,
         streetViewControl: false,
         center: latlng,
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.ROAD        
     };
 	// Load the map only on desktop
-	if(windowW >= 600){
+	if(windowW >= bpSmall){
 		loadGoogleMap(mapContainer, mapOptions);
 	}else{
 		loadMarkers(map)
@@ -668,7 +734,8 @@ function loadGoogleMap(mapContainer, mapOptions){
 	//console.log('Load Google Map Obj');
 		
 	map = new google.maps.Map(mapContainer,mapOptions);	
-	
+	map.setOptions({styles: stylesMapProjects});
+
 	//mapContainer.className += 'loader';
 	
 	loadMarkers(map);
@@ -683,7 +750,7 @@ function loadMarkers(map){
 	//console.log('loadMarkers '+filterCat);	
 		
 	// Params : suppress_filters | post_type | posts_per_page | post_status
-	if(windowW >= 600){
+	if(windowW >= bpSmall){
 		// Load all markers
 		var str = 'action=get_json_map&category='+filterCat;
 	}else{
@@ -725,7 +792,7 @@ function addMakers(map, data){
 			categoryNRJ =  categoryNRJ.substring(0, 5);
 
 			//  Add markers on the map only on desktop
-			if(windowW >= 600){	
+			if(windowW >= bpSmall){	
 				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
 										
 				var marker = new google.maps.Marker({
@@ -757,7 +824,7 @@ function addMakers(map, data){
 			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
 					markerContent += '<a href="'+data[i].permalink+'">';
-	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
+	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
 	            		markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
 	            	markerContent += '</a>';
 	            markerContent += '</header>';
@@ -780,12 +847,12 @@ function addMakers(map, data){
 			$('.cards-map').append(markerContent);
 
 			// remove the loader
-			if(i==nbMakers-1 && windowW >= 600){
+			if(i==nbMakers-1 && windowW >= bpSmall){
 				$('.js-more-procards').parent().remove();
 				setTimeout(function() {        
 		        	$('.spinner.bg-spin').remove();		        	
 		        }, 300);				
-			}else if(i==1 && windowW <= 600){
+			}else if(i==1 && windowW <= bpSmall){
 				$('.spinner.bg-spin').remove();
 				$('.js-more-procards').parent().removeClass('anim-out');	
 			}			
@@ -977,7 +1044,16 @@ function removeMarkers() {
     }   
 }
 
-
+/*
+ * Reload map page on resize
+ *
+ */
+function reloadCurrentPage(){
+	if(lastWindowW <= bpSmall && windowW >= bpSmall && $('.map-projects').length == 1){	
+	    location.reload(true);
+	    lastWindowW = windowW; 
+	}
+}
 
 
 /*
@@ -1718,18 +1794,18 @@ function loadMoreProjectsCards(){
                 var cardContent = '<article class="card-map c-'+categoryNRJ+' anim-out">';
                         cardContent += '<header class="card card-project">';
                             cardContent += '<a href="'+data[i].permalink+'">';
-                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag">'+data[i].stadeName+'</span></div>';
+                                cardContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
                                 cardContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
                             cardContent += '</a>';
                         cardContent += '</header>';
                     cardContent += '</article>';
 
-                addCardContent(cardContent, nbloadedCards-1, i);
+                addCardContent('cardmap', cardContent, nbloadedCards-1, i);
 
                 if(nbloadedCards < nbTotalCards-1){
-                    $('.js-more-procards').attr('disabled',false);
+                    $('.js-more-procards').attr('disabled',false);                    
                 } else{
-                    $('.js-more-procards').parent().hide(300);
+                    $('.js-more-procards').parent().hide(300);                   
                 }
             });
 
@@ -1748,6 +1824,8 @@ function loadMoreProjectsCards(){
  * Return HTML
  */
 function initLoadMorePostsBtn (){
+    $('.js-more').attr('disabled',false);
+
 	$('.js-more').on( 'click', function ( e ) {
 		e.preventDefault();
 		$('.js-more').attr('disabled',true);
@@ -1761,34 +1839,44 @@ function initLoadMorePostsBtn (){
  * Load 
  * @param : category (number)
  */
-function loadPosts(category){
-    pageNumber++;
+function loadPosts(category){    
 
-    var totalposts = $('.fluxi-content').data('totalposts');
+    var totalposts = $('.fluxi-content').data('totalposts');   
 
-    var str = '&cat=' + category + '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
+    var str = '&cat=' + category + '&offset=' + offsetPost + '&ppp=' + ppp + '&action=more_post_ajax';
 
     $.ajax({
         type: 'POST',
-        dataType: 'html',
+        dataType: 'JSON',
         url: ajax_object.ajax_url,
         data: str,
         success: function(data){
+
             var $data = $(data);
-            nbTotalPostLoaded = nbTotalPostLoaded + $data.length;
-            if($data.length > 1){
+            
+            if($data.length != 0){
+                $.each(data, function(i){                     
+                    
+                    var $output = '<a class="card-news anim-out" href="'+data[i].permalink+'">';
+                        $output += '<div class="card__img"><img class="img-responsive" src="'+data[i].img+'" alt="'+data[i].title+'"></div>';
+                        $output += '<div class="card__infos">';
+                            $output += '<span class="tag is-inactive">'+data[i].date+'</span>';
+                            $output += '<h1 class="card__title">'+data[i].title+'</h1>';
+                        $output += '</div>';
+                    $output += '</a>';                    
 
-                $('.js-inject-news').append($data);
+                    $('.js-more').attr('disabled',false);
 
-                for(var i = 0; i <= $data.length; i++){
-                    setTimeout(function() {
-                        $('.card-news').removeClass('anim-out');
-                    }, 200*i);
-                }
+                    addCardContent ('posts', $output, offsetPost, i);
+                    offsetPost ++;
 
-                $('.js-more').attr('disabled',false);
+                    if(offsetPost >= totalposts){
+                        $('.js-more').attr('disabled',true).remove();                       
+                    }
+                    
+                });
             } else{
-                $('.js-more').remove('disabled',true);
+                $('.js-more').attr('disabled',true).remove();                                         
             }
         },
         error : function(jqXHR, textStatus, errorThrown) {
@@ -1803,17 +1891,24 @@ function loadPosts(category){
 
 /*
  * Add and animate content of ajax loaded object
+ * @param : type (string) => string for modifier process
  * @param : content (jquery | html) => html or jquery element
  * @param : domId (number) => element index in the page
  * @param : factor (number) => index to factor the animation delay
  */
-function addCardContent (content, domId, factor){
+function addCardContent (type, content, domId, factor){
+    if(type == 'cardmap'){
+        $('.cards-map').append(content);
+        setTimeout(function() {
+            $('.cards-map').find('.card-map:eq('+domId+')').removeClass('anim-out');
+        }, 200*factor);
+    }else{
+        $('.js-inject-news').append(content);
+        setTimeout(function() {
+            $('.card-news:eq('+(domId-2)+')').removeClass('anim-out');
+        }, 200*factor);
+    }
 
-    $('.cards-map').append(content);
-
-    setTimeout(function() {
-        $('.cards-map').find('.card-map:eq('+domId+')').removeClass('anim-out');
-    }, 200*factor);
 }
 
 

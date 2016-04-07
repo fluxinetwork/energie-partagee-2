@@ -153,14 +153,14 @@
 			display: none;
 		}
 		.map-holder{
-			padding-bottom:$space*0.6;
+			padding-bottom:$space*0.3;
 		}
 		.spinner.bg-spin:before{
 			margin:10% auto;
 		}
 		.wrap-n.al-c{
 			.button{
-				margin:0 auto;
+				margin:0 auto $gutter/4;
 			}
 		}
 	}

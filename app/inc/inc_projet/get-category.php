@@ -1,13 +1,5 @@
 <?php
-	$loop = 0;
-	// Total posts
-	$args_count = array(
-		'post_status' => 'publish',
-		'post_type' => 'post',
-		'cat' => $cat_id 
-	);
-	$posts_count = new WP_Query( $args_count );
-	$total_post_count = $posts_count->found_posts;
+	$loop = 0;	
 ?>
 
 <section class="wrap-main actualites">
@@ -71,10 +63,11 @@
 			?>
        </div>
        
-       <div class="wrap-l al-c">
-       		<button type="button" class="button green js-more" data-cat="<?php echo $cat_id;?>">Charger plus</button>
-       </div>
-        			
+       <?php if($total_post_count > $cat_ppp): ?>
+	       <div class="wrap-l al-c">
+	       		<button type="button" class="button green js-more" data-cat="<?php echo $cat_id;?>">Charger plus</button>
+	       </div>
+       <?php endif; ?> 			
 	</article>
 	
   

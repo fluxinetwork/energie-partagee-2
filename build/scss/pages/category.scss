@@ -6,14 +6,14 @@
 \*------------------------------*/
 
 .actualites {
+	.fluxi-content{
+		padding-bottom: $gutter*1.5;
+	}
 	.fluxi-wrap {
 		padding: 0;
 		padding-top: 1px;
 		margin-bottom: 0;
-	}
-	.wrap-l button {
-		margin-bottom: $gutter;
-	}
+	}	
 
 	.card-news,
 	.card-news--expand,

@@ -28,6 +28,27 @@ Template Name: Tous les événements
 	);			
 	
 	$query_category = new WP_Query( $args_category );
+
+	// Total posts
+	$args_count = array(
+		'post_status' => 'publish',
+		'post_type' => 'post',
+		'cat' => $cat_id,		
+		'meta_key' => $meta_label,
+		'order' => 'ASC',
+		'meta_query' => array( 
+			array(
+				'key' => $meta_label, 
+				'value' => date('y-m-d'), 
+				'compare' => '>=',
+				'type' => 'DATE'
+			)
+		)  
+	);
+	$posts_count = new WP_Query( $args_count );
+	$total_post_count = $posts_count->found_posts;
+	
+	
 ?>
 	<?php include( TEMPLATEPATH.'/app/inc/inc_projet/get-category.php' ); ?>
 <?php get_footer(); ?>

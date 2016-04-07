@@ -86,13 +86,13 @@
     # CATEGORY
 	
 \*------------------------------*/
+.actualites .fluxi-content {
+  padding-bottom: 6rem;
+}
 .actualites .fluxi-wrap {
   padding: 0;
   padding-top: 1px;
   margin-bottom: 0;
-}
-.actualites .wrap-l button {
-  margin-bottom: 4rem;
 }
 .actualites .card-news,
 .actualites .card-news--expand,

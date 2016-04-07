@@ -212,13 +212,13 @@
     display: none;
   }
   .map-projects .map-holder {
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
   }
   .map-projects .spinner.bg-spin:before {
     margin: 10% auto;
   }
   .map-projects .wrap-n.al-c .button {
-    margin: 0 auto;
+    margin: 0 auto 1rem;
   }
 
   .cards-map {

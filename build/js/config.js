@@ -15,21 +15,21 @@ var resizeDebouncer = true;
 
 // Store window sizes
 var windowH; 
-var windowW; 
+var windowW;
 calc_window();
+var lastWindowW = windowW;
 
 // Breakpoint
-var bpSmall;
-var bpMedium;
-var bpLarge;
-var bpXlarge; 
+var bpSmall = 600;
+var bpMedium = 830;
+var bpLarge = 1000;
+var bpXlarge = 1200; 
 
 // Ajax
 var ppp = 12; // Post per page
-var pageNumber = 1;
+var offsetPost = 12;
 var offsetProject = 1;
 var limiteProjectLoading = 0;
-var nbTotalPostLoaded = 0;
 
 // Projects Map
 var nbMakers = 0;
@@ -45,6 +45,71 @@ var prevCardMapId;
 var previousMarker;
 var previousNrj;
 var isOpenMarker = false;
+
+var stylesMapProjects = [
+   {
+        "featureType": "landscape.natural.terrain",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "hue": "#0500ff"
+            },
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "45"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#007bff"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": "-9"
+            }
+        ]
+    }
+];
+
+
 var markerShadow;
 var iconShadow = {
 	url: themeURL+'/app/img/marker-shadow.png',

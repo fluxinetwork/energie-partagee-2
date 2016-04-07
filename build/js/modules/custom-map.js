@@ -85,10 +85,10 @@ function initProjectsMap(){
         mapTypeControl: false,
         streetViewControl: false,
         center: latlng,
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.ROAD        
     };
 	// Load the map only on desktop
-	if(windowW >= 600){
+	if(windowW >= bpSmall){
 		loadGoogleMap(mapContainer, mapOptions);
 	}else{
 		loadMarkers(map)
@@ -102,7 +102,8 @@ function loadGoogleMap(mapContainer, mapOptions){
 	//console.log('Load Google Map Obj');
 		
 	map = new google.maps.Map(mapContainer,mapOptions);	
-	
+	map.setOptions({styles: stylesMapProjects});
+
 	//mapContainer.className += 'loader';
 	
 	loadMarkers(map);
@@ -117,7 +118,7 @@ function loadMarkers(map){
 	//console.log('loadMarkers '+filterCat);	
 		
 	// Params : suppress_filters | post_type | posts_per_page | post_status
-	if(windowW >= 600){
+	if(windowW >= bpSmall){
 		// Load all markers
 		var str = 'action=get_json_map&category='+filterCat;
 	}else{
@@ -159,7 +160,7 @@ function addMakers(map, data){
 			categoryNRJ =  categoryNRJ.substring(0, 5);
 
 			//  Add markers on the map only on desktop
-			if(windowW >= 600){	
+			if(windowW >= bpSmall){	
 				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
 										
 				var marker = new google.maps.Marker({
@@ -191,7 +192,7 @@ function addMakers(map, data){
 			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
 					markerContent += '<a href="'+data[i].permalink+'">';
-	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag">'+data[i].stadeName+'</span></div>';
+	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
 	            		markerContent += '<div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div>';
 	            	markerContent += '</a>';
 	            markerContent += '</header>';
@@ -214,12 +215,12 @@ function addMakers(map, data){
 			$('.cards-map').append(markerContent);
 
 			// remove the loader
-			if(i==nbMakers-1 && windowW >= 600){
+			if(i==nbMakers-1 && windowW >= bpSmall){
 				$('.js-more-procards').parent().remove();
 				setTimeout(function() {        
 		        	$('.spinner.bg-spin').remove();		        	
 		        }, 300);				
-			}else if(i==1 && windowW <= 600){
+			}else if(i==1 && windowW <= bpSmall){
 				$('.spinner.bg-spin').remove();
 				$('.js-more-procards').parent().removeClass('anim-out');	
 			}			
@@ -411,7 +412,16 @@ function removeMarkers() {
     }   
 }
 
-
+/*
+ * Reload map page on resize
+ *
+ */
+function reloadCurrentPage(){
+	if(lastWindowW <= bpSmall && windowW >= bpSmall && $('.map-projects').length == 1){	
+	    location.reload(true);
+	    lastWindowW = windowW; 
+	}
+}
 
 
 /*
