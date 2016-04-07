@@ -439,8 +439,13 @@
 	}
 	.a-project .wrap-bg.c-main{	
 		&:after{			
-			right:20.5rem;	
+			right:16.5rem;	
 		}	
+		&.collecte{
+			&:after{			
+				right:20.5rem;	
+			}
+		}		
 		.box__half{			
 			&:last-child{
 				padding-right:0;		

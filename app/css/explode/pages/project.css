@@ -1066,6 +1066,9 @@
   }
 
   .a-project .wrap-bg.c-main:after {
+    right: 16.5rem;
+  }
+  .a-project .wrap-bg.c-main.collecte:after {
     right: 20.5rem;
   }
   .a-project .wrap-bg.c-main .box__half:last-child {

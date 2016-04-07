@@ -4,7 +4,7 @@
   </div>
   <?php if($value_stade == 'onsuit'): ?>
       <div class="box__btn">
-        <button type="button" class="button green cta"><i class="icon-heart_20"></i> Soutenir ce projet</button>
+        <button type="button" class="button green cta"><i class="icon-heart_20"></i> En savoir plus</button>
       </div>
   <?php elseif($value_stade=='collecte'): ?>
       <div class="box__btn">
@@ -17,16 +17,27 @@
   <?php endif; ?>
 </div>
 <?php if($value_stade == 'onsuit' || $value_stade=='collecte'): ?>
-<aside class="wrap-bg c-main">
+<aside class="wrap-bg c-main<?php if($value_stade=='collecte'){echo ' collecte';} ?>">
   <div class="box">
     <div class="box__half">
-      <h4 class="card__title">En investissant à son capital</h4>
-      <p class="highlight-txt p-ss">La meilleure façon de soutenir ce projet est d’investir dans son capital (et toucher des interêts en retour).</p>
-      <a href="<?php echo $url_call_to_action;?>" class="button"><i class="icon-euro_20"></i> Je souscris !</a>
+      <?php if($value_stade == 'onsuit'): ?>
+        <h4 class="card__title">Écrire au porteur du projet </h4>
+        <p class="highlight-txt p-ss">Optenez plus d’informations et impliquez-vous dans la dynamique locale.</p>      
+        <a href="mailto:<?php echo get_field('email');?>" class="button"><i class="icon-pencil_20"></i> Écrire à <?php echo get_field('prenom');?></a>
+      <?php else: ?>
+        <h4 class="card__title">Investir à Énergie Partagée</h4>
+        <p class="highlight-txt p-ss">Ce projet est financé par Énergie Partagée et ses souscripteurs. Il est ouvert à l’investissement citoyen.</p>      
+        <a href="<?php echo $url_call_to_action;?>" class="button"><i class="icon-euro_20"></i> Je souscris !</a>
+      <?php endif; ?>
     </div>
     <div class="box__half">
-      <h4 class="card__title">En restant informé</h4>
-      <p class="highlight-txt p-ss">Abonnez-vous à la newsletter de ce projet pour suivre son actualité et qui sait, un jour peut être, investir dans son capital !</p>
+      <?php if($value_stade == 'onsuit'): ?>
+        <h4 class="card__title">Rester informé</h4>
+        <p class="highlight-txt p-ss">Abonnez-vous et recevez les actualités de ce projet (avancement, ouverture à collecte).</p>
+      <?php else: ?>
+        <h4 class="card__title">Rester informé</h4>
+        <p class="highlight-txt p-ss">Gardez le contact avec le projet et suivez ses actualités.</p>
+      <?php endif; ?>  
       <div class="input-n-btn">
         <form id="mailing_prospect" class="box" method="post">
           <div class="box__solo">
