@@ -54,7 +54,14 @@ $transition: all 0.3s $ease-out-quart;
 	&:hover {		 
 		transform: scale(1.1);
 	}
+
+	.spinner{
+		&:before,&:after{
+			margin:0 auto;
+		}
+	}
 }
+
 .button-round.grey{
 	color:$c-light;
 }

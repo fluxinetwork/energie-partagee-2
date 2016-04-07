@@ -209,6 +209,9 @@
 .button-round:hover {
   transform: scale(1.1);
 }
+.button-round .spinner:before, .button-round .spinner:after {
+  margin: 0 auto;
+}
 
 .button-round.grey {
   color: #b3b3b3;
