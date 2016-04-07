@@ -1748,7 +1748,8 @@ function loadMoreProjects(){
 
             if(limiteProjectLoading < 2){
                 $('.js-more-project').attr('disabled',false);
-            }else{$('.js-more-project').remove();
+            }else{
+                $('.js-more-project').remove();
                 $('.trio-card .box__fixe').append('<a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>');
             }
 
@@ -1854,11 +1855,17 @@ function loadPosts(category){
         dataType: 'JSON',
         url: ajax_object.ajax_url,
         data: str,
+        beforeSend : function() {
+            $('.js-more').html('<i class="spinner"></i>');            
+        },
         success: function(data){
 
             var $data = $(data);
             
             if($data.length != 0){
+                $('.js-more').attr('disabled',false);
+                $('.js-more').html('Charger plus');
+                
                 $.each(data, function(i){                     
                     
                     var $output = '<a class="card-news anim-out" href="'+data[i].permalink+'">';
@@ -1867,9 +1874,7 @@ function loadPosts(category){
                             $output += '<span class="tag is-inactive">'+data[i].date+'</span>';
                             $output += '<h1 class="card__title">'+data[i].title+'</h1>';
                         $output += '</div>';
-                    $output += '</a>';                    
-
-                    $('.js-more').attr('disabled',false);
+                    $output += '</a>';    
 
                     addCardContent ('posts', $output, offsetPost, i);
                     offsetPost ++;
