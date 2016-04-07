@@ -505,12 +505,11 @@ function send_mail_prospect(){
 			$url_page_projet = get_the_permalink($id_project);
 
 			// Notification mail recevers
-			/*$mails_notif = array('marc.mossalgue@energie-partagee.org');
+			$mails_notif = array('marc.mossalgue@energie-partagee.org');
 			$mail_contact = get_field( 'email', $id_project );			
 			if($mail_contact):
 				$mails_notif [] = $mail_contact;
-			endif;*/
-			$mails_notif = array('rollandyann@gmail.com');
+			endif;
 
 			// Response JSON
 			$datas_mail = array(

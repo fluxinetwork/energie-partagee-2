@@ -209,3 +209,17 @@ form#contact_ep .cmxform label.error {
 input {
   outline: 0;
 }
+
+.notification .notif-form .valid-submit-form, .notification .notif-form .error-submit-form {
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-family: roboto;
+  padding: 1rem 2rem;
+}
+.notification .notif-form .error-submit-form {
+  background-color: #eb6c1d;
+}
+.notification .notif-form .valid-submit-form {
+  background-color: #65aa04;
+}

@@ -294,15 +294,16 @@ if (isset($_POST['nom_projet'])
 	}
 	
 	// Envoie du mail
-											
-				$multiple_to_recipients = array('arno.foulon@energie-partagee.org','justine.peullemeulle@energie-partagee.org','marc.mossalgue@energie-partagee.org','olivier.berland@energie-partagee.org');				
-				$headers = 'From: energie-partagee.org <contact@energie-partagee.org>' . "\r\n";
-				$sujet_mail = 'Nouveau projet : '.$nom_projet;
-				$contenu_mail = '<h3>Nom du projet : '.$nom_projet.'</h3><p>'.$resum_description_projet.'</p><h3>Contact :</h3><p>'.$nom_contact.' '.$prenom_contact.',<br />'.$email_contact.'</p>';
+	$multiple_to_recipients = array('rollandyann@gmail.com');	
+	//$mails_notif = array('arno.foulon@energie-partagee.org','justine.peullemeulle@energie-partagee.org','marc.mossalgue@energie-partagee.org','olivier.berland@energie-partagee.org');						
+	$multiple_to_recipients = array('arno.foulon@energie-partagee.org','justine.peullemeulle@energie-partagee.org','marc.mossalgue@energie-partagee.org','olivier.berland@energie-partagee.org');				
+	$headers = 'From: energie-partagee.org <contact@energie-partagee.org>' . "\r\n";
+	$sujet_mail = 'Nouveau projet : '.$nom_projet;
+	$contenu_mail = '<h3>Nom du projet : '.$nom_projet.'</h3><p>'.$resum_description_projet.'</p><h3>Contact :</h3><p>'.$nom_contact.' '.$prenom_contact.',<br />'.$email_contact.'</p>';
 														
-				add_filter( 'wp_mail_content_type', 'set_html_content_type' );							
-				wp_mail( $multiple_to_recipients, $sujet_mail, $contenu_mail, $headers);
-				remove_filter( 'wp_mail_content_type', 'set_html_content_type' );	
+	add_filter( 'wp_mail_content_type', 'set_html_content_type' );							
+	wp_mail( $multiple_to_recipients, $sujet_mail, $contenu_mail, $headers);
+	remove_filter( 'wp_mail_content_type', 'set_html_content_type' );			
 	
 	// Réponse Json
 	$reponse_json = array('resultForm' => 'yes');	
