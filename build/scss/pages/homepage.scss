@@ -95,14 +95,44 @@
 		}
 	}
 
+
+
 	.key-nums {
-		animation: slideNumbers 6s steps(3, end) infinite;
+		animation: slideLeftOne $ease-out-quart  12s infinite forwards;
 	}
-	@keyframes slideNumbers {
-	  to {
+	@keyframes slideLeftOne {
+	  0% {
+	    transform: translateX(0);
+	  }
+	  27% {
+	    transform: translateX(0);
+	  }
+	  33% {
+	    transform: translateX(-100%);
+	  }
+	  60% {
+	    transform: translateX(-100%);
+	  }
+	  66% {
+	    transform: translateX(-200%);
+	  }
+	  93% {
+	    transform: translateX(-200%);
+	  }
+	  97% {
 	    transform: translateX(-300%);
 	  }
+	  97.01% {
+	    transform: translateX(100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+
+
 	}
+
+
 	.key-nums__item {
 		flex: 1 0 100%;
 	}	

@@ -59,10 +59,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
-    /* Better Font Rendering =========== */
     @include font-smoothing();
-    -moz-osx-font-smoothing: grayscale;
 }
 /* New */
 

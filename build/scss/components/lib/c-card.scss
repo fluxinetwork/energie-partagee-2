@@ -122,11 +122,9 @@
 				line-height: 1;
 				left: 0;   
 				position: absolute;
-				top: 4px;
 			
 				/* Better Font Rendering =========== */
 				@include font-smoothing();
-				-moz-osx-font-smoothing: grayscale;
 				font-size:2rem;
 			}
 		}

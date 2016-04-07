@@ -94,7 +94,7 @@
 }
 
 @mixin nrj_gradient_bg($color) {	
-	@include background(url("../img/bg-vector-1.png") no-repeat bottom left,radial-gradient(lighten( $color, 8% ),$color), center no-repeat $color scroll);		
+	@include background(url("../img/bg-vector-1.png") no-repeat bottom left,radial-gradient(lighten( $color, 5% ),$color), center no-repeat $color scroll);		
 }
 
 @mixin graphbar_color($color) {

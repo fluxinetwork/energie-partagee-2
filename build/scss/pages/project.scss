@@ -425,6 +425,9 @@
 }
 
 @media screen and (min-width: $bp--small) {	
+	.single #map {
+		height: 450px;
+	}
 	.following.box{
 		justify-content:inherit;
 		.box__social{
@@ -448,9 +451,6 @@
 }
 
 @media screen and (min-width: $bp--medium) {
-	.single #map {
-		height: 450px;
-	}
 	
 	.steps {
 		padding-left:$gutter*2;

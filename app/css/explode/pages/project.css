@@ -413,8 +413,8 @@
   color: #e9af00;
 }
 .c-solai .testimony {
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#ffc413, #e9af00), center no-repeat #e9af00 scroll;
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#ffc413, #e9af00), center no-repeat #e9af00 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#ffc004, #e9af00), center no-repeat #e9af00 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#ffc004, #e9af00), center no-repeat #e9af00 scroll;
 }
 .c-solai .card-project, .c-solai .filter-nrj {
   background: none #e9af00;
@@ -535,8 +535,8 @@
   color: #5ab1bb;
 }
 .c-eolie .testimony {
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#77bfc7, #5ab1bb), center no-repeat #5ab1bb scroll;
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#77bfc7, #5ab1bb), center no-repeat #5ab1bb scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#6cbac2, #5ab1bb), center no-repeat #5ab1bb scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#6cbac2, #5ab1bb), center no-repeat #5ab1bb scroll;
 }
 .c-eolie .card-project, .c-eolie .filter-nrj {
   background: none #5ab1bb;
@@ -657,8 +657,8 @@
   color: #5268b9;
 }
 .c-micro .testimony {
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#6f81c5, #5268b9), center no-repeat #5268b9 scroll;
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#6f81c5, #5268b9), center no-repeat #5268b9 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#6478c0, #5268b9), center no-repeat #5268b9 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#6478c0, #5268b9), center no-repeat #5268b9 scroll;
 }
 .c-micro .card-project, .c-micro .filter-nrj {
   background: none #5268b9;
@@ -779,8 +779,8 @@
   color: #83ab00;
 }
 .c-bioma .testimony {
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#a2d400, #83ab00), center no-repeat #83ab00 scroll;
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#a2d400, #83ab00), center no-repeat #83ab00 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#97c500, #83ab00), center no-repeat #83ab00 scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#97c500, #83ab00), center no-repeat #83ab00 scroll;
 }
 .c-bioma .card-project, .c-bioma .filter-nrj {
   background: none #83ab00;
@@ -901,8 +901,8 @@
   color: #e7511e;
 }
 .c-geoth .testimony {
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#eb6e43, #e7511e), center no-repeat #e7511e scroll;
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#eb6e43, #e7511e), center no-repeat #e7511e scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#e96335, #e7511e), center no-repeat #e7511e scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#e96335, #e7511e), center no-repeat #e7511e scroll;
 }
 .c-geoth .card-project, .c-geoth .filter-nrj {
   background: none #e7511e;
@@ -1023,8 +1023,8 @@
   color: #b7115b;
 }
 .c-econo .testimony {
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#dc146e, #b7115b), center no-repeat #b7115b scroll;
-  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#dc146e, #b7115b), center no-repeat #b7115b scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, -webkit-radial-gradient(#ce1367, #b7115b), center no-repeat #b7115b scroll;
+  background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#ce1367, #b7115b), center no-repeat #b7115b scroll;
 }
 .c-econo .card-project, .c-econo .filter-nrj {
   background: none #b7115b;
@@ -1051,6 +1051,10 @@
   }
 }
 @media screen and (min-width: 600px) {
+  .single #map {
+    height: 450px;
+  }
+
   .following.box {
     justify-content: inherit;
   }
@@ -1069,10 +1073,6 @@
   }
 }
 @media screen and (min-width: 830px) {
-  .single #map {
-    height: 450px;
-  }
-
   .steps {
     padding-left: 8rem;
   }

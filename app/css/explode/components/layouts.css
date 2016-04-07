@@ -208,10 +208,8 @@
   line-height: 1;
   left: 0;
   position: absolute;
-  top: 4px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -moz-osx-font-smoothing: grayscale;
   font-size: 2rem;
 }
