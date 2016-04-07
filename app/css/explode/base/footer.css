@@ -91,7 +91,7 @@
 .footer .s-title {
   color: #fff;
   margin-bottom: 3rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .footer .box .box__half {
   margin-bottom: 4rem;
@@ -150,7 +150,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
   text-align: center;
   width: 100%;
 }
@@ -158,10 +158,14 @@
   color: #fff;
   margin: 0 auto 2rem;
 }
+.footer__nav .link:last-child {
+  margin-bottom: 0;
+}
 
 @media screen and (min-width: 600px) {
   .footer .s-title {
     text-align: left;
+    margin-top: 4rem;
   }
   .footer .box:first-child .s-title {
     margin-top: 0;

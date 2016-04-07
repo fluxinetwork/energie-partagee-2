@@ -87,7 +87,7 @@
 
 \*------------------------------*/
 .home .header-bloc {
-  background: url("../img/energie-partagee-homepage-header.jpg") no-repeat;
+  background: url("../img/energie-partagee-homepage-header.jpg") no-repeat center;
   background-size: cover;
   padding: 10rem 2rem 7.5rem 2rem;
 }
@@ -103,11 +103,7 @@
   padding: 0;
 }
 .key-nums .key-nums__item {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   list-style-type: none;
-  text-align: left;
   font-size: 1.8rem;
   padding: 0 2.5rem;
   margin-bottom: 2rem;
@@ -118,8 +114,6 @@
   margin-bottom: 0;
 }
 .key-nums .key-nums__item__num {
-  flex: none;
-  text-align: left;
   font-family: "avantgarde", Arial;
   font-size: 5rem;
   display: block;
@@ -145,7 +139,7 @@
   text-align: left;
 }
 .steps-intro .box__item__img {
-  width: 100px;
+  width: 110px;
   margin-right: 2rem;
 }
 .steps-intro .p-ss {
@@ -163,12 +157,36 @@
 
 @media screen and (max-width: 600px) {
   .wrap-n,
-  .wrap-l {
+  .wrap-l:not(.steps-introo) {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+
+  .key-nums {
+    animation: slideNumbers 6s steps(3, end) infinite;
+  }
+
+  @keyframes slideNumbers {
+    to {
+      transform: translateX(-300%);
+    }
+  }
+  .key-nums__item__num {
+    margin-right: 0 !important;
+  }
 }
 @media screen and (max-width: 830px) {
+  .home .header-bloc .button {
+    margin-top: 4rem;
+  }
+
+  .key-nums {
+    display: flex;
+  }
+  .key-nums .key-nums__item {
+    flex: 1 0 100%;
+  }
+
   .home .courtcircuit {
     padding-bottom: 0;
   }

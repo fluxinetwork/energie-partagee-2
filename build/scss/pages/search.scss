@@ -7,8 +7,13 @@
 
 \*------------------------------*/
 
+.search .header-bloc.no-result {
+	padding-bottom: 6rem;
+}
+
 .wrap-search {
 	padding-top: $gutter/2;
+	position: relative;
 
 	h3 {
 		@extend %transition;

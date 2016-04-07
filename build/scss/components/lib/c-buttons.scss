@@ -2,7 +2,7 @@
   @extend %transition;
   position: relative;
   font-family: $main-font;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: $c-main;
   text-decoration: none;
   text-transform: uppercase;
@@ -115,4 +115,10 @@
   @extend %bt;
   background-color: transparent;
   border: 2px solid $c-textwhite;
+}
+
+@media screen and (min-width: $bp--small) {
+  %link {
+    font-size: 1.4rem;
+  }
 }

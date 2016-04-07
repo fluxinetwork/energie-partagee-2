@@ -5,6 +5,7 @@
     #SINGLE PROJECT / ALL PROJECTS
 
 \*------------------------------*/
+
 .a-project{
 	.description{
 		margin-bottom:0;
@@ -405,6 +406,16 @@
 } 
 
 
+@media screen and (max-width: $bp--small) {
+	.single-projets .p-details {
+		position: relative;
+		background-color: transparent;
+		margin-top: -8rem;
+	}
+	.p-details__equi {
+		border-radius: 3px;
+	}
+}
 
 @media screen and (min-width: $bp--small) {	
 	.following.box{

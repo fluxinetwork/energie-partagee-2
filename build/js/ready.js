@@ -34,20 +34,26 @@ var FOO = {
     home: {
         init: function() {
             isHome = true; 
-            $('.key-nums__item__num').each(function(){
-                var txt = $(this).next();
-                var val = $(this).attr('data-number');
-                var speed = (val>1000) ? 3000 : val*100;
-                $(this).jQuerySimpleCounter({
-                  start:  0,
-                  end:  val,
-                  duration: speed
+            if ($('body').hasClass('touch')) {
+                $('.key-nums__item__num').each(function(){
+                    $(this).html($(this).attr('data-number'));
                 });
-            });
+            } else {
+                $('.key-nums__item__num').each(function(){
+                    var txt = $(this).next();
+                    var val = $(this).attr('data-number');
+                    var speed = (val>1000) ? 3000 : val*100;
+                    $(this).jQuerySimpleCounter({
+                      start:  0,
+                      end:  val,
+                      duration: speed
+                    });
+                });
+            }
 
-            $('.top-credibility').waypoint(function(){
+            $('.no-touch .top-credibility').waypoint(function(){
                 $(this.element).find('.wrap-n').toggleClass('ready-anim');
-            }, {offset: '90%'});
+            }, {offset: '85%'});
         }
     },
 	page: {
@@ -87,12 +93,15 @@ var FOO = {
                 var urlSeach = (window.location.href).split("&")[0] ;
                 location.href = urlSeach+'&cat='+cat;
             });
-            $('#search-filters').waypoint(function(){
-                $(this.element).toggleClass('is-fixed');
-            });
-            $('.footer').waypoint(function(){
-                $('#search-filters').toggleClass('is-fixed');
-            }, {offset: '100%'});
+            calc_windowH();
+            if (windowH<$('.footer').offset().top) {
+                $('#search-filters').waypoint(function(){
+                    $(this.element).toggleClass('is-fixed');
+                });
+                $('.footer').waypoint(function(){
+                    $('#search-filters').toggleClass('is-fixed');
+                }, {offset: '100%'});
+            }
         }
     }
 };

@@ -1031,6 +1031,17 @@
   color: #b7115b;
 }
 
+@media screen and (max-width: 600px) {
+  .single-projets .p-details {
+    position: relative;
+    background-color: transparent;
+    margin-top: -8rem;
+  }
+
+  .p-details__equi {
+    border-radius: 3px;
+  }
+}
 @media screen and (min-width: 600px) {
   .following.box {
     justify-content: inherit;

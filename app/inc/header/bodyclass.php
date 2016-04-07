@@ -3,10 +3,34 @@
  * Add custom body class
  */
 
-$bodyclass = 'no-touch';
+$bodyclass = '';
+
+global $isMobile;
+$isMobile = false;
 
 // Browser detection using plugin : https://fr.wordpress.org/plugins/php-browser-detection/
+
+/*
+ * If no browser detection plugin do basic mobile detection
+ * Browser detection plugin : https://fr.wordpress.org/plugins/php-browser-detection/
+ */
+
 if ( function_exists('is_mobile') ) {
-	is_mobile() ? $bodyclass .= 'touch is-mobile' : $bodyclass .= ' is-desktop';
+	is_mobile() ? $bodyclass .= ' touch' : $bodyclass .= ' no-touch';
+} else {
+	$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+	$ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
+	$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+
+	if ($iphone == true || $ipad == true || $android == true) { 
+		$bodyclass .= ' touch';
+	} else {
+		$bodyclass .= ' no-touch';
+		$isMobile = true;
+	}
+
+	if ($iphone == true || $ipad == true) { 
+		$bodyclass .= ' ios';
+	}
 }
 ?>

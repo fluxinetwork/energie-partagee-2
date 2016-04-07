@@ -9,7 +9,7 @@
 	.s-title{
 		color:$c-textwhite;
 		margin-bottom: $space*0.3;
-		margin-top:$space/2;		
+		margin-top:$space*0.2;	
 	}
 	
 	.box{
@@ -80,22 +80,27 @@
 	}
 }
 .footer__nav{
-	 display: flex;
+	display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    margin-top: $space;
+    margin-top: $space/2;
     text-align: center;
     width: 100%;
 	
 	.link{
 		color:$c-textwhite;		
-		margin:0 auto $space*0.2;		
+		margin:0 auto $space*0.2;	
+
+		&:last-child {
+			margin-bottom: 0;
+		}	
 	}
 }
 @media screen and (min-width: $bp--small) {
 	.footer{
 		.s-title{
-			text-align:left;			
+			text-align:left;	
+			margin-top:$space*0.4;	
 		}	
 			
 	  .box:first-child{

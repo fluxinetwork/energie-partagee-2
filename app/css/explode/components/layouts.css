@@ -415,6 +415,10 @@
   max-width: 100%;
 }
 
+.p-details {
+  border-radius: 3px;
+}
+
 .dot {
   width: 16px;
   height: 16px;
@@ -480,7 +484,7 @@
   display: none;
 }
 .trio-card .button {
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .single .trio-card .box__fixe {
@@ -495,7 +499,6 @@
 .courtcircuit .wrap-n {
   background: -webkit-radial-gradient(#ed7b34, #eb6c1d), center no-repeat #eb6c1d scroll;
   background: radial-gradient(#ed7b34, #eb6c1d), center no-repeat #eb6c1d scroll;
-  border-radius: 3px;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -576,7 +579,7 @@
 
 .box-logos__item {
   flex: 1 1 100%;
-  margin: 0 auto 4rem;
+  margin: 0.5rem;
 }
 .box-logos__item .box-logos__logo {
   border-radius: 3px;
@@ -593,6 +596,7 @@
   flex: 1 1 100%;
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .testimony {
@@ -623,7 +627,6 @@
 
 @media screen and (min-width: 300px) {
   .box-logos__item {
-    margin: 0 1rem 4rem;
     max-width: 45%;
   }
   .box-logos__item .box-logos__logo {
@@ -675,6 +678,9 @@
   .trio-card .box__half:nth-child(3) {
     padding-right: 0;
   }
+  .trio-card .button {
+    margin-top: 3rem;
+  }
 
   .courtcircuit .box__half.input__fixe {
     flex: 1;
@@ -690,7 +696,6 @@
   }
   .box-logos .box-logos__item {
     flex: 1;
-    margin: 0 2rem 0 0;
   }
   .box-logos .box-logos__item:nth-child(4) {
     margin-right: 4rem;
@@ -699,6 +704,7 @@
     align-self: center;
     flex: inherit;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   .testimony .box__half:first-child {
@@ -713,6 +719,12 @@
   }
   .top-display .p-ss {
     font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .box-logos .box-logos__item {
+    flex: 1;
+    margin: 0 2rem 0 0;
   }
 }
 @media screen and (min-width: 830px) {
@@ -770,5 +782,9 @@
   }
   .testimony .holder-round {
     margin: 0;
+  }
+
+  .courtcircuit .wrap-n {
+    border-radius: 3px;
   }
 }

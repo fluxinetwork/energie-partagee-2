@@ -84,7 +84,7 @@
 .fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
   position: relative;
   font-family: "avantgarde", Arial;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #65aa04;
   text-decoration: none;
   text-transform: uppercase;
@@ -103,11 +103,14 @@
 }
 
 /* Nav helpers */
+@media screen and (min-width: 600px) {
+  .fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
+    font-size: 1.4rem;
+  }
+}
 .fluxi-wrap {
-  position: relative;
   background-color: #fff;
   margin: -40rem auto 10rem;
-  border-radius: 3px 3px 0 0;
   min-height: 200px;
 }
 .fluxi-wrap .wrap-extend .img-responsive {
@@ -116,6 +119,10 @@
 }
 .fluxi-wrap h2.description {
   padding-top: 3rem;
+}
+
+.template-page .fluxi-wrap {
+  position: relative !important;
 }
 
 .fluxi-content .h3 {
@@ -598,7 +605,16 @@ blockquote .blockquote {
     padding-right: 0;
   }
 }
+@media screen and (max-width: 830px) {
+  .single .fluxi-wrap {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
 @media screen and (min-width: 830px) {
+  .fluxi-wrap {
+    border-radius: 3px 3px 0 0;
+  }
   .fluxi-wrap h2.description {
     padding-top: 5rem;
   }

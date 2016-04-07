@@ -2,7 +2,7 @@
 
 	<section class="section header-bloc">
     	<article class="wrap-l">
-            <h1 class="h1">Investissons<br> les énergies renouvelables</h1>
+            <h1 class="h1">Investissons les<br> énergies renouvelables</h1>
 
             <?php if( have_rows('chiffres_cles', 'option') ): ?>
 

@@ -114,7 +114,7 @@ $query_projects = new WP_Query( $args_projects );
         </div>
         <?php if(is_home()): ?>
             <div class="wrap-n al-c">    
-                <a href="<?php bloginfo('url'); ?>/projets/" class="button green cta"><i class="icon-pin_20"></i> Voir la carte des projets</a>
+                <a href="<?php bloginfo('url'); ?>/projets/" class="button green cta"><i class="icon-pin_20"></i>Voir tous les projets</a>
             </div>
         <?php endif; ?>       
 </<?php if(is_home()){ echo 'section'; }else{ echo 'aside';}?>>

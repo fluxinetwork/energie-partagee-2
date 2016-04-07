@@ -126,6 +126,10 @@ $transition: all 0.3s $ease-out-quart;
  	@extend %link;
 }
 
+.touch .link::after {
+	width: 100%;
+}
+
 .link-cta{
 	color: $c-main;
 	cursor:pointer;

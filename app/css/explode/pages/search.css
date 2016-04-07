@@ -100,8 +100,13 @@
     #SEARCH
 
 \*------------------------------*/
+.search .header-bloc.no-result {
+  padding-bottom: 6rem;
+}
+
 .wrap-search {
   padding-top: 2rem;
+  position: relative;
 }
 .wrap-search h3:hover {
   color: #65aa04;

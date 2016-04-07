@@ -87,8 +87,8 @@
 
 \*------------------------------*/
 .section {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .wrap-main {
@@ -192,7 +192,7 @@
 .box__full, .box__solo, .box__half {
   display: block;
   flex: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .box__fixe {
@@ -209,6 +209,11 @@
 }
 
 @media screen and (min-width: 600px) {
+  .section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .wrap-n, .fluxi-wrap {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -230,9 +235,14 @@
     max-width: 84%;
   }
 
+  .box__item {
+    margin-bottom: 0;
+  }
+
   .box__half {
     flex: 1 1 0;
     padding-right: 2rem;
+    margin-bottom: 4rem;
   }
 
   .box__fixe {

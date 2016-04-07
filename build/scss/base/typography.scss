@@ -261,7 +261,7 @@ h5,.h5,.s-title{
 	margin-top: $space*0.4;
 }
 .s-title{ 
-	margin-bottom:$space*0.6;
+	margin-bottom:$space*0.3;
 	text-align:center;
 }
 
@@ -289,5 +289,12 @@ blockquote{
         font-family: $main-font;
         color: $c-focus;
         font-weight: bold;
+    }
+}
+
+@media screen and (min-width: $bp--small) {
+    .s-title{ 
+        margin-bottom:$space*0.6;
+        text-align:center;
     }
 }

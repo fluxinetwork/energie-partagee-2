@@ -2,10 +2,8 @@
 @import "../components/lib/c-buttons.scss";
 
 .fluxi-wrap{
-	position: relative;
 	background-color:#fff;
 	margin:-$space*4 auto $space;
-	border-radius:$radius $radius 0 0;
 	min-height:200px;
 	
 	.wrap-extend .img-responsive{
@@ -17,6 +15,9 @@
 		padding-top:$space*0.3;	
 	}
 	
+}
+.template-page .fluxi-wrap {
+	position: relative!important;
 }
 
 .fluxi-content{	
@@ -508,9 +509,17 @@ blockquote{
 		
 	}
 }
+
+@media screen and (max-width: $bp--medium) {	
+	.single .fluxi-wrap {
+		@include padding(null $gutter);
+	}
+}
+
 @media screen and (min-width: $bp--medium) {	
 
-	.fluxi-wrap{		
+	.fluxi-wrap{	
+		border-radius:$radius $radius 0 0;	
 		
 		h2.description{
 			padding-top:$space/2;	

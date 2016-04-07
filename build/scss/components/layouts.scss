@@ -222,6 +222,7 @@
 
 .p-details{
 	@extend %p-details;
+	border-radius: 3px;
 }
 
 .dot {
@@ -301,7 +302,7 @@
 		display:none;
 	}
 	.button {
-		margin-top:$space*0.3;
+		margin-top:0
 	 }
 }
 .single .trio-card{
@@ -317,7 +318,6 @@
 	
 	.wrap-n{
 		@include background(radial-gradient(lighten( $c-focus, 5% ),$c-focus), center no-repeat $c-focus scroll);		
-		border-radius:$radius;
 		padding-top:$gutter*0.75;
 		padding-bottom:$gutter*0.75;
 	}
@@ -392,7 +392,7 @@
 		padding-bottom:$space*0.6;
 	}
 	.box-logos__btn{
-		margin-bottom:0;		
+		margin-bottom:0;	
 	}	
 }
 
@@ -407,7 +407,7 @@
 
 .box-logos__item{
 	flex: 1 1 100%;
-	margin: 0 auto 4rem;
+	margin: 0.5rem;
 			
 	.box-logos__logo{	
 		border-radius:$radius;
@@ -425,7 +425,8 @@
 	align-self: center;
     flex: 1 1 100%;    		
     text-align: center;
-	margin-bottom:$gutter;		
+	margin-bottom:$gutter;	
+	margin-top: $gutter/2;	
 }	
 
 .testimony{	
@@ -460,7 +461,6 @@
 
 @media screen and (min-width: $bp--mobile) {	
 	.box-logos__item{
-		margin: 0 $gutter/4 $gutter;
     	max-width: 45%;
 		
 		.box-logos__logo  {
@@ -521,6 +521,10 @@
 		.box__half:nth-child(3){
 			padding-right:0;
 		}
+
+		.button {
+			margin-top:$space*0.3;
+	 	}
 	}
 	.courtcircuit {
 		.box__half.input__fixe{
@@ -536,8 +540,7 @@
 		justify-content:space-between;
 			
 		.box-logos__item{
-			flex:1;
-			margin:0 $gutter/2 0 0;			
+			flex:1;	
 		}
 		.box-logos__item:nth-child(4){			
 			margin-right: $gutter;
@@ -546,6 +549,7 @@
 			align-self: center;
 			flex: inherit;
 			margin-bottom:0;
+			margin-top: 0;
 		}
 			
 	}
@@ -566,6 +570,13 @@
 		.p-ss{
 			font-size:1.4rem;
 		}	
+	}
+}
+
+@media screen and (min-width: $bp--small) {
+	.box-logos .box-logos__item{
+		flex:1;
+		margin:0 $gutter/2 0 0;			
 	}
 }
 
@@ -636,6 +647,10 @@
 		.holder-round{
 			margin:0;	
 		}
+	}
+
+	.courtcircuit .wrap-n {
+		border-radius:$radius;
 	}
 		
 }
