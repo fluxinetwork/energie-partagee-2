@@ -98,9 +98,9 @@
 
 
 	.key-nums {
-		animation: slideLeftOne $ease-out-quart  12s infinite forwards;
+		animation: slideNums $ease-out-quart  12s infinite forwards;
 	}
-	@keyframes slideLeftOne {
+	@keyframes slideNums {
 	  0% {
 	    transform: translateX(0);
 	  }
@@ -128,8 +128,6 @@
 	  100% {
 	    transform: translateX(0);
 	  }
-
-
 	}
 
 

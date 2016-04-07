@@ -28,7 +28,7 @@
 			transform:scaleX(0);			
 		}
 		.box:first-child{
-			padding-top:$space*0.4;	
+			padding-top:$space*0.3;	
 		}
 		
 		.card__title{
@@ -176,7 +176,7 @@
 			width: 32px;
 			height: 32px;
 			border: 2px solid $c-main;
-			background: #fff!important;			
+			background: #fff!important;		
 
 			&::before {
 				content: '';
@@ -186,7 +186,19 @@
 				top: 6px;
 				left: 6px;
 				position: absolute;
+				animation: pulse 1s infinite forwards;	
 			}
+		}
+		@keyframes pulse {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50% {
+		    transform: scale(0.8);
+		  }
+		  100% {
+		    transform: scale(1);
+		  }
 		}
 		
 	}
@@ -421,6 +433,11 @@
 	}
 	.p-details__equi {
 		border-radius: 3px;
+	}
+	.box__half:last-child {
+		margin-top: $gutter/2;
+		padding-top: $gutter;
+		border-top: 1px dotted #fff;
 	}
 }
 

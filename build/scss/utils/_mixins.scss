@@ -80,7 +80,10 @@
 	.p-details__equi:before{
 		border-color: transparent transparent $color;
 	}
-	.p-details__nrg i, .p-details__equi{
+	.p-details__nrg i {
+		background: rad-grad($color);	
+	}
+	.p-details__equi {
 		background-color:$color;	
 	}
 	.p-details__infos{
@@ -90,11 +93,15 @@
 }
 
 @mixin card_project_colors($color) {
-	background:none $color;	
+	background: rad-grad($color);
+
+	.card__infos {
+		background: rad-grad($color);	
+	}
 }
 
 @mixin nrj_gradient_bg($color) {	
-	@include background(url("../img/bg-vector-1.png") no-repeat bottom left,radial-gradient(lighten( $color, 5% ),$color), center no-repeat $color scroll);		
+	@include background(url("../img/bg-vector-1.png") no-repeat bottom left, rad-grad($color), center no-repeat $color scroll);		
 }
 
 @mixin graphbar_color($color) {
@@ -177,5 +184,9 @@
 	} @else if length($shorthand) == 2 {
 		@return nth($shorthand, 1) nth($shorthand, 2);
 	}
+}
+
+@function rad-grad($color) {
+	@return radial-gradient(lighten( $color, 5% ),$color);
 }
 

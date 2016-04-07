@@ -116,7 +116,7 @@
   transform: scaleX(0);
 }
 .a-project .wrap-bg.c-main .box:first-child {
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 .a-project .wrap-bg.c-main .card__title {
   margin-bottom: 1rem;
@@ -255,6 +255,18 @@
   top: 6px;
   left: 6px;
   position: absolute;
+  animation: pulse 1s infinite forwards;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .dotline__step.is-inactive .dot {
   border: 2px solid #65aa04;
@@ -406,7 +418,10 @@
 .c-solai .p-details .p-details__equi:before {
   border-color: transparent transparent #e9af00;
 }
-.c-solai .p-details .p-details__nrg i, .c-solai .p-details .p-details__equi {
+.c-solai .p-details .p-details__nrg i {
+  background: radial-gradient(#ffc004, #e9af00);
+}
+.c-solai .p-details .p-details__equi {
   background-color: #e9af00;
 }
 .c-solai .p-details .p-details__infos {
@@ -417,7 +432,10 @@
   background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#ffc004, #e9af00), center no-repeat #e9af00 scroll;
 }
 .c-solai .card-project, .c-solai .filter-nrj {
-  background: none #e9af00;
+  background: radial-gradient(#ffc004, #e9af00);
+}
+.c-solai .card-project .card__infos, .c-solai .filter-nrj .card__infos {
+  background: radial-gradient(#ffc004, #e9af00);
 }
 .c-solai .card-project .card__icon:before, .c-solai .filter-nrj .card__icon:before {
   content: "\e91f";
@@ -528,7 +546,10 @@
 .c-eolie .p-details .p-details__equi:before {
   border-color: transparent transparent #5ab1bb;
 }
-.c-eolie .p-details .p-details__nrg i, .c-eolie .p-details .p-details__equi {
+.c-eolie .p-details .p-details__nrg i {
+  background: radial-gradient(#6cbac2, #5ab1bb);
+}
+.c-eolie .p-details .p-details__equi {
   background-color: #5ab1bb;
 }
 .c-eolie .p-details .p-details__infos {
@@ -539,7 +560,10 @@
   background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#6cbac2, #5ab1bb), center no-repeat #5ab1bb scroll;
 }
 .c-eolie .card-project, .c-eolie .filter-nrj {
-  background: none #5ab1bb;
+  background: radial-gradient(#6cbac2, #5ab1bb);
+}
+.c-eolie .card-project .card__infos, .c-eolie .filter-nrj .card__infos {
+  background: radial-gradient(#6cbac2, #5ab1bb);
 }
 .c-eolie .card-project .card__icon:before, .c-eolie .filter-nrj .card__icon:before {
   content: "\e90e";
@@ -650,7 +674,10 @@
 .c-micro .p-details .p-details__equi:before {
   border-color: transparent transparent #5268b9;
 }
-.c-micro .p-details .p-details__nrg i, .c-micro .p-details .p-details__equi {
+.c-micro .p-details .p-details__nrg i {
+  background: radial-gradient(#6478c0, #5268b9);
+}
+.c-micro .p-details .p-details__equi {
   background-color: #5268b9;
 }
 .c-micro .p-details .p-details__infos {
@@ -661,7 +688,10 @@
   background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#6478c0, #5268b9), center no-repeat #5268b9 scroll;
 }
 .c-micro .card-project, .c-micro .filter-nrj {
-  background: none #5268b9;
+  background: radial-gradient(#6478c0, #5268b9);
+}
+.c-micro .card-project .card__infos, .c-micro .filter-nrj .card__infos {
+  background: radial-gradient(#6478c0, #5268b9);
 }
 .c-micro .card-project .card__icon:before, .c-micro .filter-nrj .card__icon:before {
   content: "\e918";
@@ -772,7 +802,10 @@
 .c-bioma .p-details .p-details__equi:before {
   border-color: transparent transparent #83ab00;
 }
-.c-bioma .p-details .p-details__nrg i, .c-bioma .p-details .p-details__equi {
+.c-bioma .p-details .p-details__nrg i {
+  background: radial-gradient(#97c500, #83ab00);
+}
+.c-bioma .p-details .p-details__equi {
   background-color: #83ab00;
 }
 .c-bioma .p-details .p-details__infos {
@@ -783,7 +816,10 @@
   background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#97c500, #83ab00), center no-repeat #83ab00 scroll;
 }
 .c-bioma .card-project, .c-bioma .filter-nrj {
-  background: none #83ab00;
+  background: radial-gradient(#97c500, #83ab00);
+}
+.c-bioma .card-project .card__infos, .c-bioma .filter-nrj .card__infos {
+  background: radial-gradient(#97c500, #83ab00);
 }
 .c-bioma .card-project .card__icon:before, .c-bioma .filter-nrj .card__icon:before {
   content: "\e902";
@@ -894,7 +930,10 @@
 .c-geoth .p-details .p-details__equi:before {
   border-color: transparent transparent #e7511e;
 }
-.c-geoth .p-details .p-details__nrg i, .c-geoth .p-details .p-details__equi {
+.c-geoth .p-details .p-details__nrg i {
+  background: radial-gradient(#e96335, #e7511e);
+}
+.c-geoth .p-details .p-details__equi {
   background-color: #e7511e;
 }
 .c-geoth .p-details .p-details__infos {
@@ -905,7 +944,10 @@
   background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#e96335, #e7511e), center no-repeat #e7511e scroll;
 }
 .c-geoth .card-project, .c-geoth .filter-nrj {
-  background: none #e7511e;
+  background: radial-gradient(#e96335, #e7511e);
+}
+.c-geoth .card-project .card__infos, .c-geoth .filter-nrj .card__infos {
+  background: radial-gradient(#e96335, #e7511e);
 }
 .c-geoth .card-project .card__icon:before, .c-geoth .filter-nrj .card__icon:before {
   content: "\e914";
@@ -1016,7 +1058,10 @@
 .c-econo .p-details .p-details__equi:before {
   border-color: transparent transparent #b7115b;
 }
-.c-econo .p-details .p-details__nrg i, .c-econo .p-details .p-details__equi {
+.c-econo .p-details .p-details__nrg i {
+  background: radial-gradient(#ce1367, #b7115b);
+}
+.c-econo .p-details .p-details__equi {
   background-color: #b7115b;
 }
 .c-econo .p-details .p-details__infos {
@@ -1027,7 +1072,10 @@
   background: url("../img/bg-vector-1.png") no-repeat bottom left, radial-gradient(#ce1367, #b7115b), center no-repeat #b7115b scroll;
 }
 .c-econo .card-project, .c-econo .filter-nrj {
-  background: none #b7115b;
+  background: radial-gradient(#ce1367, #b7115b);
+}
+.c-econo .card-project .card__infos, .c-econo .filter-nrj .card__infos {
+  background: radial-gradient(#ce1367, #b7115b);
 }
 .c-econo .card-project .card__icon:before, .c-econo .filter-nrj .card__icon:before {
   content: "\e90c";
@@ -1048,6 +1096,12 @@
 
   .p-details__equi {
     border-radius: 3px;
+  }
+
+  .box__half:last-child {
+    margin-top: 2rem;
+    padding-top: 4rem;
+    border-top: 1px dotted #fff;
   }
 }
 @media screen and (min-width: 600px) {

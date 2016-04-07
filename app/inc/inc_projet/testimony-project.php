@@ -8,7 +8,7 @@
 		</div>
 		<div class="box__half">
             <?php if(!empty(get_field('temoignage'))):?> 				
-				<p class="p-ss"><span class="quote">“</span><?php echo get_field('temoignage'); ?><span class="quote">”</span></p>
+				<p class="p-ss"><?php echo get_field('temoignage'); ?></p>
             <?php endif; ?>  
             <h4><?php echo get_field('prenom') . ' ' . get_field('nom'); ?></h4>
 		</div>									

@@ -109,7 +109,7 @@
     $url = wp_logout_url(home_url());
     $txt = 'Déconnexion';
   } else {
-    $icon = 'icon-search_32';
+    $icon = 'icon-adherents_32';
     $url = get_bloginfo('url');
     $txt = 'Adhérents';
   }

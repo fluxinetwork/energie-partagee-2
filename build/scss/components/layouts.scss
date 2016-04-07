@@ -19,7 +19,7 @@
 		margin:0;
 		font-size:1.2rem;
 		color:$txt-color;
-		padding-top:$space*0.03;
+		padding-top: 0.5rem;
 		
 		a {
 			color:$txt-color;
@@ -103,6 +103,7 @@
 		
 }
 .tag {
+	@extend %transition;
 	font-size:1.2rem;
 	border:2px solid #fff;
 	padding:$gutter/8 $gutter/4;
@@ -441,18 +442,26 @@
 		color:#fff;
 		margin-bottom:$space*0.3;
 		position:relative;
-	}
-	.quote{
-		font-family: arial;
-	    font-size: 5rem;
-	    left: -24px;
-	    line-height: 1;
-	    position: absolute;
-	    &:last-child{
-	    	left: inherit;
-	    	bottom:-5px;
-	    	right: -24px;
-	    }
+
+		&::before,
+		&::after {
+			position: absolute;
+			font-family: arial;
+	    	font-size: 5rem;
+	    	line-height: 1;
+		}
+
+		&::before {
+			content: '“';
+			top: -2px;
+			left: -24px;
+		}
+
+		&::after {
+			content: '”';
+			bottom: -27px;
+			transform: translateX(6px);
+		}
 	}
 }
 
@@ -569,6 +578,7 @@
 
 		.p-ss{
 			font-size:1.4rem;
+			padding-top: 0.3rem;
 		}	
 	}
 }

@@ -167,10 +167,10 @@
   }
 
   .key-nums {
-    animation: slideLeftOne cubic-bezier(0.165, 0.84, 0.44, 1) 12s infinite forwards;
+    animation: slideNums cubic-bezier(0.165, 0.84, 0.44, 1) 12s infinite forwards;
   }
 
-  @keyframes slideLeftOne {
+  @keyframes slideNums {
     0% {
       transform: translateX(0);
     }
