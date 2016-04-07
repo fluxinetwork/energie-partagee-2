@@ -293,9 +293,7 @@ if (isset($_POST['nom_projet'])
 		add_post_meta($the_post_id, $key, $value, true);
 	}
 	
-	// Envoie du mail
-	$multiple_to_recipients = array('rollandyann@gmail.com');	
-	//$mails_notif = array('arno.foulon@energie-partagee.org','justine.peullemeulle@energie-partagee.org','marc.mossalgue@energie-partagee.org','olivier.berland@energie-partagee.org');						
+	// Envoie du mail de notification	
 	$multiple_to_recipients = array('arno.foulon@energie-partagee.org','justine.peullemeulle@energie-partagee.org','marc.mossalgue@energie-partagee.org','olivier.berland@energie-partagee.org');				
 	$headers = 'From: energie-partagee.org <contact@energie-partagee.org>' . "\r\n";
 	$sujet_mail = 'Nouveau projet : '.$nom_projet;

@@ -68,16 +68,17 @@
 					data: $('form#soumettre_projet').serialize(),
 					dataType: 'json',
 					beforeSend : function() {
-						//$('.valid-submit-form, .error-submit-form').hide('fast');
-						//$('.navigation-form').append('<p class="ajax-loader"><img src="'+urlTheme+'/assets/images/ajax-loader.gif" /></p>');
+						$('.btns-form #submit').html('<i class="spinner"></i>');
 						$('#submit').addClass('loading');
 					},
-					success: function(json) {
+					success: function(json) {						
 						//$('.ajax-loader').remove();
 						$('#submit').removeClass('loading').addClass('sendok');
-						if(json.resultForm == 'yes') {                        	
+						if(json.resultForm == 'yes') {  
+							$('.btns-form #submit').remove();                      	
 							notify('<span class="valid-submit-form">Merci, votre projet vient a été correctement ajouté. Nous vous contacterons prochainement avant de le faire apparaitre sur notre site internet.</span>');						
-						} else {							
+						} else {
+							$('.btns-form #submit').html('Envoyer');							
 							notify('<span class="error-submit-form">Il semble y avoir un problème dans l\'envoie de votre formulaire. Vérifiez si tous les champs requis sont renseignés puis renvoyez le. Si le problème persiste, veuillez nous contacter.</span>');	
 						}						
 					},
