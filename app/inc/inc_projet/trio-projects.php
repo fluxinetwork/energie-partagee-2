@@ -1,5 +1,7 @@
 <?php
 $nb_projects = 0;
+$url_page_projects = get_field('page_des_projets', 'option');
+if(empty($url_page_projects)): $url_page_projects = 'projets'; endif;
 if(is_home()):
 	$args_projects = array(
 		'post_type' => 'projets',
@@ -106,7 +108,7 @@ $query_projects = new WP_Query( $args_projects );
               		<?php if(is_home()): ?>	
                     <button type="button" class="button-round grey js-more-project"><i class="icon-chevronright_64"></i></button>
                   <?php else: ?>     
-                    <a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>
+                    <a href="<?php echo $url_page_projects;?>" class="button-round grey"><i class="icon-plus_64"></i></a>
                   <?php endif; ?>      
               </div>               
                        
@@ -114,7 +116,7 @@ $query_projects = new WP_Query( $args_projects );
         </div>
         <?php if(is_home()): ?>
             <div class="wrap-n al-c">    
-                <a href="<?php bloginfo('url'); ?>/projets/" class="button green cta"><i class="icon-pin_20"></i>Voir tous les projets</a>
+                <a href="<?php echo $url_page_projects; ?>" class="button green cta"><i class="icon-pin_20"></i>Voir tous les projets</a>
             </div>
         <?php endif; ?>       
 </<?php if(is_home()){ echo 'section'; }else{ echo 'aside';}?>>

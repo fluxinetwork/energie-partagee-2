@@ -300,6 +300,9 @@ function more_project_ajax(){
 	$offset = (isset($_POST["offset"])) ? $_POST["offset"] : 3;
 	$posts_per_page = (isset($_POST["posts_per_page"])) ? $_POST["posts_per_page"] : 2;
 
+	$url_page_projects = get_field('page_des_projets', 'option');
+	if(empty($url_page_projects)): $url_page_projects = 'projets'; endif;
+
     $results = array();
 
     $args = array(
@@ -338,7 +341,8 @@ function more_project_ajax(){
            	'region' => get_field('departement'),
            	'permalink' => get_the_permalink(),
            	'catSlug' => $taxoslug,
-           	'stadeName' => $label_stade
+           	'stadeName' => $label_stade,
+           	'sourceUrl' => $url_page_projects
         );
 		$results[] = $data;
 

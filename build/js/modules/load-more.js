@@ -24,11 +24,12 @@ function loadMoreProjects(){
         url: ajax_object.ajax_url,
         data: str,
         success: function(data){
-
+            var sourceUrl;
             $.each(data, function(i){
                 var $firstItem = $('.trio-card .box .box__half:eq(0)');
                 var $secondItem = $('.trio-card .box .box__half:eq(1)');
                 var content ='<a class="card card-project anim-out" href="'+data[i].permalink+'"><div class="card__img"><img class="img-reponsive" src="'+data[i].image+'"><i class="card__icon icon-uniE60F"></i></div><div class="card__infos"><h1 class="card__title">'+data[i].title+'</h1><p class="p-ss">'+data[i].region+'</p></div></a>';
+                sourceUrl = data[i].sourceUrl;
 
                 if(i > 0){
                     $secondItem.find('.card-project').addClass('anim-out');
@@ -57,12 +58,13 @@ function loadMoreProjects(){
                 $('.js-more-project').attr('disabled',false).html('<i class="icon-chevronright_64"></i>');
             }else{
                 $('.js-more-project').remove();
-                $('.trio-card .box__fixe').append('<a href="/projets/" class="button-round grey"><i class="icon-plus_64"></i></a>');
+                $('.trio-card .box__fixe').append('<a href="'+sourceUrl+'" class="button-round grey"><i class="icon-plus_64"></i></a>');
             }
 
         },
         error : function(jqXHR, textStatus, errorThrown) {
-            console.log(jqXHR + ' :: ' + textStatus + ' :: ' + errorThrown);
+            $('.js-more-project').attr('disabled',false).html('<i class="icon-chevronright_64"></i>');
+            //console.log(jqXHR + ' :: ' + textStatus + ' :: ' + errorThrown);
         }
 
     });
