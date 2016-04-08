@@ -62,7 +62,7 @@
           <?php the_title(); ?>  
         </h1>
         
-        <?php if( !empty($video) ){ ?>
+        <?php if( !empty($video) && $video != 0 && $video != 1){ ?>
             <div class="lightvideo"><a class="button cta" data-src="<?php echo $video; ?>" href=""><i class="icon-video_20"></i> Voir la vidéo</a></div>	
         <?php } ?>
         

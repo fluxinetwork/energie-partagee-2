@@ -1262,8 +1262,7 @@ MarkerShadow.prototype.toggle = function() {
 			$(".main-isogrid a[href$='.doc'] .icon-doc, .docs a[href$='.docx'] .icon-doc").addClass('js-icon-word');  
 			$(".main-isogrid a[href$='.xls'] .icon-doc, .docs a[href$='.xlsx'] .icon-doc, .main-isogrid a[href$='.xlt'] .icon-doc, .main-isogrid a[href$='.xltx'] .icon-doc").addClass('js-icon-exel');  
 	  }
-function initContactForm(){
-	$('select#sujet').simpleselect();
+function initContactForm(){	
 	$("#contact_ep").validate({
 			rules: {
 				email:{	email: true	},				
@@ -1283,27 +1282,27 @@ function initContactForm(){
 		});	
 	
 	function sendMail(){
-		if($('#submit.loading').length == 0 && $('#submit.sendok').length == 0){	
+		if($('#submit.is-sending').length == 0){	
 			$.ajax({
 					url: themeURL+'/app/inc/inc_projet/send_contact.php',
 					type: 'POST',
 					data: $('form#contact_ep').serialize(),
 					dataType: 'json',
 					beforeSend : function() {					
-						$('#submit').addClass('loading');
-						$('#submit').val('');
+						$('#submit').addClass('is-sending').html('<i class="spinner"></i>');
+						
 					},
-					success: function(json) {
-						$('#submit').removeClass('loading').addClass('sendok');
-						$('#submit').val('Envoyer');
-						if(json.resultForm == 'yes') {                        	
+					success: function(json) {						
+						if(json.resultForm == 'yes') {   
+						    $('#submit').remove();                 	
 							notify('<span class="valid-submit-form">Votre message à bien été envoyé. Merci</span>');						
-						} else {							
+						} else {
+							$('#submit').removeClass('is-sending').html('Envoyer');						
 							notify('<span class="error-submit-form">Il semble y avoir un problème dans l\'envoie de votre message. Vérifiez si tous les champs requis sont renseignés puis renvoyez le. Si le problème persiste, veuillez nous contacter.</span>');	
 						}						
 					},
                   error: function(){
-						$('#submit').removeClass('loading');
+						$('#submit').removeClass('is-sending');
                         notify('<span class="error-submit-form">Il semble y avoir un problème dans l\'envoie de votre message. Vérifiez si tous les champs requis sont renseignés puis renvoyez le. Si le problème persiste, veuillez nous contacter.</span>');
                   }          
 			});
@@ -1374,29 +1373,26 @@ function initContactForm(){
 		});	
 		
 		function sendForm(){
-			if($('#submit.loading').length == 0 && $('#submit.sendok').length == 0){	
+			if($('#submit.is-sending').length == 0){	
 			$.ajax({
 					url: themeURL+'/app/inc/inc_projet/soumettre_projet.php',
 					type: 'POST',
 					data: $('form#soumettre_projet').serialize(),
 					dataType: 'json',
 					beforeSend : function() {
-						$('.btns-form #submit').html('<i class="spinner"></i>');
-						$('#submit').addClass('loading');
+						$('.btns-form #submit').addClass('is-sending').html('<i class="spinner"></i>');						
 					},
-					success: function(json) {						
-						//$('.ajax-loader').remove();
-						$('#submit').removeClass('loading').addClass('sendok');
+					success: function(json) {		
 						if(json.resultForm == 'yes') {  
-							$('.btns-form #submit').remove();                      	
+							$('.btns-form #submit').remove();							                  	
 							notify('<span class="valid-submit-form">Merci, votre projet vient a été correctement ajouté. Nous vous contacterons prochainement avant de le faire apparaitre sur notre site internet.</span>');						
 						} else {
-							$('.btns-form #submit').html('Envoyer');							
+							$('.btns-form #submit').removeClass('is-sending').html('Envoyer'); 														
 							notify('<span class="error-submit-form">Il semble y avoir un problème dans l\'envoie de votre formulaire. Vérifiez si tous les champs requis sont renseignés puis renvoyez le. Si le problème persiste, veuillez nous contacter.</span>');	
 						}						
 					},
                     error: function(){
-						$('#submit').removeClass('loading');
+						$('#submit').removeClass('is-sending').html('Envoyer');
                         notify('<span class="error-submit-form">Il semble y avoir un problème dans l\'envoie de votre formulaire. Vérifiez si tous les champs requis sont renseignés puis renvoyez le. Si le problème persiste, veuillez nous contacter.</span>');
                     }          
 				});
