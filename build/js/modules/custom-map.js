@@ -248,11 +248,14 @@ function onClickMarker(index,map,marker,categoryNRJ){
     // Modify previous marker
     if(isOpenMarker){
     	previousMarker.setIcon(iconsProjectsMap[previousNrj]);
+    	previousMarker.setZIndex(1);
 	}
     // Change the icon
     marker.setIcon(iconsSelectProjectsMap[categoryNRJ]);
 	previousMarker = marker;
 	previousNrj = categoryNRJ;
+	
+	marker.setZIndex(10000);
 
     // Get the card
     if(index != prevCardMapId){
