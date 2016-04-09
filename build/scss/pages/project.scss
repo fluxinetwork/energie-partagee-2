@@ -99,6 +99,10 @@
 		width:100%;
 		max-width:100%;	
 	}
+
+	h3 {
+		margin-top: $space*0.8;
+	}
 }
 
 
@@ -143,14 +147,10 @@
 /* BLOC SOUTENIR */
 
 .action-projet {
-	@extend %transition;
-	overflow: hidden;				
-	height:0;	
-
-	&:before{
-		@extend %transition;			
-		transform:scaleX(0);			
-	}
+	@extend %transition;	
+	visibility: hidden;
+	opacity: 0;	
+	max-height: 0;
 
 	&:after{
 		@extend %triangle;
@@ -159,14 +159,15 @@
 		right:47.5%;
 	}
 	
-	&.is-active{
-		height:100%;
-		overflow:visible;		
+	&.is-active {
+		max-height: 100%;
+		visibility: visible;
+		opacity: 1;
 		margin: $space*0.4 0 0;
-		
-		&:before{			
-			transform:scaleX(5);			
-		}	
+	}
+
+	.button i {
+		display: none;
 	}
 }
 
