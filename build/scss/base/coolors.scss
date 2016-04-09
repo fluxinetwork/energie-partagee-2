@@ -86,7 +86,7 @@
 
 @mixin card_project_colors($color) {
 	.card__infos {
-		background: radial-grad($color);	
+		background: radial-grad($color, null, at top);	
 	}
 }
 
