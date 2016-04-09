@@ -33,7 +33,10 @@ $transition: all 0.3s $ease-out-quart;
 	
 }
 .button.cta{
-	padding: unpack($space*0.16 $space*0.2);
+	padding: unpack($space*0.16 $space*0.2 $space*0.14 $space*0.2);
+}
+.button.cta.has-icon {
+	padding: unpack($space*0.16 $space*0.2 )!important;
 }
 .home .button.cta i {
 	display: none;

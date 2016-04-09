@@ -4,15 +4,15 @@
   </div>
   <?php if($value_stade == 'onsuit'): ?>
       <div class="box__btn">
-        <button type="button" class="button green cta"><i class="icon-heart_20"></i> En savoir plus</button>
+        <button type="button" class="button green cta has-icon"><i class="icon-heart_20"></i> En savoir plus</button>
       </div>
   <?php elseif($value_stade=='collecte'): ?>
       <div class="box__btn">
-        <button type="button" class="button green cta"><i class="icon-heart_20"></i> Soutenir ce projet</button>
+        <button type="button" class="button green cta has-icon"><i class="icon-heart_20"></i> Soutenir ce projet</button>
       </div>
   <?php elseif($value_stade=='succes' && !empty($url_call_to_action)): ?>
       <div class="box__btn">
-        <a href="<?php echo $url_call_to_action;?>" class="button green cta"><i class="icon-heart_20"></i> En savoir plus</a>
+        <a href="<?php echo $url_call_to_action;?>" class="button green cta has-icon"><i class="icon-heart_20"></i> En savoir plus</a>
       </div>    
   <?php endif; ?>
 </div>

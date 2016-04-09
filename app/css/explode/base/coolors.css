@@ -210,7 +210,7 @@
   color: #e9af00;
 }
 .c-solai .card__infos {
-  background: radial-gradient(#ffc004, #e9af00 100%);
+  background: radial-gradient(at top, #ffc004, #e9af00 100%);
 }
 
 .c-eolie .etapes .dotline__step > .dot,
@@ -338,7 +338,7 @@
   color: #5ab1bb;
 }
 .c-eolie .card__infos {
-  background: radial-gradient(#6cbac2, #5ab1bb 100%);
+  background: radial-gradient(at top, #6cbac2, #5ab1bb 100%);
 }
 
 .c-micro .etapes .dotline__step > .dot,
@@ -466,7 +466,7 @@
   color: #5268b9;
 }
 .c-micro .card__infos {
-  background: radial-gradient(#6478c0, #5268b9 100%);
+  background: radial-gradient(at top, #6478c0, #5268b9 100%);
 }
 
 .c-bioma .etapes .dotline__step > .dot,
@@ -594,7 +594,7 @@
   color: #83ab00;
 }
 .c-bioma .card__infos {
-  background: radial-gradient(#97c500, #83ab00 100%);
+  background: radial-gradient(at top, #97c500, #83ab00 100%);
 }
 
 .c-geoth .etapes .dotline__step > .dot,
@@ -722,7 +722,7 @@
   color: #e7511e;
 }
 .c-geoth .card__infos {
-  background: radial-gradient(#e96335, #e7511e 100%);
+  background: radial-gradient(at top, #e96335, #e7511e 100%);
 }
 
 .c-econo .etapes .dotline__step > .dot,
@@ -850,5 +850,5 @@
   color: #b7115b;
 }
 .c-econo .card__infos {
-  background: radial-gradient(#ce1367, #b7115b 100%);
+  background: radial-gradient(at top, #ce1367, #b7115b 100%);
 }
