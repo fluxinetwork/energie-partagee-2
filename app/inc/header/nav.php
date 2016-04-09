@@ -105,7 +105,7 @@
   $icon;
   $url;
   if (is_user_logged_in()) {
-    $icon = 'icon-logout3_32';
+    $icon = 'icon-logout_32';
     $url = wp_logout_url(home_url());
     $txt = 'Déconnexion';
   } else {
