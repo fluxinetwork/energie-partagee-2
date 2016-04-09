@@ -23,7 +23,7 @@
   }
 }
 /* TRANSITIONS */
-.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after, .accordion .accordion__head, .transition {
+.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after, .accordion .accordion__head, .isogrid .main-isogrid .item, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -371,6 +371,9 @@ blockquote .blockquote {
   height: auto;
   position: relative;
   width: 100%;
+}
+.isogrid .main-isogrid .item:hover {
+  transform: scale(1.05);
 }
 .isogrid .main-isogrid .item .icon-doc {
   border-radius: 0.6em 0.6em 0 0;
