@@ -79,8 +79,6 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 .fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
   position: relative;
   font-family: "avantgarde", Arial;
@@ -101,13 +99,12 @@
 .fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .f-btn .txt:hover::after {
   width: 100%;
 }
-
-/* Nav helpers */
 @media screen and (min-width: 600px) {
   .fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
     font-size: 1.4rem;
   }
 }
+
 .fluxi-wrap {
   background-color: #fff;
   margin: -40rem auto 10rem;

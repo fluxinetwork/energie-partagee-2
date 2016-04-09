@@ -1,7 +1,48 @@
+@import "functions.scss";
+
+///////////////////////////////
+////////// LAYOUT /////////////
+///////////////////////////////
+
+// MAX HEIGHT
+
 @mixin maxH($height) {
   max-height: $height;
   overflow: hidden;
 }
+
+// FLEX
+//
+// $positions: justify-content align-items
+// If only one $position, will be used for the two properties
+
+@mixin flex($positions: null null, $column: false) {
+	display: flex;
+	
+	$positions: unpack-duo($positions);
+
+	$flex-positions: (
+		justify-content: nth($positions, 1),
+		align-items: nth($positions, 2)
+	);
+
+	@each $flex-position, $position in $flex-positions {
+		@if ($position != null) {
+			#{$flex-position}: $position;
+		}
+	}
+
+	@if ($column) {
+		flex-direction: column;
+	}
+}
+
+
+///////////////////////////////
+/////////// TYPO //////////////
+///////////////////////////////
+
+// RESPONSIVE FONT
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
@@ -36,7 +77,7 @@
   }
 }
 
-/* FONT-SMOOTHING */
+// FONT-SMOOTHING 
 
 @mixin font-smoothing($auto: true) {
 	@if $auto == false {
@@ -50,118 +91,11 @@
 }
 
 
-/* COLORS PROJECT */
+///////////////////////////////
+////////// ELEMENT ////////////
+///////////////////////////////
 
-@mixin etapes_color($color) {
-	.dotline__step > .dot,
-	.dotline::before,
-	.dotline__step.is-active .dot::before,
-	.dotline__line::before,
-	.dotline__line .start  {
-		background: $color;
-	}
-	
-	.dotline__step.is-active .dot,
-	.dotline__step.is-inactive .dot,
-	.dotline__line .end {
-		border-color: $color;
-	}
-
-	.dotline__step.is-inactive .dot {
-		background: #fff;
-	}
-
-	.dotline__step.is-active .micro-legende {
-		color: $color;
-	}
-}
-
-@mixin project_colors($color) {
-	.p-details__equi:before{
-		border-color: transparent transparent $color;
-	}
-	.p-details__nrg i {
-		background: rad-grad($color);	
-	}
-	.p-details__equi {
-		background-color:$color;	
-	}
-	.p-details__infos{
-		color:$color;
-	}
-	
-}
-
-@mixin card_project_colors($color) {
-	background: rad-grad($color);
-
-	.card__infos {
-		background: rad-grad($color);	
-	}
-}
-
-@mixin nrj_gradient_bg($color) {	
-	@include background(url("../img/bg-vector-1.png") no-repeat bottom left, rad-grad($color), center no-repeat $color scroll);		
-}
-
-@mixin graphbar_color($color) {
-	$darkenStep: 0, 5, 10, 15, 20, 25, 30;
-	@for $i from 1 through 7 {
-		.graphbar__segment.citoyen:nth-child(#{$i}) {
-			background: darken($color, (nth($darkenStep, $i))*1%);
-		}
-		.financer.citoyen:nth-child(#{$i}) .dot {
-			background: darken($color, (nth($darkenStep, $i))*1%);
-		}
-	}
-	@for $i from 1 through 6 {
-		#segment-prive-#{$i} {
-			background: darken($c-bglight, $i*10%);
-		}
-		#financer-prive-#{$i} .dot {
-			background: darken($c-bglight, $i*10%);
-		}
-	}
-}
-
-@mixin sort_btn_color($color) {
-	color:#fff;	
-	&:after{ background: $color none; }	
-}
-@mixin sort_title_color($color) {
-	border:1px solid $color;
-}
-@mixin sort_icon_color($color) {
-	border:1px solid $color;
-	background-color: $color;
-}
-
-// $positions are justify-content and align-items properties
-// If only one is passed, will be used for the two properties
-
-@mixin flex($positions: null null, $column: false) {
-	display: flex;
-	
-	$positions: unpack-duo($positions);
-
-	$flex-positions: (
-		justify-content: nth($positions, 1),
-		align-items: nth($positions, 2)
-	);
-
-	@each $flex-position, $position in $flex-positions {
-		@if ($position != null) {
-			#{$flex-position}: $position;
-		}
-	}
-
-	@if ($column) {
-		flex-direction: column;
-	}
-}
-
-
-// For making a background with :before or :after pseudo-selectors
+// Make background with :before or :after pseudo-selectors
 // Parent element should be positioned
 
 @mixin pseudo_bg($color: #000, $opacity: 1) {
@@ -173,20 +107,3 @@
 	height: 100%;
 	background: rgba($color, $opacity);
 }
-
-// FUNCTIONS
-
-@charset "UTF-8";
-
-@function unpack-duo($shorthand) {
-	@if length($shorthand) == 1 {
-		@return nth($shorthand, 1) nth($shorthand, 1);
-	} @else if length($shorthand) == 2 {
-		@return nth($shorthand, 1) nth($shorthand, 2);
-	}
-}
-
-@function rad-grad($color) {
-	@return radial-gradient(lighten( $color, 5% ),$color);
-}
-

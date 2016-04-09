@@ -79,8 +79,6 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 /*------------------------------*\
 
     # CATEGORY
@@ -128,9 +126,6 @@
   .actualites .card-news--big {
     max-height: 310px;
     flex: 1 0 100%;
-  }
-  .actualites .card-news--expand:hover .tag, .actualites .card-news--big:hover .tag {
-    transform: translateY(20%);
   }
   .actualites .card-news--expand .card__infos, .actualites .card-news--big .card__infos {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 40%);

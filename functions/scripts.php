@@ -16,6 +16,7 @@ function enqueue_styles() {
     wp_register_style( 'typography', get_template_directory_uri() . '/app/css/explode/base/typography.css', array(), null );
     wp_register_style( 'wrappers', get_template_directory_uri() . '/app/css/explode/base/wrappers.css', array(), null );
     wp_register_style( 'nav', get_template_directory_uri() . '/app/css/explode/base/nav.css', array(), null );
+    wp_register_style( 'coolors', get_template_directory_uri() . '/app/css/explode/base/coolors.css', array(), null );
     wp_register_style( 'footer', get_template_directory_uri() . '/app/css/explode/base/footer.css', array(), null );
     wp_register_style( 'all_buttons', get_template_directory_uri() . '/app/css/explode/base/buttons.css', array(), null );
     wp_register_style( 'homepage', get_template_directory_uri() . '/app/css/explode/pages/homepage.css', array(), null );
@@ -57,6 +58,7 @@ function enqueue_styles() {
             wp_enqueue_style('typography');
             wp_enqueue_style('wrappers');
             wp_enqueue_style('nav');
+            wp_enqueue_style('coolors');
             wp_enqueue_style('footer');
             wp_enqueue_style('all_buttons');
             wp_enqueue_style('homepage');

@@ -1,8 +1,47 @@
 @import "../utils/_all.scss";
 @import "../components/lib/c-buttons.scss";
 
+.top-display {
+  $txt-color: $c-textwhite;
+  height:3rem;  
+  background:$c-dark none;
+  text-align:right;
+  padding:0 $space/4;
+  z-index: 50;
+  position: relative;
+  
+  .p-ss{
+    margin:0;
+    font-size:1.2rem;
+    color:$txt-color;
+    padding-top: 0.5rem;
+    
+    a {
+      color:$txt-color;
+      border-bottom:1px solid #fff;
+    }
+  }
+}
+
+
 $nav-shadow: 0 0 20px rgba(#000, 0.2);
 $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
+
+%nav-ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%nav-typo {
+  font-family: $main-font;
+  font-size: 1.4rem;
+  font-weight: 700;  
+  line-height: 61px;
+  text-transform: uppercase;
+
+}
 
 /*------------------------------*\
 
@@ -599,6 +638,16 @@ $c-placeholder : #fff;
   }
 }
 @media screen and (max-width: 640px) {
+  .top-display{
+    padding-left:$space/2;  
+    padding-right:$space/2; 
+
+    .p-ss{
+      font-size:1.4rem;
+      padding-top: 0.3rem;
+    } 
+  }
+  
   .navbar.is-search .logo__title {
     color: $c-focus;
   }

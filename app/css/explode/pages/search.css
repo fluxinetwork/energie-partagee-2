@@ -79,9 +79,11 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
-/* Nav helpers */
+.s-pagination .page-numbers,
+.s-pagination .page-numbers {
+  outline: 0;
+}
+
 .s-pagination .page-numbers {
   display: block;
   cursor: pointer;

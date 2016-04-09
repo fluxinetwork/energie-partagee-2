@@ -3,8 +3,10 @@
     #FOOTER
 \*------------------------------*/
 .footer{
+	position: relative;
 	background:$c-dark;
 	color:$c-textwhite;
+	background: radial-grad($c-dark, null, at top, 70%);
 	
 	.s-title{
 		color:$c-textwhite;
@@ -30,8 +32,8 @@
 	}
 	
 	.courtcircuit__input {
-		background: $c-dark;
-		border-bottom:1px solid #2a4a53;
+		background: transparent;
+		border-bottom:1px solid rgba(#fff, 0.2);
 		color: $c-textwhite;
 		font-family: $main-font;
 		font-size: 3.4rem;

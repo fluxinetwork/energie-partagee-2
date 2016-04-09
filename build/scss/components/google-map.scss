@@ -10,6 +10,7 @@
 		flex: 1 1 100%;
 		justify-content: center;
 		text-align: center;
+
 		.h5{
 			margin-top: 0;
 			&:last-child{
@@ -80,10 +81,10 @@
 	#map {
 		width: 100%;
 		border-radius: 3px;
-	}
 
-	#map.loader {
-		@extend %loader;
+		&.loader {
+			@extend %loader;
+		}
 	}
 
 	.cards-map{
@@ -129,12 +130,6 @@
 				padding:$gutter/2;
 			}
 		}
-	}
-}
-
-.a-project {
-	.map-holder{
-		margin-top:$space*0.6;
 	}
 }
 

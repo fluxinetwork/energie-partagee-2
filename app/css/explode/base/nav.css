@@ -85,8 +85,6 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 .no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a {
   position: relative;
   font-family: "avantgarde", Arial;
@@ -107,8 +105,55 @@
 .no-pp .nav__dropdown .dropdown__item a:hover::after, .no-pp .nav__dropdown .page_item a:hover::after {
   width: 100%;
 }
+@media screen and (min-width: 600px) {
+  .no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a {
+    font-size: 1.4rem;
+  }
+}
 
-/* Nav helpers */
+.navbar__id__social a,
+.nav-bt,
+.hamburger,
+.nav-bt--txt,
+.navbar__id__social a,
+.nav-bt,
+.hamburger,
+.nav-bt--txt {
+  outline: 0;
+}
+
+.navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt {
+  display: block;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+.top-display {
+  height: 3rem;
+  background: #122c33 none;
+  text-align: right;
+  padding: 0 2.5rem;
+  z-index: 50;
+  position: relative;
+}
+.top-display .p-ss {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  padding-top: 0.5rem;
+}
+.top-display .p-ss a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
 .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
 .no-touch nav:hover + .navbar__id .navbar__id__social, .nav__primary, .nav__secondary, .no-pp .nav__dropdown, .pp, .pp .nav__dropdown, .navbar__buttons {
@@ -126,24 +171,6 @@
   text-transform: uppercase;
 }
 
-.navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt {
-  display: block;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-}
-
-.navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt {
-  width: 3.2rem;
-  height: 3.2rem;
-  border-radius: 50%;
-}
-
-@media screen and (min-width: 600px) {
-  .no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a {
-    font-size: 1.4rem;
-  }
-}
 /*------------------------------*\
 
     # NAV BAR
@@ -681,6 +708,15 @@
   }
 }
 @media screen and (max-width: 640px) {
+  .top-display {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .top-display .p-ss {
+    font-size: 1.4rem;
+    padding-top: 0.3rem;
+  }
+
   .navbar.is-search .logo__title {
     color: #eb6c1d;
   }

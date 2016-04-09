@@ -56,11 +56,6 @@
 		}
 
 		.card-news--expand, .card-news--big {
-			&:hover {
-				.tag {
-					transform: translateY(20%);
-				}
-			}
 			.card__infos {
 				background: linear-gradient(to top, rgba(#000, 0.4), rgba(#000, 0) 40%);
 			}

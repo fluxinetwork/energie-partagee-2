@@ -23,7 +23,7 @@
   }
 }
 /* TRANSITIONS */
-.transition {
+.tag, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -40,7 +40,7 @@
 }
 
 /* LIST RESET */
-.list-reset {
+.tags, .list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -81,6 +81,52 @@
 /* Typos sizes */
 /*------------------------------*\
 
-    #PAGE
-
+	#TAGS
+	
 \*------------------------------*/
+.tags {
+  display: flex;
+  justify-content: center;
+}
+.tags li {
+  margin: 0 1rem 1rem 0;
+}
+.tags li:last-child {
+  margin-right: 0;
+}
+.tags li .tag {
+  color: #fff;
+}
+
+.tag {
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+.tag::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #fff;
+  transform: translate(100%, -50%);
+}
+.tag.is-inactive {
+  border-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: default;
+}
+.tag.is-inactive::after {
+  display: none;
+}
+.tag a {
+  color: #fff;
+}
