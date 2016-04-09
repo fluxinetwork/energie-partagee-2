@@ -1,4 +1,5 @@
 @import "../utils/_all.scss";
+@import "../components/box-special.scss";
 
 /*------------------------------*\
 
@@ -6,55 +7,72 @@
 
 \*------------------------------*/
 
+/* MODULES */
+
+.holder-card {
+	max-width:260px;	
+}
+
+.pointe--up {
+	border-style: solid;
+	border-width: 0 8px 12px 8px;
+	border-color: transparent transparent $c-bglight transparent;
+	width:0;
+	position: absolute; 		
+}
+
+.dot {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: $c-main;
+}
+
+.infosbloc {
+	@extend %box-infos;
+ 	background: $c-bglight;
+ 	margin-top: $gutter*0.75;
+
+ 	.pointe--up {
+ 		position: absolute;
+ 		top: -12px;
+
+ 		+ h4 {
+ 			margin-top: 0;
+ 		}
+ 	}
+}
+
+/* ALL PROJECTS */
+
+.all-projects {
+	#map {
+		height: 850px!important;
+	}
+	.fluxi-wrap {
+	    margin-bottom:0;
+	}
+	.social{
+		margin-bottom: $space/2;
+	}
+	.fluxi-content{
+		margin-top: $space/2;
+	}
+}
+
+
+/* SINGLE */
+
 .single #map {
 	height: 250px;
 }
-.all-projects #map {
-	height: 850px!important;
-}
 
-.a-project{
+
+.single-projets {
 	.description{
 		margin-bottom:0;
 	}
-	
-	.wrap-bg.c-main{
-		@extend %transition;
-		overflow: hidden;				
-		height:0;		
-		
-		&:before{
-			@extend %transition;			
-			transform:scaleX(0);			
-		}
-		.box:first-child{
-			padding-top:$space*0.3;	
-		}
-		
-		.card__title{
-			margin-bottom:$space*0.1;	
-		}
-		
-		.button{
-			margin-top:$gutter;	
-		}	
-		
-		&:after{
-			@extend %triangle;
-			border-color: transparent transparent $c-main;
-			left:inherit;	
-			right:47.5%;
-		}			
-	}
-	.wrap-bg.c-main.is-active{
-		height:100%;
-		overflow:visible;		
-		margin: $space*0.4 0 0;
-		
-		&:before{			
-			transform:scaleX(5);			
-		}	
-	}
+
 	.notify{
 		span{			
 			display:block;
@@ -72,20 +90,21 @@
 			color:$c-main;
 		}
 	}
-}
-.all-projects {
-	.fluxi-wrap {
-	    margin-bottom:0;
+
+	.map-holder{
+		margin-top:$space*0.6;
 	}
-	.social{
-		margin-bottom: $space/2;
-	}
-	.fluxi-content{
-		margin-top: $space/2;
+
+	.holder-card{
+		width:100%;
+		max-width:100%;	
 	}
 }
+
+
+/* FOLLOWING */
+
 .following.box{
-	
 	justify-content:center;
 	
 	.box__social, .box__btn{
@@ -97,8 +116,6 @@
 		width:100%;		
 		
 	}
-	
-	
 }
 
 .following.box{
@@ -107,10 +124,7 @@
 	}
 }
 
-
 .input-n-btn{
-	align-self:flex-end; 
-		
 	.box__solo{
 		flex: 1 1 0;
 		margin-bottom: 0;
@@ -123,6 +137,55 @@
 	}
 	.input__mailing{
 		border-bottom: 1px solid #fff;
+	}
+}
+
+/* BLOC SOUTENIR */
+
+.action-projet {
+	@extend %transition;
+	overflow: hidden;				
+	height:0;	
+
+	&:before{
+		@extend %transition;			
+		transform:scaleX(0);			
+	}
+
+	&:after{
+		@extend %triangle;
+		border-color: transparent transparent $c-main;
+		left:inherit;	
+		right:47.5%;
+	}
+	
+	&.is-active{
+		height:100%;
+		overflow:visible;		
+		margin: $space*0.4 0 0;
+		
+		&:before{			
+			transform:scaleX(5);			
+		}	
+	}
+}
+
+.action-projet__box {
+	@extend %box-special;
+	@extend %box-asymetrique;
+	@extend %box--fullW;
+
+	.box-asy__left,
+	.box-asy__right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 0;
+	}
+
+	.input-n-btn {
+		transform: translateY(7px);
+		margin-top: auto;
 	}
 }
 
@@ -158,6 +221,8 @@
 	height: 42px;
 	
 	.micro-legende {
+		font: 400 12px $txt-font;
+		color: $c-light;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -233,7 +298,6 @@
 }
 
 .repartition {
-	
 	.infosbloc {
 		margin-top: $gutter;
 		ul {
@@ -251,6 +315,7 @@
 		top:2.8rem;
 	}
 }
+
 .financer {
 	display: flex;
 	align-items: center;
@@ -264,168 +329,43 @@
 }
 
 
-/* Color system */
+/* TESTIMONY */
 
-.c-solai {
-	.etapes {
-		@include etapes_color($c-solaire);
-	}
-	.repartition {
-		@include graphbar_color($c-solaire);
-	}
-	.p-details{
-		@include project_colors($c-solaire);
-	}
-	.testimony{
-		@include nrj_gradient_bg($c-solaire);
-	}
-	.card-project, .filter-nrj{
-		@include card_project_colors($c-solaire);
-		.card__icon:before{
-			 content: "\e91f";
+.testimony {	
+	@extend %box-special;
+	@extend %box-asymetrique;
+	@extend %box--extend;
+	color:#fff;
+
+	p {
+		position:relative;
+
+		&:before,
+		&:after {
+			position: absolute;
+			font-family: arial;
+	    	font-size: 5rem;
+	    	line-height: 1;
 		}
-		.icon-filter:before{
-			content: "\e91e";
+
+		&::before {
+			content: '“';
+			top: -2px;
+			left: -24px;
 		}
-	}
-	&.card-map .link-cta{
-		color:$c-solaire;
-	}
-	
-} 
-.c-eolie {
-	.etapes {
-		@include etapes_color($c-eolien);
-	}
-	.repartition {
-		@include graphbar_color($c-eolien);
-	}
-	.p-details{
-		@include project_colors($c-eolien);
-	}
-	.testimony{
-		@include nrj_gradient_bg($c-eolien);
-	}
-	.card-project, .filter-nrj{
-		@include card_project_colors($c-eolien);
-		.card__icon:before{
-			  content: "\e90e";
-		}
-		.icon-filter:before{
-			content: "\e90d";
+
+		&::after {
+			content: '”';
+			bottom: -27px;
+			transform: translateX(6px);
 		}
 	}
-	&.card-map .link-cta{
-		color:$c-eolien;
-	}
-} 
-.c-micro {
-	.etapes {
-		@include etapes_color($c-hydro);
-	}
-	.repartition {
-		@include graphbar_color($c-hydro);
-	}
-	.p-details{
-		@include project_colors($c-hydro);
-	}
-	.testimony{
-		@include nrj_gradient_bg($c-hydro);
-	}
-	.card-project, .filter-nrj{
-		@include card_project_colors($c-hydro);
-		.card__icon:before{
-			 content: "\e918";
-		}
-		.icon-filter:before{
-			content: "\e917";
-		}
-	}
-	&.card-map .link-cta{
-		color:$c-hydro;
-	}
-} 
-.c-bioma {
-	.etapes {
-		@include etapes_color($c-bio);
-	}
-	.repartition {
-		@include graphbar_color($c-bio);
-	}
-	.p-details{
-		@include project_colors($c-bio);
-	}
-	.testimony{
-		@include nrj_gradient_bg($c-bio);
-	}
-	.card-project, .filter-nrj{
-		@include card_project_colors($c-bio);
-		.card__icon:before{
-			 content: "\e902";
-		}
-		.icon-filter:before{
-			content: "\e901";
-		}
-	}
-	&.card-map .link-cta{
-		color:$c-bio;
-	}
-} 
-.c-geoth {
-	.etapes {
-		@include etapes_color($c-geo);
-	}
-	.repartition {
-		@include graphbar_color($c-geo);
-	}
-	.p-details{
-		@include project_colors($c-geo);
-	}
-	.testimony{
-		@include nrj_gradient_bg($c-geo);
-	}
-	.card-project, .filter-nrj{
-		@include card_project_colors($c-geo);
-		.card__icon:before{
-			 content: "\e914";
-		}
-		.icon-filter:before{
-			content: "\e913";
-		}
-	}
-	&.card-map .link-cta{
-		color:$c-geo;
-	}
-} 
-.c-econo {
-	.etapes {
-		@include etapes_color($c-eco);
-	}
-	.repartition {
-		@include graphbar_color($c-eco);
-	}
-	.p-details{
-		@include project_colors($c-eco);
-	}
-	.testimony{
-		@include nrj_gradient_bg($c-eco);
-	}
-	.card-project, .filter-nrj{
-		@include card_project_colors($c-eco);
-		.card__icon:before{
-			 content: "\e90c";
-		}
-		.icon-filter:before{
-			 content: "\e90b";
-		}
-	}
-	&.card-map .link-cta{
-		color:$c-eco;
-	}
-} 
+}
 
 
-@media screen and (max-width: $bp--small) {
+/* MEDIA QUERIES */
+
+@media screen and (max-width: $bp--medium) {
 	.single-projets .p-details {
 		position: relative;
 		background-color: transparent;
@@ -434,17 +374,21 @@
 	.p-details__equi {
 		border-radius: 3px;
 	}
-	.box__half:last-child {
-		margin-top: $gutter/2;
+
+	.action-projet .box-asy__right {
+		margin-top: $gutter;
 		padding-top: $gutter;
 		border-top: 1px dotted #fff;
 	}
 }
 
 @media screen and (min-width: $bp--small) {	
-	.single #map {
-		height: 450px;
+	.single-projets {
+		#map {
+			height: 450px;
+		}
 	}
+
 	.following.box{
 		justify-content:inherit;
 		.box__social{
@@ -454,73 +398,64 @@
 			margin-left:auto;					
 		}		
 	}
-	.a-project .wrap-bg.c-main{	
+
+	.action-projet {
 		&:after{			
 			right:16.5rem;	
 		}	
-		&.collecte{
-			&:after{			
-				right:20.5rem;	
-			}
-		}		
-		.box__half{			
-			&:last-child{
-				padding-right:0;		
-			}
+		&.collecte:after{			
+			right:20.5rem;	
 		}
 	}
-	
 }
 
 @media screen and (min-width: $bp--medium) {
-	
+	.single-projets .holder-card{
+		max-width:260px;
+		position:absolute;
+		bottom:0;
+		left:$gutter*2;	
+	}
+
+	.input-n-btn .box__solo {
+		padding-right: $gutter;
+	}
+
+	.dotline__line {
+		top: 37px;
+
+		.start {
+			position: absolute;
+			left: 0;
+			top: -9px;
+			width: 2px;
+			height: 20px;
+			background: $c-main;
+		}
+		.end {
+			position: absolute;
+			right: 0;
+			top: -5px;
+			width: 12px;
+			height: 12px;
+			border-top: 2px solid $c-main;
+			border-right: 2px solid $c-main;
+			transform: rotate(45deg);
+			transform-origin: center;
+		}
+	}
+
 	.steps {
 		padding-left:$gutter*2;
 	}
-	
-	.a-project .wrap-bg.c-main{
-		.box__half{
-			&:first-child{
-				max-width:300px;			
-			}		
-		}
-	}
-	.input-n-btn{			
-		.box__solo{
-			padding-right: $gutter;
-		}
-	}
-	.start {
-		position: absolute;
-		left: 0;
-		top: -9px;
-		width: 2px;
-		height: 20px;
-		background: $c-main;
-	}
-	.end {
-		position: absolute;
-		right: 0;
-		top: -5px;
-		width: 12px;
-		height: 12px;
-		border-top: 2px solid $c-main;
-		border-right: 2px solid $c-main;
-		transform: rotate(45deg);
-		transform-origin: center;
-	}
-	.dotline__line {
-		top: 37px;
-		+ .dotline__step {
-			margin-left: 8rem
-		}
-	}
-	.dotline__step:last-child {
-		margin-right: 8rem;
-	}
+
 	.dotline__step {
 		height: 62px;
-			
+
+		&:last-child {
+			margin-right: 8rem;
+		}
+				
 		.dot {
 			margin-top: 30px;
 		}

@@ -1,0 +1,76 @@
+@import "../utils/_all.scss";
+
+/*------------------------------*\
+
+	#HEADER-BLOC
+	
+\*------------------------------*/
+
+.header-bloc{
+	position: relative;
+	background:url('../img/energie-partagee-header-ciel-bleu.jpg') no-repeat;
+	background-size:cover;
+	text-align:center;
+	color:$c-textwhite;	
+	padding-top:$space;
+
+	&::before {
+		@include pseudo-bg(#000, 0.5);
+		z-index: 0;
+	}
+
+	> * {
+		position: relative;
+	}
+	
+	.h1{
+		margin-bottom:$space/2;		
+	}
+	.h4 {
+		margin-bottom: 0;
+		margin-top: $space*0.3;
+		color:$c-textwhite;
+		
+		span{
+			display:inline-block;
+			margin:0 $gutter/6 0 0;
+			
+			&:last-child{
+				margin-left:$gutter/2;	
+			}
+		}
+	}
+	.lightvideo.button{
+		margin-top: $space*0.3;
+	}
+
+	.tags {
+		display: none;
+	}
+		
+}
+
+.page,
+.single,
+.search-results,
+.archive { 
+	.header-bloc{
+		padding-bottom:$space*2.4;
+		margin-bottom:$space*2.4;
+	
+		.h1{
+			margin:$space*0.1 auto 0;		
+		}
+	}
+}
+
+
+@media screen and (min-width: $bp--small) {	
+	.header-bloc{
+		padding-top:$space*1.6;	
+
+		.tags {
+			display: flex;
+		}
+	}
+}

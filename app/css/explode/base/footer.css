@@ -79,14 +79,14 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 /*------------------------------*\
     #FOOTER
 \*------------------------------*/
 .footer {
+  position: relative;
   background: #122c33;
   color: #fff;
+  background: radial-gradient(at top, #193c46, #122c33 70%);
 }
 .footer .s-title {
   color: #fff;
@@ -106,8 +106,8 @@
   flex: 1 1 0;
 }
 .footer .courtcircuit__input {
-  background: #122c33;
-  border-bottom: 1px solid #2a4a53;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   font-family: "avantgarde", Arial;
   font-size: 3.4rem;

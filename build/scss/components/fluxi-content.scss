@@ -1,6 +1,18 @@
 @import "../utils/_all.scss";
 @import "../components/lib/c-buttons.scss";
 
+@mixin sort_btn_color($color) {
+	color:#fff;	
+	&:after{ background: $color none; }	
+}
+@mixin sort_title_color($color) {
+	border:1px solid $color;
+}
+@mixin sort_icon_color($color) {
+	border:1px solid $color;
+	background-color: $color;
+}
+
 .fluxi-wrap{
 	background-color:#fff;
 	margin:-$space*4 auto $space;

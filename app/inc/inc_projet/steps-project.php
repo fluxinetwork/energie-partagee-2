@@ -72,7 +72,7 @@
         <?php if(!empty(get_field('title_step_project'))):?>
             <h4><?php echo get_field('title_step_project'); ?></h4>
         <?php endif;?>
-        <p class="p-ss"><?php echo get_field('text_step_project'); ?></p>
+        <p><?php echo get_field('text_step_project'); ?></p>
       </div>  
   <?php endif;?>
   

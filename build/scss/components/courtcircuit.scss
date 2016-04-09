@@ -1,0 +1,99 @@
+@import "../utils/_all.scss";
+
+/*------------------------------*\
+
+	#COURT-CIRCUIT
+	
+\*------------------------------*/
+
+.courtcircuit{
+	padding-bottom:$space;
+	
+	.wrap-n{
+		@include background(radial-gradient(lighten( $c-focus, 5% ),$c-focus), center no-repeat $c-focus scroll);		
+		padding-top:$gutter*0.75;
+		padding-bottom:$gutter*0.75;
+	}
+	
+	.box__half.input__fixe{
+		flex:10 1 0;
+		margin-bottom:0;
+		margin-right: $gutter/2;		
+	}
+	.box__fixe{
+		flex:1 1 0;		
+	}	
+	.courtcircuit__title {
+		display:flex;
+		margin:0;
+		align-items:baseline;
+		justify-content:center; 		
+	}
+	.courtcircuit__decoleft .img-svg, .courtcircuit__decoright .img-svg{
+		width:90px;
+		height:54px;
+		margin:0 5px 5px;		
+	}
+	.courtcircuit__decoright .img-svg{		
+		margin:0 0 5px 5px;		
+	}
+	.courtcircuit__logo .img-svg{
+		height: 29px;
+    	margin-bottom: 10px;
+    	width: 226px;
+	}	
+	
+	.courtcircuit__text{
+		color:#fff;
+	}
+	
+}
+.courtcircuit__input, .input__mailing{
+	background: none transparent;
+	border-bottom:1px solid #f57f35;
+	color: $c-textwhite;
+	font-family: $main-font;
+	font-size: 3.4rem;
+	height: 100%;
+	width: 100%;
+	padding:0.4rem 0;
+	
+	&::-webkit-input-placeholder{ 
+	  color: $c-textwhite;
+	  opacity:1;
+	}	
+	&::-moz-placeholder{ 
+	  color: $c-textwhite;
+	  opacity:1;
+	}	
+	&:-ms-input-placeholder{ 
+	  color: $c-textwhite;
+	  opacity:1;
+	}	
+	&:-moz-placeholder { 
+	  color: $c-textwhite;
+	  opacity:1;
+	}	
+	
+}
+
+
+@media screen and (min-width: $bp--small) {	
+	.courtcircuit {
+		.box__half.input__fixe{
+			flex:1;
+			margin-right:0;
+		}
+		.box__half{
+			margin-bottom:0;
+			align-self:center;
+		}
+	}
+}
+
+
+@media screen and (min-width: $bp--medium) {
+	.courtcircuit .wrap-n {
+		border-radius:$radius;
+	}
+}

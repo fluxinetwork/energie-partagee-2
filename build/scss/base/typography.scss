@@ -258,13 +258,16 @@ h5,.h5,.s-title{
 	margin-bottom:$space*0.6;
 	color:$c-dark;	 
 }
-.h5{
+
+.h5 {
 	margin-bottom:$space*0.2;
 	margin-top: $space*0.4;
 }
 .s-title{ 
 	margin-bottom:$space*0.3;
 	text-align:center;
+    letter-spacing: 0.05rem;
+    @include font-smoothing();
 }
 
 h6,.h6{ 

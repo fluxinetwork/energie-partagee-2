@@ -1,0 +1,66 @@
+@import "../utils/_all.scss";
+
+/*------------------------------*\
+
+	#TAGS
+	
+\*------------------------------*/
+
+.tags {
+	@extend %list-reset;
+	display: flex;
+    justify-content: center;
+	
+	li {
+		margin:0 $space*0.1 $space*0.1 0;
+		
+		&:last-child{
+			margin-right:0;	
+		}
+		
+		.tag{
+			color:$c-textwhite;			
+		}
+	}
+		
+}
+
+.tag {
+	@extend %transition;
+	font-size:1.2rem;
+	border:2px solid #fff;
+	padding:$gutter/8 $gutter/4;
+	border-radius:$radius;	
+	display:inline-block;	
+	position: relative;
+	color: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 6px 0 6px 6px;
+		border-color: transparent transparent transparent #fff;
+		transform: translate(100%, -50%);
+
+	}
+
+	&.is-inactive {
+		border-color: rgba(#fff, 0);
+		background-color: rgba(#fff, 0.5);
+		cursor: default;
+
+		&::after {
+			display: none;
+		}
+	}
+
+	a {
+		color: #fff;
+	}
+
+}

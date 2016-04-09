@@ -83,8 +83,6 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 /*------------------------------*\
     #MAP
 \*------------------------------*/
@@ -191,10 +189,6 @@
 .map-holder .cards-map .card-map .link-cta {
   background-color: #fff;
   padding: 2rem;
-}
-
-.a-project .map-holder {
-  margin-top: 6rem;
 }
 
 .map-projects #map {

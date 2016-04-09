@@ -81,8 +81,6 @@ h5, .h5, .s-title, .transition {
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 /*@import url(https://fonts.googleapis.com/css?family=PT+Sans);*/
 @font-face {
   font-family: 'avantgarde';
@@ -410,6 +408,9 @@ h5, .h5, .s-title {
 .s-title {
   margin-bottom: 3rem;
   text-align: center;
+  letter-spacing: 0.05rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h6, .h6 {

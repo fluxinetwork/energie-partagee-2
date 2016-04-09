@@ -81,6 +81,26 @@
 /* Typos sizes */
 /*------------------------------*\
 
-    #PAGE
-
+	#TOP-CREDIBILITY
+	
 \*------------------------------*/
+.top-credibility .wrap-n {
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.top-credibility .box-logos__btn {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 830px) {
+  .top-credibility {
+    background: radial-gradient(at bottom, #de064e, #c50545 60%);
+  }
+  .top-credibility .wrap-n {
+    margin-top: 80px;
+    position: relative;
+    transform: translateY(-70px);
+  }
+}

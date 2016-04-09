@@ -79,8 +79,6 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-/* FONT-SMOOTHING */
-/* COLORS PROJECT */
 .link {
   position: relative;
   font-family: "avantgarde", Arial;
@@ -100,6 +98,11 @@
 }
 .link:hover::after {
   width: 100%;
+}
+@media screen and (min-width: 600px) {
+  .link {
+    font-size: 1.4rem;
+  }
 }
 
 .button, .minicard {
@@ -143,6 +146,11 @@
   z-index: -1;
 }
 
+.button, .minicard,
+.button-round {
+  outline: 0;
+}
+
 .button-round {
   background: transparent none;
   border-radius: 50%;
@@ -157,12 +165,6 @@
   width: 6.6rem;
 }
 
-/* Nav helpers */
-@media screen and (min-width: 600px) {
-  .link {
-    font-size: 1.4rem;
-  }
-}
 /*------------------------------*\
 
     #BUTTONS
@@ -189,7 +191,7 @@
 }
 
 .button.cta {
-  padding: 1.6rem 2rem 1.4rem 2rem;
+  padding: 1.6rem 2rem 1.6rem 2rem;
 }
 
 .home .button.cta i {
