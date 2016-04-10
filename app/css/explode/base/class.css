@@ -71,3 +71,8 @@
 .img-reponsive {
   width: 100%;
 }
+
+.anim-out {
+  opacity: 0;
+  transform: scale(0);
+}

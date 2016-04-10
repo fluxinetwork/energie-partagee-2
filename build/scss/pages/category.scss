@@ -8,6 +8,11 @@
 .actualites {
 	.fluxi-content{
 		padding-bottom: $gutter*1.5;
+
+		.description{
+			padding-left:$gutter;
+			padding-right:$gutter;
+		}
 	}
 	.fluxi-wrap {
 		padding: 0;

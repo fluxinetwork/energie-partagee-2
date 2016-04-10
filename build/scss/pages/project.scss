@@ -54,12 +54,14 @@
 	}
 	.social{
 		margin-bottom: $space/2;
-	}
+	}	
+}
+
+.all-projects,.a-project{
 	.fluxi-content{
 		margin-top: $space/2;
 	}
 }
-
 
 /* SINGLE */
 
@@ -100,7 +102,7 @@
 		max-width:100%;	
 	}
 
-	h3 {
+	h3.h3 {
 		margin-top: $space*0.8;
 	}
 }
@@ -336,7 +338,7 @@
 	@extend %box-special;
 	@extend %box-asymetrique;
 	@extend %box--extend;
-	color:#fff;
+	color:#fff;	
 
 	p {
 		position:relative;

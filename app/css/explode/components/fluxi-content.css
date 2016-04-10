@@ -23,7 +23,7 @@
   }
 }
 /* TRANSITIONS */
-.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after, .accordion .accordion__head, .isogrid .main-isogrid .item, .transition {
+.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after, .accordion .accordion__head, .isogrid .main-isogrid .item, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -72,6 +72,11 @@
   width: 100%;
 }
 
+.anim-out {
+  opacity: 0;
+  transform: scale(0);
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
@@ -79,7 +84,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-.fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
+.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt {
   position: relative;
   font-family: "avantgarde", Arial;
   font-size: 1.2rem;
@@ -87,7 +92,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.fluxi-content p a::after, .fluxi-content .list li a::after, .f-btn .txt::after {
+.fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -96,11 +101,11 @@
   height: 1px;
   background: #65aa04;
 }
-.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .f-btn .txt:hover::after {
+.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .fluxi-content .accordion__content a:hover::after, .f-btn .txt:hover::after {
   width: 100%;
 }
 @media screen and (min-width: 600px) {
-  .fluxi-content p a, .fluxi-content .list li a, .f-btn .txt {
+  .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt {
     font-size: 1.4rem;
   }
 }
@@ -141,9 +146,10 @@
 .fluxi-content p {
   margin-bottom: 3rem;
 }
-.fluxi-content p a, .fluxi-content .list li a {
+.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a {
   font-family: "Georgia", serif;
   text-transform: inherit;
+  font-size: 1.6rem;
 }
 .fluxi-content .img__left, .fluxi-content .img__right, .fluxi-content .accordion__content {
   margin-bottom: 5rem;
@@ -171,7 +177,7 @@
   margin-bottom: 2rem;
 }
 .fluxi-content .lightbox .figure {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 .fluxi-content .lightbox .legend {
   padding: 0;
@@ -207,7 +213,7 @@ blockquote .blockquote {
 }
 
 .f-btn {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
   display: flex;
   width: 100%;
 }
@@ -335,6 +341,9 @@ blockquote .blockquote {
 .accordion .accordion__content .h6 {
   padding: 0 0 2rem;
   margin: 0;
+}
+.accordion .accordion__content ul, .accordion .accordion__content ol {
+  margin: 0 0 3rem 3rem;
 }
 
 .accordion.open .accordion__head i {

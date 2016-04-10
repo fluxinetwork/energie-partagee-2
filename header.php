@@ -29,7 +29,7 @@
     <?php include( TEMPLATEPATH.'/app/inc/inc_projet/edit-link.php' ); ?>
     
 	<div class="top-display">
-    	<p class="p-ss">Pour aller sur le site de souscription, <a href="#">cliquez ici</a></p>
+    	<p class="p-ss">Pour aller sur le site de souscription, <a href="https://je-souscris.energie-partagee.org/" target="_blank">cliquez ici</a></p>
     </div>
 
 	<div class="wrap-main">

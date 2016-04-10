@@ -58,6 +58,16 @@
 				$loop++;	
 				endwhile;
 				echo '</div>';
+			else:
+				if($cat_id == 16):	
+					echo '<h2 class="description">Il n\'y a pas d\'événements à venir pour le moment.</h2>';
+				elseif($cat_id == 19):
+					echo '<h2 class="description">Il n\'y a pas d\'ateliers à venir pour le moment.</h2>';
+				elseif($cat_id == 20):
+					echo '<h2 class="description">Il n\'y a pas de formations à venir pour le moment.</h2>';
+				else:
+					echo '<h2 class="description">Il n\'y a pas d\'articles pour le moment.</h2>';
+				endif;
 			endif;
 			wp_reset_postdata();
 			?>

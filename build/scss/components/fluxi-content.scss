@@ -57,11 +57,12 @@
 	p{
 		margin-bottom:$space*0.3;	
 	}
-	p a, .list li a{
+	p a, .list li a,.accordion__content a{
 		@extend %link;
 		font-family:$txt-fontserif;
-		text-transform:inherit;			
-	}
+		text-transform:inherit;
+		font-size: 1.6rem;			
+	}	
 	.img__left,.img__right,.accordion__content{
 		@extend .clearfix;
 		margin-bottom:	$space/2;
@@ -93,7 +94,7 @@
 	}
 	.lightbox {
 		.figure{
-			margin-bottom:$space*0.6;				
+			margin-bottom:$gutter;				
 		}
 		.legend{
 			padding:0 ;
@@ -136,7 +137,7 @@ blockquote{
 }
 
 .f-btn{
-	margin-bottom:$space*0.25;
+	margin-bottom:$space*0.35;
 	display:flex;
 	width:100%;
 
@@ -283,6 +284,9 @@ blockquote{
 			padding:0 0 $space*0.2;
 			margin:0;			
 		}
+		ul,ol{
+			margin:0 0 $space*0.3 $space*0.3;
+		}		
 	}
 }
 .accordion.open{

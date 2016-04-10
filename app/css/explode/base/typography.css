@@ -74,6 +74,11 @@ h5, .h5, .s-title, .transition {
   width: 100%;
 }
 
+.anim-out {
+  opacity: 0;
+  transform: scale(0);
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */

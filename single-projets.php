@@ -3,7 +3,7 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); 
   
   	// Vidéo
-	$video = get_field('video');	
+	$video_header = get_field('video');	
   
   	//Location
 	$location = get_field('coordonees_gps');
@@ -62,8 +62,8 @@
           <?php the_title(); ?>  
         </h1>
         
-        <?php if( !empty($video) && $video != 0 && $video != 1){ ?>
-            <div class="lightvideo"><a class="button cta" data-src="<?php echo $video; ?>" href=""><i class="icon-video_20"></i> Voir la vidéo</a></div>	
+        <?php if( $video_header && $video_header != '0'){ ?>
+            <div class="lightvideo"><a class="button cta" data-src="<?php echo $video_header; ?>" href=""><i class="icon-video_20"></i> Voir la vidéo</a></div> 
         <?php } ?>
         
       </header>

@@ -72,6 +72,11 @@
   width: 100%;
 }
 
+.anim-out {
+  opacity: 0;
+  transform: scale(0);
+}
+
 /* BREAKPOINTS */
 /* COLORS */
 /* Layout */
@@ -86,6 +91,10 @@
 \*------------------------------*/
 .actualites .fluxi-content {
   padding-bottom: 6rem;
+}
+.actualites .fluxi-content .description {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .actualites .fluxi-wrap {
   padding: 0;
