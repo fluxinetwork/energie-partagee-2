@@ -9,8 +9,8 @@ function initSingleMap(){
 	var mapContainer = document.getElementById("map");
 	//mapContainer.className += 'loader';
 	
-	var latitude = parseInt($('#map').data('lat'));
-	var longitude = parseInt($('#map').data('lon'));
+	var latitude = Number($('#map').data('lat'));
+	var longitude = Number($('#map').data('lon'));
 	
 	var latlng = new google.maps.LatLng(latitude,longitude);
 	var newLatLng = {lat: latitude, lng: longitude};
@@ -81,7 +81,8 @@ function initProjectsMap(){
         panControl: true,
         zoomControl: true,
         zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.LEFT_CENTER
         },
         mapTypeControl: false,
         streetViewControl: false,
@@ -162,7 +163,7 @@ function addMakers(map, data){
 
 			//  Add markers on the map only on desktop
 			if(windowW >= bpSmall){	
-				var newLatLng = {lat: parseInt(data[i].latitude), lng: parseInt(data[i].longitude)};
+				var newLatLng = {lat: Number(data[i].latitude), lng: Number(data[i].longitude)};
 										
 				var marker = new google.maps.Marker({
 					position: newLatLng,

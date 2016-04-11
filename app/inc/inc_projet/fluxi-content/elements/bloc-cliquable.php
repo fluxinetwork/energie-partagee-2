@@ -50,7 +50,7 @@
 			
 			else:
 			
-			$texte_bouton = ($texte_bouton) ? '<a class="button green"><i></i>'.$texte_bouton.'</a>' : '';
+			$texte_bouton = ($texte_bouton) ? '<a class="button green" href="'.$url_du_cliquable.'" target="'.$open_new_page.'"><i></i>'.$texte_bouton.'</a>' : '';
 			
 				echo '<aside class="clikable wide">
 							<article class="wrap-space box">
