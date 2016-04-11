@@ -22,7 +22,7 @@
 			
 			if($type_de_cliquable!='img_n_txt'):
 			
-				echo '<article class="clikarde__item">';
+				echo '<div class="clikarde__item">';
 					echo '<a class="minicard" href="'.$url_du_cliquable.'" target="'.$open_new_page.'">';
 					
 						if($type_de_cliquable=='menu_btns'):
@@ -46,14 +46,14 @@
 						endif;		
 				
 					echo '</a>';
-				echo '</article>';	
+				echo '</div>';	
 			
 			else:
 			
 			$texte_bouton = ($texte_bouton) ? '<a class="button green" href="'.$url_du_cliquable.'" target="'.$open_new_page.'"><i></i>'.$texte_bouton.'</a>' : '';
 			
-				echo '<aside class="clikable wide">
-							<article class="wrap-space box">
+				echo '<div class="clikable wide">
+							<div class="wrap-space box">
 								<div class="box__half">															
 									<div class="holder-round">
 										<img src="'.$image_du_cliquable['sizes']['thumbnail'].'">
@@ -64,8 +64,8 @@
 									<p class="p-ss">'.$texte_du_cliquable.'</p>
 									'.($texte_bouton).'
 								</div>									
-							</article>
-						</aside>';
+							</div>
+						</div>';
 			endif;
 						 
 		endwhile; 

@@ -5,6 +5,7 @@
   	$cat_post = get_the_category();
 	$cat_post = $cat_post[0];
 	$cat_post_slug = $cat_post->slug;
+	$the_content = get_the_content();
 	
 	if($cat_post_slug == 'evenements'):
 		$url_parent_page = get_bloginfo('url').'/nous-suivre/tous-les-evenements/';
@@ -32,6 +33,8 @@
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
 	endif;
 
+	
+
   ?>
   <header class="header-bloc">    
     <ul class="tags">
@@ -53,7 +56,7 @@
 		/////       FLUXI CONTENT       /////
 		/////////////////////////////////////
 		   
-		if( have_rows('elements_page') ):
+		if( have_rows('elements_page') || $the_content != ''):
 			echo '<article class="fluxi-wrap fluxi-content fitvids">';
 						
 				echo $main_image;						
@@ -63,9 +66,15 @@
 				get_socials();					
 				
 				require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
+
+				if($the_content != ''):
+					echo '<div class="old-ct">'.$the_content.'</div>';
+				endif; 
 		   		
 		   	echo '</article>';
-		endif; 
+		endif;
+
+		
 		   
 	?>
   
