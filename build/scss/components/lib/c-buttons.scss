@@ -114,22 +114,3 @@
   background-color: transparent;
   border: 2px solid $c-textwhite;
 }
-
-%f-btn{
-	margin-bottom:$space*0.35;
-	display:flex;
-	width:100%;
-
-	i{	
-		align-self:center;	
-	    font-size: 3.2rem;	    
-	    color:$c-main;
-	}
-	div{
-		align-self:center;		
-	    padding-left: $gutter/4;
-	}
-	.txt{
-		@extend %link;		
-	}
-}

@@ -23,7 +23,7 @@
   }
 }
 /* TRANSITIONS */
-.f-btn__prev .txt, .f-btn__next .txt, .f-btn__prev .txt::after, .f-btn__next .txt::after, .transition {
+.transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -84,51 +84,3 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-.f-btn__prev .txt, .f-btn__next .txt {
-  position: relative;
-  font-family: "avantgarde", Arial;
-  font-size: 1.2rem;
-  color: #65aa04;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.f-btn__prev .txt::after, .f-btn__next .txt::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background: #65aa04;
-}
-.f-btn__prev .txt:hover::after, .f-btn__next .txt:hover::after {
-  width: 100%;
-}
-@media screen and (min-width: 600px) {
-  .f-btn__prev .txt, .f-btn__next .txt {
-    font-size: 1.4rem;
-  }
-}
-
-.f-btn__prev, .f-btn__next {
-  margin-bottom: 3.5rem;
-  display: flex;
-  width: 100%;
-}
-.f-btn__prev i, .f-btn__next i {
-  align-self: center;
-  font-size: 3.2rem;
-  color: #65aa04;
-}
-.f-btn__prev div, .f-btn__next div {
-  align-self: center;
-  padding-left: 1rem;
-}
-
-.f-btn__prev i {
-  transform: rotate(180deg);
-}
-
-.suggestion-posts {
-  display: flex;
-}

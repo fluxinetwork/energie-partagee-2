@@ -83,11 +83,11 @@
 				if ( !empty( $prev_post ) || !empty( $next_post )):
 					echo '<aside class="suggestion-posts">';
 						if ( !empty( $prev_post ) ): 
-							echo '<a class="f-btn__prev" href="'.get_permalink( $prev_post->ID ).'" title="'.$prev_post->post_title.'"><i class="icon-chevronright_32"></i><div><span class="txt">'.$prev_post->post_title.'</span></div></a>';							
+							echo '<a class="f-btn__prev" href="'.get_permalink( $prev_post->ID ).'" title="'.$prev_post->post_title.'"><i class="icon-chevronright_32"></i>'.$prev_post->post_title.'</a>';							
 						 endif;
 						 
 						 if ( !empty( $next_post ) ):
-							echo '<a class="f-btn__next" href="'.get_permalink( $next_post->ID ).'" title="'.$next_post->post_title.'"><div><span class="txt">'.$next_post->post_title.'</span></div><i class="icon-chevronright_32"></i></a>';
+							echo '<a class="f-btn__next" href="'.get_permalink( $next_post->ID ).'" title="'.$next_post->post_title.'">'.$next_post->post_title.'<i class="icon-chevronright_32"></i></a>';
 						 endif;
 					 echo '</aside>';
 				endif; 	 
