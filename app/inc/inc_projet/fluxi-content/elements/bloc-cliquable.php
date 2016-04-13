@@ -17,8 +17,16 @@
 			$url_du_cliquable = get_sub_field('url_du_cliquable');				
 			$texte_bouton = get_sub_field('texte_bouton');
 			$info_suppl = get_sub_field('info_suppl');
-			$open_new_page = get_sub_field('open_new_page');			
-			
+			$open_new_page = get_sub_field('open_new_page');
+			// Suggestion page
+			$suggestion_page = get_sub_field('suggestion_page');
+			if($suggestion_page == 1)	:				
+				$head_cliquable = '<aside class="suggestion">';
+				$foot_cliquable = '</aside>';
+			else:
+				$head_cliquable = '<div class="clikable wide">';
+				$foot_cliquable = '</div>';
+			endif;	
 			
 			if($type_de_cliquable!='img_n_txt'):
 			
@@ -52,8 +60,8 @@
 			
 			$texte_bouton = ($texte_bouton) ? '<a class="button green" href="'.$url_du_cliquable.'" target="'.$open_new_page.'"><i></i>'.$texte_bouton.'</a>' : '';
 			
-				echo '<div class="clikable wide">
-							<div class="wrap-space box">
+				echo $head_cliquable.
+							'<div class="wrap-space box">
 								<div class="box__half">															
 									<div class="holder-round">
 										<img src="'.$image_du_cliquable['sizes']['thumbnail'].'">
@@ -64,8 +72,8 @@
 									<p class="p-ss">'.$texte_du_cliquable.'</p>
 									'.($texte_bouton).'
 								</div>									
-							</div>
-						</div>';
+							</div>'.
+					$foot_cliquable;
 			endif;
 						 
 		endwhile; 
