@@ -479,6 +479,7 @@ MarkerShadow.prototype.onAdd = function() {
   img.style.width = this.options_.size.x + 'px';
   img.style.height = this.options_.size.y + 'px';
   img.style.position = 'absolute';
+
   div.appendChild(img);
 
   this.div_ = div;

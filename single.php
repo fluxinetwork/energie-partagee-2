@@ -5,7 +5,6 @@
   	$cat_post = get_the_category();
 	$cat_post = $cat_post[0];
 	$cat_post_slug = $cat_post->slug;
-	$the_content = get_the_content();
 	
 	if($cat_post_slug == 'evenements'):
 		$url_parent_page = get_bloginfo('url').'/nous-suivre/tous-les-evenements/';
@@ -19,21 +18,21 @@
 		$url_parent_page = get_bloginfo('url');
 	endif;
 
-	$main_image_obj = get_field( 'main_image' );
+	$main_img_add = get_field( 'add_image' );
 	$main_image ='';
 
-	if ( has_post_thumbnail() && empty($main_image_obj)) :
+	if ( has_post_thumbnail() && $main_img_add == 0) :
 		$post_img_id = get_post_thumbnail_id();
 		$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
 		$post_img_url = $post_img_array[0];
 
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
-	elseif(!empty($main_image_obj)):
-
+	elseif($main_img_add == 1):
+		$main_image_obj = get_field( 'main_image' );
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
 	endif;
 
-	
+	$the_content = get_the_content();
 
   ?>
   <header class="header-bloc">    
@@ -56,25 +55,29 @@
 		/////       FLUXI CONTENT       /////
 		/////////////////////////////////////
 		   
-		if( have_rows('elements_page') || $the_content != ''):
+		if( have_rows('elements_page') || $the_content):
 			echo '<article class="fluxi-wrap fluxi-content fitvids">';
 						
-				echo $main_image;						
-						
-				get_description();	
+				echo $main_image;	
 
+				if(have_rows('elements_page')):		
+					get_description();
+				else:
+					echo '<h2 class="description">';
+						bloginfo('description');
+					echo '</h2>';		
+				endif;
+				
 				get_socials();					
 				
 				require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
 
-				if($the_content != ''):
-					echo '<div class="old-ct">'.$the_content.'</div>';
+				if($the_content):
+					echo '<div class="holder-old">'.$the_content.'</div>';
 				endif; 
 		   		
 		   	echo '</article>';
-		endif;
-
-		
+		endif; 
 		   
 	?>
   

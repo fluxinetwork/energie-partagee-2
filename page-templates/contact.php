@@ -9,19 +9,19 @@ Template Name: Contact
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-	$main_image_obj = get_field( 'main_image' );
-	$main_image ='';
+	$main_img_add = get_field( 'add_image' );
+  $main_image ='';
 
-	if ( has_post_thumbnail() && empty($main_image_obj)) :
-		$post_img_id = get_post_thumbnail_id();
-		$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
-		$post_img_url = $post_img_array[0];
+  if ( has_post_thumbnail() && $main_img_add == 0) :
+    $post_img_id = get_post_thumbnail_id();
+    $post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
+    $post_img_url = $post_img_array[0];
 
-		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
-	elseif(!empty($main_image_obj)):
-
-		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
-	endif;
+    $main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
+  elseif($main_img_add == 1):
+    $main_image_obj = get_field( 'main_image' );
+    $main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
+  endif;
 
   ?>
   <header class="header-bloc">

@@ -23,10 +23,11 @@
     <div class="box-asy__left">
       <?php if($value_stade == 'onsuit'): ?>
         <h4>Écrire au porteur du projet </h4>
-        <p>Optenez plus d’informations et impliquez-vous dans la dynamique locale.</p>  
+        <p>Obtenez plus d’informations et impliquez-vous dans la dynamique locale.</p>  
         <a href="mailto:<?php echo get_field('email');?>" class="button box-asy__clic"><i class="icon-pencil_20"></i> Écrire à <?php echo get_field('prenom');?></a>
       <?php else: ?>
         <h4>Investir à Énergie Partagée</h4>
+        <p>Ce projet est financé par Énergie Partagée et ses souscripteurs. Il est ouvert à l’investissement citoyen.</p>
         <a href="<?php echo $url_call_to_action;?>" class="button box-asy__clic"><i class="icon-euro_20"></i> Je souscris !</a>
       <?php endif; ?>
     </div>

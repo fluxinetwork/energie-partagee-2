@@ -26,14 +26,14 @@
 	$value_stade = get_field('status_projet');
 	$label_stade = $field_stade['choices'][ $value_stade ];
 	
-	$url_call_to_action = get_field('url_call_to_action');
-	
+	$url_call_to_action = get_field('url_call_to_action');	
+
 	// Imgs
-	$main_image_obj = get_field( 'main_image' );
+	$main_img_add = get_field( 'add_image' );
 	$main_image ='';	
 	$main_url ='';
 	
-	if ( has_post_thumbnail() && empty($main_image_obj)) :
+	if ( has_post_thumbnail() && $main_img_add == 0) :
 		$post_img_id = get_post_thumbnail_id();
 		$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
 		$post_img_url = $post_img_array[0];
@@ -41,11 +41,13 @@
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
     $thumb_url_a = wp_get_attachment_image_src($post_img_id, 'thumbnail', true);
     $thumb_url = $thumb_url_a[0];
-	elseif(!empty($main_image_obj)):
+	elseif($main_img_add == 1):
+    $main_image_obj = get_field( 'main_image' );
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$main_image_obj['url'].'"></div>';
 		$main_url = $main_image_obj['url'];
     $thumb_url = $main_image_obj['sizes']['thumbnail'];
 	endif;
+
 	// Img porteur de projet
 	$portrait_pdp = get_field('portrait');
   // Mail porteur	de projet

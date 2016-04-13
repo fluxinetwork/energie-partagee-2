@@ -26,6 +26,9 @@
         elseif(get_row_layout() == 'lien'):
 			require locate_template('/app/inc/inc_projet/fluxi-content/elements/bloc-lien.php');
 
+		elseif(get_row_layout() == 'publications'):
+			require locate_template('/app/inc/inc_projet/fluxi-content/elements/bloc-publications.php');
+
 		elseif(get_row_layout() == 'accordeon'):
 			require locate_template('/app/inc/inc_projet/fluxi-content/elements/bloc-accordeon.php');
 

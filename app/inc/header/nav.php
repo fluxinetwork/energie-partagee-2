@@ -89,9 +89,9 @@
     </div>
   </a>
   <ul class="navbar__id__social">
-    <li><a href="https://www.facebook.com/pages/Energie-Partag%C3%A9e/376460652377147" class="social--face" target="_blank"><i class="icon-facebook_26"></i></a></li>
+    <li><a href="https://www.facebook.com/EnergiePartagee.org" class="social--face" target="_blank"><i class="icon-facebook_26"></i></a></li>
     <li><a href="https://twitter.com/EnergiePartagee" class="social--twit" target="_blank"><i class="icon-twitter_26"></i></a></li>
-    <li><a href="https://www.youtube.com/channel/UC0MX3OTOOwM5V20L3FZ5wwg" class="social--yout" target="_blank"><i class="icon-youtube_26"></i></a></li>
+    <li><a href="https://www.youtube.com/user/EnergiePartagee" class="social--yout" target="_blank"><i class="icon-youtube_26"></i></a></li>
   </ul>  
 </div>
 <form method="get" id="nav__search" class="nav__search" action="<?php bloginfo('url'); ?>/">

@@ -4,9 +4,9 @@
 	<div class="header-bloc">
 		<h1 class="h1">404... oups</h1>
         <p>---</p>
-        <h1 class="h1"></h1>
+        <br><br>
         <p>___</p>
-        <h1 class="h1"></h1>
+        <br><br>
         <p> - </p>
     </div>
 

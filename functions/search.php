@@ -118,6 +118,11 @@ function ex_cpt_search( $query ) {
 		if (isset($_GET['cat']) && empty($_GET['cat'])) {
 			$query->set( 'cat', $_GET['cat'] );
 		}
+
+    if (isset($_GET['cpt']) && empty($_GET['cpt'])) {
+      //$query->set( 'post_type', array( $_GET['cpt'] ) );
+      echo 'banane';
+    }
 		
 		 /*$taxquery = array( );
     	 $query->set( 'tax_query', $taxquery );*/
