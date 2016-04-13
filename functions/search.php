@@ -105,27 +105,22 @@ add_filter('request', 'search_request_filter');
  * @param object $query  The original query.
  * @return object $query The amended query.
  */
-function ex_cpt_search( $query ) {
-	
+function ex_cpt_search( $query ) {	
 	
 	if ( is_admin() || ! $query->is_main_query() )
     return;
 
 	if ( $query->is_search ) {
-		//$query->set( 'cat', '-1, -19, -20' );
-		$query->set( 'post_type', array( 'post', 'page', 'projets' ) );
+			
+		if (isset($_GET['cpt']) && !empty($_GET['cpt'])) {
+		  	$query->set( 'post_type', array( $_GET['cpt'] ) );		  
+		}else{			
+			$query->set( 'post_type', array( 'post', 'page', 'projets' ) );
+		}		
 		
-		if (isset($_GET['cat']) && empty($_GET['cat'])) {
+		if (isset($_GET['cat']) && !empty($_GET['cat'])) {
 			$query->set( 'cat', $_GET['cat'] );
 		}
-
-    if (isset($_GET['cpt']) && empty($_GET['cpt'])) {
-      //$query->set( 'post_type', array( $_GET['cpt'] ) );
-      echo 'banane';
-    }
-		
-		 /*$taxquery = array( );
-    	 $query->set( 'tax_query', $taxquery );*/
 	
 		return $query;
 	}  

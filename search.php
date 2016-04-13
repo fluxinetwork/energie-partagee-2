@@ -32,16 +32,27 @@ $count = $wp_query->found_posts;
     <article class="fluxi-content wrap-search fluxi-wrap">    
       <div id="search-filters" class="filtres wrap-extend">
         <h5 class="h5">Filtrer les résultats</h5>
-
-        <?php 
-        $args = array (
-          'show_option_none' => 'Aucun filtre',
-          'hide_empty' => 1,
-          'exclude' => 1,
-          'orderby' => 'name'
-        );
-        wp_dropdown_categories($args);
-        ?>
+        
+         <!--<select class="postform" id="filter" name="filter">
+            <option value="cat=-1">Aucun filtre</option>
+            <option value="cpt=page">Pages</option>
+            <option value="cpt=projets">Projets</option>
+            <option value="cat=15">Actualités</option>            
+            <option value="cat=16">Evènements</option>
+            <option value="cat=20">Formations</option>
+            <option value="cat=17">Presse</option>            
+        </select> -->  
+        
+        <select class="postform" id="filter" name="filter">
+            <option value="-1">Aucun filtre</option>
+            <option value="page">Pages</option>
+            <option value="projets">Projets</option>
+            <option value="15">Actualités</option>            
+            <option value="16">Evènements</option>
+            <option value="20">Formations</option>
+            <option value="17">Presse</option>            
+        </select>  
+        
       </div> 
 
     	<ul class="searchresults">
@@ -58,7 +69,7 @@ $count = $wp_query->found_posts;
                   if($the_post_type == 'page'):
                     echo '<li class="tag"><a href="'.get_the_permalink().'">Page</a></li>';                          
                   elseif($the_post_type == 'projets'):
-                    echo '<li class="tag"><a href="'.get_the_permalink(5560).'">Projet</a></li>';                              
+                    echo '<li class="tag"><a href="'.get_the_permalink(357).'">Projets</a></li>';                              
                   endif;  
     
                   // Show category and link it                            
@@ -84,16 +95,11 @@ $count = $wp_query->found_posts;
               </a>   
 
               <?php 
-			          // Img               
-                  if ( has_post_thumbnail() ) {
-                      /*echo '<a class="searchresults__img" href="'.get_the_permalink().'">';
-                          the_post_thumbnail('medium');
-                      echo '</a>';*/
-                  }
+			       
                 // Description       
-      						if( get_field('google_description') ) : 
-      							echo '<p>'.get_field('google_description').'</p>';
-      						endif;
+      			if( get_field('google_description') ) : 
+      					echo '<p>'.get_field('google_description').'</p>';
+      			endif;
 			
               ?>
             </li>       
