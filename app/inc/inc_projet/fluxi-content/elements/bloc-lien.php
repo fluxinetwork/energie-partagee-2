@@ -47,7 +47,7 @@
 			echo '</a>';
 
 		elseif( $type_link == 'fichier-externe' || $type_link == 'fichier-interne' || $type_link == 'lien-mailto'):
-			$class_link = 'f-btn __big';
+			$class_link = 'f-btn--big';
 			echo '<a class="'.$class_link.'" href="'.$url_link.'" title="'.$texte_link.'" target="'.$target_link.'">';
 				echo $icon;
 				echo '<div>';

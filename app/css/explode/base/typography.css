@@ -25,7 +25,9 @@
   }
 }
 /* TRANSITIONS */
-h5, .h5, .s-title, .transition {
+h5,
+.h5,
+.s-title, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -86,6 +88,243 @@ h5, .h5, .s-title, .transition {
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
+/*------------------------------*\
+
+    #TYPOGRAPHY
+
+\*------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+​
+.bold {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+p, .p {
+  font-family: "avantgarde", Arial;
+  margin: 0;
+  padding: 0;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
+.h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child, .h5:first-child, .h6:first-child,
+p:first-child, .p:first-child {
+  margin-top: 0;
+}
+
+h1, .h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 830px) {
+  h1, .h1 {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h1, .h1 {
+    font-size: 3.8rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: #122c33;
+}
+@media screen and (min-width: 1000px) {
+  h2,
+  .h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.h2 {
+  margin-top: 5rem;
+}
+
+.description, .h2 {
+  color: #777777;
+  font-weight: normal;
+}
+
+h3, .h3 {
+  font-size: 2rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: #122c33;
+}
+@media screen and (min-width: 1000px) {
+  h3, .h3 {
+    font-size: 2.2rem;
+  }
+}
+h3 + p, .h3 + p {
+  margin-top: 3rem;
+}
+
+.h3 {
+  margin-top: 6rem;
+}
+
+h4,
+.h4,
+.card__title {
+  font-size: 1.7rem;
+  line-height: 1.23;
+}
+@media screen and (min-width: 1000px) {
+  h4,
+  .h4,
+  .card__title {
+    font-size: 1.7rem;
+  }
+}
+
+.h4 {
+  color: #122c33;
+  font-weight: normal;
+  margin-top: 5rem;
+}
+
+h5,
+.h5,
+.s-title {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #122c33;
+  text-transform: uppercase;
+  color: #122c33;
+}
+@media screen and (min-width: 1000px) {
+  h5,
+  .h5,
+  .s-title {
+    font-size: 1.6rem;
+  }
+}
+
+.h5 {
+  margin-top: 4rem;
+}
+
+.s-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h6,
+.h6 {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  color: #777777;
+  font-weight: normal;
+}
+@media screen and (min-width: 1000px) {
+  h6,
+  .h6 {
+    font-size: 1.6rem;
+  }
+}
+
+p,
+.p,
+.p-ss,
+.legend,
+.accordion__content ul,
+ul.list,
+.fluxi-content ul:not(.social) {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  font-family: "Georgia", serif;
+  color: #555555;
+}
+@media screen and (min-width: 600px) {
+  p,
+  .p,
+  .p-ss,
+  .legend,
+  .accordion__content ul,
+  ul.list,
+  .fluxi-content ul:not(.social) {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 830px) {
+  p,
+  .p,
+  .p-ss,
+  .legend,
+  .accordion__content ul,
+  ul.list,
+  .fluxi-content ul:not(.social) {
+    font-size: 1.5rem;
+    line-height: 1.55;
+  }
+}
+@media screen and (min-width: 1000px) {
+  p,
+  .p,
+  .p-ss,
+  .legend,
+  .accordion__content ul,
+  ul.list,
+  .fluxi-content ul:not(.social) {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+p,
+.p-ss,
+.legend {
+  font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
+}
+
+.legend {
+  color: #777777;
+}
+
+.accordion__content ul,
+.list,
+.fluxi-content ul:not(.social) {
+  margin-bottom: 0;
+  margin-top: 2rem;
+  padding-left: 4rem;
+  max-width: 80%;
+}
+
+blockquote {
+  margin: 5rem 0;
+}
+blockquote .blockquote {
+  font-size: 2rem;
+  line-height: 1.46;
+  font-family: "avantgarde", Arial;
+  color: #eb6c1d;
+  font-weight: bold;
+}
+@media screen and (min-width: 1000px) {
+  blockquote .blockquote {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .s-title {
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+}
 /*@import url(https://fonts.googleapis.com/css?family=PT+Sans);*/
 @font-face {
   font-family: 'avantgarde';
@@ -293,195 +532,4 @@ h5, .h5, .s-title, .transition {
 
 .icon-youtube_40:before {
   content: "\e925";
-}
-
-/*------------------------------*\
-
-    #TYPOGRAPHY
-
-\*------------------------------*/
-html {
-  font-size: 62.5%;
-}
-
-​
-.bold {
-  font-weight: 700;
-}
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "avantgarde", Arial;
-  margin: 0;
-  padding: 0;
-}
-
-h1, .h1 {
-  font-size: 2.6rem;
-  line-height: 1.2;
-}
-@media screen and (min-width: 830px) {
-  h1, .h1 {
-    font-size: 3.4rem;
-  }
-}
-@media screen and (min-width: 1000px) {
-  h1, .h1 {
-    font-size: 3.8rem;
-  }
-}
-
-.h1 {
-  margin-bottom: 2rem;
-}
-
-h2, .h2 {
-  font-size: 1.6rem;
-  line-height: 1.65;
-  color: #122c33;
-}
-@media screen and (min-width: 1000px) {
-  h2, .h2 {
-    font-size: 1.8rem;
-  }
-}
-
-.h2 {
-  margin-bottom: 3rem;
-  margin-top: 5rem;
-}
-
-.description, .h2 {
-  color: #777777;
-  font-weight: normal;
-  margin-bottom: 2rem;
-}
-
-h3, .h3 {
-  font-size: 2rem;
-  line-height: 1.45;
-  text-transform: uppercase;
-  color: #122c33;
-}
-@media screen and (min-width: 1000px) {
-  h3, .h3 {
-    font-size: 2.2rem;
-  }
-}
-
-.h3 {
-  margin-bottom: 3rem;
-  margin-top: 6rem;
-}
-
-h4, .h4, .card__title {
-  font-size: 1.7rem;
-  line-height: 1.23;
-}
-@media screen and (min-width: 1000px) {
-  h4, .h4, .card__title {
-    font-size: 1.7rem;
-  }
-}
-
-.h4 {
-  color: #122c33;
-  font-weight: normal;
-  margin-bottom: 3rem;
-  margin-top: 5rem;
-}
-
-h5, .h5, .s-title {
-  font-size: 1.4rem;
-  line-height: 1.2;
-  color: #122c33;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  color: #122c33;
-}
-@media screen and (min-width: 1000px) {
-  h5, .h5, .s-title {
-    font-size: 1.6rem;
-  }
-}
-
-.h5 {
-  margin-bottom: 2rem;
-  margin-top: 4rem;
-}
-
-.s-title {
-  margin-bottom: 3rem;
-  text-align: center;
-  letter-spacing: 0.05rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h6, .h6 {
-  font-size: 1.4rem;
-  line-height: 1.25;
-  color: #777777;
-  font-weight: normal;
-}
-@media screen and (min-width: 1000px) {
-  h6, .h6 {
-    font-size: 1.6rem;
-  }
-}
-
-p, .p, .p-ss, .legend {
-  font-size: 1.3rem;
-  line-height: 1.45;
-  font-family: "Georgia", serif;
-  color: #555555;
-}
-@media screen and (min-width: 600px) {
-  p, .p, .p-ss, .legend {
-    font-size: 1.4rem;
-    line-height: 1.5;
-  }
-}
-@media screen and (min-width: 830px) {
-  p, .p, .p-ss, .legend {
-    font-size: 1.5rem;
-    line-height: 1.55;
-  }
-}
-@media screen and (min-width: 1000px) {
-  p, .p, .p-ss, .legend {
-    font-size: 1.6rem;
-    line-height: 1.6;
-  }
-}
-
-.p-ss, .legend {
-  font-family: "Roboto", sans-serif;
-}
-
-.legend {
-  color: #777777;
-}
-
-blockquote {
-  margin: 0;
-}
-blockquote .blockquote {
-  font-size: 2rem;
-  line-height: 1.46;
-  font-family: "avantgarde", Arial;
-  color: #eb6c1d;
-  font-weight: bold;
-}
-@media screen and (min-width: 1000px) {
-  blockquote .blockquote {
-    font-size: 2.2rem;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .s-title {
-    margin-bottom: 6rem;
-    text-align: center;
-  }
 }

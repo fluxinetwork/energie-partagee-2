@@ -115,40 +115,40 @@
   background: #e9af00;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #d09c00;
+  background: #b68900;
 }
 .c-solai .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #d09c00;
+  background: #b68900;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #b68900;
+  background: #836200;
 }
 .c-solai .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #b68900;
+  background: #836200;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #9d7600;
+  background: #503c00;
 }
 .c-solai .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #9d7600;
+  background: #503c00;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #836200;
+  background: #1d1600;
 }
 .c-solai .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #836200;
+  background: #1d1600;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #6a4f00;
+  background: black;
 }
 .c-solai .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #6a4f00;
+  background: black;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: #503c00;
+  background: black;
 }
 .c-solai .repartition .financer.citoyen:nth-child(7) .dot {
-  background: #503c00;
+  background: black;
 }
 .c-solai .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -243,40 +243,40 @@
   background: #5ab1bb;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #49a7b2;
+  background: #4296a0;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #49a7b2;
+  background: #4296a0;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #4296a0;
+  background: #33747c;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #4296a0;
+  background: #33747c;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #3b858e;
+  background: #245258;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #3b858e;
+  background: #245258;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #33747c;
+  background: #153134;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #33747c;
+  background: #153134;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #2c636a;
+  background: #060f10;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #2c636a;
+  background: #060f10;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: #245258;
+  background: black;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(7) .dot {
-  background: #245258;
+  background: black;
 }
 .c-eolie .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -371,40 +371,40 @@
   background: #5268b9;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #465bac;
+  background: #3e529a;
 }
 .c-micro .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #465bac;
+  background: #3e529a;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #3e529a;
+  background: #303e75;
 }
 .c-micro .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #3e529a;
+  background: #303e75;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #374888;
+  background: #212b51;
 }
 .c-micro .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #374888;
+  background: #212b51;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #303e75;
+  background: #12182d;
 }
 .c-micro .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #303e75;
+  background: #12182d;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #283563;
+  background: #030509;
 }
 .c-micro .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #283563;
+  background: #030509;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: #212b51;
+  background: black;
 }
 .c-micro .repartition .financer.citoyen:nth-child(7) .dot {
-  background: #212b51;
+  background: black;
 }
 .c-micro .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -499,40 +499,40 @@
   background: #83ab00;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #6f9200;
+  background: #5c7800;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #6f9200;
+  background: #5c7800;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #5c7800;
+  background: #354500;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #5c7800;
+  background: #354500;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #485f00;
+  background: #0e1200;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #485f00;
+  background: #0e1200;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #354500;
+  background: black;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #354500;
+  background: black;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #212c00;
+  background: black;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #212c00;
+  background: black;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: #0e1200;
+  background: black;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(7) .dot {
-  background: #0e1200;
+  background: black;
 }
 .c-bioma .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -627,40 +627,40 @@
   background: #e7511e;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #d54717;
+  background: #be3f14;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #d54717;
+  background: #be3f14;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #be3f14;
+  background: #90300f;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #be3f14;
+  background: #90300f;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #a73812;
+  background: #62210a;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #a73812;
+  background: #62210a;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #90300f;
+  background: #341105;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #90300f;
+  background: #341105;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #79280d;
+  background: #050201;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #79280d;
+  background: #050201;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: #62210a;
+  background: black;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(7) .dot {
-  background: #62210a;
+  background: black;
 }
 .c-geoth .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -755,40 +755,40 @@
   background: #b7115b;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #a00f4f;
+  background: #880d44;
 }
 .c-econo .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #a00f4f;
+  background: #880d44;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #880d44;
+  background: #5a082d;
 }
 .c-econo .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #880d44;
+  background: #5a082d;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #710a38;
+  background: #2b0415;
 }
 .c-econo .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #710a38;
+  background: #2b0415;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #5a082d;
+  background: black;
 }
 .c-econo .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #5a082d;
+  background: black;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #420621;
+  background: black;
 }
 .c-econo .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #420621;
+  background: black;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: #2b0415;
+  background: black;
 }
 .c-econo .repartition .financer.citoyen:nth-child(7) .dot {
-  background: #2b0415;
+  background: black;
 }
 .c-econo .repartition #segment-prive-1 {
   background: #d9d9d9;

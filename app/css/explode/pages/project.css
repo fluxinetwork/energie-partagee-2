@@ -237,7 +237,7 @@
   max-width: 230px;
   border-radius: 50%;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .action-projet__box .box-asy__clic, .testimony .box-asy__clic {
   margin-top: 4rem;
@@ -298,7 +298,7 @@
 
 .infosbloc {
   background: #f2f2f2;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .infosbloc .pointe--up {
   position: absolute;
@@ -548,6 +548,7 @@
 /* TESTIMONY */
 .testimony {
   color: #fff;
+  margin-top: 3rem;
 }
 .testimony p {
   position: relative;

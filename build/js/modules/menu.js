@@ -17,6 +17,9 @@
 	  pp_nav();
 	});
 
+	// HIGHLIGHT CURRENT PARENT PAGE
+
+		$('.current_page_item').parent().parent().prev().addClass('is-active');
 
 	// PRIORITY PATTERN NAV
 

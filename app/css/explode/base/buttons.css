@@ -300,7 +300,8 @@
   text-transform: uppercase;
   width: 100%;
 }
-.link-cta i, .link-cta span {
+.link-cta i,
+.link-cta span {
   display: inline-block;
   vertical-align: middle;
 }
@@ -321,6 +322,10 @@
 .minicard:hover::before {
   transform: scale(0.95) translateY(5%);
   filter: blur(1px);
+}
+.minicard .link {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 /* EDIT LINK FOR ADMINS */

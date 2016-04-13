@@ -23,7 +23,7 @@
   }
 }
 /* TRANSITIONS */
-.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after, .accordion .accordion__head, .isogrid .main-isogrid .item, .transition {
+.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .f-btn--txt .txt, .f-btn--big .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after, .f-btn--txt .txt::after, .f-btn--big .txt::after, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -84,7 +84,7 @@
 /* Box - Border */
 /* Typos */
 /* Typos sizes */
-.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt {
+.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .f-btn--txt .txt, .f-btn--big .txt {
   position: relative;
   font-family: "avantgarde", Arial;
   font-size: 1.2rem;
@@ -92,7 +92,7 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after {
+.fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after, .f-btn--txt .txt::after, .f-btn--big .txt::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -101,15 +101,156 @@
   height: 1px;
   background: #65aa04;
 }
-.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .fluxi-content .accordion__content a:hover::after, .f-btn .txt:hover::after {
+.fluxi-content p a:hover::after, .fluxi-content .list li a:hover::after, .fluxi-content .accordion__content a:hover::after, .f-btn .txt:hover::after, .f-btn--txt .txt:hover::after, .f-btn--big .txt:hover::after {
   width: 100%;
 }
 @media screen and (min-width: 600px) {
-  .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt {
+  .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .f-btn--txt .txt, .f-btn--big .txt {
     font-size: 1.4rem;
   }
 }
 
+/*------------------------------*\
+
+    #CLASS
+
+\*------------------------------*/
+/* ANIMATION */
+@keyframes slideUpOpacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* TRANSITIONS */
+.fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .f-btn--txt .txt, .f-btn--big .txt, .fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after, .f-btn--txt .txt::after, .f-btn--big .txt::after, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* CLEARFIX */
+.clearfix, .fluxi-content .img__left, .fluxi-content .img__right, .fluxi-content .accordion__content {
+  *zoom: 1;
+}
+.clearfix:before, .fluxi-content .img__left:before, .fluxi-content .img__right:before, .fluxi-content .accordion__content:before, .clearfix:after, .fluxi-content .img__left:after, .fluxi-content .img__right:after, .fluxi-content .accordion__content:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after, .fluxi-content .img__left:after, .fluxi-content .img__right:after, .fluxi-content .accordion__content:after {
+  clear: both;
+}
+
+/* LIST RESET */
+.isogrid .main-isogrid, .list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* BASIC STATES */
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-none {
+  display: none !important;
+}
+
+.is-muted {
+  opacity: 0.3;
+}
+
+.has-pointer {
+  cursor: pointer;
+}
+
+.al-c {
+  text-align: center;
+}
+
+.img-reponsive {
+  width: 100%;
+}
+
+.anim-out {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* BREAKPOINTS */
+/* COLORS */
+/* Layout */
+/* Nav */
+/* Box - Border */
+/* Typos */
+/* Typos sizes */
+/*------------------------------*\
+
+	#BOX-SPECIAL
+	
+\*------------------------------*/
+.publication {
+  position: relative;
+  padding: 4rem;
+  border-radius: 3px;
+}
+.publication h4:first-child,
+.publication p:first-child {
+  margin-top: 0;
+}
+.publication h4 {
+  margin-top: 2rem;
+}
+.publication p {
+  margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: inherit;
+}
+
+.publication .box-asy__left img {
+  width: 100%;
+  max-width: 230px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.publication .box-asy__clic {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 830px) {
+  .publication h4 {
+    margin-top: 4rem;
+  }
+  .publication p {
+    margin-top: 1.33333rem;
+  }
+
+  .publication {
+    display: flex;
+  }
+  .publication .box-asy__left {
+    flex: none;
+    padding-right: 4rem;
+    width: 300px;
+  }
+  .publication .box-asy__left img {
+    max-width: 260px;
+    margin-bottom: 0;
+  }
+}
 .fluxi-wrap {
   background-color: #fff;
   margin: -40rem auto 10rem;
@@ -133,7 +274,7 @@
   margin-top: 5rem;
 }
 .fluxi-content .social {
-  margin: 0 0 4rem;
+  margin-top: 4rem;
 }
 .fluxi-content .social:after {
   border-top: 2px solid #f2f2f2;
@@ -143,8 +284,10 @@
   display: block;
   margin: 4rem 0 5rem;
 }
-.fluxi-content p {
-  margin-bottom: 3rem;
+.fluxi-content .social + h1,
+.fluxi-content .social + h2,
+.fluxi-content .social + h3 {
+  margin-top: 0;
 }
 .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a {
   font-family: "Georgia", serif;
@@ -152,12 +295,18 @@
   font-size: 1.6rem;
 }
 .fluxi-content .img__left, .fluxi-content .img__right, .fluxi-content .accordion__content {
-  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 .fluxi-content .img__left .img_mini, .fluxi-content .img__left .img_med, .fluxi-content .img__right .img_mini, .fluxi-content .img__right .img_med, .fluxi-content .accordion__content .img_mini, .fluxi-content .accordion__content .img_med {
   max-width: 156px;
   margin-right: 2rem;
   float: left;
+}
+.fluxi-content .img__left img, .fluxi-content .img__right img, .fluxi-content .accordion__content img {
+  border-radius: 3px;
+}
+.fluxi-content .img__left img + p, .fluxi-content .img__right img + p, .fluxi-content .accordion__content img + p {
+  margin-top: 0;
 }
 .fluxi-content .img__left p:last-child, .fluxi-content .img__right p:last-child, .fluxi-content .accordion__content p:last-child {
   margin-bottom: 0;
@@ -168,16 +317,15 @@
   float: right;
 }
 .fluxi-content .list {
-  margin: 3rem 0 4rem 4rem;
-  padding: 0;
+  padding-left: 4rem;
   font-family: "Georgia", serif;
   color: #555555;
 }
 .fluxi-content .list li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .fluxi-content .lightbox .figure {
-  margin-bottom: 4rem;
+  margin: 6rem 0;
 }
 .fluxi-content .lightbox .legend {
   padding: 0;
@@ -212,36 +360,43 @@ blockquote .blockquote {
   margin-bottom: 0;
 }
 
-.f-btn {
+.f-btn, .f-btn--txt, .f-btn--big {
   margin-bottom: 3.5rem;
   display: flex;
   width: 100%;
 }
-.f-btn i {
+.f-btn i, .f-btn--txt i, .f-btn--big i {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   align-self: center;
   font-size: 3.2rem;
   color: #65aa04;
 }
-.f-btn div {
+.f-btn i:hover, .f-btn--txt i:hover, .f-btn--big i:hover {
+  transform: scale(1.05);
+}
+.f-btn div, .f-btn--txt div, .f-btn--big div {
   align-self: center;
   padding-left: 1rem;
 }
-.f-btn .legend {
+.f-btn .legend, .f-btn--txt .legend, .f-btn--big .legend {
   font-weight: normal;
   text-transform: none;
   display: none;
 }
 
-.f-btn.__txt div {
+.f-btn--txt div {
   padding-left: 0;
 }
 
-.f-btn.__big i {
+.f-btn--big i {
   font-size: 3.2rem;
   color: #b3b3b3;
 }
-.f-btn.__big div {
+.f-btn--big div {
   padding-left: 1rem;
+}
+.f-btn--big .legend {
+  margin-top: 0;
 }
 
 .fluxi-content .button.__btn {
@@ -253,8 +408,7 @@ blockquote .blockquote {
 
 .clikable.wide {
   position: relative;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin: 6rem 0;
   text-align: center;
 }
 .clikable.wide .p-ss {
@@ -317,12 +471,18 @@ blockquote .blockquote {
 .clikarde .clikarde__item:last-child {
   margin-bottom: 0;
 }
+.clikarde p {
+  margin-top: 0;
+}
+.clikarde .link {
+  margin-top: 4rem;
+}
 
 .accordion .accordion__head {
   border-bottom: 2px solid #f2f2f2;
+  border-top: 2px solid #f2f2f2;
   font-weight: normal;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
   cursor: pointer;
   margin-top: 0;
 }
@@ -335,15 +495,22 @@ blockquote .blockquote {
   vertical-align: middle;
 }
 .accordion .accordion__content {
-  padding-top: 1rem;
+  padding: 4rem 0;
+  margin-top: 0;
   display: none;
 }
-.accordion .accordion__content .h6 {
-  padding: 0 0 2rem;
-  margin: 0;
+.accordion .accordion__content h6 {
+  margin: 3rem 0;
 }
-.accordion .accordion__content ul, .accordion .accordion__content ol {
+.accordion .accordion__content h6:first-child {
+  margin-top: 0;
+}
+.accordion .accordion__content ul,
+.accordion .accordion__content ol {
   margin: 0 0 3rem 3rem;
+}
+.accordion + .accordion .accordion__head {
+  border-top: 0;
 }
 
 .accordion.open .accordion__head i {
@@ -401,6 +568,23 @@ blockquote .blockquote {
   padding: 0.6em;
   position: relative;
   top: 0;
+}
+
+.wrap-publication {
+  margin-top: 4rem;
+}
+.wrap-publication .f-btn--big {
+  margin: 2rem 0 0 4rem;
+}
+
+.publication {
+  background: #f2f2f2;
+}
+.publication .box-asy__left {
+  max-width: 220px;
+}
+.publication img {
+  border-radius: 3px !important;
 }
 
 .button.f_cat_0 {
@@ -569,19 +753,19 @@ blockquote .blockquote {
 }
 
 @media screen and (min-width: 300px) {
-  .f-btn.__big i {
+  .f-btn--big i {
     font-size: 6.4rem;
     color: #b3b3b3;
   }
-  .f-btn.__big div {
+  .f-btn--big div {
     padding-left: 2rem;
   }
-  .f-btn.__big .legend {
+  .f-btn--big .legend {
     display: none;
   }
 }
 @media screen and (min-width: 600px) {
-  .f-btn .legend {
+  .f-btn .legend, .f-btn--txt .legend, .f-btn--big .legend {
     display: block;
   }
 

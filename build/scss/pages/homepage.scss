@@ -40,8 +40,7 @@
 		font-size:5rem;	
 		display:block;
 		font-weight:bold;
-		line-height:1;		
-		margin-right: $gutter/2;		
+		line-height:1;			
 	}	
 
 	.key-nums__item__txt {
@@ -130,7 +129,6 @@
 	  }
 	}
 
-
 	.key-nums__item {
 		flex: 1 0 100%;
 	}	
@@ -170,6 +168,7 @@
 		.box__item__img {
 			width: 120px;
 			margin-bottom: $gutter/4;
+			margin-right: 0;
 
 			img {
 				margin: 0 auto;

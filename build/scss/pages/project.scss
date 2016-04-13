@@ -31,7 +31,7 @@
 .infosbloc {
 	@extend %box-infos;
  	background: $c-bglight;
- 	margin-top: $gutter*0.75;
+ 	margin-top: $gutter*0.5;
 
  	.pointe--up {
  		position: absolute;
@@ -339,6 +339,7 @@
 	@extend %box-asymetrique;
 	@extend %box--extend;
 	color:#fff;	
+	margin-top: $space*0.3;
 
 	p {
 		position:relative;

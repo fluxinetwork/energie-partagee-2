@@ -121,7 +121,6 @@
   display: block;
   font-weight: bold;
   line-height: 1;
-  margin-right: 2rem;
 }
 .key-nums .key-nums__item__txt {
   flex: 1 0 auto;
@@ -241,6 +240,7 @@
   .steps-intro .box__item__img {
     width: 120px;
     margin-bottom: 1rem;
+    margin-right: 0;
   }
   .steps-intro .box__item__img img {
     margin: 0 auto;

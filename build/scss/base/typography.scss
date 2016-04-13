@@ -1,5 +1,149 @@
 @import "../utils/_all.scss";
 
+/*------------------------------*\
+
+    #TYPOGRAPHY
+
+\*------------------------------*/
+
+html {
+    font-size: 62.5%;
+}​
+
+.bold {
+	font-weight: 700;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6,
+p, .p {
+    font-family: $main-font;
+    margin: 0;
+    padding: 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h1,.h1{	
+	@include font-size($h1-font-sizes);	
+}
+
+h2,
+.h2{	
+	@include font-size($h2-font-sizes);   
+	color:$c-dark;
+}
+.h2{	
+	@extend .description;
+	margin-top: $space/2;
+}
+.description{
+	color:$c-textlight;
+	font-weight:normal;
+}
+
+h3,.h3{ 
+    @include font-size($h3-font-sizes);
+	text-transform:uppercase;
+	color:$c-dark;	 
+
+    + p {
+        margin-top: $space*0.3;
+    }
+}
+.h3{ 
+   margin-top:	$space*0.6;
+}
+
+h4,
+.h4,
+.card__title{ 
+    @include font-size($h4-font-sizes);	
+}
+.h4{
+	color:$c-dark;	 
+	font-weight:normal;
+	margin-top:$space/2;
+}
+
+h5,
+.h5,
+.s-title { 
+    @extend %transition;
+    @include font-size($h5-font-sizes);
+	color:$c-dark;
+	text-transform:uppercase;
+	color:$c-dark;	 
+}
+
+.h5 {
+	margin-top: $space*0.4;
+}
+.s-title{ 
+    margin-bottom:$space*0.2;
+	text-align:center;
+    letter-spacing: 0.05rem;
+    @include font-smoothing();
+}
+
+h6,
+.h6{ 
+    @include font-size($h6-font-sizes);
+    color:$c-textlight;
+    font-weight: normal; 
+}
+
+p,
+.p,
+.p-ss,
+.legend,
+.accordion__content ul,
+ul.list,
+.fluxi-content ul:not(.social) {
+	@include font-size($p-font-sizes); 
+	font-family: $txt-fontserif;
+	color:$c-text;
+}
+p,
+.p-ss,
+.legend{
+    font-family: $txt-font;	
+    margin-top: $space*0.2;
+}
+.legend{
+	color:$c-textlight;
+}
+
+.accordion__content ul,
+.list,
+.fluxi-content ul:not(.social) {
+    margin-bottom: 0;
+    margin-top: $space*0.2;
+    padding-left: $gutter;
+    max-width: 80%;
+}
+
+blockquote{
+    margin: $space/2 0;
+
+    .blockquote{
+        @include font-size($blockquote-font-sizes);
+        font-family: $main-font;
+        color: $c-focus;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: $bp--small) {
+    .s-title{ 
+        margin-bottom:$space*0.6;
+        text-align:center;
+    }
+}
+
+
 /*@import url(https://fonts.googleapis.com/css?family=PT+Sans);*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700);
 @font-face {
@@ -29,9 +173,9 @@
   font-family: 'lg';
   src: url("../../../fonts/lightgalerie/lg.eot?n1z373");
   src: url("../../../fonts/lightgalerie/lg.eot?#iefixn1z373") format("embedded-opentype"),
-  	url("../../../fonts/lightgalerie/lg.woff?n1z373") format("woff"),
-  	url("../../../fonts/lightgalerie/lg.ttf?n1z373") format("truetype"),
-  	url("../../../fonts/lightgalerie/lg.svg?n1z373#lg") format("svg");
+    url("../../../fonts/lightgalerie/lg.woff?n1z373") format("woff"),
+    url("../../../fonts/lightgalerie/lg.ttf?n1z373") format("truetype"),
+    url("../../../fonts/lightgalerie/lg.svg?n1z373#lg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -187,119 +331,4 @@
 }
 .icon-youtube_40:before {
     content: "\e925";
-}
-
-/*------------------------------*\
-
-    #TYPOGRAPHY
-
-\*------------------------------*/
-
-html {
-    font-size: 62.5%;
-}​
-
-.bold {
-	font-weight: 700;
-}
-
-h1,h2,h3,h4,h5,h6,
-.h1,.h2,.h3,.h4,.h5,.h6{
-    font-family: $main-font;
-    margin: 0;
-    padding: 0;
-}
-
-h1,.h1{	
-	@include font-size($h1-font-sizes);	
-}
-.h1{	
-	margin-bottom:$gutter/2;	
-}
-
-h2,.h2{	
-	@include font-size($h2-font-sizes);   
-	color:$c-dark;	
-}
-.h2{	
-	@extend .description;
-	margin-bottom:$space*0.3;	
-	margin-top:$space/2;
-}
-.description{
-	color:$c-textlight;
-	font-weight:normal;
-	margin-bottom:$space*0.2;	
-}
-h3,.h3{ 
-    @include font-size($h3-font-sizes);
-	text-transform:uppercase;
-	color:$c-dark;	 
-}
-.h3{ 
-   margin-bottom:	$space*0.3;	
-   margin-top:	$space*0.6;
-}
-h4,.h4,.card__title{ 
-    @include font-size($h4-font-sizes);	
-}
-.h4{
-	color:$c-dark;	 
-	font-weight:normal;
-	margin-bottom:	$space*0.3;
-	margin-top:$space/2;
-}
-
-h5,.h5,.s-title{ 
-    @extend %transition;
-    @include font-size($h5-font-sizes);
-	color:$c-dark;
-	text-transform:uppercase;
-	margin-bottom:$space*0.6;
-	color:$c-dark;	 
-}
-
-.h5 {
-	margin-bottom:$space*0.2;
-	margin-top: $space*0.4;
-}
-.s-title{ 
-	margin-bottom:$space*0.3;
-	text-align:center;
-    letter-spacing: 0.05rem;
-    @include font-smoothing();
-}
-
-h6,.h6{ 
-    @include font-size($h6-font-sizes);
-    color:$c-textlight;
-    font-weight: normal; 
-}
-
-p,.p,.p-ss,.legend{
-	@include font-size($p-font-sizes); 
-	font-family: $txt-fontserif;
-	color:$c-text;
-}
-.p-ss,.legend{
-    font-family: $txt-font;	
-}
-.legend{
-	color:$c-textlight;
-}
-blockquote{
-    margin:0;    
-    .blockquote{
-        @include font-size($blockquote-font-sizes);
-        font-family: $main-font;
-        color: $c-focus;
-        font-weight: bold;
-    }
-}
-
-@media screen and (min-width: $bp--small) {
-    .s-title{ 
-        margin-bottom:$space*0.6;
-        text-align:center;
-    }
 }

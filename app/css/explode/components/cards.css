@@ -281,9 +281,16 @@
   background: linear-gradient(40deg, rgba(0, 0, 0, 0.3) 0%, transparent 50%);
   z-index: 0;
 }
+.card-project .p-ss {
+  margin-top: 0;
+}
 
 .p-details {
   border-radius: 3px;
+}
+
+.p-details__equi {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 600px) {
