@@ -1,0 +1,23 @@
+@import "../utils/_all.scss";
+@import "../components/lib/c-buttons.scss";
+
+
+
+.f-btn__prev{
+	@extend %f-btn;
+	i{
+		transform:rotate(180deg);	
+	}
+}
+.f-btn__next{
+	@extend %f-btn;
+}
+.suggestion-posts{
+	display:flex;
+}
+@media screen and (min-width: $bp--small) {	
+	
+}
+@media screen and (min-width: $bp--medium) {	
+	
+}

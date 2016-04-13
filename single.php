@@ -33,6 +33,9 @@
 	endif;
 
 	$the_content = get_the_content();
+	
+	$prev_post = get_adjacent_post( true, '', true ); 
+	$next_post = get_adjacent_post( true, '', false );
 
   ?>
   <header class="header-bloc">    
@@ -74,13 +77,25 @@
 
 				if($the_content):
 					echo '<div class="holder-old">'.$the_content.'</div>';
-				endif; 
+				endif;
+				
+				// Suggestion d'articles
+				if ( !empty( $prev_post ) || !empty( $next_post )):
+					echo '<aside class="suggestion-posts">';
+						if ( !empty( $prev_post ) ): 
+							echo '<a class="f-btn__prev" href="'.get_permalink( $prev_post->ID ).'" title="'.$prev_post->post_title.'"><i class="icon-chevronright_32"></i><div><span class="txt">'.$prev_post->post_title.'</span></div></a>';							
+						 endif;
+						 
+						 if ( !empty( $next_post ) ):
+							echo '<a class="f-btn__next" href="'.get_permalink( $next_post->ID ).'" title="'.$next_post->post_title.'"><div><span class="txt">'.$next_post->post_title.'</span></div><i class="icon-chevronright_32"></i></a>';
+						 endif;
+					 echo '</aside>';
+				endif; 	 
 		   		
 		   	echo '</article>';
-		endif; 
-		   
+		endif; 		
 	?>
-  
+    
   <?php endwhile; endif; ?>
 </section>
 <?php get_footer(); ?>
