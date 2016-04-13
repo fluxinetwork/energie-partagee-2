@@ -8,11 +8,6 @@
 .actualites {
 	.fluxi-content{
 		padding-bottom: $gutter*1.5;
-
-		.description{
-			padding-left:$gutter;
-			padding-right:$gutter;
-		}
 	}
 	.fluxi-wrap {
 		padding: 0;
@@ -29,6 +24,9 @@
 	.card-news--expand {
 		@include margin(null $gutter);
 	}
+	.fluxi-content--cat{
+		padding-top:$gutter*1.5;
+	}	
 }
 
 .wrap-pad {

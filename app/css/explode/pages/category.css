@@ -92,10 +92,6 @@
 .actualites .fluxi-content {
   padding-bottom: 6rem;
 }
-.actualites .fluxi-content .description {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
 .actualites .fluxi-wrap {
   padding: 0;
   padding-top: 1px;
@@ -109,6 +105,9 @@
 .actualites .card-news--expand {
   margin-right: 4rem;
   margin-left: 4rem;
+}
+.actualites .fluxi-content--cat {
+  padding-top: 6rem;
 }
 
 .wrap-pad {
