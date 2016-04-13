@@ -3,14 +3,14 @@
   <ul class="nav__primary no-pp">
   
     <?php if ( is_user_logged_in() ) :  ?>
-      <li class="nav__item"><span class="nav__item__title">Espace adhérent</span>
+      <li class="nav__item"><span class="nav__item__title">Espace adhérents</span>
         <ul class="nav__dropdown">
           <span class="container">              
             <?php 
               wp_list_pages( array(
                 'title_li' => '',
                 'depth'    => 1,
-                'child_of' => get_id_by_slug('espace-adherent')
+                'child_of' => get_id_by_slug('espace-adherents')
               ));
             ?>
           </span>

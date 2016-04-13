@@ -63,7 +63,7 @@
 					<?php
 				$loop++;
 				endwhile;
-				echo '</div>';
+				
 			else:
 				if( have_rows('elements_page') ):
 					echo '<article class="wrap-n fluxi-content--cat">';
