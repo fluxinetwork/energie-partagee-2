@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
 
 	require('load-grunt-tasks')(grunt);
-	var sassMode = 'explode';
+	var sassMode = 'main';
 
 	grunt.initConfig({
 
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 	    uglify: {
 			main: {
 		        files: {
-		            'app/js/main.min.js': ['build/js/main.js']
+		            'app/js/main.min.js': ['app/js/main.js']
 		        }
 		    },
 		    full: {
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
 	    	        sourcemap: 'none'
 	    		},
 	            files: {
-	                'app/css/main.css': 'build/css/main.scss'
+	                'app/css/main.css': 'build/scss/main.scss'
 	            }
 	        }
 		},
@@ -111,7 +111,7 @@ module.exports = function (grunt) {
 
 	});
 
-	grunt.registerTask('css', ['sass:main', 'autoprefixer:main', 'cssmin:main']);
+	grunt.registerTask('css', ['sass:main', 'autoprefixer', 'cssmin:main']);
 	grunt.registerTask('js', ['jshint:all', 'concat:mainJS', 'concat:fullJS', 'uglify:full']);
 	grunt.registerTask('default', ['css', 'js']);
 
