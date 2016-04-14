@@ -27,6 +27,7 @@
 
 .tag {
 	@extend %transition;
+	font-family: $txt-font;
 	font-size:1.2rem;
 	border:2px solid #fff;
 	padding:$gutter/8 $gutter/4;
@@ -50,7 +51,7 @@
 	}
 
 	&.is-inactive {
-		border-color: transparent;
+		border-color: transparent!important;
 		background-color: rgba(#fff, 0.5);
 		cursor: default;
 

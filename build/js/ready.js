@@ -21,14 +21,15 @@ var FOO = {
 			// Video lightbox
 			$('.lightvideo').lightGallery();
 
-            // Anim section title 
-            /*$('section:not(.footer):not(.top-credibility) .s-title').addClass('is-hidden').waypoint(function(){
-                $(this.element).toggleClass('is-hidden');
-            }, {offset: '90%'});*/
+            // Wrap anim
+            $('.no-touch .wrap-anim').waypoint(function(){
+                $(this.element).toggleClass('ready-anim');
+            }, {offset: '85%'});
 
-            /*$('#courtcircuit_contact, #newsletter_footer').waypoint(function(){
-                $(this.element).focus();
-            }, {offset: '50%'});*/
+            // wrap suggestion
+            if ($('.suggestion').length) {
+                $('.fluxi-wrap').addClass('has-suggestion');
+            }
         }
     },
     home: {
@@ -50,10 +51,6 @@ var FOO = {
                     });
                 });
             }
-
-            $('.no-touch .top-credibility').waypoint(function(){
-                $(this.element).find('.wrap-n').toggleClass('ready-anim');
-            }, {offset: '85%'});
         }
     },
 	page: {
@@ -97,7 +94,7 @@ var FOO = {
 			
 			$('#search-filters').change(function() {
 				var filterType;
-              var filterVal = $('#search-filters #filter option:selected').val();
+                var filterVal = $('#search-filters #filter option:selected').val();
 			  	
 				if($.isNumeric(filterVal)){
 					filterType = 'cat';

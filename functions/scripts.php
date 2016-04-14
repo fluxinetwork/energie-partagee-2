@@ -136,7 +136,7 @@ function enqueue_scripts() {
     wp_register_script( 'lg-video', get_template_directory_uri() . '/app/js/vendors/galerie/lg-video.min.js', array(), null, true );
     wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
     
-    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.min.js', array('modernizr','jQuery','waypoint','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-video','lg-fullscreen','lg-thumbnail','isotope'), null, true );
+    wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('modernizr','jQuery','waypoint','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-video','lg-fullscreen','lg-thumbnail','isotope'), null, true );
     wp_register_script( 'js-full', get_template_directory_uri() . '/app/js/full.min.js', array('jQuery'), null, true );
     
     // Ajax

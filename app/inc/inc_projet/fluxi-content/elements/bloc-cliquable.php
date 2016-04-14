@@ -18,11 +18,13 @@
 			$texte_bouton = get_sub_field('texte_bouton');
 			$info_suppl = get_sub_field('info_suppl');
 			$open_new_page = get_sub_field('open_new_page');
+			$boxClass = 'box-asy';
 			// Suggestion page
 			$suggestion_page = get_sub_field('suggestion_page');
 			if($suggestion_page == 1)	:				
 				$head_cliquable = '<aside class="suggestion">';
 				$foot_cliquable = '</aside>';
+				$boxClass .= ' wrap-anim ready-anim';
 			else:
 				$head_cliquable = '<div class="clikable wide">';
 				$foot_cliquable = '</div>';
@@ -61,15 +63,13 @@
 			$texte_bouton = ($texte_bouton) ? '<a class="button green" href="'.$url_du_cliquable.'" target="'.$open_new_page.'"><i></i>'.$texte_bouton.'</a>' : '';
 			
 				echo $head_cliquable.
-							'<div class="wrap-space box">
-								<div class="box__half">															
-									<div class="holder-round">
-										<img src="'.$image_du_cliquable['sizes']['thumbnail'].'">
-									</div>
+							'<div class="'.$boxClass.'">
+								<div class="box-asy__left">													
+									<img src="'.$image_du_cliquable['sizes']['thumbnail'].'">
 								</div>
-								<div class="box__half">
-									<h4 class="clikable__title">'.$titre_du_cliquable.'</h4>
-									<p class="p-ss">'.$texte_du_cliquable.'</p>
+								<div class="box-asy__right">
+									<h4>'.$titre_du_cliquable.'</h4>
+									<p>'.$texte_du_cliquable.'</p>
 									'.($texte_bouton).'
 								</div>									
 							</div>'.

@@ -52,6 +52,12 @@
 			margin-bottom: $gutter;
 		}
 	}
+	
+	.box-asy__right {
+		text-align: center;
+		max-width: 500px;
+		margin: 0 auto;
+	}
 
 	.box-asy__clic {
 		margin-top: $gutter;
@@ -81,6 +87,11 @@
 				max-width: 260px;
 				margin-bottom: 0;
 			}
+		}
+
+		.box-asy__right {
+			@include flex(center flex-start, true);
+			text-align: left;
 		}
 	}
 

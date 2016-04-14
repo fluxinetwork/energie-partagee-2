@@ -56,6 +56,12 @@
 	}
 }
 
+.box-asy {
+	@extend %box-special;
+	@extend %box-asymetrique;
+	z-index: 2;
+}
+
 
 @media screen and (min-width: $bp--small) {	
 	.duo-card{

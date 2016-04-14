@@ -14,7 +14,7 @@
 
 .fluxi-wrap{
 	background-color:#fff;
-	margin:-$space*4 auto $space;
+	margin:-$space*4 auto $space auto;
 	min-height:200px;
 	position: relative;
 	
@@ -26,6 +26,9 @@
 	h2.description{
 		padding-top:$space*0.3;	
 	}
+
+	&.has-suggestion {
+		margin-bottom: 0;}
 }
 .single,
 .single-projets  {
@@ -408,11 +411,34 @@ $transition: all 0.3s $ease-out-quart;
 	background: $c-bglight;
 
 	.box-asy__left {
-		max-width: 220px;
+		max-width: 200px;
+		@include margin(null auto);
 	}
 
 	img {
 		border-radius: $radius!important;
+	}
+}
+
+.suggestion {
+	position: relative;
+	margin-top: $space*2;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -150%;
+		width: 500%;
+		height: 100%;
+		background: radial-grad($c-special, null, at bottom, 60%);
+	}
+
+	.box-asy {
+		@extend %box--extend;
+		position: relative;
+		background: $c-bglight;
+		border-radius: $radius;
 	}
 }
 

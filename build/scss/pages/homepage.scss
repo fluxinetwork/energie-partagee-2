@@ -71,13 +71,6 @@
 	}
 }
 
-.top-credibility .wrap-n {
-	transition: transform 0.4s $ease-out-quart;
-
-	&.ready-anim {
-		transform: translateY(30%);
-	}
-}
 
 @media screen and (max-width: $bp--small) {		
 	.wrap-n,

@@ -63,7 +63,7 @@ module.exports = function (grunt) {
         cssmin: {
 		    main: {
 		        files: {
-		            'app/css/main.min.css': ['app/css/main.css']
+		            'app/css/main.min.css': ['app/css/main.prefix.css']
 		        }
 		    }
         },
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
 		        expand: true,
 		        flatten: true,
 		        src: 'app/css/main.css',
-		        dest: 'app/css/main.css'
+		        dest: 'app/css/main.prefix.css'
 		    }]
           },
 

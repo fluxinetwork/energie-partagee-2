@@ -21,11 +21,5 @@
 @media screen and (min-width: $bp--medium) {
 	.top-credibility{		
 		background: radial-grad($c-special, null, at bottom, 60%);		
-		
-		.wrap-n{
-			margin-top: 80px;
-			position: relative;
-			transform: translateY(-70px);
-		}
 	}	
 }

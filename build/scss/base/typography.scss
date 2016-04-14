@@ -257,7 +257,7 @@ h4,
 .h4{
 	color:$c-dark;	 
 	font-weight:normal;
-	margin-top:$space/2;
+	margin-top:$space*0.4;
 }
 
 h5,
@@ -313,7 +313,7 @@ p,
 
 .accordion__content ul,
 .list,
-.fluxi-content ul:not(.social) {
+.fluxi-content ul:not(.social):not(.main-isogrid):not(.tags):not(.searchresults) {
     margin-bottom: 0;
     margin-top: $space*0.2;
     padding-left: $gutter;

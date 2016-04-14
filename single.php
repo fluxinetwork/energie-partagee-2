@@ -42,7 +42,7 @@
     <ul class="tags">
     	 <li><a class="tag" href="<?php echo $url_parent_page; ?>"><?php echo $cat_post->cat_name; ?></a></li>
          <?php if($cat_post_slug == 'presse' || $cat_post_slug == 'actualites'): ?>
-        	<li class="tag"><?php echo get_the_date();?></li>
+        	<li class="tag is-inactive"><?php echo get_the_date();?></li>
         <?php endif; ?>
     </ul>    
     <h1 class="h1 wrap-n">

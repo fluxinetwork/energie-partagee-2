@@ -78,6 +78,26 @@
 		top:-19px;
 	}
 }
+
+/* Wrap anim */
+
+.wrap-anim {
+	transition: top 0.4s $ease-out-quart;
+
+	&.ready-anim {
+		top: 70px;
+	}
+}
+
+@media screen and (min-width: $bp--medium) {
+	.wrap-anim {
+		margin-top: 80px;
+		position: relative;
+		//transform: translateY(-70px);
+		top: -70px;
+	}
+}
+
 /*--- Display 830px in 670px ---*/
 .wrap-extend{	
 	display:block;
