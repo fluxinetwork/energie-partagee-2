@@ -319,7 +319,7 @@ function more_project_ajax(){
 
 		// Thumb
 		$project_img_id = get_post_thumbnail_id();
-		$project_img_array = wp_get_attachment_image_src($project_img_id, 'medium', true);
+		$project_img_array = wp_get_attachment_image_src($project_img_id, 'card--mini', true);
 		$project_img_url = $project_img_array[0];
 
 		// Taxo Slug
