@@ -23,7 +23,7 @@
 		margin:0 auto;	
 	}
 	
-	h2.description{
+	h2.description {
 		padding-top:$space*0.3;	
 	}
 
@@ -37,30 +37,33 @@
 	}
 }
 
+
+.social:not(.social-footer):not(.news) {
+	margin-top: $gutter;
+	
+	&:after{
+		border-top:2px solid $c-bglight;			
+		content:"";
+		width:10rem;
+		height:1px;
+		display:block;
+		margin:$space*0.4 0 $space/2;
+	}
+
+	+ h1,
+	+ h2,
+	+ h3 {
+		margin-top: 0;
+	}
+}
+
 .fluxi-content{	
+
 	
 	.h3 {
 		margin-top: $space/2;
 	}	
-		
-	.social{
-		margin-top: $gutter;
-		
-		&:after{
-			border-top:2px solid $c-bglight;			
-			content:"";
-			width:10rem;
-			height:1px;
-			display:block;
-			margin:$space*0.4 0 $space/2;
-		}
-
-		+ h1,
-		+ h2,
-		+ h3 {
-			margin-top: 0;
-		}
-	}
+	
 	
 	p a, .list li a,.accordion__content a{
 		@extend %link;
@@ -123,7 +126,11 @@
 	.courtcircuit{
 		padding-top:$space*0.6;
 		padding-bottom:$space;			
-	}		
+	}	
+
+	.button--solo {
+		margin-top: $gutter!important;
+	}	
 }
 
 blockquote{    
@@ -151,7 +158,7 @@ blockquote{
 
 $transition: all 0.3s $ease-out-quart;
 .f-btn {
-	margin-bottom:$space*0.35;
+	margin-top: $gutter/2;
 	display:flex;
 	width:100%;
 
@@ -179,6 +186,10 @@ $transition: all 0.3s $ease-out-quart;
 		font-weight: normal;
 		text-transform: none;
 		display: none;
+	}
+
+	+ .h4 {
+		margin-top: $space*0.8;
 	}
 }
 .f-btn--txt{		
@@ -293,7 +304,8 @@ $transition: all 0.3s $ease-out-quart;
 
 
 .accordion {
-	
+	margin-top: $gutter;
+
 	.accordion__head {
 		@extend %transition;
 		border-bottom: 2px solid $c-bglight;
@@ -332,8 +344,12 @@ $transition: all 0.3s $ease-out-quart;
 		}		
 	}
 
-	+ .accordion .accordion__head {
-		border-top: 0;
+	+ .accordion {
+		margin-top: 0;
+
+		.accordion__head {
+			border-top: 0;
+		}
 	}
 }
 .accordion.open .accordion__head i {			

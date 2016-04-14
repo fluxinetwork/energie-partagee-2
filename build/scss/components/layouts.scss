@@ -85,7 +85,7 @@
 			padding-right:0;
 		}
 
-		.button {
+		.button:not(.cta) {
 			margin-top:$space*0.3;
 	 	}
 	}
@@ -125,7 +125,7 @@
 		.box__fixe{
 			display:flex;
 		}  
-	  	.button {
+	  	.button:not(.cta) {
 			margin-top:$space*0.6;
 		}
 	}

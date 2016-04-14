@@ -17,7 +17,7 @@ $query_news = new WP_Query( $args_news );
             	</div>
             	<div class="box__half">
                     <span class="lighter">Suivez-nous sur</span> 
-                    <?php get_socials(); ?>
+                    <?php get_socials('news'); ?>
            	  </div>
              	<div class="box__fixe"></div>
         	</div>

@@ -41,7 +41,7 @@
 		endif;
 		
 		if( $type_link == 'bouton' || $type_link == 'bouton-mailto' || $type_link == 'bouton-page' ):
-			$class_link = 'button green __btn';	
+			$class_link = 'button green __btn button--solo';	
 			echo '<a class="'.$class_link.'" href="'.$url_link.'" title="'.$texte_link.'" target="'.$target_link.'">';							
 					echo '<span class="txt">'.$texte_link.'</span>';
 			echo '</a>';

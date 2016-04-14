@@ -3,7 +3,7 @@
     	<div class="box">
             <div class="box__half">
                 <h5 class="s-title">Nous suivre</h5>
-                <ul class="social">
+                <ul class="social social-footer">
                    <li><a href="https://www.facebook.com/EnergiePartagee.org" class="social--face" target="_blank"><i class="icon-facebook_40"></i></a></li>
                     <li><a href="https://twitter.com/EnergiePartagee" class="social--twit" target="_blank"><i class="icon-twitter_40"></i></a></li>
                     <li><a href="https://www.youtube.com/user/EnergiePartagee" class="social--yout" target="_blank"><i class="icon-youtube_40"></i></a></li>

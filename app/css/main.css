@@ -3078,7 +3078,7 @@ blockquote .blockquote {
   .trio-card .box__half:nth-child(3) {
     padding-right: 0;
   }
-  .trio-card .button {
+  .trio-card .button:not(.cta) {
     margin-top: 3rem;
   }
 }
@@ -3111,7 +3111,7 @@ blockquote .blockquote {
   .trio-card .box__fixe {
     display: flex;
   }
-  .trio-card .button {
+  .trio-card .button:not(.cta) {
     margin-top: 6rem;
   }
 
@@ -3720,13 +3720,10 @@ blockquote .blockquote {
   position: initial;
 }
 
-.fluxi-content .h3 {
-  margin-top: 5rem;
-}
-.fluxi-content .social {
+.social:not(.social-footer):not(.news) {
   margin-top: 4rem;
 }
-.fluxi-content .social:after {
+.social:not(.social-footer):not(.news):after {
   border-top: 2px solid #f2f2f2;
   content: "";
   width: 10rem;
@@ -3734,10 +3731,14 @@ blockquote .blockquote {
   display: block;
   margin: 4rem 0 5rem;
 }
-.fluxi-content .social + h1,
-.fluxi-content .social + h2,
-.fluxi-content .social + h3 {
+.social:not(.social-footer):not(.news) + h1,
+.social:not(.social-footer):not(.news) + h2,
+.social:not(.social-footer):not(.news) + h3 {
   margin-top: 0;
+}
+
+.fluxi-content .h3 {
+  margin-top: 5rem;
 }
 .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a {
   font-family: "Georgia", serif;
@@ -3791,6 +3792,9 @@ blockquote .blockquote {
   padding-top: 6rem;
   padding-bottom: 10rem;
 }
+.fluxi-content .button--solo {
+  margin-top: 4rem !important;
+}
 
 blockquote:before, blockquote:after {
   border-top: 2px solid #eb6c1d;
@@ -3811,7 +3815,7 @@ blockquote .blockquote {
 }
 
 .f-btn, .f-btn--txt, .f-btn--big {
-  margin-bottom: 3.5rem;
+  margin-top: 2rem;
   display: flex;
   width: 100%;
 }
@@ -3832,6 +3836,9 @@ blockquote .blockquote {
   font-weight: normal;
   text-transform: none;
   display: none;
+}
+.f-btn + .h4, .f-btn--txt + .h4, .f-btn--big + .h4 {
+  margin-top: 8rem;
 }
 
 .f-btn--txt div {
@@ -3928,6 +3935,9 @@ blockquote .blockquote {
   margin-top: 4rem;
 }
 
+.accordion {
+  margin-top: 4rem;
+}
 .accordion .accordion__head {
   border-bottom: 2px solid #f2f2f2;
   border-top: 2px solid #f2f2f2;
@@ -3958,6 +3968,9 @@ blockquote .blockquote {
 .accordion .accordion__content ul,
 .accordion .accordion__content ol {
   margin: 0 0 3rem 3rem;
+}
+.accordion + .accordion {
+  margin-top: 0;
 }
 .accordion + .accordion .accordion__head {
   border-top: 0;
@@ -4481,6 +4494,7 @@ input {
 }
 .map-projects .filters .h5 {
   margin-top: 0;
+  margin-bottom: 2rem;
 }
 .map-projects .filters .h5:last-child {
   margin-top: 5rem;
@@ -4498,6 +4512,12 @@ input {
 }
 .map-projects .map-filters li {
   margin: 0 0.5rem 1rem;
+}
+.map-projects + .fluxi-content {
+  margin-top: 0 !important;
+}
+.map-projects + .fluxi-content .clickable.wide:first-child {
+  margin-top: 0 !important;
 }
 
 .map-filters li {

@@ -45,9 +45,13 @@ add_action( 'wp_head', 'insert_fb_in_head', 5 );
  * 02. Share buttons
  */
 
-function get_socials() {
+function get_socials($param = false) {
 	global $post;
-	echo'<ul class="social">			
+	$class;
+	if ($param) {
+		$class = $param;
+	}
+	echo'<ul class="social '.$param.'">			
            <li><button class="js-share social--fb" data-network="facebook" data-url="' . get_permalink() . '"><i class="icon-facebook_40"></i></button></li>
            <li><button class="js-share social--tw" data-network="twitter" data-url="' . get_permalink() . '"><i class="icon-twitter_40"></i></button></li>
          </ul>';	
