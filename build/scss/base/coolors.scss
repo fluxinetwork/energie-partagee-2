@@ -84,23 +84,23 @@
 
 // CARD PROJECT
 
-@mixin card_project_colors($color) {
+@mixin card_project_colors($color, $icon) {
 	.card__infos {
 		background: radial-grad($color, null, at top);	
+	}
+	.card__icon:before{
+		content: $icon;
 	}
 }
 
 // MAP PROJECTS
 
-@mixin map_colors($color, $icon1, $icon2) {
+@mixin map_colors($color, $icon) {
 	.filter-nrj {
 		background: radial-grad($color);
 
-		.card__icon:before{
-			 content: $icon1;
-		}
 		.icon-filter:before{
-			content: $icon2;
+			content: $icon;
 		}
 	}
 	&.card-map .link-cta{
@@ -112,31 +112,31 @@
 
 .c-solai {
 	@include project_colors ($c-solaire);
-	@include map_colors($c-solaire, "\e91f", "\e91e");
-	@include card_project_colors($c-solaire);
+	@include map_colors($c-solaire, "\e91e");
+	@include card_project_colors($c-solaire, "\e91f");
 } 
 .c-eolie {
 	@include project_colors ($c-eolien);
-	@include map_colors($c-eolien, "\e90e", "\e90d");
-	@include card_project_colors($c-eolien);
+	@include map_colors($c-eolien, "\e90d");
+	@include card_project_colors($c-eolien, "\e90e");
 } 
 .c-micro {
 	@include project_colors ($c-hydro);
-	@include map_colors($c-hydro, "\e918", "\e917");
-	@include card_project_colors($c-hydro);
+	@include map_colors($c-hydro, "\e917");
+	@include card_project_colors($c-hydro, "\e918");
 } 
 .c-bioma {
 	@include project_colors ($c-bio);
-	@include map_colors($c-bio, "\e902", "\e901");
-	@include card_project_colors($c-bio);
+	@include map_colors($c-bio, "\e901");
+	@include card_project_colors($c-bio, "\e902");
 } 
 .c-geoth {
 	@include project_colors ($c-geo);
-	@include map_colors($c-geo, "\e914", "\e913");
-	@include card_project_colors($c-geo);
+	@include map_colors($c-geo, "\e913");
+	@include card_project_colors($c-geo, "\e914");
 } 
 .c-econo {
 	@include project_colors ($c-eco);
-	@include map_colors($c-eco, "\e90c", "\e90b");
-	@include card_project_colors($c-eco);
+	@include map_colors($c-eco, "\e90b");
+	@include card_project_colors($c-eco, "\e90c");
 } 

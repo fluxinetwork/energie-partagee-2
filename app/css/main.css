@@ -127,6 +127,7 @@
   transform: scale(1.04);
 }
 .card .card__infos, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -147,7 +148,7 @@
   z-index: 1;
 }
 .card .card__icon, .card-news .card__icon, .card-news--expand .card__icon, .card-news--big .card__icon {
-  bottom: 0.5rem;
+  top: -10rem;
   left: 0.5rem;
   position: absolute;
 }
@@ -724,9 +725,6 @@ html {
 .c-solai .filter-nrj {
   background: radial-gradient(#ffc004, #e9af00 100%);
 }
-.c-solai .filter-nrj .card__icon:before {
-  content: "";
-}
 .c-solai .filter-nrj .icon-filter:before {
   content: "";
 }
@@ -735,6 +733,9 @@ html {
 }
 .c-solai .card__infos {
   background: radial-gradient(at top, #ffc004, #e9af00 100%);
+}
+.c-solai .card__icon:before {
+  content: "";
 }
 
 .c-eolie .etapes .dotline__step > .dot,
@@ -852,9 +853,6 @@ html {
 .c-eolie .filter-nrj {
   background: radial-gradient(#6cbac2, #5ab1bb 100%);
 }
-.c-eolie .filter-nrj .card__icon:before {
-  content: "";
-}
 .c-eolie .filter-nrj .icon-filter:before {
   content: "";
 }
@@ -863,6 +861,9 @@ html {
 }
 .c-eolie .card__infos {
   background: radial-gradient(at top, #6cbac2, #5ab1bb 100%);
+}
+.c-eolie .card__icon:before {
+  content: "";
 }
 
 .c-micro .etapes .dotline__step > .dot,
@@ -980,9 +981,6 @@ html {
 .c-micro .filter-nrj {
   background: radial-gradient(#6478c0, #5268b9 100%);
 }
-.c-micro .filter-nrj .card__icon:before {
-  content: "";
-}
 .c-micro .filter-nrj .icon-filter:before {
   content: "";
 }
@@ -991,6 +989,9 @@ html {
 }
 .c-micro .card__infos {
   background: radial-gradient(at top, #6478c0, #5268b9 100%);
+}
+.c-micro .card__icon:before {
+  content: "";
 }
 
 .c-bioma .etapes .dotline__step > .dot,
@@ -1108,9 +1109,6 @@ html {
 .c-bioma .filter-nrj {
   background: radial-gradient(#97c500, #83ab00 100%);
 }
-.c-bioma .filter-nrj .card__icon:before {
-  content: "";
-}
 .c-bioma .filter-nrj .icon-filter:before {
   content: "";
 }
@@ -1119,6 +1117,9 @@ html {
 }
 .c-bioma .card__infos {
   background: radial-gradient(at top, #97c500, #83ab00 100%);
+}
+.c-bioma .card__icon:before {
+  content: "";
 }
 
 .c-geoth .etapes .dotline__step > .dot,
@@ -1236,9 +1237,6 @@ html {
 .c-geoth .filter-nrj {
   background: radial-gradient(#e96335, #e7511e 100%);
 }
-.c-geoth .filter-nrj .card__icon:before {
-  content: "";
-}
 .c-geoth .filter-nrj .icon-filter:before {
   content: "";
 }
@@ -1247,6 +1245,9 @@ html {
 }
 .c-geoth .card__infos {
   background: radial-gradient(at top, #e96335, #e7511e 100%);
+}
+.c-geoth .card__icon:before {
+  content: "";
 }
 
 .c-econo .etapes .dotline__step > .dot,
@@ -1364,9 +1365,6 @@ html {
 .c-econo .filter-nrj {
   background: radial-gradient(#ce1367, #b7115b 100%);
 }
-.c-econo .filter-nrj .card__icon:before {
-  content: "";
-}
 .c-econo .filter-nrj .icon-filter:before {
   content: "";
 }
@@ -1375,6 +1373,9 @@ html {
 }
 .c-econo .card__infos {
   background: radial-gradient(at top, #ce1367, #b7115b 100%);
+}
+.c-econo .card__icon:before {
+  content: "";
 }
 
 /*------------------------------*\
@@ -3086,6 +3087,11 @@ blockquote .blockquote {
     flex: 41.5%;
     padding-right: 4rem;
     margin-bottom: 0;
+  }
+  .trio-card .box__half .card__infos {
+    display: block !important;
+    position: relative !important;
+    border-radius: 0 0 3px 3px !important;
   }
   .trio-card .box__half:nth-child(3) {
     padding-right: 4rem;

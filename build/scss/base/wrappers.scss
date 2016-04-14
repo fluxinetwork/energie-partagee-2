@@ -129,9 +129,8 @@
   	flex: 100%;
 	margin-bottom:$space*0.2;  	 	
 }
-.box__solo, .box__half{
+.box__solo, .box__half {
 	@extend .box__full;
-	
 }
 .box__fixe {
   	flex: auto;

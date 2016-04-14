@@ -91,11 +91,11 @@ $query_projects = new WP_Query( $args_projects );
                             
                            <a class="card card-project" href="<?php the_permalink(); ?>">
                             <div class="card__img">
-                            	 	<?php echo $project_img; ?>
-                                <i class="card__icon"></i>
+                            	 <?php echo $project_img; ?>
                             </div>
                             <div class="card__infos">
-                                 <h1 class="card__title"><?php the_title(); ?></h1>
+                            	<i class="card__icon"></i>
+                                <h1 class="card__title"><?php the_title(); ?></h1>
                                 <p class="p-ss"><?php echo get_field('departement'); ?></p>
                             </div>
                           </a>

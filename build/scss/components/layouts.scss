@@ -97,6 +97,12 @@
 			flex: 41.5%;		
 			padding-right: $gutter;	
 			margin-bottom: 0;
+
+			.card__infos {			
+    			display: block!important;
+    			position: relative!important;
+    			border-radius: 0 0 $radius $radius!important;
+			}
 		}
 		.box__half:nth-child(3) {
 			padding-right: $gutter;	
@@ -121,11 +127,11 @@
 		}  
 	  	.button {
 			margin-top:$space*0.6;
-		 }
+		}
 	}
 	.duo-card {
 		.head__flex {
-			.lighter{			
+			.lighter {			
 				display: inline-block;
 				vertical-align: top;
 				padding-top:1rem;
