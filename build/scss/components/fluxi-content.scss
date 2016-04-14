@@ -61,7 +61,7 @@
 
 	
 	.h3 {
-		margin-top: $space/2;
+		margin-top: $space;
 	}	
 	
 	
@@ -161,6 +161,10 @@ $transition: all 0.3s $ease-out-quart;
 	margin-top: $gutter/2;
 	display:flex;
 	width:100%;
+
+	&:hover .txt::after {
+		width: 100%;
+	}
 
 	i {	
 		transition: $transition;
@@ -278,27 +282,41 @@ $transition: all 0.3s $ease-out-quart;
 .clikarde{
 	display: flex;
     flex-flow: column nowrap;
+    align-items: stretch;
     list-style-type: none;
 	margin:$space/2 0;	
 	padding:0;	
-	
+
 	.clikarde__item {
-		flex: 1 1 100%;
-		
-		margin-bottom:$gutter/2;	
+		@extend %transition;
+		@extend %button;
+		@include flex(null stretch);
+		margin: 0 $gutter/2 $gutter/2 0;	
+		padding: 0;
 		
 		&:last-child{
-			margin-bottom:0;
-			
+			margin-right: 0;
+		}
+
+		&::after {
+			background: $c-main;
+		}
+
+		&:hover {
+			transform: scale(1.06);
+		}
+
+		.minicard {
+			height: auto;
+
+			&:hover {
+				transform: none;
+			}
 		}
 	}
 
 	p {
 		margin-top: 0;
-	}
-
-	.link {
-		margin-top: $gutter;
 	}
 }	
 

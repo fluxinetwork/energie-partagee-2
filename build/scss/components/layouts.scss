@@ -34,7 +34,7 @@
 }
 
 .trio-card {
-	background:url("../img/shape-grid-1.png") repeat 0 0 $c-bglight;
+	@include retina-image("../img/p5", 8px 8px);
 	
 	.box__half {
 		display: block;

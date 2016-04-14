@@ -161,7 +161,6 @@ $transition: all 0.3s $ease-out-quart;
 
 
 .minicard{
-	@extend %button;
 	transition: $transition;
 
 	&::before{

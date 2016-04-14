@@ -61,7 +61,7 @@
 		text-align: left;
 	}
 	.box__item__img {
-		width: 110px;
+		width: 140px;
 		margin-right: $gutter/2;
 	}
 	.p-ss {
@@ -87,7 +87,15 @@
 		}
 	}
 
-
+	.steps-intro .f-btn {
+		i {
+			display: none;
+		}
+		
+		div {
+			padding-left: 0;
+		}
+	}
 
 	.key-nums {
 		animation: slideNums $ease-out-quart  12s infinite forwards;
@@ -169,6 +177,9 @@
 		}
 		.p-ss {
 			margin-bottom: $space*0.2;
+		}
+		.f-btn {
+			justify-content: center;
 		}
 	}
 	

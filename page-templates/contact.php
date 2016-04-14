@@ -71,7 +71,7 @@ Template Name: Contact
             <label for="sujet" class="error"></label>
           </p>
           <p>
-            <label for="autres_sujet">Si "Autres", veuillez préciser:</label>
+            <label for="autres_sujet">Si "Autre", veuillez préciser:</label>
             <input name="autres_sujet" id="autres_sujet" type="text" value="<?php if(!empty($_SESSION['autres_sujet'])) echo $_SESSION['autres_sujet']; ?>">
           </p>
           <p>

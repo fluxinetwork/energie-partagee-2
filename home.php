@@ -40,7 +40,7 @@
                         <div class="box__item__img"><img src="<?php the_sub_field('illustration_etape'); ?>"></div>
                         <span class="box__item__infos">
                             <p class="p-ss"><?php the_sub_field('texte_etape'); ?></p>       
-                            <a class="link" href="<?php the_sub_field('page_reliee'); ?>"><?php the_sub_field('texte_lien'); ?></a>
+                            <a class="f-btn" href="<?php the_sub_field('page_reliee'); ?>"><i class="icon-chevronright_32"></i><div><span class="txt"><?php the_sub_field('texte_lien'); ?></span></div></a>
                         </span> 
                     </li>
 

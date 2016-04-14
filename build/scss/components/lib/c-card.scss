@@ -61,8 +61,7 @@
 
 %minicard{		
 	display: flex;
-    flex: 1 1 0;
-    flex-flow: column nowrap;
+	flex-direction: column;
     height: 100%;
     justify-content: flex-start;
     margin-top: 0;
@@ -79,11 +78,13 @@
 	.p-ss{
 		color:$c-textwhite;
 		font-weight:normal;
+		margin-bottom: $gutter;
 	}
 	.link{
 		color:$c-textwhite;
 		font-weight:normal;
 		margin-top:auto;
+
 		i{			
 			font-size: 3.2rem;
 			align-self:center;
