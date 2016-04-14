@@ -24,14 +24,14 @@
             <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-ile-de-france.jpg"></a></li>
             <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-paca.jpg"></a></li>
             <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-centre.jpg"></a></li>
-            <li class="box-logos__btn"><a class="button-round" href="#"><i class="icon-plus_64"></i></a></li> 
+            <li class="box-logos__btn"><a class="button-round" href="<?php echo get_site_url(); ?>/nous-decouvrir/qui-sommes-nous/lassociation/#partenaires"><i class="icon-plus_64"></i></a></li> 
         </ul>
         
         <h5 class="s-title">Nos labels</h5>
         <ul class="labels box">
             <li class="labels__img">
-            	<a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-label-1.png"></a>
-              <a class="labels__label" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-label-2.png"></a>
+            	<a class="labels__label" href="<?php echo get_site_url(); ?>/devenir-actionnaire/les-actions-energie-partagee/"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-label-1.png"></a>
+                <a class="labels__label" href="<?php echo get_site_url(); ?>/devenir-actionnaire/les-actions-energie-partagee/"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/logo-label-2.png"></a>
             </li>
             <li class="labels__txt"><p class="p-ss">Énergie Partagée Investissement est agréée “Entreprise Solidaire” et ses actions bénéficient du label Finansol qui garantit la solidarité et la transparence de l'investissement.</p></li>
         </ul>
