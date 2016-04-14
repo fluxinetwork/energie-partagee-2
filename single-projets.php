@@ -86,7 +86,7 @@
             <?php include( TEMPLATEPATH.'/app/inc/inc_projet/capital-project.php' ); ?> 
             
             <?php	// FLUXI CONTENT	 		   
-                if( have_rows('elements_page') ):
+                if( have_rows('elements_page') && $value_stade != 'collecte'):
                     echo '<div class="fluxi-content fitvids" id="en-savoir-plus">';		
                         require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');					
                     echo '</div>';
