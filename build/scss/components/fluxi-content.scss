@@ -688,7 +688,11 @@ $transition: all 0.3s $ease-out-quart;
 	.clikable,
 	.clikarde,
 	.publication,
-	.suggestion {
+	.suggestion,
+	.p-details,
+	.card__infos,
+	.box-asy__left, 
+	.box-asy__right {
 		p {
 			line-height: 1.6!important;
 			font-size: 1.6rem!important;

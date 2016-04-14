@@ -639,40 +639,40 @@ html {
   background: #e9af00;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #b68900;
+  background: #c59400;
 }
 .c-solai .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #b68900;
+  background: #c59400;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #836200;
+  background: #a27900;
 }
 .c-solai .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #836200;
+  background: #a27900;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #503c00;
+  background: #7e5f00;
 }
 .c-solai .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #503c00;
+  background: #7e5f00;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #1d1600;
+  background: #5a4400;
 }
 .c-solai .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #1d1600;
+  background: #5a4400;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: black;
+  background: #372900;
 }
 .c-solai .repartition .financer.citoyen:nth-child(6) .dot {
-  background: black;
+  background: #372900;
 }
 .c-solai .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: black;
+  background: #130e00;
 }
 .c-solai .repartition .financer.citoyen:nth-child(7) .dot {
-  background: black;
+  background: #130e00;
 }
 .c-solai .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -767,40 +767,40 @@ html {
   background: #5ab1bb;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #4296a0;
+  background: #46a1ab;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #4296a0;
+  background: #46a1ab;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #33747c;
+  background: #3c8992;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #33747c;
+  background: #3c8992;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #245258;
+  background: #327178;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #245258;
+  background: #327178;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #153134;
+  background: #27595f;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #153134;
+  background: #27595f;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #060f10;
+  background: #1d4246;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #060f10;
+  background: #1d4246;
 }
 .c-eolie .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: black;
+  background: #122a2c;
 }
 .c-eolie .repartition .financer.citoyen:nth-child(7) .dot {
-  background: black;
+  background: #122a2c;
 }
 .c-eolie .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -895,40 +895,40 @@ html {
   background: #5268b9;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #3e529a;
+  background: #4358a5;
 }
 .c-micro .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #3e529a;
+  background: #4358a5;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #303e75;
+  background: #384a8b;
 }
 .c-micro .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #303e75;
+  background: #384a8b;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #212b51;
+  background: #2e3d72;
 }
 .c-micro .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #212b51;
+  background: #2e3d72;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #12182d;
+  background: #242f58;
 }
 .c-micro .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #12182d;
+  background: #242f58;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #030509;
+  background: #19223f;
 }
 .c-micro .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #030509;
+  background: #19223f;
 }
 .c-micro .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: black;
+  background: #0f1426;
 }
 .c-micro .repartition .financer.citoyen:nth-child(7) .dot {
-  background: black;
+  background: #0f1426;
 }
 .c-micro .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -1023,28 +1023,28 @@ html {
   background: #83ab00;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #5c7800;
+  background: #688700;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #5c7800;
+  background: #688700;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #354500;
+  background: #4c6400;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #354500;
+  background: #4c6400;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #0e1200;
+  background: #314000;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #0e1200;
+  background: #314000;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: black;
+  background: #161c00;
 }
 .c-bioma .repartition .financer.citoyen:nth-child(5) .dot {
-  background: black;
+  background: #161c00;
 }
 .c-bioma .repartition .graphbar__segment.citoyen:nth-child(6) {
   background: black;
@@ -1151,40 +1151,40 @@ html {
   background: #e7511e;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #be3f14;
+  background: #cc4416;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #be3f14;
+  background: #cc4416;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #90300f;
+  background: #ab3912;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #90300f;
+  background: #ab3912;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #62210a;
+  background: #8b2e0f;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #62210a;
+  background: #8b2e0f;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: #341105;
+  background: #6b240b;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(5) .dot {
-  background: #341105;
+  background: #6b240b;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: #050201;
+  background: #4b1908;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(6) .dot {
-  background: #050201;
+  background: #4b1908;
 }
 .c-geoth .repartition .graphbar__segment.citoyen:nth-child(7) {
-  background: black;
+  background: #2a0e05;
 }
 .c-geoth .repartition .financer.citoyen:nth-child(7) .dot {
-  background: black;
+  background: #2a0e05;
 }
 .c-geoth .repartition #segment-prive-1 {
   background: #d9d9d9;
@@ -1279,34 +1279,34 @@ html {
   background: #b7115b;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(2) {
-  background: #880d44;
+  background: #960e4b;
 }
 .c-econo .repartition .financer.citoyen:nth-child(2) .dot {
-  background: #880d44;
+  background: #960e4b;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(3) {
-  background: #5a082d;
+  background: #760b3b;
 }
 .c-econo .repartition .financer.citoyen:nth-child(3) .dot {
-  background: #5a082d;
+  background: #760b3b;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(4) {
-  background: #2b0415;
+  background: #55082a;
 }
 .c-econo .repartition .financer.citoyen:nth-child(4) .dot {
-  background: #2b0415;
+  background: #55082a;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(5) {
-  background: black;
+  background: #34051a;
 }
 .c-econo .repartition .financer.citoyen:nth-child(5) .dot {
-  background: black;
+  background: #34051a;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(6) {
-  background: black;
+  background: #14020a;
 }
 .c-econo .repartition .financer.citoyen:nth-child(6) .dot {
-  background: black;
+  background: #14020a;
 }
 .c-econo .repartition .graphbar__segment.citoyen:nth-child(7) {
   background: black;
@@ -4373,7 +4373,11 @@ blockquote .blockquote {
   .clikable p,
   .clikarde p,
   .publication p,
-  .suggestion p {
+  .suggestion p,
+  .p-details p,
+  .card__infos p,
+  .box-asy__left p,
+  .box-asy__right p {
     line-height: 1.6 !important;
     font-size: 1.6rem !important;
   }
