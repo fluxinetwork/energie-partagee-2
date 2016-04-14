@@ -3320,6 +3320,15 @@ blockquote .blockquote {
   opacity: 1;
 }
 
+.form-sublink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-sublink .wrap-link {
+  display: inline-block;
+}
+
 @media screen and (min-width: 600px) {
   .courtcircuit .box__half.input__fixe {
     flex: 1;
