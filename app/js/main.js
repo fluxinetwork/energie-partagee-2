@@ -347,6 +347,18 @@ var FOO = {
 	contact:{
 		init: function() {
 			initContactForm();
+
+            // Add mailto in clikarde
+            $('.clikarde__item').each(function( i ) {
+                var dataMailto,
+                    dataHref = $(this).find('.minicard').attr('href');
+
+                if(dataHref.indexOf('@') > -1){
+                    dataMailto = dataHref.substring(7);
+
+                    $(this).find('.minicard').attr('href', 'mailto:'+dataMailto);
+                }
+            });
         }
 	},
     search:{

@@ -4,7 +4,11 @@
 
 <section class="wrap-main actualites">
 
+	 
+
   <header class="header-bloc">
+	<?php custom_breadcrumbs(); ?>
+
     <h1 class="h1">
 		<?php the_title(); ?>
     </h1>
