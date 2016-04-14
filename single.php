@@ -7,15 +7,13 @@
 	$cat_post_slug = $cat_post->slug;
 	
 	if($cat_post_slug == 'evenements'):
-		$url_parent_page = get_bloginfo('url').'/nous-suivre/tous-les-evenements/';
+		$url_parent_page = get_bloginfo('url').'/nous-suivre/evenements/';
 	elseif($cat_post_slug == 'formations'):
-		$url_parent_page = get_bloginfo('url');
-	elseif($cat_post_slug == 'ateliers'):
-		$url_parent_page = get_bloginfo('url');
+		$url_parent_page = get_bloginfo('url').'/les-projets/nos-formations/';	
 	elseif($cat_post_slug == 'presse'):
-		$url_parent_page = get_bloginfo('url');
+		$url_parent_page = get_bloginfo('url').'/nous-decouvrir/dans-les-medias/';
 	else:
-		$url_parent_page = get_bloginfo('url');
+		$url_parent_page = get_bloginfo('url').'/nous-suivre/actualites/';
 	endif;
 
 	$main_img_add = get_field( 'add_image' );
@@ -40,7 +38,7 @@
   ?>
   <header class="header-bloc">    
     <ul class="tags">
-    	 <li><a class="tag" href="<?php echo $url_parent_page; ?>"><?php echo $cat_post->cat_name; ?></a></li>
+    	 <li><a class="tag" href="<?php echo $url_parent_page; ?>"><?php if($cat_post->cat_name == "Presse"): echo 'Dans les médias'; else: echo $cat_post->cat_name; endif ?></a></li>
          <?php if($cat_post_slug == 'presse' || $cat_post_slug == 'actualites'): ?>
         	<li class="tag is-inactive"><?php echo get_the_date();?></li>
         <?php endif; ?>
@@ -48,7 +46,7 @@
     <h1 class="h1 wrap-n">
       <?php the_title(); ?>
     </h1>
-    <?php if($cat_post_slug=='evenements' || $cat_post_slug=='formations' || $cat_post_slug=='ateliers'): ?>
+    <?php if($cat_post_slug=='evenements' || $cat_post_slug=='formations'): ?>
     			<h4 class="h4"><span class="icon-calendar_20"></span><?php echo date_i18n('d F Y', strtotime(get_field('date_event')));?><span class="icon-pin_20"></span><?php echo get_field('ville_event');?></h4>    
     <?php endif; ?>
   </header>

@@ -20,7 +20,7 @@ Template Name: Tous les projets
   <div class="fluxi-wrap">
   	<?php 
 		get_description();				
-		get_socials();	
+		get_socials('news');	
 	?>  
   
   </div>
