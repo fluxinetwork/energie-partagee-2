@@ -1395,6 +1395,8 @@ html {
   color: #fff;
   margin-bottom: 3rem;
   margin-top: 2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .footer .box .box__half {
   margin-bottom: 4rem;
@@ -1519,6 +1521,11 @@ html {
 @media screen and (min-width: 830px) {
   .footer .s-title {
     margin-top: 6rem;
+  }
+
+  .footer p {
+    line-height: 1.6 !important;
+    font-size: 1.4rem !important;
   }
 }
 /*------------------------------*\
@@ -1821,7 +1828,7 @@ h3 + p, .h3 + p {
 }
 
 .h3 {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 h4,
@@ -1961,7 +1968,14 @@ blockquote .blockquote {
 }
 @media screen and (min-width: 600px) {
   blockquote .blockquote {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    line-height: 1.3;
+  }
+}
+@media screen and (min-width: 830px) {
+  blockquote .blockquote {
+    font-size: 2.8;
+    line-height: 1.4;
   }
 }
 
@@ -1973,17 +1987,21 @@ blockquote .blockquote {
 }
 @media screen and (min-width: 830px) {
   .h3 {
-    margin-top: 8rem;
+    margin-top: 7rem;
   }
 
-  h4, .h4 {
-    margin-top: 5rem;
+  .h4 {
+    margin-top: 4rem;
   }
 
   p,
   .p-ss,
   .legend {
     margin-top: 2rem;
+  }
+
+  .legend {
+    font-size: 1.6rem;
   }
 }
 /*------------------------------*\
@@ -3766,9 +3784,6 @@ blockquote .blockquote {
   margin-top: 2rem;
 }
 
-.fluxi-content .h3 {
-  margin-top: 10rem;
-}
 .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a {
   font-family: "Georgia", serif;
   text-transform: inherit;
@@ -3883,6 +3898,9 @@ blockquote .blockquote {
 }
 .f-btn--big div {
   padding-left: 1rem;
+}
+.f-btn--big .txt {
+  font-size: 1.4rem;
 }
 .f-btn--big .legend {
   margin-top: 0;
@@ -4348,6 +4366,18 @@ blockquote .blockquote {
     margin: 2rem 0 4.2rem 8rem;
   }
 
+  .f-btn--big .txt {
+    font-size: 1.6rem;
+  }
+
+  .clikable p,
+  .clikarde p,
+  .publication p,
+  .suggestion p {
+    line-height: 1.6 !important;
+    font-size: 1.6rem !important;
+  }
+
   .clikarde {
     width: 830px;
     transform: translateX(-8rem);
@@ -4355,10 +4385,6 @@ blockquote .blockquote {
   }
   .clikarde .clikarde__item {
     margin-right: 2rem;
-  }
-  .clikarde .clikarde__item p {
-    line-height: 1.6;
-    font-size: 1.6rem;
   }
   .clikarde .clikarde__item:last-child {
     flex: 1 0 30%;
@@ -4803,6 +4829,27 @@ input {
   .archive .header-bloc {
     padding-top: 14rem;
     margin-bottom: 23rem;
+  }
+  .page .header-bloc .h1,
+  .single .header-bloc .h1,
+  .search-results .header-bloc .h1,
+  .archive .header-bloc .h1 {
+    max-width: 85%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .page .header-bloc,
+  .single .header-bloc,
+  .search-results .header-bloc,
+  .archive .header-bloc {
+    padding-top: 14rem;
+    margin-bottom: 23rem;
+  }
+  .page .header-bloc .h1,
+  .single .header-bloc .h1,
+  .search-results .header-bloc .h1,
+  .archive .header-bloc .h1 {
+    max-width: 730px;
   }
 }
 /*! lightgallery - v1.2.6 - 2015-10-07

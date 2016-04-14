@@ -246,7 +246,7 @@ h3,.h3{
     }
 }
 .h3{ 
-   margin-top:	$space*0.8;
+   margin-top:	$space*0.6;
 }
 
 h4,
@@ -339,17 +339,20 @@ blockquote{
 }
 
 @media screen and (min-width: $bp--medium) {
-    .h3{ 
-       margin-top:  $space*0.8;
+    .h3 {
+        margin-top:$space*0.7;
     }
-
-    h4, .h4 {
-        margin-top:$space*0.5;
+    .h4 {
+        margin-top:$space*0.4;
     }
 
     p,
     .p-ss,
     .legend{
         margin-top: $space*0.2;
+    }
+
+    .legend {
+        font-size: 1.6rem;
     }
 }

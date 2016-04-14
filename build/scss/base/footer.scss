@@ -12,6 +12,7 @@
 		color:$c-textwhite;
 		margin-bottom: $space*0.3;
 		margin-top:$space*0.2;	
+		@include font-smoothing();
 	}
 	
 	.box{
@@ -158,5 +159,8 @@
 	.footer .s-title {		
 		margin-top:$space*0.6;
 	}
-
+	.footer p {
+		line-height: 1.6!important;
+		font-size: 1.4rem!important;
+	}
 }

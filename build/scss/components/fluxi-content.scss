@@ -59,10 +59,6 @@
 }
 
 .fluxi-content{	
-	.h3 {
-		margin-top: $space;
-	}	
-	
 	
 	p a, .list li a,.accordion__content a{
 		@extend %link;
@@ -211,6 +207,10 @@ $transition: all 0.3s $ease-out-quart;
 
 	div {
 	    padding-left: $gutter/4;
+	}
+
+	.txt {
+		font-size: 1.4rem;
 	}
 
 	.legend {
@@ -592,7 +592,7 @@ $transition: all 0.3s $ease-out-quart;
 }	
 
 @media screen and (min-width: $bp--mobile) {	
-	.f-btn--big{	
+	.f-btn--big {	
 		i{
 		    font-size: 6.4rem;
 		    color:$c-light;
@@ -677,6 +677,20 @@ $transition: all 0.3s $ease-out-quart;
 		}
 	}
 
+	.f-btn--big .txt {
+		font-size: 1.6rem;
+	}
+
+	.clikable,
+	.clikarde,
+	.publication,
+	.suggestion {
+		p {
+			line-height: 1.6!important;
+			font-size: 1.6rem!important;
+		}
+	}
+
 	.clikarde{
 		width:830px;
 		transform:translateX(-8rem);
@@ -684,11 +698,6 @@ $transition: all 0.3s $ease-out-quart;
 		
 		.clikarde__item {
 			margin-right: $gutter/2;
-
-			p {
-				line-height: 1.6;
-				font-size: 1.6rem;
-			}
 		
 			&:last-child {
 				flex: 1 0 30%;

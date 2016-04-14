@@ -60,8 +60,7 @@
 			
 			else:
 			
-			$texte_bouton = ($texte_bouton) ? '<a class="button green" href="'.$url_du_cliquable.'" target="'.$open_new_page.'"><i></i>'.$texte_bouton.'</a>' : '';
-			
+			$texte_bouton = ($texte_bouton) ? '<a class="button green  box-asy__clic" href="'.$url_du_cliquable.'" target="'.$open_new_page.'"><i></i>'.$texte_bouton.'</a>' : '';
 				echo $head_cliquable.
 							'<div class="'.$boxClass.'">
 								<div class="box-asy__left">													
