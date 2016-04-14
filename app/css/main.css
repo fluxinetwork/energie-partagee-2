@@ -3044,7 +3044,7 @@ blockquote .blockquote {
     text-align: left;
   }
 
-  .suggestion .box-asy, .testimony {
+  .clikable .box-asy, .suggestion .box-asy, .testimony {
     padding-right: 8rem;
     padding-left: 8rem;
     width: 830px;

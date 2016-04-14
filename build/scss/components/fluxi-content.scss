@@ -225,6 +225,10 @@ $transition: all 0.3s $ease-out-quart;
 	}
 }
 
+.clikable .box-asy {
+	@extend %box--extend;
+}
+
 .clikable.wide {
 	position:relative;
 	margin:$space*0.6 0;
