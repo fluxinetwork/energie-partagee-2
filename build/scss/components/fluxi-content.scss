@@ -1,5 +1,3 @@
-
-
 @mixin sort_btn_color($color) {
 	color:#fff;	
 	&:after{ background: $color none; }	
@@ -56,10 +54,11 @@
 		margin-top: 0;
 	}
 }
+.page .social.news {
+	margin-top: $gutter;
+}
 
 .fluxi-content{	
-
-	
 	.h3 {
 		margin-top: $space;
 	}	
@@ -226,7 +225,7 @@ $transition: all 0.3s $ease-out-quart;
 	}
 }
 
-.clikable.wide{
+.clikable.wide {
 	position:relative;
 	margin:$space*0.6 0;
 	text-align:center;
@@ -265,11 +264,11 @@ $transition: all 0.3s $ease-out-quart;
 	}
 }
 
-.clikable__title{
+.clikable__title {
 	margin-bottom:$space*0.1;
 }
 
-.holder-round{
+.holder-round {
 	border-radius:50%;
 	overflow:hidden;	
 	width:100%;
@@ -279,10 +278,7 @@ $transition: all 0.3s $ease-out-quart;
 		width: 100%;
 	}
 }	
-.clikarde{
-	display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
+.clikarde {
     list-style-type: none;
 	margin:$space/2 0;	
 	padding:0;	
@@ -291,12 +287,9 @@ $transition: all 0.3s $ease-out-quart;
 		@extend %transition;
 		@extend %button;
 		@include flex(null stretch);
-		margin: 0 $gutter/2 $gutter/2 0;	
+		margin: 0;
+		margin-bottom: $gutter;
 		padding: 0;
-		
-		&:last-child{
-			margin-right: 0;
-		}
 
 		&::after {
 			background: $c-main;
@@ -308,7 +301,6 @@ $transition: all 0.3s $ease-out-quart;
 
 		.minicard {
 			height: auto;
-
 			&:hover {
 				transform: none;
 			}
@@ -619,39 +611,36 @@ $transition: all 0.3s $ease-out-quart;
 	.f-btn .legend{
 		display: block;
 	}
-	.fluxi-content .button.__btn{
-		.txt{
-			line-height: 1;
-		}
+	.fluxi-content .button.__btn .txt{
+		line-height: 1;
 	}
 
 	.clikable.wide{
 		text-align:left;
+
 		.box__half,.box__half:first-child{
 			margin-bottom:0;
 		}
 	}
+	
 	.clikarde{
-		width:100%;
-		flex-flow: row wrap;
-		.clikarde__item {
-			flex: 1 1 50%;
-			padding-right:$gutter/2;
-			margin-bottom:0;			
-					
-			&:last-child{
-				padding-right:0;
-			}
-			&:nth-child(3){
-				margin-top:$gutter/2;	
-			}
-				
-		}
-		.clikarde__item + .clikarde__item:last-child,
-		.clikarde__item + .clikarde__item{
-			padding-right:0;
-		}
+		@include flex(null stretch);
+		flex-wrap: wrap;
 		
+		.clikarde__item {
+			flex: 1 0 30%;
+			margin-bottom: 0;
+
+			&:nth-child(1) {
+				margin-right: $gutter/2;
+			}
+		
+			&:nth-child(3) {
+				flex: 1 0 100%;
+				margin-top: $gutter;
+			}
+		}
+
 	}
 }
 
@@ -689,20 +678,19 @@ $transition: all 0.3s $ease-out-quart;
 	}
 
 	.clikarde{
-		flex-flow: row nowrap;
 		width:830px;
 		transform:translateX(-8rem);
+		align-items: stretch;
 		
 		.clikarde__item {
-			flex: 1 1 0;
-			margin-bottom:0;
-			&:nth-child(3){
-				margin-top:0;	
+			margin-right: $gutter/2;
+		
+			&:last-child {
+				flex: 1 0 30%;
+				margin: 0;
 			}
 		}
-		.clikarde__item + .clikarde__item{
-			padding-right:$gutter/2;	
-		}
+
 	}
 
 	.isogrid{	

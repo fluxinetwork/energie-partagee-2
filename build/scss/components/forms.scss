@@ -78,7 +78,7 @@ form#contact_ep {
 		font-weight: 700;
 	}
 	.h4 {
-		margin-top: 0;
+		margin-top: $space*0.3;
 	}
 	.hide-item,.sub-hide-item,input[type=text].sub-hide-item { display: none }
 	.cmxform label.error {

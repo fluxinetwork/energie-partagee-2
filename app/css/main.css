@@ -1806,7 +1806,7 @@ h3 + p, .h3 + p {
 }
 
 .h3 {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 h4,
@@ -1826,7 +1826,7 @@ h4,
 .h4 {
   color: #122c33;
   font-weight: normal;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 h5,
@@ -3743,6 +3743,10 @@ blockquote .blockquote {
   margin-top: 0;
 }
 
+.page .social.news {
+  margin-top: 4rem;
+}
+
 .fluxi-content .h3 {
   margin-top: 10rem;
 }
@@ -3924,9 +3928,6 @@ blockquote .blockquote {
 }
 
 .clikarde {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: stretch;
   list-style-type: none;
   margin: 5rem 0;
   padding: 0;
@@ -3934,11 +3935,9 @@ blockquote .blockquote {
 .clikarde .clikarde__item {
   display: flex;
   align-items: stretch;
-  margin: 0 2rem 2rem 0;
+  margin: 0;
+  margin-bottom: 4rem;
   padding: 0;
-}
-.clikarde .clikarde__item:last-child {
-  margin-right: 0;
 }
 .clikarde .clikarde__item::after {
   background: #65aa04;
@@ -4286,23 +4285,20 @@ blockquote .blockquote {
   }
 
   .clikarde {
-    width: 100%;
-    flex-flow: row wrap;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
   }
   .clikarde .clikarde__item {
-    flex: 1 1 50%;
-    padding-right: 2rem;
+    flex: 1 0 30%;
     margin-bottom: 0;
   }
-  .clikarde .clikarde__item:last-child {
-    padding-right: 0;
+  .clikarde .clikarde__item:nth-child(1) {
+    margin-right: 2rem;
   }
   .clikarde .clikarde__item:nth-child(3) {
-    margin-top: 2rem;
-  }
-  .clikarde .clikarde__item + .clikarde__item:last-child,
-  .clikarde .clikarde__item + .clikarde__item {
-    padding-right: 0;
+    flex: 1 0 100%;
+    margin-top: 4rem;
   }
 }
 @media screen and (max-width: 830px) {
@@ -4334,19 +4330,16 @@ blockquote .blockquote {
   }
 
   .clikarde {
-    flex-flow: row nowrap;
     width: 830px;
     transform: translateX(-8rem);
+    align-items: stretch;
   }
   .clikarde .clikarde__item {
-    flex: 1 1 0;
-    margin-bottom: 0;
+    margin-right: 2rem;
   }
-  .clikarde .clikarde__item:nth-child(3) {
-    margin-top: 0;
-  }
-  .clikarde .clikarde__item + .clikarde__item {
-    padding-right: 2rem;
+  .clikarde .clikarde__item:last-child {
+    flex: 1 0 30%;
+    margin: 0;
   }
 
   .isogrid .main-isogrid .item {
@@ -4444,7 +4437,7 @@ form#contact_ep .section-title {
 }
 form#soumettre_projet .h4,
 form#contact_ep .h4 {
-  margin-top: 0;
+  margin-top: 3rem;
 }
 form#soumettre_projet .hide-item, form#soumettre_projet .sub-hide-item, form#soumettre_projet input[type=text].sub-hide-item,
 form#contact_ep .hide-item,

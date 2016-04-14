@@ -82,7 +82,7 @@ Template Name: Contact
         </fieldset>
         <div class="btns-form">
         	<div class="notification"></div>
-          <button type="submit" id="submit" class="button green">Envoyer</button>
+          <button type="submit" id="submit" class="button green button--solo">Envoyer</button>
         </div>
       </form>
 
