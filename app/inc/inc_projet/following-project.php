@@ -1,6 +1,6 @@
 <div class="following box">
   <div class="box__social">
-    <?php get_socials(); ?>
+    <?php get_socials('news'); ?>
   </div>
   <?php if($value_stade == 'onsuit'): ?>
       <div class="box__btn">
