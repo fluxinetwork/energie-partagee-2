@@ -68,7 +68,11 @@ if(!empty($rows_capital)){
        </div>          
        
        
-    	<div class="wrap-extend"><div class="pointe--up" style="left:<?php echo ($citoyen_perc-1);?>%;"></div></div>
+    	<div class="wrap-extend">
+    		<?php if(round($citoyen_perc) != 100): ?>
+    			<div class="pointe--up" style="left:<?php echo ($citoyen_perc-1);?>%;"></div>
+    		<?php endif; ?>
+    	</div>
     
         <div class="infosbloc">          
           <h4>Capital citoyen à <span class="percent"><?php echo round($citoyen_perc);?>%</span></h4>
