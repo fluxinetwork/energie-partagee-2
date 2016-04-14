@@ -4516,9 +4516,6 @@ input {
 .map-projects + .fluxi-content {
   margin-top: 0 !important;
 }
-.map-projects + .fluxi-content .clickable.wide:first-child {
-  margin-top: 0 !important;
-}
 
 .map-filters li {
   display: block;
