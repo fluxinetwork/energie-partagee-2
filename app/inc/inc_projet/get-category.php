@@ -23,6 +23,7 @@
 					} else {
 						$imgSize = 'card--mini';
 					}
+					
 					if ( has_post_thumbnail() && $main_img_add == 0) :
 						$news_img_id = get_post_thumbnail_id();
 						$news_img_array = wp_get_attachment_image_src($news_img_id, $imgSize, true);

@@ -60,6 +60,15 @@ function my_login_logo_url_title() {
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
+function my_login_message( $message ) {
+    if ( empty($message) ){
+        return '<p style="text-align:center">Bienvenue sur l\'espace adhérents de l\'association Énergie Partagée. Si vous êtes souscripteur, vous pouvez vous connecter sur notre site de souscription en <a href="https://je-souscris.energie-partagee.org/" target="_blank">cliquant ici</a>.</p>';
+    } else {
+        return $message;
+    }
+}
+
+add_filter( 'login_message', 'my_login_message' );
 
 /**
  * Modify admin footer infos & credits
