@@ -4356,6 +4356,10 @@ blockquote .blockquote {
   .clikarde .clikarde__item {
     margin-right: 2rem;
   }
+  .clikarde .clikarde__item p {
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
   .clikarde .clikarde__item:last-child {
     flex: 1 0 30%;
     margin: 0;

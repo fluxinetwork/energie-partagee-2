@@ -684,6 +684,11 @@ $transition: all 0.3s $ease-out-quart;
 		
 		.clikarde__item {
 			margin-right: $gutter/2;
+
+			p {
+				line-height: 1.6;
+				font-size: 1.6rem;
+			}
 		
 			&:last-child {
 				flex: 1 0 30%;
