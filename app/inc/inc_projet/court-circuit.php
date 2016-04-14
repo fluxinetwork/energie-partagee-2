@@ -1,14 +1,8 @@
 
 <?php if(is_home()){ echo '<article class="courtcircuit">'; }else{ echo '<aside class="courtcircuit wrap-extend">';}?>
   <div class="courtcircuit__title">
-    <span class="courtcircuit__decoleft">
-      <img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/deco-left.svg">
-    </span>
     <span class="courtcircuit__logo">
-      <img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/court-circuit.svg">
-    </span>
-    <span class="courtcircuit__decoright">
-      <img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/deco-right.svg">
+      <img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/courtcircuit.svg">
     </span>
   </div>
   

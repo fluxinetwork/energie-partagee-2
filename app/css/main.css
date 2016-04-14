@@ -3276,18 +3276,9 @@ blockquote .blockquote {
   align-items: baseline;
   justify-content: center;
 }
-.courtcircuit .courtcircuit__decoleft .img-svg, .courtcircuit .courtcircuit__decoright .img-svg {
-  width: 90px;
-  height: 54px;
-  margin: 0 5px 5px;
-}
-.courtcircuit .courtcircuit__decoright .img-svg {
-  margin: 0 0 5px 5px;
-}
 .courtcircuit .courtcircuit__logo .img-svg {
-  height: 29px;
   margin-bottom: 10px;
-  width: 226px;
+  width: 100%;
 }
 .courtcircuit .courtcircuit__text {
   color: #fff;
