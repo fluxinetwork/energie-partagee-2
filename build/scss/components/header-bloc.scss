@@ -12,7 +12,7 @@
 	background-size:cover;
 	text-align:center;
 	color:$c-textwhite;	
-	padding-top:$space;
+	padding-top: $space*0.8;
 
 	&::before {
 		@include pseudo-bg(#000, 0.5);
@@ -56,7 +56,7 @@
 .archive { 
 	.header-bloc{
 		padding-bottom:$space*2.4;
-		margin-bottom:$space*2.4;
+		margin-bottom:$space*1.9;
 	
 		.h1{
 			margin:$space*0.1 auto 0;		
@@ -67,10 +67,20 @@
 
 @media screen and (min-width: $bp--small) {	
 	.header-bloc{
-		padding-top:$space*1.6;	
+		padding-top:$space*1.2;	
 
 		.tags {
 			display: flex;
+		}
+	}
+
+	.page,
+	.single,
+	.search-results,
+	.archive { 
+		.header-bloc{
+			padding-top:$space*1.4;
+			margin-bottom:$space*2.3;
 		}
 	}
 }

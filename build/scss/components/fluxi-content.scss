@@ -37,7 +37,7 @@
 
 
 .social:not(.social-footer):not(.news) {
-	margin-top: $gutter;
+	margin-top: $gutter/2;
 	
 	&:after{
 		border-top:2px solid $c-bglight;			
@@ -55,7 +55,7 @@
 	}
 }
 .page .social.news {
-	margin-top: $gutter;
+	margin-top: $gutter/2;
 }
 
 .fluxi-content{	
@@ -288,7 +288,7 @@ $transition: all 0.3s $ease-out-quart;
 		@extend %button;
 		@include flex(null stretch);
 		margin: 0;
-		margin-bottom: $gutter;
+		margin-bottom: $gutter/2;
 		padding: 0;
 
 		&::after {
@@ -637,7 +637,7 @@ $transition: all 0.3s $ease-out-quart;
 		
 			&:nth-child(3) {
 				flex: 1 0 100%;
-				margin-top: $gutter;
+				margin-top: $gutter/2;
 			}
 		}
 

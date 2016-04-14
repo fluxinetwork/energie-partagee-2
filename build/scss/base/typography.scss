@@ -242,7 +242,7 @@ h3,.h3{
 	color:$c-dark;	 
 
     + p {
-        margin-top: $space*0.3;
+        margin-top: $space*0.2;
     }
 }
 .h3{ 
@@ -257,7 +257,7 @@ h4,
 .h4{
 	color:$c-dark;	 
 	font-weight:normal;
-	margin-top:$space*0.6;
+	margin-top:$space*0.3;
 }
 
 h5,
@@ -301,7 +301,7 @@ ul.list,
 p,
 .p-ss,
 .legend{
-    margin-top: $space*0.2;
+    margin-top: $space*0.1;
 }
 .p-ss,
 .legend{
@@ -335,5 +335,21 @@ blockquote{
     .s-title{ 
         margin-bottom:$space*0.6;
         text-align:center;
+    }
+}
+
+@media screen and (min-width: $bp--medium) {
+    .h3{ 
+       margin-top:  $space*0.8;
+    }
+
+    h4, .h4 {
+        margin-top:$space*0.5;
+    }
+
+    p,
+    .p-ss,
+    .legend{
+        margin-top: $space*0.2;
     }
 }

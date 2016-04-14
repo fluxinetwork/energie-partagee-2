@@ -182,15 +182,20 @@ $transition: all 0.3s $ease-out-quart;
 }
 /* EDIT LINK FOR ADMINS */
 .edit{	
-	background: #fff none;
-    padding: $space*0.1 $gutter/2;
+	background: $c-dark;
+    padding: $space*0.1 $gutter/2 $space*0.15 $gutter/2;
     position: fixed;
-    right: 0;
-    top: 20%;
-	border-radius:$radius 0 0 $radius;
-	border:1px solid lighten($c-main, 10%);
-	border-right:none;
+    right: 10px;
+    bottom: 10px;
+	border-radius: $radius;
 	z-index:20;
+
+	a {
+		color: #fff;
+		&::after {
+			display: none;
+		}
+	}
 }
 
 

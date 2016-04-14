@@ -482,15 +482,19 @@ html {
 
 /* EDIT LINK FOR ADMINS */
 .edit {
-  background: #fff none;
-  padding: 1rem 2rem;
+  background: #122c33;
+  padding: 1rem 2rem 1.5rem 2rem;
   position: fixed;
-  right: 0;
-  top: 20%;
-  border-radius: 3px 0 0 3px;
-  border: 1px solid #83dc05;
-  border-right: none;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 3px;
   z-index: 20;
+}
+.edit a {
+  color: #fff;
+}
+.edit a::after {
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -1757,27 +1761,37 @@ h1, .h1 {
   font-size: 2.6rem;
   line-height: 1.2;
 }
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 600px) {
   h1, .h1 {
-    font-size: 3.4rem;
+    font-size: 2.8rem;
+    line-height: 1.3;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 830px) {
   h1, .h1 {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
+    line-height: 1.4;
   }
 }
 
 h2,
 .h2 {
   font-size: 1.6rem;
-  line-height: 1.65;
+  line-height: 1.5;
   color: #122c33;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   h2,
   .h2 {
     font-size: 1.8rem;
+    line-height: 1.6;
+  }
+}
+@media screen and (min-width: 830px) {
+  h2,
+  .h2 {
+    font-size: 1.9rem;
+    line-height: 1.65;
   }
 }
 
@@ -1792,17 +1806,18 @@ h2,
 
 h3, .h3 {
   font-size: 2rem;
-  line-height: 1.45;
+  line-height: 1.3;
   text-transform: uppercase;
   color: #122c33;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   h3, .h3 {
     font-size: 2.2rem;
+    line-height: 1.4;
   }
 }
 h3 + p, .h3 + p {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .h3 {
@@ -1812,33 +1827,34 @@ h3 + p, .h3 + p {
 h4,
 .h4,
 .card__title {
-  font-size: 1.7rem;
-  line-height: 1.23;
+  font-size: 1.6rem;
+  line-height: 1.3;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   h4,
   .h4,
   .card__title {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
   }
 }
 
 .h4 {
   color: #122c33;
   font-weight: normal;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 h5,
 .h5,
 .s-title {
   font-size: 1.4rem;
-  line-height: 1.2;
+  line-height: 1;
   color: #122c33;
   text-transform: uppercase;
   color: #122c33;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   h5,
   .h5,
   .s-title {
@@ -1861,11 +1877,11 @@ h5,
 h6,
 .h6 {
   font-size: 1.4rem;
-  line-height: 1.25;
+  line-height: 1;
   color: #777777;
   font-weight: normal;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   h6,
   .h6 {
     font-size: 1.6rem;
@@ -1879,8 +1895,8 @@ p,
 .accordion__content ul,
 ul.list,
 .fluxi-content ul:not(.social) {
-  font-size: 1.3rem;
-  line-height: 1.45;
+  font-size: 1.4rem;
+  line-height: 1.4;
   font-family: "Georgia", serif;
   color: #555555;
 }
@@ -1892,7 +1908,7 @@ ul.list,
   .accordion__content ul,
   ul.list,
   .fluxi-content ul:not(.social) {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.5;
   }
 }
@@ -1904,19 +1920,7 @@ ul.list,
   .accordion__content ul,
   ul.list,
   .fluxi-content ul:not(.social) {
-    font-size: 1.5rem;
-    line-height: 1.55;
-  }
-}
-@media screen and (min-width: 1000px) {
-  p,
-  .p,
-  .p-ss,
-  .legend,
-  .accordion__content ul,
-  ul.list,
-  .fluxi-content ul:not(.social) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.6;
   }
 }
@@ -1924,7 +1928,7 @@ ul.list,
 p,
 .p-ss,
 .legend {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .p-ss,
@@ -1950,12 +1954,12 @@ blockquote {
 }
 blockquote .blockquote {
   font-size: 2rem;
-  line-height: 1.46;
+  line-height: 1.2;
   font-family: "avantgarde", Arial;
   color: #eb6c1d;
   font-weight: bold;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 600px) {
   blockquote .blockquote {
     font-size: 2.2rem;
   }
@@ -1965,6 +1969,21 @@ blockquote .blockquote {
   .s-title {
     margin-bottom: 6rem;
     text-align: center;
+  }
+}
+@media screen and (min-width: 830px) {
+  .h3 {
+    margin-top: 8rem;
+  }
+
+  h4, .h4 {
+    margin-top: 5rem;
+  }
+
+  p,
+  .p-ss,
+  .legend {
+    margin-top: 2rem;
   }
 }
 /*------------------------------*\
@@ -3727,7 +3746,7 @@ blockquote .blockquote {
 }
 
 .social:not(.social-footer):not(.news) {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .social:not(.social-footer):not(.news):after {
   border-top: 2px solid #f2f2f2;
@@ -3744,7 +3763,7 @@ blockquote .blockquote {
 }
 
 .page .social.news {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .fluxi-content .h3 {
@@ -3936,7 +3955,7 @@ blockquote .blockquote {
   display: flex;
   align-items: stretch;
   margin: 0;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   padding: 0;
 }
 .clikarde .clikarde__item::after {
@@ -4298,7 +4317,7 @@ blockquote .blockquote {
   }
   .clikarde .clikarde__item:nth-child(3) {
     flex: 1 0 100%;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 830px) {
@@ -4715,7 +4734,7 @@ input {
   background-size: cover;
   text-align: center;
   color: #fff;
-  padding-top: 10rem;
+  padding-top: 8rem;
 }
 .header-bloc::before {
   content: '';
@@ -4757,7 +4776,7 @@ input {
 .search-results .header-bloc,
 .archive .header-bloc {
   padding-bottom: 24rem;
-  margin-bottom: 24rem;
+  margin-bottom: 19rem;
 }
 .page .header-bloc .h1,
 .single .header-bloc .h1,
@@ -4768,10 +4787,18 @@ input {
 
 @media screen and (min-width: 600px) {
   .header-bloc {
-    padding-top: 16rem;
+    padding-top: 12rem;
   }
   .header-bloc .tags {
     display: flex;
+  }
+
+  .page .header-bloc,
+  .single .header-bloc,
+  .search-results .header-bloc,
+  .archive .header-bloc {
+    padding-top: 14rem;
+    margin-bottom: 23rem;
   }
 }
 /*! lightgallery - v1.2.6 - 2015-10-07
