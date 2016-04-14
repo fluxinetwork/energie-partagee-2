@@ -20,10 +20,10 @@
         
         <h5 class="s-title">Nos partenaires</h5>
         <ul class="box-logos box">
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-ademe.jpg"></a></li>
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-ile-de-france.jpg"></a></li>
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-paca.jpg"></a></li>
-            <li class="box-logos__item"><a class="box-logos__logo" href="#"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-centre.jpg"></a></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-ademe.jpg"></span></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-ile-de-france.jpg"></span></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-paca.jpg"></span></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-centre.jpg"></span></li>
             <li class="box-logos__btn"><a class="button-round" href="<?php echo get_site_url(); ?>/nous-decouvrir/qui-sommes-nous/lassociation/#partenaires"><i class="icon-plus_64"></i></a></li> 
         </ul>
         
