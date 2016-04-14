@@ -50,20 +50,27 @@ $query_projects = new WP_Query( $args_projects );
             <div class="box">
             	<?php					
 					if ( $query_projects->have_posts() ) :
+						$loop = 0;
 						while ( $query_projects->have_posts() ) : $query_projects->the_post();						
 							// Thumb	
 							$main_image_obj = get_field( 'main_image' );
 							$project_img ='';
+
+							if ($loop==0 && is_home()) {
+								$imgSize = 'card--full';
+							} else {
+								$imgSize = 'card--mini';
+							}
 						
 							if ( has_post_thumbnail() && empty($main_image_obj)) :
 								$post_img_id = get_post_thumbnail_id();
-								$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
+								$post_img_array = wp_get_attachment_image_src($post_img_id, $imgSize, true);
 								$post_img_url = $post_img_array[0];
 						
 								$project_img = '<img class="img-reponsive" src="'.$post_img_url.'">';
 							elseif(!empty($main_image_obj)):
 						
-								$project_img = '<img class="img-reponsive" src="'.$main_image_obj['url'].'">';
+								$project_img = '<img class="img-reponsive" src="'.$main_image_obj['sizes'][$imgSize].'">';
 							endif;					
 							
 							// Slug NRJ
@@ -98,7 +105,7 @@ $query_projects = new WP_Query( $args_projects );
                   	<?php
 				  
 				  		$nb_projects++;
-				            
+				        $loop++;
 						endwhile;
 					endif;
 					wp_reset_postdata();

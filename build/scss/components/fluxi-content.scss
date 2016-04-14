@@ -431,7 +431,7 @@ $transition: all 0.3s $ease-out-quart;
 		left: -150%;
 		width: 500%;
 		height: 100%;
-		background: radial-grad($c-special, null, at bottom, 60%);
+		background: $c-bglight;
 	}
 
 	.box-asy {
@@ -680,6 +680,9 @@ $transition: all 0.3s $ease-out-quart;
 			}
 		}
 	}
-
+	
+	.suggestion::before {
+		background: radial-grad($c-special, null, at bottom, 60%);
+	}
 
 }

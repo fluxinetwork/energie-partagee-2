@@ -2190,7 +2190,7 @@ blockquote .blockquote {
   height: 3rem;
   background: #122c33 none;
   text-align: right;
-  padding: 0 2.5rem;
+  padding: 0 2rem;
   z-index: 50;
   position: relative;
 }
@@ -2767,15 +2767,6 @@ blockquote .blockquote {
   }
 }
 @media screen and (max-width: 640px) {
-  .top-display {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-  .top-display .p-ss {
-    font-size: 1.4rem;
-    padding-top: 0.3rem;
-  }
-
   .navbar.is-search .logo__title {
     color: #eb6c1d;
   }
@@ -2825,6 +2816,15 @@ blockquote .blockquote {
   }
 }
 @media screen and (min-width: 640px) {
+  .top-display {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .top-display .p-ss {
+    font-size: 1.4rem;
+    padding-top: 0.3rem;
+  }
+
   .navbar {
     padding: 0 5rem;
     top: 60px;
@@ -4044,7 +4044,7 @@ blockquote .blockquote {
   left: -150%;
   width: 500%;
   height: 100%;
-  background: radial-gradient(at bottom, #de064e, #c50545 60%);
+  background: #f2f2f2;
 }
 .suggestion .box-asy {
   position: relative;
@@ -4312,6 +4312,10 @@ blockquote .blockquote {
   .isogrid .main-isogrid .item {
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     width: 23%;
+  }
+
+  .suggestion::before {
+    background: radial-gradient(at bottom, #de064e, #c50545 60%);
   }
 }
 /*------------------------------*\
@@ -6360,6 +6364,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .actualites .card-news--big {
     max-height: 310px;
     flex: 1 0 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
   }
   .actualites .card-news--expand .card__infos, .actualites .card-news--big .card__infos {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent 40%);
@@ -6383,9 +6389,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media screen and (min-width: 830px) {
   .actualites .wrap-pad {
     padding: 0 8rem;
-  }
-  .actualites .card-news, .actualites .card-news--expand, .actualites .card-news--big {
-    max-width: 31.5rem;
   }
 }
 /*------------------------------*\

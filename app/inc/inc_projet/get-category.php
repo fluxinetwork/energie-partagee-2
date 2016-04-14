@@ -17,15 +17,20 @@
 				while ( $query_category->have_posts() ) : $query_category->the_post();
 
 					// Thumb	
-					$main_img_add = get_field( 'add_image' );	
+					$main_img_add = get_field( 'add_image' );
+					if ($loop==0 || $loop==5) {
+						$imgSize = 'post-thumb';
+					} else {
+						$imgSize = 'card--mini';
+					}
 					if ( has_post_thumbnail() && $main_img_add == 0) :
 						$news_img_id = get_post_thumbnail_id();
-						$news_img_array = wp_get_attachment_image_src($news_img_id, 'large', true);
+						$news_img_array = wp_get_attachment_image_src($news_img_id, $imgSize, true);
 						$news_img_url = $news_img_array[0];
 						$news_img = '<img class="img-reponsive" src="'.$news_img_url.'">';
 					elseif($main_img_add == 1):
 						$main_image_obj = get_field( 'main_image' );
-						$news_img = '<img class="img-reponsive" src="'.$main_image_obj['url'].'">';
+						$news_img = '<img class="img-reponsive '.$imgSize.'" src="'.$main_image_obj['sizes'][$imgSize].'">';
 					endif;
 
 					if($cat_id == 16):

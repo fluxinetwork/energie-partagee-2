@@ -56,6 +56,8 @@
 		.card-news--big {
 			max-height: 310px;
 			flex: 1 0 100%;
+			max-width: 100%;
+			margin-left: 0!important;
 		}
 
 		.card-news--expand, .card-news--big {
@@ -86,9 +88,6 @@
 	.actualites {
 		.wrap-pad {
 			padding: 0 $gutter*2;
-		}
-		.card-news {
-			max-width: 31.5rem;
 		}
 	}
 }

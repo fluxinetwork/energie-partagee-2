@@ -5,9 +5,11 @@
  * add_image_size('name', width, height, crop);
  */
 function add_img_sizes() {
-	add_image_size('name', width, height, crop);
+	add_image_size('card--mini', 260, 175, true);
+	add_image_size('card--full', 670, 450, true);
+	add_image_size('post-thumb', 830, 400, true);
 }
-//add_action('after_setup_theme', 'add_img_sizes');
+add_action('after_setup_theme', 'add_img_sizes');
 
 
 /**
