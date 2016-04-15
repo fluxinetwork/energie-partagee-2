@@ -212,8 +212,8 @@
 }
 .minicard .link i {
   font-size: 3.2rem;
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   margin-right: 1rem;
   display: inline-block;
@@ -2218,7 +2218,7 @@ blockquote .blockquote {
   transition: top 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.no-touch .wrap-anim.readyanim {
+.no-touch .wrap-anim.ready-anim {
   top: 70px;
 }
 
@@ -3561,8 +3561,8 @@ blockquote .blockquote {
 }
 
 .box-logos__btn {
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
@@ -3599,8 +3599,8 @@ blockquote .blockquote {
     margin-right: 4rem;
   }
   .box-logos .box-logos__btn {
-    -ms-flex-item-align: center;
-        -webkit-align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
             align-self: center;
     -webkit-flex: inherit;
         -ms-flex: inherit;
@@ -3615,15 +3615,15 @@ blockquote .blockquote {
         -ms-flex: 1;
             flex: 1;
     margin: 0 2rem 0 0;
-    -ms-flex-item-align: center;
-        -webkit-align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
             align-self: center;
   }
 }
 @media screen and (min-width: 830px) {
   .box-logos .box-logos__btn {
-    -ms-flex-item-align: center;
-        -webkit-align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
             align-self: center;
     -webkit-flex: inherit;
         -ms-flex: inherit;
@@ -3786,8 +3786,8 @@ blockquote .blockquote {
   }
   .courtcircuit .box__half {
     margin-bottom: 0;
-    -ms-flex-item-align: center;
-        -webkit-align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
             align-self: center;
   }
 }
@@ -4295,8 +4295,8 @@ blockquote .blockquote {
 }
 .f-btn i, .f-btn--txt i, .f-btn--big i {
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   font-size: 3.2rem;
   color: #65aa04;
@@ -4306,8 +4306,8 @@ blockquote .blockquote {
           transform: scale(1.05);
 }
 .f-btn div, .f-btn--txt div, .f-btn--big div {
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   padding-left: 1rem;
 }
@@ -4448,8 +4448,8 @@ blockquote .blockquote {
 .accordion .accordion__head i {
   font-size: 3.2rem;
   color: #b3b3b3;
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   margin-right: 1rem;
   display: inline-block;
@@ -7309,8 +7309,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-top: 3rem;
 }
 .following.box .box__social {
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   text-align: center;
   width: 100%;
