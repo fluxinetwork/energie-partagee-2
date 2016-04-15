@@ -508,6 +508,21 @@ $transition: all 0.3s $ease-out-quart;
 		}
 	}
 }
+.galerie.galerie_vignettes{
+	.lSPager,.lSGallery{
+		li{
+			&.active,&:hover{
+				filter: grayscale(100%);
+			}
+			a{
+				display: block;
+			    height: 70px;
+			    overflow: hidden;
+			    width: 70px;
+			}
+		}
+	}
+}
 
 /* MEDIA QUERIES */	
 

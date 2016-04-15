@@ -340,7 +340,13 @@ var FOO = {
 			$(".fitvids").fitVids();
 			if($('body.single-projets').length){			
 				initSingleMap();				
-				initSendMailPorspect();			
+				initSendMailPorspect();
+                // Seraprate big numbers
+                if($('.repartition').length){                    
+                    $('.repartition .infosbloc li .data-capital').each(function( i ) {
+                        $(this).html(formatNumber($(this).data('capital')) + ' €');                        
+                    });
+                }			
 			}
         }
     },	
@@ -627,6 +633,24 @@ $('.js-share').on('click', function(e){
 		popupCenter(shareUrl, "Partager sur Twitter");
 	}
 });
+
+
+/**
+ * Separate numbers
+ */	
+
+function formatNumber(number){
+    var numberSplit = number.toFixed(0) + '';    
+    var x = numberSplit.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? ' ' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ' ' + '$2');
+    }
+    return x1 + x2;
+}
+
 
 
 

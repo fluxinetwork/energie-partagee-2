@@ -489,6 +489,7 @@ add_action('wp_ajax_get_json_map', 'get_json_map');
  * Load JSON for Google map
  * Must active admin-ajax.php in scripts.php
  */
+
 function send_mail_prospect(){
 
 	$mail_prospect = $_POST['mail_prospect'];
@@ -498,7 +499,7 @@ function send_mail_prospect(){
 	// Verify nonce
 	if ( isset( $_POST['mailing_prospect_nonce_field'] ) && wp_verify_nonce( $_POST['mailing_prospect_nonce_field'], 'mailing_prospect' )) :
 		// Verify email & token
-		if (filter_var($mail_prospect, FILTER_VALIDATE_EMAIL) && !filter_var($toky_toky, FILTER_VALIDATE_INT) === false && $toky_toky == 3948517542):
+		if (preg_match('#^[\w.-]+@[\w.-]+\.[a-z]{2,6}$#i', $mail_prospect) && $toky_toky == 3948517542):
 
 			// Projects infos
 			$id_project = filter_var($_POST['id_project'], FILTER_SANITIZE_NUMBER_INT);
@@ -547,7 +548,7 @@ function send_mail_prospect(){
 			// ********************************
 			// Envoie du mail de notification
 			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);			
-			notify_by_mail ($mails_notif, 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau prospect publié !', false, 'Le contact ' . $mail_prospect . ' vient de faire une demande d\'informations pour le projet <strong>' . $name_project . '<strong>.', $mail_vars_notif );
+			notify_by_mail ($mails_notif, 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau contact issu du site internet Energie Partagée', false, '<p>Une personne vient tout juste de consulter la page de votre projet sur le site d’Énergie Partagée.<br>Elle souhaite être inscrite à votre lettre d\'information et suivre les actualités du projet.<br>Son adresse email : ' . $mail_prospect . '<br><br>Merci de la tenir informée !<br><br>Bonne journée<br><br>L\'équipe Energie Partagée<p>', $mail_vars_notif );
 
 			// Output response json
 			$results[] = $datas_mail;
@@ -579,4 +580,3 @@ function send_mail_prospect(){
 
 add_action('wp_ajax_nopriv_send_mail_prospect', 'send_mail_prospect');
 add_action('wp_ajax_send_mail_prospect', 'send_mail_prospect');
-

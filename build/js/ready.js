@@ -73,7 +73,13 @@ var FOO = {
 			$(".fitvids").fitVids();
 			if($('body.single-projets').length){			
 				initSingleMap();				
-				initSendMailPorspect();			
+				initSendMailPorspect();
+                // Seraprate big numbers
+                if($('.repartition').length){                    
+                    $('.repartition .infosbloc li .data-capital').each(function( i ) {
+                        $(this).html(formatNumber($(this).data('capital')) + ' €');                        
+                    });
+                }			
 			}
         }
     },	

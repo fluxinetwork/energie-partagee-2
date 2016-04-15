@@ -4238,6 +4238,16 @@ blockquote .blockquote {
   transform: scale(1.05);
 }
 
+.galerie.galerie_vignettes .lSPager li.active, .galerie.galerie_vignettes .lSPager li:hover, .galerie.galerie_vignettes .lSGallery li.active, .galerie.galerie_vignettes .lSGallery li:hover {
+  filter: grayscale(100%);
+}
+.galerie.galerie_vignettes .lSPager li a, .galerie.galerie_vignettes .lSGallery li a {
+  display: block;
+  height: 70px;
+  overflow: hidden;
+  width: 70px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 300px) {
   .f-btn--big i {
