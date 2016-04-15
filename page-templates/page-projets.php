@@ -18,7 +18,7 @@ Template Name: Tous les projets
     </div>
   </header>
 
-  <div class="fluxi-wrap">
+  <div class="fluxi-wrap has-bg">
   	<?php 
 		get_description();				
 		get_socials('news');	
