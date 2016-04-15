@@ -172,7 +172,7 @@
   		margin-bottom: 0;
   	}
   	.box__half {
-    	flex: 1 1 0;		
+    	flex: 1 0 0%;		
     	padding-right: $gutter/2;
 		margin-bottom:$space*0.4;
   	}
@@ -208,7 +208,7 @@
 	}
 
 	.box__half {
-	  	flex: 1 1 0;		
+	  	flex: 1 0 auto;		
 	  	padding-right: $gutter;
 	}
 	

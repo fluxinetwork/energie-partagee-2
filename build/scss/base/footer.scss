@@ -21,13 +21,13 @@
 		}
 		.box{
 			.box__solo{
-				flex: 10 1 0;
+				flex: 1;
 				margin-right: $gutter/2;
 				margin-bottom:0;
 				padding: 0;
 			}
 			.box__fixe{
-				flex: 1 1 0;
+				flex: none;
 			}
 		}
 	}
@@ -113,12 +113,28 @@
 	padding: $space;
 
 	&.show-me {
-		@include flex(center, true);
+		display: block;
+	}
+
+	> * {
+		margin: 0 auto;
+	}
+
+	h2 {
+		margin: $gutter auto;
+	}
+
+	a,
+	h1,
+	h2 {
+		@extend %transition;
+		color: #fff;
+		max-width: 500px;
 	}
 
 	ul {
 		@extend %list-reset;
-		display: flex;
+		
 
 		li {
 			@extend %transition;
@@ -126,6 +142,7 @@
 			padding: $gutter/2;
 			background: $c-dark;
 			border-radius: $radius;
+			display: inline-block;
 
 			&:hover {
 				background: #fff;
@@ -143,18 +160,6 @@
 
 	.safari {
 		display: none;
-	}
-
-	a,
-	h1,
-	h2 {
-		@extend %transition;
-		color: #fff;
-		max-width: 500px;
-	}
-
-	h2 {
-		margin: $gutter 0;
 	}
 }
 

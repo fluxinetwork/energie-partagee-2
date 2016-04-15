@@ -81,6 +81,9 @@
 		}
 	}	
 	.trio-card {
+		.box__half {
+			flex: 1;
+		}
 		.box__half:nth-child(3){
 			padding-right:0;
 		}
@@ -124,6 +127,10 @@
 			
 		.box__fixe{
 			display:flex;
+
+			.button-round {
+				transform: translateY(-40px);
+			}
 		}  
 	  	.button:not(.cta) {
 			margin-top:$space*0.6;

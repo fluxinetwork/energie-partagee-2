@@ -298,7 +298,7 @@ var FOO = {
                 $('.fluxi-wrap').addClass('has-suggestion');
             }
 
-            if ($(html).hasClass('no-detect_flexbox')) {
+            if ($('html').hasClass('detect_no-flexbox')) {
                 $('.warning-flexbox').addClass('show-me');
             }
         }

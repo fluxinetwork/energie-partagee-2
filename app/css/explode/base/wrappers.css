@@ -243,7 +243,7 @@
   }
 
   .box__half {
-    flex: 1 1 0;
+    flex: none;
     padding-right: 2rem;
     margin-bottom: 4rem;
   }
@@ -280,7 +280,7 @@
   }
 
   .box__half {
-    flex: 1 1 0;
+    flex: none;
     padding-right: 4rem;
   }
 

@@ -1,5 +1,8 @@
 <div class="accordion">
-    <h4 class="accordion__head"><i class="icon-chevronright_32"></i><?php echo the_sub_field('entete_accordeon'); ?></h4>
+	<div class="accordion__head">
+    	<i class="icon-chevronright_32"></i>
+    	<h4 class="h4"><?php echo the_sub_field('entete_accordeon'); ?></h4>
+    </div>
     <div class="accordion__content">    
     <?php 
 		while( have_rows('corps_accordeon') ): the_row(); 

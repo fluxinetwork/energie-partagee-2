@@ -350,6 +350,7 @@ $transition: all 0.3s $ease-out-quart;
 	margin-top: $gutter;
 
 	.accordion__head {
+		display: flex;
 		@extend %transition;
 		border-bottom: 2px solid $c-bglight;
 		border-top: 2px solid $c-bglight;
@@ -366,6 +367,12 @@ $transition: all 0.3s $ease-out-quart;
 			margin-right:$gutter/4;			
 			display:inline-block;
 			vertical-align: middle;
+			align-self: flex-start;
+		}
+
+		h4 {
+			margin-top: 0;
+			transform: translateY(2px);
 		}
 	}	
 	.accordion__content {

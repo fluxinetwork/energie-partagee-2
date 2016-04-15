@@ -108,7 +108,7 @@
   padding: 0;
 }
 .footer .box .box .box__fixe {
-  flex: 1 1 0;
+  flex: none;
 }
 .footer .courtcircuit__input {
   background: transparent;
@@ -186,7 +186,7 @@
   }
   .footer .box .box .box__solo {
     padding: 0;
-    flex: 1 1 0;
+    flex: none;
     margin-bottom: 0;
     margin-right: 4rem;
   }
