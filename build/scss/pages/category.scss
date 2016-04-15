@@ -23,6 +23,7 @@
 
 	.card-news--expand {
 		@include margin(null $gutter);
+		margin-top: 0;
 	}
 	.fluxi-content--cat{
 		padding-top:$gutter*1.5;

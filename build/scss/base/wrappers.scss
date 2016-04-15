@@ -83,10 +83,9 @@
 
 .wrap-anim {
 	transition: top 0.4s $ease-out-quart;
-
-	&.ready-anim {
-		top: 70px;
-	}
+}
+.no-touch .wrap-anim.readyanim {
+	top: 70px;
 }
 
 @media screen and (min-width: $bp--medium) {

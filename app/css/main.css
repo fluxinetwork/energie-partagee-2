@@ -2089,7 +2089,8 @@ blockquote .blockquote {
 .wrap-anim {
   transition: top 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.wrap-anim.ready-anim {
+
+.no-touch .wrap-anim.readyanim {
   top: 70px;
 }
 
@@ -2964,23 +2965,24 @@ blockquote .blockquote {
 	#BOX-SPECIAL
 	
 \*------------------------------*/
-.infosbloc, .box-asy, .publication, .action-projet__box, .testimony {
+.infosbloc, .box-asy, .publication, .suggestion-posts, .action-projet__box, .testimony {
   position: relative;
   padding: 4rem;
   border-radius: 3px;
 }
-.infosbloc h4:first-child, .box-asy h4:first-child, .publication h4:first-child, .action-projet__box h4:first-child, .testimony h4:first-child,
+.infosbloc h4:first-child, .box-asy h4:first-child, .publication h4:first-child, .suggestion-posts h4:first-child, .action-projet__box h4:first-child, .testimony h4:first-child,
 .infosbloc p:first-child,
 .box-asy p:first-child,
 .publication p:first-child,
+.suggestion-posts p:first-child,
 .action-projet__box p:first-child,
 .testimony p:first-child {
   margin-top: 0;
 }
-.infosbloc h4, .box-asy h4, .publication h4, .action-projet__box h4, .testimony h4 {
+.infosbloc h4, .box-asy h4, .publication h4, .suggestion-posts h4, .action-projet__box h4, .testimony h4 {
   margin-top: 2rem;
 }
-.infosbloc p, .box-asy p, .publication p, .action-projet__box p, .testimony p {
+.infosbloc p, .box-asy p, .publication p, .suggestion-posts p, .action-projet__box p, .testimony p {
   margin-top: 1rem;
   font-family: "Roboto", sans-serif;
   color: inherit;
@@ -3017,10 +3019,10 @@ blockquote .blockquote {
 }
 
 @media screen and (min-width: 830px) {
-  .infosbloc h4, .box-asy h4, .publication h4, .action-projet__box h4, .testimony h4 {
+  .infosbloc h4, .box-asy h4, .publication h4, .suggestion-posts h4, .action-projet__box h4, .testimony h4 {
     margin-top: 4rem;
   }
-  .infosbloc p, .box-asy p, .publication p, .action-projet__box p, .testimony p {
+  .infosbloc p, .box-asy p, .publication p, .suggestion-posts p, .action-projet__box p, .testimony p {
     margin-top: 1.33333rem;
   }
 
@@ -3044,7 +3046,7 @@ blockquote .blockquote {
     text-align: left;
   }
 
-  .clikable .box-asy, .suggestion .box-asy, .testimony {
+  .clikable .box-asy, .suggestion > div, .suggestion-posts, .testimony {
     padding-right: 8rem;
     padding-left: 8rem;
     width: 830px;
@@ -4198,14 +4200,19 @@ blockquote .blockquote {
 
 /* PUBLICATIONS */
 .wrap-publication {
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 .wrap-publication .f-btn--big {
-  margin: 2rem 0 0 4rem;
+  flex-direction: column;
+  margin-top: 0;
+}
+.wrap-publication .f-btn--big i {
+  margin-bottom: 2rem;
 }
 
 .publication {
-  border: 2px solid #b3b3b3;
+  padding-right: 0;
+  padding-left: 0;
 }
 .publication .box-asy__left {
   max-width: 200px;
@@ -4214,6 +4221,7 @@ blockquote .blockquote {
 }
 .publication img {
   border-radius: 3px !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* GALLERIES */
@@ -4352,6 +4360,13 @@ blockquote .blockquote {
   .isogrid .main-isogrid .item {
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     width: 23%;
+  }
+
+  .wrap-publication .f-btn--big {
+    flex-direction: row;
+  }
+  .wrap-publication .f-btn--big i {
+    margin-bottom: 0;
   }
 }
 /* HAN ! */
@@ -6468,7 +6483,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /* SUGGESTION PAGE */
 .suggestion {
   position: relative;
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 .suggestion::before {
   content: '';
@@ -6479,16 +6494,53 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 100%;
   background: #f2f2f2;
 }
-.suggestion .box-asy {
+.suggestion > div {
   position: relative;
   background: #f2f2f2;
   border-radius: 3px;
 }
 
 /* SUGGESTIONS ARTICLES */
+.suggestion-posts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.suggestion-posts .reverse {
+  transform: rotate(180deg);
+}
+.suggestion-posts .cat-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.suggestion-posts .s-title {
+  margin-bottom: 2rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  .cat-nav .s-title {
+    display: none;
+  }
+}
+@media screen and (max-width: 830px) {
+  .suggestion-posts {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 @media screen and (min-width: 830px) {
+  .suggestion {
+    margin-top: 20rem;
+  }
   .suggestion::before {
     background: radial-gradient(at bottom, #de064e, #c50545 60%);
+  }
+
+  .cat-nav {
+    min-width: 100px;
   }
 }
 /*------------------------------*\
@@ -6512,6 +6564,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .actualites .card-news--expand {
   margin-right: 4rem;
   margin-left: 4rem;
+  margin-top: 0;
 }
 .actualites .fluxi-content--cat {
   padding-top: 6rem;
