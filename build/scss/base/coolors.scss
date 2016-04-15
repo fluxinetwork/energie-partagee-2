@@ -103,8 +103,19 @@
 			content: $icon;
 		}
 	}
-	&.card-map .link-cta{
-		color:$color;
+	&.card-map {
+		.tag {
+			background: $color;
+		}
+		.link-cta {
+			@extend %transition;
+			color: $color;
+
+			&:hover {
+				background-color: $color!important;
+				color: #fff;
+			}
+		}
 	}
 }
 

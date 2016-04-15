@@ -17,7 +17,10 @@ $query_news = new WP_Query( $args_news );
             	</div>
             	<div class="box__half">
                     <span class="lighter">Suivez-nous sur</span> 
-                    <?php get_socials('news'); ?>
+                    <ul class="social news">
+                      <li><a href="https://www.facebook.com/EnergiePartagee.org" class="social--face" target="_blank"><i class="icon-facebook_40"></i></a></li>
+                       <li><a href="https://twitter.com/EnergiePartagee" class="social--twit" target="_blank"><i class="icon-twitter_40"></i></a></li>
+                   </ul> 
            	  </div>
              	<div class="box__fixe"></div>
         	</div>

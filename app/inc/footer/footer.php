@@ -23,7 +23,7 @@
             <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-ademe.jpg"></span></li>
             <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-ile-de-france.jpg"></span></li>
             <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-paca.jpg"></span></li>
-            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-centre.jpg"></span></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-centre-val-loire.jpg"></span></li>
             <li class="box-logos__btn"><a class="button-round" href="<?php echo get_site_url(); ?>/nous-decouvrir/qui-sommes-nous/lassociation/#partenaires"><i class="icon-plus_64"></i></a></li> 
         </ul>
         
@@ -39,7 +39,6 @@
         <nav class="footer__nav">
            <a class="link" href="<?php echo get_site_url(); ?>/contact/">Contact</a>
            <a class="link" href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions légales </a>
-           <a class="link" href="<?php echo get_site_url(); ?>/credits/">Crédits</a>
         </nav>
         
     </div>    

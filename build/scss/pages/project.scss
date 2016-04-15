@@ -467,7 +467,10 @@
 }
 
 
-@media screen and (max-height: 670px) {
+@media screen and (max-height: 800px) {
+	.all-projects #map {
+		height: 600px!important;
+	}
 	.card-map .card__img {
 		display: none;
 	}
