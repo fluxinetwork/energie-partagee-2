@@ -154,7 +154,7 @@
     display: block;
     top: 50%;
     height: 32px;
-    background-image: url('../images/controls.png');
+    background-image: url('../img/controls.png');
     cursor: pointer;
     position: absolute;
     z-index: 99;
@@ -234,6 +234,9 @@
 }
 .lSSlideOuter .lightSlider > *,  .lSSlideOuter .lSGallery li {
     float: left;
+    img{
+        margin:0 auto;
+    }
 }
 .lSSlideOuter.lSrtl .lightSlider > *,  .lSSlideOuter.lSrtl .lSGallery li {
     float: right !important;
