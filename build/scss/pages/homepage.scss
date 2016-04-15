@@ -5,26 +5,10 @@
 
 \*------------------------------*/
 
-
-.home .header-bloc {
-	background:url('../img/energie-partagee-homepage-header.jpg') no-repeat center;
-	background-size:cover;
-	padding: unpack($space $gutter/2 $space*0.75);
-
-	h1 {
-		animation: 1s $ease-out-quart 1 forwards slideUpOpacity;
-	}
-
-	.wrap-l {
-		padding: 0;
-	}
-}
-
-
 .key-nums{
 	display: flex;
 	justify-content: flex-start;
-	margin:0;
+	margin: $space*0.3 0;
 	padding:0;
 	list-style-type:none;
 						
@@ -81,12 +65,6 @@
 }
 
 @media screen and (max-width: $bp--medium) {	
-	.home .header-bloc {
-		.button {
-			margin-top: $gutter;
-		}
-	}
-
 	.steps-intro .f-btn {
 		i {
 			display: none;
@@ -142,13 +120,13 @@
 	}
 }
 @media screen and (min-width: $bp--small) {
-	.home .header-bloc {
-		padding: unpack($space*2 $gutter $space*1.5);
-	}
-
 	.wrap-n {
 		padding-left:$gutter*2;
 		padding-right:$gutter*2;
+	}
+
+	.key-nums {
+		margin: $space*0.5 0;
 	}
 
 	.key-nums__item__txt {

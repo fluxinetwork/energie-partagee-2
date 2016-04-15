@@ -36,19 +36,23 @@
 	$next_post = get_adjacent_post( true, '', false );
 
   ?>
-  <header class="header-bloc">    
-    <ul class="tags">
-    	 <li><a class="tag" href="<?php echo $url_parent_page; ?>"><?php if($cat_post->cat_name == "Presse"): echo 'Dans les médias'; else: echo $cat_post->cat_name; endif ?></a></li>
-         <?php if($cat_post_slug == 'presse' || $cat_post_slug == 'actualites'): ?>
-        	<li class="tag is-inactive"><?php echo get_the_date();?></li>
-        <?php endif; ?>
-    </ul>    
-    <h1 class="h1 wrap-n">
-      <?php the_title(); ?>
-    </h1>
-    <?php if($cat_post_slug=='evenements' || $cat_post_slug=='formations'): ?>
-    			<h4 class="h4"><span class="icon-calendar_20"></span><?php echo date_i18n('d F Y', strtotime(get_field('date_event')));?><span class="icon-pin_20"></span><?php echo get_field('ville_event');?></h4>    
-    <?php endif; ?>
+  <header class="header-bloc--page">  
+  	<div class="header-bloc__content">  
+	    <ul class="tags">
+	    	 <li><a class="tag" href="<?php echo $url_parent_page; ?>"><?php if($cat_post->cat_name == "Presse"): echo 'Dans les médias'; else: echo $cat_post->cat_name; endif ?></a></li>
+	         <?php if($cat_post_slug == 'presse' || $cat_post_slug == 'actualites'): ?>
+	        	<li class="tag is-inactive"><?php echo get_the_date();?></li>
+	        <?php endif; ?>
+	    </ul>  
+
+	    <h1 class="h1 wrap-n">
+	      <?php the_title(); ?>
+	    </h1>
+	    
+	    <?php if($cat_post_slug=='evenements' || $cat_post_slug=='formations'): ?>
+	    			<h4 class="h4"><span class="icon-calendar_20"></span><?php echo date_i18n('d F Y', strtotime(get_field('date_event')));?><span class="icon-pin_20"></span><?php echo get_field('ville_event');?></h4>    
+	    <?php endif; ?>
+    </div>
   </header>
   
     <?php

@@ -1,1 +1,46 @@
+/*------------------------------*\
 
+    #SUGGESTIONS
+
+\*------------------------------*/
+
+.fluxi-wrap.has-suggestion {
+	margin-bottom: 0;
+}
+
+/* SUGGESTION PAGE */
+
+.suggestion {
+	position: relative;
+	margin-top: $space*2;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -150%;
+		width: 500%;
+		height: 100%;
+		background: $c-bglight;
+	}
+
+	.box-asy {
+		@extend %box--extend;
+		position: relative;
+		background: $c-bglight;
+		border-radius: $radius;
+	}
+}
+
+
+/* SUGGESTIONS ARTICLES */
+
+.suggestion-posts {
+	display: none;
+}
+
+@media screen and (min-width: $bp--medium) {
+	.suggestion::before {
+		background: radial-grad($c-special, null, at bottom, 60%);
+	}
+}

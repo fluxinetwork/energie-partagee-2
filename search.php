@@ -10,26 +10,29 @@ $count = $wp_query->found_posts;
 ?>
 
 <section class="wrap-main">
-	<header class="header-bloc <?php if($count==0) { echo 'no-result'; } ;?>">
-        <ul class="tags">     
-            <li class="tag">Recherche</li>
-            <li class="tag is-inactive"><?php echo get_search_query(); ?></li>     
-        </ul>    
-        <h1 class="h1">
-           <?php 
-               $several = ($count<=1) ? '' : 's'; //pluriel
-            
-               if ($count>0) : $output =  $count.' résultat'.$several;
-               else : $output = 'Aucun résultat';
-               endif;
+	<header class="header-bloc--page <?php if($count==0) { echo 'no-result'; } ;?>">
+        <div class="header-bloc__content">
+          <ul class="tags">     
+              <li class="tag">Recherche</li>
+              <li class="tag is-inactive"><?php echo get_search_query(); ?></li>     
+          </ul>   
 
-               echo $output;
-             ?>        
-        </h1>
+          <h1 class="h1">
+             <?php 
+                 $several = ($count<=1) ? '' : 's'; //pluriel
+              
+                 if ($count>0) : $output =  $count.' résultat'.$several;
+                 else : $output = 'Aucun résultat';
+                 endif;
+
+                 echo $output;
+               ?>        
+          </h1>
+        </div>
 	</header>
   
 	<?php if ( have_posts() ) : ?>    
-    <article class="fluxi-content wrap-search fluxi-wrap">    
+    <article class="fluxi-content has-bg wrap-search fluxi-wrap">    
       <div id="search-filters" class="filtres wrap-extend">
         <h5 class="h5">Filtrer les résultats</h5>
         

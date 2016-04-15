@@ -1,6 +1,12 @@
+/*------------------------------*\
+
+    #FLUXI-CONTENT
+
+\*------------------------------*/
+
 @mixin sort_btn_color($color) {
-	color:#fff;
-	&:after{ background: $color none; }
+	color:#fff;	
+	&:after{ background: $color none; }	
 }
 @mixin sort_title_color($color) {
 	border:1px solid $color;
@@ -10,37 +16,42 @@
 	background-color: $color;
 }
 
-.fluxi-wrap{
-	background-color:#fff;
-	margin:-$space*4 auto $space auto;
-	min-height:200px;
-	position: relative;
 
+/* FLUXI-WRAP */
+
+.fluxi-wrap {
+	position: relative;
+	background-color: transparent;
+	margin-top: -50px;
+	margin-bottom: $space;
+
+	&.has-bg::before {
+		@include pseudo-bg(#fff, 1);
+		min-height: 190px;
+	}
+
+	> * {
+		position: relative;
+	}
+	
 	.wrap-extend .img-responsive{
 		border-radius:$radius;
-		margin:0 auto;
+		margin:0 auto;	
 	}
-
+	
 	h2.description {
-		padding-top:$space*0.3;
-	}
-
-	&.has-suggestion {
-		margin-bottom: 0;}
-}
-.single,
-.single-projets  {
-	.fluxi-wrap {
-		position: initial;
+		padding-top:$space*0.3;	
 	}
 }
 
+
+/* SOCIALS */
 
 .social:not(.social-footer):not(.news) {
 	margin-top: $gutter/2;
-
+	
 	&:after{
-		border-top:2px solid $c-bglight;
+		border-top:2px solid $c-bglight;			
 		content:"";
 		width:10rem;
 		height:1px;
@@ -58,26 +69,25 @@
 	margin-top: $gutter/2;
 }
 
-.fluxi-content{
-	.h3 {
-		margin-top: $space;
-	}
 
+/* FLUXI CONTENT */
 
+.fluxi-content{	
+	
 	p a, .list li a,.accordion__content a{
 		@extend %link;
 		font-family:$txt-fontserif;
 		text-transform:inherit;
-		font-size: 1.6rem;
-	}
+		font-size: 1.6rem;			
+	}	
 	.img__left,.img__right,.accordion__content {
 		@extend .clearfix;
 		margin-top:	$space/2;
-
+		
 		.img_mini,.img_med{
 			max-width:156px;
 			margin-right:$gutter/2;
-			float:left;
+			float:left;		
 		}
 
 		img {
@@ -89,52 +99,55 @@
 		}
 
 		p:last-child{
-			margin-bottom:0;
+			margin-bottom:0;			
 		}
 	}
-	.img__right{
+	.img__right{				
 		.img_mini,.img_med{
 			margin-right:0;
 			margin-left:$gutter/2;
-			float:right;
-		}
+			float:right;		
+		}			
 	}
 	.list{
 		padding-left: $gutter;
 		font-family: $txt-fontserif;
 		color:$c-text;
 		li{
-			margin-bottom:$space*0.1;
+			margin-bottom:$space*0.1;			
 		}
 	}
 	.lightbox {
 		.figure{
-			margin: $space*0.6 0;
+			margin: $space*0.6 0;				
 		}
 		.legend{
 			padding:0 ;
-			margin-top:$space*0.05;
+			margin-top:$space*0.05;		
 		}
 	}
 	.entry-content-asset{
-		margin-bottom:$space*0.4;
-	}
+		margin-bottom:$space*0.4;	
+	}	
 	.galerie{
-		margin:	$space*0.4 auto;
+		margin:	$space*0.4 auto;	
 	}
 	.courtcircuit{
 		padding-top:$space*0.6;
-		padding-bottom:$space;
-	}
+		padding-bottom:$space;			
+	}	
 
 	.button--solo {
 		margin-top: $gutter!important;
-	}
+	}	
 }
 
-blockquote{
 
-	&:before,&:after{
+/* BLOCKQUOTE */
+
+blockquote{    
+	&:before,
+	&:after {
 		border-top: 2px solid $c-focus;
 		content: "";
 	    display: block;
@@ -142,18 +155,21 @@ blockquote{
 	    width: 10rem;
 	}
 
-	&:before{
-	    margin: $gutter 0 $gutter/2 0;
+	&:before {
+	    margin: $gutter 0 $gutter/2 0;		    
 	}
-	&:after{
-	    margin: $gutter/2 0 $space*0.42 0;
+	&:after {
+	    margin: $gutter/2 0 $space*0.42 0;		    
 	}
 
-    .blockquote{
-    	padding-right:$gutter;
-    	margin-bottom: 0;
+    .blockquote {
+    	padding-right:$gutter; 
+    	margin-bottom: 0;   		
 	}
 }
+
+
+/* F-BTN */
 
 $transition: all 0.3s $ease-out-quart;
 .f-btn {
@@ -165,27 +181,27 @@ $transition: all 0.3s $ease-out-quart;
 		width: 100%;
 	}
 
-	i {
+	i {	
 		transition: $transition;
-		align-self:center;
-	    font-size: 3.2rem;
+		align-self:center;	
+	    font-size: 3.2rem;	    
 	    color:$c-main;
 
-	    &:hover {
-	        transform: scale(1.05);
+	    &:hover {	  
+	        transform: scale(1.05);	   
 	    }
 	}
 
 	div {
-		align-self:center;
+		align-self:center;		
 	    padding-left: $gutter/4;
 	}
 
 	.txt {
-		@extend %link;
+		@extend %link;		
 	}
 
-	.legend {
+	.legend {		
 		font-weight: normal;
 		text-transform: none;
 		display: none;
@@ -195,22 +211,26 @@ $transition: all 0.3s $ease-out-quart;
 		margin-top: $space*0.8;
 	}
 }
-.f-btn--txt{
+.f-btn--txt{		
 	@extend .f-btn;
 	div{
 	    padding-left:0;
 	}
 }
-.f-btn--big {
+.f-btn--big {	
 	@extend .f-btn;
 
-	i {
+	i { 
 	    font-size: 3.2rem;
 	    color:$c-light;
 	}
 
 	div {
 	    padding-left: $gutter/4;
+	}
+
+	.txt {
+		font-size: 1.4rem;
 	}
 
 	.legend {
@@ -225,6 +245,13 @@ $transition: all 0.3s $ease-out-quart;
 	}
 }
 
+
+/* CLIKABLE */
+
+.clikable .box-asy {
+	@extend %box--extend;
+}
+
 .clikable.wide {
 	position:relative;
 	margin:$space*0.6 0;
@@ -233,13 +260,13 @@ $transition: all 0.3s $ease-out-quart;
 	.p-ss{
 		margin-bottom: 0;
 	}
-
+	
 	.wrap-space.box{
 		z-index:2;
 		position:relative;
 	}
-
-	&:before{
+	
+	&:before{		
 		background:$c-bglight;
 		width:100%;
 		height:100%;
@@ -255,9 +282,9 @@ $transition: all 0.3s $ease-out-quart;
 	.box__half:last-child{
 		padding-right:0;
 		margin-bottom:0;
-	}
+	}		
 	.button{
-		margin-top:$space*0.3;
+		margin-top:$space*0.3;	
 	}
 	.lightbox{
 		margin-bottom:$space*0.6;
@@ -270,18 +297,22 @@ $transition: all 0.3s $ease-out-quart;
 
 .holder-round {
 	border-radius:50%;
-	overflow:hidden;
+	overflow:hidden;	
 	width:100%;
 	max-width:260px;
 	margin:0 auto;
 	img{
 		width: 100%;
 	}
-}
+}	
+
+
+/* CLIKARDE */
+
 .clikarde {
     list-style-type: none;
-	margin:$space/2 0;
-	padding:0;
+	margin:$space/2 0;	
+	padding:0;	
 
 	.clikarde__item {
 		@extend %transition;
@@ -310,8 +341,10 @@ $transition: all 0.3s $ease-out-quart;
 	p {
 		margin-top: 0;
 	}
-}
+}	
 
+
+/* ACCORDION */
 
 .accordion {
 	margin-top: $gutter;
@@ -324,17 +357,17 @@ $transition: all 0.3s $ease-out-quart;
 		padding: $space*0.1 0;
 		cursor:pointer;
 		margin-top:0;
-
+		
 		i {
 			@extend %transition;
 			font-size: 3.2rem;
 			color:$c-light;
 			align-self:center;
-			margin-right:$gutter/4;
+			margin-right:$gutter/4;			
 			display:inline-block;
 			vertical-align: middle;
 		}
-	}
+	}	
 	.accordion__content {
 		padding: $gutter 0;
 		margin-top: 0;
@@ -351,7 +384,7 @@ $transition: all 0.3s $ease-out-quart;
 		ul,
 		ol {
 			margin:0 0 $space*0.3 $space*0.3;
-		}
+		}		
 	}
 
 	+ .accordion {
@@ -362,17 +395,20 @@ $transition: all 0.3s $ease-out-quart;
 		}
 	}
 }
-.accordion.open .accordion__head i {
+.accordion.open .accordion__head i {			
 	color:$c-dark;
 	transform:rotate(90deg);
 }
 
+
+/* ISO GRID */
+
 .isogrid{
-	margin-top:$space*0.6;
+	margin-top:$space*0.6;	
 	.button-group-sort{
-		margin-bottom:$gutter/2;
+		margin-bottom:$gutter/2;		
 		.button{
-			font-size: $space*0.12;
+			font-size: $space*0.12;		    
 		    margin: 0 $space*0.05 $space*0.1;
 		    padding: $space*0.15;
 
@@ -409,7 +445,7 @@ $transition: all 0.3s $ease-out-quart;
 
 		    .titre{
 		    	text-align: center;
-		    	background-color: #fff;
+		    	background-color: #fff;			    
 			    border-radius: 0 0 0.6em 0.6em;
 			    color: #7a7a7a;
 			    display: block;
@@ -424,6 +460,9 @@ $transition: all 0.3s $ease-out-quart;
 
 }
 
+
+/* PUBLICATIONS */
+
 .wrap-publication {
 	margin-top: $gutter;
 
@@ -434,7 +473,7 @@ $transition: all 0.3s $ease-out-quart;
 .publication {
 	@extend %box-special;
 	@extend %box-asymetrique;
-	background: $c-bglight;
+	border: 2px solid $c-light;
 
 	.box-asy__left {
 		max-width: 200px;
@@ -446,206 +485,7 @@ $transition: all 0.3s $ease-out-quart;
 	}
 }
 
-.suggestion {
-	position: relative;
-	margin-top: $space*2;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -150%;
-		width: 500%;
-		height: 100%;
-		background: $c-bglight;
-	}
-
-	.box-asy {
-		@extend %box--extend;
-		position: relative;
-		background: $c-bglight;
-		border-radius: $radius;
-	}
-}
-
-.button.f_cat_0{
-	@include sort_btn_color($c-eolien);
-}
-.button.f_cat_1{
-	@include sort_btn_color($c-hydro);
-}
-.button.f_cat_2{
-	@include sort_btn_color($c-bio);
-}
-.button.f_cat_3{
-	@include sort_btn_color($c-solaire);
-}
-.button.f_cat_4{
-	@include sort_btn_color($c-geo);
-}
-.button.f_cat_5{
-	@include sort_btn_color($c-eco);
-}
-.button.f_cat_6{
-	@include sort_btn_color($c-main);
-}
-.button.f_cat_7{
-	@include sort_btn_color($c-special);
-}
-.button.f_cat_8{
-	@include sort_btn_color($c-focus);
-}
-.button.f_cat_9{
-	@include sort_btn_color($c-eolien);
-}
-.button.f_cat_10{
-	@include sort_btn_color($c-hydro);
-}
-
-.item.f_cat_0{
-	.titre{
-		@include sort_title_color($c-eolien);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-eolien);
-	}
-}
-.item.f_cat_1{
-	.titre{
-		@include sort_title_color($c-hydro);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-hydro);
-	}
-}
-.item.f_cat_2{
-	.titre{
-		@include sort_title_color($c-bio);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-bio);
-	}
-}
-.item.f_cat_3{
-	.titre{
-		@include sort_title_color($c-solaire);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-solaire);
-	}
-}
-.item.f_cat_4{
-	.titre{
-		@include sort_title_color($c-geo);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-geo);
-	}
-}
-.item.f_cat_5{
-	.titre{
-		@include sort_title_color($c-eco);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-eco);
-	}
-}
-.item.f_cat_6{
-	.titre{
-		@include sort_title_color($c-main);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-main);
-	}
-}
-.item.f_cat_7{
-	.titre{
-		@include sort_title_color($c-special);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-special);
-	}
-}
-.item.f_cat_8{
-	.titre{
-		@include sort_title_color($c-focus);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-focus);
-	}
-}
-.item.f_cat_9{
-	.titre{
-		@include sort_title_color($c-eolien);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-eolien);
-	}
-}
-.item.f_cat_10{
-	.titre{
-		@include sort_title_color($c-hydro);
-	}
-	.icon-doc{
-		@include sort_icon_color($c-hydro);
-	}
-}
-
-@media screen and (min-width: $bp--mobile) {
-	.f-btn--big{
-		i{
-		    font-size: 6.4rem;
-		    color:$c-light;
-		}
-		div{
-		    padding-left: $gutter/2;
-		}
-		.legend{
-			display: none;
-		}
-	}
-
-}
-
-@media screen and (min-width: $bp--small) {
-	.f-btn .legend{
-		display: block;
-	}
-	.fluxi-content .button.__btn .txt{
-		line-height: 1;
-	}
-
-	.clikable.wide{
-		text-align:left;
-
-		.box__half,.box__half:first-child{
-			margin-bottom:0;
-		}
-	}
-
-	.clikarde{
-		@include flex(null stretch);
-		flex-wrap: wrap;
-
-		.clikarde__item {
-			flex: 1 0 30%;
-			margin-bottom: 0;
-
-			&:nth-child(1) {
-				margin-right: $gutter/2;
-			}
-
-			&:nth-child(3) {
-				flex: 1 0 100%;
-				margin-top: $gutter/2;
-			}
-		}
-
-	}
-}
-
-
-
+/* GALLERIES */
 .galerie.galerie_damier{
 	display: flex;
   	flex-wrap: wrap;
@@ -669,36 +509,118 @@ $transition: all 0.3s $ease-out-quart;
 	}
 }
 
-@media screen and (max-width: $bp--medium) {
+/* MEDIA QUERIES */	
+
+@media screen and (min-width: $bp--mobile) {	
+	.f-btn--big {	
+		i{
+		    font-size: 6.4rem;
+		    color:$c-light;
+		}
+		div{
+		    padding-left: $gutter/2;
+		}
+		.legend{
+			display: none;
+		}
+	}	
+	
+}
+
+@media screen and (min-width: $bp--small) {
+	.fluxi-wrap {
+		margin-top: -120px;
+	}
+
+	.f-btn .legend{
+		display: block;
+	}
+	.fluxi-content .button.__btn .txt{
+		line-height: 1;
+	}
+
+	.clikable.wide{
+		text-align:left;
+
+		.box__half,.box__half:first-child{
+			margin-bottom:0;
+		}
+	}
+	
+	.clikarde{
+		@include flex(null stretch);
+		flex-wrap: wrap;
+		
+		.clikarde__item {
+			flex: 1 0 30%;
+			margin-bottom: 0;
+
+			&:nth-child(1) {
+				margin-right: $gutter/2;
+			}
+		
+			&:nth-child(3) {
+				flex: 1 0 100%;
+				margin-top: $gutter/2;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: $bp--medium) {	
 	.single .fluxi-wrap {
 		@include padding(null $gutter);
 	}
 }
 
-@media screen and (min-width: $bp--medium) {
+@media screen and (min-width: $bp--medium) {	
 
-	.fluxi-wrap{
-		border-radius:$radius $radius 0 0;
-
-		h2.description{
-			padding-top:$space/2;
+	.fluxi-wrap{	
+		margin-top: -150px;
+		
+		&::before {
+			border-radius:$radius $radius 0 0;	
 		}
-
+		
+		h2.description{
+			padding-top:$space/2;	
+		}
+		
 	}
 
 	.fluxi-content .lightbox .legend{
 		padding:0 $gutter*2;
 	}
 
-	blockquote{
+	blockquote{    
     	.blockquote{
-    		padding-right:$gutter*2;
+    		padding-right:$gutter*2;    		
 	    }
 	    &:before{
-		    margin: $gutter 0 $gutter/2 $gutter*2;
+		    margin: $gutter 0 $gutter/2 $gutter*2;		    
 		}
 		&:after{
-		    margin: $gutter/2 0 $space*0.42 $gutter*2;
+		    margin: $gutter/2 0 $space*0.42 $gutter*2;		    
+		}
+	}
+
+	.f-btn--big .txt {
+		font-size: 1.6rem;
+	}
+
+	.clikable,
+	.clikarde,
+	.publication,
+	.suggestion,
+	.p-details,
+	.card__infos,
+	.box-asy__left, 
+	.box-asy__right,
+	.box__item__infos {
+		p {
+			line-height: 1.6!important;
+			font-size: 1.6rem!important;
 		}
 	}
 
@@ -706,15 +628,10 @@ $transition: all 0.3s $ease-out-quart;
 		width:830px;
 		transform:translateX(-8rem);
 		align-items: stretch;
-
+		
 		.clikarde__item {
 			margin-right: $gutter/2;
-
-			p {
-				line-height: 1.6;
-				font-size: 1.6rem;
-			}
-
+		
 			&:last-child {
 				flex: 1 0 30%;
 				margin: 0;
@@ -723,18 +640,139 @@ $transition: all 0.3s $ease-out-quart;
 
 	}
 
-	.isogrid{
+	.isogrid{	
 
 		.main-isogrid{
 			.item{
-			    margin: $space*0.05 $space*0.05 $space*0.05 $space*0.05;
+			    margin: $space*0.05 $space*0.05 $space*0.05 $space*0.05;		    
 		    	width: 23%;
 			}
 		}
 	}
 
-	.suggestion::before {
-		background: radial-grad($c-special, null, at bottom, 60%);
-	}
+}
 
+/* HAN ! */
+
+.button.f_cat_0{	
+	@include sort_btn_color($c-eolien);
+}
+.button.f_cat_1{	
+	@include sort_btn_color($c-hydro);
+}
+.button.f_cat_2{	
+	@include sort_btn_color($c-bio);
+}
+.button.f_cat_3{	
+	@include sort_btn_color($c-solaire);
+}
+.button.f_cat_4{	
+	@include sort_btn_color($c-geo);
+}
+.button.f_cat_5{	
+	@include sort_btn_color($c-eco);
+}
+.button.f_cat_6{	
+	@include sort_btn_color($c-main);
+}
+.button.f_cat_7{	
+	@include sort_btn_color($c-special);
+}
+.button.f_cat_8{	
+	@include sort_btn_color($c-focus);
+}
+.button.f_cat_9{	
+	@include sort_btn_color($c-eolien);
+}
+.button.f_cat_10{	
+	@include sort_btn_color($c-hydro);
+}
+
+.item.f_cat_0{
+	.titre{	
+		@include sort_title_color($c-eolien);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-eolien);
+	}
+}
+.item.f_cat_1{
+	.titre{	
+		@include sort_title_color($c-hydro);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-hydro);
+	}
+}
+.item.f_cat_2{
+	.titre{	
+		@include sort_title_color($c-bio);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-bio);
+	}
+}
+.item.f_cat_3{	
+	.titre{
+		@include sort_title_color($c-solaire);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-solaire);
+	}
+}
+.item.f_cat_4{	
+	.titre{
+		@include sort_title_color($c-geo);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-geo);
+	}
+}
+.item.f_cat_5{	
+	.titre{
+		@include sort_title_color($c-eco);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-eco);
+	}
+}
+.item.f_cat_6{	
+	.titre{
+		@include sort_title_color($c-main);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-main);
+	}
+}
+.item.f_cat_7{
+	.titre{	
+		@include sort_title_color($c-special);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-special);
+	}
+}
+.item.f_cat_8{
+	.titre{		
+		@include sort_title_color($c-focus);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-focus);
+	}
+}
+.item.f_cat_9{	
+	.titre{	
+		@include sort_title_color($c-eolien);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-eolien);
+	}
+}
+.item.f_cat_10{	
+	.titre{	
+		@include sort_title_color($c-hydro);
+	}
+	.icon-doc{	
+		@include sort_icon_color($c-hydro);
+	}
 }

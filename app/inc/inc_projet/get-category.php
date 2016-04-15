@@ -6,12 +6,14 @@
 
 	 
 
-  <header class="header-bloc">
-	<?php custom_breadcrumbs(); ?>
+  <header class="header-bloc--page">
+  	<div class="header-bloc__content">
+		<?php custom_breadcrumbs(); ?>
 
-    <h1 class="h1">
-		<?php the_title(); ?>
-    </h1>
+	    <h1 class="h1">
+			<?php the_title(); ?>
+	    </h1>
+    </div>
   </header>
 
 	<div class="fluxi-content" <?php echo ' data-totalposts="'.$total_post_count.'"'; ?>>

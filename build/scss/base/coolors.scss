@@ -32,7 +32,7 @@
 }
 
 @mixin graphbar_color($color) {
-	$darkenStep: 0, 10, 20, 30, 40, 50, 60;
+	$darkenStep: 0, 7, 14, 21, 28, 35, 42;
 	@for $i from 1 through 7 {
 		.graphbar__segment.citoyen:nth-child(#{$i}) {
 			background: darken($color, (nth($darkenStep, $i))*1%);
