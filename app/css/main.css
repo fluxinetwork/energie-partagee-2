@@ -540,7 +540,7 @@ html {
 .navbar__id.is-compact .logo__img,
 .no-touch nav:hover + .navbar__id .logo__img, .logo__title, .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .action-projet, .wrap-search h3, .transition {
+.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .galerie.galerie_damier a, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .action-projet, .wrap-search h3, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -1942,7 +1942,7 @@ p,
 
 .accordion__content ul,
 .list,
-.fluxi-content ul:not(.social):not(.main-isogrid):not(.tags):not(.searchresults) {
+.fluxi-content ul:not(.social):not(.main-isogrid):not(.tags):not(.searchresults):not(.lightSlider):not(.lSPager) {
   margin-bottom: 0;
   margin-top: 2rem;
   padding-left: 4rem;
@@ -4320,6 +4320,27 @@ blockquote .blockquote {
     margin-top: 2rem;
   }
 }
+.galerie.galerie_damier {
+  display: flex;
+  flex-wrap: wrap;
+}
+.galerie.galerie_damier a {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(25% - 6px);
+  margin-right: 8px;
+  text-decoration: none;
+}
+.galerie.galerie_damier a:nth-of-type(2n) {
+  margin-right: 8px;
+}
+.galerie.galerie_damier a:nth-of-type(4n) {
+  margin-right: 0;
+}
+.galerie.galerie_damier a:hover {
+  transform: scale(1.05);
+}
+
 @media screen and (max-width: 830px) {
   .single .fluxi-wrap {
     padding-right: 4rem;
@@ -4841,7 +4862,7 @@ input {
 .navbar__id.is-compact .logo__img,
 .no-touch nav:hover + .navbar__id .logo__img, .logo__title, .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .action-projet, .wrap-search h3, .transition {
+.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .galerie.galerie_damier a, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .action-projet, .wrap-search h3, .transition {
   transition: all 0.2s ease-in-out;
 }
 

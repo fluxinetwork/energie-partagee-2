@@ -19,7 +19,7 @@ if( $galerie ):
 			echo '<ul class="'.$type_galerie.'">';
 				foreach( $galerie as $image ):         
 					echo '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'">';
-						echo '<img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'" />';
+						echo '<img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" />';
 					echo '</li>';         
 				endforeach;       
 			echo '</ul>';
@@ -29,7 +29,7 @@ if( $galerie ):
 			echo '<ul class="'.$type_galerie.'">';
 				foreach( $galerie as $image ):         
 					echo '<li data-thumb="'.$image['sizes']['thumbnail'].'" data-src="'.$image['sizes']['large'].'" data-sub-html="'.$image['caption'].'">';
-						echo '<img src="'.$image['sizes']['medium'].'" alt="'.$image['alt'].'" />';
+						echo '<img src="'.$image['sizes']['large'].'" alt="'.$image['alt'].'" />';
 					echo '</li>';         
 				endforeach;       
 			echo '</ul>';
