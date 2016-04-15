@@ -320,6 +320,33 @@ p,
     max-width: 80%;
 }
 
+
+.holder-old {
+    font-family: $txt-fontserif;
+    color: $c-text;
+
+    > * {
+        margin-top: $gutter;
+        display: block;
+        line-height: 1.2;
+    }
+
+    img {
+        margin-bottom: $gutter;
+    }
+
+    &::before {
+        content: 'L\'article que vous consultez est formatée pour l\'ancienne version du site. Sa mise en page risque de ne pas être optimale.';
+        padding: $gutter;
+        background: $c-focus;
+        color: #fff;
+        font-family: $txt-font;
+        border-radius: $radius;
+        display: block;
+        margin-bottom: $gutter;
+    }
+}
+
 blockquote{
     margin: $space/2 0;
 

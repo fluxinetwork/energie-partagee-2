@@ -12,7 +12,7 @@
 
 .suggestion {
 	position: relative;
-	margin-top: $space*2;
+	margin-top: $space;
 
 	&::before {
 		content: '';
@@ -24,7 +24,7 @@
 		background: $c-bglight;
 	}
 
-	.box-asy {
+	> div {
 		@extend %box--extend;
 		position: relative;
 		background: $c-bglight;
@@ -36,11 +36,49 @@
 /* SUGGESTIONS ARTICLES */
 
 .suggestion-posts {
-	
+	@extend %box-special;
+	@extend %box--extend;
+	@include flex(space-between null);
+	margin-top: $gutter;
+
+	.reverse {
+		transform: rotate(180deg);
+	}
+
+	.cat-nav {
+		@include flex(center, true);
+	}
+
+	.s-title {
+		margin-bottom: $gutter/2;
+	}
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: $bp--small) {
+	.cat-nav .s-title {
+		display: none;
+	}
+}
+
+@media screen and (max-width: $bp--medium) {
+	.suggestion-posts {
+		@include padding(null 0);
+	}
 }
 
 @media screen and (min-width: $bp--medium) {
-	.suggestion::before {
-		background: radial-grad($c-special, null, at bottom, 60%);
+	.suggestion {
+		margin-top: $space*2;
+
+		&::before {
+			background: radial-grad($c-special, null, at bottom, 60%);
+		}
+	}
+
+	.cat-nav {
+		min-width: 100px;
 	}
 }

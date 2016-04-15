@@ -61,7 +61,7 @@
 		/////////////////////////////////////
 		   
 		if( have_rows('elements_page') || $the_content):
-			echo '<article class="fluxi-wrap has-bg fluxi-content fitvids">';
+			echo '<article class="fluxi-wrap fluxi-content fitvids">';
 						
 				echo $main_image;	
 
@@ -83,14 +83,16 @@
 				
 				// Suggestion d'articles
 				if ( !empty( $prev_post ) || !empty( $next_post )):
-					echo '<aside class="suggestion-posts">';
+					echo '<aside class="suggestion"><div class="suggestion-posts wrap-anim ready-anim">';
 						if ( !empty( $prev_post ) ): 
-							echo '<a class="f-btn__prev" href="'.get_permalink( $prev_post->ID ).'" title="'.$prev_post->post_title.'"><i class="icon-chevronright_32"></i>'.$prev_post->post_title.'</a>';							
-						 endif;
-						 
-						 if ( !empty( $next_post ) ):
-							echo '<a class="f-btn__next" href="'.get_permalink( $next_post->ID ).'" title="'.$next_post->post_title.'">'.$next_post->post_title.'<i class="icon-chevronright_32"></i></a>';
-						 endif;
+							echo '<div class="cat-nav"><h5 class="s-title">Précédent</h5><span class="reverse"><a href="'.get_permalink( $prev_post->ID ).'" class="button-round grey" title="'.$prev_post->post_title.'"><i class="icon-fleche_64"></i></a></span></div>';				
+						endif;
+
+						echo '<div class="cat-nav"><h5 class="s-title">Voir tout</h5><a href="'.$url_parent_page.'" class="button-round grey"><i class="icon-plus_64"></i></a></div>';
+
+						if ( !empty( $next_post ) ):
+							echo '<div class="cat-nav"><h5 class="s-title">Suivant</h5><a href="'.get_permalink( $next_post->ID ).'" class="button-round grey" title="'.$next_post->post_title.'"><i class="icon-fleche_64"></i></a></div>';		
+						endif;
 					 echo '</aside>';
 				endif; 	 
 		   		

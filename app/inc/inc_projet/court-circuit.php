@@ -23,7 +23,7 @@
   </form>
   <div class="form-sublink">
     <div class="wrap-link">
-      <a href="" class="f-btn">
+      <a href="<?php echo get_permalink(334); ?>" class="f-btn">
         <i class="icon-chevronright_32"></i>
         <div>
           <span class="txt">Voir tous les numéros</span>

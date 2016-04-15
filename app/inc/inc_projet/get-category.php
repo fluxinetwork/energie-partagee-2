@@ -17,7 +17,7 @@
   </header>
 
 	<div class="fluxi-content" <?php echo ' data-totalposts="'.$total_post_count.'"'; ?>>
-		<div class="fluxi-wrap has-bg">
+		<div class="fluxi-wrap">
 			<?php
 			if ( $query_category->have_posts() ) :
 				while ( $query_category->have_posts() ) : $query_category->the_post();

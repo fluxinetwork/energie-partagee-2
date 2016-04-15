@@ -386,10 +386,8 @@
 }
 
 @media screen and (min-width: $bp--small) {	
-	.single-projets {
-		#map {
-			height: 450px;
-		}
+	.single-projets #map {
+		height: 450px;
 	}
 
 	.following.box{
@@ -465,5 +463,15 @@
 		.micro-legende {
 			display: block;
 		}
+	}
+}
+
+
+@media screen and (max-height: 800px) {
+	.all-projects #map {
+		height: 600px!important;
+	}
+	.card-map .card__img {
+		display: none;
 	}
 }

@@ -15,6 +15,17 @@
 	.box-logos__btn {
 		margin-bottom:0;	
 	}	
+
+	img {
+		@extend %transition;
+		filter: grayscale(100%);
+		opacity: 0.7;
+	}
+
+	.box-logos__logo:hover img {
+		filter: grayscale(0%);
+		opacity: 1;
+	}
 }
 
 @media screen and (min-width: $bp--medium) {

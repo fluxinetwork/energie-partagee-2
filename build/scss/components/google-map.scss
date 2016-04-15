@@ -115,6 +115,7 @@
 				    background-size: cover;
 				    min-height: 170px;
 				    width: 100%;
+				    border-radius: $radius $radius 0 0;
 
 				    .spinner{
 				    	@extend %transition;
@@ -131,9 +132,10 @@
 				}
 			}
 
-			.link-cta{
+			.link-cta {
 				background-color:#fff;
 				padding:$gutter/2;
+				border-radius: 0 0 $radius $radius;
 			}
 		}
 	}
