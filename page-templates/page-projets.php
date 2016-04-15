@@ -8,15 +8,16 @@ Template Name: Tous les projets
 <section class="wrap-main all-projects">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   
-  <header class="header-bloc"> 
-  
-  	<?php custom_breadcrumbs(); ?>
+  <header class="header-bloc--page"> 
+    <div class="header-bloc__content">
+    	<?php custom_breadcrumbs(); ?>
       
-    <h1 class="h1 wrap-n">
-      <?php the_title(); ?>
-    </h1>
-   
+      <h1 class="h1 wrap-n">
+        <?php the_title(); ?>
+      </h1>
+    </div>
   </header>
+
   <div class="fluxi-wrap">
   	<?php 
 		get_description();				

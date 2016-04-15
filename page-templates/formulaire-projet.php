@@ -25,17 +25,18 @@ Template Name: Formulaire projets
   
 
   ?>
-  <header class="header-bloc">
-    
-    <?php custom_breadcrumbs(); ?>
-    
-    <h1 class="h1 wrap-n">
-      <?php the_title(); ?>
-    </h1>
+  <header class="header-bloc--page">
+    <div class="header-bloc__content">
+      <?php custom_breadcrumbs(); ?>
+      
+      <h1 class="h1 wrap-n">
+        <?php the_title(); ?>
+      </h1>
+    </div>
   </header>
   <?php endwhile; endif; ?>
 
-  <article class="fluxi-wrap fluxi-content">
+  <article class="fluxi-wrap has-bg fluxi-content">
 
       <?php 
         get_description();

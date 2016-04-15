@@ -19,13 +19,14 @@
 
 
   ?>
-  <header class="header-bloc">
-    
-    <?php custom_breadcrumbs(); ?>
-    
-    <h1 class="h1 wrap-l">
-      <?php the_title(); ?>
-    </h1>
+  <header class="header-bloc--page">
+    <div class="header-bloc__content">
+	    <?php custom_breadcrumbs(); ?>
+
+	    <h1 class="h1 wrap-l">
+	      <?php the_title(); ?>
+	    </h1>
+    </div>
   </header>
   
     <?php
@@ -34,7 +35,7 @@
 		/////////////////////////////////////
 		   
 		if( have_rows('elements_page') ):
-			echo '<article class="fluxi-wrap fluxi-content fitvids">';
+			echo '<article class="fluxi-wrap has-bg fluxi-content fitvids">';
 
 				echo $main_image;
 						
@@ -46,7 +47,7 @@
 		   		
 		   	echo '</article>';
 		else :
-			echo '<article class="fluxi-wrap fluxi-content fitvids">';
+			echo '<article class="fluxi-wrap has-bg fluxi-content fitvids">';
 
 				echo $main_image;
 						

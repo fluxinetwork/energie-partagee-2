@@ -55,18 +55,23 @@
 
   ?>
     <section class="wrap-main<?php echo ' ' . $type_power; ?>">
-      <header class="header-bloc"> 
-        <ul class="tags">   	
-            <li class="tag is-inactive"><?php echo $taxoname;?></li>
-            <li class="tag is-inactive"><?php echo $label_stade; ?></li>     
-        </ul>     
-        <h1 class="h1 wrap-n">
-          <?php the_title(); ?>  
-        </h1>
-        
-        <?php if( $video_header && $video_header != '0' && $video_header != '1'){ ?>
-            <div class="lightvideo"><a class="button cta" data-src="<?php echo $video_header; ?>" href=""><i class="icon-video_20"></i> Voir la vidéo</a></div> 
-        <?php } ?>
+      <header class="header-bloc--page"> 
+        <div class="header-bloc__content">
+          <ul class="tags">   	
+              <li class="tag is-inactive"><?php echo $taxoname;?></li>
+              <li class="tag is-inactive"><?php echo $label_stade; ?></li>     
+          </ul>    
+
+          <h1 class="h1 wrap-n">
+            <?php the_title(); ?>  
+          </h1>
+          
+          <?php if( $video_header && $video_header != '0' && $video_header != '1'){ ?>
+              <div class="lightvideo">
+                <a class="button cta" data-src="<?php echo $video_header; ?>" href=""><i class="icon-video_20"></i> Voir la vidéo</a>
+              </div> 
+          <?php } ?>
+        </div>
         
       </header>
         <article class="fluxi-wrap a-project">

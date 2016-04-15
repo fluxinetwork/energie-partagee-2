@@ -3166,6 +3166,93 @@ blockquote .blockquote {
 }
 /*------------------------------*\
 
+	#HEADER-BLOC
+	
+\*------------------------------*/
+.header-bloc--home, .header-bloc--page {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 8rem 2rem;
+}
+.header-bloc--home::before, .header-bloc--page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.header-bloc--home .header-bloc__content, .header-bloc--page .header-bloc__content {
+  position: relative;
+}
+.header-bloc--home .header-bloc__content .button, .header-bloc--page .header-bloc__content .button {
+  margin-top: 0 !important;
+}
+.header-bloc--home .h4, .header-bloc--page .h4 {
+  margin-bottom: 0;
+  margin-top: 3rem;
+  color: #fff;
+}
+.header-bloc--home .h4 span, .header-bloc--page .h4 span {
+  display: inline-block;
+  margin: 0 0.66667rem 0 0;
+}
+.header-bloc--home .h4 span:last-child, .header-bloc--page .h4 span:last-child {
+  margin-left: 2rem;
+}
+.header-bloc--home .tags, .header-bloc--page .tags {
+  display: none;
+}
+
+.header-bloc--home {
+  background-image: url("../img/energie-partagee-homepage-header.jpg");
+  padding: 10rem 2rem 7.5rem 2rem;
+}
+.header-bloc--home h1 {
+  animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards slideUpOpacity;
+}
+
+.header-bloc--page {
+  background-image: url("../img/energie-partagee-header-ciel-bleu.jpg");
+}
+.header-bloc--page .header-bloc__content {
+  padding: 3rem 0;
+}
+.header-bloc--page .h1 {
+  margin: 1rem auto 0;
+}
+
+@media screen and (min-width: 600px) {
+  .header-bloc--home .tags, .header-bloc--page .tags {
+    display: flex;
+  }
+
+  .header-bloc--home {
+    padding: 20rem 4rem 15rem 4rem;
+  }
+
+  .header-bloc--page .header-bloc__content {
+    padding: 8rem 0 11rem 0;
+  }
+  .header-bloc--page .h1 {
+    max-width: 85%;
+  }
+}
+@media screen and (min-width: 830px) {
+  .header-bloc--page .header-bloc__content {
+    padding: 10rem 0 16rem 0;
+  }
+  .header-bloc--page .h1 {
+    max-width: 730px;
+  }
+}
+/*------------------------------*\
+
 	#BOX-LOGOS
 	
 \*------------------------------*/
@@ -3741,10 +3828,28 @@ blockquote .blockquote {
   border-top-color: #aaa;
 }
 
+/*------------------------------*\
+
+    #FLUXI-CONTENT
+
+\*------------------------------*/
+/* FLUXI-WRAP */
 .fluxi-wrap {
-  background-color: #fff;
-  margin: -40rem auto 10rem auto;
-  min-height: 200px;
+  position: relative;
+  background-color: transparent;
+  margin-top: -50px;
+}
+.fluxi-wrap.has-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  min-height: 190px;
+}
+.fluxi-wrap > * {
   position: relative;
 }
 .fluxi-wrap .wrap-extend .img-responsive {
@@ -3754,15 +3859,8 @@ blockquote .blockquote {
 .fluxi-wrap h2.description, .fluxi-wrap h2.h2 {
   padding-top: 3rem;
 }
-.fluxi-wrap.has-suggestion {
-  margin-bottom: 0;
-}
 
-.single .fluxi-wrap,
-.single-projets .fluxi-wrap {
-  position: initial;
-}
-
+/* SOCIALS */
 .social:not(.social-footer):not(.news) {
   margin-top: 2rem;
 }
@@ -3784,6 +3882,7 @@ blockquote .blockquote {
   margin-top: 2rem;
 }
 
+/* FLUXI CONTENT */
 .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a {
   font-family: "Georgia", serif;
   text-transform: inherit;
@@ -3840,6 +3939,7 @@ blockquote .blockquote {
   margin-top: 4rem !important;
 }
 
+/* BLOCKQUOTE */
 blockquote:before, blockquote:after {
   border-top: 2px solid #eb6c1d;
   content: "";
@@ -3858,6 +3958,7 @@ blockquote .blockquote {
   margin-bottom: 0;
 }
 
+/* F-BTN */
 .f-btn, .f-btn--txt, .f-btn--big {
   margin-top: 2rem;
   display: flex;
@@ -3913,6 +4014,7 @@ blockquote .blockquote {
   line-height: 1.5;
 }
 
+/* CLIKABLE */
 .clikable.wide {
   position: relative;
   margin: 6rem 0;
@@ -3964,6 +4066,7 @@ blockquote .blockquote {
   width: 100%;
 }
 
+/* CLIKARDE */
 .clikarde {
   list-style-type: none;
   margin: 5rem 0;
@@ -3992,6 +4095,7 @@ blockquote .blockquote {
   margin-top: 0;
 }
 
+/* ACCORDION */
 .accordion {
   margin-top: 4rem;
 }
@@ -4038,6 +4142,7 @@ blockquote .blockquote {
   transform: rotate(90deg);
 }
 
+/* ISO GRID */
 .isogrid {
   margin-top: 6rem;
 }
@@ -4090,6 +4195,7 @@ blockquote .blockquote {
   top: 0;
 }
 
+/* PUBLICATIONS */
 .wrap-publication {
   margin-top: 4rem;
 }
@@ -4098,7 +4204,7 @@ blockquote .blockquote {
 }
 
 .publication {
-  background: #f2f2f2;
+  border: 2px solid #b3b3b3;
 }
 .publication .box-asy__left {
   max-width: 200px;
@@ -4109,25 +4215,123 @@ blockquote .blockquote {
   border-radius: 3px !important;
 }
 
-.suggestion {
-  position: relative;
-  margin-top: 20rem;
+/* MEDIA QUERIES */
+@media screen and (min-width: 300px) {
+  .f-btn--big i {
+    font-size: 6.4rem;
+    color: #b3b3b3;
+  }
+  .f-btn--big div {
+    padding-left: 2rem;
+  }
+  .f-btn--big .legend {
+    display: none;
+  }
 }
-.suggestion::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 500%;
-  height: 100%;
-  background: #f2f2f2;
-}
-.suggestion .box-asy {
-  position: relative;
-  background: #f2f2f2;
-  border-radius: 3px;
-}
+@media screen and (min-width: 600px) {
+  .fluxi-wrap {
+    margin-top: -120px;
+  }
 
+  .f-btn .legend, .f-btn--txt .legend, .f-btn--big .legend {
+    display: block;
+  }
+
+  .fluxi-content .button.__btn .txt {
+    line-height: 1;
+  }
+
+  .clikable.wide {
+    text-align: left;
+  }
+  .clikable.wide .box__half, .clikable.wide .box__half:first-child {
+    margin-bottom: 0;
+  }
+
+  .clikarde {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .clikarde .clikarde__item {
+    flex: 1 0 30%;
+    margin-bottom: 0;
+  }
+  .clikarde .clikarde__item:nth-child(1) {
+    margin-right: 2rem;
+  }
+  .clikarde .clikarde__item:nth-child(3) {
+    flex: 1 0 100%;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 830px) {
+  .single .fluxi-wrap {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+@media screen and (min-width: 830px) {
+  .fluxi-wrap {
+    margin-top: -150px;
+  }
+  .fluxi-wrap::before {
+    border-radius: 3px 3px 0 0;
+  }
+  .fluxi-wrap h2.description, .fluxi-wrap h2.h2 {
+    padding-top: 5rem;
+  }
+
+  .fluxi-content .lightbox .legend {
+    padding: 0 8rem;
+  }
+
+  blockquote .blockquote {
+    padding-right: 8rem;
+  }
+  blockquote:before {
+    margin: 4rem 0 2rem 8rem;
+  }
+  blockquote:after {
+    margin: 2rem 0 4.2rem 8rem;
+  }
+
+  .f-btn--big .txt {
+    font-size: 1.6rem;
+  }
+
+  .clikable p,
+  .clikarde p,
+  .publication p,
+  .suggestion p,
+  .p-details p,
+  .card__infos p,
+  .box-asy__left p,
+  .box-asy__right p,
+  .box__item__infos p {
+    line-height: 1.6 !important;
+    font-size: 1.6rem !important;
+  }
+
+  .clikarde {
+    width: 830px;
+    transform: translateX(-8rem);
+    align-items: stretch;
+  }
+  .clikarde .clikarde__item {
+    margin-right: 2rem;
+  }
+  .clikarde .clikarde__item:last-child {
+    flex: 1 0 30%;
+    margin: 0;
+  }
+
+  .isogrid .main-isogrid .item {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    width: 23%;
+  }
+}
+/* HAN ! */
 .button.f_cat_0 {
   color: #fff;
 }
@@ -4293,117 +4497,6 @@ blockquote .blockquote {
   background-color: #5268b9;
 }
 
-@media screen and (min-width: 300px) {
-  .f-btn--big i {
-    font-size: 6.4rem;
-    color: #b3b3b3;
-  }
-  .f-btn--big div {
-    padding-left: 2rem;
-  }
-  .f-btn--big .legend {
-    display: none;
-  }
-}
-@media screen and (min-width: 600px) {
-  .f-btn .legend, .f-btn--txt .legend, .f-btn--big .legend {
-    display: block;
-  }
-
-  .fluxi-content .button.__btn .txt {
-    line-height: 1;
-  }
-
-  .clikable.wide {
-    text-align: left;
-  }
-  .clikable.wide .box__half, .clikable.wide .box__half:first-child {
-    margin-bottom: 0;
-  }
-
-  .clikarde {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-  }
-  .clikarde .clikarde__item {
-    flex: 1 0 30%;
-    margin-bottom: 0;
-  }
-  .clikarde .clikarde__item:nth-child(1) {
-    margin-right: 2rem;
-  }
-  .clikarde .clikarde__item:nth-child(3) {
-    flex: 1 0 100%;
-    margin-top: 2rem;
-  }
-}
-@media screen and (max-width: 830px) {
-  .single .fluxi-wrap {
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
-}
-@media screen and (min-width: 830px) {
-  .fluxi-wrap {
-    border-radius: 3px 3px 0 0;
-  }
-  .fluxi-wrap h2.description, .fluxi-wrap h2.h2 {
-    padding-top: 5rem;
-  }
-
-  .fluxi-content .lightbox .legend {
-    padding: 0 8rem;
-  }
-
-  blockquote .blockquote {
-    padding-right: 8rem;
-  }
-  blockquote:before {
-    margin: 4rem 0 2rem 8rem;
-  }
-  blockquote:after {
-    margin: 2rem 0 4.2rem 8rem;
-  }
-
-  .f-btn--big .txt {
-    font-size: 1.6rem;
-  }
-
-  .clikable p,
-  .clikarde p,
-  .publication p,
-  .suggestion p,
-  .p-details p,
-  .card__infos p,
-  .box-asy__left p,
-  .box-asy__right p {
-    line-height: 1.6 !important;
-    font-size: 1.6rem !important;
-  }
-
-  .clikarde {
-    width: 830px;
-    transform: translateX(-8rem);
-    align-items: stretch;
-  }
-  .clikarde .clikarde__item {
-    margin-right: 2rem;
-  }
-  .clikarde .clikarde__item:last-child {
-    flex: 1 0 30%;
-    margin: 0;
-  }
-
-  .isogrid .main-isogrid .item {
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    width: 23%;
-  }
-
-  .suggestion::before {
-    background: radial-gradient(at bottom, #de064e, #c50545 60%);
-  }
-}
 /*------------------------------*\
 
     #FORMS
@@ -4755,105 +4848,6 @@ input {
   }
   .map-projects .map-filters.second li {
     margin: 0 0 1rem 1rem;
-  }
-}
-/*------------------------------*\
-
-	#HEADER-BLOC
-	
-\*------------------------------*/
-.header-bloc {
-  position: relative;
-  background: url("../img/energie-partagee-header-ciel-bleu.jpg") no-repeat;
-  background-size: cover;
-  text-align: center;
-  color: #fff;
-  padding-top: 8rem;
-}
-.header-bloc::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-.header-bloc > * {
-  position: relative;
-}
-.header-bloc .h1 {
-  margin-bottom: 5rem;
-}
-.header-bloc .h4 {
-  margin-bottom: 0;
-  margin-top: 3rem;
-  color: #fff;
-}
-.header-bloc .h4 span {
-  display: inline-block;
-  margin: 0 0.66667rem 0 0;
-}
-.header-bloc .h4 span:last-child {
-  margin-left: 2rem;
-}
-.header-bloc .lightvideo.button {
-  margin-top: 3rem;
-}
-.header-bloc .tags {
-  display: none;
-}
-
-.page .header-bloc,
-.single .header-bloc,
-.search-results .header-bloc,
-.archive .header-bloc {
-  padding-bottom: 24rem;
-  margin-bottom: 19rem;
-}
-.page .header-bloc .h1,
-.single .header-bloc .h1,
-.search-results .header-bloc .h1,
-.archive .header-bloc .h1 {
-  margin: 1rem auto 0;
-}
-
-@media screen and (min-width: 600px) {
-  .header-bloc {
-    padding-top: 12rem;
-  }
-  .header-bloc .tags {
-    display: flex;
-  }
-
-  .page .header-bloc,
-  .single .header-bloc,
-  .search-results .header-bloc,
-  .archive .header-bloc {
-    padding-top: 14rem;
-    margin-bottom: 23rem;
-  }
-  .page .header-bloc .h1,
-  .single .header-bloc .h1,
-  .search-results .header-bloc .h1,
-  .archive .header-bloc .h1 {
-    max-width: 85%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .page .header-bloc,
-  .single .header-bloc,
-  .search-results .header-bloc,
-  .archive .header-bloc {
-    padding-top: 14rem;
-    margin-bottom: 23rem;
-  }
-  .page .header-bloc .h1,
-  .single .header-bloc .h1,
-  .search-results .header-bloc .h1,
-  .archive .header-bloc .h1 {
-    max-width: 730px;
   }
 }
 /*! lightgallery - v1.2.6 - 2015-10-07
@@ -6436,6 +6430,45 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 /*------------------------------*\
 
+    #SUGGESTIONS
+
+\*------------------------------*/
+.fluxi-wrap.has-suggestion {
+  margin-bottom: 0;
+}
+
+/* SUGGESTION PAGE */
+.suggestion {
+  position: relative;
+  margin-top: 20rem;
+}
+.suggestion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 500%;
+  height: 100%;
+  background: #f2f2f2;
+}
+.suggestion .box-asy {
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+
+/* SUGGESTIONS ARTICLES */
+.suggestion-posts {
+  display: none;
+}
+
+@media screen and (min-width: 830px) {
+  .suggestion::before {
+    background: radial-gradient(at bottom, #de064e, #c50545 60%);
+  }
+}
+/*------------------------------*\
+
     # CATEGORY
 	
 \*------------------------------*/
@@ -6516,22 +6549,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     #HOMEPAGE
 
 \*------------------------------*/
-.home .header-bloc {
-  background: url("../img/energie-partagee-homepage-header.jpg") no-repeat center;
-  background-size: cover;
-  padding: 10rem 2rem 7.5rem 2rem;
-}
-.home .header-bloc h1 {
-  animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards slideUpOpacity;
-}
-.home .header-bloc .wrap-l {
-  padding: 0;
-}
-
 .key-nums {
   display: flex;
   justify-content: flex-start;
-  margin: 0;
+  margin: 3rem 0;
   padding: 0;
   list-style-type: none;
 }
@@ -6584,10 +6605,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 @media screen and (max-width: 830px) {
-  .home .header-bloc .button {
-    margin-top: 4rem;
-  }
-
   .steps-intro .f-btn i, .steps-intro .f-btn--txt i, .steps-intro .f-btn--big i {
     display: none;
   }
@@ -6641,13 +6658,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 @media screen and (min-width: 600px) {
-  .home .header-bloc {
-    padding: 20rem 4rem 15rem 4rem;
-  }
-
   .wrap-n {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+
+  .key-nums {
+    margin: 5rem 0;
   }
 
   .key-nums__item__txt {

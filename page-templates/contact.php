@@ -24,15 +24,17 @@ Template Name: Contact
   endif;
 
   ?>
-  <header class="header-bloc">
-    
-    <?php custom_breadcrumbs(); ?>
-    
-    <h1 class="h1 wrap-n">
-      <?php the_title(); ?>
-    </h1>
+  <header class="header-bloc--page">
+    <div class="header-bloc__content">
+      <?php custom_breadcrumbs(); ?>
+      
+      <h1 class="h1 wrap-n">
+        <?php the_title(); ?>
+      </h1>
+    </div>
   </header>
-  <article class="fluxi-content fitvids fluxi-wrap">
+
+  <article class="fluxi-content fitvids fluxi-wrap has-bg">
     <?php
 
       get_description();
