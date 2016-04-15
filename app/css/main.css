@@ -6481,10 +6481,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /* SUGGESTIONS ARTICLES */
-.suggestion-posts {
-  display: none;
-}
-
 @media screen and (min-width: 830px) {
   .suggestion::before {
     background: radial-gradient(at bottom, #de064e, #c50545 60%);

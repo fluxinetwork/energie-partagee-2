@@ -61,7 +61,7 @@
 		/////////////////////////////////////
 		   
 		if( have_rows('elements_page') || $the_content):
-			echo '<article class="fluxi-wrap fluxi-content fitvids">';
+			echo '<article class="fluxi-wrap has-bg fluxi-content fitvids">';
 						
 				echo $main_image;	
 
