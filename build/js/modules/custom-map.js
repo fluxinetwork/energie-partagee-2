@@ -532,15 +532,5 @@ MarkerShadow.prototype.show = function() {
     this.div_.style.visibility = 'visible';
   }
 };
-/*
-MarkerShadow.prototype.toggle = function() {
-  if (this.div_) {
-    if (this.div_.style.visibility === 'hidden') {
-      this.show();
-    } else {
-      this.hide();
-    }
-  }
-};*/
 
 

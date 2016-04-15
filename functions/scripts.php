@@ -137,6 +137,7 @@ function enqueue_scripts() {
     wp_register_script( 'isotope', get_template_directory_uri() . '/app/js/vendors/jquery.isotope.min.js', array(), null, true );
     
     wp_register_script( 'js-main', get_template_directory_uri() . '/app/js/main.js', array('modernizr','jQuery','waypoint','form-stuff','googlemap-api','fitvids','lightslider','lightgallery','lg-video','lg-fullscreen','lg-thumbnail','isotope'), null, true );
+    
     wp_register_script( 'js-full', get_template_directory_uri() . '/app/js/full.min.js', array('jQuery'), null, true );
     
     // Ajax
@@ -147,6 +148,13 @@ function enqueue_scripts() {
     if ( DEV ) {
         wp_enqueue_script('js-main');
     } else {
+        if (is_page(357) || is_singular('projets')) {
+            wp_enqueue_script('googlemap-api');
+        }
+        if (is_page(575) || is_page(400)) {
+            wp_enqueue_script('form-stuff');
+        }
+
         wp_enqueue_script('js-full');
     }
 

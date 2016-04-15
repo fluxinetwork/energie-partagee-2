@@ -30,6 +30,10 @@ var FOO = {
             if ($('.suggestion').length) {
                 $('.fluxi-wrap').addClass('has-suggestion');
             }
+
+            if ($(html).hasClass('no-detect_flexbox')) {
+                $('.warning-flexbox').addClass('show-me');
+            }
         }
     },
     home: {

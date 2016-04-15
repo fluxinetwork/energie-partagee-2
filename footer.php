@@ -1,10 +1,10 @@
 		
 
 		    <?php include( TEMPLATEPATH.'/app/inc/footer/footer.php' ); ?>
+		    <?php include( TEMPLATEPATH.'/app/inc/footer/warning-flexbox.php' ); ?>
 		    
     </div><!-- .wrap-main --> 
 	
-	<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>--> 
 	<?php wp_footer(); ?>
 	
 </body>

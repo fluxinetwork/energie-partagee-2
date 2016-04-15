@@ -57,6 +57,12 @@ module.exports = function (grunt) {
 		    		'app/js/main.min.js'
 		    	],
 		    	dest: 'app/js/full.js'
+		    },
+		    vendorsJS : {
+		    	src: [
+		    		'app/js/vendors/concat/*.js'
+		    	],
+		    	dest: 'app/js/vendors.js'
 		    }
 		},
 

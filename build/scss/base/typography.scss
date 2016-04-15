@@ -71,8 +71,18 @@
 }
 /* New */
 
-
-
+.icon-safari:before {
+    content: "\f267";
+}
+.icon-chrome:before {
+    content: "\f268";
+}
+.icon-firefox:before {
+    content: "\f269";
+}
+.icon-edge:before {
+    content: "\f282";
+}
 .icon-logout_32:before {
     content: "\e92a";
 }

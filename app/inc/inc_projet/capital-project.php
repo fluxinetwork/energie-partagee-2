@@ -69,9 +69,8 @@ if(!empty($rows_capital)){
        
        
     	<div class="wrap-extend">
-    		<?php if(round($citoyen_perc) != 100): ?>
-    			<div class="pointe--up" style="left:<?php echo ($citoyen_perc-1);?>%;"></div>
-    		<?php endif; ?>
+    		<?php if(round($citoyen_perc) > 90) { $citoyen_perc = 50; } ?>
+    		<div class="pointe--up" style="left:<?php echo ($citoyen_perc-1);?>%;"></div>
     	</div>
     
         <div class="infosbloc">          

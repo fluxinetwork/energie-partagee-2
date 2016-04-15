@@ -52,10 +52,12 @@
 
 <section class="wrap-main actualites">
  
-  <header class="header-bloc">    
-    <h1 class="h1">
-		<?php echo $title; ?>    	
-    </h1>
+  <header class="header-bloc--page">    
+  	<div class="header-bloc__content">
+	    <h1 class="h1">
+			<?php echo $title; ?>    	
+	    </h1>
+    </div>
   </header>
   
    
