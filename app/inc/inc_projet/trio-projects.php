@@ -61,6 +61,7 @@ $query_projects = new WP_Query( $args_projects );
 							} else {
 								$imgSize = 'card--mini';
 							}
+							$imgSize = 'card--full';
 						
 							if ( has_post_thumbnail() && empty($main_image_obj)) :
 								$post_img_id = get_post_thumbnail_id();

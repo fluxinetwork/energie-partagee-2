@@ -1,5 +1,3 @@
-
-
 /*------------------------------*\
 
     #SINGLE PROJECT / ALL PROJECTS
@@ -110,16 +108,8 @@
 /* FOLLOWING */
 
 .following.box{
-	justify-content:center;
-	
 	.box__social, .box__btn{
 		margin-top:$space*0.3;	
-	}
-	.box__social{
-		align-self:center;
-		text-align:center;
-		width:100%;		
-		
 	}
 }
 
@@ -190,6 +180,7 @@
 		margin-top: auto;
 	}
 }
+
 
 /* ETAPES */
 
@@ -302,6 +293,7 @@
 .repartition {
 	.infosbloc {
 		margin-top: $gutter;
+
 		ul {
 			list-style: none;
 			padding-left: 0;
@@ -324,9 +316,18 @@
 	border-top: 2px solid #fff;
 	padding: 15px 10px;
 
-	.legende {
-		margin-left: 10px;
-		margin-right: auto;
+	.dot {
+		flex: none;
+		margin-right: 10px;
+	}
+}
+
+.financer__infos {
+	@include flex(space-between null, true);
+	width: 100%;
+
+	.data-capital {
+		opacity: 0.6;
 	}
 }
 
@@ -336,6 +337,7 @@
 .testimony {	
 	@extend %box-special;
 	@extend %box-asymetrique;
+	@extend %box-asy--small;
 	@extend %box--extend;
 	color:#fff;	
 	margin-top: $space*0.3;
@@ -368,23 +370,6 @@
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: $bp--medium) {
-	.single-projets .p-details {
-		position: relative;
-		background-color: transparent;
-		margin-top: -8rem;
-	}
-	.p-details__equi {
-		border-radius: 3px;
-	}
-
-	.action-projet .box-asy__right {
-		margin-top: $gutter;
-		padding-top: $gutter;
-		border-top: 1px dotted #fff;
-	}
-}
-
 @media screen and (min-width: $bp--small) {	
 	.single-projets #map {
 		height: 450px;
@@ -408,14 +393,86 @@
 			right:20.5rem;	
 		}
 	}
+
+	.testimony {
+		h4 {
+			display: none;
+		}
+		.box-asy__left .clone {
+			display: block;
+		}
+	}
+
+	.financer__infos {
+		flex-direction: row;
+
+		.data-capital {
+			margin-left: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.single-projets .p-details {
+		position: relative;
+		background-color: transparent;
+		margin-top: -8rem;
+
+		.p-details__equi {
+			border-radius: $radius;
+		}
+	}
+}
+@media screen and (min-width: 701px) {
+	.single-projets .holder-card{
+		background: #fff;
+		max-width: 260px;
+		position: absolute;
+		bottom: 0;
+		left: 0;	
+
+		.p-details__equi {
+			border-radius: 0 0 0 $radius;
+		}
+	}
+
+	.dotline__line {
+		top: 37px;
+	}
+	.dotline__step {
+		height: 62px;
+	
+		.dot {
+			margin-top: 30px;
+		}
+		.micro-legende {
+			display: block;
+		}
+	}
+}
+
+@media screen and (max-width: $bp--medium) {
+	.action-projet .box-asy__right {
+		margin-top: $gutter;
+		padding-top: $gutter;
+		border-top: 1px dotted #fff;
+		max-width: 100%;
+		text-align: left;
+
+		.miniform {
+			margin-top: $gutter/2;
+		}
+	}
 }
 
 @media screen and (min-width: $bp--medium) {
+
 	.single-projets .holder-card{
-		max-width:260px;
-		position:absolute;
-		bottom:0;
 		left:$gutter*2;	
+
+		.p-details__equi {
+			border-radius: 0;
+		}
 	}
 
 	.input-n-btn .box__solo {
@@ -423,8 +480,6 @@
 	}
 
 	.dotline__line {
-		top: 37px;
-
 		.start {
 			position: absolute;
 			left: 0;
@@ -446,23 +501,21 @@
 		}
 	}
 
+	.testimony {
+		h4 {
+			display: block;
+		}
+		.box-asy__left .clone {
+			display: none;
+		}
+	}
+
 	.steps {
 		padding-left:$gutter*2;
 	}
 
-	.dotline__step {
-		height: 62px;
-
-		&:last-child {
-			margin-right: 8rem;
-		}
-				
-		.dot {
-			margin-top: 30px;
-		}
-		.micro-legende {
-			display: block;
-		}
+	.dotline__step:last-child {
+		margin-right: 8rem;
 	}
 }
 

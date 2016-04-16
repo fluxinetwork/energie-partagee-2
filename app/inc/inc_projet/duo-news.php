@@ -36,13 +36,13 @@ $query_news = new WP_Query( $args_news );
 						
 							if ( has_post_thumbnail() && empty($main_image_obj)) :
 								$post_img_id = get_post_thumbnail_id();
-								$post_img_array = wp_get_attachment_image_src($post_img_id, 'card--mini', true);
+								$post_img_array = wp_get_attachment_image_src($post_img_id, 'card--full', true);
 								$post_img_url = $post_img_array[0];
 						
 								$news_img = '<img class="img-reponsive" src="'.$post_img_url.'">';
 							elseif(!empty($main_image_obj)):
 						
-								$news_img = '<img class="img-reponsive" src="'.$main_image_obj['sizes']['card--mini'].'">';
+								$news_img = '<img class="img-reponsive" src="'.$main_image_obj['sizes']['card--full'].'">';
 							endif;		
 							
 							// date

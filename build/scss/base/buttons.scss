@@ -3,7 +3,34 @@
     #BUTTONS
 
 \*------------------------------*/
+
 $transition: all 0.3s $ease-out-quart;
+
+.no-touch {
+	.button:hover {	  
+		transform: scale(1.05);	 
+
+		&::before {	    
+		    transform: scale(0.95) translateY(5%);	    
+		    filter: blur(1px);
+		}
+	}
+
+	.button-round:hover {		 
+		transform: scale(1.1);
+	}
+
+	.minicard:hover {	  
+		transform: scale(1.05);	   
+		
+		&::before {	    
+			transform: scale(0.95) translateY(5%);	    
+		    filter: blur(1px);
+		}
+	}
+}
+
+
 .button{	
 	transition: $transition;
 	@extend %button;
@@ -19,15 +46,6 @@ $transition: all 0.3s $ease-out-quart;
 	&::before {
 		transition: $transition;
 	}
-
-	&:hover {	  
-	    transform: scale(1.05);	   
-	  &::before {	    
-	    transform: scale(0.95) translateY(5%);	    
-	    filter: blur(1px);
-	  }
-	}
-	
 }
 .button.cta{
 	padding: unpack($space*0.16 $space*0.2 $space*0.14 $space*0.2);
@@ -50,10 +68,6 @@ $transition: all 0.3s $ease-out-quart;
 .button-round{
 	transition: $transition;
 	@extend %button-round;
-
-	&:hover {		 
-		transform: scale(1.1);
-	}
 
 	.spinner{
 		&:before,&:after{
@@ -167,20 +181,14 @@ $transition: all 0.3s $ease-out-quart;
 		transition: $transition;
 	}
 
-	&:hover {	  
-	    transform: scale(1.05);	   
-	  &::before {	    
-	    transform: scale(0.95) translateY(5%);	    
-	    filter: blur(1px);
-	  }
-	}
-
 	.link {
 		@include font-smoothing(false);
 	}
 
 }
+
 /* EDIT LINK FOR ADMINS */
+
 .edit{	
 	background: $c-dark;
     padding: $space*0.1 $gutter/2 $space*0.15 $gutter/2;

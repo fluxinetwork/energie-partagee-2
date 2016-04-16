@@ -50,7 +50,7 @@
 							echo '<p class="p-ss">'.$texte_du_cliquable.'</p>';
 							
 							if($type_de_cliquable == 'btn_n_txt'):
-								echo '<span class="link"><i class="icon-chevronright_32"></i>'.$texte_bouton.'</span>';
+								echo '<div class="link"><i class="icon-chevronright_32"></i><span>'.$texte_bouton.'</span></div>';
 							endif;	
 													
 						endif;		

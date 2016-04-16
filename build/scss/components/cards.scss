@@ -13,12 +13,6 @@
 	@extend %card;
 	@extend %transition;
 
-	&:hover { 
-		.card__infos {
-			opacity: 0;
-		}
-	}
-
 	h1 {
 		line-height: 1.2;
 		width: 100%;
@@ -41,6 +35,10 @@
 		@extend %transition;
 	}
 }
+.no-touch .card-news:hover .card__infos {
+	opacity: 0;
+}
+
 .card-news--expand {
 	@extend .card-news;
 }

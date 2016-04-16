@@ -9,13 +9,16 @@
                     <li><a href="https://www.youtube.com/user/EnergiePartagee" class="social--yout" target="_blank"><i class="icon-youtube_40"></i></a></li>
                 </ul>    
             </div>
-            <form class="box__half" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
+
+            <div class="box__half footer-newsletter">
                 <h5 class="s-title">Abonnement newsletter</h5>
                 <div class="box"> 
-                    <div class="box__solo"><input class="courtcircuit__input" name="YMP0" id="newsletter_footer" type="email" value="" placeholder="Votre email" required aria-required="true"></div>
-                    <div class="box__fixe"><button type="submit" class="button-round"><i class="icon-check_64"></i></button></div>
-                </div>
-            </form>            
+                    <form class="miniform" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
+                        <input class="miniform__input" name="YMP0" id="newsletter_footer" type="email" value="" placeholder="Votre email" required aria-required="true">
+                        <button type="submit" class="miniform__submit"><i class="icon-check_64"></i></button>
+                    </form>  
+                </div>     
+            </div>     
         </div>
         
         <h5 class="s-title">Nos partenaires</h5>

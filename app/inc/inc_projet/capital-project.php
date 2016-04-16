@@ -34,13 +34,13 @@ if(!empty($rows_capital)){
 			$id_financer = 'id="segment-prive-' . $count_financer . '"';						
 			$array_prive_labels [] = '<div class="graphbar__segment' . $type_financer . '" ' . $id_financer . ' style="width:'.$jauge_length.'%;"></div>';
 			$id_financer_data = 'id="financer-prive-' . $count_financer . '"';
-			$array_prive_datas [] = '<li class="financer' . $type_financer . '" ' . $id_financer_data . '><div class="dot"></div><span class="legende">' . $row['nom_financeur'] . '</span><span class="data-capital" data-capital="' . $row['capital'] .'"></span></li>';
+			$array_prive_datas [] = '<li class="financer' . $type_financer . '" ' . $id_financer_data . '><div class="dot"></div><div class="financer__infos"><span class="legende">' . $row['nom_financeur'] . '</span><span class="data-capital" data-capital="' . $row['capital'] .'"></span></div></li>';
 		else:
 			$jauge_length = ($row['capital'] * 100) / $total_capital;
 			$citoyen_perc = $citoyen_perc + $jauge_length ;
 			$type_financer = ' citoyen';						
 			$array_citoyen_labels [] = '<div class="graphbar__segment' . $type_financer . '" style="width:'.$jauge_length.'%;"></div>';
-			$array_citoyen_datas [] = '<li class="financer' . $type_financer . '"><div class="dot"></div><span class="legende">' . $row['nom_financeur'] . '</span><span class="data-capital" data-capital="' . $row['capital'] .'"></span></li>';
+			$array_citoyen_datas [] = '<li class="financer' . $type_financer . '"><div class="dot"></div><div class="financer__infos"><span class="legende">' . $row['nom_financeur'] . '</span><span class="data-capital" data-capital="' . $row['capital'] .'"></span></div></li>';
 		endif;				
 				
 	}
@@ -69,8 +69,8 @@ if(!empty($rows_capital)){
        
        
     	<div class="wrap-extend">
-    		<?php if(round($citoyen_perc) > 90) { $citoyen_perc = 50; } ?>
-    		<div class="pointe--up" style="left:<?php echo ($citoyen_perc-1);?>%;"></div>
+    		<?php $percent_pos = (round($citoyen_perc)>90) ? 50 : round($citoyen_perc); ?>
+    		<div class="pointe--up" style="left:<?php echo ($percent_pos-1);?>%;"></div>
     	</div>
     
         <div class="infosbloc">          

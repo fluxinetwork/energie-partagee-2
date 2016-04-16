@@ -41,20 +41,22 @@
 	}
 }
 
-
 %box-asymetrique {
 	.box-asy__left {
 		img {
 			width: 100%;
-			max-width: 230px;
+			max-width: 160px;
 			border-radius: 50%;
 			margin: 0 auto;
 			margin-bottom: $gutter;
 		}
+		.clone {
+			text-align: center;
+			display: none;
+		}
 	}
 	
 	.box-asy__right {
-		text-align: center;
 		max-width: 370px;
 		margin: 0 auto;
 
@@ -65,6 +67,29 @@
 
 	.box-asy__clic {
 		margin-top: $gutter;
+	}
+}
+
+%box-asy--small {
+}
+
+
+@media screen and (min-width: $bp--small) {
+	%box-asy--small {
+		display: flex;
+
+		.box-asy__left {
+			flex: none;
+			padding-right: $gutter;
+
+			img {
+				margin-bottom: 0;
+			}
+		}
+
+		.box-asy__right {
+			@include flex(center flex-start, true);
+		}
 	}
 }
 
@@ -91,11 +116,14 @@
 				max-width: 260px;
 				margin-bottom: 0;
 			}
+
+			.media-querie {
+				display: none;
+			}
 		}
 
 		.box-asy__right {
 			@include flex(center flex-start, true);
-			text-align: left;
 		}
 	}
 

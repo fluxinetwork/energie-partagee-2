@@ -6,6 +6,28 @@
 
 \*------------------------------*/
 
+.no-touch {
+	.wrap-search h3:hover {
+		color: $c-main;
+	}
+
+	.s-pagination .page-numbers{
+		&:hover {	   
+			border-color: $c-dark;
+			color: $c-dark; 
+		} 
+
+		&.dots:hover,
+		&.current:hover {	  
+			 transform: none;
+		}
+
+		&.dots {
+			border-color: $c-light;
+		}
+	}
+}
+
 .search .header-bloc.no-result {
 	padding-bottom: 6rem;
 }
@@ -16,9 +38,6 @@
 
 	h3 {
 		@extend %transition;
-		&:hover {
-			color: $c-main;
-		}
 	}
 }
 
@@ -90,19 +109,10 @@
 		color: $c-light;
 		margin-right: $gutter/4;
 
-		&:hover {	   
-		    border-color: $c-dark;
-		    color: $c-dark;  
-		}
-
 		&.current,
 		&.dots {
 			color: #fff;
 			cursor: default;
-
-			&:hover {	  
-			    transform: none;
-			}
 		}
 
 		&.current {
@@ -113,10 +123,6 @@
 		&.dots {
 			align-items: flex-start;
 			background: $c-light;
-
-			&:hover {	  
-			    border-color: $c-light;
-			}
 		}
 	}
 }

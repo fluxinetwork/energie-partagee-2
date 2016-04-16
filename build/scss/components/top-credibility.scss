@@ -19,10 +19,12 @@
 	img {
 		@extend %transition;
 		filter: grayscale(100%);
-		opacity: 0.7;
+		opacity: 0.8;
 	}
+}
 
-	.box-logos__logo:hover img {
+.no-touch {
+	.top-credibility .box-logos__logo:hover img {
 		filter: grayscale(0%);
 		opacity: 1;
 	}

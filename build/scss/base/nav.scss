@@ -1,4 +1,8 @@
+/*------------------------------*\
 
+    #NAVIGATION
+
+\*------------------------------*/
 
 .top-display {
   $txt-color: $c-textwhite;
@@ -84,7 +88,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 
 \*------------------------------*/
 
-.navbar__id {
+.no-touch .navbar__id {
   animation: 1s $ease-out-quart 1 forwards slideDown;
 }
 

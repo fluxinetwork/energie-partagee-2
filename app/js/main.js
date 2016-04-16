@@ -312,13 +312,17 @@ var FOO = {
                 });
             } else {
                 $('.key-nums__item__num').each(function(){
+                    var num = $(this);
                     var txt = $(this).next();
                     var val = $(this).attr('data-number');
                     var speed = (val>1000) ? 3000 : val*100;
                     $(this).jQuerySimpleCounter({
                       start:  0,
                       end:  val,
-                      duration: speed
+                      duration: speed,
+                      complete: function(){
+                        num.html(val);
+                      }
                     });
                 });
             }

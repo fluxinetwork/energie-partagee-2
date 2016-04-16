@@ -16,6 +16,32 @@
 	background-color: $color;
 }
 
+.no-touch {
+	.f-btn {
+		&:hover .txt::after {
+			width: 100%;
+		}
+
+		i:hover {	  
+		    transform: scale(1.06);	   
+		}
+	}
+
+	.clikarde__item {
+		&:hover {
+			transform: scale(1.06);
+		}
+
+		.minicard:hover {
+			transform: none;
+		}
+	}
+
+	.isogrid .main-isogrid .item:hover {
+		transform:scale(1.06);
+	}
+}
+
 
 /* FLUXI-WRAP */
 
@@ -140,6 +166,10 @@
 	.button--solo {
 		margin-top: $gutter!important;
 	}	
+
+	iframe {
+		max-width: 100%;
+	}
 }
 
 
@@ -177,19 +207,11 @@ $transition: all 0.3s $ease-out-quart;
 	display:flex;
 	width:100%;
 
-	&:hover .txt::after {
-		width: 100%;
-	}
-
 	i {	
 		transition: $transition;
 		align-self:center;	
 	    font-size: 3.2rem;	    
 	    color:$c-main;
-
-	    &:hover {	  
-	        transform: scale(1.05);	   
-	    }
 	}
 
 	div {
@@ -314,34 +336,32 @@ $transition: all 0.3s $ease-out-quart;
 	margin:$space/2 0;	
 	padding:0;	
 
-	.clikarde__item {
-		@extend %transition;
-		@extend %button;
-		@include flex(null stretch);
-		margin: 0;
-		margin-bottom: $gutter/2;
-		padding: 0;
-
-		&::after {
-			background: $c-main;
-		}
-
-		&:hover {
-			transform: scale(1.06);
-		}
-
-		.minicard {
-			height: auto;
-			&:hover {
-				transform: none;
-			}
-		}
-	}
-
 	p {
 		margin-top: 0;
 	}
+
+	.link {
+		display: flex;
+		align-items: center;
+	}
 }	
+
+.clikarde__item {
+	@extend %transition;
+	@extend %button;
+	@include flex(null stretch);
+	margin: 0;
+	margin-bottom: $gutter/2;
+	padding: 0;
+
+	&::after {
+		background: $c-main;
+	}
+
+	.minicard {
+		height: auto;
+	}
+}
 
 
 /* ACCORDION */
@@ -436,10 +456,6 @@ $transition: all 0.3s $ease-out-quart;
 		    position: relative;
 		    width: 100%;
 
-		    &:hover{
-				transform:scale(1.05);
-		    }
-
 		    .icon-doc {
 			    border-radius: 0.6em 0.6em 0 0;
 			    color: #fff;
@@ -517,7 +533,7 @@ $transition: all 0.3s $ease-out-quart;
 			margin-right: 0;
 		}
 		&:hover {
-			transform: scale(1.05);
+			transform: scale(1.06);
 		}
 	}
 }

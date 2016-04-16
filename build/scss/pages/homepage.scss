@@ -114,13 +114,9 @@
 	.key-nums__item__num {
 		margin-right: 0!important;
 	}
-
-	.home .courtcircuit{
-		padding-bottom:0;	
-	}
 }
 @media screen and (min-width: $bp--small) {
-	.wrap-n {
+	.home .wrap-n {
 		padding-left:$gutter*2;
 		padding-right:$gutter*2;
 	}

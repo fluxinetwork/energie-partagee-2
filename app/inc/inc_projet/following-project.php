@@ -42,22 +42,16 @@
       <?php endif; ?>  
 
       <div class="input-n-btn box-asy__clic">
-        <form id="mailing_prospect" class="box" method="post">
-          <div class="box__solo">
-            <input class="input__mailing" name="mail_prospect" id="input_mailing" type="email" value="" placeholder="Votre email" required aria-required="true">
-          </div>
-
-          <input name="id_project" type="hidden" value="<?php echo get_the_ID(); ?>">
-          <input name="name_project" type="hidden" value="<?php echo get_the_title(); ?>">
-          <input name="city_project" type="hidden" value="<?php echo get_field('ville'); ?>">
-          <input name="region_project" type="hidden" value="<?php echo get_field('departement'); ?>">
-          <input name="thumb_url" type="hidden" value="<?php echo $thumb_url; ?>">
-          <input name="toky_toky" type="hidden" value="3948517542">
-          <?php wp_nonce_field( 'mailing_prospect', 'mailing_prospect_nonce_field' ); ?>
-
-          <div class="box__fixe">
-            <button type="submit" class="button-round"><i class="icon-check_64"></i></button>
-          </div>
+         <form id="mailing_prospect" class="miniform" method="post">
+            <input class="miniform__input" name="mail_prospect" id="input_mailing" type="email" value="" placeholder="Votre email" required aria-required="true">
+            <input name="id_project" type="hidden" value="<?php echo get_the_ID(); ?>">
+            <input name="name_project" type="hidden" value="<?php echo get_the_title(); ?>">
+            <input name="city_project" type="hidden" value="<?php echo get_field('ville'); ?>">
+            <input name="region_project" type="hidden" value="<?php echo get_field('departement'); ?>">
+            <input name="thumb_url" type="hidden" value="<?php echo $thumb_url; ?>">
+            <input name="toky_toky" type="hidden" value="3948517542">
+            <?php wp_nonce_field( 'mailing_prospect', 'mailing_prospect_nonce_field' ); ?>
+            <button type="submit" class="miniform__submit"><i class="icon-check_64"></i></button>
         </form>
 
         <div class="notify"></div>

@@ -1,26 +1,21 @@
 
-<?php if(is_home()){ echo '<article class="courtcircuit">'; }else{ echo '<aside class="courtcircuit wrap-extend">';}?>
-  <div class="courtcircuit__title">
-    <span class="courtcircuit__logo">
-      <img class="img-svg" src="<?php echo get_template_directory_uri(); ?>/app/img/courtcircuit.svg">
-    </span>
-  </div>
+<?php if(is_home()){ echo '<article class="wrap-courtcircuit">'; }else{ echo '<aside class="wrap-courtcircuit">';}?>
+
+  <img class="img-svg courtcircuit__logo" src="<?php echo get_template_directory_uri(); ?>/app/img/courtcircuit.svg">
   
-  <form class="wrap-n" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
-    <div class="box">
-      <div class="box__half">
-        <h6 class="courtcircuit__text">Abonnez-vous à Court-Circuit, la newsletter d’Energie Partagée.</h6>
-      </div>
-
-      <div class="box__half input__fixe">
-        <input class="courtcircuit__input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email" required aria-required="true">
-      </div>
-
-      <div class="box__fixe">
-        <button type="submit" class="button-round"><i class="icon-check_64"></i></button>
-      </div>
+  <div class="courtcircuit">
+    <div class="box-asy__left">
+      <h6 class="courtcircuit__text">Abonnez-vous à Court-Circuit, la newsletter d’Energie Partagée.</h6>
     </div>
-  </form>
+    
+    <div class="box-asy__right">
+      <form class="miniform" method="post" action="http://ymlp.com/subscribe.php?id=gbuyheegmgb" target="_blank">
+        <input class="miniform__input" name="YMP0" id="courtcircuit_contact" type="email" value="" placeholder="Votre email" required aria-required="true">
+        <button type="submit" class="miniform__submit"><i class="icon-check_64"></i></button>
+      </form>
+    </div>
+  </div>
+
   <div class="form-sublink">
     <div class="wrap-link">
       <a href="<?php echo get_permalink(334); ?>" class="f-btn">
@@ -31,4 +26,5 @@
       </a>
     </div>
   </div>
+
 </<?php if(is_home()){ echo 'article'; }else{ echo 'aside';}?>>
