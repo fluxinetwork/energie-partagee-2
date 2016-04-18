@@ -10,7 +10,7 @@ define('DEV', true); // Dev environment
 define('CSS_COMPONENTS', false); // Work with CSS coponents ( DEV must be true )
 
 // VALUES
-define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
+define('GOOGLE_ANALYTICS_ID', 'UA-31957014-1'); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
 define('GOOGLE_MAP_API_KEY', 'AIzaSyCNFjuQSUHbq9YSd8sSDBCRheFfLwuG5So'); // Javascript GOogle API key
 define('POST_EXCERPT_LENGTH', 40); // Excerpt length in words
 
