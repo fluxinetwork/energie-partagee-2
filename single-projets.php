@@ -35,7 +35,7 @@
 	
 	if ( has_post_thumbnail() && $main_img_add == 0) :
 		$post_img_id = get_post_thumbnail_id();
-		$post_img_array = wp_get_attachment_image_src($post_img_id, 'large', true);
+		$post_img_array = wp_get_attachment_image_src($post_img_id, 'post-thumb', true);
 		$post_img_url = $post_img_array[0];
 		$main_url = $post_img_url;
 		$main_image = '<div class="wrap-extend"><img class="img-responsive" src="'.$post_img_url.'"></div>';
