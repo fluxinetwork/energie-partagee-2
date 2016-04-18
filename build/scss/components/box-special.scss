@@ -73,23 +73,50 @@
 %box-asy--small {
 }
 
+%box-asy--ipad {
+}
+
+@mixin align-box-asy($limit: false) {
+	display: flex;
+
+	.box-asy__left {
+		flex: none;
+		padding-right: $gutter;
+
+		img {
+			margin-bottom: 0;
+		}
+	}
+
+	.box-asy__right {
+		@include flex(center flex-start, true);
+	}
+
+	@if ($limit) {
+		.box-asy__left {
+			width: 300px;
+
+			img {
+				max-width: 260px;
+			}
+
+			.media-querie {
+				display: none;
+			}
+		}
+	}
+}
+
 
 @media screen and (min-width: $bp--small) {
 	%box-asy--small {
-		display: flex;
+		@include align-box-asy();
+	}
+}
 
-		.box-asy__left {
-			flex: none;
-			padding-right: $gutter;
-
-			img {
-				margin-bottom: 0;
-			}
-		}
-
-		.box-asy__right {
-			@include flex(center flex-start, true);
-		}
+@media screen and (min-width: 768px) {
+	%box-asy--ipad {
+		@include align-box-asy(true);
 	}
 }
 
@@ -105,26 +132,7 @@
 	}
 
 	%box-asymetrique {
-		display: flex;
-
-		.box-asy__left {
-			flex: none;
-			padding-right: $gutter;
-			width: 300px;
-
-			img {
-				max-width: 260px;
-				margin-bottom: 0;
-			}
-
-			.media-querie {
-				display: none;
-			}
-		}
-
-		.box-asy__right {
-			@include flex(center flex-start, true);
-		}
+		@include align-box-asy(true);
 	}
 
 	%box--extend{

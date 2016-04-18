@@ -55,6 +55,9 @@
 		animation: 1s $ease-out-quart 1 forwards slideUpOpacity;
 	}
 }
+.touch .header-bloc--home {
+	background-image: url('../img/energie-partagee-homepage-header-mobile.jpg');
+}
 
 .header-bloc--page {
 	@extend %header-bloc;

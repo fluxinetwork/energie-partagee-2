@@ -343,19 +343,24 @@ var FOO = {
 			initLoadMorePostsBtn();
         }
     },
+    single_projets: {
+        init: function() {          
+            initSingleMap();                
+            initSendMailPorspect();
+            // Seraprate big numbers
+            if($('.repartition').length){                    
+                $('.repartition .infosbloc li .data-capital').each(function( i ) {
+                    $(this).html(formatNumber($(this).data('capital')) + ' €');                        
+                });
+            }
+            $('.touch .map-holder').on('click', function(){
+                $(this).addClass('is-active');
+            });
+        }
+    },
 	single: {
         init: function() {
 			$(".fitvids").fitVids();
-			if($('body.single-projets').length){			
-				initSingleMap();				
-				initSendMailPorspect();
-                // Seraprate big numbers
-                if($('.repartition').length){                    
-                    $('.repartition .infosbloc li .data-capital').each(function( i ) {
-                        $(this).html(formatNumber($(this).data('capital')) + ' €');                        
-                    });
-                }			
-			}
         }
     },	
 	contact:{

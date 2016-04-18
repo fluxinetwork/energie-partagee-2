@@ -21,8 +21,9 @@ if ( function_exists('is_mobile') ) {
 	$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
 	$ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
 	$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+	$windowsphone = strpos($_SERVER['HTTP_USER_AGENT'],"Windows Phone");
 
-	if ($iphone == true || $ipad == true || $android == true) { 
+	if ($iphone == true || $ipad == true || $android == true || $windowsphone == true) { 
 		$bodyclass .= ' touch';
 		$isMobile = true;
 	} else {

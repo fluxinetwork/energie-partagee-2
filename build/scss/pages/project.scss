@@ -65,6 +65,43 @@
 .single #map {
 	height: 250px;
 }
+.single.touch {
+	#map::after {
+		@extend %transition;
+		@include pseudo-bg(#fff, 0);
+		z-index: 2;
+	}
+
+	.map-holder {
+		overflow: hidden;
+
+		&::after {
+			@extend %transition;
+			content: 'Toucher pour activer';
+			position: absolute;
+			top: $gutter/1.6;
+			left: $gutter/2;
+			z-index: 2;
+			padding: $gutter/6 $gutter/4 $gutter/5 $gutter/4;
+			background: rgba($c-dark, 0.5);
+			color: #fff;
+			font-family: $txt-font;
+			border-radius: 3px;
+			display: none;
+		}
+
+		&.is-active {
+			&::after {
+				left: -200px;
+			}
+
+			#map::after {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+}
 
 
 .single-projets {
@@ -99,7 +136,7 @@
 		max-width:100%;	
 	}
 
-	h3.h3 {
+	.h3 {
 		margin-top: $space*0.8;
 	}
 }
@@ -165,6 +202,7 @@
 .action-projet__box {
 	@extend %box-special;
 	@extend %box-asymetrique;
+	@extend %box-asy--ipad;
 	@extend %box--fullW;
 
 	.box-asy__left,
@@ -451,7 +489,7 @@
 	}
 }
 
-@media screen and (max-width: $bp--medium) {
+@media screen and (max-width: 767px) {
 	.action-projet .box-asy__right {
 		margin-top: $gutter;
 		padding-top: $gutter;

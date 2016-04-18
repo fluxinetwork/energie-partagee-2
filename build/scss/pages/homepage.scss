@@ -64,7 +64,7 @@
 	}
 }
 
-@media screen and (max-width: $bp--medium) {	
+@media screen and (max-width: $bp--small) {	
 	.steps-intro .f-btn {
 		i {
 			display: none;
@@ -123,6 +123,7 @@
 
 	.key-nums {
 		margin: $space*0.5 0;
+		justify-content: center;
 	}
 
 	.key-nums__item__txt {
@@ -166,10 +167,6 @@
 		.box__item {
 			padding: 0 $gutter/2;
 		}
-	}
-
-	.key-nums {
-		justify-content: center;
 	}
 }
 
