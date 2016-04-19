@@ -114,7 +114,7 @@
 						$news_img = '<img class="img-reponsive '.$imgSize.'" src="'.$main_image_obj['sizes'][$imgSize].'">';
 					endif;
 
-					if($cat_id == 16):
+					if($cat_id == 16 || $cat_id == 20):
 						$date_news = date_i18n('d M', strtotime(get_field('date_event')));
 					else:
 						$date_news = get_the_time('d M');
