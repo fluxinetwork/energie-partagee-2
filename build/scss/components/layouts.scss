@@ -74,7 +74,6 @@
 
 		.button-round {
 			flex: none;
-			transform: translateY(-40px);
 		} 
 	}
 }
@@ -98,14 +97,11 @@
 		}
 	}	
 	.trio-card {
-		.box__half {
-			flex: 1;
-
-			.card__infos {			
-    			display: block!important;
-    			position: relative!important;
-    			border-radius: 0 0 $radius $radius!important;
-			}
+		.box__half .card__infos {			
+    		display: block!important;
+    		position: relative!important;
+    		border-radius: 0 0 $radius $radius!important;
+    		bottom: auto!important;
 		}
 
 		.box__full {
@@ -122,8 +118,8 @@
 			}
 		}	
 
-		.button:not(.cta) {
-			margin-top:$space*0.3;
+		.button {
+			margin-top:$gutter;
 	 	}
 	}
 }
