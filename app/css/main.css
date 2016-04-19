@@ -3591,7 +3591,7 @@ blockquote .blockquote {
   #HEADER-BLOC
   
 \*------------------------------*/
-.header-bloc--home, .header-bloc--page, .header-bloc--404 {
+.header-bloc--page, .header-bloc--404, .header-bloc--home {
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
@@ -3600,7 +3600,7 @@ blockquote .blockquote {
   color: #fff;
   padding: 8rem 2rem;
 }
-.header-bloc--home::before, .header-bloc--page::before, .header-bloc--404::before {
+.header-bloc--page::before, .header-bloc--404::before, .header-bloc--home::before {
   content: '';
   position: absolute;
   top: 0;
@@ -3609,39 +3609,40 @@ blockquote .blockquote {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-.header-bloc--home .header-bloc__content, .header-bloc--page .header-bloc__content, .header-bloc--404 .header-bloc__content {
+.header-bloc--page .header-bloc__content, .header-bloc--404 .header-bloc__content, .header-bloc--home .header-bloc__content {
   position: relative;
 }
-.header-bloc--home .header-bloc__content .button, .header-bloc--page .header-bloc__content .button, .header-bloc--404 .header-bloc__content .button {
+.header-bloc--page .header-bloc__content .button, .header-bloc--404 .header-bloc__content .button, .header-bloc--home .header-bloc__content .button {
   margin-top: 0 !important;
 }
-.header-bloc--home .h4, .header-bloc--page .h4, .header-bloc--404 .h4 {
+.header-bloc--page .h4, .header-bloc--404 .h4, .header-bloc--home .h4 {
   margin-bottom: 0;
   margin-top: 3rem;
   color: #fff;
 }
-.header-bloc--home .h4 span, .header-bloc--page .h4 span, .header-bloc--404 .h4 span {
+.header-bloc--page .h4 span, .header-bloc--404 .h4 span, .header-bloc--home .h4 span {
   display: inline-block;
   margin: 0 0.66667rem 0 0;
 }
-.header-bloc--home .h4 span:last-child, .header-bloc--page .h4 span:last-child, .header-bloc--404 .h4 span:last-child {
+.header-bloc--page .h4 span:last-child, .header-bloc--404 .h4 span:last-child, .header-bloc--home .h4 span:last-child {
   margin-left: 2rem;
 }
-.header-bloc--home .tags, .header-bloc--page .tags, .header-bloc--404 .tags {
+.header-bloc--page .tags, .header-bloc--404 .tags, .header-bloc--home .tags {
   display: none;
 }
 
-.header-bloc--home, .header-bloc--page, .header-bloc--404 {
-  background-image: url("../img/energie-partagee-homepage-header.jpg");
+.header-bloc--page, .header-bloc--404 {
+  background-image: url("../img/energie-partagee-header-ciel-bleu.jpg");
 }
-.header-bloc--home .header-bloc__content, .header-bloc--page .header-bloc__content, .header-bloc--404 .header-bloc__content {
+.header-bloc--page .header-bloc__content, .header-bloc--404 .header-bloc__content {
   padding: 3rem 0;
 }
-.header-bloc--home .h1, .header-bloc--page .h1, .header-bloc--404 .h1 {
+.header-bloc--page .h1, .header-bloc--404 .h1 {
   margin: 1rem auto 0;
 }
 
 .header-bloc--home {
+  background-image: url("../img/energie-partagee-homepage-header.jpg");
   padding: 10rem 2rem 7.5rem 2rem;
 }
 .header-bloc--home h1 {
@@ -3663,7 +3664,7 @@ blockquote .blockquote {
 }
 
 @media screen and (min-width: 600px) {
-  .header-bloc--home .tags, .header-bloc--page .tags, .header-bloc--404 .tags {
+  .header-bloc--page .tags, .header-bloc--404 .tags, .header-bloc--home .tags {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;

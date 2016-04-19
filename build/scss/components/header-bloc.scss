@@ -45,9 +45,10 @@
 	}
 
 }
+
 %header-bloc--page {
 	@extend %header-bloc;
-	background-image: url('../img/energie-partagee-homepage-header.jpg');
+	background-image: url('../img/energie-partagee-header-ciel-bleu.jpg');
 
 	.header-bloc__content {
 		padding: 3rem 0;
@@ -59,7 +60,8 @@
 }
 
 .header-bloc--home {
-	@extend %header-bloc--page;
+	@extend %header-bloc;
+	background-image: url('../img/energie-partagee-homepage-header.jpg');
 	padding: unpack($space $gutter/2 $space*0.75);
 
 	h1 {
