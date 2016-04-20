@@ -15,30 +15,32 @@ var FOO = {
                 $('.nav').removeClass('is-hidden');
             },1);
 
-			// Mini slider project
-			initLoadMoreProjectsBtn();
-
 			// Video lightbox
 			$('.lightvideo').lightGallery();
 
             // Wrap anim
-            $('.no-touch .wrap-anim').waypoint(function(){
-                $(this.element).toggleClass('ready-anim');
-            }, {offset: '85%'});
-
-            // wrap suggestion
-            if ($('.suggestion').length) {
-                $('.fluxi-wrap').addClass('has-suggestion');
+            if ($('.no-touch .wrap-anim').length) {
+                $('.wrap-anim').waypoint(function(){
+                    $(this.element).toggleClass('ready-anim');
+                }, {offset: '85%'});
             }
 
+            // Warning flexbox
             if ($('html').hasClass('detect_no-flexbox')) {
                 $('.warning-flexbox').addClass('show-me');
+            }
+
+            // Fitvids
+            if ($('.fitvids').length) {
+                $(".fitvids").fitVids();
             }
         }
     },
     home: {
         init: function() {
             isHome = true; 
+
+            // Anim chiffres clés
             if ($('body').hasClass('touch')) {
                 $('.key-nums__item__num').each(function(){
                     $(this).html($(this).attr('data-number'));
@@ -59,16 +61,64 @@ var FOO = {
                     });
                 });
             }
+
+            // Mini slider project
+            initLoadMoreProjectsBtn();
+        }
+    },
+    single: {
+        init: function() {
+            $(".fitvids").fitVids();
+        }
+    },  
+    single_projets: {
+        init: function() {          
+            initSingleMap();                
+            initSendMailPorspect();
+
+            // Serparate big numbers
+            if($('.repartition').length){                    
+                $('.repartition .infosbloc li .data-capital').each(function( i ) {
+                    $(this).html(formatNumber($(this).data('capital')) + ' €');                        
+                });
+            }
+
+            // Activate map
+            $('.touch .map-holder').on('click', function(){
+                $(this).addClass('is-active');
+            });
+
+            // Floater
+            $('.following .box__btn').clone().appendTo(".following--clone .wrap").on('click', function(){
+                $('body').animate({scrollTop: $('.description').offset().top-50}, 250);
+                $('.following .cta').click();
+            });
+            $('.following').waypoint(function(direction){
+                if (direction=='down') {
+                    $(".following--clone").removeClass('slide-down').addClass('slide-up');
+                } else {
+                    $(".following--clone").removeClass('slide-up').addClass('slide-down'); 
+                }
+            });
+            $('.footer').waypoint(function(){
+               $(".following--clone").toggleClass('slide-down');
+            }, {offset: '100%'});
         }
     },
 	page: {
         init: function() {
-			$(".fitvids").fitVids();
 			initLoadMorePostsBtn();
-			if($('body.page-template-page-projets').length){	
-				initProjectsMap();
-                initLoadMoreProjectsCardsBtn();				
-			}			
+
+            // wrap suggestion
+            if ($('.suggestion').length) {
+                $('.fluxi-wrap').addClass('has-suggestion');
+            }		
+        }
+    },
+    page_template_page_projets: {
+        init: function() {
+            initProjectsMap();
+            initLoadMoreProjectsCardsBtn(); 
         }
     },
 	category: {
@@ -76,26 +126,6 @@ var FOO = {
 			initLoadMorePostsBtn();
         }
     },
-    single_projets: {
-        init: function() {          
-            initSingleMap();                
-            initSendMailPorspect();
-            // Seraprate big numbers
-            if($('.repartition').length){                    
-                $('.repartition .infosbloc li .data-capital').each(function( i ) {
-                    $(this).html(formatNumber($(this).data('capital')) + ' €');                        
-                });
-            }
-            $('.touch .map-holder').on('click', function(){
-                $(this).addClass('is-active');
-            });
-        }
-    },
-	single: {
-        init: function() {
-			$(".fitvids").fitVids();
-        }
-    },	
 	contact:{
 		init: function() {
 			initContactForm();

@@ -80,6 +80,17 @@
 	.testimony{
 		@include background(url("../img/bg-vector-1.png") no-repeat bottom left, radial-grad($color), center no-repeat $color scroll);		
 	}
+	.following--clone {
+		background: $color;
+
+		.box__social i {
+			color: darken($color, 10%);
+		}
+
+		.icon-nrj {
+			color: $color;
+		}
+	}
 }
 
 // CARD PROJECT

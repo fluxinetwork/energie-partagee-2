@@ -144,13 +144,79 @@
 
 /* FOLLOWING */
 
-.following.box {
+.following {
+	margin-top:$space*0.3;
+	@include flex(null, true);
+
 	.button {
-		margin-top:0;	
+		margin-top: $gutter/2;	
+	}
+}
+.following--clone {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: $gutter/2;
+	z-index: 25;
+	box-shadow: $bshadow;
+	background: #fff;
+	transform: translateY(100%);
+
+	.wrap {
+		@extend .wrap-extend;
+		display: flex;
+		align-items: center;
+		transform: none;
+		margin: 0 auto;
 	}
 
-	.box__social, .box__btn {
-		margin-top:$space*0.3;	
+	.icon-nrj { 
+		color: #fff;
+		font-size: 7rem;
+		margin-right: $gutter/2;
+		background: #fff;
+		border-radius: 50%;
+	}
+
+	.card__infos {
+		background: transparent;
+		margin-right: $gutter/2;
+
+		h1 {
+			color: #fff;
+			margin-right: $gutter/2;
+		}
+
+		p {
+			margin-top: 0;
+			color: #fff;
+		}
+	}
+
+	.box__social {
+		margin-left: auto;
+	}
+
+	.box__btn {
+		margin-left: $gutter/2!important;
+
+		.cta {
+			margin-top: 0;
+
+			&::after {
+				background: $c-dark;
+			}
+		}
+	}
+
+	&.slide-up {
+		animation: slideUp $ease-out-quart 0.6s 1 forwards;	
+	}
+
+	&.slide-down {
+		animation: slideDownFromOrigin $ease-out-quart 0.6s 1 forwards;	
 	}
 }
 
@@ -400,13 +466,16 @@
 		height: 450px;
 	}
 
-	.following.box{
-		justify-content:inherit;
-		.box__social{
-			width:inherit;
-		}			
-		.box__btn{
-			margin-left:auto;					
+	.following {
+		flex-direction: row;
+		align-items: center;
+			
+		.box__btn {
+			margin-left:auto;
+
+			.button {
+				margin-top: 0;
+			}
 		}		
 	}
 
@@ -448,6 +517,7 @@
 		}
 	}
 }
+
 @media screen and (min-width: 701px) {
 	.single-projets .holder-card{
 		background: #fff;
@@ -474,6 +544,10 @@
 			display: block;
 		}
 	}
+
+	.following--clone {
+		display: block;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -491,7 +565,6 @@
 }
 
 @media screen and (min-width: $bp--medium) {
-
 	.single-projets .holder-card{
 		left:$gutter*2;	
 
@@ -545,7 +618,7 @@
 }
 
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 800px) and (min-width: 768px) {
 	.all-projects #map {
 		height: 600px!important;
 	}

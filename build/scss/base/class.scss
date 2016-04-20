@@ -17,12 +17,30 @@
   }
 }
 
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-100%);
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+@keyframes slideDownFromOrigin {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
   }
 }
 

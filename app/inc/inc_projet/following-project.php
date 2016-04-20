@@ -2,6 +2,7 @@
   <div class="box__social">
     <?php get_socials('news'); ?>
   </div>
+
   <?php if($value_stade == 'onsuit'): ?>
       <div class="box__btn">
         <button type="button" class="button green cta has-icon"><i class="icon-heart_20"></i> En savoir plus</button>
@@ -59,4 +60,17 @@
     </div>
   </div>
 </aside>
+
+<div class="following--clone">
+  <span class="wrap">
+    <i class="icon-nrj icon-<?php echo $taxoslug;?>_64"></i>
+    <div class="card__infos">
+      <h1 class="card__title"><?php the_title(); ?></h1>
+      <p class="p-ss"><?php echo get_field('departement'); ?>, <?php echo get_field('ville'); ?></p>
+    </div>
+    <div class="box__social">
+      <?php get_socials('news'); ?>
+    </div>
+  </span>
+</div>
 <?php endif; ?>
