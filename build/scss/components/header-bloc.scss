@@ -19,10 +19,6 @@
 
 	.header-bloc__content {
 		position: relative;
-
-		.button {
-			margin-top: 0!important;
-		}
 	}
 
 	.h4 {
@@ -67,6 +63,10 @@
 	h1 {
 		animation: 1s $ease-out-quart 1 forwards slideUpOpacity;
 	}
+
+	.button {
+		margin-top: 0!important;
+	}
 }
 .touch .header-bloc--home {
 	background-image: url('../img/energie-partagee-homepage-header-mobile.jpg');
@@ -84,7 +84,6 @@
 	}
 
 	.h1 {
-		margin-bottom: $gutter;
 		width: 80%;
 		max-width: 530px;
 	}

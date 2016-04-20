@@ -534,6 +534,17 @@ html {
     transform: translateY(0%);
   }
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* TRANSITIONS */
 .link, .no-pp .nav__dropdown .dropdown__item a, .no-pp .nav__dropdown .page_item a, .fluxi-content p a, .fluxi-content .list li a, .fluxi-content .accordion__content a, .f-btn .txt, .f-btn--txt .txt, .f-btn--big .txt, .link::after, .no-pp .nav__dropdown .dropdown__item a::after, .no-pp .nav__dropdown .page_item a::after, .fluxi-content p a::after, .fluxi-content .list li a::after, .fluxi-content .accordion__content a::after, .f-btn .txt::after, .f-btn--txt .txt::after, .f-btn--big .txt::after, .navbar__id__social a, .nav-bt, .hamburger, .nav-bt--txt, .s-pagination .page-numbers, .c-solai.card-map .link-cta, .c-eolie.card-map .link-cta, .c-micro.card-map .link-cta, .c-bioma.card-map .link-cta, .c-geoth.card-map .link-cta, .c-econo.card-map .link-cta, .warning-flexbox a,
 .warning-flexbox h1,
@@ -3383,9 +3394,6 @@ blockquote .blockquote {
 .header-bloc--page .header-bloc__content, .header-bloc--404 .header-bloc__content, .header-bloc--home .header-bloc__content {
   position: relative;
 }
-.header-bloc--page .header-bloc__content .button, .header-bloc--404 .header-bloc__content .button, .header-bloc--home .header-bloc__content .button {
-  margin-top: 0 !important;
-}
 .header-bloc--page .h4, .header-bloc--404 .h4, .header-bloc--home .h4 {
   margin-bottom: 0;
   margin-top: 3rem;
@@ -3419,6 +3427,9 @@ blockquote .blockquote {
 .header-bloc--home h1 {
   animation: 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards slideUpOpacity;
 }
+.header-bloc--home .button {
+  margin-top: 0 !important;
+}
 
 .touch .header-bloc--home {
   background-image: url("../img/energie-partagee-homepage-header-mobile.jpg");
@@ -3428,7 +3439,6 @@ blockquote .blockquote {
   padding: 6rem 0;
 }
 .header-bloc--404 .h1 {
-  margin-bottom: 4rem;
   width: 80%;
   max-width: 530px;
 }
@@ -5192,6 +5202,17 @@ input {
   }
   100% {
     transform: translateY(0%);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 /* TRANSITIONS */
@@ -7200,12 +7221,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /* FOLLOWING */
-.following.box .box__social, .following.box .box__btn {
-  margin-top: 3rem;
-}
-
 .following.box .button {
   margin-top: 0;
+}
+.following.box .box__social, .following.box .box__btn {
+  margin-top: 3rem;
 }
 
 .input-n-btn .box__solo {
@@ -7317,17 +7337,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   left: 6px;
   position: absolute;
   animation: pulse 1s infinite forwards;
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 .dotline__step.is-inactive .dot {
   border: 2px solid #65aa04;
