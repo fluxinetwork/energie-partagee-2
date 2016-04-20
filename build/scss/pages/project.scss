@@ -196,10 +196,12 @@
 	}
 
 	.box__social {
+		flex: none;
 		margin-left: auto;
 	}
 
 	.box__btn {
+		flex: none;
 		margin-left: $gutter/2!important;
 
 		.cta {

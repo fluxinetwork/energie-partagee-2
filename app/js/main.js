@@ -357,7 +357,7 @@ var FOO = {
 
             // Floater
             $('.following .box__btn').clone().appendTo(".following--clone .wrap").on('click', function(){
-                $('body').animate({scrollTop: $('.description').offset().top-50}, 250);
+                $('html, body').animate({scrollTop: $('.description').offset().top-50}, 250);
                 $('.following .cta').click();
             });
             $('.following').waypoint(function(direction){

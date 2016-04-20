@@ -153,7 +153,7 @@
 		}
 	}
 	.entry-content-asset{
-		margin-bottom:$space*0.4;	
+		margin:$space*0.4 0;	
 	}	
 	.galerie{
 		margin:	$space*0.4 auto;	
@@ -661,7 +661,8 @@ $transition: all 0.3s $ease-out-quart;
 	.card__infos,
 	.box-asy__left, 
 	.box-asy__right,
-	.box__item__infos {
+	.box__item__infos,
+	.infosbloc {
 		p {
 			line-height: 1.6!important;
 			font-size: 1.6rem!important;
