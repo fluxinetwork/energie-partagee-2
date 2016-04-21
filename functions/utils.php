@@ -548,7 +548,7 @@ function send_mail_prospect(){
 			// ********************************
 			// Envoie du mail de notification
 			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);			
-			notify_by_mail ($mails_notif, 'Energie Partagée <contact@energie-partagee.org>', 'Nouveau contact issu du site internet Energie Partagée', false, '<p>Une personne vient tout juste de consulter la page de votre projet sur le site d’Énergie Partagée.<br>Elle souhaite être inscrite à votre lettre d\'information et suivre les actualités du projet.<br>Son adresse email : ' . $mail_prospect . '<br><br>Merci de la tenir informée !<br><br>Bonne journée<br><br>L\'équipe Energie Partagée<p>', $mail_vars_notif );
+			notify_by_mail ($mails_notif, 'Energie Partagée <contact@energie-partagee.org>', 'Projet : '.$name_project.' - Nouveau contact issu du site internet Energie Partagée', false, '<p>Une personne vient tout juste de consulter la page de votre projet sur le site d’Énergie Partagée.<br>Elle souhaite être inscrite à votre lettre d\'information et suivre les actualités du projet.<br>Son adresse email : ' . $mail_prospect . '<br><br>Merci de la tenir informée !<br><br>Bonne journée<br><br>L\'équipe Energie Partagée<p>', $mail_vars_notif );
 
 			// Output response json
 			$results[] = $datas_mail;
