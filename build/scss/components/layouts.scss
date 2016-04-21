@@ -48,11 +48,8 @@
 		margin-top:0
 	 }
 }
-.single .trio-card {
-	.box__fixe{
-		display:flex;
-		flex:100%;
-	}
+.single .trio-card .box__fixe {
+	flex: 100%;
 }
 
 .box-asy {
@@ -121,6 +118,14 @@
 		.button {
 			margin-top:$gutter;
 	 	}
+	}
+	.single .trio-card {
+		.box__half {
+			margin-bottom: 0;
+		}
+		.box__fixe {
+			flex: none;
+		}
 	}
 }
 
