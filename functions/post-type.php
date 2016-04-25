@@ -1,40 +1,5 @@
 <?php
-// CPT with taxo |  Ex : 'projet'
-/*fluxi_register_post_type('projet', 'Projets', array('supports' => array('title', 'editor')));
-
-// hook into the init action and call create_custom_taxonomies when it fires
-add_action( 'init', 'create_projet_taxonomies', 0 );
-
-function create_projet_taxonomies() {	
-	$labels = array(
-		'name'              => _x( 'Types', 'taxonomy general name' ),
-		'singular_name'     => _x( 'Type', 'taxonomy singular name' ),
-		'search_items'      => __( 'Search Types' ),
-		'all_items'         => __( 'All Types' ),
-		'parent_item'       => __( 'Parent Type' ),
-		'parent_item_colon' => __( 'Parent Type:' ),
-		'edit_item'         => __( 'Edit Type' ),
-		'update_item'       => __( 'Update Type' ),
-		'add_new_item'      => __( 'Add New Type' ),
-		'new_item_name'     => __( 'New Type Name' ),
-		'menu_name'         => __( 'Type' ),
-	);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'type' ),
-	);
-
-	register_taxonomy( 'type', array( 'projet' ), $args );
-
-}
-
-// CPT Devis
-fluxi_register_post_type('devis', 'Devis', array('supports' => array('title', 'editor')));*/
+// Projects taxonomy
 
 function add_taxonomy_filters() {
 	global $typenow;
@@ -57,5 +22,73 @@ function add_taxonomy_filters() {
 	}
 }
 add_action( 'restrict_manage_posts', 'add_taxonomy_filters' );
+
+/*
+ * Add sort column in admin
+ */
+
+function my_extra_prospects_columns($columns) {
+    $columns['projet'] =__('Projet','energie-partagee-2');
+    return $columns;
+}
+add_filter('manage_edit-prospects_columns', 'my_extra_prospects_columns');
+
+function my_prospects_column_content( $column_name, $post_id ) {
+    if ( 'projet' != $column_name )
+        return;    
+    $id_projet = get_post_meta($post_id, 'projet', true);
+    echo get_the_title($id_projet);
+}
+add_action( 'manage_prospects_posts_custom_column', 'my_prospects_column_content', 10, 2 );
+
+function my_sortable_prospects_column( $columns ) {
+    $columns['projet'] = 'projet'; 
+ 
+    return $columns;
+}
+add_filter( 'manage_edit-prospects_sortable_columns', 'my_sortable_prospects_column' );
+
+function my_prospects_orderby( $query ) {
+    if( ! is_admin() )
+        return;
+ 
+    $orderby = $query->get( 'orderby');
+ 
+    if( 'projet' == $orderby ) {
+        $query->set('meta_key','projet');
+        $query->set('orderby','meta_value');
+    }
+}
+add_action( 'pre_get_posts', 'my_prospects_orderby' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
