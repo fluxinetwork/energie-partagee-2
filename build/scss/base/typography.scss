@@ -307,6 +307,10 @@ ul.list,
 	@include font-size($p-font-sizes); 
 	font-family: $txt-fontserif;
 	color:$c-text;
+
+    strong {
+        font-weight: normal;
+    }
 }
 p,
 .p-ss,

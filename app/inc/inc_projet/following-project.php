@@ -62,6 +62,8 @@
   </div>
 </aside>
 
+<?php endif; ?>
+
 <div class="following--clone">
   <span class="wrap">
     <i class="icon-nrj icon-<?php echo $taxoslug;?>_64"></i>
@@ -74,4 +76,3 @@
     </div>
   </span>
 </div>
-<?php endif; ?>

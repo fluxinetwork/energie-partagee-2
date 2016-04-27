@@ -198,6 +198,14 @@
 	.box__social {
 		flex: none;
 		margin-left: auto;
+
+		i {
+			@extend %transition;
+		}
+
+		button:hover i {
+			color: $c-dark!important;
+		}
 	}
 
 	.box__btn {
