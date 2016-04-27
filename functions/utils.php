@@ -315,12 +315,20 @@ function more_project_ajax(){
 
     $loop = new WP_Query($args);
 
-    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();		
 
-		// Thumb
-		$project_img_id = get_post_thumbnail_id();
-		$project_img_array = wp_get_attachment_image_src($project_img_id, 'card--mini', true);
-		$project_img_url = $project_img_array[0];
+		// Imgs
+		$main_img_add = get_field( 'add_image' );			
+		
+		if ( has_post_thumbnail() && $main_img_add == 0) :
+			$project_img_id = get_post_thumbnail_id();
+			$project_img_array = wp_get_attachment_image_src($project_img_id, 'card--mini', true);
+			$project_img_url = $project_img_array[0];		
+	    
+		elseif($main_img_add == 1):
+	    	$main_image_obj = get_field( 'main_image' );			
+			$project_img_url = $main_image_obj['sizes']['card--mini'];	    
+		endif;
 
 		// Taxo Slug
 		$terms = get_the_terms( $loop->ID, 'type_energie' );
@@ -506,6 +514,7 @@ function send_mail_prospect(){
 			$name_project = filter_var($_POST['name_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 			$city_project = filter_var($_POST['city_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 			$region_project = filter_var($_POST['region_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+			$stade_project = filter_var($_POST['stade_project'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 			$thumb_url = filter_var($_POST['thumb_url'], FILTER_SANITIZE_URL);
 			$url_page_projet = get_the_permalink($id_project);
 
@@ -542,9 +551,10 @@ function send_mail_prospect(){
 
 			// ********************************
 			// Envoie du mail au prospect
-			$mail_vars_prospect = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
-			notify_by_mail (array($mail_prospect), 'Energie Partagée <contact@energie-partagee.org>', 'La transition citoyenne n’attend plus que vous !', true, TEMPLATEPATH . '/app/inc/inc_projet/content-mail-prospect.php', $mail_vars_prospect );
-
+			if($stade_project=='collecte'):
+				$mail_vars_prospect = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
+				notify_by_mail (array($mail_prospect), 'Energie Partagée <contact@energie-partagee.org>', 'La transition citoyenne n’attend plus que vous !', true, TEMPLATEPATH . '/app/inc/inc_projet/content-mail-prospect.php', $mail_vars_prospect );
+			endif;
 			// ********************************
 			// Envoie du mail de notification
 			$mail_vars_notif = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);			
