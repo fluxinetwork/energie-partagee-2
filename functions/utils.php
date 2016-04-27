@@ -525,11 +525,7 @@ function send_mail_prospect(){
 				$mails_notif [] = $mail_contact;
 			endif;
 
-			// Response JSON
-			$datas_mail = array(
-				'validation' => 'success',
-				'message' => 'Un email vient de vous être envoyé.'
-			);
+			
 
 			$meta_data = array(
 				'email_contact' => $mail_prospect,
@@ -554,6 +550,17 @@ function send_mail_prospect(){
 			if($stade_project=='collecte'):
 				$mail_vars_prospect = array($mail_prospect, $id_project, $name_project, $city_project, $region_project, $thumb_url, $url_page_projet);
 				notify_by_mail (array($mail_prospect), 'Energie Partagée <contact@energie-partagee.org>', 'La transition citoyenne n’attend plus que vous !', true, TEMPLATEPATH . '/app/inc/inc_projet/content-mail-prospect.php', $mail_vars_prospect );
+				// Response JSON
+				$datas_mail = array(
+					'validation' => 'success',
+					'message' => 'Un email vient de vous être envoyé.'
+				);
+			else:
+				// Response JSON
+				$datas_mail = array(
+					'validation' => 'success',
+					'message' => 'Merci, votre demande a bien été prise en compte.'
+				);	
 			endif;
 			// ********************************
 			// Envoie du mail de notification
