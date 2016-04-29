@@ -2,7 +2,7 @@
 
 	<section class="section header-bloc--home">
     	<article class="header-bloc__content">
-            <h1 class="h1">Investissons les<br> énergies renouvelables</h1>
+            <h1 class="h1">L'énergie par les citoyens,<br>pour les citoyens</h1>
 
             <?php if( have_rows('chiffres_cles', 'option') ): ?>
 
