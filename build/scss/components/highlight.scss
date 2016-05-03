@@ -1,0 +1,19 @@
+/*------------------------------*\
+
+	# HIGHLIGHT
+	# Actualité importante sur homepage
+	
+\*------------------------------*/ 
+
+.highlight {
+	@include padding(10rem null);
+
+	h1 {
+		margin-top: 2rem;
+		line-height: 1.2
+	}
+}
+
+.highlight-txt {
+	margin-top: 2rem;
+}
