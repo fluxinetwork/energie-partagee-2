@@ -665,7 +665,7 @@ html {
 .navbar__id.is-compact .logo__img,
 .no-touch nav:hover + .navbar__id .logo__img, .logo__title, .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .galerie.galerie_damier a, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .top-credibility img, .single.touch #map::after, .single.touch .map-holder::after, .action-projet, .wrap-search h3, .transition {
+.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .galerie.galerie_damier a, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .top-credibility img, .single.touch #map::after, .single.touch .map-holder::after, .following--clone .box__social i, .action-projet, .wrap-search h3, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -2200,6 +2200,15 @@ ul.list,
     font-size: 1.8rem;
     line-height: 1.6;
   }
+}
+p strong,
+.p strong,
+.p-ss strong,
+.legend strong,
+.accordion__content ul strong,
+ul.list strong,
+.fluxi-content ul:not(.social) strong {
+  font-weight: normal;
 }
 
 p,
@@ -4546,10 +4555,6 @@ blockquote .blockquote {
 .fluxi-content .galerie {
   margin: 4rem auto;
 }
-.fluxi-content .courtcircuit {
-  padding-top: 6rem;
-  padding-bottom: 10rem;
-}
 .fluxi-content .button--solo {
   margin-top: 4rem !important;
 }
@@ -4647,13 +4652,13 @@ blockquote .blockquote {
 }
 .clikable.wide:before {
   background: #f2f2f2;
-  width: 100%;
+  width: 830px;
   height: 100%;
   content: "";
   position: absolute;
   z-index: 1;
-  -webkit-transform: scaleX(5);
-          transform: scaleX(5);
+  -webkit-transform: translateX(-8rem);
+          transform: translateX(-8rem);
 }
 .clikable.wide .box__half:first-child {
   max-width: 300px;
@@ -5714,7 +5719,7 @@ input {
 .navbar__id.is-compact .logo__img,
 .no-touch nav:hover + .navbar__id .logo__img, .logo__title, .navbar__id__social,
 .navbar__id.is-compact .navbar__id__social,
-.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .galerie.galerie_damier a, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .top-credibility img, .single.touch #map::after, .single.touch .map-holder::after, .action-projet, .wrap-search h3, .transition {
+.no-touch nav:hover + .navbar__id .navbar__id__social, .nav, .nav__primary, .no-pp .nav__item__title, .no-pp .nav__dropdown, .no-pp .nav__dropdown::before, .pp, .pp .nav__item__title::after, .pp .nav__dropdown, .pp .nav__dropdown .dropdown__item::before, .pp .nav__dropdown .page_item::before, .card-news, .card-news--expand, .card-news--big, .card-news .card__infos, .card-news--expand .card__infos, .card-news--big .card__infos, .card-news .card__title, .card-news--expand .card__title, .card-news--big .card__title, .card-news .tag, .card-news--expand .tag, .card-news--big .tag, .card-project, .clikarde__item, .accordion .accordion__head, .accordion .accordion__head i, .isogrid .main-isogrid .item, .galerie.galerie_damier a, .map-holder .cards-map .card-map, .map-holder .cards-map .card-map .card .card__img .spinner, .tag, .top-credibility img, .single.touch #map::after, .single.touch .map-holder::after, .following--clone .box__social i, .action-projet, .wrap-search h3, .transition {
   transition: all 0.2s ease-in-out;
 }
 
@@ -7256,6 +7261,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 /*------------------------------*\
 
+  # HIGHLIGHT
+  # Actualité importante sur homepage
+  
+\*------------------------------*/
+.highlight {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.highlight h1 {
+  margin-top: 2rem;
+  line-height: 1.2;
+}
+
+.highlight-txt {
+  margin-top: 2rem;
+}
+
+/*------------------------------*\
+
     # CATEGORY
   
 \*------------------------------*/
@@ -7771,6 +7795,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex: none;
           flex: none;
   margin-left: auto;
+}
+.following--clone .box__social button:hover i {
+  color: #122c33 !important;
 }
 .following--clone .box__btn {
   -webkit-flex: none;

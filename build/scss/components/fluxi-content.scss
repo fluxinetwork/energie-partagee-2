@@ -158,10 +158,6 @@
 	.galerie{
 		margin:	$space*0.4 auto;	
 	}
-	.courtcircuit{
-		padding-top:$space*0.6;
-		padding-bottom:$space;			
-	}	
 
 	.button--solo {
 		margin-top: $gutter!important;
@@ -290,12 +286,12 @@ $transition: all 0.3s $ease-out-quart;
 	
 	&:before{		
 		background:$c-bglight;
-		width:100%;
+		width: 830px;
 		height:100%;
 		content:"";
 		position:absolute;
 		z-index:1;
-		transform:scaleX(5);
+		transform:translateX(-8rem);
 	}
 	.box__half:first-child{
 		max-width:300px;
