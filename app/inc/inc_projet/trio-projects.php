@@ -84,13 +84,13 @@ $query_projects = new WP_Query( $args_projects );
 							                               
 							// Design box class
 							if($nb_projects == 0 && is_home()):
-								echo '<article class="box__full'.$terms_nrj.'">';
+								echo '<article class="box__full">';
 							else:
-								echo '<article class="box__half'.$terms_nrj.'">';
+								echo '<article class="box__half">';
 							endif; 
 							?>
                             
-                           <a class="card card-project" href="<?php the_permalink(); ?>">
+                           <a class="card card-project <?php echo $terms_nrj; ?>" href="<?php the_permalink(); ?>">
                             <div class="card__img">
                             	 <?php echo $project_img; ?>
                             </div>

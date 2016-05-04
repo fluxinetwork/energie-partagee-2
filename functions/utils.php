@@ -337,6 +337,7 @@ function more_project_ajax(){
 			$taxoslug = $term->slug;
 			$taxoname = $term->name;
 		}
+		$terms_nrj = ' c-' . substr($taxoslug, 0, 5);
 		// Stade
 		$field_stade = get_field_object('status_projet');
 		$value_stade = get_field('status_projet');
@@ -349,6 +350,7 @@ function more_project_ajax(){
            	'region' => get_field('departement'),
            	'permalink' => get_the_permalink(),
            	'catSlug' => $taxoslug,
+           	'classSlug' => $terms_nrj,
            	'stadeName' => $label_stade,
            	'sourceUrl' => $url_page_projects
         );
