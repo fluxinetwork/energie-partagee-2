@@ -4075,6 +4075,12 @@ blockquote .blockquote {
         -ms-flex-align: center;
             align-items: center;
   }
+
+  .page .wrap-courtcircuit {
+    width: 830px;
+    -webkit-transform: translateX(-8rem);
+            transform: translateX(-8rem);
+  }
 }
 .picker {
   font-size: 16px;

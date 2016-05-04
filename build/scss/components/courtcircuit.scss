@@ -91,4 +91,9 @@
 			@include flex(null center);
 		}
 	}
+
+	.page .wrap-courtcircuit {
+		width: 830px;
+		transform: translateX(-8rem);
+	}
 }
