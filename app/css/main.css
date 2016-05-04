@@ -4652,13 +4652,13 @@ blockquote .blockquote {
 }
 .clikable.wide:before {
   background: #f2f2f2;
-  width: 830px;
+  width: 100%;
   height: 100%;
   content: "";
   position: absolute;
   z-index: 1;
-  -webkit-transform: translateX(-8rem);
-          transform: translateX(-8rem);
+  -webkit-transform: scaleX(5);
+          transform: scaleX(5);
 }
 .clikable.wide .box__half:first-child {
   max-width: 300px;
@@ -5032,6 +5032,13 @@ blockquote .blockquote {
         -ms-flex: 1 0 30%;
             flex: 1 0 30%;
     margin: 0;
+  }
+
+  .clikable.wide:before {
+    width: 830px;
+    -webkit-transform: translateX(-8rem);
+            transform: translateX(-8rem);
+    border-radius: 3px;
   }
 
   .isogrid .main-isogrid .item {
