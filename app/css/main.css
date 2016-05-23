@@ -1832,6 +1832,10 @@ html {
 }
 
 /* New */
+.icon-login_32:before {
+  content: "\e928";
+}
+
 .icon-safari:before {
   content: "\f267";
 }
@@ -2270,14 +2274,8 @@ blockquote .blockquote {
 }
 @media screen and (min-width: 600px) {
   blockquote .blockquote {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     line-height: 1.3;
-  }
-}
-@media screen and (min-width: 830px) {
-  blockquote .blockquote {
-    font-size: 2.8;
-    line-height: 1.4;
   }
 }
 
@@ -3091,9 +3089,6 @@ blockquote .blockquote {
 .nav-bt::before, .hamburger::before, .nav-bt--txt::before {
   font-size: 32px;
 }
-.nav-bt:nth-child(2), .hamburger:nth-child(2), .nav-bt--txt:nth-child(2) {
-  margin: 0 0 0 1rem;
-}
 
 .nav-bt--txt {
   display: -webkit-flex;
@@ -3109,12 +3104,110 @@ blockquote .blockquote {
 .nav-bt--txt span {
   margin-right: 10px;
   margin-left: 5px;
-  padding-top: 0.4rem;
+  padding-top: 0.1rem;
   display: none;
+  line-height: 0;
 }
 .nav-bt--txt::before {
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
+}
+.nav-bt--txt.js-choose-connexion span {
+  padding-top: 0;
+}
+.nav-bt--txt.js-choose-connexion::before {
+  -webkit-transform: translate(-2px, -2px);
+          transform: translate(-2px, -2px);
+}
+
+/*------------------------------*\
+
+    # CONNEXION
+
+\*------------------------------*/
+.connexion {
+  margin: 0 0 0 1rem;
+}
+
+.connexion_adherents, .connexion_actionnaires {
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  z-index: 100;
+  visibility: hidden;
+}
+.connexion_adherents::before, .connexion_actionnaires::before {
+  transition: height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #65aa04;
+  height: 0;
+}
+.connexion_adherents span, .connexion_actionnaires span {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s 0.3s ease-in-out;
+  opacity: 0;
+}
+.connexion_adherents span.is-off, .connexion_actionnaires span.is-off {
+  display: none;
+}
+.connexion_adherents p, .connexion_actionnaires p {
+  font-size: 1.8rem;
+  color: #fff;
+  max-width: 300px;
+  text-align: center;
+}
+.connexion_adherents a, .connexion_actionnaires a {
+  margin-top: 2rem;
+}
+.is-active.connexion_adherents, .is-active.connexion_actionnaires {
+  visibility: visible;
+}
+.is-active.connexion_adherents::before, .is-active.connexion_actionnaires::before {
+  height: 100%;
+}
+.is-active.connexion_adherents span, .is-active.connexion_actionnaires span {
+  opacity: 1;
+}
+
+.connexion_adherents {
+  top: 0;
+}
+
+.connexion_actionnaires {
+  bottom: 0;
+}
+.connexion_actionnaires button {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.connexion_actionnaires::before {
+  background: #477803;
+  bottom: 0;
+  top: auto;
+  transition-delay: 0.1s;
 }
 
 /*------------------------------*\

@@ -2155,6 +2155,23 @@ function addCardContent (type, content, domId, factor){
 		}
 	}
 
+	// CONNEXION
+
+	var timerOff;
+
+	$('.js-choose-connexion, .js-close-connect').on('click', function(){
+		clearTimeout(timerOff);
+		$('.connexion div').addClass('is-active');
+	})
+
+	$('.js-close-connect').on('click', function(){
+		$('.connexion div').removeClass('is-active');
+		$('.connexion div span').addClass('is-off');
+		timerOff = setTimeout(function(){
+			$('.connexion div span').removeClass('is-off');
+		}, 300);
+	})
+
 	// WAYPOINT
 
 	$('.top-display').waypoint(function(){

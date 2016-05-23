@@ -82,10 +82,10 @@
 <div class="navbar__id">
   <a class="logo" href="<?php echo get_site_url(); ?>">
     <div class="logo__img">
-    	<img src="<?php echo get_template_directory_uri(); ?>/app/img/logo-illu-energie-partagee.png">
+      <img src="<?php echo get_template_directory_uri(); ?>/app/img/logo-illu-energie-partagee.png">
     </div>
     <div class="logo__title">
-    	<img src="<?php echo get_template_directory_uri(); ?>/app/img/logo-energie-partage.svg">    
+      <img src="<?php echo get_template_directory_uri(); ?>/app/img/logo-energie-partage.svg">    
     </div>
   </a>
   <ul class="navbar__id__social">
@@ -95,25 +95,31 @@
   </ul>  
 </div>
 <form method="get" id="nav__search" class="nav__search" action="<?php bloginfo('url'); ?>/">
-	<label class="is-hidden" for="s"><?php _e('Recherche :'); ?></label>
-  	<input type="text" class="nav__search__input js-search-input" value="<?php if (is_search()) : the_search_query(); endif; ?>" name="s" id="s" placeholder="Rechercher">
-  	<button type="submit" class="nav__search__submit icon-check_32 nav-bt" value="" id="nav__search__submit"></button>
-  	<button type="button" class="nav-bt nav__search__close js-toggle-search icon-close_32"></button>
+  <label class="is-hidden" for="s"><?php _e('Recherche :'); ?></label>
+    <input type="text" class="nav__search__input js-search-input" value="<?php if (is_search()) : the_search_query(); endif; ?>" name="s" id="s" placeholder="Rechercher">
+    <button type="submit" class="nav__search__submit icon-check_32 nav-bt" value="" id="nav__search__submit"></button>
+    <button type="button" class="nav-bt nav__search__close js-toggle-search icon-close_32"></button>
 </form>
 <div class="navbar__buttons">
-  <?php
-  $icon;
-  $url;
-  if (is_user_logged_in()) {
-    $icon = 'icon-logout_32';
-    $url = wp_logout_url(home_url());
-    $txt = 'Déconnexion';
-  } else {
-    $icon = 'icon-adherents_32';
-    $url = get_bloginfo('url');
-    $txt = 'Adhérents';
-  }
-  ?>
   <button type="button" class="nav-bt js-toggle-search icon-search_32"></button>
-  <a href="<?php echo $url; ?>/wp-login.php" class="nav-bt--txt <?php echo $icon; ?>"><span><?php echo $txt; ?></span></a>
+  <div class="connexion">
+    <?php if (is_user_logged_in()) : $url = wp_logout_url(home_url()); ?>
+      <a href="<?php echo $url; ?>/wp-login.php" class="nav-bt--txt icon-logout_32"><span>Déconnexion</span></button>
+    <?php else : ?>
+      <button class="js-choose-connexion nav-bt--txt icon-login_32"><span>Connexion</span></button>
+    <?php endif; ?>
+    <div class="connexion_adherents">
+      <span>
+        <p class="p-ss">Énergie Partagée Association</p>
+        <a href="<?php bloginfo('url') ?>/wp-login.php" class="button cta">Accès adhérent</a>
+      </span>
+    </div>
+    <div class="connexion_actionnaires">
+      <span>
+        <button class="js-close-connect nav-bt icon-close_32"2></button>
+        <p class="p-ss">Énergie Partagée Investissement</p>
+        <a href="https://je-souscris.energie-partagee.org/Security/login" class="button cta">Accès actionnaire</a>
+      </span>
+    </div>
+  </div>
 </div>

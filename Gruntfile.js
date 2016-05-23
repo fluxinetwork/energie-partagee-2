@@ -105,7 +105,7 @@ module.exports = function (grunt) {
 	        main: {
 	        	options : {
 	    	        style: 'expanded',
-	    	        sourcemap: 'none'
+	    	        sourcemap: 'auto'
 	    		},
 	            files: {
 	                'app/css/main.css': 'build/scss/main.scss'
