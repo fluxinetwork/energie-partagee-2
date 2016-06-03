@@ -106,7 +106,7 @@
     <?php if (is_user_logged_in()) : $url = wp_logout_url(home_url()); ?>
       <a href="<?php echo $url; ?>/wp-login.php" class="nav-bt--txt icon-logout_32"><span>Déconnexion</span></button>
     <?php else : ?>
-      <button class="js-choose-connexion nav-bt--txt icon-login_32"><span>Connexion</span></button>
+      <a href="#" class="js-choose-connexion nav-bt--txt icon-login_32"><span>Connexion</span></a>
     <?php endif; ?>
     <div class="connexion_adherents">
       <span>

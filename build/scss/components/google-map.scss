@@ -4,7 +4,7 @@
 
 .map-projects{
 	background-color:$c-bglight;
-	padding-top:$space/2;
+	padding-top:$space/3;
 
 	.filters{
 		flex: 1 1 100%;
@@ -25,7 +25,7 @@
 	}
 
 	.map-holder #map{
-		margin-top: $space*0.4;
+		margin-top: $space/3;
 	}
 	.map-filters{
 		display: flex;
@@ -96,6 +96,10 @@
 	.cards-map{
 		.card-map{
 			@extend %transition;
+
+			.p-details__nrg {
+				display: none;
+			}
 
 			.card{
 				height: auto;
@@ -193,14 +197,20 @@
 		}
 
 		.cards-map{
-			.card-map{
+
+			.card-map {
+				@include flex(center null, true);
 				max-width: 260px;
 				position: absolute;
 				margin-right: $gutter;
-				padding:$gutter*2 0;
 				right: 0;
-				top: 0;
+				bottom: 0;
 				height: 100%;
+
+				.wrap-card-map {
+					box-shadow: $bshadow;
+				}
+
 				.card-project{
 					border-radius:$radius $radius 0 0;
 				}
@@ -252,7 +262,7 @@
 			&.second{
 				text-align: right;
 				justify-content: flex-end;
-				padding-top: 1.5rem;
+				padding-top: 2rem;
 				li{
 					margin:0 0 $space*0.1 $space*0.1;
 				}

@@ -121,55 +121,55 @@ var iconShadow = {
 var iconsSelectProjectsMap = {
 	eolie: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 20,
 		strokeColor: '#ffffff',
       	strokeOpacity: 1,
-      	strokeWeight: 15,
+      	strokeWeight: 8,
       	fillColor: '#5ab1bb',
       	fillOpacity: 1, 
     },
 	bioma: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 20,
 		strokeColor: '#ffffff',
       	strokeOpacity: 1,
-      	strokeWeight: 15,
+      	strokeWeight: 8,
       	fillColor: '#83ab00',
       	fillOpacity: 1, 
     },
 	solai: { 
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 20,
 		strokeColor: '#ffffff',
       	strokeOpacity: 1,
-      	strokeWeight: 15,
+      	strokeWeight: 8,
       	fillColor: '#e9af00',
       	fillOpacity: 1, 
     },
 	micro: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 20,
 		strokeColor: '#ffffff',
       	strokeOpacity: 1,
-      	strokeWeight: 15,
+      	strokeWeight: 8,
       	fillColor: '#5268b9',
       	fillOpacity: 1, 
     },
 	geoth: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 20,
 		strokeColor: '#ffffff',
       	strokeOpacity: 1,
-      	strokeWeight: 15,
+      	strokeWeight: 8,
       	fillColor: '#e7511e',
       	fillOpacity: 1, 
     },
 	econo: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 20,
 		strokeColor: '#ffffff',
       	strokeOpacity: 1,
-      	strokeWeight: 15,
+      	strokeWeight: 8,
       	fillColor: '#b7115b',
       	fillOpacity: 1, 
     }
@@ -178,7 +178,7 @@ var iconsSelectProjectsMap = {
 var iconsProjectsMap = {
 	eolie: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 12,
 		strokeColor: '#ffffff',
       	strokeOpacity: 0,
       	strokeWeight: 15,
@@ -187,7 +187,7 @@ var iconsProjectsMap = {
     },
 	bioma: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 12,
 		strokeColor: '#ffffff',
       	strokeOpacity: 0,
       	strokeWeight: 15,
@@ -196,7 +196,7 @@ var iconsProjectsMap = {
     },
 	solai: { 
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 12,
 		strokeColor: '#ffffff',
       	strokeOpacity: 0,
       	strokeWeight: 15,
@@ -205,7 +205,7 @@ var iconsProjectsMap = {
     },
 	micro: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 12,
 		strokeColor: '#ffffff',
       	strokeOpacity: 0,
       	strokeWeight: 15,
@@ -214,7 +214,7 @@ var iconsProjectsMap = {
     },
 	geoth: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 12,
 		strokeColor: '#ffffff',
       	strokeOpacity: 0,
       	strokeWeight: 15,
@@ -223,7 +223,7 @@ var iconsProjectsMap = {
     },
 	econo: {  
 		path: google.maps.SymbolPath.CIRCLE, 
-		scale: 22,
+		scale: 12,
 		strokeColor: '#ffffff',
       	strokeOpacity: 0,
       	strokeWeight: 15,
@@ -356,10 +356,7 @@ var FOO = {
             });
 
             // Floater
-            $('.following .box__btn').clone().appendTo(".following--clone .wrap").on('click', function(){
-                $('html, body').animate({scrollTop: $('.description').offset().top-50}, 250);
-                $('.following .cta').click();
-            });
+            $('.following .box__btn').clone().appendTo(".following--clone .wrap");
             $('.following').waypoint(function(direction){
                 if (direction=='down') {
                     $(".following--clone").removeClass('slide-down').addClass('slide-up');
@@ -370,6 +367,11 @@ var FOO = {
             $('.footer').waypoint(function(){
                $(".following--clone").toggleClass('slide-down');
             }, {offset: '100%'});
+
+            $('.js-open-follow').on('click', function(){
+                $('html, body').animate({scrollTop: $('.description').offset().top-50}, 250);
+                $('.wrap-bg.c-main').toggleClass('is-active');
+            });
         }
     },
 	page: {
@@ -718,9 +720,9 @@ $.fn.jQuerySimpleCounter = function( options ) {
 		complete: settings.complete
 	});
 };
-$('.following .cta').click(function(e){
-	$('.wrap-bg.c-main').toggleClass('is-active');	
-});
+// $('.following .cta').click(function(e){
+// 	$('.wrap-bg.c-main').toggleClass('is-active');	
+// });
 /*
  * Init single project Map
  * - Add a dom container "map"
@@ -914,7 +916,7 @@ function addMakers(map, data){
 				}
 			}
 			// Add info card
-			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
+			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left"><span class="wrap-card-map">'; 
 				markerContent += '<header class="card card-project">';
 					markerContent += '<a href="'+data[i].permalink+'">';
 	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
@@ -935,7 +937,7 @@ function addMakers(map, data){
 
 				markerContent += '<a class="link-cta" href="'+data[i].permalink+'"><i class="icon-chevronright_32"></i><span>Voir ce projet</span></a>';
 
-			markerContent += '</article>';
+			markerContent += '</span></article>';
 
 			$('.cards-map').append(markerContent);
 
@@ -1003,6 +1005,11 @@ function onClickMarker(index,map,marker,categoryNRJ){
     prevCardMapId = index;
 	isOpenMarker = true;
 	
+	scrollToMap();
+}
+
+function scrollToMap() {
+	$('body').animate({scrollTop: $('.map-projects').offset().top-56}, 250);
 }
 
 function initFilters(map){	
@@ -1037,7 +1044,9 @@ function initFilters(map){
 			resetNrjFilter();	
 		}
 		
-		centerMapOnMarkers(map);		
+		centerMapOnMarkers(map);	
+
+		scrollToMap();	
 	});	
 	
 	$('.second.map-filters button').click(function(e){		
@@ -2159,7 +2168,8 @@ function addCardContent (type, content, domId, factor){
 
 	var timerOff;
 
-	$('.js-choose-connexion, .js-close-connect').on('click', function(){
+	$('.js-choose-connexion, .js-close-connect').on('click', function(e){
+		e.preventDefault();
 		clearTimeout(timerOff);
 		$('.connexion div').addClass('is-active');
 	})

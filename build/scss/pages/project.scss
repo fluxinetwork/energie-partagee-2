@@ -44,7 +44,7 @@
 
 .all-projects {
 	#map {
-		height: 850px!important;
+		height: 500px!important;
 	}
 	.fluxi-wrap {
 	    margin-bottom:0;
@@ -575,6 +575,7 @@
 }
 
 @media screen and (min-width: $bp--medium) {
+
 	.single-projets .holder-card{
 		left:$gutter*2;	
 
@@ -627,12 +628,23 @@
 	}
 }
 
-
-@media screen and (max-height: 800px) and (min-width: 768px) {
+@media screen and (min-width: $bp--large) {
 	.all-projects #map {
 		height: 600px!important;
 	}
-	.card-map .card__img {
-		display: none;
+}
+
+
+@media screen and (max-height: 800px) and (min-width: 768px) {
+	.card-map {
+		justify-content: flex-start!important;
+
+		header {
+			border-radius: 0 0 3px 3px;
+		}
+
+		.card__img {
+			display: none;
+		}
 	}
 }

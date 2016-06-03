@@ -101,7 +101,7 @@
 
 	.header-bloc--page {  
 		.header-bloc__content {
-			padding: 8rem 0 11rem 0
+			padding: 8rem 0 11rem 0;
 		}
 
 		.h1 {	
@@ -114,11 +114,24 @@
 @media screen and (min-width: $bp--medium) {	
 	.header-bloc--page {
 		.header-bloc__content {
-			padding: 10rem 0 16rem 0
+			padding: 10rem 0 16rem 0;
 		}
 
 		.h1 {	
 			max-width: 730px;
 		}
+	}
+}
+
+@media screen and (min-width: $bp--medium) {	
+	.header-bloc--home .h1 {
+		font-size: 3.5rem;
+	}
+}
+
+@media screen and (min-width: $bp--large) {	
+	.header-bloc--home .h1 {
+		font-size: 4rem;
+		line-height: 1.2;
 	}
 }

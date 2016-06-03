@@ -150,7 +150,8 @@
 
 	var timerOff;
 
-	$('.js-choose-connexion, .js-close-connect').on('click', function(){
+	$('.js-choose-connexion, .js-close-connect').on('click', function(e){
+		e.preventDefault();
 		clearTimeout(timerOff);
 		$('.connexion div').addClass('is-active');
 	})

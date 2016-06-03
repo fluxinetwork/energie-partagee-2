@@ -552,16 +552,6 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
   &::before {
     transform: translateX(-1px);
   }
-
-  &.js-choose-connexion {
-    span {
-      padding-top: 0;
-    }
-    
-    &::before {
-      transform: translate(-2px, -2px);
-    }
-  }
 }
 
 /*------------------------------*\

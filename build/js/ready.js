@@ -89,10 +89,7 @@ var FOO = {
             });
 
             // Floater
-            $('.following .box__btn').clone().appendTo(".following--clone .wrap").on('click', function(){
-                $('html, body').animate({scrollTop: $('.description').offset().top-50}, 250);
-                $('.following .cta').click();
-            });
+            $('.following .box__btn').clone().appendTo(".following--clone .wrap");
             $('.following').waypoint(function(direction){
                 if (direction=='down') {
                     $(".following--clone").removeClass('slide-down').addClass('slide-up');
@@ -103,6 +100,11 @@ var FOO = {
             $('.footer').waypoint(function(){
                $(".following--clone").toggleClass('slide-down');
             }, {offset: '100%'});
+
+            $('.js-open-follow').on('click', function(){
+                $('html, body').animate({scrollTop: $('.description').offset().top-50}, 250);
+                $('.wrap-bg.c-main').toggleClass('is-active');
+            });
         }
     },
 	page: {

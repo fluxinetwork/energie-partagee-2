@@ -3112,13 +3112,6 @@ blockquote .blockquote {
   -webkit-transform: translateX(-1px);
           transform: translateX(-1px);
 }
-.nav-bt--txt.js-choose-connexion span {
-  padding-top: 0;
-}
-.nav-bt--txt.js-choose-connexion::before {
-  -webkit-transform: translate(-2px, -2px);
-          transform: translate(-2px, -2px);
-}
 
 /*------------------------------*\
 
@@ -3910,6 +3903,17 @@ blockquote .blockquote {
     max-width: 730px;
   }
 }
+@media screen and (min-width: 830px) {
+  .header-bloc--home .h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header-bloc--home .h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+}
 /*------------------------------*\
 
   #BOX-LOGOS
@@ -4066,6 +4070,11 @@ blockquote .blockquote {
   }
   .p-details .p-details__nrg {
     margin-bottom: 4rem;
+  }
+
+  .cards-map .p-details {
+    padding-top: 2.5rem;
+    margin-top: 0;
   }
 }
 /*------------------------------*\
@@ -5522,7 +5531,7 @@ input {
 \*------------------------------*/
 .map-projects {
   background-color: #f2f2f2;
-  padding-top: 5rem;
+  padding-top: 3.33333rem;
 }
 .map-projects .filters {
   -webkit-flex: 1 1 100%;
@@ -5544,7 +5553,7 @@ input {
   margin-top: 4rem;
 }
 .map-projects .map-holder #map {
-  margin-top: 4rem;
+  margin-top: 3.33333rem;
 }
 .map-projects .map-filters {
   display: -webkit-flex;
@@ -5604,6 +5613,9 @@ input {
 .map-holder #map {
   width: 100%;
   border-radius: 3px;
+}
+.map-holder .cards-map .card-map .p-details__nrg {
+  display: none;
 }
 .map-holder .cards-map .card-map .card {
   height: auto;
@@ -5685,13 +5697,24 @@ input {
     display: none;
   }
   .map-holder .cards-map .card-map {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 260px;
     position: absolute;
     margin-right: 4rem;
-    padding: 8rem 0;
     right: 0;
-    top: 0;
+    bottom: 0;
     height: 100%;
+  }
+  .map-holder .cards-map .card-map .wrap-card-map {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .map-holder .cards-map .card-map .card-project {
     border-radius: 3px 3px 0 0;
@@ -5743,7 +5766,7 @@ input {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
   }
   .map-projects .map-filters.second li {
     margin: 0 0 1rem 1rem;
@@ -7495,7 +7518,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .key-nums .key-nums__item__num {
   font-family: "avantgarde", Arial;
-  font-size: 5rem;
+  font-size: 4rem;
   display: block;
   font-weight: bold;
   line-height: 1;
@@ -7758,7 +7781,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 /* ALL PROJECTS */
 .all-projects #map {
-  height: 850px !important;
+  height: 500px !important;
 }
 .all-projects .fluxi-wrap {
   margin-bottom: 0;
@@ -8305,11 +8328,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-right: 8rem;
   }
 }
-@media screen and (max-height: 800px) and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .all-projects #map {
     height: 600px !important;
   }
-
+}
+@media screen and (max-height: 800px) and (min-width: 768px) {
+  .card-map {
+    -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .card-map header {
+    border-radius: 0 0 3px 3px;
+  }
   .card-map .card__img {
     display: none;
   }
