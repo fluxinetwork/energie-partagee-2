@@ -9,7 +9,7 @@
 		bloginfo('description');
 	else:
 		if( !empty(get_field('google_description')) ):
-			echo get_field('google_description');
+			echo esc_attr(get_field('google_description'));
 		else:
 			bloginfo('description');
 		endif;

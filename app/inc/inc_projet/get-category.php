@@ -102,7 +102,7 @@
 			?>
        </div>
 
-       <?php if($total_post_count > $cat_ppp): ?>
+       <?php if($total_post_count > $cat_ppp && $cat_id != 20): ?>
 	       <div class="wrap-l al-c">
 	       		<button type="button" class="button green js-more" data-cat="<?php echo $cat_id;?>">Charger plus</button>
 	       </div>

@@ -12,7 +12,7 @@ Template Name: Tous les événements
 	$args_category = array(
 		'post_status' => 'publish',
 		'post_type' => 'post',
-		'cat' => $cat_id ,
+		'cat' => $cat_id,
 		'posts_per_page' => $cat_ppp,
 		'orderby' => 'meta_value',
 		'meta_key' => $meta_label,

@@ -23,9 +23,9 @@
         
         <h5 class="s-title">Nos partenaires</h5>
         <ul class="box-logos box">
-            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-ademe.jpg"></span></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-ademe.png"></span></li>
             <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-ile-de-france.jpg"></span></li>
-            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-paca.jpg"></span></li>
+            <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-fondation-massif.png"></span></li>
             <li class="box-logos__item"><span class="box-logos__logo"><img src="<?php echo get_template_directory_uri(); ?>/app/img/logos/energie-partagee-partenaire-region-centre-val-loire.jpg"></span></li>
             <li class="box-logos__btn"><a class="button-round" href="<?php echo get_site_url(); ?>/nous-decouvrir/qui-sommes-nous/lassociation/#partenaires"><i class="icon-plus_64"></i></a></li> 
         </ul>

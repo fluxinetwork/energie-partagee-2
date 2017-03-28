@@ -13,7 +13,7 @@ Template Name: Toutes les formations
 		'post_status' => 'publish',
 		'post_type' => 'post',
 		'cat' => $cat_id,
-		'posts_per_page' => $cat_ppp,
+		'posts_per_page' => -1,
 		'orderby' => 'meta_value',
 		'meta_key' => $meta_label,
 		'order' => 'ASC',
@@ -43,7 +43,7 @@ Template Name: Toutes les formations
 				'compare' => '>=',
 				'type' => 'DATE'
 			)
-		)  
+		)
 	);
 	$posts_count = new WP_Query( $args_count );
 	$total_post_count = $posts_count->found_posts;
