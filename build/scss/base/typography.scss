@@ -71,21 +71,8 @@
 }
 /* New */
 
-.icon-login_32:before {
-    content: "\e928";
-}
-.icon-safari:before {
-    content: "\f267";
-}
-.icon-chrome:before {
-    content: "\f268";
-}
-.icon-firefox:before {
-    content: "\f269";
-}
-.icon-edge:before {
-    content: "\f282";
-}
+
+
 .icon-logout_32:before {
     content: "\e92a";
 }
@@ -259,7 +246,7 @@ h3,.h3{
     }
 }
 .h3{ 
-   margin-top:	$space*0.6;
+   margin-top:	$space*0.8;
 }
 
 h4,
@@ -310,10 +297,6 @@ ul.list,
 	@include font-size($p-font-sizes); 
 	font-family: $txt-fontserif;
 	color:$c-text;
-
-    strong {
-        font-weight: 700;
-    }
 }
 p,
 .p-ss,
@@ -330,38 +313,11 @@ p,
 
 .accordion__content ul,
 .list,
-.fluxi-content ul:not(.social):not(.main-isogrid):not(.tags):not(.searchresults):not(.lightSlider):not(.lSPager) {
+.fluxi-content ul:not(.social):not(.main-isogrid):not(.tags):not(.searchresults) {
     margin-bottom: 0;
     margin-top: $space*0.2;
     padding-left: $gutter;
     max-width: 80%;
-}
-
-
-.holder-old {
-    font-family: $txt-fontserif;
-    color: $c-text;
-
-    > * {
-        margin-top: $gutter;
-        display: block;
-        line-height: 1.2;
-    }
-
-    img {
-        margin-bottom: $gutter;
-    }
-
-    &::before {
-        content: 'L\'article que vous consultez est formatée pour l\'ancienne version du site. Sa mise en page risque de ne pas être optimale.';
-        padding: $gutter;
-        background: $c-focus;
-        color: #fff;
-        font-family: $txt-font;
-        border-radius: $radius;
-        display: block;
-        margin-bottom: $gutter;
-    }
 }
 
 blockquote{
@@ -383,20 +339,17 @@ blockquote{
 }
 
 @media screen and (min-width: $bp--medium) {
-    .h3 {
-        margin-top:$space*0.7;
+    .h3{ 
+       margin-top:  $space*0.8;
     }
-    .h4 {
-        margin-top:$space*0.4;
+
+    h4, .h4 {
+        margin-top:$space*0.5;
     }
 
     p,
     .p-ss,
     .legend{
         margin-top: $space*0.2;
-    }
-
-    .legend {
-        font-size: 1.6rem;
     }
 }

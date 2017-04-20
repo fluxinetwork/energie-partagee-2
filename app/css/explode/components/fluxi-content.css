@@ -834,7 +834,7 @@ blockquote .blockquote {
     transform: translateX(-8rem);
   }
   .clikarde .clikarde__item {
-    flex: none;
+    flex: 1 1 0;
     margin-bottom: 0;
   }
   .clikarde .clikarde__item:nth-child(3) {

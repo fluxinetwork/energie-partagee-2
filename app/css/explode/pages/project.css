@@ -375,7 +375,7 @@
 }
 
 .input-n-btn .box__solo {
-  flex: none;
+  flex: 1 1 0;
   margin-bottom: 0;
   max-width: inherit;
   padding-right: 2rem;

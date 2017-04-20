@@ -48,8 +48,11 @@
 		margin-top:0
 	 }
 }
-.single .trio-card .box__fixe {
-	flex: 100%;
+.single .trio-card {
+	.box__fixe{
+		display:flex;
+		flex:100%;
+	}
 }
 
 .box-asy {
@@ -58,22 +61,6 @@
 	z-index: 2;
 }
 
-
-@media screen and (max-width: 767px) {
-	.trio-card .box__half:nth-child(3){
-		padding-right:0;
-	}
-}
-
-@media screen and (min-width: 768px) {	
-	.trio-card .box__fixe{
-		display:flex;
-
-		.button-round {
-			flex: none;
-		} 
-	}
-}
 
 @media screen and (min-width: $bp--small) {	
 	.duo-card{
@@ -94,13 +81,33 @@
 		}
 	}	
 	.trio-card {
-		.box__half .card__infos {			
-    		display: block!important;
-    		position: relative!important;
-    		border-radius: 0 0 $radius $radius!important;
-    		bottom: auto!important;
+		.box__half:nth-child(3){
+			padding-right:0;
 		}
 
+		.button:not(.cta) {
+			margin-top:$space*0.3;
+	 	}
+	}
+}
+
+@media screen and (min-width: $bp--medium) {
+	.trio-card {
+		.box__half {
+			flex: 41.5%;		
+			padding-right: $gutter;	
+			margin-bottom: 0;
+
+			.card__infos {			
+    			display: block!important;
+    			position: relative!important;
+    			border-radius: 0 0 $radius $radius!important;
+			}
+		}
+		.box__half:nth-child(3) {
+			padding-right: $gutter;	
+		}
+		
 		.box__full {
 			margin-bottom: 4rem;
 			
@@ -114,32 +121,10 @@
     			border-radius: 0 $radius $radius 0;
 			}
 		}	
-
-		.button {
-			margin-top:$gutter;
-	 	}
-	}
-	.single .trio-card {
-		.box__half {
-			margin-bottom: 0;
-		}
-		.box__fixe {
-			flex: none;
-		}
-	}
-}
-
-@media screen and (min-width: $bp--medium) {
-	.trio-card {
-		.box__half {
-			flex: 41.5%;		
-			padding-right: $gutter;	
-			margin-bottom: 0;
-		}
-		.box__half:nth-child(3) {
-			padding-right: $gutter;	
-		}
 			
+		.box__fixe{
+			display:flex;
+		}  
 	  	.button:not(.cta) {
 			margin-top:$space*0.6;
 		}

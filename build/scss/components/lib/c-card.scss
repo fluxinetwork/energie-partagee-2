@@ -1,16 +1,16 @@
-.no-touch {
-	%card:hover .card__img {
-		transform: scale(1.04);
-	}
-}
-
 %card{	
 	color:$c-textwhite;
 	display:block;
 	position:relative;	
 	overflow: hidden;
 	border-radius: 3px;	
-		
+
+	&:hover { 
+		.card__img {
+			transform: scale(1.04);
+		}
+	}	
+				
 	.card__infos{
 		position: relative;
 		display: flex;

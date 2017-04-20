@@ -191,7 +191,7 @@ function addMakers(map, data){
 				}
 			}
 			// Add info card
-			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left"><span class="wrap-card-map">'; 
+			var markerContent = '<article class="card-map c-'+categoryNRJ+' anim-out-left">'; 
 				markerContent += '<header class="card card-project">';
 					markerContent += '<a href="'+data[i].permalink+'">';
 	            		markerContent += '<div class="card__img" style="background-image:url('+data[i].image+')"><i class="card__icon"></i><div class="spinner"></div><span class="tag is-inactive">'+data[i].stadeName+'</span></div>';
@@ -212,7 +212,7 @@ function addMakers(map, data){
 
 				markerContent += '<a class="link-cta" href="'+data[i].permalink+'"><i class="icon-chevronright_32"></i><span>Voir ce projet</span></a>';
 
-			markerContent += '</span></article>';
+			markerContent += '</article>';
 
 			$('.cards-map').append(markerContent);
 
@@ -280,11 +280,6 @@ function onClickMarker(index,map,marker,categoryNRJ){
     prevCardMapId = index;
 	isOpenMarker = true;
 	
-	scrollToMap();
-}
-
-function scrollToMap() {
-	$('body').animate({scrollTop: $('.map-projects').offset().top-56}, 250);
 }
 
 function initFilters(map){	
@@ -319,9 +314,7 @@ function initFilters(map){
 			resetNrjFilter();	
 		}
 		
-		centerMapOnMarkers(map);	
-
-		scrollToMap();	
+		centerMapOnMarkers(map);		
 	});	
 	
 	$('.second.map-filters button').click(function(e){		
@@ -539,5 +532,15 @@ MarkerShadow.prototype.show = function() {
     this.div_.style.visibility = 'visible';
   }
 };
+/*
+MarkerShadow.prototype.toggle = function() {
+  if (this.div_) {
+    if (this.div_.style.visibility === 'hidden') {
+      this.show();
+    } else {
+      this.hide();
+    }
+  }
+};*/
 
 

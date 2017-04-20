@@ -1,8 +1,4 @@
-/*------------------------------*\
 
-    #NAVIGATION
-
-\*------------------------------*/
 
 .top-display {
   $txt-color: $c-textwhite;
@@ -88,7 +84,7 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 
 \*------------------------------*/
 
-.no-touch .navbar__id {
+.navbar__id {
   animation: 1s $ease-out-quart 1 forwards slideDown;
 }
 
@@ -127,11 +123,6 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
   font-size: 1.8rem;
   text-transform: uppercase;
   line-height: 1.8rem;
-  height: 41px;
-
-  img {
-    height: 41px;
-  }
   
   span {
     font-size: 2.23rem;
@@ -398,6 +389,9 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
 }
 
 .pp .nav__item {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   
   &:not(:last-child) {
@@ -425,7 +419,6 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.4px;
   @include font-smoothing();
-  display: block;
  
   
   &::after {
@@ -530,6 +523,10 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
   &::before {
     font-size: 32px;
   }
+  
+  &:nth-child(2) {
+    margin: 0 0 0 $gutter-thin/2;
+  }
 }
 
 .nav-bt--txt {
@@ -544,101 +541,13 @@ $dropdown-shadow: 0 10px 20px rgba(#000, 0.2);
     @extend %nav-typo;
     margin-right: 10px;
     margin-left: 5px;
-    padding-top: 0.1rem;
+	padding-top: 0.4rem;
     display: none;
-    line-height: 0;
   }
 
   &::before {
     transform: translateX(-1px);
   }
-}
-
-/*------------------------------*\
-
-    # CONNEXION
-
-\*------------------------------*/
-
-.connexion {
-  margin: 0 0 0 $gutter-thin/2;
-}
-
-%connect-wrap {
-  position: fixed;
-  width: 100%;
-  height: 50%;
-  left: 0;
-  z-index: 100;
-  visibility: hidden;
-
-  &::before {
-    transition: height 0.4s $ease-out-cubic;
-    @include pseudo-bg($c-main);
-    height: 0;
-  }
-
-  span {
-    @include flex(center, true);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.2s 0.3s ease-in-out;
-    opacity: 0;
-
-    &.is-off {
-      display: none;
-    }
-  }
-
-  p {
-    font-size: 1.8rem;
-    color: #fff;
-    max-width: 300px;
-    text-align: center;
-  }
-
-  a {
-    margin-top: 2rem;
-  }
-
-
-  &.is-active {
-    visibility: visible;
-
-    &::before {
-      height: 100%;
-    }
-
-    span {
-      opacity: 1;
-    }
-  }
-}
-
-.connexion_adherents {
-  @extend %connect-wrap;
-  top: 0;
-}
-
-.connexion_actionnaires {
-  @extend %connect-wrap;
-  bottom: 0;
-
-  button {
-    position: absolute;
-    top: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &::before {
-    background: darken($c-main, 10%);
-    bottom: 0;
-    top: auto;
-     transition-delay: 0.1s;
-  }
-
 }
 
 /*------------------------------*\

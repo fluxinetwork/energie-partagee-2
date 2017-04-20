@@ -104,7 +104,7 @@
   margin-right: 2rem;
 }
 .courtcircuit .box__fixe {
-  flex: none;
+  flex: 1 1 0;
 }
 .courtcircuit .courtcircuit__title {
   display: flex;

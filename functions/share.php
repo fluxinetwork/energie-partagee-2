@@ -22,21 +22,31 @@ add_filter('language_attributes', 'add_opengraph_doctype');
 // Add Open Graph meta in head
 function insert_fb_in_head() {
 	global $post;
-	$default_image = "/app/img/default_fb.jpg";// WARNING !!!
-	if ( !is_singular())
-		return;
-        echo '<meta property="fb:admins" content="1568569473365817"/>'; // WARNING !!!
-        echo '<meta property="og:title" content="' . get_the_title() . '"/>';
-        echo '<meta property="og:type" content="article"/>';
-        echo '<meta property="og:url" content="' . get_permalink() . '"/>';
-        echo '<meta property="og:site_name" content="'.get_bloginfo('name').'"/>';
-		if( !has_post_thumbnail( $post->ID )  || is_home() ) {
-			echo '<meta property="og:image" content="'.get_bloginfo('template_url').$default_image.'"/>';
+	$post_img_url = get_bloginfo('template_url').'/app/img/default_fb.jpg';
+
+	if ( is_front_page() ) {
+
+		echo '<meta property="og:type" content="website"/>';
+        echo '<meta property="og:title" content="' .get_bloginfo('name'). '"/>';
+        echo '<meta property="og:description" content="' .get_bloginfo('description'). '"/>';
+       	echo '<meta property="og:url" content="' .get_bloginfo('url'). '"/>';
+
+	} else {
+
+		echo '<meta property="og:type" content="article"/>';
+		echo '<meta property="og:title" content="' .get_the_title(). '"/>';
+		echo '<meta property="og:description" content="' .get_field('google_description'). '"/>';
+		echo '<meta property="og:url" content="' .get_permalink(). '"/>';
+
+		$page_id = get_the_ID();
+		$main_img = get_field('main_image', $page_id);
+		if ( $main_img ) {
+			$post_img_url = $main_img['sizes']['medium'];	
 		}
-	else{
-		$thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
-		echo '<meta property="og:image" content="'.esc_attr( $thumbnail_src[0] ).'"/>';
+
 	}
+
+	echo '<meta property="og:image" content="'.$post_img_url.'"/>';
 }
 add_action( 'wp_head', 'insert_fb_in_head', 5 );
 

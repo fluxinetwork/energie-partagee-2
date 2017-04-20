@@ -32,7 +32,7 @@
 }
 
 @mixin graphbar_color($color) {
-	$darkenStep: 0, 7, 14, 21, 28, 35, 42;
+	$darkenStep: 0, 10, 20, 30, 40, 50, 60;
 	@for $i from 1 through 7 {
 		.graphbar__segment.citoyen:nth-child(#{$i}) {
 			background: darken($color, (nth($darkenStep, $i))*1%);
@@ -80,17 +80,6 @@
 	.testimony{
 		@include background(url("../img/bg-vector-1.png") no-repeat bottom left, radial-grad($color), center no-repeat $color scroll);		
 	}
-	.following--clone {
-		background: $color;
-
-		.box__social i {
-			color: darken($color, 10%);
-		}
-
-		.icon-nrj {
-			color: $color;
-		}
-	}
 }
 
 // CARD PROJECT
@@ -114,19 +103,8 @@
 			content: $icon;
 		}
 	}
-	&.card-map {
-		.tag {
-			background: $color;
-		}
-		.link-cta {
-			@extend %transition;
-			color: $color;
-
-			&:hover {
-				background-color: $color!important;
-				color: #fff;
-			}
-		}
+	&.card-map .link-cta{
+		color:$color;
 	}
 }
 

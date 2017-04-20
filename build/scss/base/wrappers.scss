@@ -83,9 +83,10 @@
 
 .wrap-anim {
 	transition: top 0.4s $ease-out-quart;
-}
-.no-touch .wrap-anim.ready-anim {
-	top: 70px;
+
+	&.ready-anim {
+		top: 70px;
+	}
 }
 
 @media screen and (min-width: $bp--medium) {
@@ -172,7 +173,7 @@
   		margin-bottom: 0;
   	}
   	.box__half {
-    	flex: 1 0 0%;		
+    	flex: 1 1 0;		
     	padding-right: $gutter/2;
 		margin-bottom:$space*0.4;
   	}
@@ -208,7 +209,7 @@
 	}
 
 	.box__half {
-	  	flex: 1;		
+	  	flex: 1 1 0;		
 	  	padding-right: $gutter;
 	}
 	

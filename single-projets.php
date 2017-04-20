@@ -26,7 +26,7 @@
 	$value_stade = get_field('status_projet');
 	$label_stade = $field_stade['choices'][ $value_stade ];
 	
-  $url_call_to_action = get_field('url_call_to_action');  
+	$url_call_to_action = get_field('url_call_to_action');	
 
 	// Imgs
 	$main_img_add = get_field( 'add_image' );

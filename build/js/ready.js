@@ -15,112 +15,52 @@ var FOO = {
                 $('.nav').removeClass('is-hidden');
             },1);
 
+			// Mini slider project
+			initLoadMoreProjectsBtn();
+
 			// Video lightbox
 			$('.lightvideo').lightGallery();
 
             // Wrap anim
-            if ($('.no-touch .wrap-anim').length) {
-                $('.wrap-anim').waypoint(function(){
-                    $(this.element).toggleClass('ready-anim');
-                }, {offset: '85%'});
-            }
+            $('.no-touch .wrap-anim').waypoint(function(){
+                $(this.element).toggleClass('ready-anim');
+            }, {offset: '85%'});
 
-            // Warning flexbox
-            if ($('html').hasClass('detect_no-flexbox')) {
-                $('.warning-flexbox').addClass('show-me');
-            }
-
-            // Fitvids
-            if ($('.fitvids').length) {
-                $(".fitvids").fitVids();
+            // wrap suggestion
+            if ($('.suggestion').length) {
+                $('.fluxi-wrap').addClass('has-suggestion');
             }
         }
     },
     home: {
         init: function() {
             isHome = true; 
-
-            // Anim chiffres clés
             if ($('body').hasClass('touch')) {
                 $('.key-nums__item__num').each(function(){
                     $(this).html($(this).attr('data-number'));
                 });
             } else {
                 $('.key-nums__item__num').each(function(){
-                    var num = $(this);
                     var txt = $(this).next();
                     var val = $(this).attr('data-number');
                     var speed = (val>1000) ? 3000 : val*100;
                     $(this).jQuerySimpleCounter({
                       start:  0,
                       end:  val,
-                      duration: speed,
-                      complete: function(){
-                        num.html(val);
-                      }
+                      duration: speed
                     });
                 });
             }
-
-            // Mini slider project
-            initLoadMoreProjectsBtn();
-        }
-    },
-    single: {
-        init: function() {
-            $(".fitvids").fitVids();
-        }
-    },  
-    single_projets: {
-        init: function() {          
-            initSingleMap();                
-            initSendMailPorspect();
-
-            // Serparate big numbers
-            if($('.repartition').length){                    
-                $('.repartition .infosbloc li .data-capital').each(function( i ) {
-                    $(this).html(formatNumber($(this).data('capital')) + ' €');                        
-                });
-            }
-
-            // Activate map
-            $('.touch .map-holder').on('click', function(){
-                $(this).addClass('is-active');
-            });
-
-            // Floater
-            $('.following .box__btn').clone().appendTo(".following--clone .wrap");
-            $('.following').waypoint(function(direction){
-                if (direction=='down') {
-                    $(".following--clone").removeClass('slide-down').addClass('slide-up');
-                } else {
-                    $(".following--clone").removeClass('slide-up').addClass('slide-down'); 
-                }
-            });
-            $('.footer').waypoint(function(){
-               $(".following--clone").toggleClass('slide-down');
-            }, {offset: '100%'});
-
-            $('.js-open-follow').on('click', function(){
-                $('html, body').animate({scrollTop: $('.description').offset().top-50}, 250);
-                $('.wrap-bg.c-main').toggleClass('is-active');
-            });
         }
     },
 	page: {
         init: function() {
+			$(".fitvids").fitVids();
 			initLoadMorePostsBtn();
-
-            // wrap suggestion
-            if ($('.suggestion').length) {
-                $('.fluxi-wrap').addClass('has-suggestion');
-            }		
-        }
-    },
-    page_template_page_projets: {
-        init: function() {
-            initProjectsMap();
-            initLoadMoreProjectsCardsBtn(); 
+			if($('body.page-template-page-projets').length){	
+				initProjectsMap();
+                initLoadMoreProjectsCardsBtn();				
+			}			
         }
     },
 	category: {
@@ -128,6 +68,15 @@ var FOO = {
 			initLoadMorePostsBtn();
         }
     },
+	single: {
+        init: function() {
+			$(".fitvids").fitVids();
+			if($('body.single-projets').length){			
+				initSingleMap();				
+				initSendMailPorspect();			
+			}
+        }
+    },	
 	contact:{
 		init: function() {
 			initContactForm();

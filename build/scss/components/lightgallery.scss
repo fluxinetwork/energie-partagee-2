@@ -274,7 +274,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab;
-  text-align: center;
 }
 .lg-outer .lg-thumb-outer.lg-grabbing .lg-thumb-item {
   cursor: move;
@@ -315,12 +314,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
-  border-color: $c-focus;
+  border-color: #a90707;
 }
 .lg-outer .lg-thumb-item img {
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100px;
+  width: 100%;
+  height: 100%;
 }
 .lg-outer.lg-has-thumb .lg-item {
   padding-bottom: 120px;
