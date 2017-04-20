@@ -59,7 +59,8 @@ Template Name: Tous les projets
   <?php // FLUXI CONTENT         
     if( have_rows('elements_page') ):
       echo '<article class="fluxi-content fitvids wrap-n">';   
-      require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');          
+        //require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
+        the_content();         
       echo '</article>';
     endif;       
   ?>    

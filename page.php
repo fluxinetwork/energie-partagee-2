@@ -30,11 +30,21 @@
   </header>
   
     <?php
+    	$class = 'fluxi-wrap fluxi-content fitvids';
+    	if (!$main_image) { $class .= ' has-bg'; }
+
+		echo '<article class="'.$class.'">';
+			echo $main_image;
+			get_description();
+			get_socials();
+    		the_content();
+    	echo '</article>';
+
        	/////////////////////////////////////
 		/////       FLUXI CONTENT       /////
 		/////////////////////////////////////
 		   
-		if( have_rows('elements_page') ):
+		/*if( have_rows('elements_page') ):
 			$class = 'fluxi-wrap fluxi-content fitvids';
 			if (!$main_image) {
 				$class .= ' has-bg';
@@ -62,7 +72,7 @@
 				echo '<p>Cette page est vide...<p>';
 		   		
 		   	echo '</article>';
-		endif; 
+		endif; */
 	?>
 
 

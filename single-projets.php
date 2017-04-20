@@ -93,7 +93,8 @@
             <?php	// FLUXI CONTENT	 		   
                 if( have_rows('elements_page') && $value_stade != 'collecte'):
                     echo '<div class="fluxi-content fitvids" id="en-savoir-plus">';		
-                        require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');					
+                        //require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
+                        the_content();			
                     echo '</div>';
                 endif; 		   
              ?> 

@@ -19,7 +19,6 @@ define('PAGE_EXCERPT', true); // Add excerpt to pages
 //define('ADD_THUMBNAILS', array('post','projets','page')); // Post types which get thumbnails
 define('ACF_OPTION_PAGE', true); // Activate ACF option page
 
-
 /**
  * Functions using config ACTIVATE vars
  */

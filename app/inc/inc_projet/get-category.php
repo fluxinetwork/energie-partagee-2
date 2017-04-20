@@ -110,7 +110,8 @@
 	<?php
 		if( have_rows('elements_page') && $total_post_count > 0):
 			echo '<article class="wrap-n fluxi-content--cat">';
-				require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
+				//require_once locate_template('/app/inc/inc_projet/fluxi-content/builder.php');
+				the_content();
 			echo '</article>';
 		endif;			
 	?>

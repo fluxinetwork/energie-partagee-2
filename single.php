@@ -56,6 +56,34 @@
   </header>
   
     <?php
+
+    	$class = 'fluxi-wrap fluxi-content fitvids';
+    	if (!$main_image) { $class .= ' has-bg'; }
+
+		echo '<article class="'.$class.'">';
+			echo $main_image;						
+			get_description();
+			get_socials();
+    		the_content();
+
+    		// Suggestion d'articles
+			if ( !empty( $prev_post ) || !empty( $next_post )):
+				echo '<aside class="suggestion"><div class="suggestion-posts wrap-anim ready-anim">';
+					if ( !empty( $prev_post ) ): 
+						echo '<div class="cat-nav"><h5 class="s-title">Précédent</h5><span class="reverse"><a href="'.get_permalink( $prev_post->ID ).'" class="button-round grey" title="'.$prev_post->post_title.'"><i class="icon-fleche_64"></i></a></span></div>';				
+					endif;
+
+					echo '<div class="cat-nav"><h5 class="s-title">Voir tout</h5><a href="'.$url_parent_page.'" class="button-round grey"><i class="icon-plus_64"></i></a></div>';
+
+					if ( !empty( $next_post ) ):
+						echo '<div class="cat-nav"><h5 class="s-title">Suivant</h5><a href="'.get_permalink( $next_post->ID ).'" class="button-round grey" title="'.$next_post->post_title.'"><i class="icon-fleche_64"></i></a></div>';		
+					endif;
+				 echo '</aside>';
+			endif; 	 
+
+    	echo '</article>';
+
+    	/*
        	/////////////////////////////////////
 		/////       FLUXI CONTENT       /////
 		/////////////////////////////////////
@@ -101,7 +129,7 @@
 				endif; 	 
 		   		
 		   	echo '</article>';
-		endif; 		
+		endif;*/
 	?>
     
   <?php endwhile; endif; ?>
